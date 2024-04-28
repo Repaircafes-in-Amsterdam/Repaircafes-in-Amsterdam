@@ -18,7 +18,7 @@ export default function OfficeHoursCheckbox() {
         </Checkbox.Indicator>
       </Checkbox.Root>
       <label className="leading-none" htmlFor="office-hours">
-        Alleen buiten Kantooruren
+        Alleen buiten kantooruren
       </label>
     </div>
   );
