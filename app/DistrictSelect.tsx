@@ -1,5 +1,5 @@
 "use client";
-import { ReactNode, forwardRef } from "react";
+import { LegacyRef, ReactNode, forwardRef } from "react";
 import * as Select from "@radix-ui/react-select";
 import { Check, ChevronDown, ChevronUp } from "lucide-react";
 import * as Label from "@radix-ui/react-label";
@@ -49,7 +49,7 @@ export default function DistrictSelect() {
 const SelectItem = forwardRef(
   (
     { children, ...props }: { children: ReactNode; value: string },
-    forwardedRef
+    forwardedRef: LegacyRef<HTMLDivElement> | undefined
   ) => {
     return (
       <Select.Item
