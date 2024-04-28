@@ -1,6 +1,8 @@
 import { rrulestr } from "rrule";
 import data from "@/data/data.json";
 import { EventGroup, RC, Event } from "./types";
+import useOfficeHours from "./useOfficeHours";
+import useDistrict from "./useDistrict";
 
 const TIME_ZONE = "Europe/Amsterdam";
 const LOCALE = "NL-nl";
@@ -35,10 +37,9 @@ function isDuringOfficeHours(endHours: number, occurance: Date) {
 }
 
 export default function useUpcomingData() {
-  console.log("data: ", data);
-  // TODO get from search params
-  const district = "any";
-  const justOfficeHours = false;
+  const { value: justOfficeHoursRaw } = useOfficeHours();
+  const justOfficeHours = justOfficeHoursRaw === "true";
+  const { value: district } = useDistrict();
 
   // Get all events organized untill next month
   const events: Event[] = [];

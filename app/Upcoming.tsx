@@ -7,7 +7,7 @@ export default function Upcoming() {
   const groupedEvents = useUpcomingData();
 
   return (
-    <div className="grow overflow-y-auto">
+    <>
       {groupedEvents.map((group: EventGroup) => (
         <Fragment key={group.dateString}>
           <h2 className="text-lg font-bold sticky top-0 bg-white px-4">
@@ -24,6 +24,6 @@ export default function Upcoming() {
           </ul>
         </Fragment>
       ))}
-    </div>
+    </>
   );
 }
