@@ -3,7 +3,7 @@
     "name": "Betondorp",
     "address": "Karnstraat 2",
     "open": "2e en 4e woensdagmiddag 14:00 - 16:30",
-    "rrule": "RRULE:FREQ=MONTHLY;BYDAY=2WE,4WE",
+    "rrule": "FREQ=MONTHLY;BYDAY=2WE,4WE",
     "startTime": "14:00",
     "endTime": "16:30",
     "district": "Oost",
@@ -12,6 +12,20 @@
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-oost-betondorp/"
     },
     "slug": "betondorp"
+  },
+  {
+    "name": "De Boeg",
+    "address": "Hoofdweg 495 a",
+    "open": "Elke dinsdagochtend 10:00 - 12:00",
+    "rrule": "FREQ=WEEKLY;BYDAY=TU;INTERVAL=1",
+    "startTime": "10:00",
+    "endTime": "12:00",
+    "district": "West",
+    "email": "repaircafedeboeg@gmail.com",
+    "links": {
+      "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-west-de-boeg/"
+    },
+    "slug": "de-boeg"
   },
   {
     "name": "De Bonte Kraai",
@@ -182,6 +196,20 @@
       "facebook": "https://www.facebook.com/repaircafeamsterdam"
     },
     "slug": "oud-noord"
+  },
+  {
+    "name": "Reparatietafel de Eester",
+    "address": "C van Eesterenlaan  266",
+    "open": "Elke derde woensdagochtend van 10:00 - 13:00",
+    "rrule": "FREQ=MONTHLY;BYDAY=3WE;INTERVAL=1",
+    "startTime": "10:00",
+    "endTime": "13:00",
+    "district": "Oost",
+    "email": "duurzaam@buurtcooperatieohg.nl",
+    "links": {
+      "website": "https://buurtcooperatieohg.nl/verduurzaamt/reparatietafel/"
+    },
+    "slug": "reparatietafel-de-eester"
   },
   {
     "name": "Sloten – Oud Osdorp",
