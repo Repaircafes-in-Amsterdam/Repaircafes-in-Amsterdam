@@ -1,11 +1,16 @@
 export type RC = {
   name: string;
+  slug: string;
   open: string;
   rrule: string;
   startTime: string;
   endTime: string;
   address: string;
   district: string;
+  links: {
+    orgPage: string;
+    [key: string]: string;
+  };
 };
 
 export type Event = {

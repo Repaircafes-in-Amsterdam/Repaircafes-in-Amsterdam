@@ -3,6 +3,7 @@ import data from "@/data/data.json";
 import { EventGroup, RC, Event } from "./types";
 import useOfficeHours from "./useOfficeHours";
 import useDistrict from "./useDistrict";
+import getDateString from "./utils/getDateString";
 
 const TIME_ZONE = "Europe/Amsterdam";
 const LOCALE = "NL-nl";
@@ -17,15 +18,6 @@ function getNextMonthDate() {
   }
 
   return nextMonth;
-}
-
-function getDateString(date: Date) {
-  const string = date.toLocaleDateString(LOCALE, {
-    weekday: "long",
-    month: "long",
-    day: "numeric",
-  });
-  return string[0].toUpperCase() + string.slice(1);
 }
 
 function isDuringOfficeHours(endHours: number, occurance: Date) {

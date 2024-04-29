@@ -11,6 +11,7 @@ const config: Config = {
       blue: {
         250: "#E8E8FF",
         DEFAULT: "#2D2E82",
+        600: "#1F205A",
       },
       orange: "#ED6A42",
       white: "#ffffff",
