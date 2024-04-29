@@ -49,7 +49,7 @@ const list = rows
   })
   // Add slugs
   .map((row) => ({ ...row, slug: slugify(row.name).toLowerCase() }));
-console.log("list: ", list);
+
 const jsonData = JSON.stringify(list, null, 2);
 await fs.writeFile(dataFilePath, jsonData, "utf8");
 console.log("Data saved successfully.");
