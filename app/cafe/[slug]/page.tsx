@@ -42,7 +42,7 @@ export default function Page({ params }: { params: { slug: string } }) {
         <Link
           href={getMapsLink(rc.address)}
           className="flex gap-1"
-          rel="noopener noreferrer"
+          rel="noreferrer"
           target="_blank"
         >
           <SquareArrowOutUpRight />
@@ -60,7 +60,12 @@ export default function Page({ params }: { params: { slug: string } }) {
             <ul>
               {Object.entries(rc.links).map(([type, href]) => (
                 <li key={type}>
-                  <Link href={href} className="flex gap-1">
+                  <Link
+                    href={href}
+                    className="flex gap-1"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
                     <SquareArrowOutUpRight />
                     {mapLinkTypeToLabel(type)}
                   </Link>
