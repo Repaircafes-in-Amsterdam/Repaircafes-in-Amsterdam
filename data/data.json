@@ -136,6 +136,20 @@
     "slug": "harmoniebuurt"
   },
   {
+    "name": "Het Claverhuis",
+    "address": "Elandsgracht 70",
+    "open": "Elke donderdagmiddag 14:00 - 16:00",
+    "rrule": "FREQ=WEEKLY;BYDAY=TH;INTERVAL=1",
+    "startTime": "14:00",
+    "endTime": "16:00",
+    "district": "Centrum",
+    "email": "ssaruhan@dock.nl",
+    "links": {
+      "website": "https://dock.nl/locaties/amsterdam/centrum/huis-van-de-buurt-het-claverhuis/"
+    },
+    "slug": "het-claverhuis"
+  },
+  {
     "name": "IJburg",
     "address": "Erich Salomonstraat 135 - 151",
     "open": "Elke woensdagmiddag 17:00 - 19:00",
