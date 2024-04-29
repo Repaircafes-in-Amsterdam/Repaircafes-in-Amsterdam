@@ -52,4 +52,4 @@ const list = rows
 
 const jsonData = JSON.stringify(list, null, 2);
 await fs.writeFile(dataFilePath, jsonData, "utf8");
-console.log("Data saved successfully.");
+console.log(`Updated data for ${list.length} Repair Cafés`);
