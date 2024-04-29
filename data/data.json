@@ -30,6 +30,21 @@
     }
   },
   {
+    "name": "De Diem",
+    "address": "Arent Krijtsstraat 48hs",
+    "open": "Elke tweede zaterdag 14:00 - 16:30",
+    "rrule": "FREQ=MONTHLY;BYSETPOS=2;BYDAY=SA;INTERVAL=1",
+    "startTime": "14:00",
+    "endTime": "16:30",
+    "district": "Diemen",
+    "email": "repaircafe@duurzaamdorpdiemen.nl",
+    "slug": "de-diem",
+    "links": {
+      "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-diemen/",
+      "website": "http://www.duurzaamdorpdiemen.nl/p/repair-cafe.html"
+    }
+  },
+  {
     "name": "De Groene Hub",
     "address": "Holendrechtplein 44",
     "open": "1e vrijdagmiddag 15.00 - 18.00",
@@ -57,9 +72,7 @@
     "slug": "de-meeuw",
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-noord-de-meeuw/",
-      "website": "https://huisvandewijknoord.nl/de-meeuw",
-      "facebook": "",
-      "instagram": "geen"
+      "website": "https://huisvandewijknoord.nl/de-meeuw"
     }
   },
   {
@@ -92,6 +105,21 @@
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-zuid-groenpunt-welkom/",
       "website": "http://groenebuurten.nl/start-repair-cafe-olympus/",
       "facebook": "https://www.facebook.com/events/357964950550086/357969440549637/"
+    }
+  },
+  {
+    "name": "Harmoniebuurt",
+    "address": "J.M. Coenenstraat 4 - 6",
+    "open": "1e maandagochtend 10:00 - 12:30",
+    "rrule": "FREQ=MONTHLY;BYSETPOS=1;BYDAY=MO;INTERVAL=1",
+    "startTime": "10:00",
+    "endTime": "12:30",
+    "district": "Zuid",
+    "email": "info@decoenen.com",
+    "slug": "harmoniebuurt",
+    "links": {
+      "orgPage": "",
+      "website": "https://decoenen.com/terugkerende-activiteiten/#repaircafe"
     }
   },
   {
