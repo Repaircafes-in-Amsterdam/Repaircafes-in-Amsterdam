@@ -2,7 +2,8 @@
 import useUpcomingData from "./useUpcomingData";
 import { EventGroup } from "./types";
 import { Fragment } from "react";
-import { ChevronRight } from "lucide-react";
+import ChevronRight from "@/app/icons/ChevronRight.svg";
+
 import Link from "next/link";
 
 export default function Upcoming() {

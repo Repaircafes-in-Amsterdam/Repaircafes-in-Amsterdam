@@ -1,9 +1,11 @@
 "use client";
 import { LegacyRef, ReactNode, forwardRef } from "react";
 import * as Select from "@radix-ui/react-select";
-import { Check, ChevronDown, ChevronUp } from "lucide-react";
 import * as Label from "@radix-ui/react-label";
 import useDistrict, { options } from "./useDistrict";
+import ChevronDown from "@/app/icons/ChevronDown.svg";
+import ChevronUp from "@/app/icons/ChevronUp.svg";
+import Check from "@/app/icons/Check.svg";
 
 export default function DistrictSelect() {
   const { value, setValue } = useDistrict();
@@ -59,7 +61,7 @@ const SelectItem = forwardRef(
       >
         <Select.ItemText>{children}</Select.ItemText>
         <Select.ItemIndicator className="absolute right-0">
-          <Check />
+          <Check className="w-[18px]" />
         </Select.ItemIndicator>
       </Select.Item>
     );

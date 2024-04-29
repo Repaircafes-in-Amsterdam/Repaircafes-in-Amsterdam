@@ -1,6 +1,6 @@
 "use client";
 import * as Checkbox from "@radix-ui/react-checkbox";
-import { Check } from "lucide-react";
+import Check from "@/app/icons/Check.svg";
 import useOfficeHours from "./useOfficeHours";
 
 export default function OfficeHoursCheckbox() {
@@ -13,7 +13,7 @@ export default function OfficeHoursCheckbox() {
         checked={value === "true"}
         onCheckedChange={(value) => setValue(String(value))}
       >
-        <Checkbox.Indicator className="w-[18px] text-white">
+        <Checkbox.Indicator className="text-white">
           <Check className="w-[18px] text-white" />
         </Checkbox.Indicator>
       </Checkbox.Root>

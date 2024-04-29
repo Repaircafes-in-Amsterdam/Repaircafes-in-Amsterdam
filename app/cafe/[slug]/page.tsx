@@ -1,6 +1,8 @@
 import Link from "next/link";
-import { ChevronLeft, SquareArrowOutUpRight, Mail } from "lucide-react";
 import useCafeData from "./useCafeData";
+import ChevronLeft from "@/app/icons/ChevronLeft.svg";
+import Mail from "@/app/icons/Mail.svg";
+import ExternalLink from "@/app/icons/ExternalLink.svg";
 
 function mapLinkTypeToLabel(type: string) {
   switch (type) {
@@ -45,7 +47,7 @@ export default function Page({ params }: { params: { slug: string } }) {
           rel="noreferrer"
           target="_blank"
         >
-          <SquareArrowOutUpRight />
+          <ExternalLink />
           {rc.address}
         </Link>
         <p>{}</p>
@@ -66,7 +68,7 @@ export default function Page({ params }: { params: { slug: string } }) {
                     rel="noreferrer"
                     target="_blank"
                   >
-                    <SquareArrowOutUpRight />
+                    <ExternalLink />
                     {mapLinkTypeToLabel(type)}
                   </Link>
                 </li>
