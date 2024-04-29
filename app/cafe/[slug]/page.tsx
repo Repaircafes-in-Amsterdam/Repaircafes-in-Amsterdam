@@ -15,9 +15,7 @@ function mapLinkTypeToLabel(type: string) {
 
 function getMapsLink(adres: string) {
   const fullAdres = `${adres} Amsterdam`;
-  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-    fullAdres,
-  )}`;
+  return `https://maps.google.com?q=${encodeURIComponent(fullAdres)}`;
 }
 
 export default function Page({ params }: { params: { slug: string } }) {
