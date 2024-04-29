@@ -3,7 +3,9 @@ const nextConfig = {
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
-      // issuer: /\.[jt]sx?$/,
+      // Only when using .svg?react
+      // Requires *.svg?react declaration, see global.d.ts
+      resourceQuery: /react/,
       use: ["@svgr/webpack"],
     });
 

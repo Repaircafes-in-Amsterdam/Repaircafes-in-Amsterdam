@@ -1,6 +1,6 @@
 "use client";
 import * as Checkbox from "@radix-ui/react-checkbox";
-import Check from "@/app/icons/Check.svg";
+import Check from "@/app/icons/Check.svg?react";
 import useOfficeHours from "./useOfficeHours";
 
 export default function OfficeHoursCheckbox() {

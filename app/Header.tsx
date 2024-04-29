@@ -1,4 +1,4 @@
-import Logo from "@/app/Logo.svg";
+import Logo from "@/app/Logo.svg?react";
 import Link from "next/link";
 
 export default function Header() {

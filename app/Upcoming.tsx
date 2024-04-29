@@ -2,7 +2,7 @@
 import useUpcomingData from "./useUpcomingData";
 import { EventGroup } from "./types";
 import { Fragment } from "react";
-import ChevronRight from "@/app/icons/ChevronRight.svg";
+import ChevronRight from "@/app/icons/ChevronRight.svg?react";
 
 import Link from "next/link";
 

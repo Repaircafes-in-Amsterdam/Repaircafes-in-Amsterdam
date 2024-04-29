@@ -1,8 +1,8 @@
 import Link from "next/link";
 import useCafeData from "./useCafeData";
-import ChevronLeft from "@/app/icons/ChevronLeft.svg";
-import Mail from "@/app/icons/Mail.svg";
-import ExternalLink from "@/app/icons/ExternalLink.svg";
+import ChevronLeft from "@/app/icons/ChevronLeft.svg?react";
+import Mail from "@/app/icons/Mail.svg?react";
+import ExternalLink from "@/app/icons/ExternalLink.svg?react";
 
 function mapLinkTypeToLabel(type: string) {
   switch (type) {
