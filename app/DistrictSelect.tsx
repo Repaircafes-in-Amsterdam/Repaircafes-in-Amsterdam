@@ -14,31 +14,30 @@ export default function DistrictSelect() {
       <Label.Root className="" htmlFor="district">
         Stadsdeel
       </Label.Root>
-      {/*  defaultValue="any"  */}
-      <Select.Root value={value} onValueChange={setValue}>
+      <Select.Root value={value} onValueChange={setValue} defaultOpen={true}>
         <Select.Trigger
-          className="inline-flex h-[35px] items-center justify-center gap-2 border-2 border-blue bg-white px-2 leading-none outline-none"
+          className="inline-flex w-[144px] items-center justify-between gap-2 border-2 border-blue bg-white px-2 py-1 leading-none outline-none"
           aria-label="Stadsdeel"
           id="district"
         >
           <Select.Value />
-          <Select.Icon className="">
+          <Select.Icon>
             <ChevronDown />
           </Select.Icon>
         </Select.Trigger>
         <Select.Portal>
-          <Select.Content className="overflow-hidden border-2 border-blue bg-white shadow-[0px_10px_38px_-10px_rgba(22,_23,_24,_0.35),0px_10px_20px_-15px_rgba(22,_23,_24,_0.2)]">
-            <Select.ScrollUpButton className="flex h-[25px] cursor-default items-center justify-center bg-white">
+          <Select.Content className="overflow-hidden border-2 border-blue bg-white text-blue shadow-[0px_10px_38px_-10px_rgba(22,_23,_24,_0.35),0px_10px_20px_-15px_rgba(22,_23,_24,_0.2)]">
+            <Select.ScrollUpButton className="flex cursor-default items-center justify-center bg-white py-1">
               <ChevronUp />
             </Select.ScrollUpButton>
-            <Select.Viewport className="flex flex-col p-[5px] text-blue">
+            <Select.Viewport className="flex flex-col text-blue">
               {options.map(({ value, label }) => (
                 <SelectItem key={value as string} value={value as string}>
                   {label}
                 </SelectItem>
               ))}
             </Select.Viewport>
-            <Select.ScrollDownButton className="flex h-[25px] cursor-default items-center justify-center bg-white">
+            <Select.ScrollDownButton className="flex cursor-default items-center justify-center bg-white py-1">
               <ChevronDown />
             </Select.ScrollDownButton>
           </Select.Content>
@@ -55,14 +54,16 @@ const SelectItem = forwardRef(
   ) => {
     return (
       <Select.Item
-        className="relative flex h-[25px] select-none items-center justify-between px-2 py-1.5 pr-[25px] leading-none data-[disabled]:pointer-events-none data-[highlighted]:bg-blue-250 data-[highlighted]:text-blue data-[highlighted]:outline-none"
+        className="relative flex select-none items-center justify-between px-2 py-1 leading-none data-[disabled]:pointer-events-none data-[highlighted]:bg-blue-250 data-[highlighted]:text-blue data-[highlighted]:outline-none"
         {...props}
         ref={forwardedRef}
       >
-        <Select.ItemText>{children}</Select.ItemText>
-        <Select.ItemIndicator className="absolute right-0">
-          <Check className="w-[18px]" />
-        </Select.ItemIndicator>
+        <Select.ItemText className="grow">{children}</Select.ItemText>
+        <div className="h-6">
+          <Select.ItemIndicator>
+            <Check className="w-6" />
+          </Select.ItemIndicator>
+        </div>
       </Select.Item>
     );
   },
