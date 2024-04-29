@@ -8,8 +8,8 @@ export type RC = {
   address: string;
   district: string;
   links: {
-    orgPage: string;
-    [key: string]: string;
+    orgPage?: string;
+    [key: string]: string | undefined;
   };
 };
 
