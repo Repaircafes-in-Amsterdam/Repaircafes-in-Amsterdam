@@ -5,6 +5,7 @@ import { JWT } from "google-auth-library";
 import path from "path";
 import { promises as fs } from "fs";
 import { fileURLToPath } from "url";
+import slugify from "slugify";
 
 const DATA_FILE_NAME = "data.json";
 const SPREADSHEET = "1LYn_GX0iwo5IaJCk8wada3FjbwI_gpUprs9prWp0pIQ";
@@ -29,7 +30,18 @@ const doc = new GoogleSpreadsheet(SPREADSHEET, serviceAccountAuth);
 await doc.loadInfo(); // loads document properties and worksheets
 const sheet = doc.sheetsById[SHEET_ID];
 const rows = await sheet.getRows();
-const list = rows.map((row) => row.toObject());
+const list = rows
+  .map((row) => row.toObject())
+  .map(({ orgPage, website, facebook, instagram, ...other }) => ({
+    ...other,
+    slug: slugify(other.name).toLowerCase(),
+    links: {
+      orgPage,
+      website,
+      facebook,
+      instagram,
+    },
+  }));
 
 const jsonData = JSON.stringify(list, null, 2);
 await fs.writeFile(dataFilePath, jsonData, "utf8");
