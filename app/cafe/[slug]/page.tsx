@@ -11,6 +11,13 @@ function mapLinkTypeToLabel(type: string) {
   }
 }
 
+function getMapsLink(adres: string) {
+  const fullAdres = `${adres} Amsterdam`;
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+    fullAdres
+  )}`;
+}
+
 export default function Page({ params }: { params: { slug: string } }) {
   const rc = useCafeData(params.slug);
   if (!rc) {
@@ -32,7 +39,16 @@ export default function Page({ params }: { params: { slug: string } }) {
         <h3 className="font-bold">Eerst volgende keer</h3>
         <p>{rc.next}</p>
         <h3 className="font-bold">Adres</h3>
-        <p>{rc.address}</p>
+        <Link
+          href={getMapsLink(rc.address)}
+          className="flex gap-1"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <SquareArrowOutUpRight />
+          {rc.address}
+        </Link>
+        <p>{}</p>
         <h3 className="font-bold">Contact</h3>
         <Link href={`mailto:${rc.email}`} className="flex gap-1">
           <Mail />
