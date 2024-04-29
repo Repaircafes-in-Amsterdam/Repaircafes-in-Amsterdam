@@ -8,10 +8,10 @@
     "endTime": "16:30",
     "district": "Oost",
     "email": "repairbeton@gmail.com",
-    "slug": "betondorp",
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-oost-betondorp/"
-    }
+    },
+    "slug": "betondorp"
   },
   {
     "name": "De Bonte Kraai",
@@ -22,12 +22,12 @@
     "endTime": "18:00",
     "district": "Zuidoost",
     "email": "repaircafe.zuidoost@gmail.com",
-    "slug": "de-bonte-kraai",
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-zuidoost/",
       "website": "https://repaircafe-zuidoost.nl",
       "facebook": "https://www.facebook.com/RepairCafeAmsterdamZuidoost/"
-    }
+    },
+    "slug": "de-bonte-kraai"
   },
   {
     "name": "De Diem",
@@ -38,11 +38,11 @@
     "endTime": "16:30",
     "district": "Diemen",
     "email": "repaircafe@duurzaamdorpdiemen.nl",
-    "slug": "de-diem",
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-diemen/",
       "website": "http://www.duurzaamdorpdiemen.nl/p/repair-cafe.html"
-    }
+    },
+    "slug": "de-diem"
   },
   {
     "name": "De Groene Hub",
@@ -53,12 +53,12 @@
     "endTime": "18:00",
     "district": "Zuidoost",
     "email": "repaircafe.zuidoost@gmail.com",
-    "slug": "de-groene-hub",
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-zuidoost/",
       "website": "https://repaircafe-zuidoost.nl",
       "facebook": "https://www.facebook.com/RepairCafeAmsterdamZuidoost/"
-    }
+    },
+    "slug": "de-groene-hub"
   },
   {
     "name": "De Meeuw",
@@ -69,11 +69,11 @@
     "endTime": "12:00",
     "district": "Noord",
     "email": "jansprenger@kpnmail.nl",
-    "slug": "de-meeuw",
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-noord-de-meeuw/",
       "website": "https://huisvandewijknoord.nl/de-meeuw"
-    }
+    },
+    "slug": "de-meeuw"
   },
   {
     "name": "De Ster",
@@ -84,12 +84,12 @@
     "endTime": "18:00",
     "district": "Zuidoost",
     "email": "repaircafe.zuidoost@gmail.com",
-    "slug": "de-ster",
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-zuidoost/",
       "website": "https://repaircafe-zuidoost.nl",
       "facebook": "https://www.facebook.com/RepairCafeAmsterdamZuidoost/"
-    }
+    },
+    "slug": "de-ster"
   },
   {
     "name": "Groenpunt Welkom",
@@ -100,12 +100,12 @@
     "endTime": "21:00",
     "district": "Zuid",
     "email": "info@groenebuurten.nl",
-    "slug": "groenpunt-welkom",
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-zuid-groenpunt-welkom/",
       "website": "http://groenebuurten.nl/start-repair-cafe-olympus/",
       "facebook": "https://www.facebook.com/events/357964950550086/357969440549637/"
-    }
+    },
+    "slug": "groenpunt-welkom"
   },
   {
     "name": "Harmoniebuurt",
@@ -116,11 +116,10 @@
     "endTime": "12:30",
     "district": "Zuid",
     "email": "info@decoenen.com",
-    "slug": "harmoniebuurt",
     "links": {
-      "orgPage": "",
       "website": "https://decoenen.com/terugkerende-activiteiten/#repaircafe"
-    }
+    },
+    "slug": "harmoniebuurt"
   },
   {
     "name": "IJburg",
@@ -131,12 +130,12 @@
     "endTime": "19:00",
     "district": "Oost",
     "email": "circulair@set-ijburg.nl",
-    "slug": "ijburg",
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-ijburg/",
       "website": "https://www.set-ijburg.nl/",
       "facebook": "https://www.facebook.com/circulaircafeijburg"
-    }
+    },
+    "slug": "ijburg"
   },
   {
     "name": "Jeltje",
@@ -147,11 +146,11 @@
     "endTime": "22:00",
     "district": "West",
     "email": "bericht@repaircafejeltje.nl",
-    "slug": "jeltje",
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-oud-west-jeltje/",
       "website": "https://repaircafejeltje.nl/"
-    }
+    },
+    "slug": "jeltje"
   },
   {
     "name": "Osdorp",
@@ -162,11 +161,11 @@
     "endTime": "12:00",
     "district": "Nieuw-West",
     "email": "herman.bouma@gmail.com",
-    "slug": "osdorp",
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-osdorp/",
       "website": "https://repaircafeosdorp.jouwweb.nl/"
-    }
+    },
+    "slug": "osdorp"
   },
   {
     "name": "Oud Noord",
@@ -177,12 +176,12 @@
     "endTime": "20:00",
     "district": "Noord",
     "email": "repaircafeoudnoord@gmail.com",
-    "slug": "oud-noord",
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-oud-noord/",
       "website": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-oud-noord/",
       "facebook": "https://www.facebook.com/repaircafeamsterdam"
-    }
+    },
+    "slug": "oud-noord"
   },
   {
     "name": "Sloten – Oud Osdorp",
@@ -193,10 +192,10 @@
     "endTime": "12:00",
     "district": "Nieuw-West",
     "email": "repaircafesloten@gmail.com",
-    "slug": "sloten-oud-osdorp",
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-sloten-oud-osdorp/"
-    }
+    },
+    "slug": "sloten-oud-osdorp"
   },
   {
     "name": "Zonneplein",
@@ -207,12 +206,11 @@
     "endTime": "16:00",
     "district": "Noord",
     "email": "repaircafezonneplein@gmail.com",
-    "slug": "zonneplein",
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-noord-zonneplein-tuindorp/",
       "website": "https://www.jofelamsterdam.nl/",
-      "facebook": "",
       "instagram": "https://instagram.com/repaircafe_zonneplein"
-    }
+    },
+    "slug": "zonneplein"
   }
 ]

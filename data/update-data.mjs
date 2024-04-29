@@ -10,6 +10,7 @@ import slugify from "slugify";
 const DATA_FILE_NAME = "data.json";
 const SPREADSHEET = "1LYn_GX0iwo5IaJCk8wada3FjbwI_gpUprs9prWp0pIQ";
 const SHEET_ID = "1724498670";
+const LINK_COLUMNS = ["orgPage", "website", "facebook", "instagram"];
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const dataFilePath = path.join(__dirname, DATA_FILE_NAME);
@@ -32,17 +33,23 @@ const sheet = doc.sheetsById[SHEET_ID];
 const rows = await sheet.getRows();
 const list = rows
   .map((row) => row.toObject())
-  .map(({ orgPage, website, facebook, instagram, ...other }) => ({
-    ...other,
-    slug: slugify(other.name).toLowerCase(),
-    links: {
-      orgPage,
-      website,
-      facebook,
-      instagram,
-    },
-  }));
-
+  // Move the link columns into a links object
+  .map((row) => {
+    const filtered = {};
+    const links = {};
+    for (const [column, value] of Object.entries(row)) {
+      if (LINK_COLUMNS.includes(column)) {
+        if (value) links[column] = value;
+      } else {
+        filtered[column] = value;
+      }
+    }
+    if (Object.keys(links).length > 0) filtered.links = links;
+    return filtered;
+  })
+  // Add slugs
+  .map((row) => ({ ...row, slug: slugify(row.name).toLowerCase() }));
+console.log("list: ", list);
 const jsonData = JSON.stringify(list, null, 2);
 await fs.writeFile(dataFilePath, jsonData, "utf8");
 console.log("Data saved successfully.");
