@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "./Header";
@@ -22,6 +23,7 @@ export default function RootLayout({
       <body className={classes(inter.className, "flex h-screen flex-col")}>
         <Header />
         {children}
+        <Analytics />
       </body>
     </html>
   );
