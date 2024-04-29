@@ -12,7 +12,7 @@ export default function Upcoming() {
     <>
       {groupedEvents.map((group: EventGroup) => (
         <Fragment key={group.dateString}>
-          <h2 className="font-medium sticky top-0 bg-white px-3 py-1.5">
+          <h2 className="sticky top-0 bg-white px-3 py-1.5 font-medium">
             {group.dateString}
           </h2>
           <ul className=" flex flex-col">
@@ -20,9 +20,9 @@ export default function Upcoming() {
               <li key={rc.slug}>
                 <Link
                   href={`cafe/${rc.slug}`}
-                  className="px-3 py-1.5 flex items-center bg-blue hover:bg-orange hover:text-blue-600 text-white cursor-pointer"
+                  className="flex cursor-pointer items-center bg-blue px-3 py-1.5 text-white hover:bg-orange hover:text-blue-600"
                 >
-                  <div className="flex flex-col grow">
+                  <div className="flex grow flex-col">
                     <em className="font-bold not-italic">{rc.name}</em>
                     {rc.startTime} - {rc.endTime} in {rc.district}
                   </div>

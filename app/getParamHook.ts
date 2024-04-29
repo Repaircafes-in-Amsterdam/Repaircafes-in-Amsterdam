@@ -12,7 +12,7 @@ export type Option = {
 export default function getParamHook(
   param: string,
   defaultValue: string,
-  options?: Option[]
+  options?: Option[],
   // trackAnalytics: boolean = true
 ) {
   return () => {
@@ -33,7 +33,7 @@ export default function getParamHook(
 
         return finalParams.toString();
       },
-      [searchParams]
+      [searchParams],
     );
 
     function setValue(value: string, params?: URLSearchParams) {

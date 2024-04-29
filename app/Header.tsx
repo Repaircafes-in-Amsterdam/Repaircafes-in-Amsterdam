@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="p-3 bg-blue flex">
+    <header className="flex bg-blue p-3">
       <Link href="/">
         <Image priority src={logo} alt="Logo" />
       </Link>

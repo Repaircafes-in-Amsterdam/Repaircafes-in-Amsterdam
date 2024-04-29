@@ -8,13 +8,13 @@ export default function OfficeHoursCheckbox() {
   return (
     <div className="flex items-center gap-2">
       <Checkbox.Root
-        className="flex h-[20px] w-[20px] appearance-none items-center justify-center bg-white border-blue border-2 outline-none data-[state=checked]:bg-blue shrink-0"
+        className="flex h-[20px] w-[20px] shrink-0 appearance-none items-center justify-center border-2 border-blue bg-white outline-none data-[state=checked]:bg-blue"
         id="office-hours"
         checked={value === "true"}
         onCheckedChange={(value) => setValue(String(value))}
       >
-        <Checkbox.Indicator className="text-white w-[18px]">
-          <Check className="text-white w-[18px]" />
+        <Checkbox.Indicator className="w-[18px] text-white">
+          <Check className="w-[18px] text-white" />
         </Checkbox.Indicator>
       </Checkbox.Root>
       <label className="leading-none" htmlFor="office-hours">

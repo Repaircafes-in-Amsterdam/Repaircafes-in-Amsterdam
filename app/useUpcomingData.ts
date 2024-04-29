@@ -69,7 +69,7 @@ export default function useUpcomingData() {
   const groupedEvents: EventGroup[] = [];
   for (const event of events) {
     let group = groupedEvents.find(
-      (item) => item.dateString === event.dateString
+      (item) => item.dateString === event.dateString,
     );
     if (!group) {
       group = {

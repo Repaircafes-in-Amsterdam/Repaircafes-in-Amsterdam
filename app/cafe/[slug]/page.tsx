@@ -14,7 +14,7 @@ function mapLinkTypeToLabel(type: string) {
 function getMapsLink(adres: string) {
   const fullAdres = `${adres} Amsterdam`;
   return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-    fullAdres
+    fullAdres,
   )}`;
 }
 
@@ -22,18 +22,18 @@ export default function Page({ params }: { params: { slug: string } }) {
   const rc = useCafeData(params.slug);
   if (!rc) {
     return (
-      <h2 className="font-bold text-blue p-3">
+      <h2 className="p-3 font-bold text-blue">
         Helaas, dit Repair Café is niet bekend bij ons.
       </h2>
     );
   }
   return (
-    <main className="flex flex-col text-blue grow shrink">
-      <Link href="/" className="p-3 flex gap-3">
+    <main className="flex shrink grow flex-col text-blue">
+      <Link href="/" className="flex gap-3 p-3">
         <ChevronLeft />
         <h2 className="font-bold">{rc.name}</h2>
       </Link>
-      <div className="grow overflow-y-auto h-px px-3">
+      <div className="h-px grow overflow-y-auto px-3">
         <h3 className="font-bold">Open</h3>
         <p>{rc.open}</p>
         <h3 className="font-bold">Eerst volgende keer</h3>

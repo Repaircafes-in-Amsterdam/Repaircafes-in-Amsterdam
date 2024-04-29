@@ -15,7 +15,7 @@ export default function DistrictSelect() {
       {/*  defaultValue="any"  */}
       <Select.Root value={value} onValueChange={setValue}>
         <Select.Trigger
-          className="inline-flex items-center justify-center px-2 leading-none h-[35px] gap-2 bg-white border-2 border-blue outline-none"
+          className="inline-flex h-[35px] items-center justify-center gap-2 border-2 border-blue bg-white px-2 leading-none outline-none"
           aria-label="Stadsdeel"
           id="district"
         >
@@ -25,18 +25,18 @@ export default function DistrictSelect() {
           </Select.Icon>
         </Select.Trigger>
         <Select.Portal>
-          <Select.Content className="overflow-hidden bg-white border-2 border-blue shadow-[0px_10px_38px_-10px_rgba(22,_23,_24,_0.35),0px_10px_20px_-15px_rgba(22,_23,_24,_0.2)]">
-            <Select.ScrollUpButton className="flex items-center justify-center h-[25px] bg-white cursor-default">
+          <Select.Content className="overflow-hidden border-2 border-blue bg-white shadow-[0px_10px_38px_-10px_rgba(22,_23,_24,_0.35),0px_10px_20px_-15px_rgba(22,_23,_24,_0.2)]">
+            <Select.ScrollUpButton className="flex h-[25px] cursor-default items-center justify-center bg-white">
               <ChevronUp />
             </Select.ScrollUpButton>
-            <Select.Viewport className="p-[5px] flex flex-col text-blue">
+            <Select.Viewport className="flex flex-col p-[5px] text-blue">
               {options.map(({ value, label }) => (
                 <SelectItem key={value as string} value={value as string}>
                   {label}
                 </SelectItem>
               ))}
             </Select.Viewport>
-            <Select.ScrollDownButton className="flex items-center justify-center h-[25px] bg-white cursor-default">
+            <Select.ScrollDownButton className="flex h-[25px] cursor-default items-center justify-center bg-white">
               <ChevronDown />
             </Select.ScrollDownButton>
           </Select.Content>
@@ -49,11 +49,11 @@ export default function DistrictSelect() {
 const SelectItem = forwardRef(
   (
     { children, ...props }: { children: ReactNode; value: string },
-    forwardedRef: LegacyRef<HTMLDivElement> | undefined
+    forwardedRef: LegacyRef<HTMLDivElement> | undefined,
   ) => {
     return (
       <Select.Item
-        className="px-2 py-1.5 leading-none flex items-center h-[25px] relative select-none data-[disabled]:pointer-events-none data-[highlighted]:outline-none data-[highlighted]:bg-blue-250 data-[highlighted]:text-blue justify-between pr-[25px]"
+        className="relative flex h-[25px] select-none items-center justify-between px-2 py-1.5 pr-[25px] leading-none data-[disabled]:pointer-events-none data-[highlighted]:bg-blue-250 data-[highlighted]:text-blue data-[highlighted]:outline-none"
         {...props}
         ref={forwardedRef}
       >
@@ -63,6 +63,6 @@ const SelectItem = forwardRef(
         </Select.ItemIndicator>
       </Select.Item>
     );
-  }
+  },
 );
 SelectItem.displayName = "SelectItem";

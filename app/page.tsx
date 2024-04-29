@@ -6,9 +6,9 @@ export const dynamic = "force-dynamic";
 
 export default async function Home() {
   return (
-    <main className="flex flex-col text-blue grow shrink">
-      <div className="grow overflow-y-auto h-px">
-        <div className="px-3 pt-3 flex flex-wrap gap-x-3 gap-y-2">
+    <main className="flex shrink grow flex-col text-blue">
+      <div className="h-px grow overflow-y-auto">
+        <div className="flex flex-wrap gap-x-3 gap-y-2 px-3 pt-3">
           <DistrictSelect />
           <OfficeHoursCheckbox />
         </div>
