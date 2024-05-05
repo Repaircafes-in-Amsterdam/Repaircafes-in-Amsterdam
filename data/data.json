@@ -1,5 +1,19 @@
 [
   {
+    "name": "AMSTELhuis",
+    "address": "Ceintuurbaan 480",
+    "open": "2e en 4e vrijdagmiddag 13:00 - 16:00",
+    "rrule": "FREQ=MONTHLY;BYDAY=2FR,4FR",
+    "startTime": "13:00",
+    "endTime": "16:00",
+    "district": "Zuid",
+    "email": "a.j.smit@freeler.nl",
+    "links": {
+      "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-zuid-amstelhuis/"
+    },
+    "slug": "amstelhuis"
+  },
+  {
     "name": "Betondorp",
     "address": "Karnstraat 2",
     "open": "2e en 4e woensdagmiddag 14:00 - 16:30",
@@ -35,11 +49,11 @@
     "startTime": "15:00",
     "endTime": "18:00",
     "district": "Zuidoost",
-    "email": "repaircafe.zuidoost@gmail.com",
+    "email": "info@groenebuurten.nl",
     "links": {
-      "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-zuidoost/",
-      "website": "https://repaircafe-zuidoost.nl",
-      "facebook": "https://www.facebook.com/RepairCafeAmsterdamZuidoost/"
+      "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-zuid-groenpunt-welkom/",
+      "website": "http://groenebuurten.nl/start-repair-cafe-olympus/",
+      "facebook": "https://www.facebook.com/events/357964950550086/357969440549637/"
     },
     "slug": "de-bonte-kraai"
   },
@@ -97,11 +111,10 @@
     "startTime": "15:00",
     "endTime": "18:00",
     "district": "Zuidoost",
-    "email": "repaircafe.zuidoost@gmail.com",
+    "email": "",
     "links": {
-      "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-zuidoost/",
-      "website": "https://repaircafe-zuidoost.nl",
-      "facebook": "https://www.facebook.com/RepairCafeAmsterdamZuidoost/"
+      "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-west-de-baarsjes/",
+      "website": "http://www.buurtkamercorantijn.nl/repair_cafe/"
     },
     "slug": "de-ster"
   },
