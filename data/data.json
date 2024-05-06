@@ -1,5 +1,39 @@
 [
   {
+    "name": "Afvalpaleis (elektra)",
+    "address": "Dapperstraat 76",
+    "open": "Elke woensdagmiddag 12:00 - 17:00",
+    "rrule": "FREQ=WEEKLY;BYDAY=WE;INTERVAL=1",
+    "startTime": "12:00",
+    "endTime": "17:00",
+    "district": "Oost",
+    "email": "afvalpaleis@jungle.amsterdam",
+    "links": {
+      "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-oost-afvalpaleis/",
+      "website": "https://www.jungle.amsterdam/werkplaats-repaircafe",
+      "facebook": "https://www.facebook.com/afvalpaleis/",
+      "instagram": "https://www.instagram.com/afvalpaleis/"
+    },
+    "slug": "afvalpaleis-(elektra)"
+  },
+  {
+    "name": "Afvalpaleis (textiel)",
+    "address": "Dapperstraat 76",
+    "open": "Elke donderdagmiddag 12:00 - 17:00",
+    "rrule": "FREQ=WEEKLY;BYDAY=TH;INTERVAL=1",
+    "startTime": "12:00",
+    "endTime": "17:00",
+    "district": "Oost",
+    "email": "afvalpaleis@jungle.amsterdam",
+    "links": {
+      "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-oost-afvalpaleis/",
+      "website": "https://www.jungle.amsterdam/werkplaats-repaircafe",
+      "facebook": "https://www.facebook.com/afvalpaleis/",
+      "instagram": "https://www.instagram.com/afvalpaleis/"
+    },
+    "slug": "afvalpaleis-(textiel)"
+  },
+  {
     "name": "AMSTELhuis",
     "address": "Ceintuurbaan 480",
     "open": "2e en 4e vrijdagmiddag 13:00 - 16:00",
