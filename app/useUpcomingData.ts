@@ -33,14 +33,10 @@ export default function useUpcomingData() {
   const justOfficeHours = justOfficeHoursRaw === "true";
   const { value: district } = useDistrict();
 
-  // Get all events organized untill next month
+  // Get all events organized until next month
   const events: Event[] = [];
-  for (const rcRaw of data as RC[]) {
-    if (!rcRaw.rrule) continue;
-    const rc = {
-      ...rcRaw,
-      verified: (rcRaw.verified as unknown) === "TRUE",
-    };
+  for (const rc of data as RC[]) {
+    if (!rc.rrule) continue;
 
     // Filter on district
     if (district !== "any" && district !== rc.district) continue;

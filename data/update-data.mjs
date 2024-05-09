@@ -48,7 +48,9 @@ const list = rows
     return filtered;
   })
   // Add slugs
-  .map((row) => ({ ...row, slug: slugify(row.name).toLowerCase() }));
+  .map((row) => ({ ...row, slug: slugify(row.name).toLowerCase() }))
+  // Turn verified into boolean
+  .map((row) => ({ ...row, verified: row.verified === "TRUE" }));
 
 const jsonData = JSON.stringify(list, null, 2);
 await fs.writeFile(dataFilePath, jsonData, "utf8");
