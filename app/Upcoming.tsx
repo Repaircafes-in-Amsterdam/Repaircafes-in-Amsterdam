@@ -3,11 +3,13 @@ import useUpcomingData from "./useUpcomingData";
 import { EventGroup } from "./types";
 import { Fragment } from "react";
 import ChevronRight from "@/app/icons/ChevronRight.svg?react";
+import Warning from "@/app/icons/Warning.svg?react";
 
 import Link from "next/link";
 
 export default function Upcoming() {
   const groupedEvents = useUpcomingData();
+  console.log("groupedEvents: ", groupedEvents);
 
   return (
     <>
@@ -21,12 +23,13 @@ export default function Upcoming() {
               <li key={rc.slug}>
                 <Link
                   href={`cafe/${rc.slug}`}
-                  className="flex cursor-pointer items-center bg-blue px-3 py-1.5 text-white hover:bg-orange hover:text-blue-600"
+                  className="flex cursor-pointer items-center gap-3 bg-blue px-3 py-1.5 text-white hover:bg-orange hover:text-blue-600"
                 >
                   <div className="flex grow flex-col">
                     <em className="font-bold not-italic">{rc.name}</em>
                     {rc.startTime} - {rc.endTime} in {rc.district}
                   </div>
+                  {!rc.verified && <Warning />}
                   <ChevronRight />
                 </Link>
               </li>

@@ -3,6 +3,7 @@ import useCafeData from "./useCafeData";
 import ChevronLeft from "@/app/icons/ChevronLeft.svg?react";
 import Mail from "@/app/icons/Mail.svg?react";
 import ExternalLink from "@/app/icons/ExternalLink.svg?react";
+import Warning from "@/app/icons/Warning.svg?react";
 
 function mapLinkTypeToLabel(type: string) {
   switch (type) {
@@ -33,6 +34,12 @@ export default function Page({ params }: { params: { slug: string } }) {
         <ChevronLeft />
         <h2 className="font-bold">{rc.name}</h2>
       </Link>
+      {!rc.verified && (
+        <div className="mb-1.5 flex items-center gap-3 bg-orange p-3 text-blue-600">
+          <Warning />
+          De volgende informatie is nog niet bevestigd
+        </div>
+      )}
       <div className="h-px grow overflow-y-auto px-3">
         <h3 className="font-bold">Open</h3>
         <p>{rc.open}</p>

@@ -7,6 +7,7 @@ export type RC = {
   endTime: string;
   address: string;
   district: string;
+  verified: boolean;
   links: {
     orgPage?: string;
     [key: string]: string | undefined;

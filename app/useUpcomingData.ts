@@ -35,9 +35,13 @@ export default function useUpcomingData() {
 
   // Get all events organized untill next month
   const events: Event[] = [];
-  for (const rc of data as RC[]) {
-    rc;
-    if (!rc.rrule) continue;
+  for (const rcRaw of data as RC[]) {
+    if (!rcRaw.rrule) continue;
+    const rc = {
+      ...rcRaw,
+      verified: (rcRaw.verified as unknown) === "TRUE",
+    };
+
     // Filter on district
     if (district !== "any" && district !== rc.district) continue;
 

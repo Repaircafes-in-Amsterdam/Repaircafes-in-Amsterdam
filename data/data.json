@@ -1,5 +1,17 @@
 [
   {
+    "name": "AC REEL Tussen de Bogen",
+    "address": "Tussen de Bogen 16",
+    "open": "Elke dinsdagmiddag 13:00 - 15:00",
+    "rrule": "FREQ=WEEKLY;BYDAY=TU;INTERVAL=1",
+    "startTime": "13:00",
+    "endTime": "15:00",
+    "district": "Centrum",
+    "email": "mazaoum@dock.nl",
+    "verified": "TRUE",
+    "slug": "ac-reel-tussen-de-bogen"
+  },
+  {
     "name": "Afvalpaleis (elektra)",
     "address": "Dapperstraat 76",
     "open": "Elke woensdagmiddag 12:00 - 17:00",
@@ -8,6 +20,7 @@
     "endTime": "17:00",
     "district": "Oost",
     "email": "afvalpaleis@jungle.amsterdam",
+    "verified": "TRUE",
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-oost-afvalpaleis/",
       "website": "https://www.jungle.amsterdam/werkplaats-repaircafe",
@@ -25,6 +38,7 @@
     "endTime": "17:00",
     "district": "Oost",
     "email": "afvalpaleis@jungle.amsterdam",
+    "verified": "TRUE",
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-oost-afvalpaleis/",
       "website": "https://www.jungle.amsterdam/werkplaats-repaircafe",
@@ -42,6 +56,7 @@
     "endTime": "16:00",
     "district": "Zuid",
     "email": "a.j.smit@freeler.nl",
+    "verified": "TRUE",
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-zuid-amstelhuis/"
     },
@@ -56,6 +71,7 @@
     "endTime": "16:30",
     "district": "Oost",
     "email": "repairbeton@gmail.com",
+    "verified": "TRUE",
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-oost-betondorp/"
     },
@@ -70,6 +86,7 @@
     "endTime": "12:00",
     "district": "West",
     "email": "repaircafedeboeg@gmail.com",
+    "verified": "TRUE",
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-west-de-boeg/"
     },
@@ -84,6 +101,7 @@
     "endTime": "18:00",
     "district": "Zuidoost",
     "email": "info@groenebuurten.nl",
+    "verified": "TRUE",
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-zuid-groenpunt-welkom/",
       "website": "http://groenebuurten.nl/start-repair-cafe-olympus/",
@@ -100,6 +118,7 @@
     "endTime": "16:30",
     "district": "Diemen",
     "email": "repaircafe@duurzaamdorpdiemen.nl",
+    "verified": "TRUE",
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-diemen/",
       "website": "http://www.duurzaamdorpdiemen.nl/p/repair-cafe.html"
@@ -115,12 +134,28 @@
     "endTime": "18:00",
     "district": "Zuidoost",
     "email": "repaircafe.zuidoost@gmail.com",
+    "verified": "TRUE",
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-zuidoost/",
       "website": "https://repaircafe-zuidoost.nl",
       "facebook": "https://www.facebook.com/RepairCafeAmsterdamZuidoost/"
     },
     "slug": "de-groene-hub"
+  },
+  {
+    "name": "De Havelaar",
+    "address": "Douwes Dekkerstraat 2",
+    "open": "3e vrijdagmiddag 13:00 - 16:00",
+    "rrule": "FREQ=MONTHLY;BYSETPOS=3;BYDAY=FR;INTERVAL=1",
+    "startTime": "13:00",
+    "endTime": "16:00",
+    "district": "West",
+    "email": "d.verheul@combiwel.nl",
+    "verified": "FALSE",
+    "links": {
+      "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-oud-west-de-havelaar/"
+    },
+    "slug": "de-havelaar"
   },
   {
     "name": "De Meeuw",
@@ -131,11 +166,27 @@
     "endTime": "12:00",
     "district": "Noord",
     "email": "jansprenger@kpnmail.nl",
+    "verified": "TRUE",
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-noord-de-meeuw/",
       "website": "https://huisvandewijknoord.nl/de-meeuw"
     },
     "slug": "de-meeuw"
+  },
+  {
+    "name": "De steek",
+    "address": "Van Der Hoopstraat 70HS",
+    "open": "Elke donderdag 16:00 - 20:00",
+    "rrule": "FREQ=WEEKLY;INTERVAL=1;BYDAY=TH",
+    "startTime": "16:00",
+    "endTime": "20:00",
+    "district": "West",
+    "email": "info@desteekamsterdam.nl",
+    "verified": "FALSE",
+    "links": {
+      "website": "https://desteekamsterdam.com/nl/gratis-kleding-repaircafe/"
+    },
+    "slug": "de-steek"
   },
   {
     "name": "De Ster",
@@ -146,6 +197,7 @@
     "endTime": "18:00",
     "district": "Zuidoost",
     "email": "",
+    "verified": "TRUE",
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-west-de-baarsjes/",
       "website": "http://www.buurtkamercorantijn.nl/repair_cafe/"
@@ -161,6 +213,7 @@
     "endTime": "21:00",
     "district": "Zuid",
     "email": "info@groenebuurten.nl",
+    "verified": "TRUE",
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-zuid-groenpunt-welkom/",
       "website": "http://groenebuurten.nl/start-repair-cafe-olympus/",
@@ -177,6 +230,7 @@
     "endTime": "12:30",
     "district": "Zuid",
     "email": "info@decoenen.com",
+    "verified": "TRUE",
     "links": {
       "website": "https://decoenen.com/terugkerende-activiteiten/#repaircafe"
     },
@@ -191,6 +245,7 @@
     "endTime": "16:00",
     "district": "Centrum",
     "email": "ssaruhan@dock.nl",
+    "verified": "TRUE",
     "links": {
       "website": "https://dock.nl/locaties/amsterdam/centrum/huis-van-de-buurt-het-claverhuis/"
     },
@@ -205,6 +260,7 @@
     "endTime": "19:00",
     "district": "Oost",
     "email": "circulair@set-ijburg.nl",
+    "verified": "TRUE",
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-ijburg/",
       "website": "https://www.set-ijburg.nl/",
@@ -221,6 +277,7 @@
     "endTime": "22:00",
     "district": "West",
     "email": "bericht@repaircafejeltje.nl",
+    "verified": "TRUE",
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-oud-west-jeltje/",
       "website": "https://repaircafejeltje.nl/"
@@ -236,6 +293,7 @@
     "endTime": "12:00",
     "district": "Nieuw-West",
     "email": "herman.bouma@gmail.com",
+    "verified": "TRUE",
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-osdorp/",
       "website": "https://repaircafeosdorp.jouwweb.nl/"
@@ -251,12 +309,28 @@
     "endTime": "20:00",
     "district": "Noord",
     "email": "repaircafeoudnoord@gmail.com",
+    "verified": "TRUE",
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-oud-noord/",
       "website": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-oud-noord/",
       "facebook": "https://www.facebook.com/repaircafeamsterdam"
     },
     "slug": "oud-noord"
+  },
+  {
+    "name": "Repairclub",
+    "address": "Columbusplein 253",
+    "open": "Elke woensdag avond 20:00-22:00",
+    "rrule": "FREQ=WEEKLY;BYDAY=WE;INTERVAL=1",
+    "startTime": "20:00",
+    "endTime": "22:00",
+    "district": "West",
+    "email": "info@jacobmaris.com",
+    "verified": "FALSE",
+    "links": {
+      "website": "https://jacobmaris.com/activiteiten/volwassenen/repairclub/"
+    },
+    "slug": "repairclub"
   },
   {
     "name": "Reparatietafel de Eester",
@@ -267,6 +341,7 @@
     "endTime": "13:00",
     "district": "Oost",
     "email": "duurzaam@buurtcooperatieohg.nl",
+    "verified": "TRUE",
     "links": {
       "website": "https://buurtcooperatieohg.nl/verduurzaamt/reparatietafel/"
     },
@@ -281,10 +356,28 @@
     "endTime": "12:00",
     "district": "Nieuw-West",
     "email": "repaircafesloten@gmail.com",
+    "verified": "TRUE",
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-sloten-oud-osdorp/"
     },
     "slug": "sloten-oud-osdorp"
+  },
+  {
+    "name": "Westerpark",
+    "address": "Van Limburg Stirumstraat 119",
+    "open": "Elke woensdagochtend 10:00 tot 12:00",
+    "rrule": "FREQ=WEEKLY;BYDAY=WE;INTERVAL=1",
+    "startTime": "10:00",
+    "endTime": "12:00",
+    "district": "West",
+    "email": "l.vanberkum@combiwel.nl",
+    "verified": "FALSE",
+    "links": {
+      "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-west-westerpark/",
+      "website": "https://west.combiwelbuurtwerk.nl/west-westerpark/",
+      "facebook": "https://www.facebook.com/koperenknoop/"
+    },
+    "slug": "westerpark"
   },
   {
     "name": "Zonneplein",
@@ -295,6 +388,7 @@
     "endTime": "16:00",
     "district": "Noord",
     "email": "repaircafezonneplein@gmail.com",
+    "verified": "TRUE",
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-noord-zonneplein-tuindorp/",
       "website": "https://www.jofelamsterdam.nl/",
