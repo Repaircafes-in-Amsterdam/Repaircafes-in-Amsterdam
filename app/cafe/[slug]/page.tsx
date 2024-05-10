@@ -71,6 +71,12 @@ export default function Page({ params }: { params: { slug: string } }) {
             {rc.dontRepair}
           </>
         )}
+        {rc.moreInfo && (
+          <>
+            <Header>Meer informatie</Header>
+            <div className="whitespace-pre-wrap">{rc.moreInfo}</div>
+          </>
+        )}
         {rc.email && (
           <>
             <Header>Contact</Header>

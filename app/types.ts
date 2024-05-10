@@ -10,6 +10,7 @@ export type RC = {
   district: string;
   doRepair: string;
   dontRepair: string;
+  moreInfo: string;
   links: {
     orgPage?: string;
     [key: string]: string | undefined;

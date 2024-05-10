@@ -11,6 +11,7 @@
     "email": "mazaoum@dock.nl",
     "doRepair": "Electronica, Kleding, Fietsen",
     "dontRepair": "Grote apparaten",
+    "moreInfo": "",
     "verified": true,
     "slug": "ac-reel-tussen-de-bogen"
   },
@@ -26,6 +27,7 @@
     "email": "afvalpaleis@jungle.amsterdam",
     "doRepair": "Electronica, Meubels",
     "dontRepair": "Magnetrons, computers, mobieltjes, fossiele brandstof verbrandende motoren.",
+    "moreInfo": "We werken graag samen met ambachtsmensen, workshopgevers, knutselaars en kunstenaars  om hen van materiaal te voorzien. Alles om hergebruik en afvalvermindering te stimuleren.",
     "verified": true,
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-oost-afvalpaleis/",
@@ -47,6 +49,7 @@
     "email": "afvalpaleis@jungle.amsterdam",
     "doRepair": "Kleding",
     "dontRepair": "Het repaircafe Textiel is gericht op helpen om het zelf te doen. Wij zijn nadrukkelijk geen naaiatelier maar een plek waar je de tijd neemt om zelf samen met anderen je kleding repareert zodat het langer mee gaat en je er weer liefde voor voelt.",
+    "moreInfo": "We werken graag samen met ambachtsmensen, workshopgevers, knutselaars en kunstenaars  om hen van materiaal te voorzien. Alles om hergebruik en afvalvermindering te stimuleren.",
     "verified": true,
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-oost-afvalpaleis/",
@@ -68,6 +71,7 @@
     "email": "a.j.smit@freeler.nl",
     "doRepair": "Elektronica, kleding, fietsen, hout speelgoed.",
     "dontRepair": "Alles wat draagbaar is proberen wij te repareren.",
+    "moreInfo": "",
     "verified": true,
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-zuid-amstelhuis/"
@@ -86,6 +90,7 @@
     "email": "repairbeton@gmail.com",
     "doRepair": "Electronica, Fietsen, Meubels, huishoudelijk",
     "dontRepair": "Wasmachines etc",
+    "moreInfo": "",
     "verified": true,
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-oost-betondorp/"
@@ -104,6 +109,7 @@
     "email": "repaircafedeboeg@gmail.com",
     "doRepair": "Electronica, Kleding, Fietsen",
     "dontRepair": "Telefoons, laptops",
+    "moreInfo": "",
     "verified": true,
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-west-de-boeg/"
@@ -122,6 +128,7 @@
     "email": "info@groenebuurten.nl",
     "doRepair": "",
     "dontRepair": "",
+    "moreInfo": "",
     "verified": true,
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-zuid-groenpunt-welkom/",
@@ -142,6 +149,7 @@
     "email": "repaircafe@duurzaamdorpdiemen.nl",
     "doRepair": "Electronica, Andere draagbare huishoudelijke apparaten ",
     "dontRepair": "Beeldschermen, grote apparaten ",
+    "moreInfo": "Bestaat in april 2024 10 jaar!",
     "verified": true,
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-diemen/",
@@ -161,6 +169,7 @@
     "email": "repaircafe.zuidoost@gmail.com",
     "doRepair": "Electronica, houdelijke apparaten, speelgoed, computers, tablets, telefoons, enz.",
     "dontRepair": "",
+    "moreInfo": "",
     "verified": true,
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-zuidoost/",
@@ -181,6 +190,7 @@
     "email": "d.verheul@combiwel.nl",
     "doRepair": "",
     "dontRepair": "",
+    "moreInfo": "",
     "verified": false,
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-oud-west-de-havelaar/"
@@ -199,6 +209,7 @@
     "email": "jansprenger@kpnmail.nl",
     "doRepair": "Electronica, Kleding, Fietsen, Meubels",
     "dontRepair": "Laptops en telefoons",
+    "moreInfo": "",
     "verified": true,
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-noord-de-meeuw/",
@@ -218,6 +229,7 @@
     "email": "info@desteekamsterdam.nl",
     "doRepair": "",
     "dontRepair": "",
+    "moreInfo": "",
     "verified": false,
     "links": {
       "website": "https://desteekamsterdam.com/nl/gratis-kleding-repaircafe/"
@@ -236,6 +248,7 @@
     "email": "",
     "doRepair": "",
     "dontRepair": "",
+    "moreInfo": "",
     "verified": true,
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-west-de-baarsjes/",
@@ -255,6 +268,7 @@
     "email": "info@groenebuurten.nl",
     "doRepair": "Electronica, Kleding, allerlei gebruiksvoorwerpen (bijv. koffer, rollater, mechanische typemachines), oud speelgoed",
     "dontRepair": "Telefoons, naaimachines, grote apparaten zoals wasmachines",
+    "moreInfo": "",
     "verified": true,
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-zuid-groenpunt-welkom/",
@@ -275,6 +289,7 @@
     "email": "info@decoenen.com",
     "doRepair": "Electronica, Meubels, klein/mechanisch/elektrisch/huishoudelijk/naaimachines",
     "dontRepair": "wij onderzoeken in principe alles; dit leidt tot soms een reparatie, soms een advies",
+    "moreInfo": "",
     "verified": true,
     "links": {
       "website": "https://decoenen.com/terugkerende-activiteiten/#repaircafe"
@@ -293,6 +308,7 @@
     "email": "ssaruhan@dock.nl",
     "doRepair": "Electronica",
     "dontRepair": "Alle elektronica die niet naar de locatie gebracht kan worden",
+    "moreInfo": "",
     "verified": true,
     "links": {
       "website": "https://dock.nl/locaties/amsterdam/centrum/huis-van-de-buurt-het-claverhuis/"
@@ -311,6 +327,7 @@
     "email": "circulair@set-ijburg.nl",
     "doRepair": "Electronica, Kleding, Fietsen, Meubels, Veel koffiemachines, stofzuifgers",
     "dontRepair": "We hebben geen speciale hulpmiddelen voor telefoons, maar kunnen altijd kijken",
+    "moreInfo": "",
     "verified": true,
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-ijburg/",
@@ -331,6 +348,7 @@
     "email": "bericht@repaircafejeltje.nl",
     "doRepair": "Electronica, Kleding, Fietsen",
     "dontRepair": "",
+    "moreInfo": "",
     "verified": true,
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-oud-west-jeltje/",
@@ -350,6 +368,7 @@
     "email": "herman.bouma@gmail.com",
     "doRepair": "Electronica, Kleding, Fietsen, Meubels",
     "dontRepair": "",
+    "moreInfo": "",
     "verified": true,
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-osdorp/",
@@ -369,6 +388,7 @@
     "email": "repaircafeoudnoord@gmail.com",
     "doRepair": "Electronica, Kleding, Fietsen, Meubels",
     "dontRepair": "Telefoons",
+    "moreInfo": "",
     "verified": true,
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-oud-noord/",
@@ -389,6 +409,7 @@
     "email": "repair.events@gmail.com",
     "doRepair": "Electronica, Kleding",
     "dontRepair": "",
+    "moreInfo": "Elk seizoen hebben wij weer wisselende dagen en tijden. In de winter staan we binnen, in de zomer buiten in de tuin. De data voor de komende zomer zijn: 19 mei, 9 juni, 14 juli, 11 aug \n\nIn plaats van iets uit handen te geven, léér je bij Repair Events samen met een reparateur hoe je je eigen spullen repareert of zelfs mooier maakt (upcyclen). Je mag alles mee brengen; van kleding tot huishoudelijke apparaten en elektronica. Wij zorgen voor de ruimte, de kennis en de tools; er zijn naaimachines, gereedschapskisten, borduursetjes en dergelijke aanwezig. Zo kan jij eindelijk dat gat in je broek repareren, die leuke lamp weer laten branden, of dat bloesje pimpen...",
     "verified": true,
     "links": {
       "instagram": "https://www.instagram.com/repair_events/"
@@ -407,6 +428,7 @@
     "email": "info@jacobmaris.com",
     "doRepair": "",
     "dontRepair": "",
+    "moreInfo": "",
     "verified": false,
     "links": {
       "website": "https://jacobmaris.com/activiteiten/volwassenen/repairclub/"
@@ -425,6 +447,7 @@
     "email": "duurzaam@buurtcooperatieohg.nl",
     "doRepair": "Electronica, Kleding, Meubels",
     "dontRepair": "",
+    "moreInfo": "",
     "verified": true,
     "links": {
       "website": "https://buurtcooperatieohg.nl/verduurzaamt/reparatietafel/"
@@ -443,6 +466,7 @@
     "email": "repaircafesloten@gmail.com",
     "doRepair": "Electronica, Kleding, memorabilia, kleine huisraad, laptops, audio",
     "dontRepair": "Grote huisraad, telefoons",
+    "moreInfo": "",
     "verified": true,
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-sloten-oud-osdorp/"
@@ -461,6 +485,7 @@
     "email": "info@flinkin.nl",
     "doRepair": "Elektra, soms kleding (zie instagram)",
     "dontRepair": "",
+    "moreInfo": "",
     "verified": false,
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-slotervaart/",
@@ -481,6 +506,7 @@
     "email": "l.vanberkum@combiwel.nl",
     "doRepair": "",
     "dontRepair": "",
+    "moreInfo": "",
     "verified": false,
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-west-westerpark/",
@@ -501,6 +527,7 @@
     "email": "repaircafezonneplein@gmail.com",
     "doRepair": "Electronica, Kleding, Meubels",
     "dontRepair": "Fietsen en verder alles wat niet meegenomen kan worden naar het repair cafe",
+    "moreInfo": "",
     "verified": true,
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-noord-zonneplein-tuindorp/",
