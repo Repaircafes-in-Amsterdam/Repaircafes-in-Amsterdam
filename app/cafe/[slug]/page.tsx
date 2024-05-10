@@ -61,12 +61,16 @@ export default function Page({ params }: { params: { slug: string } }) {
           <ExternalLink />
           {rc.address}
         </Link>
-        <p>{}</p>
-        <h3 className="font-bold">Contact</h3>
-        <Link href={`mailto:${rc.email}`} className="flex gap-1">
-          <Mail />
-          {rc.email}
-        </Link>
+        {rc.email && (
+          <>
+            <h3 className="font-bold">Contact</h3>
+            <Link href={`mailto:${rc.email}`} className="flex gap-1">
+              <Mail />
+              {rc.email}
+            </Link>
+          </>
+        )}
+
         {rc.links && (
           <>
             <h3 className="font-bold">Links</h3>
