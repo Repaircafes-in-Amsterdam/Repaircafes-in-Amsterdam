@@ -61,6 +61,18 @@ export default function Page({ params }: { params: { slug: string } }) {
           <ExternalLink />
           {rc.address}
         </Link>
+        {rc.doRepair && (
+          <>
+            <h3 className="font-bold">Wij repareren</h3>
+            {rc.doRepair}
+          </>
+        )}
+        {rc.dontRepair && (
+          <>
+            <h3 className="font-bold">Wij repareren niet</h3>
+            {rc.dontRepair}
+          </>
+        )}
         {rc.email && (
           <>
             <h3 className="font-bold">Contact</h3>
@@ -70,7 +82,6 @@ export default function Page({ params }: { params: { slug: string } }) {
             </Link>
           </>
         )}
-
         {rc.links && (
           <>
             <h3 className="font-bold">Links</h3>

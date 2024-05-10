@@ -8,11 +8,13 @@ export type RC = {
   closed: string;
   address: string;
   district: string;
-  verified: boolean;
+  doRepair: string;
+  dontRepair: string;
   links: {
     orgPage?: string;
     [key: string]: string | undefined;
   };
+  verified: boolean;
 };
 
 export type Event = {
