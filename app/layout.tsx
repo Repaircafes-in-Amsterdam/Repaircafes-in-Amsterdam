@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "./Header";
+import TopBar from "./TopBar";
 import classes from "./classes";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -23,7 +23,7 @@ export default function RootLayout({
       <body
         className={classes(inter.className, "flex h-screen flex-col text-blue")}
       >
-        <Header />
+        <TopBar />
         <main className="flex min-h-px shrink grow justify-center overflow-y-auto">
           <div className="flex w-[75ch] flex-col">{children}</div>
         </main>

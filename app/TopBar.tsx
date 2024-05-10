@@ -6,7 +6,7 @@ import Menu from "./Menu";
 import { useRef, useState } from "react";
 import classes from "./classes";
 
-export default function Header() {
+export default function TopBar() {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
   return (
     <>

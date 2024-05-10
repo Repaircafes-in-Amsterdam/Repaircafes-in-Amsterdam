@@ -4,6 +4,7 @@ import ChevronLeft from "@/app/icons/ChevronLeft.svg?react";
 import Mail from "@/app/icons/Mail.svg?react";
 import ExternalLink from "@/app/icons/ExternalLink.svg?react";
 import Warning from "@/app/icons/Warning.svg?react";
+import Header from "@/app/components/Header";
 
 function mapLinkTypeToLabel(type: string) {
   switch (type) {
@@ -41,17 +42,17 @@ export default function Page({ params }: { params: { slug: string } }) {
         </div>
       )}
       <div className="grow overflow-y-auto px-3 pb-3">
-        <h3 className="font-bold">Open op</h3>
+        <Header>Open op</Header>
         <p>{rc.open}</p>
-        <h3 className="font-bold">Eerst volgende keer</h3>
+        <Header>Eerst volgende keer</Header>
         <p>{rc.next}</p>
         {rc.closed && (
           <>
-            <h3 className="font-bold">Gesloten op</h3>
+            <Header>Gesloten op</Header>
             <p>{rc.closed}</p>
           </>
         )}
-        <h3 className="font-bold">Adres</h3>
+        <Header>Adres</Header>
         <Link
           href={getMapsLink(rc.address)}
           className="flex gap-1"
@@ -63,19 +64,19 @@ export default function Page({ params }: { params: { slug: string } }) {
         </Link>
         {rc.doRepair && (
           <>
-            <h3 className="font-bold">Wij repareren</h3>
+            <Header>Wij repareren</Header>
             {rc.doRepair}
           </>
         )}
         {rc.dontRepair && (
           <>
-            <h3 className="font-bold">Wij repareren niet</h3>
+            <Header>Wij repareren niet</Header>
             {rc.dontRepair}
           </>
         )}
         {rc.email && (
           <>
-            <h3 className="font-bold">Contact</h3>
+            <Header>Contact</Header>
             <Link href={`mailto:${rc.email}`} className="flex gap-1">
               <Mail />
               {rc.email}
@@ -84,7 +85,7 @@ export default function Page({ params }: { params: { slug: string } }) {
         )}
         {rc.links && (
           <>
-            <h3 className="font-bold">Links</h3>
+            <Header>Links</Header>
             <ul>
               {Object.entries(rc.links).map(([type, href]) => (
                 <li key={type}>
