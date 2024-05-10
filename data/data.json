@@ -386,6 +386,24 @@
     "slug": "sloten-oud-osdorp"
   },
   {
+    "name": "Slotervaart De Kas",
+    "address": "Jan Tooropstraat 8",
+    "open": "Elke vrijdag middag 14:00 - 16:00",
+    "rrule": "FREQ=WEEKLY;BYDAY=FR;INTERVAL=1",
+    "startTime": "14:00",
+    "endTime": "16:00",
+    "closed": "",
+    "district": "Nieuw-West",
+    "email": "info@flinkin.nl",
+    "verified": false,
+    "links": {
+      "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-slotervaart/",
+      "website": "https://www.flinkin.nl/",
+      "instagram": "https://www.instagram.com/tantetoorop"
+    },
+    "slug": "slotervaart-de-kas"
+  },
+  {
     "name": "Westerpark",
     "address": "Van Limburg Stirumstraat 119",
     "open": "Elke woensdagochtend 10:00 tot 12:00",
