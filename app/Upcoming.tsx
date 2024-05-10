@@ -9,7 +9,6 @@ import Link from "next/link";
 
 export default function Upcoming() {
   const groupedEvents = useUpcomingData();
-  console.log("groupedEvents: ", groupedEvents);
 
   return (
     <>
