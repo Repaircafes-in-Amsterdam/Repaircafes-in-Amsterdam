@@ -20,7 +20,12 @@ export default function Page() {
           makkelijker vindbaar te maken met hun openingstijden.
         </p>
         <p>
-          Tot dusver staan er {numRepairCafes} Repair Cafés op deze website.
+          Tot dusver staan er {numRepairCafes} Repair Cafés op deze website maar
+          we zijn bezig om de informatie van meer bevestigd te krijgen.
+        </p>
+        <p>
+          De aankomende lijst / agenda houdt op dit moment nog geen rekening met
+          wanneer Repair Cafés gesloten zijn.
         </p>
         <p>
           De informatie op deze website is Amsterdam specifiek, voor meer
@@ -34,7 +39,6 @@ export default function Page() {
           </a>
           .
         </p>
-
         <p>
           Wil je een Repair Café toevoegen of is er informatie incorrect of
           onvolledig, dan stellen we een e-mail zeer op prijs.
