@@ -41,10 +41,16 @@ export default function Page({ params }: { params: { slug: string } }) {
         </div>
       )}
       <div className="h-px grow overflow-y-auto px-3">
-        <h3 className="font-bold">Open</h3>
+        <h3 className="font-bold">Open op</h3>
         <p>{rc.open}</p>
         <h3 className="font-bold">Eerst volgende keer</h3>
         <p>{rc.next}</p>
+        {rc.closed && (
+          <>
+            <h3 className="font-bold">Gesloten op</h3>
+            <p>{rc.closed}</p>
+          </>
+        )}
         <h3 className="font-bold">Adres</h3>
         <Link
           href={getMapsLink(rc.address)}

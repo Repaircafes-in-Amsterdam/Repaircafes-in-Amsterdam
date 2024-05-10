@@ -5,6 +5,7 @@ export type RC = {
   rrule: string;
   startTime: string;
   endTime: string;
+  closed: string;
   address: string;
   district: string;
   verified: boolean;
