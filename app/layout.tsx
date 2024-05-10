@@ -24,8 +24,8 @@ export default function RootLayout({
         className={classes(inter.className, "flex h-screen flex-col text-blue")}
       >
         <TopBar />
-        <main className="flex min-h-px shrink grow justify-center overflow-y-auto">
-          <div className="flex w-[75ch] flex-col">{children}</div>
+        <main className="flex min-h-px shrink grow flex-col items-center overflow-y-auto">
+          {children}
         </main>
         <Analytics />
       </body>

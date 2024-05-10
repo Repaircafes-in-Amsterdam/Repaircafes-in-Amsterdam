@@ -5,6 +5,7 @@ import Mail from "@/app/icons/Mail.svg?react";
 import ExternalLink from "@/app/icons/ExternalLink.svg?react";
 import Warning from "@/app/icons/Warning.svg?react";
 import Header from "@/app/components/Header";
+import BasePage from "@/app/components/BasePage";
 
 function mapLinkTypeToLabel(type: string) {
   switch (type) {
@@ -30,11 +31,7 @@ export default function Page({ params }: { params: { slug: string } }) {
     );
   }
   return (
-    <div className="flex min-h-px shrink flex-col">
-      <Link href="/" className="flex gap-3 p-3">
-        <ChevronLeft />
-        <h2 className="font-bold">{rc.name}</h2>
-      </Link>
+    <BasePage title={rc.name}>
       {!rc.verified && (
         <div className="mb-1.5 flex items-center gap-3 bg-orange p-3 text-blue-600">
           <Warning />
@@ -104,6 +101,6 @@ export default function Page({ params }: { params: { slug: string } }) {
           </>
         )}
       </div>
-    </div>
+    </BasePage>
   );
 }

@@ -6,7 +6,7 @@ export const dynamic = "force-dynamic";
 
 export default async function Home() {
   return (
-    <div className="flex flex-col ">
+    <div className="w-body flex flex-col">
       <div className="flex flex-wrap gap-x-3 gap-y-2 px-3 pt-3">
         <DistrictSelect />
         <OfficeHoursCheckbox />

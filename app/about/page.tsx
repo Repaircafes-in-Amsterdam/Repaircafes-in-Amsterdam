@@ -2,17 +2,13 @@ import Link from "next/link";
 import ChevronLeft from "@/app/icons/ChevronLeft.svg?react";
 import Mail from "@/app/icons/Mail.svg?react";
 import data from "@/data/data.json";
+import BasePage from "../components/BasePage";
 
 export default function Page() {
   const numRepairCafes = data.length;
   return (
-    <div className="flex min-h-px shrink flex-col">
-      <Link href="/" className="flex gap-3 p-3">
-        <ChevronLeft />
-        <h2 className="font-bold">Over ons</h2>
-      </Link>
-
-      <div className="flex grow flex-col gap-3 overflow-y-auto px-3 pb-3">
+    <BasePage title="Over ons">
+      <div className="prose px-3 pb-3">
         <p>
           Deze website is een initiatief van vrijwilligers bij Repair Cafés in
           Amsterdam. Het doel is Repair Cafés toegankelijker te maken door ze
@@ -42,14 +38,14 @@ export default function Page() {
           Wil je een Repair Café toevoegen of is er informatie incorrect of
           onvolledig, dan stellen we een e-mail zeer op prijs.
         </p>
-        <div>
-          <h3 className="font-bold">Contact</h3>
-          <Link href="mailto:info@repaircafe.amsterdam" className="flex gap-1">
-            <Mail />
-            info@repaircafe.amsterdam
-          </Link>
-        </div>
       </div>
-    </div>
+      <div className="px-3 pb-3">
+        <h3 className="font-bold">Contact</h3>
+        <Link href="mailto:info@repaircafe.amsterdam" className="flex gap-1">
+          <Mail />
+          info@repaircafe.amsterdam
+        </Link>
+      </div>
+    </BasePage>
   );
 }
