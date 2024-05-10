@@ -384,12 +384,12 @@
     "rrule": "FREQ=MONTHLY;BYSETPOS=2;BYDAY=SU;INTERVAL=1",
     "startTime": "14:00",
     "endTime": "17:00",
-    "closed": "",
+    "closed": "12 mei (in plaats daarvan zijn we 19 mei open)",
     "district": "Noord",
-    "email": "repairevents@gmail.com",
-    "doRepair": "",
+    "email": "repair.events@gmail.com",
+    "doRepair": "Electronica, Kleding",
     "dontRepair": "",
-    "verified": false,
+    "verified": true,
     "links": {
       "instagram": "https://www.instagram.com/repair_events/"
     },
