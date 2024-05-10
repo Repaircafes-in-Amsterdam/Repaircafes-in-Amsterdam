@@ -218,6 +218,47 @@
     "slug": "de-meeuw"
   },
   {
+    "name": "De Meevaart",
+    "address": "Balistraat 48 A",
+    "open": "1e, 2e, 3e woensdagmiddag en laatste zaterdagmiddag 14:00 - 16:30",
+    "rrule": "FREQ=MONTHLY;BYDAY=1WE,2WE,3WE,-1SA",
+    "startTime": "14:00",
+    "endTime": "16:30",
+    "closed": "",
+    "district": "Oost",
+    "email": "repaircafe.demeevaart@gmail.com",
+    "doRepair": "",
+    "dontRepair": "",
+    "moreInfo": "",
+    "verified": false,
+    "links": {
+      "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-oost-de-meevaart/",
+      "website": "https://repaircafe-demeevaart-amsterdam-oost.nl/"
+    },
+    "slug": "de-meevaart"
+  },
+  {
+    "name": "De Pijp",
+    "address": "Lutmastraat 61A",
+    "open": "Laatste zondag 10:00 - 16:00",
+    "rrule": "FREQ=MONTHLY;BYSETPOS=-1;BYDAY=SU;INTERVAL=1",
+    "startTime": "10:00",
+    "endTime": "16:00",
+    "closed": "",
+    "district": "Zuid",
+    "email": "repaircafedepijp@gmail.com",
+    "doRepair": "",
+    "dontRepair": "",
+    "moreInfo": "",
+    "verified": false,
+    "links": {
+      "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-zuid-de-pijp/",
+      "website": "\nhttp://nmtzuid.nl/project/repair-cafe/",
+      "facebook": "https://www.facebook.com/groups/588615051264468/"
+    },
+    "slug": "de-pijp"
+  },
+  {
     "name": "De steek",
     "address": "Van Der Hoopstraat 70HS",
     "open": "Elke donderdag 16:00 - 20:00",
@@ -493,6 +534,25 @@
       "instagram": "https://www.instagram.com/tantetoorop"
     },
     "slug": "slotervaart-de-kas"
+  },
+  {
+    "name": "t Kruidvat",
+    "address": "Ouderkerkerlaan 30",
+    "open": "1e zaterdagmiddag 14:00 - 16:30",
+    "rrule": "FREQ=MONTHLY;BYSETPOS=1;BYDAY=SA;INTERVAL=1",
+    "startTime": "14:00",
+    "endTime": "16:30",
+    "closed": "Juli en augustus",
+    "district": "Diemen",
+    "email": "repaircafe@duurzaamdorpdiemen.nl",
+    "doRepair": "",
+    "dontRepair": "",
+    "moreInfo": "",
+    "verified": false,
+    "links": {
+      "website": "http://www.duurzaamdorpdiemen.nl/p/repair-cafe.html"
+    },
+    "slug": "t-kruidvat"
   },
   {
     "name": "Westerpark",
