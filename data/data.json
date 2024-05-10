@@ -13,7 +13,11 @@
     "dontRepair": "Grote apparaten",
     "moreInfo": "",
     "verified": true,
-    "slug": "ac-reel-tussen-de-bogen"
+    "slug": "ac-reel-tussen-de-bogen",
+    "coordinates": [
+      52.3834,
+      4.88851
+    ]
   },
   {
     "name": "Afvalpaleis (elektra)",
@@ -35,7 +39,11 @@
       "facebook": "https://www.facebook.com/afvalpaleis/",
       "instagram": "https://www.instagram.com/afvalpaleis/"
     },
-    "slug": "afvalpaleis-(elektra)"
+    "slug": "afvalpaleis-(elektra)",
+    "coordinate": [
+      52.36155369999999,
+      4.927973300000001
+    ]
   },
   {
     "name": "Afvalpaleis (textiel)",
@@ -57,7 +65,11 @@
       "facebook": "https://www.facebook.com/afvalpaleis/",
       "instagram": "https://www.instagram.com/afvalpaleis/"
     },
-    "slug": "afvalpaleis-(textiel)"
+    "slug": "afvalpaleis-(textiel)",
+    "coordinate": [
+      52.36155369999999,
+      4.927973300000001
+    ]
   },
   {
     "name": "AMSTELhuis",
@@ -76,7 +88,11 @@
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-zuid-amstelhuis/"
     },
-    "slug": "amstelhuis"
+    "slug": "amstelhuis",
+    "coordinate": [
+      52.35537189999999,
+      4.904625199999999
+    ]
   },
   {
     "name": "Betondorp",
@@ -95,7 +111,11 @@
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-oost-betondorp/"
     },
-    "slug": "betondorp"
+    "slug": "betondorp",
+    "coordinate": [
+      52.340691,
+      4.945482
+    ]
   },
   {
     "name": "De Boeg",
@@ -114,7 +134,11 @@
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-west-de-boeg/"
     },
-    "slug": "de-boeg"
+    "slug": "de-boeg",
+    "coordinate": [
+      52.375808,
+      4.846868499999998
+    ]
   },
   {
     "name": "De Bonte Kraai",
@@ -135,7 +159,11 @@
       "website": "http://groenebuurten.nl/start-repair-cafe-olympus/",
       "facebook": "https://www.facebook.com/events/357964950550086/357969440549637/"
     },
-    "slug": "de-bonte-kraai"
+    "slug": "de-bonte-kraai",
+    "coordinate": [
+      52.3431199,
+      4.8581587
+    ]
   },
   {
     "name": "De Diem",
@@ -155,7 +183,11 @@
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-diemen/",
       "website": "http://www.duurzaamdorpdiemen.nl/p/repair-cafe.html"
     },
-    "slug": "de-diem"
+    "slug": "de-diem",
+    "coordinate": [
+      52.341541,
+      4.95667
+    ]
   },
   {
     "name": "De Groene Hub",
@@ -176,7 +208,11 @@
       "website": "https://repaircafe-zuidoost.nl",
       "facebook": "https://www.facebook.com/RepairCafeAmsterdamZuidoost/"
     },
-    "slug": "de-groene-hub"
+    "slug": "de-groene-hub",
+    "coordinate": [
+      52.3172364,
+      4.980042399999999
+    ]
   },
   {
     "name": "De Havelaar",
@@ -195,7 +231,11 @@
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-oud-west-de-havelaar/"
     },
-    "slug": "de-havelaar"
+    "slug": "de-havelaar",
+    "coordinate": [
+      52.36911,
+      4.865345
+    ]
   },
   {
     "name": "De Meeuw",
@@ -215,7 +255,11 @@
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-noord-de-meeuw/",
       "website": "https://huisvandewijknoord.nl/de-meeuw"
     },
-    "slug": "de-meeuw"
+    "slug": "de-meeuw",
+    "coordinate": [
+      52.3846872,
+      4.9180786
+    ]
   },
   {
     "name": "De Meevaart",
@@ -235,7 +279,11 @@
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-oost-de-meevaart/",
       "website": "https://repaircafe-demeevaart-amsterdam-oost.nl/"
     },
-    "slug": "de-meevaart"
+    "slug": "de-meevaart",
+    "coordinate": [
+      52.36300920000001,
+      4.934108699999999
+    ]
   },
   {
     "name": "De Pijp",
@@ -256,7 +304,11 @@
       "website": "http://nmtzuid.nl/project/repair-cafe/",
       "facebook": "https://www.facebook.com/groups/588615051264468/"
     },
-    "slug": "de-pijp"
+    "slug": "de-pijp",
+    "coordinate": [
+      52.3509199,
+      4.8979308
+    ]
   },
   {
     "name": "De steek",
@@ -275,7 +327,11 @@
     "links": {
       "website": "https://desteekamsterdam.com/nl/gratis-kleding-repaircafe/"
     },
-    "slug": "de-steek"
+    "slug": "de-steek",
+    "coordinates": [
+      52.38449,
+      4.87272
+    ]
   },
   {
     "name": "De Ster",
@@ -295,7 +351,11 @@
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-west-de-baarsjes/",
       "website": "http://www.buurtkamercorantijn.nl/repair_cafe/"
     },
-    "slug": "de-ster"
+    "slug": "de-ster",
+    "coordinate": [
+      52.361683,
+      4.851214
+    ]
   },
   {
     "name": "Groenpunt Welkom",
@@ -316,7 +376,11 @@
       "website": "http://groenebuurten.nl/start-repair-cafe-olympus/",
       "facebook": "https://www.facebook.com/events/357964950550086/357969440549637/"
     },
-    "slug": "groenpunt-welkom"
+    "slug": "groenpunt-welkom",
+    "coordinate": [
+      52.3431199,
+      4.8581587
+    ]
   },
   {
     "name": "Harmoniebuurt",
@@ -335,7 +399,11 @@
     "links": {
       "website": "https://decoenen.com/terugkerende-activiteiten/#repaircafe"
     },
-    "slug": "harmoniebuurt"
+    "slug": "harmoniebuurt",
+    "coordinates": [
+      52.3526,
+      4.88142
+    ]
   },
   {
     "name": "Het Claverhuis",
@@ -354,7 +422,11 @@
     "links": {
       "website": "https://dock.nl/locaties/amsterdam/centrum/huis-van-de-buurt-het-claverhuis/"
     },
-    "slug": "het-claverhuis"
+    "slug": "het-claverhuis",
+    "coordinates": [
+      52.36986,
+      4.88091
+    ]
   },
   {
     "name": "IJburg",
@@ -375,7 +447,11 @@
       "website": "https://www.set-ijburg.nl/",
       "facebook": "https://www.facebook.com/circulaircafeijburg"
     },
-    "slug": "ijburg"
+    "slug": "ijburg",
+    "coordinate": [
+      52.359386,
+      4.992787
+    ]
   },
   {
     "name": "Jeltje",
@@ -395,7 +471,11 @@
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-oud-west-jeltje/",
       "website": "https://repaircafejeltje.nl/"
     },
-    "slug": "jeltje"
+    "slug": "jeltje",
+    "coordinate": [
+      52.3621249,
+      4.8686069
+    ]
   },
   {
     "name": "Osdorp",
@@ -415,7 +495,11 @@
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-osdorp/",
       "website": "https://repaircafeosdorp.jouwweb.nl/"
     },
-    "slug": "osdorp"
+    "slug": "osdorp",
+    "coordinate": [
+      52.3580345,
+      4.7978027
+    ]
   },
   {
     "name": "Oud Noord",
@@ -436,7 +520,11 @@
       "website": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-oud-noord/",
       "facebook": "https://www.facebook.com/repaircafeamsterdam"
     },
-    "slug": "oud-noord"
+    "slug": "oud-noord",
+    "coordinate": [
+      52.3990892,
+      4.9105161
+    ]
   },
   {
     "name": "Repair Events Tolhuistuin",
@@ -453,10 +541,14 @@
     "moreInfo": "Elk seizoen hebben wij weer wisselende dagen en tijden. In de winter staan we binnen, in de zomer buiten in de tuin. De data voor de komende zomer zijn: 19 mei, 9 juni, 14 juli, 11 aug \n\nIn plaats van iets uit handen te geven, léér je bij Repair Events samen met een reparateur hoe je je eigen spullen repareert of zelfs mooier maakt (upcyclen). Je mag alles mee brengen; van kleding tot huishoudelijke apparaten en elektronica. Wij zorgen voor de ruimte, de kennis en de tools; er zijn naaimachines, gereedschapskisten, borduursetjes en dergelijke aanwezig. Zo kan jij eindelijk dat gat in je broek repareren, die leuke lamp weer laten branden, of dat bloesje pimpen...",
     "verified": true,
     "links": {
-      "website": "https://tolhuistuin.nl/zoeken?q=Repair+Events",
+      "website": " ",
       "instagram": "https://www.instagram.com/repair_events/"
     },
-    "slug": "repair-events-tolhuistuin"
+    "slug": "repair-events-tolhuistuin",
+    "coordinates": [
+      52.38309,
+      4.90303
+    ]
   },
   {
     "name": "Repairclub",
@@ -475,11 +567,15 @@
     "links": {
       "website": "https://jacobmaris.com/activiteiten/volwassenen/repairclub/"
     },
-    "slug": "repairclub"
+    "slug": "repairclub",
+    "coordinates": [
+      52.36571,
+      4.85528
+    ]
   },
   {
     "name": "Reparatietafel de Eester",
-    "address": "C van Eesterenlaan  266",
+    "address": "C van Eesterenlaan 266",
     "open": "Elke derde woensdagochtend van 10:00 - 13:00",
     "rrule": "FREQ=MONTHLY;BYDAY=3WE;INTERVAL=1",
     "startTime": "10:00",
@@ -494,7 +590,11 @@
     "links": {
       "website": "https://buurtcooperatieohg.nl/verduurzaamt/reparatietafel/"
     },
-    "slug": "reparatietafel-de-eester"
+    "slug": "reparatietafel-de-eester",
+    "coordinates": [
+      52.37058,
+      4.93816
+    ]
   },
   {
     "name": "Sloten – Oud Osdorp",
@@ -513,7 +613,11 @@
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-sloten-oud-osdorp/"
     },
-    "slug": "sloten-oud-osdorp"
+    "slug": "sloten-oud-osdorp",
+    "coordinate": [
+      52.3420301,
+      4.7963456
+    ]
   },
   {
     "name": "Slotervaart De Kas",
@@ -534,7 +638,11 @@
       "website": "https://www.flinkin.nl/",
       "instagram": "https://www.instagram.com/tantetoorop"
     },
-    "slug": "slotervaart-de-kas"
+    "slug": "slotervaart-de-kas",
+    "coordinate": [
+      52.36106109999999,
+      4.836834
+    ]
   },
   {
     "name": "t Kruidvat",
@@ -553,7 +661,11 @@
     "links": {
       "website": "http://www.duurzaamdorpdiemen.nl/p/repair-cafe.html"
     },
-    "slug": "t-kruidvat"
+    "slug": "t-kruidvat",
+    "coordinates": [
+      52.33423,
+      4.95629
+    ]
   },
   {
     "name": "Westerpark",
@@ -574,7 +686,11 @@
       "website": "https://west.combiwelbuurtwerk.nl/west-westerpark/",
       "facebook": "https://www.facebook.com/koperenknoop/"
     },
-    "slug": "westerpark"
+    "slug": "westerpark",
+    "coordinate": [
+      52.3835455,
+      4.876798300000001
+    ]
   },
   {
     "name": "Zonneplein",
@@ -595,6 +711,10 @@
       "website": "https://www.jofelamsterdam.nl/",
       "instagram": "https://instagram.com/repaircafe_zonneplein"
     },
-    "slug": "zonneplein"
+    "slug": "zonneplein",
+    "coordinate": [
+      52.4130968,
+      4.8902151
+    ]
   }
 ]
