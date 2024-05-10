@@ -7,7 +7,7 @@ function MenuItem({ href, children }: { href: string; children: ReactNode }) {
   return (
     <Link
       href={href}
-      className="flex items-center justify-between gap-3 p-3 pr-2.5 font-medium text-blue"
+      className="flex items-center justify-between gap-3 p-3 pr-2.5 font-medium"
     >
       {children}
       <ChevronRight />

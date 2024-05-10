@@ -20,9 +20,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="nl">
-      <body className={classes(inter.className, "flex h-screen flex-col")}>
+      <body
+        className={classes(inter.className, "flex h-screen flex-col text-blue")}
+      >
         <Header />
-        {children}
+        <main className="flex min-h-px shrink grow justify-center overflow-y-auto">
+          <div className="flex w-[75ch] flex-col">{children}</div>
+        </main>
         <Analytics />
       </body>
     </html>

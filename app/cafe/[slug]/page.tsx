@@ -29,7 +29,7 @@ export default function Page({ params }: { params: { slug: string } }) {
     );
   }
   return (
-    <main className="flex shrink grow flex-col text-blue">
+    <div className="flex min-h-px shrink flex-col">
       <Link href="/" className="flex gap-3 p-3">
         <ChevronLeft />
         <h2 className="font-bold">{rc.name}</h2>
@@ -40,7 +40,7 @@ export default function Page({ params }: { params: { slug: string } }) {
           De volgende informatie is nog niet bevestigd
         </div>
       )}
-      <div className="h-px grow overflow-y-auto px-3">
+      <div className="grow overflow-y-auto px-3 pb-3">
         <h3 className="font-bold">Open op</h3>
         <p>{rc.open}</p>
         <h3 className="font-bold">Eerst volgende keer</h3>
@@ -92,6 +92,6 @@ export default function Page({ params }: { params: { slug: string } }) {
           </>
         )}
       </div>
-    </main>
+    </div>
   );
 }

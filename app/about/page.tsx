@@ -5,15 +5,14 @@ import data from "@/data/data.json";
 
 export default function Page() {
   const numRepairCafes = data.length;
-  console.log("numRepairCafes: ", numRepairCafes);
   return (
-    <main className="flex shrink grow flex-col text-blue">
+    <div className="flex min-h-px shrink flex-col">
       <Link href="/" className="flex gap-3 p-3">
         <ChevronLeft />
         <h2 className="font-bold">Over ons</h2>
       </Link>
 
-      <div className="flex h-px grow flex-col gap-3 overflow-y-auto px-3">
+      <div className="flex grow flex-col gap-3 overflow-y-auto px-3 pb-3">
         <p>
           Deze website is een initiatief van vrijwilligers bij Repair Cafés in
           Amsterdam. Het doel is Repair Cafés toegankelijker te maken door ze
@@ -51,6 +50,6 @@ export default function Page() {
           </Link>
         </div>
       </div>
-    </main>
+    </div>
   );
 }
