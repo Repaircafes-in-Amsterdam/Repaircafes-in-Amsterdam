@@ -378,6 +378,24 @@
     "slug": "oud-noord"
   },
   {
+    "name": "Repair Events Tolhuistuin",
+    "address": "IJpromenade 2",
+    "open": "Elke tweede zondagmiddag 14:00 - 17:00",
+    "rrule": "FREQ=MONTHLY;BYSETPOS=2;BYDAY=SU;INTERVAL=1",
+    "startTime": "14:00",
+    "endTime": "17:00",
+    "closed": "",
+    "district": "Noord",
+    "email": "repairevents@gmail.com",
+    "doRepair": "",
+    "dontRepair": "",
+    "verified": false,
+    "links": {
+      "instagram": "https://www.instagram.com/repair_events/"
+    },
+    "slug": "repair-events-tolhuistuin"
+  },
+  {
     "name": "Repairclub",
     "address": "Columbusplein 253",
     "open": "Elke woensdag avond 20:00-22:00",
