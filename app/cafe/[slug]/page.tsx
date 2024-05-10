@@ -1,6 +1,6 @@
 import Link from "next/link";
 import useCafeData from "./useCafeData";
-import ChevronLeft from "@/app/icons/ChevronLeft.svg?react";
+import ChevronRight from "@/app/icons/ChevronRight.svg?react";
 import Mail from "@/app/icons/Mail.svg?react";
 import ExternalLink from "@/app/icons/ExternalLink.svg?react";
 import Warning from "@/app/icons/Warning.svg?react";
@@ -100,6 +100,10 @@ export default function Page({ params }: { params: { slug: string } }) {
             </ul>
           </>
         )}
+        <Link href="/about-repaircafes" className="flex gap-1">
+          <ChevronRight />
+          Lees meer over Repair Cafés
+        </Link>
       </div>
     </BasePage>
   );
