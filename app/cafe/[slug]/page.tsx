@@ -6,6 +6,7 @@ import ExternalLink from "@/app/icons/ExternalLink.svg?react";
 import Warning from "@/app/icons/Warning.svg?react";
 import Header from "@/app/components/Header";
 import BasePage from "@/app/components/BasePage";
+import DetailsSection from "./DetailsSection";
 
 function mapLinkTypeToLabel(type: string) {
   switch (type) {
@@ -38,57 +39,44 @@ export default function Page({ params }: { params: { slug: string } }) {
           De volgende informatie is nog niet bevestigd
         </div>
       )}
-      <div className="grow overflow-y-auto px-3 pb-3">
-        <Header>Open op</Header>
-        <p>{rc.open}</p>
-        <Header>Eerst volgende keer</Header>
-        <p>{rc.next}</p>
+      <div className="flex grow flex-col gap-1 overflow-y-auto px-3 pb-3">
+        <DetailsSection title="Open op">{rc.open}</DetailsSection>
+        <DetailsSection title="Eerst volgende keer">{rc.next}</DetailsSection>
         {rc.closed && (
-          <>
-            <Header>Gesloten op</Header>
-            <p>{rc.closed}</p>
-          </>
+          <DetailsSection title="Gesloten op">{rc.closed}</DetailsSection>
         )}
-        <Header>Adres</Header>
-        <Link
-          href={getMapsLink(rc.address)}
-          className="flex gap-1"
-          rel="noreferrer"
-          target="_blank"
-        >
-          <ExternalLink />
-          {rc.address}
-        </Link>
+        <DetailsSection title="Adres">
+          <Link
+            href={getMapsLink(rc.address)}
+            className="flex gap-1"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <ExternalLink />
+            {rc.address}
+          </Link>
+        </DetailsSection>
         {rc.doRepair && (
-          <>
-            <Header>Wij repareren</Header>
-            {rc.doRepair}
-          </>
+          <DetailsSection title="Wij repareren">{rc.doRepair}</DetailsSection>
         )}
         {rc.dontRepair && (
-          <>
-            <Header>Wij repareren niet</Header>
+          <DetailsSection title="Wij repareren niet">
             {rc.dontRepair}
-          </>
+          </DetailsSection>
         )}
         {rc.moreInfo && (
-          <>
-            <Header>Meer informatie</Header>
-            <div className="whitespace-pre-wrap">{rc.moreInfo}</div>
-          </>
+          <DetailsSection title="Meer informatie">{rc.moreInfo}</DetailsSection>
         )}
         {rc.email && (
-          <>
-            <Header>Contact</Header>
+          <DetailsSection title="Contact">
             <Link href={`mailto:${rc.email}`} className="flex gap-1">
               <Mail />
               {rc.email}
             </Link>
-          </>
+          </DetailsSection>
         )}
         {rc.links && (
-          <>
-            <Header>Links</Header>
+          <DetailsSection title="Links">
             <ul>
               {Object.entries(rc.links).map(([type, href]) => (
                 <li key={type}>
@@ -104,7 +92,7 @@ export default function Page({ params }: { params: { slug: string } }) {
                 </li>
               ))}
             </ul>
-          </>
+          </DetailsSection>
         )}
         <Link href="/repaircafes" className="flex gap-1">
           <ChevronRight />
