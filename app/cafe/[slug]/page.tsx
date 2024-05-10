@@ -100,7 +100,7 @@ export default function Page({ params }: { params: { slug: string } }) {
             </ul>
           </>
         )}
-        <Link href="/about-repaircafes" className="flex gap-1">
+        <Link href="/repaircafes" className="flex gap-1">
           <ChevronRight />
           Lees meer over Repair Cafés
         </Link>
