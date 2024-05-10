@@ -11,7 +11,7 @@ export default function BasePage({
 }) {
   return (
     <div className="max-w-body relative flex w-full grow flex-col">
-      <div className="sticky top-0 flex gap-3 bg-white p-3">
+      <div className="sticky top-0 z-10 flex gap-3 bg-white p-3">
         <BackButton>
           <ChevronLeft />
         </BackButton>
