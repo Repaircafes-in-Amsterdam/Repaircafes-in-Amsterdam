@@ -247,13 +247,13 @@
     "closed": "",
     "district": "Zuid",
     "email": "repaircafedepijp@gmail.com",
-    "doRepair": "",
-    "dontRepair": "",
-    "moreInfo": "",
-    "verified": false,
+    "doRepair": "Electronica, Kleding, electrische en mechanische apparatuur, fijn herstelwerk.",
+    "dontRepair": "Magnetrons en apparaten die niet op de fiets te vervoeren zijn.",
+    "moreInfo": "Zie onze repaircafe.org pagina voor actuele data.",
+    "verified": true,
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-zuid-de-pijp/",
-      "website": "\nhttp://nmtzuid.nl/project/repair-cafe/",
+      "website": "http://nmtzuid.nl/project/repair-cafe/",
       "facebook": "https://www.facebook.com/groups/588615051264468/"
     },
     "slug": "de-pijp"
