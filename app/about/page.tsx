@@ -20,7 +20,17 @@ export default function Page() {
         </p>
         <p>
           De aankomende lijst / agenda houdt op dit moment nog geen rekening met
-          wanneer Repair Cafés gesloten zijn.
+          wanneer Repair Cafés gesloten zijn (zoals met feestdagen).
+        </p>
+        <p>
+          De website is open source,{" "}
+          <a
+            href="https://github.com/Repaircafes-in-Amsterdam/Repaircafes-in-Amsterdam"
+            target="_blank"
+          >
+            zie de source code op Github
+          </a>
+          .
         </p>
         <p>
           De informatie op deze website is Amsterdam specifiek, voor meer
