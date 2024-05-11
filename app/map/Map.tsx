@@ -6,7 +6,7 @@ import { MapContainer } from "react-leaflet/MapContainer";
 import { TileLayer } from "react-leaflet/TileLayer";
 import { Marker } from "react-leaflet/Marker";
 import { RC } from "../types";
-import { latLngBounds } from "leaflet";
+import { icon, latLngBounds } from "leaflet";
 import useActive from "./useActive";
 // import { useMapEvent } from "react-leaflet/hooks";
 
@@ -14,6 +14,17 @@ import useActive from "./useActive";
 //   useMapEvent("click", () => onClick(""));
 //   return null;
 // }
+
+var markerIcon = icon({
+  iconUrl: "rc-marker-icon.png",
+  iconRetinaUrl: "rc-marker-icon-2x.png",
+  iconSize: [24, 30],
+  iconAnchor: [12, 30],
+  shadowUrl: "rc-marker-shadow.png",
+  shadowRetinaUrl: "rc-marker-shadow-2x.png",
+  shadowSize: [45, 33],
+  shadowAnchor: [15, 29],
+});
 
 export default function Map({ data }: { data: RC[] }) {
   const bounds = latLngBounds(
@@ -35,6 +46,7 @@ export default function Map({ data }: { data: RC[] }) {
       />
       {(data as RC[]).map((rc) => (
         <Marker
+          icon={markerIcon}
           key={rc.slug}
           position={rc.coordinate as [number, number]}
           eventHandlers={{
