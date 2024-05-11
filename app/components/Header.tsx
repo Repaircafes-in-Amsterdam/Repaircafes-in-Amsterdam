@@ -1,5 +1,12 @@
 import { ReactNode } from "react";
+import classes from "../classes";
 
-export default function Header({ children }: { children: ReactNode }) {
-  return <h3 className="font-bold">{children}</h3>;
+export default function Header({
+  children,
+  className,
+}: {
+  children: ReactNode;
+  className?: string;
+}) {
+  return <h3 className={classes("font-bold", className)}>{children}</h3>;
 }

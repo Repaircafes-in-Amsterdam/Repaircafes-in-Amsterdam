@@ -1,8 +1,10 @@
-import { useMemo } from "react";
+"use client";
+import { Suspense, useMemo } from "react";
 import BackButton from "../components/BackButton";
-import Map from "./Map";
+import data from "@/data/data.json";
 import ChevronLeft from "@/app/icons/ChevronLeft.svg?react";
 import dynamic from "next/dynamic";
+import MapPanel from "./MapPanel";
 
 export default function Page() {
   const Map = useMemo(
@@ -22,8 +24,11 @@ export default function Page() {
         </BackButton>
         <h2 className="font-bold">Kaart</h2>
       </div>
-      <div className="h-full w-full">
-        <Map />
+      <div className="relative h-full w-full">
+        <Map data={data} />
+        <Suspense>
+          <MapPanel />
+        </Suspense>
       </div>
     </div>
   );
