@@ -2,11 +2,18 @@
 import Logo from "@/app/Logo.svg?react";
 import MenuIcon from "@/app/icons/Menu.svg?react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Menu from "./Menu";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import classes from "./classes";
 
+const links = [
+  { href: "/", label: "Aankomende" },
+  { href: "/map", label: "Kaart" },
+];
+
 export default function TopBar() {
+  const pathname = usePathname();
   const [menuIsOpen, setMenuIsOpen] = useState(false);
   return (
     <>
@@ -19,9 +26,22 @@ export default function TopBar() {
           )}
           onClick={() => setMenuIsOpen(false)}
         ></div>
-        <Link href="/">
-          <Logo />
-        </Link>
+        <div className="flex flex-col gap-2.5">
+          <Link href="/">
+            <Logo />
+          </Link>
+          <div className="flex gap-3 font-medium text-white">
+            {links.map(({ href, label }) => (
+              <Link
+                key={href}
+                href={href}
+                className={pathname === href ? "text-orange" : "text-white"}
+              >
+                {label}
+              </Link>
+            ))}
+          </div>
+        </div>
         <button
           onClick={() => setMenuIsOpen(!menuIsOpen)}
           className="cursor-pointer text-white"
