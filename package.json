@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:analyze": "npm run build --analyzeBundle",
     "start": "next start",
     "lint": "next lint",
     "update-data": "node data/update-data.mjs",
@@ -12,6 +13,7 @@
     "postinstall": "patch-package"
   },
   "dependencies": {
+    "@next/bundle-analyzer": "^14.2.3",
     "@radix-ui/react-checkbox": "^1.0.4",
     "@radix-ui/react-label": "^2.0.2",
     "@radix-ui/react-select": "^2.0.0",
