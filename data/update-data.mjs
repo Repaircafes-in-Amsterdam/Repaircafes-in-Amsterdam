@@ -83,9 +83,9 @@ const rawManualMapData = await fs.readFile(manualMapDataFilePath, "utf8");
 const manualMapData = JSON.parse(rawManualMapData || "{}");
 const lackCoordinates = list.filter((row) => !row.coordinate);
 for (const row of lackCoordinates) {
-  const coordinates = manualMapData[row.address];
-  if (coordinates) {
-    row.coordinates = coordinates;
+  const coordinate = manualMapData[row.address];
+  if (coordinate) {
+    row.coordinate = coordinate;
     continue;
   }
   manualMapData[row.address] = [];

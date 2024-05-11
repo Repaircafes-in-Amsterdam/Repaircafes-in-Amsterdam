@@ -11,6 +11,7 @@ export type RC = {
   doRepair: string;
   dontRepair: string;
   moreInfo: string;
+  coordinate: number[];
   links: {
     orgPage?: string;
     [key: string]: string | undefined;
