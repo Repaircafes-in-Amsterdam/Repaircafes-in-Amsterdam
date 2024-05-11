@@ -313,19 +313,20 @@
   {
     "name": "De steek",
     "address": "Van Der Hoopstraat 70HS",
-    "open": "Elke donderdag 16:00 - 20:00",
+    "open": "Elke donderdag 16:00 - 20:00 (in 2024)",
     "rrule": "FREQ=WEEKLY;INTERVAL=1;BYDAY=TH",
     "startTime": "16:00",
     "endTime": "20:00",
-    "closed": "",
+    "closed": "Sinterklaas en kerst",
     "district": "West",
     "email": "info@desteekamsterdam.nl",
-    "doRepair": "",
-    "dontRepair": "",
-    "moreInfo": "",
-    "verified": false,
+    "doRepair": "Kleding",
+    "dontRepair": "Andere dingen dan kleding",
+    "moreInfo": "We organiseren dit tot het einde van 2024",
+    "verified": true,
     "links": {
-      "website": "https://desteekamsterdam.com/nl/gratis-kleding-repaircafe/"
+      "website": "https://desteekamsterdam.com/nl/gratis-kleding-repaircafe/",
+      "instagram": "https://www.instagram.com/desteekamsterdam/"
     },
     "slug": "de-steek",
     "coordinate": [
