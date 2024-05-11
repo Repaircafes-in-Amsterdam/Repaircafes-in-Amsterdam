@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="nl">
       <body
-        className={classes(inter.className, "flex h-screen flex-col text-blue")}
+        className={classes(inter.className, "flex h-dvh flex-col text-blue")}
       >
         <TopBar />
         <main className="flex min-h-px shrink grow flex-col items-center overflow-y-auto">
