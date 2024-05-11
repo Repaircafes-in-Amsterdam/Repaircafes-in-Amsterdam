@@ -14,7 +14,7 @@
     "moreInfo": "",
     "verified": true,
     "slug": "ac-reel-tussen-de-bogen",
-    "coordinate": [
+    "coordinates": [
       52.3834,
       4.88851
     ]
@@ -328,7 +328,7 @@
       "website": "https://desteekamsterdam.com/nl/gratis-kleding-repaircafe/"
     },
     "slug": "de-steek",
-    "coordinate": [
+    "coordinates": [
       52.38449,
       4.87272
     ]
@@ -400,7 +400,7 @@
       "website": "https://decoenen.com/terugkerende-activiteiten/#repaircafe"
     },
     "slug": "harmoniebuurt",
-    "coordinate": [
+    "coordinates": [
       52.3526,
       4.88142
     ]
@@ -423,7 +423,7 @@
       "website": "https://dock.nl/locaties/amsterdam/centrum/huis-van-de-buurt-het-claverhuis/"
     },
     "slug": "het-claverhuis",
-    "coordinate": [
+    "coordinates": [
       52.36986,
       4.88091
     ]
@@ -545,7 +545,7 @@
       "instagram": "https://www.instagram.com/repair_events/"
     },
     "slug": "repair-events-tolhuistuin",
-    "coordinate": [
+    "coordinates": [
       52.38309,
       4.90303
     ]
@@ -568,7 +568,7 @@
       "website": "https://jacobmaris.com/activiteiten/volwassenen/repairclub/"
     },
     "slug": "repairclub",
-    "coordinate": [
+    "coordinates": [
       52.36571,
       4.85528
     ]
@@ -591,7 +591,7 @@
       "website": "https://buurtcooperatieohg.nl/verduurzaamt/reparatietafel/"
     },
     "slug": "reparatietafel-de-eester",
-    "coordinate": [
+    "coordinates": [
       52.37058,
       4.93816
     ]
@@ -662,7 +662,7 @@
       "website": "http://www.duurzaamdorpdiemen.nl/p/repair-cafe.html"
     },
     "slug": "t-kruidvat",
-    "coordinate": [
+    "coordinates": [
       52.33423,
       4.95629
     ]

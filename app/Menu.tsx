@@ -29,7 +29,6 @@ const Menu = forwardRef<
     onClick={() => onOpenChange(false)}
   >
     <MenuItem href="/">Aankomende</MenuItem>
-    <MenuItem href="/map">Kaart</MenuItem>
     <MenuItem href="/repaircafes">Over Repair Cafés</MenuItem>
     <MenuItem href="/about">Over ons</MenuItem>
   </nav>
