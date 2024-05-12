@@ -9,8 +9,20 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Repair Cafes in Amsterdam",
-  description:
-    "Overzicht van alle Repair Cafés in Amsterdam met hun openingstijden",
+  description: "Agenda overzicht van alle Repair Cafés in Amsterdam",
+  keywords: [
+    "repair café",
+    "repair cafe",
+    "amsterdam",
+    "openingstijden",
+    "agenda",
+    "kalender",
+    "calendar",
+    "aankomende",
+    "upcoming",
+    "map",
+    "repair",
+  ],
 };
 
 export const viewport: Viewport = {
