@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -11,6 +11,10 @@ export const metadata: Metadata = {
   title: "Repair Cafes in Amsterdam",
   description:
     "Overzicht van alle Repair Cafés in Amsterdam met hun openingstijden",
+};
+
+export const viewport: Viewport = {
+  themeColor: "#2D2E82",
 };
 
 export default function RootLayout({
