@@ -95,6 +95,30 @@
     ]
   },
   {
+    "name": "Anarchist Repair Cafe",
+    "address": "Eerste Schinkelstraat 14-16",
+    "open": "Elke eerste maandagavond 19:00 - 22:00",
+    "rrule": "FREQ=MONTHLY;BYSETPOS=1;BYDAY=MO;INTERVAL=1",
+    "startTime": "19:00",
+    "endTime": "22:00",
+    "closed": "",
+    "district": "West",
+    "email": "deversterking@riseup.net",
+    "doRepair": "Electronica, Kleding",
+    "dontRepair": "Nespresso",
+    "moreInfo": "",
+    "verified": true,
+    "links": {
+      "website": "https://deversterking.noblogs.org/",
+      "instagram": "https://www.instagram.com/deversterking/"
+    },
+    "slug": "anarchist-repair-cafe",
+    "coordinate": [
+      52.35398,
+      4.85445
+    ]
+  },
+  {
     "name": "Betondorp",
     "address": "Karnstraat 2",
     "open": "2e en 4e woensdagmiddag 14:00 - 16:30",
