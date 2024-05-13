@@ -49,10 +49,11 @@ const list = rows
     const filtered = {};
     const links = {};
     for (const [column, value] of Object.entries(row)) {
+      const cleanedValue = value?.trim();
       if (LINK_COLUMNS.includes(column)) {
-        if (value) links[column] = value;
+        if (cleanedValue) links[column] = cleanedValue;
       } else {
-        filtered[column] = value;
+        filtered[column] = cleanedValue;
       }
     }
     if (Object.keys(links).length > 0) filtered.links = links;

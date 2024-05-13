@@ -172,11 +172,11 @@
     "rrule": "FREQ=MONTHLY;BYSETPOS=2;BYDAY=SA;INTERVAL=1",
     "startTime": "14:00",
     "endTime": "16:30",
-    "closed": "Juli en augustus ",
+    "closed": "Juli en augustus",
     "district": "Diemen",
     "email": "repaircafe@duurzaamdorpdiemen.nl",
-    "doRepair": "Electronica, Andere draagbare huishoudelijke apparaten ",
-    "dontRepair": "Beeldschermen, grote apparaten ",
+    "doRepair": "Electronica, Andere draagbare huishoudelijke apparaten",
+    "dontRepair": "Beeldschermen, grote apparaten",
     "moreInfo": "Bestaat in april 2024 10 jaar!",
     "verified": true,
     "links": {
@@ -542,7 +542,6 @@
     "moreInfo": "Elk seizoen hebben wij weer wisselende dagen en tijden. In de winter staan we binnen, in de zomer buiten in de tuin. De data voor de komende zomer zijn: 19 mei, 9 juni, 14 juli, 11 aug \n\nIn plaats van iets uit handen te geven, léér je bij Repair Events samen met een reparateur hoe je je eigen spullen repareert of zelfs mooier maakt (upcyclen). Je mag alles mee brengen; van kleding tot huishoudelijke apparaten en elektronica. Wij zorgen voor de ruimte, de kennis en de tools; er zijn naaimachines, gereedschapskisten, borduursetjes en dergelijke aanwezig. Zo kan jij eindelijk dat gat in je broek repareren, die leuke lamp weer laten branden, of dat bloesje pimpen...",
     "verified": true,
     "links": {
-      "website": " ",
       "instagram": "https://www.instagram.com/repair_events/"
     },
     "slug": "repair-events-tolhuistuin",
