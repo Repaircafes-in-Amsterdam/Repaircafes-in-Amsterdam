@@ -14,23 +14,20 @@ const SPREADSHEET = "1LYn_GX0iwo5IaJCk8wada3FjbwI_gpUprs9prWp0pIQ";
 const SHEET_ID = "1724498670";
 const LINK_COLUMNS = ["orgPage", "website", "facebook", "instagram"];
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const dataFilePath = path.join(__dirname, DATA_FILE_NAME);
-const projectDir = process.cwd();
-
-loadEnvConfig(projectDir);
-const { GOOGLE_SERVICE_ACCOUNT_EMAIL, GOOGLE_PRIVATE_KEY } = process.env;
-
-// Use map data from repaircafe.org
-const mapDataFilePath = path.join(__dirname, MAP_DATA_FILE_NAME);
-const rawMapData = await fs.readFile(mapDataFilePath, "utf8");
-const mapData = JSON.parse(rawMapData);
+// Prepare map data from repaircafe.org for reading by link
+const mapData = await loadJSON(MAP_DATA_FILE_NAME);
 const mapDataByLink = new Map();
 for (const item of mapData) {
   mapDataByLink.set(item.link, item);
 }
 
-// Initialize auth
+// Load manually looked up coordinates per address
+const manualMapData = await loadJSON(MANUAL_MAP_DATA_FILE_NAME);
+
+// Authenticate with google
+const projectDir = process.cwd();
+loadEnvConfig(projectDir);
+const { GOOGLE_SERVICE_ACCOUNT_EMAIL, GOOGLE_PRIVATE_KEY } = process.env;
 // See https://theoephraim.github.io/node-google-spreadsheet/#/guides/authentication
 const serviceAccountAuth = new JWT({
   email: GOOGLE_SERVICE_ACCOUNT_EMAIL,
@@ -63,43 +60,55 @@ const list = rows
   .map((row) => ({ ...row, slug: slugify(row.name).toLowerCase() }))
   // Turn verified into boolean
   .map((row) => ({ ...row, verified: row.verified === "TRUE" }))
-  // Pull in coordinates from repaircafe.org map data
+  // Pull in coordinates from repaircafe.org map data or our manual map data
+  // Save addresses without coordinates to manual map data
   .map((row) => {
     const orgPage = row.links?.orgPage;
-    if (!orgPage) return row;
-    // Remove trailing /
-    const orgPageCleaned = orgPage.replace(/\/$/, "");
-    const item = mapDataByLink.get(orgPageCleaned);
-    if (!item) return row;
-    const coordinate = item.coordinate?.split(",")?.map(Number);
+    let coordinate;
+
+    if (orgPage) {
+      // Remove trailing /
+      const orgPageCleaned = orgPage.replace(/\/$/, "");
+      const item = mapDataByLink.get(orgPageCleaned);
+      if (item) {
+        coordinate = item.coordinate?.split(",")?.map(Number);
+      }
+    }
+
+    if (!coordinate) {
+      coordinate = manualMapData[row.address];
+      if (!coordinate) {
+        manualMapData[row.address] = [];
+      }
+    }
+
     return {
       ...row,
       ...(coordinate ? { coordinate } : {}),
     };
   });
 
-// Look for missing coordinates in manual map data, add unknown ones to manual map data
-const manualMapDataFilePath = path.join(__dirname, MANUAL_MAP_DATA_FILE_NAME);
-const rawManualMapData = await fs.readFile(manualMapDataFilePath, "utf8");
-const manualMapData = JSON.parse(rawManualMapData || "{}");
-const lackCoordinates = list.filter((row) => !row.coordinate);
-for (const row of lackCoordinates) {
-  const coordinate = manualMapData[row.address];
-  if (coordinate) {
-    row.coordinate = coordinate;
-    continue;
-  }
-  manualMapData[row.address] = [];
-}
-const manualMapJsonData = JSON.stringify(manualMapData, null, 2);
-await fs.writeFile(manualMapDataFilePath, manualMapJsonData, "utf8");
-const unknownManualCoordinates = Object.values(manualMapData).filter(
-  (coordinates) => coordinates.length === 0,
-);
-console.log(
-  `Missing coordinates for ${unknownManualCoordinates.length} addresses`,
-);
+// Save updated manual map data
+saveJSON(MANUAL_MAP_DATA_FILE_NAME, manualMapData);
 
-const jsonData = JSON.stringify(list, null, 2);
-await fs.writeFile(dataFilePath, jsonData, "utf8");
+const missingCoordinatesCount = Object.values(manualMapData).filter(
+  (coordinates) => coordinates.length === 0,
+).length;
+console.log(`Missing coordinates for ${missingCoordinatesCount} addresses`);
+
+saveJSON(DATA_FILE_NAME, list);
 console.log(`Updated data for ${list.length} Repair Cafés`);
+
+async function loadJSON(fileName) {
+  const dataFolder = path.dirname(fileURLToPath(import.meta.url));
+  const filePath = path.join(dataFolder, fileName);
+  const rawData = await fs.readFile(filePath, "utf8");
+  return JSON.parse(rawData);
+}
+
+async function saveJSON(fileName, data) {
+  const dataFolder = path.dirname(fileURLToPath(import.meta.url));
+  const filePath = path.join(dataFolder, fileName);
+  const jsonData = JSON.stringify(data, null, 2);
+  await fs.writeFile(filePath, jsonData, "utf8");
+}
