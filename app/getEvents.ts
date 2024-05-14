@@ -19,7 +19,6 @@ function getNextMonthDate() {
 }
 
 export default function getEvents() {
-  console.log("getEvents");
   // Get all events organized until next month
   const events: Event[] = [];
   for (const rc of data as RC[]) {

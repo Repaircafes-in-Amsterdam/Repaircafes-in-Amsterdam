@@ -12,6 +12,7 @@ export type RC = {
   dontRepair: string;
   moreInfo: string;
   coordinate: number[];
+  email: string;
   links?: {
     orgPage?: string;
     [key: string]: string | undefined;
