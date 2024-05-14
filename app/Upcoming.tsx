@@ -1,5 +1,4 @@
 "use client";
-import useUpcomingData from "./useUpcomingData";
 import { EventGroup } from "./types";
 import { Fragment } from "react";
 import ChevronRight from "@/app/icons/ChevronRight.svg?react";
@@ -7,9 +6,11 @@ import Warning from "@/app/icons/Warning.svg?react";
 
 import Link from "next/link";
 
-export default function Upcoming() {
-  const groupedEvents = useUpcomingData();
-
+export default function Upcoming({
+  groupedEvents,
+}: {
+  groupedEvents: EventGroup[];
+}) {
   return (
     <>
       {groupedEvents.map((group: EventGroup) => (

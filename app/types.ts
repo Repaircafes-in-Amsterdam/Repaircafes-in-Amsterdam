@@ -19,10 +19,19 @@ export type RC = {
   verified: boolean;
 };
 
+export type EventRC = {
+  name: string;
+  slug: string;
+  startTime: string;
+  endTime: string;
+  district: string;
+  verified: boolean;
+};
+
 export type Event = {
   date: Date;
   dateString: string;
-  rc: RC;
+  rc: EventRC;
 };
 
 export type EventGroup = {
