@@ -39,3 +39,11 @@ export type EventGroup = {
   dateString: string;
   events: Event[];
 };
+
+export type MapRC = {
+  slug: string;
+  coordinate: number[];
+  name: string;
+  open: string;
+  address: string;
+};
