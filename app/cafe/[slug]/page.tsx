@@ -39,7 +39,15 @@ function getMapsLink(adres: string) {
 
 export default function CafeServer({ params }: { params: { slug: string } }) {
   const rc = data.find((rc) => rc.slug === params.slug);
-  if (!rc) return null;
+  if (!rc) {
+    return (
+      <BasePage title="Onbekend Repair Café">
+        <div className="p-3">
+          Helaas, dit Repair Café is niet bekend bij ons.
+        </div>
+      </BasePage>
+    );
+  }
 
   const rule = rrulestr(`${rc.rrule};COUNT=1`);
   const nextDate = rule.all()[0];
@@ -49,13 +57,6 @@ export default function CafeServer({ params }: { params: { slug: string } }) {
 }
 
 function CafeClient({ rc, next }: { rc: RC; next: string }) {
-  if (!rc) {
-    return (
-      <h2 className="p-3 font-bold text-blue">
-        Helaas, dit Repair Café is niet bekend bij ons.
-      </h2>
-    );
-  }
   return (
     <BasePage title={rc.name}>
       {!rc.verified && (
