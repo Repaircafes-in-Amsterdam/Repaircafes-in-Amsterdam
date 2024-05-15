@@ -12,6 +12,7 @@ export type RC = {
   dontRepair: string;
   moreInfo: string;
   coordinate: number[];
+  email: string;
   links?: {
     orgPage?: string;
     [key: string]: string | undefined;
@@ -19,13 +20,30 @@ export type RC = {
   verified: boolean;
 };
 
+export type EventRC = {
+  name: string;
+  slug: string;
+  startTime: string;
+  endTime: string;
+  district: string;
+  verified: boolean;
+};
+
 export type Event = {
   date: Date;
   dateString: string;
-  rc: RC;
+  rc: EventRC;
 };
 
 export type EventGroup = {
   dateString: string;
   events: Event[];
+};
+
+export type MapRC = {
+  slug: string;
+  coordinate: number[];
+  name: string;
+  open: string;
+  address: string;
 };

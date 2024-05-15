@@ -1,12 +1,14 @@
 import Link from "next/link";
-import useCafeData from "./useCafeData";
 import ChevronRight from "@/app/icons/ChevronRight.svg?react";
 import Mail from "@/app/icons/Mail.svg?react";
 import ExternalLink from "@/app/icons/ExternalLink.svg?react";
 import Warning from "@/app/icons/Warning.svg?react";
-import Header from "@/app/components/Header";
 import BasePage from "@/app/components/BasePage";
 import DetailsSection from "./DetailsSection";
+import { rrulestr } from "rrule";
+import data from "@/data/data.json";
+import getDateString from "@/app/utils/getDateString";
+import { RC } from "@/app/types";
 
 function mapLinkTypeToLabel(type: string) {
   switch (type) {
@@ -22,8 +24,18 @@ function getMapsLink(adres: string) {
   return `https://maps.google.com?q=${encodeURIComponent(fullAdres)}`;
 }
 
-export default function Page({ params }: { params: { slug: string } }) {
-  const rc = useCafeData(params.slug);
+export default function CafeServer({ params }: { params: { slug: string } }) {
+  const rc = data.find((rc) => rc.slug === params.slug);
+  if (!rc) return null;
+
+  const rule = rrulestr(`${rc.rrule};COUNT=1`);
+  const nextDate = rule.all()[0];
+  const next = getDateString(nextDate);
+
+  return <CafeClient rc={rc} next={next} />;
+}
+
+function CafeClient({ rc, next }: { rc: RC; next: string }) {
   if (!rc) {
     return (
       <h2 className="p-3 font-bold text-blue">
@@ -41,7 +53,7 @@ export default function Page({ params }: { params: { slug: string } }) {
       )}
       <div className="flex grow flex-col gap-1 overflow-y-auto px-3 pb-3">
         <DetailsSection title="Open op">{rc.open}</DetailsSection>
-        <DetailsSection title="Eerst volgende keer">{rc.next}</DetailsSection>
+        <DetailsSection title="Eerst volgende keer">{next}</DetailsSection>
         {rc.closed && (
           <DetailsSection title="Gesloten op">{rc.closed}</DetailsSection>
         )}
@@ -81,7 +93,7 @@ export default function Page({ params }: { params: { slug: string } }) {
               {Object.entries(rc.links).map(([type, href]) => (
                 <li key={type}>
                   <Link
-                    href={href}
+                    href={href as string}
                     className="flex gap-1"
                     rel="noreferrer"
                     target="_blank"

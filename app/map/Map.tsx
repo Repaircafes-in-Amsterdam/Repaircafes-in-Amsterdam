@@ -2,7 +2,7 @@
 import "leaflet/dist/leaflet.css";
 import { MapContainer } from "react-leaflet/MapContainer";
 import { TileLayer } from "react-leaflet/TileLayer";
-import { RC } from "../types";
+import { MapRC } from "../types";
 import { latLngBounds } from "leaflet";
 import useActive from "./useActive";
 import MapMarker from "./MapMarker";
@@ -13,7 +13,7 @@ import MapZoomControl from "./MapZoomControl";
 //   return null;
 // }
 
-export default function Map({ data }: { data: RC[] }) {
+export default function Map({ data }: { data: MapRC[] }) {
   const bounds = latLngBounds(
     data.map((rc) => rc.coordinate as [number, number]),
   );
@@ -32,7 +32,7 @@ export default function Map({ data }: { data: RC[] }) {
           url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
         />
-        {(data as RC[]).map((rc) => (
+        {data.map((rc) => (
           <MapMarker
             key={rc.slug}
             position={rc.coordinate as [number, number]}

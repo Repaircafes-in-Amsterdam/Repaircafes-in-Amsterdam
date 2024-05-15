@@ -1,14 +1,43 @@
 "use client";
-import useUpcomingData from "./useUpcomingData";
-import { EventGroup } from "./types";
+import { Event, EventGroup } from "./types";
 import { Fragment } from "react";
 import ChevronRight from "@/app/icons/ChevronRight.svg?react";
 import Warning from "@/app/icons/Warning.svg?react";
 
 import Link from "next/link";
+import groupBy from "lodash/groupBy";
+import useDistrict from "./useDistrict";
+import useOfficeHours from "./useOfficeHours";
 
-export default function Upcoming() {
-  const groupedEvents = useUpcomingData();
+function isDuringOfficeHours(event: Event) {
+  const endTime = event.rc.endTime;
+  const [endHours] = endTime.split(":").map(Number);
+  // Might as well be 19?
+  const duringDaytime = endHours < 18;
+  const day = event.date.getDay();
+  const duringWorkweek = day > 0 && day < 6;
+  return duringDaytime && duringWorkweek;
+}
+
+export default function Upcoming({ events }: { events: Event[] }) {
+  const { value: district } = useDistrict();
+  const { value: rawJustOfficeHours } = useOfficeHours();
+  const justOfficeHours = rawJustOfficeHours === "true";
+
+  let filtered = events
+    .filter((event) => district === "any" || district === event.rc.district)
+    .filter(
+      (event) =>
+        !justOfficeHours || (justOfficeHours && isDuringOfficeHours(event)),
+    );
+  // Group events by date
+  const grouped = groupBy(filtered, (event: Event) => event.dateString);
+  const groupedEvents: EventGroup[] = Object.entries(grouped).map(
+    ([dateString, events]) => ({
+      dateString,
+      events,
+    }),
+  );
 
   return (
     <>

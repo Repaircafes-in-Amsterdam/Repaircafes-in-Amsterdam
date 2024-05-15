@@ -1,16 +1,15 @@
 "use client";
-import data from "@/data/data.json";
 import X from "@/app/icons/X.svg?react";
 import useActive from "./useActive";
-import { RC } from "../types";
+import { MapRC } from "../types";
 import Header from "../components/Header";
 import ChevronRight from "@/app/icons/ChevronRight.svg?react";
 import Link from "next/link";
 import DetailsSection from "../cafe/[slug]/DetailsSection";
 
-export default function MapPanel() {
+export default function MapPanel({ data }: { data: MapRC[] }) {
   const { value, setValue } = useActive();
-  const active: RC | undefined = data.find((rc) => rc.slug === value);
+  const active = data.find((rc) => rc.slug === value);
   if (!active) return null;
   return (
     <div className="absolute bottom-0 w-full border-t-2 border-blue bg-white p-3">
