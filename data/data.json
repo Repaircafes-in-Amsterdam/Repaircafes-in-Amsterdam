@@ -241,17 +241,17 @@
   {
     "name": "De Havelaar",
     "address": "Douwes Dekkerstraat 2",
-    "open": "3e vrijdagmiddag 13:00 - 16:00",
+    "open": "Elke derde vrijdagmiddag 13:00 - 16:00",
     "rrule": "FREQ=MONTHLY;BYSETPOS=3;BYDAY=FR;INTERVAL=1",
     "startTime": "13:00",
     "endTime": "16:00",
-    "closed": "",
+    "closed": "Meestal in Augustus",
     "district": "West",
-    "email": "d.verheul@combiwel.nl",
-    "doRepair": "",
-    "dontRepair": "",
+    "email": "r.riede@hccnet.nl",
+    "doRepair": "Electronica, Kleding",
+    "dontRepair": "Fietsen, Telefoons, Koffie-apparaten",
     "moreInfo": "",
-    "verified": false,
+    "verified": true,
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-oud-west-de-havelaar/"
     },
