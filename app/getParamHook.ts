@@ -1,7 +1,6 @@
 // import { trackEvent } from "../utils/analytics";
-import { usePathname, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import { useCallback } from "react";
-import { useRouter } from "next/navigation";
 
 export type Option = {
   value: string;
@@ -16,9 +15,6 @@ export default function getParamHook(
   // trackAnalytics: boolean = true
 ) {
   return () => {
-    const router = useRouter();
-    const pathname = usePathname();
-    // const [searchParams, setSearchParams] = useSearchParams();
     const searchParams = useSearchParams();
 
     const value = searchParams.get(param) ?? defaultValue;
@@ -30,7 +26,6 @@ export default function getParamHook(
         const finalParams =
           params || new URLSearchParams(searchParams.toString());
         finalParams.set(name, value);
-
         return finalParams.toString();
       },
       [searchParams],
@@ -43,7 +38,7 @@ export default function getParamHook(
       if (value === defaultValue) {
         clear(params);
       } else {
-        router.push(pathname + "?" + createQueryString(param, value, params));
+        applyParams(createQueryString(param, value, params));
       }
       return searchParams;
     }
@@ -52,8 +47,7 @@ export default function getParamHook(
       const finalParams =
         params || new URLSearchParams(searchParams.toString());
       finalParams.delete(param);
-      // setSearchParams(finalParams);
-      router.push(pathname + "?" + finalParams.toString());
+      applyParams(finalParams.toString());
       return finalParams;
     }
 
@@ -63,4 +57,8 @@ export default function getParamHook(
       setValue,
     };
   };
+}
+
+function applyParams(paramString: string) {
+  window.history.pushState(null, "", `?${paramString}`);
 }
