@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import ChevronRight from "@/app/icons/ChevronRight.svg?react";
 import Mail from "@/app/icons/Mail.svg?react";
@@ -9,6 +10,18 @@ import { rrulestr } from "rrule";
 import data from "@/data/data.json";
 import getDateString from "@/app/utils/getDateString";
 import { RC } from "@/app/types";
+
+export function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Metadata {
+  const rc = data.find((rc) => rc.slug === params.slug);
+  const name = rc?.name || "Onbekend Repair Café";
+  return {
+    title: `${name} - Repair Cafes in Amsterdam`,
+  };
+}
 
 function mapLinkTypeToLabel(type: string) {
   switch (type) {

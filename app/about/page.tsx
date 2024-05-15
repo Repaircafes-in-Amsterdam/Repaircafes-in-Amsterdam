@@ -1,8 +1,13 @@
 import Link from "next/link";
-import ChevronLeft from "@/app/icons/ChevronLeft.svg?react";
 import Mail from "@/app/icons/Mail.svg?react";
 import data from "@/data/data.json";
 import BasePage from "../components/BasePage";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Over ons - Repair Cafes in Amsterdam",
+  description: "Over Repair Cafés in Amsterdam",
+};
 
 export default function Page() {
   const numRepairCafes = data.length;

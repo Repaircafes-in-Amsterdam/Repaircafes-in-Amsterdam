@@ -1,5 +1,11 @@
 import Header from "../components/Header";
 import BasePage from "../components/BasePage";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Over Repair Cafés - Repair Cafes in Amsterdam",
+  description: "Over Repair Cafés",
+};
 
 export default function Page() {
   return (
@@ -20,7 +26,7 @@ export default function Page() {
           leren. Wie niets heeft om te repareren, neemt een kop koffie of thee.
           Of gaat helpen bij een reparatie van iemand anders
         </p>
-        <div className="aspect-w-16 aspect-h-9">
+        <div className="aspect-h-9 aspect-w-16">
           <iframe
             src="https://www.youtube.com/embed/xPXX7aFAVdY"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen;"

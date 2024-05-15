@@ -3,6 +3,12 @@ import data from "@/data/data.json";
 import dynamic from "next/dynamic";
 import MapPanel from "./MapPanel";
 import { MapRC, RC } from "../types";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Kaart - Repair Cafes in Amsterdam",
+  description: "Kaart van alle Repair Cafés in Amsterdam",
+};
 
 export default function MapServer() {
   const mapData: MapRC[] = data.map((rc) => ({
