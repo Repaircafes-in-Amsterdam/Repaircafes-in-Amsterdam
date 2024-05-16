@@ -12,7 +12,13 @@ export default function BackButton({
 }) {
   const router = useRouter();
   return (
-    <Link href="/" className={className} onClick={() => router.back()}>
+    <Link
+      href="/"
+      className={className}
+      onClick={() => router.back()}
+      aria-label="Go back"
+      title="Go back"
+    >
       {children}
     </Link>
   );
