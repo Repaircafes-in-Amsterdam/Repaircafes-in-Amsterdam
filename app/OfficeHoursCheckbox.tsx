@@ -12,6 +12,7 @@ export default function OfficeHoursCheckbox() {
         id="office-hours"
         checked={value === "true"}
         onCheckedChange={(value) => setValue(String(value))}
+        aria-label="Alleen buiten kantooruren"
       >
         <Checkbox.Indicator className="text-white">
           <Check className="w-[18px] text-white" />
