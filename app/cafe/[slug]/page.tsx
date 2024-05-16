@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Organization, WithContext } from "schema-dts";
 import ChevronRight from "@/app/icons/ChevronRight.svg?react";
 import Mail from "@/app/icons/Mail.svg?react";
 import ExternalLink from "@/app/icons/ExternalLink.svg?react";
@@ -11,6 +10,9 @@ import { rrulestr } from "rrule";
 import data from "@/data/data.json";
 import getDateString from "@/app/utils/getDateString";
 import { RC } from "@/app/types";
+import JsonLd from "../../components/JsonLd";
+import getCafeJsonLd from "./getCafeJsonLd";
+
 export function generateMetadata({
   params,
 }: {
@@ -57,13 +59,6 @@ export default function CafeServer({ params }: { params: { slug: string } }) {
 }
 
 function CafeClient({ rc, next }: { rc: RC; next: string }) {
-  const jsonLd: WithContext<Organization> = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: rc.name,
-    description: `Repair Café in Amsterdam ${rc.district} open op ${rc.open.toLowerCase()}`,
-  };
-
   return (
     <BasePage title={rc.name}>
       {!rc.verified && (
@@ -132,10 +127,7 @@ function CafeClient({ rc, next }: { rc: RC; next: string }) {
           Lees meer over Repair Cafés
         </Link>
       </div>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <JsonLd jsonLd={getCafeJsonLd(rc)} />
     </BasePage>
   );
 }
