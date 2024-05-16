@@ -27,7 +27,7 @@ export default function TopBar() {
           onClick={() => setMenuIsOpen(false)}
         ></div>
         <div className="flex flex-col gap-2.5">
-          <Link href="/">
+          <Link href="/" aria-label="Logo">
             <Logo />
           </Link>
           <div className="flex gap-3 font-medium text-white">
