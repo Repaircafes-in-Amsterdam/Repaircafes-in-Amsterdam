@@ -6,7 +6,10 @@ const colors = {
     DEFAULT: "#2D2E82",
     600: "#1F205A",
   },
-  orange: "#ED6A42",
+  orange: {
+    450: "#EF8565", // AA orange on blue
+    DEFAULT: "#ED6A42",
+  },
   white: "#ffffff",
 };
 

@@ -35,7 +35,7 @@ export default function TopBar() {
               <Link
                 key={href}
                 href={href}
-                className={pathname === href ? "text-orange" : "text-white"}
+                className={pathname === href ? "text-orange-450" : "text-white"}
               >
                 {label}
               </Link>
