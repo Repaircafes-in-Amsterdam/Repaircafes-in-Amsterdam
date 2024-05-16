@@ -1,10 +1,9 @@
 import type { MetadataRoute } from "next";
 import data from "@/data/data.json";
-
-const baseURL = "https://repaircafe.amsterdam/";
+import { BASE_URL } from "./constants";
 
 const cafes: MetadataRoute.Sitemap = data.map((rc) => ({
-  url: baseURL + "cafe/" + rc.slug,
+  url: BASE_URL + "cafe/" + rc.slug,
   lastModified: new Date(),
   changeFrequency: "monthly",
   priority: 0.9,
@@ -14,26 +13,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
   console.log("sitemap arguments: ", arguments);
   return [
     {
-      url: baseURL,
+      url: BASE_URL,
       lastModified: new Date(),
       changeFrequency: "daily",
       priority: 1,
     },
     ...cafes,
     {
-      url: baseURL + "repaircafes",
+      url: BASE_URL + "repaircafes",
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
-      url: baseURL + "about",
+      url: BASE_URL + "about",
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
-      url: baseURL + "map",
+      url: BASE_URL + "map",
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.5,
