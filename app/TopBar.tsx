@@ -45,6 +45,7 @@ export default function TopBar() {
         <button
           onClick={() => setMenuIsOpen(!menuIsOpen)}
           className="cursor-pointer text-white"
+          aria-label="Menu"
         >
           <MenuIcon />
         </button>
