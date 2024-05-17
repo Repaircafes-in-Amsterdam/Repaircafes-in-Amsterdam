@@ -28,7 +28,7 @@ export default function Upcoming({ events }: { events: Event[] }) {
     .filter((event) => district === "any" || district === event.rc.district)
     .filter(
       (event) =>
-        !justOfficeHours || (justOfficeHours && isDuringOfficeHours(event)),
+        !justOfficeHours || (justOfficeHours && !isDuringOfficeHours(event)),
     );
   // Group events by date
   const grouped = groupBy(filtered, (event: Event) => event.dateString);
