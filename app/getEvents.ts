@@ -19,6 +19,21 @@ function getNextMonthDate() {
   return nextMonth;
 }
 
+function createEvent(rc: RC, date: Date): Event {
+  return {
+    date,
+    dateString: getDateString(date),
+    rc: {
+      name: rc.name,
+      slug: rc.slug,
+      startTime: rc.startTime,
+      endTime: rc.endTime,
+      district: rc.district,
+      verified: rc.verified,
+    },
+  };
+}
+
 export default function getEvents() {
   // Get all events organized until next month
   const events: Event[] = [];
@@ -34,22 +49,17 @@ export default function getEvents() {
     const occurrences = rule.between(new Date(), getNextMonthDate());
     // occurances.tzid(TIME_ZONE);
     for (const occurrence of occurrences) {
-      const event: Event = {
-        date: occurrence,
-        dateString: getDateString(occurrence),
-        rc: {
-          name: rc.name,
-          slug: rc.slug,
-          startTime: rc.startTime,
-          endTime: rc.endTime,
-          district: rc.district,
-          verified: rc.verified,
-        },
-      };
+      const event: Event = createEvent(rc, occurrence);
 
       if (eventFilter(event, rc)) {
         events.push(event);
       }
+    }
+
+    // add exceptions
+    for (const exception of rc.exceptions) {
+      const event: Event = createEvent(rc, new Date(exception));
+      events.push(event);
     }
   }
 

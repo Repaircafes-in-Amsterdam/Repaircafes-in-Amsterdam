@@ -7,6 +7,7 @@ export type RC = {
   endTime: string;
   closed: string;
   closedRanges: string[];
+  exceptions: string[];
   address: string;
   district: string;
   doRepair: string;

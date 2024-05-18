@@ -61,10 +61,11 @@ const list = rows
   .map((row) => ({ ...row, slug: slugify(row.name).toLowerCase() }))
   // Turn verified into boolean
   .map((row) => ({ ...row, verified: row.verified === "TRUE" }))
-  // Split closedRanges into an array
+  // Split multi row items into an arrays
   .map((row) => ({
     ...row,
     closedRanges: row.closedRanges?.split("\n").filter(Boolean),
+    exceptions: row.exceptions?.split("\n").filter(Boolean),
   }))
   // Pull in coordinates from repaircafe.org map data or our manual map data
   // Save addresses without coordinates to manual map data
