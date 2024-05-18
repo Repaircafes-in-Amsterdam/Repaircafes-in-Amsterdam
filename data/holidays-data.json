@@ -1,0 +1,288 @@
+[
+  {
+    "id": "eaf27e0b-af2e-4fb2-b87b-8c89d5772e83",
+    "startDate": "2024-05-19",
+    "endDate": "2024-05-19",
+    "type": "Public",
+    "name": [
+      {
+        "language": "NL",
+        "text": "Eerste pinksterdag"
+      }
+    ],
+    "nationwide": true
+  },
+  {
+    "id": "e398ad77-97cb-4698-bd4a-0e7dfa375014",
+    "startDate": "2024-05-20",
+    "endDate": "2024-05-20",
+    "type": "Public",
+    "name": [
+      {
+        "language": "NL",
+        "text": "Tweede pinksterdag"
+      }
+    ],
+    "nationwide": true
+  },
+  {
+    "id": "c1ceeb49-fc2a-4858-bb3e-bc30f174356b",
+    "startDate": "2024-12-25",
+    "endDate": "2024-12-25",
+    "type": "Public",
+    "name": [
+      {
+        "language": "NL",
+        "text": "Eerste kerstdag"
+      }
+    ],
+    "nationwide": true
+  },
+  {
+    "id": "b9f3a5d1-c2b6-47d7-9f4f-0d62a25d5f61",
+    "startDate": "2024-12-26",
+    "endDate": "2024-12-26",
+    "type": "Public",
+    "name": [
+      {
+        "language": "NL",
+        "text": "Tweede kerstdag"
+      }
+    ],
+    "nationwide": true
+  },
+  {
+    "id": "c4ccb1c0-efc5-481a-b0ef-56d623d18f11",
+    "startDate": "2025-01-01",
+    "endDate": "2025-01-01",
+    "type": "Public",
+    "name": [
+      {
+        "language": "NL",
+        "text": "Nieuwjaarsdag"
+      }
+    ],
+    "nationwide": true
+  },
+  {
+    "id": "16cb1b50-c254-41a1-a6ff-11661531e25f",
+    "startDate": "2025-04-18",
+    "endDate": "2025-04-18",
+    "type": "Public",
+    "name": [
+      {
+        "language": "NL",
+        "text": "Goede vrijdag"
+      }
+    ],
+    "nationwide": true
+  },
+  {
+    "id": "4d7d7345-528f-48d2-a51a-46e51470bd48",
+    "startDate": "2025-04-20",
+    "endDate": "2025-04-20",
+    "type": "Public",
+    "name": [
+      {
+        "language": "NL",
+        "text": "Eerste paasdag"
+      }
+    ],
+    "nationwide": true
+  },
+  {
+    "id": "cf994daa-4503-45e0-ab52-bfc35d86405e",
+    "startDate": "2025-04-21",
+    "endDate": "2025-04-21",
+    "type": "Public",
+    "name": [
+      {
+        "language": "NL",
+        "text": "Tweede paasdag"
+      }
+    ],
+    "nationwide": true
+  },
+  {
+    "id": "31349587-ddaa-4fd0-9752-7fc786c25208",
+    "startDate": "2025-04-27",
+    "endDate": "2025-04-27",
+    "type": "Public",
+    "name": [
+      {
+        "language": "NL",
+        "text": "Koningsdag"
+      }
+    ],
+    "nationwide": true
+  },
+  {
+    "id": "8be74455-5c9c-4143-9d6b-928ae2871183",
+    "startDate": "2025-05-05",
+    "endDate": "2025-05-05",
+    "type": "Public",
+    "name": [
+      {
+        "language": "NL",
+        "text": "Bevrijdingsdag"
+      }
+    ],
+    "nationwide": true
+  },
+  {
+    "id": "3468ba32-0cf2-44f8-a061-8d37bde921bd",
+    "startDate": "2025-05-29",
+    "endDate": "2025-05-29",
+    "type": "Public",
+    "name": [
+      {
+        "language": "NL",
+        "text": "Hemelvaartsdag"
+      }
+    ],
+    "nationwide": true
+  },
+  {
+    "id": "2875d34f-1db6-4e65-8cbb-23120550d9f9",
+    "startDate": "2025-06-08",
+    "endDate": "2025-06-08",
+    "type": "Public",
+    "name": [
+      {
+        "language": "NL",
+        "text": "Eerste pinksterdag"
+      }
+    ],
+    "nationwide": true
+  },
+  {
+    "id": "95d8d257-f623-481c-b2ba-28687627fd77",
+    "startDate": "2025-06-09",
+    "endDate": "2025-06-09",
+    "type": "Public",
+    "name": [
+      {
+        "language": "NL",
+        "text": "Tweede pinksterdag"
+      }
+    ],
+    "nationwide": true
+  },
+  {
+    "id": "b69c396f-4ace-4126-bd64-f67fd9119c29",
+    "startDate": "2025-12-25",
+    "endDate": "2025-12-25",
+    "type": "Public",
+    "name": [
+      {
+        "language": "NL",
+        "text": "Eerste kerstdag"
+      }
+    ],
+    "nationwide": true
+  },
+  {
+    "id": "3d6aa3ba-23dd-4493-8a8a-70e9c984e26d",
+    "startDate": "2025-12-26",
+    "endDate": "2025-12-26",
+    "type": "Public",
+    "name": [
+      {
+        "language": "NL",
+        "text": "Tweede kerstdag"
+      }
+    ],
+    "nationwide": true
+  },
+  {
+    "id": "2589bbf4-6229-4bd1-b176-0db59687ec5b",
+    "startDate": "2026-01-01",
+    "endDate": "2026-01-01",
+    "type": "Public",
+    "name": [
+      {
+        "language": "NL",
+        "text": "Nieuwjaarsdag"
+      }
+    ],
+    "nationwide": true
+  },
+  {
+    "id": "7202ffee-b1a6-4d89-8f62-033fdfba9be9",
+    "startDate": "2026-04-03",
+    "endDate": "2026-04-03",
+    "type": "Public",
+    "name": [
+      {
+        "language": "NL",
+        "text": "Goede vrijdag"
+      }
+    ],
+    "nationwide": true
+  },
+  {
+    "id": "dcb87ceb-ce81-4ea6-81ab-d0545281bd1e",
+    "startDate": "2026-04-05",
+    "endDate": "2026-04-05",
+    "type": "Public",
+    "name": [
+      {
+        "language": "NL",
+        "text": "Eerste paasdag"
+      }
+    ],
+    "nationwide": true
+  },
+  {
+    "id": "26d020f7-d02c-470c-9f8b-c71c791df54e",
+    "startDate": "2026-04-06",
+    "endDate": "2026-04-06",
+    "type": "Public",
+    "name": [
+      {
+        "language": "NL",
+        "text": "Tweede paasdag"
+      }
+    ],
+    "nationwide": true
+  },
+  {
+    "id": "d53575fc-9aab-4487-8e26-f4ed1d709835",
+    "startDate": "2026-04-27",
+    "endDate": "2026-04-27",
+    "type": "Public",
+    "name": [
+      {
+        "language": "NL",
+        "text": "Koningsdag"
+      }
+    ],
+    "nationwide": true
+  },
+  {
+    "id": "abeb6b62-fec1-4fb6-bc0a-9d9984fa49bf",
+    "startDate": "2026-05-05",
+    "endDate": "2026-05-05",
+    "type": "Public",
+    "name": [
+      {
+        "language": "NL",
+        "text": "Bevrijdingsdag"
+      }
+    ],
+    "nationwide": true
+  },
+  {
+    "id": "8fd30ad8-b350-4b95-9a10-330895b3fd9e",
+    "startDate": "2026-05-14",
+    "endDate": "2026-05-14",
+    "type": "Public",
+    "name": [
+      {
+        "language": "NL",
+        "text": "Hemelvaartsdag"
+      }
+    ],
+    "nationwide": true
+  }
+]

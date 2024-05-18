@@ -3,6 +3,7 @@ import data from "@/data/data.json";
 import { RC, Event } from "./types";
 import getDateString from "./utils/getDateString";
 import isClosed from "./utils/isClosed/isClosed";
+import isDuringHoliday from "./utils/isDuringHoliday";
 
 const TIME_ZONE = "Europe/Amsterdam";
 const LOCALE = "NL-nl";
@@ -46,8 +47,11 @@ export default function getEvents() {
           verified: rc.verified,
         },
       };
-      // filter using isClosed
-      if (!isClosed(event.date, rc.closedRanges)) {
+
+      if (
+        !isClosed(event.date, rc.closedRanges) &&
+        !isDuringHoliday(event.date)
+      ) {
         events.push(event);
       }
     }
