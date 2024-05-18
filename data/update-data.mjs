@@ -6,6 +6,7 @@ import path from "path";
 import { promises as fs } from "fs";
 import { fileURLToPath } from "url";
 import slugify from "slugify";
+import saveJSON from "./saveJSON.mjs";
 
 const DATA_FILE_NAME = "data.json";
 const MAP_DATA_FILE_NAME = "map-data.json";
@@ -109,11 +110,4 @@ async function loadJSON(fileName) {
   const filePath = path.join(dataFolder, fileName);
   const rawData = await fs.readFile(filePath, "utf8");
   return JSON.parse(rawData);
-}
-
-async function saveJSON(fileName, data) {
-  const dataFolder = path.dirname(fileURLToPath(import.meta.url));
-  const filePath = path.join(dataFolder, fileName);
-  const jsonData = JSON.stringify(data, null, 2);
-  await fs.writeFile(filePath, jsonData, "utf8");
 }
