@@ -6,6 +6,7 @@ export type RC = {
   startTime: string;
   endTime: string;
   closed: string;
+  closedRanges: string[];
   address: string;
   district: string;
   doRepair: string;

@@ -2,6 +2,7 @@ import { rrulestr } from "rrule";
 import data from "@/data/data.json";
 import { RC, Event } from "./types";
 import getDateString from "./utils/getDateString";
+import isClosed from "./utils/isClosed/isClosed";
 
 const TIME_ZONE = "Europe/Amsterdam";
 const LOCALE = "NL-nl";
@@ -24,10 +25,6 @@ export default function getEvents() {
   for (const rc of data as RC[]) {
     if (!rc.rrule) continue;
 
-    // // Filter on district
-    // if (district !== "any" && district !== rc.district) continue;
-
-    // const [endHours] = rc.endTime.split(":").map(Number);
     const [hours, minutes] = rc.startTime.split(":").map(Number);
     const fullRRule = `${rc.rrule};BYHOUR=${hours};BYMINUTE=${minutes};BYSECOND=0`;
 
@@ -37,8 +34,6 @@ export default function getEvents() {
     const occurrences = rule.between(new Date(), getNextMonthDate());
     // occurances.tzid(TIME_ZONE);
     for (const occurrence of occurrences) {
-      // // Filter on just office hours
-      // if (justOfficeHours && isDuringOfficeHours(endHours, occurance)) continue;
       const event: Event = {
         date: occurrence,
         dateString: getDateString(occurrence),
@@ -51,7 +46,10 @@ export default function getEvents() {
           verified: rc.verified,
         },
       };
-      events.push(event);
+      // filter using isClosed
+      if (!isClosed(event.date, rc.closedRanges)) {
+        events.push(event);
+      }
     }
   }
 
