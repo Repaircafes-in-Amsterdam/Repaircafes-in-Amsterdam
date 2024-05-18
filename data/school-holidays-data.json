@@ -1,117 +1,72 @@
 [
   {
-    "id": "2903b184-55da-46a6-97fe-b9300df22fd7",
+    "name": "Zomervakantie",
     "startDate": "2024-07-20",
     "endDate": "2024-09-01",
-    "type": "School",
-    "name": [
-      {
-        "language": "NL",
-        "text": "Zomervakantie"
-      }
-    ],
-    "nationwide": false,
-    "subdivisions": [
-      {
-        "code": "NL-NO",
-        "shortName": "NO"
-      }
-    ]
+    "startTime": 1721433600000,
+    "endTime": 1725235200000
   },
   {
-    "id": "56dacdcf-1d06-4d3f-817e-31d23e876946",
+    "name": "Herfstvakantie",
     "startDate": "2024-10-26",
     "endDate": "2024-11-03",
-    "type": "School",
-    "name": [
-      {
-        "language": "NL",
-        "text": "Herfstvakantie"
-      }
-    ],
-    "nationwide": false,
-    "subdivisions": [
-      {
-        "code": "NL-NO",
-        "shortName": "NO"
-      },
-      {
-        "code": "NL-MI",
-        "shortName": "MI"
-      }
-    ]
+    "startTime": 1729900800000,
+    "endTime": 1730678400000
   },
   {
-    "id": "b3b08e09-cc59-41db-ab86-61e7d5d87dd8",
+    "name": "Kerstvakantie",
     "startDate": "2024-12-21",
     "endDate": "2025-01-05",
-    "type": "School",
-    "name": [
-      {
-        "language": "NL",
-        "text": "Kerstvakantie"
-      }
-    ],
-    "nationwide": false,
-    "subdivisions": [
-      {
-        "code": "NL-ZU",
-        "shortName": "ZU"
-      },
-      {
-        "code": "NL-NO",
-        "shortName": "NO"
-      },
-      {
-        "code": "NL-MI",
-        "shortName": "MI"
-      }
-    ]
+    "startTime": 1734739200000,
+    "endTime": 1736121600000
   },
   {
-    "id": "eac24f47-0825-4237-a298-e0c05400f94a",
+    "name": "Voorjaarsvakantie",
     "startDate": "2025-02-15",
     "endDate": "2025-02-23",
-    "type": "School",
-    "name": [
-      {
-        "language": "NL",
-        "text": "Voorjaarsvakantie"
-      }
-    ],
-    "nationwide": false,
-    "subdivisions": [
-      {
-        "code": "NL-NO",
-        "shortName": "NO"
-      }
-    ]
+    "startTime": 1739577600000,
+    "endTime": 1740355200000
   },
   {
-    "id": "8c2ec6a3-20eb-4c77-a101-f0e60cb542eb",
+    "name": "Meivakantie",
     "startDate": "2025-04-26",
     "endDate": "2025-05-04",
-    "type": "School",
-    "name": [
-      {
-        "language": "NL",
-        "text": "Meivakantie"
-      }
-    ],
-    "nationwide": false,
-    "subdivisions": [
-      {
-        "code": "NL-ZU",
-        "shortName": "ZU"
-      },
-      {
-        "code": "NL-NO",
-        "shortName": "NO"
-      },
-      {
-        "code": "NL-MI",
-        "shortName": "MI"
-      }
-    ]
+    "startTime": 1745625600000,
+    "endTime": 1746403200000
+  },
+  {
+    "name": "Zomervakantie",
+    "startDate": "2025-07-12",
+    "endDate": "2025-08-24",
+    "startTime": 1752278400000,
+    "endTime": 1756080000000
+  },
+  {
+    "name": "Herfstvakantie",
+    "startDate": "2025-10-18",
+    "endDate": "2025-10-26",
+    "startTime": 1760745600000,
+    "endTime": 1761526800000
+  },
+  {
+    "name": "Kerstvakantie",
+    "startDate": "2025-12-20",
+    "endDate": "2026-01-04",
+    "startTime": 1766188800000,
+    "endTime": 1767571200000
+  },
+  {
+    "name": "Voorjaarsvakantie",
+    "startDate": "2026-02-21",
+    "endDate": "2026-03-01",
+    "startTime": 1771632000000,
+    "endTime": 1772409600000
+  },
+  {
+    "name": "Meivakantie",
+    "startDate": "2026-04-25",
+    "endDate": "2026-05-03",
+    "startTime": 1777075200000,
+    "endTime": 1777852800000
   }
 ]

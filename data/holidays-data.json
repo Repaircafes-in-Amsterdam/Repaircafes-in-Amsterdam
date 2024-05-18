@@ -1,132 +1,156 @@
 [
   {
-    "id": "eaf27e0b-af2e-4fb2-b87b-8c89d5772e83",
+    "name": "Eerste pinksterdag",
     "startDate": "2024-05-19",
     "endDate": "2024-05-19",
-    "type": "Public",
-    "name": [
-      {
-        "language": "NL",
-        "text": "Eerste pinksterdag"
-      }
-    ],
-    "nationwide": true
+    "startTime": 1716076800000,
+    "endTime": 1716163200000
   },
   {
-    "id": "e398ad77-97cb-4698-bd4a-0e7dfa375014",
+    "name": "Tweede pinksterdag",
     "startDate": "2024-05-20",
     "endDate": "2024-05-20",
-    "type": "Public",
-    "name": [
-      {
-        "language": "NL",
-        "text": "Tweede pinksterdag"
-      }
-    ],
-    "nationwide": true
+    "startTime": 1716163200000,
+    "endTime": 1716249600000
   },
   {
-    "id": "c1ceeb49-fc2a-4858-bb3e-bc30f174356b",
+    "name": "Eerste kerstdag",
     "startDate": "2024-12-25",
     "endDate": "2024-12-25",
-    "type": "Public",
-    "name": [
-      {
-        "language": "NL",
-        "text": "Eerste kerstdag"
-      }
-    ],
-    "nationwide": true
+    "startTime": 1735084800000,
+    "endTime": 1735171200000
   },
   {
-    "id": "b9f3a5d1-c2b6-47d7-9f4f-0d62a25d5f61",
+    "name": "Tweede kerstdag",
     "startDate": "2024-12-26",
     "endDate": "2024-12-26",
-    "type": "Public",
-    "name": [
-      {
-        "language": "NL",
-        "text": "Tweede kerstdag"
-      }
-    ],
-    "nationwide": true
+    "startTime": 1735171200000,
+    "endTime": 1735257600000
   },
   {
-    "id": "c4ccb1c0-efc5-481a-b0ef-56d623d18f11",
+    "name": "Nieuwjaarsdag",
     "startDate": "2025-01-01",
     "endDate": "2025-01-01",
-    "type": "Public",
-    "name": [
-      {
-        "language": "NL",
-        "text": "Nieuwjaarsdag"
-      }
-    ],
-    "nationwide": true
+    "startTime": 1735689600000,
+    "endTime": 1735776000000
   },
   {
-    "id": "16cb1b50-c254-41a1-a6ff-11661531e25f",
+    "name": "Goede vrijdag",
     "startDate": "2025-04-18",
     "endDate": "2025-04-18",
-    "type": "Public",
-    "name": [
-      {
-        "language": "NL",
-        "text": "Goede vrijdag"
-      }
-    ],
-    "nationwide": true
+    "startTime": 1744934400000,
+    "endTime": 1745020800000
   },
   {
-    "id": "4d7d7345-528f-48d2-a51a-46e51470bd48",
+    "name": "Eerste paasdag",
     "startDate": "2025-04-20",
     "endDate": "2025-04-20",
-    "type": "Public",
-    "name": [
-      {
-        "language": "NL",
-        "text": "Eerste paasdag"
-      }
-    ],
-    "nationwide": true
+    "startTime": 1745107200000,
+    "endTime": 1745193600000
   },
   {
-    "id": "cf994daa-4503-45e0-ab52-bfc35d86405e",
+    "name": "Tweede paasdag",
     "startDate": "2025-04-21",
     "endDate": "2025-04-21",
-    "type": "Public",
-    "name": [
-      {
-        "language": "NL",
-        "text": "Tweede paasdag"
-      }
-    ],
-    "nationwide": true
+    "startTime": 1745193600000,
+    "endTime": 1745280000000
   },
   {
-    "id": "31349587-ddaa-4fd0-9752-7fc786c25208",
+    "name": "Koningsdag",
     "startDate": "2025-04-27",
     "endDate": "2025-04-27",
-    "type": "Public",
-    "name": [
-      {
-        "language": "NL",
-        "text": "Koningsdag"
-      }
-    ],
-    "nationwide": true
+    "startTime": 1745712000000,
+    "endTime": 1745798400000
   },
   {
-    "id": "8be74455-5c9c-4143-9d6b-928ae2871183",
+    "name": "Bevrijdingsdag",
     "startDate": "2025-05-05",
     "endDate": "2025-05-05",
-    "type": "Public",
-    "name": [
-      {
-        "language": "NL",
-        "text": "Bevrijdingsdag"
-      }
-    ],
-    "nationwide": true
+    "startTime": 1746403200000,
+    "endTime": 1746489600000
+  },
+  {
+    "name": "Hemelvaartsdag",
+    "startDate": "2025-05-29",
+    "endDate": "2025-05-29",
+    "startTime": 1748476800000,
+    "endTime": 1748563200000
+  },
+  {
+    "name": "Eerste pinksterdag",
+    "startDate": "2025-06-08",
+    "endDate": "2025-06-08",
+    "startTime": 1749340800000,
+    "endTime": 1749427200000
+  },
+  {
+    "name": "Tweede pinksterdag",
+    "startDate": "2025-06-09",
+    "endDate": "2025-06-09",
+    "startTime": 1749427200000,
+    "endTime": 1749513600000
+  },
+  {
+    "name": "Eerste kerstdag",
+    "startDate": "2025-12-25",
+    "endDate": "2025-12-25",
+    "startTime": 1766620800000,
+    "endTime": 1766707200000
+  },
+  {
+    "name": "Tweede kerstdag",
+    "startDate": "2025-12-26",
+    "endDate": "2025-12-26",
+    "startTime": 1766707200000,
+    "endTime": 1766793600000
+  },
+  {
+    "name": "Nieuwjaarsdag",
+    "startDate": "2026-01-01",
+    "endDate": "2026-01-01",
+    "startTime": 1767225600000,
+    "endTime": 1767312000000
+  },
+  {
+    "name": "Goede vrijdag",
+    "startDate": "2026-04-03",
+    "endDate": "2026-04-03",
+    "startTime": 1775174400000,
+    "endTime": 1775260800000
+  },
+  {
+    "name": "Eerste paasdag",
+    "startDate": "2026-04-05",
+    "endDate": "2026-04-05",
+    "startTime": 1775347200000,
+    "endTime": 1775433600000
+  },
+  {
+    "name": "Tweede paasdag",
+    "startDate": "2026-04-06",
+    "endDate": "2026-04-06",
+    "startTime": 1775433600000,
+    "endTime": 1775520000000
+  },
+  {
+    "name": "Koningsdag",
+    "startDate": "2026-04-27",
+    "endDate": "2026-04-27",
+    "startTime": 1777248000000,
+    "endTime": 1777334400000
+  },
+  {
+    "name": "Bevrijdingsdag",
+    "startDate": "2026-05-05",
+    "endDate": "2026-05-05",
+    "startTime": 1777939200000,
+    "endTime": 1778025600000
+  },
+  {
+    "name": "Hemelvaartsdag",
+    "startDate": "2026-05-14",
+    "endDate": "2026-05-14",
+    "startTime": 1778716800000,
+    "endTime": 1778803200000
   }
 ]

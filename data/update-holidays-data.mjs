@@ -31,5 +31,17 @@ async function updateData(url, fileName, transform) {
   const response = await fetch(url + params.toString());
   const list = await response.json();
   const transformedList = transform ? transform(list) : list;
-  saveJSON(fileName, transformedList);
+  const cleanedList = transformedList.map((item) => {
+    // Add a day to the end date to make it include the end date
+    const endDate = new Date(item.endDate);
+    endDate.setDate(endDate.getDate() + 1);
+    return {
+      name: item.name[0].text,
+      startDate: item.startDate,
+      endDate: item.endDate,
+      startTime: new Date(item.startDate).getTime(),
+      endTime: endDate.getTime(),
+    };
+  });
+  saveJSON(fileName, cleanedList);
 }
