@@ -34,10 +34,18 @@ function createEvent(rc: RC, date: Date): Event {
   };
 }
 
-export default function getEvents() {
-  // Get all events organized until next month
+// Get all events organized until next month
+// If a slug is provided, only get events for that Repair Café
+export default function getEvents(
+  repairCafeSlug: string | undefined = undefined,
+) {
   const events: Event[] = [];
-  for (const rc of data as RC[]) {
+
+  const rcs = repairCafeSlug
+    ? data.filter((rc) => rc.slug === repairCafeSlug)
+    : data;
+
+  for (const rc of rcs as RC[]) {
     if (!rc.rrule) continue;
 
     const [hours, minutes] = rc.startTime.split(":").map(Number);

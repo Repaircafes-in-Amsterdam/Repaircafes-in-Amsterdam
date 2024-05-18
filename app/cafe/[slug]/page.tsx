@@ -6,12 +6,11 @@ import ExternalLink from "@/app/icons/ExternalLink.svg?react";
 import Warning from "@/app/icons/Warning.svg?react";
 import BasePage from "@/app/components/BasePage";
 import DetailsSection from "./DetailsSection";
-import { rrulestr } from "rrule";
 import data from "@/data/data.json";
-import getDateString from "@/app/utils/getDateString";
-import { RC } from "@/app/types";
+import { RC, Event } from "@/app/types";
 import JsonLd from "../../components/JsonLd";
 import getCafeJsonLd from "./getCafeJsonLd";
+import getEvents from "@/app/getEvents";
 
 export function generateMetadata({
   params,
@@ -51,9 +50,8 @@ export default function CafeServer({ params }: { params: { slug: string } }) {
     );
   }
 
-  const rule = rrulestr(`${rc.rrule};COUNT=1`);
-  const nextDate = rule.all()[0];
-  const next = getDateString(nextDate);
+  const events: Event[] = getEvents(rc.slug);
+  const next = events[0]?.dateString;
 
   return <CafeClient rc={rc} next={next} />;
 }
@@ -69,7 +67,9 @@ function CafeClient({ rc, next }: { rc: RC; next: string }) {
       )}
       <div className="flex grow flex-col gap-1 overflow-y-auto px-3 pb-3">
         <DetailsSection title="Open op">{rc.open}</DetailsSection>
-        <DetailsSection title="Eerst volgende keer">{next}</DetailsSection>
+        {next && (
+          <DetailsSection title="Eerst volgende keer">{next}</DetailsSection>
+        )}
         {rc.closed && (
           <DetailsSection title="Gesloten op">{rc.closed}</DetailsSection>
         )}
