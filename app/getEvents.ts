@@ -4,6 +4,7 @@ import { RC, Event } from "./types";
 import getDateString from "./utils/getDateString";
 import isClosed from "./utils/isClosed/isClosed";
 import isDuringHoliday from "./utils/isDuringHoliday";
+import isDuringSchoolHoliday from "./utils/isDuringSchoolHoliday";
 
 const TIME_ZONE = "Europe/Amsterdam";
 const LOCALE = "NL-nl";
@@ -48,9 +49,13 @@ export default function getEvents() {
         },
       };
 
+      const closedDuringSchoolHolidays = rc.closed
+        .toLowerCase()
+        .includes("schoolvakantie");
       if (
         !isClosed(event.date, rc.closedRanges) &&
-        !isDuringHoliday(event.date)
+        !isDuringHoliday(event.date) &&
+        (!closedDuringSchoolHolidays || !isDuringSchoolHoliday(event.date))
       ) {
         events.push(event);
       }

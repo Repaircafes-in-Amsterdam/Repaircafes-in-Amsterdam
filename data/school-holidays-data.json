@@ -1,0 +1,117 @@
+[
+  {
+    "id": "2903b184-55da-46a6-97fe-b9300df22fd7",
+    "startDate": "2024-07-20",
+    "endDate": "2024-09-01",
+    "type": "School",
+    "name": [
+      {
+        "language": "NL",
+        "text": "Zomervakantie"
+      }
+    ],
+    "nationwide": false,
+    "subdivisions": [
+      {
+        "code": "NL-NO",
+        "shortName": "NO"
+      }
+    ]
+  },
+  {
+    "id": "56dacdcf-1d06-4d3f-817e-31d23e876946",
+    "startDate": "2024-10-26",
+    "endDate": "2024-11-03",
+    "type": "School",
+    "name": [
+      {
+        "language": "NL",
+        "text": "Herfstvakantie"
+      }
+    ],
+    "nationwide": false,
+    "subdivisions": [
+      {
+        "code": "NL-NO",
+        "shortName": "NO"
+      },
+      {
+        "code": "NL-MI",
+        "shortName": "MI"
+      }
+    ]
+  },
+  {
+    "id": "b3b08e09-cc59-41db-ab86-61e7d5d87dd8",
+    "startDate": "2024-12-21",
+    "endDate": "2025-01-05",
+    "type": "School",
+    "name": [
+      {
+        "language": "NL",
+        "text": "Kerstvakantie"
+      }
+    ],
+    "nationwide": false,
+    "subdivisions": [
+      {
+        "code": "NL-ZU",
+        "shortName": "ZU"
+      },
+      {
+        "code": "NL-NO",
+        "shortName": "NO"
+      },
+      {
+        "code": "NL-MI",
+        "shortName": "MI"
+      }
+    ]
+  },
+  {
+    "id": "eac24f47-0825-4237-a298-e0c05400f94a",
+    "startDate": "2025-02-15",
+    "endDate": "2025-02-23",
+    "type": "School",
+    "name": [
+      {
+        "language": "NL",
+        "text": "Voorjaarsvakantie"
+      }
+    ],
+    "nationwide": false,
+    "subdivisions": [
+      {
+        "code": "NL-NO",
+        "shortName": "NO"
+      }
+    ]
+  },
+  {
+    "id": "8c2ec6a3-20eb-4c77-a101-f0e60cb542eb",
+    "startDate": "2025-04-26",
+    "endDate": "2025-05-04",
+    "type": "School",
+    "name": [
+      {
+        "language": "NL",
+        "text": "Meivakantie"
+      }
+    ],
+    "nationwide": false,
+    "subdivisions": [
+      {
+        "code": "NL-ZU",
+        "shortName": "ZU"
+      },
+      {
+        "code": "NL-NO",
+        "shortName": "NO"
+      },
+      {
+        "code": "NL-MI",
+        "shortName": "MI"
+      }
+    ]
+  }
+]
