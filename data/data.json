@@ -573,7 +573,6 @@
     "verified": true,
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-oud-noord/",
-      "website": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-oud-noord/",
       "facebook": "https://www.facebook.com/repaircafeamsterdam"
     },
     "slug": "oud-noord",
@@ -591,7 +590,7 @@
     "endTime": "17:00",
     "closed": "12 mei (in plaats daarvan zijn we 19 mei open)",
     "closedRanges": [
-      "5-12"
+      "05-12"
     ],
     "district": "Noord",
     "email": "repair.events@gmail.com",
