@@ -10,6 +10,7 @@
     "lint": "next lint",
     "update-data": "node data/update-data.mjs",
     "update-map-data": "node data/update-map-data.mjs",
+    "update-holidays-data": "node data/update-holidays-data.mjs",
     "postinstall": "patch-package",
     "test": "vitest",
     "test:watch": "vitest watch"
