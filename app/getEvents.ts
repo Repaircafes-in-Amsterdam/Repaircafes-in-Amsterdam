@@ -7,6 +7,11 @@ import eventFilter from "./eventFilter";
 const TIME_ZONE = "Europe/Amsterdam";
 const LOCALE = "NL-nl";
 
+const TEMP_START = new Date("2024-10-13");
+const TEMP_END = new Date("2024-10-21");
+const tempStartTime = TEMP_START.getTime();
+const tempEndTime = TEMP_END.getTime();
+
 function getNextMonthDate() {
   const date = new Date();
   const nextMonth = new Date(date);
@@ -54,7 +59,11 @@ export default function getEvents(
     const rule = rrulestr(fullRRule, {
       // tzid: TIME_ZONE,
     });
-    const occurrences = rule.between(new Date(), getNextMonthDate());
+    const occurrences = rule.between(
+      TEMP_START,
+      TEMP_END,
+      // getNextMonthDate(),
+    );
     // occurances.tzid(TIME_ZONE);
     for (const occurrence of occurrences) {
       const event: Event = createEvent(rc, occurrence);
@@ -67,7 +76,10 @@ export default function getEvents(
     // add exceptions
     for (const exception of rc.exceptions) {
       const event: Event = createEvent(rc, new Date(exception));
-      events.push(event);
+      const dateTime = event.date.getTime();
+      if (dateTime >= tempStartTime && dateTime <= tempEndTime) {
+        events.push(event);
+      }
     }
   }
 
