@@ -3,9 +3,15 @@ import data from "@/data/data.json";
 import { RC, Event } from "./types";
 import getDateString from "./utils/getDateString";
 import eventFilter from "./eventFilter";
+import dayjs from "dayjs";
+import utc from "dayjs/plugin/utc";
+import timezone from "dayjs/plugin/timezone";
 
 const TIME_ZONE = "Europe/Amsterdam";
 const LOCALE = "NL-nl";
+
+dayjs.extend(utc);
+dayjs.extend(timezone);
 
 function getNextMonthDate() {
   const date = new Date();
@@ -40,10 +46,8 @@ export default function getEvents(
   repairCafeSlug: string | undefined = undefined,
 ) {
   const events: Event[] = [];
-  const startDate = new Date();
-  const startTime = startDate.getTime();
-  const endDate = getNextMonthDate();
-  const endTime = endDate.getTime();
+  const startDate = dayjs().tz("Europe/Amsterdam");
+  const endDate = startDate.add(1, "month");
 
   const rcs = repairCafeSlug
     ? data.filter((rc) => rc.slug === repairCafeSlug)
@@ -58,7 +62,7 @@ export default function getEvents(
     const rule = rrulestr(fullRRule, {
       // tzid: TIME_ZONE,
     });
-    const occurrences = rule.between(startDate, endDate);
+    const occurrences = rule.between(startDate.toDate(), endDate.toDate());
     // occurances.tzid(TIME_ZONE);
     for (const occurrence of occurrences) {
       const event: Event = createEvent(rc, occurrence);
@@ -70,15 +74,19 @@ export default function getEvents(
 
     // add exceptions
     for (const exception of rc.exceptions) {
-      const event: Event = createEvent(rc, new Date(exception));
-      const exceptionStartDate = new Date(
-        `${exception}T${rc.startTime}:00.000Z`,
+      const exceptionStartDate = dayjs.tz(
+        `${exception} ${rc.startTime}`,
+        TIME_ZONE,
       );
-      const exceptionEndDate = new Date(`${exception}T${rc.endTime}:00.000Z`);
-      const exceptionStartTime = exceptionStartDate.getTime();
-      const exceptionEndTime = exceptionEndDate.getTime();
-      if (exceptionEndTime >= startTime && exceptionStartTime <= endTime) {
-        events.push(event);
+      const exceptionEndDate = dayjs.tz(
+        `${exception} ${rc.endTime}`,
+        TIME_ZONE,
+      );
+      if (
+        exceptionEndDate.isAfter(startDate) &&
+        exceptionStartDate.isBefore(endDate)
+      ) {
+        events.push(createEvent(rc, new Date(exception)));
       }
     }
   }
