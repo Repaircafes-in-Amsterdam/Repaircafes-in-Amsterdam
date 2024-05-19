@@ -6,19 +6,50 @@ First, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Data
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Repair Café data
+
+We have a Google Spreadsheet with data about Repair Cafés we couldn't find elsewhere. In the future we hope to move this into a database and make it editable by the Repair Café organizers using their own logins.
+It contains the columns mentioned in the `RC` type (see [Types](https://github.com/Repaircafes-in-Amsterdam/Repaircafes-in-Amsterdam/blob/main/app/types.ts)) + the ones that are put nested under links see LINK_COLUMNS in [update-data](https://github.com/Repaircafes-in-Amsterdam/Repaircafes-in-Amsterdam/blob/main/data/update-data.mjs).
+We export it's data, combine it with the sources below and save it into a json file by running:
+
+```bash
+npm run update-data
+```
+
+### Holidays data
+
+We use openholidaysapi.org to retrieve accurate dates on public and school holidays. We download it to a json to prevent being directly dependant on it for the function of the website. It enables downloading 3 years into the future, so ones in a while we need to run the update data script. To update the data run:
+
+```bash
+npm run update-holidays-data
+```
+
+### Repaircafe.org map data
+
+We use the [repair.org API](https://www.repaircafe.org/api/) to pull in the coordinates they know. We download it to a json to prevent being directly dependant on it for the function of the website. To update that data run:
+
+```bash
+npm run update-map-data
+```
+
+### Manual map data
+
+For the Repair Cafés that are not on [repair.org](https://www.repaircafe.org/) we can retrieved the coordinates manually in `manual-map-data.json`. When the `update-data` is run and it encounters Repair Cafés it can't find coordinates for it will add an entry to `manual-map-data.json` so it can be filed in.
+
+## Other scripts
+
+- `dev` Start in development mode.
+- `build` Build for production usage.
+- `build:analyze` Build for production usage and analyze the bundle.
+- `start` Start a Next.js production server, using build code.
+- `test` Execute unit tests.
+- `test:watch` Watching test files to automatically run unit tests.
 
 ## Learn More
 
