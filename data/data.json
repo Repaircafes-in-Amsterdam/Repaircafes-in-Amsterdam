@@ -611,13 +611,9 @@
     "rrule": "FREQ=MONTHLY;BYSETPOS=2;BYDAY=SU;INTERVAL=1",
     "startTime": "14:00",
     "endTime": "17:00",
-    "closed": "12 mei (in plaats daarvan zijn we 19 mei open)",
-    "closedRanges": [
-      "05-12"
-    ],
-    "exceptions": [
-      "2024-05-19"
-    ],
+    "closed": "",
+    "closedRanges": [],
+    "exceptions": [],
     "district": "Noord",
     "email": "repair.events@gmail.com",
     "doRepair": "Kleding, Electronica, messen (slijpen)",
