@@ -24,10 +24,6 @@ export default function Page() {
           we zijn bezig om de informatie van meer bevestigd te krijgen.
         </p>
         <p>
-          De aankomende lijst / agenda houdt op dit moment nog geen rekening met
-          wanneer Repair Cafés gesloten zijn (zoals met feestdagen).
-        </p>
-        <p>
           De website is open source,{" "}
           <a
             href="https://github.com/Repaircafes-in-Amsterdam/Repaircafes-in-Amsterdam"
