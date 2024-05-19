@@ -40,6 +40,10 @@ export default function getEvents(
   repairCafeSlug: string | undefined = undefined,
 ) {
   const events: Event[] = [];
+  const startDate = new Date();
+  const startTime = startDate.getTime();
+  const endDate = getNextMonthDate();
+  const endTime = endDate.getTime();
 
   const rcs = repairCafeSlug
     ? data.filter((rc) => rc.slug === repairCafeSlug)
@@ -54,7 +58,7 @@ export default function getEvents(
     const rule = rrulestr(fullRRule, {
       // tzid: TIME_ZONE,
     });
-    const occurrences = rule.between(new Date(), getNextMonthDate());
+    const occurrences = rule.between(startDate, endDate);
     // occurances.tzid(TIME_ZONE);
     for (const occurrence of occurrences) {
       const event: Event = createEvent(rc, occurrence);
@@ -67,7 +71,15 @@ export default function getEvents(
     // add exceptions
     for (const exception of rc.exceptions) {
       const event: Event = createEvent(rc, new Date(exception));
-      events.push(event);
+      const exceptionStartDate = new Date(
+        `${exception}T${rc.startTime}:00.000Z`,
+      );
+      const exceptionEndDate = new Date(`${exception}T${rc.endTime}:00.000Z`);
+      const exceptionStartTime = exceptionStartDate.getTime();
+      const exceptionEndTime = exceptionEndDate.getTime();
+      if (exceptionEndTime >= startTime && exceptionStartTime <= endTime) {
+        events.push(event);
+      }
     }
   }
 
