@@ -52,6 +52,13 @@ export default function Page() {
         <p>We zijn nog op zoek naar hulp bij:</p>
         <ul>
           <li>
+            SEO/Marketing. Iemand die andere websites kan benaderen om een link
+            naar deze website te plaatsen. De website is geoptimaliseerd voor
+            vindbaarheid, maar heeft backlinks nodig om vindbaar te worden in
+            zoekmachines.
+          </li>
+
+          <li>
             Community management. Iemand die communiceert met alle Repair Cafés
             zodat deze website zo correct en volledig mogelijk is en dat blijft.
             Op dit moment zijn er nog een handjevol Repair Cafés met wie we nog
