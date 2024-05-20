@@ -49,6 +49,31 @@ export default function Page() {
           Wil je een Repair Café toevoegen of is er informatie incorrect of
           onvolledig, dan stellen we een e-mail zeer op prijs.
         </p>
+        <p>We zijn nog op zoek naar hulp bij:</p>
+        <ul>
+          <li>
+            Community management. Iemand die communiceert met alle Repair Cafés
+            zodat deze website zo correct en volledig mogelijk is en dat blijft.
+            Op dit moment zijn er nog een handjevol Repair Cafés met wie we nog
+            helemaal geen contact hebben kunnen krijgen.
+          </li>
+
+          <li>
+            Visual / UI / UX Design. Iemand die kan meedenken over de structuur,
+            navigatie, hoe dingen moeten werken en hoe het eruit moet zien. We
+            hebben een Figma bestand vol ontwerpen die we graag met je delen.
+          </li>
+
+          <li>
+            Techniek. Voornamelijk front-end development. Iemand die eventueel
+            mee kan ontwikkelen en als backup kan fungeren. Iemand met kennis
+            van bijvoorbeeld React, Next en Tailwind. Zie de{" "}
+            <a href="https://github.com/Repaircafes-in-Amsterdam/Repaircafes-in-Amsterdam">
+              code op Github
+            </a>{" "}
+            voor meer info.
+          </li>
+        </ul>
       </div>
       <div className="px-3 pb-3">
         <h3 className="font-bold">Contact</h3>
