@@ -10,6 +10,12 @@ import classes from "./classes";
 const links = [
   { href: "/", label: "Aankomende" },
   { href: "/map", label: "Kaart" },
+  {
+    href: "/repaircafes",
+    label: "Over Repair Cafés",
+    className: "hidden md:block",
+  },
+  { href: "/about", label: "Over ons", className: "hidden md:block" },
 ];
 
 export default function TopBar() {
@@ -17,7 +23,7 @@ export default function TopBar() {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
   return (
     <>
-      <header className="relative flex items-center justify-between bg-blue p-3">
+      <header className="relative flex items-center justify-between gap-2.5 bg-blue p-3">
         {/* Hidden overlay to dismiss menu */}
         <div
           className={classes(
@@ -26,16 +32,19 @@ export default function TopBar() {
           )}
           onClick={() => setMenuIsOpen(false)}
         ></div>
-        <div className="flex flex-col gap-2.5">
+        <div className="flex flex-col gap-2.5 md:grow md:flex-row md:items-end md:justify-between">
           <Link href="/" aria-label="Logo">
             <Logo />
           </Link>
           <div className="flex gap-3 font-medium text-white">
-            {links.map(({ href, label }) => (
+            {links.map(({ href, label, className }) => (
               <Link
                 key={href}
                 href={href}
-                className={pathname === href ? "text-orange-450" : "text-white"}
+                className={classes(
+                  className,
+                  pathname === href ? "text-orange-450" : "text-white",
+                )}
               >
                 {label}
               </Link>
@@ -44,7 +53,7 @@ export default function TopBar() {
         </div>
         <button
           onClick={() => setMenuIsOpen(!menuIsOpen)}
-          className="cursor-pointer text-white"
+          className="cursor-pointer text-white md:hidden"
           aria-label="Menu"
         >
           <MenuIcon />
