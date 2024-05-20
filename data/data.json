@@ -158,6 +158,33 @@
     ]
   },
   {
+    "name": "Centrum - Oost",
+    "address": "Kleine Wittenburgerstraat 201",
+    "open": "Elke eerste en derde woensdagmiddag 14:00 - 16:30",
+    "rrule": "FREQ=MONTHLY;BYDAY=1WE,3WE",
+    "startTime": "14:00",
+    "endTime": "16:30",
+    "closed": "",
+    "closedRanges": [],
+    "exceptions": [],
+    "district": "Centrum",
+    "email": "",
+    "doRepair": "",
+    "dontRepair": "",
+    "moreInfo": "",
+    "verified": false,
+    "links": {
+      "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-centrum-oost/",
+      "website": "https://repaircafeamsterdamcentrumoost.wordpress.com/over/",
+      "facebook": "https://www.facebook.com/WitteBoei"
+    },
+    "slug": "centrum-oost",
+    "coordinate": [
+      52.37151,
+      4.921735
+    ]
+  },
+  {
     "name": "De Boeg",
     "address": "Hoofdweg 495 a",
     "open": "Elke dinsdagochtend 10:00 - 12:00",
