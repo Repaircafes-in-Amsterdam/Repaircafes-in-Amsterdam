@@ -22,6 +22,9 @@ We export it's data, combine it with the sources below and save it into a json f
 npm run update-data
 ```
 
+For this to work you'll need to create a service account, duplicate `.env.local.example` to `.env.local` fill in `GOOGLE_PRIVATE_KEY` `GOOGLE_PRIVATE_KEY` and give the the service account access to your spreadsheet.  
+More info: https://theoephraim.github.io/node-google-spreadsheet/#/guides/authentication
+
 ### Holidays data
 
 We use openholidaysapi.org to retrieve accurate dates on public and school holidays. We download it to a json to prevent being directly dependant on it for the function of the website. It enables downloading 3 years into the future, so ones in a while we need to run the update data script. To update the data run:
