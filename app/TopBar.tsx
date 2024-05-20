@@ -3,7 +3,7 @@ import Logo from "@/app/Logo.svg?react";
 import MenuIcon from "@/app/icons/Menu.svg?react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Menu from "./Menu";
+import MobileMenu from "./MobileMenu";
 import { useState } from "react";
 import classes from "./classes";
 
@@ -51,7 +51,7 @@ export default function TopBar() {
         </button>
       </header>
       <div className="relative">
-        <Menu
+        <MobileMenu
           isOpen={menuIsOpen}
           onOpenChange={(isOpen) => setMenuIsOpen(isOpen)}
         />
