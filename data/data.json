@@ -115,7 +115,9 @@
     "endTime": "22:00",
     "closed": "",
     "closedRanges": [],
-    "exceptions": [],
+    "exceptions": [
+      "2025-05-05"
+    ],
     "district": "West",
     "email": "deversterking@riseup.net",
     "doRepair": "Electronica, Kleding",
