@@ -13,18 +13,6 @@ const LOCALE = "NL-nl";
 dayjs.extend(utc);
 dayjs.extend(timezone);
 
-function getNextMonthDate() {
-  const date = new Date();
-  const nextMonth = new Date(date);
-
-  nextMonth.setMonth(date.getMonth() + 1);
-  if (nextMonth.getMonth() !== (date.getMonth() + 1) % 12) {
-    nextMonth.setDate(0);
-  }
-
-  return nextMonth;
-}
-
 function createEvent(rc: RC, date: Date): Event {
   return {
     date,
