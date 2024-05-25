@@ -4,7 +4,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import TopBar from "./TopBar";
-import classes from "./classes";
+import classes from "./utils/classes";
 
 const inter = Inter({ subsets: ["latin"] });
 

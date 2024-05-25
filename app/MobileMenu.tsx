@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ReactNode } from "react";
 import ChevronRight from "@/app/icons/ChevronRight.svg?react";
-import classes from "./classes";
+import classes from "./utils/classes";
 
 function MenuItem({ href, children }: { href: string; children: ReactNode }) {
   return (

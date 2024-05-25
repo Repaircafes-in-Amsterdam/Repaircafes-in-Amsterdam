@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import MobileMenu from "./MobileMenu";
 import { useState } from "react";
-import classes from "./classes";
+import classes from "./utils/classes";
 
 const links = [
   { href: "/", label: "Aankomende" },

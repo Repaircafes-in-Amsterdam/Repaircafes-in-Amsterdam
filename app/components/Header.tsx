@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import classes from "../classes";
+import classes from "../utils/classes";
 
 export default function Header({
   children,
