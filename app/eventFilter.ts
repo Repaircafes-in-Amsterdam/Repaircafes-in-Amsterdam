@@ -1,9 +1,9 @@
 import { RC, Event } from "./types";
-import isClosed from "./utils/isClosed/isClosed";
 import holidaysData from "@/data/holidays-data.json";
 import schoolHolidaysData from "@/data/school-holidays-data.json";
 import isDuring from "./utils/findHoliday";
 import findHoliday from "./utils/findHoliday";
+import isDateInRange from "./utils/isDateInRange";
 
 const summerHolidaysData = schoolHolidaysData.filter(
   (holiday) => holiday.name === "Zomervakantie",
@@ -12,7 +12,8 @@ const summerHolidaysData = schoolHolidaysData.filter(
 export default function eventFilter(event: Event, rc: RC) {
   const closed = rc.closed.toLowerCase();
 
-  if (isClosed(event.date, rc.closedRanges)) return false;
+  if (rc.closedRanges.some((range) => isDateInRange(event.date, range)))
+    return false;
 
   if (isDuring(event.date, holidaysData)) return false;
 

@@ -8,10 +8,11 @@ import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
 
 const TIME_ZONE = "Europe/Amsterdam";
-const LOCALE = "NL-nl";
+// const LOCALE = "NL-nl";
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
+dayjs.tz.setDefault("Europe/Amsterdam");
 
 function createEvent(rc: RC, date: Date): Event {
   return {
@@ -34,8 +35,8 @@ export default function getEvents(
   repairCafeSlug: string | undefined = undefined,
 ) {
   const events: Event[] = [];
-  const startDate = dayjs().tz("Europe/Amsterdam");
-  const endDate = startDate.add(1, "month");
+  const startDate = dayjs().tz();
+  const endDate = startDate.add(1, "year");
 
   const rcs = repairCafeSlug
     ? data.filter((rc) => rc.slug === repairCafeSlug)
@@ -62,14 +63,8 @@ export default function getEvents(
 
     // add exceptions
     for (const exception of rc.exceptions) {
-      const exceptionStartDate = dayjs.tz(
-        `${exception} ${rc.startTime}`,
-        TIME_ZONE,
-      );
-      const exceptionEndDate = dayjs.tz(
-        `${exception} ${rc.endTime}`,
-        TIME_ZONE,
-      );
+      const exceptionStartDate = dayjs.tz(`${exception} ${rc.startTime}`);
+      const exceptionEndDate = dayjs.tz(`${exception} ${rc.endTime}`);
       if (
         exceptionEndDate.isAfter(startDate) &&
         exceptionStartDate.isBefore(endDate)

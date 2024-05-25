@@ -566,7 +566,7 @@
     "endTime": "22:00",
     "closed": "",
     "closedRanges": [
-      "09"
+      "2024-09"
     ],
     "exceptions": [
       "2024-08-30"
@@ -832,7 +832,7 @@
     "endTime": "16:00",
     "closed": "",
     "closedRanges": [
-      "07-06"
+      "2024-07-06"
     ],
     "exceptions": [
       "2024-07-13"
