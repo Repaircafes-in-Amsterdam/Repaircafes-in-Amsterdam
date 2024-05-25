@@ -48,6 +48,7 @@ export type MapRC = {
   name: string;
   open: string;
   address: string;
+  district: string;
 };
 
 export type Holiday = {

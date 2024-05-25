@@ -3,6 +3,7 @@ import DistrictSelect from "./DistrictSelect";
 import OfficeHoursCheckbox from "./OfficeHoursCheckbox";
 import Upcoming from "./Upcoming";
 import { Event, MapRC } from "./types";
+import useDistrict from "./useDistrict";
 import useMap from "./utils/useMap";
 
 export default function Page({
@@ -12,6 +13,11 @@ export default function Page({
   events: Event[];
   mapData: MapRC[];
 }) {
+  const { value: district } = useDistrict();
+  const filteredMapData = mapData.filter(
+    (item) => district === "any" || district === item.district,
+  );
+
   const Map = useMap();
   return (
     <div className="flex h-full w-full justify-center md:justify-normal">
@@ -22,7 +28,7 @@ export default function Page({
         </div>
         <Upcoming events={events} />
       </div>
-      <Map data={mapData} className="hidden h-full md:flex" />
+      <Map data={filteredMapData} className="hidden h-full md:flex" />
     </div>
   );
 }

@@ -8,5 +8,6 @@ export default function getMapData(): MapRC[] {
     name: rc.name,
     open: rc.open,
     address: rc.address,
+    district: rc.district,
   }));
 }
