@@ -67,23 +67,22 @@ const list = rows
     closedRanges: row.closedRanges?.split("\n").filter(Boolean),
     exceptions: row.exceptions?.split("\n").filter(Boolean),
   }))
-  // Pull in coordinates from repaircafe.org map data or our manual map data
+  // Pull in coordinates from our manual map data or repaircafe.org map data
   // Save addresses without coordinates to manual map data
   .map((row) => {
     const orgPage = row.links?.orgPage;
-    let coordinate;
-
-    if (orgPage) {
-      // Remove trailing /
-      const orgPageCleaned = orgPage.replace(/\/$/, "");
-      const item = mapDataByLink.get(orgPageCleaned);
-      if (item) {
-        coordinate = item.coordinate?.split(",")?.map(Number);
-      }
-    }
+    let coordinate = manualMapData[row.address];
 
     if (!coordinate) {
-      coordinate = manualMapData[row.address];
+      if (orgPage) {
+        // Remove trailing /
+        const orgPageCleaned = orgPage.replace(/\/$/, "");
+        const item = mapDataByLink.get(orgPageCleaned);
+        if (item) {
+          coordinate = item.coordinate?.split(",")?.map(Number);
+        }
+      }
+
       if (!coordinate) {
         manualMapData[row.address] = [];
       }
