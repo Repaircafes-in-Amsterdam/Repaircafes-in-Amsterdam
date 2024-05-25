@@ -1,4 +1,5 @@
 "use client";
+import { useRouter } from "next/navigation";
 import DistrictSelect from "./DistrictSelect";
 import OfficeHoursCheckbox from "./OfficeHoursCheckbox";
 import Upcoming from "./Upcoming";
@@ -17,6 +18,7 @@ export default function Page({
   const filteredMapData = mapData.filter(
     (item) => district === "any" || district === item.district,
   );
+  const router = useRouter();
 
   const Map = useMap();
   return (
@@ -28,7 +30,11 @@ export default function Page({
         </div>
         <Upcoming events={events} />
       </div>
-      <Map data={filteredMapData} className="hidden h-full md:flex" />
+      <Map
+        data={filteredMapData}
+        className="hidden h-full md:flex"
+        onSelect={(slug) => router.push(`/cafe/${slug}`)}
+      />
     </div>
   );
 }
