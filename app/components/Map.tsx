@@ -6,6 +6,7 @@ import { MapRC } from "../types";
 import { latLngBounds } from "leaflet";
 import MapMarker from "./MapMarker";
 import MapZoomControl from "./MapZoomControl";
+import classes from "../utils/classes";
 
 // function ClickOutside({ onClick }: { onClick: (slug: string) => void }) {
 //   useMapEvent("click", () => onClick(""));
@@ -16,17 +17,19 @@ export default function Map({
   data,
   active,
   onSelect,
+  className,
 }: {
   data: MapRC[];
-  active: string;
-  onSelect: (slug: string) => void;
+  active?: string;
+  onSelect?: (slug: string) => void;
+  className?: string;
 }) {
   const bounds = latLngBounds(
     data.map((rc) => rc.coordinate as [number, number]),
   );
 
   return (
-    <>
+    <div className={classes("relative flex h-full w-full flex-col", className)}>
       <div id="zoom-control-portal" className="relative"></div>
       <MapContainer
         className="relative z-0 h-full w-full"
@@ -43,13 +46,13 @@ export default function Map({
           <MapMarker
             key={rc.slug}
             position={rc.coordinate as [number, number]}
-            onClick={() => onSelect(rc.slug)}
+            onClick={() => onSelect && onSelect(rc.slug)}
             active={rc.slug === active}
           />
         ))}
         {/* <ClickOutside onClick={onClick} /> */}
         <MapZoomControl />
       </MapContainer>
-    </>
+    </div>
   );
 }

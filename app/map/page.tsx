@@ -1,7 +1,6 @@
-import data from "@/data/data.json";
-import { MapRC, RC } from "../types";
 import { Metadata } from "next";
 import ClientPage from "./page.client";
+import getMapData from "../utils/getMapData";
 
 export const metadata: Metadata = {
   title: "Kaart - Repair Cafes in Amsterdam",
@@ -9,12 +8,6 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  const mapData: MapRC[] = data.map((rc: RC) => ({
-    slug: rc.slug,
-    coordinate: rc.coordinate,
-    name: rc.name,
-    open: rc.open,
-    address: rc.address,
-  }));
+  const mapData = getMapData();
   return <ClientPage data={mapData} />;
 }

@@ -1,20 +1,13 @@
 "use client";
-import { useMemo } from "react";
-import dynamic from "next/dynamic";
 import MapPanel from "./MapPanel";
 import { MapRC } from "../types";
 import useActive from "./useActive";
+import useMap from "../utils/useMap";
 
 export default function Page({ data }: { data: MapRC[] }) {
   const { value, setValue } = useActive();
   const activeData = data.find((rc) => rc.slug === value);
-  const Map = useMemo(
-    () =>
-      dynamic(() => import("./Map"), {
-        ssr: false,
-      }),
-    [],
-  );
+  const Map = useMap();
 
   return (
     <div className="relative flex h-full w-full flex-col">
