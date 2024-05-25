@@ -36,7 +36,7 @@ export default function getEvents(
 ) {
   const events: Event[] = [];
   const startDate = dayjs().tz();
-  const endDate = startDate.add(1, "year");
+  const endDate = startDate.add(1, "month");
 
   const rcs = repairCafeSlug
     ? data.filter((rc) => rc.slug === repairCafeSlug)
