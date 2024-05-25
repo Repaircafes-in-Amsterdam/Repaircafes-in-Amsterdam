@@ -11,7 +11,7 @@ export const options: Option[] = [
   { value: "West", label: "West" },
   { value: "Zuid", label: "Zuid" },
   { value: "Zuidoost", label: "Zuidoost" },
-  { value: "Weesp", label: "Weesp" },
+  // { value: "Weesp", label: "Weesp" },
   { value: "Diemen", label: "Diemen" },
 ];
 

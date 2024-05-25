@@ -43,7 +43,8 @@ npm run update-map-data
 
 ### Manual map data
 
-For the Repair Cafés that are not on [repair.org](https://www.repaircafe.org/) we can retrieved the coordinates manually in `manual-map-data.json`. When the `update-data` is run and it encounters Repair Cafés it can't find coordinates for it will add an entry to `manual-map-data.json` so it can be filed in.
+For the Repair Cafés that are not on [repair.org](https://www.repaircafe.org/) or for when we want to override their coordinates we can store the coordinates in `manual-map-data.json`. When the `update-data` is run it first checks `manual-map-data.json`, if none are found it checks the Repair Cafés map data and when it still can't find coordinates it will add an entry to `manual-map-data.json` so it can be filed in.  
+A site like https://www.latlong.net/ can be used to find coordinates.
 
 ## Other scripts
 
