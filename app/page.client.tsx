@@ -14,15 +14,15 @@ export default function Page({
 }) {
   const Map = useMap();
   return (
-    <div className="flex h-full w-full">
-      <div className="flex w-full max-w-body flex-col border-blue md:w-auto md:overflow-y-auto md:border-r-2">
+    <div className="flex h-full w-full justify-center md:justify-normal">
+      <div className="flex w-full max-w-body flex-col border-blue md:w-max md:shrink-0 md:overflow-y-auto md:border-r-2">
         <div className="flex flex-wrap gap-x-3 gap-y-2 px-3 pt-3">
           <DistrictSelect />
           <OfficeHoursCheckbox />
         </div>
         <Upcoming events={events} />
       </div>
-      <Map data={mapData} className="hidden h-full w-full md:flex" />
+      <Map data={mapData} className="hidden h-full md:flex" />
     </div>
   );
 }
