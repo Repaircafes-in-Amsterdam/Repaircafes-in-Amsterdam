@@ -7,15 +7,18 @@ import ChevronRight from "@/app/icons/ChevronRight.svg?react";
 import Link from "next/link";
 import DetailsSection from "../cafe/[slug]/DetailsSection";
 
-export default function MapPanel({ data }: { data: MapRC[] }) {
-  const { value, setValue } = useActive();
-  const active = data.find((rc) => rc.slug === value);
-  if (!active) return null;
+export default function MapPanel({
+  active,
+  onClose,
+}: {
+  active: MapRC;
+  onClose: () => void;
+}) {
   return (
     <div className="absolute bottom-0 w-full border-t-2 border-blue bg-white p-3">
       <div className="flex items-start justify-between gap-3">
         <Header className="text-lg">{active.name}</Header>
-        <button onClick={() => setValue("")}>
+        <button onClick={onClose}>
           <X />
         </button>
       </div>

@@ -4,7 +4,6 @@ import { MapContainer } from "react-leaflet/MapContainer";
 import { TileLayer } from "react-leaflet/TileLayer";
 import { MapRC } from "../types";
 import { latLngBounds } from "leaflet";
-import useActive from "./useActive";
 import MapMarker from "./MapMarker";
 import MapZoomControl from "./MapZoomControl";
 
@@ -13,11 +12,18 @@ import MapZoomControl from "./MapZoomControl";
 //   return null;
 // }
 
-export default function Map({ data }: { data: MapRC[] }) {
+export default function Map({
+  data,
+  active,
+  onSelect,
+}: {
+  data: MapRC[];
+  active: string;
+  onSelect: (slug: string) => void;
+}) {
   const bounds = latLngBounds(
     data.map((rc) => rc.coordinate as [number, number]),
   );
-  const { value, setValue } = useActive();
 
   return (
     <>
@@ -37,8 +43,8 @@ export default function Map({ data }: { data: MapRC[] }) {
           <MapMarker
             key={rc.slug}
             position={rc.coordinate as [number, number]}
-            onClick={() => setValue(rc.slug)}
-            active={rc.slug === value}
+            onClick={() => onSelect(rc.slug)}
+            active={rc.slug === active}
           />
         ))}
         {/* <ClickOutside onClick={onClick} /> */}
