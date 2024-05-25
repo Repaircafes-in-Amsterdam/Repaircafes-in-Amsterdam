@@ -222,20 +222,20 @@
     "closedRanges": [],
     "exceptions": [],
     "district": "Zuidoost",
-    "email": "info@groenebuurten.nl",
-    "doRepair": "",
+    "email": "repaircafe.zuidoost@gmail.com",
+    "doRepair": "Electronica, houdelijke apparaten, speelgoed, computers, tablets, telefoons, enz.",
     "dontRepair": "",
     "moreInfo": "",
     "verified": true,
     "links": {
-      "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-zuid-groenpunt-welkom/",
-      "website": "http://groenebuurten.nl/start-repair-cafe-olympus/",
-      "facebook": "https://www.facebook.com/events/357964950550086/357969440549637/"
+      "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-zuidoost/",
+      "website": "https://repaircafe-zuidoost.nl",
+      "facebook": "https://www.facebook.com/RepairCafeAmsterdamZuidoost/"
     },
     "slug": "de-bonte-kraai",
     "coordinate": [
-      52.3431199,
-      4.8581587
+      52.3172364,
+      4.980042399999999
     ]
   },
   {
@@ -438,19 +438,20 @@
     "closedRanges": [],
     "exceptions": [],
     "district": "Zuidoost",
-    "email": "",
-    "doRepair": "",
+    "email": "repaircafe.zuidoost@gmail.com",
+    "doRepair": "Electronica, houdelijke apparaten, speelgoed, computers, tablets, telefoons, enz.",
     "dontRepair": "",
     "moreInfo": "",
     "verified": true,
     "links": {
-      "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-west-de-baarsjes/",
-      "website": "http://www.buurtkamercorantijn.nl/repair_cafe/"
+      "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-zuidoost/",
+      "website": "https://repaircafe-zuidoost.nl",
+      "facebook": "https://www.facebook.com/RepairCafeAmsterdamZuidoost/"
     },
     "slug": "de-ster",
     "coordinate": [
-      52.361683,
-      4.851214
+      52.3172364,
+      4.980042399999999
     ]
   },
   {
