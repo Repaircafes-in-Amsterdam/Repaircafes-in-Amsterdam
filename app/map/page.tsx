@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import ClientPage from "./page.client";
 import getMapData from "../utils/getMapData";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "Kaart - Repair Cafes in Amsterdam",
@@ -9,5 +10,9 @@ export const metadata: Metadata = {
 
 export default function Page() {
   const mapData = getMapData();
-  return <ClientPage data={mapData} />;
+  return (
+    <Suspense>
+      <ClientPage data={mapData} />
+    </Suspense>
+  );
 }
