@@ -1,7 +1,9 @@
 import { DivIconOptions, divIcon, icon } from "leaflet";
 import { Marker } from "react-leaflet/Marker";
 import { Tooltip } from "react-leaflet/Tooltip";
-import useShowNames from "./useShowNames";
+// import useShowNames from "./useShowNames";
+import { useMap, useMapEvent } from "react-leaflet/hooks";
+import { useEffect, useState } from "react";
 
 // Can't add a shadow to a divIcon, so we need to use a regular icon for the shadow
 // We use a empty pixel as the icon, so it's not visible
@@ -45,7 +47,14 @@ export default function MapMarker({
   active: boolean;
   label: string;
 }) {
-  const { value: showName } = useShowNames();
+  // const { value: showName } = useShowNames();
+  const [zoomLevel, setZoomLevel] = useState<number | null>(null);
+  const map = useMap();
+  // // console.log("zoomend event: ", event);
+  useMapEvent("zoom", (event) => setZoomLevel(event.target.getZoom()));
+  useEffect(() => {
+    setZoomLevel(map.getZoom());
+  }, [setZoomLevel, map]);
   return (
     <>
       <Marker icon={markerShadow} position={position} />
@@ -56,7 +65,8 @@ export default function MapMarker({
           click: onClick,
         }}
       >
-        {showName === "true" && (
+        {/* {showName === "true" && ( */}
+        {zoomLevel && zoomLevel > 13 && (
           <Tooltip direction="bottom" permanent interactive>
             {label}
           </Tooltip>
