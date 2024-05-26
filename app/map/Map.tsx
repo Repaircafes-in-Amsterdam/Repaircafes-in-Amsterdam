@@ -40,6 +40,7 @@ export default function Map({ data }: { data: MapRC[] }) {
             position={rc.coordinate as [number, number]}
             onClick={() => setValue(rc.slug)}
             active={rc.slug === value}
+            label={rc.name}
           />
         ))}
         {/* <ClickOutside onClick={onClick} /> */}
