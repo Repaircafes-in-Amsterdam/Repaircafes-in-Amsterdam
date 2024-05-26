@@ -27,7 +27,8 @@ export default function Map({ data }: { data: MapRC[] }) {
         bounds={bounds}
         scrollWheelZoom={true}
         zoomControl={false}
-        zoomSnap={0.5}
+        zoomSnap={0.1}
+        boundsOptions={{ padding: [20, 20] }}
       >
         <TileLayer
           url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
