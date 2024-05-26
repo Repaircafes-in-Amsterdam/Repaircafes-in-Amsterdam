@@ -17,6 +17,7 @@ export default function MapServer() {
     name: rc.name,
     open: rc.open,
     address: rc.address,
+    verified: rc.verified,
   }));
   return <MapClient data={mapData} />;
 }
