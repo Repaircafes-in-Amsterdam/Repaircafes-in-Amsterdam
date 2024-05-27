@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 import "leaflet/dist/leaflet.css";
 import { MapContainer } from "react-leaflet/MapContainer";
 import { TileLayer } from "react-leaflet/TileLayer";
@@ -7,6 +8,7 @@ import { latLngBounds } from "leaflet";
 import useActive from "./useActive";
 import MapMarker from "./MapMarker";
 import MapZoomControl from "./MapZoomControl";
+import MapZoomObserver from "./MapZoomObserver";
 
 // function ClickOutside({ onClick }: { onClick: (slug: string) => void }) {
 //   useMapEvent("click", () => onClick(""));
@@ -18,6 +20,7 @@ export default function Map({ data }: { data: MapRC[] }) {
     data.map((rc) => rc.coordinate as [number, number]),
   );
   const { value, setValue } = useActive();
+  const [zoomLevel, setZoomLevel] = useState<number>(0);
 
   return (
     <>
@@ -41,10 +44,12 @@ export default function Map({ data }: { data: MapRC[] }) {
             onClick={() => setValue(rc.slug)}
             active={rc.slug === value}
             label={rc.name}
+            showLabel={zoomLevel > 13}
           />
         ))}
         {/* <ClickOutside onClick={onClick} /> */}
         <MapZoomControl />
+        <MapZoomObserver onZoom={setZoomLevel} />
       </MapContainer>
     </>
   );
