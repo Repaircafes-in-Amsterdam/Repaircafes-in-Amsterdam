@@ -18,7 +18,7 @@ export default function Page() {
           is gereedschap en materiaal aanwezig om alle mogelijke reparaties uit
           te voeren. Op kleding, meubels, elektrische apparaten, fietsen,
           speelgoed etc. Ook zijn deskundige vrijwilligers aanwezig, met
-          reparatie kennis en – vaardigheden op allerlei terreinen.
+          reparatie-kennis en – vaardigheden op allerlei terreinen.
         </p>
         <p>
           Bezoekers nemen van thuis kapotte spullen mee. In het Repair Café gaan
