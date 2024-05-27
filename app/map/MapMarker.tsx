@@ -1,7 +1,6 @@
 import { DivIconOptions, divIcon, icon } from "leaflet";
 import { Marker } from "react-leaflet/Marker";
 import { Tooltip } from "react-leaflet/Tooltip";
-import useShowNames from "./useShowNames";
 
 // Can't add a shadow to a divIcon, so we need to use a regular icon for the shadow
 // We use a empty pixel as the icon, so it's not visible
@@ -39,13 +38,14 @@ export default function MapMarker({
   onClick,
   active,
   label,
+  showLabel,
 }: {
   position: [number, number];
   onClick: () => void;
   active: boolean;
   label: string;
+  showLabel: boolean;
 }) {
-  const { value: showName } = useShowNames();
   return (
     <>
       <Marker icon={markerShadow} position={position} />
@@ -56,7 +56,7 @@ export default function MapMarker({
           click: onClick,
         }}
       >
-        {showName === "true" && (
+        {showLabel && (
           <Tooltip direction="bottom" permanent interactive>
             {label}
           </Tooltip>

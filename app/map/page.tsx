@@ -4,7 +4,6 @@ import dynamic from "next/dynamic";
 import MapPanel from "./MapPanel";
 import { MapRC, RC } from "../types";
 import { Metadata } from "next";
-import ShowNamesCheckbox from "./ShowNamesCheckbox";
 
 export const metadata: Metadata = {
   title: "Kaart - Repair Cafes in Amsterdam",
@@ -34,11 +33,6 @@ function MapClient({ data }: { data: MapRC[] }) {
 
   return (
     <div className="relative flex h-full w-full flex-col">
-      <Suspense>
-        <div className="flex justify-end p-3">
-          <ShowNamesCheckbox />
-        </div>
-      </Suspense>
       <Map data={data} />
       <Suspense>
         <MapPanel data={data} />
