@@ -29,7 +29,7 @@ export default function MobileMenu({
       )}
       onClick={() => onOpenChange(false)}
     >
-      <MenuItem href="/">Aankomende</MenuItem>
+      <MenuItem href="/">Agenda</MenuItem>
       <MenuItem href="/map">Kaart</MenuItem>
       <MenuItem href="/repaircafes">Over Repair Cafés</MenuItem>
       <MenuItem href="/about">Over ons</MenuItem>

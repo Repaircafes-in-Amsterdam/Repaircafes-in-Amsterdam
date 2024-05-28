@@ -8,7 +8,7 @@ import { useState } from "react";
 import classes from "./classes";
 
 const links = [
-  { href: "/", label: "Aankomende" },
+  { href: "/", label: "Agenda" },
   { href: "/map", label: "Kaart" },
   {
     href: "/repaircafes",
