@@ -46,7 +46,7 @@ export default function Upcoming({ events }: { events: Event[] }) {
           <h2 className="sticky top-0 bg-blue-250 px-3 py-1.5 font-medium">
             {group.dateString}
           </h2>
-          <ul className=" flex flex-col">
+          <ul className="mb-3 flex flex-col">
             {group.events.map(({ rc }) => (
               <li key={rc.slug}>
                 <Link
