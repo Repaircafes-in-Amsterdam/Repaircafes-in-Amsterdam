@@ -66,7 +66,7 @@ function CafeClient({ rc, next }: { rc: RC; next: string }) {
         </div>
       )}
       <div className="flex grow flex-col gap-1 overflow-y-auto px-3 pb-3">
-        <DetailsSection title="Open op">{rc.open}</DetailsSection>
+        <DetailsSection title="Geopend op">{rc.open}</DetailsSection>
         {next && (
           <DetailsSection title="Eerst volgende keer">{next}</DetailsSection>
         )}
@@ -88,7 +88,7 @@ function CafeClient({ rc, next }: { rc: RC; next: string }) {
           <DetailsSection title="Wij repareren">{rc.doRepair}</DetailsSection>
         )}
         {rc.dontRepair && (
-          <DetailsSection title="Wij repareren niet">
+          <DetailsSection title="Wij repareren geen">
             {rc.dontRepair}
           </DetailsSection>
         )}
