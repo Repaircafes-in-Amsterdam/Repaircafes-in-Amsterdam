@@ -43,7 +43,7 @@ export default function Upcoming({ events }: { events: Event[] }) {
     <>
       {groupedEvents.map((group: EventGroup) => (
         <Fragment key={group.dateString}>
-          <h2 className="sticky top-0 bg-white px-3 py-1.5 font-medium">
+          <h2 className="sticky top-0 bg-blue-250 px-3 py-1.5 font-medium">
             {group.dateString}
           </h2>
           <ul className=" flex flex-col">
