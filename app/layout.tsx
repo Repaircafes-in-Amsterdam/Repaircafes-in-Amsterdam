@@ -20,9 +20,12 @@ export const metadata: Metadata = {
     "kalender",
     "calendar",
     "aankomende",
+    "eerstvolgende",
     "upcoming",
     "map",
     "repair",
+    "overzicht",
+    "overview",
   ],
 };
 
