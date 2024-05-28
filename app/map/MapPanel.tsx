@@ -13,7 +13,7 @@ export default function MapPanel({ data }: { data: MapRC[] }) {
   const active = data.find((rc) => rc.slug === value);
   if (!active) return null;
   return (
-    <div className="absolute bottom-0 w-full border-t-2 border-blue bg-white p-3">
+    <div className="absolute bottom-0 flex w-full flex-col gap-2 border-t-2 border-blue bg-white p-3">
       <div className="flex items-start justify-between gap-3">
         <Header className="text-lg">{active.name}</Header>
         <button onClick={() => setValue("")}>
@@ -21,7 +21,7 @@ export default function MapPanel({ data }: { data: MapRC[] }) {
         </button>
       </div>
       {!active.verified && (
-        <div className="-mx-3 my-1.5 flex items-center gap-3 bg-orange p-3 text-blue-600">
+        <div className="-mx-3 flex items-center gap-3 bg-orange p-3 text-blue-600">
           <Warning />
           De volgende informatie is nog niet bevestigd
         </div>

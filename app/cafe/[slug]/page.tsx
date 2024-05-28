@@ -65,7 +65,7 @@ function CafeClient({ rc, next }: { rc: RC; next: string }) {
           De volgende informatie is nog niet bevestigd
         </div>
       )}
-      <div className="flex grow flex-col gap-1 overflow-y-auto px-3 pb-3">
+      <div className="flex grow flex-col gap-2 overflow-y-auto px-3 pb-3">
         <DetailsSection title="Geopend op">{rc.open}</DetailsSection>
         {next && (
           <DetailsSection title="Eerst volgende keer">{next}</DetailsSection>
@@ -105,12 +105,12 @@ function CafeClient({ rc, next }: { rc: RC; next: string }) {
         )}
         {rc.links && (
           <DetailsSection title="Links">
-            <ul>
+            <ul className="flex flex-col gap-1">
               {Object.entries(rc.links).map(([type, href]) => (
                 <li key={type}>
                   <Link
                     href={href as string}
-                    className="flex gap-1"
+                    className="mt-1 flex"
                     rel="noreferrer"
                     target="_blank"
                   >
