@@ -2,12 +2,16 @@ import { Suspense, useMemo } from "react";
 import data from "@/data/data.json";
 import dynamic from "next/dynamic";
 import MapPanel from "./MapPanel";
-import { MapRC, RC } from "../types";
+import { MapRC } from "../types";
 import { Metadata } from "next";
+import { BASE_URL } from "../constants";
 
 export const metadata: Metadata = {
   title: "Kaart - Repair Cafes in Amsterdam",
   description: "Kaart van alle Repair Cafés in Amsterdam",
+  alternates: {
+    canonical: BASE_URL + "map",
+  },
 };
 
 export default function MapServer() {

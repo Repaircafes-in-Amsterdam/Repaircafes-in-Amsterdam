@@ -3,10 +3,14 @@ import Mail from "@/app/icons/Mail.svg?react";
 import data from "@/data/data.json";
 import BasePage from "../components/BasePage";
 import { Metadata } from "next";
+import { BASE_URL } from "../constants";
 
 export const metadata: Metadata = {
   title: "Over ons - Repair Cafes in Amsterdam",
   description: "Over Repair Cafés in Amsterdam",
+  alternates: {
+    canonical: BASE_URL + "about",
+  },
 };
 
 export default function Page() {

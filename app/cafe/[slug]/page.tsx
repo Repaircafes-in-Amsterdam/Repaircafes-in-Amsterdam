@@ -11,6 +11,7 @@ import { RC, Event } from "@/app/types";
 import JsonLd from "../../components/JsonLd";
 import getCafeJsonLd from "./getCafeJsonLd";
 import getEvents from "@/app/getEvents";
+import { BASE_URL } from "@/app/constants";
 
 export function generateMetadata({
   params,
@@ -21,6 +22,9 @@ export function generateMetadata({
   const name = rc?.name || "Onbekend Repair Café";
   return {
     title: `${name} - Repair Cafes in Amsterdam`,
+    alternates: {
+      canonical: BASE_URL + "cafe/" + params.slug,
+    },
   };
 }
 

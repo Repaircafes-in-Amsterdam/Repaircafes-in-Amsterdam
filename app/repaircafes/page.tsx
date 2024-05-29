@@ -1,11 +1,15 @@
 import Header from "../components/Header";
 import BasePage from "../components/BasePage";
 import { Metadata } from "next";
+import { BASE_URL } from "../constants";
 
 export const metadata: Metadata = {
   title: "Over Repair Cafés - Repair Cafes in Amsterdam",
   description:
     "Over Repair Cafés in het algemeen en vaak voorkomende vragen (FAQ)",
+  alternates: {
+    canonical: BASE_URL + "repaircafes",
+  },
 };
 
 export default function Page() {

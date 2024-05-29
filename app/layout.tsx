@@ -5,6 +5,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import TopBar from "./TopBar";
 import classes from "./classes";
+import { BASE_URL } from "./constants";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,6 +28,9 @@ export const metadata: Metadata = {
     "overzicht",
     "overview",
   ],
+  alternates: {
+    canonical: BASE_URL,
+  },
 };
 
 export const viewport: Viewport = {
