@@ -4,7 +4,8 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Over Repair Cafés - Repair Cafes in Amsterdam",
-  description: "Over Repair Cafés",
+  description:
+    "Over Repair Cafés in het algemeen en vaak voorkomende vragen (FAQ)",
 };
 
 export default function Page() {
