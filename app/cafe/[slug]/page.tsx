@@ -50,7 +50,7 @@ export default function CafeServer({ params }: { params: { slug: string } }) {
     );
   }
 
-  const events: Event[] = getEvents(rc.slug);
+  const events: Event[] = getEvents({ slug: rc.slug, months: 3 });
   const next = events[0]?.dateString;
 
   return <CafeClient rc={rc} next={next} />;

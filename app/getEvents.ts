@@ -31,16 +31,18 @@ function createEvent(rc: RC, date: Date): Event {
 
 // Get all events organized until next month
 // If a slug is provided, only get events for that Repair Café
-export default function getEvents(
-  repairCafeSlug: string | undefined = undefined,
-) {
+export default function getEvents({
+  slug,
+  months = 1,
+}: {
+  slug?: string;
+  months?: number;
+} = {}) {
   const events: Event[] = [];
   const startDate = dayjs().tz();
-  const endDate = startDate.add(1, "month");
+  const endDate = startDate.add(months, "month");
 
-  const rcs = repairCafeSlug
-    ? data.filter((rc) => rc.slug === repairCafeSlug)
-    : data;
+  const rcs = slug ? data.filter((rc) => rc.slug === slug) : data;
 
   for (const rc of rcs as RC[]) {
     if (!rc.rrule) continue;
