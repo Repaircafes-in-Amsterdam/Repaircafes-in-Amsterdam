@@ -33,6 +33,7 @@ function MapClient({ data }: { data: MapRC[] }) {
 
   return (
     <div className="relative flex h-full w-full flex-col">
+      <h1 className="sr-only">Kaart</h1>
       <Map data={data} />
       <Suspense>
         <MapPanel data={data} />
