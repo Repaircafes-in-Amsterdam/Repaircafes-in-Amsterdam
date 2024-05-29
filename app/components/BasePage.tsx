@@ -10,12 +10,12 @@ export default function BasePage({
   children: ReactNode;
 }) {
   return (
-    <div className="max-w-body relative flex w-full grow flex-col">
+    <div className="relative flex w-full max-w-body grow flex-col">
       <div className="sticky top-0 z-10 flex gap-3 bg-white p-3">
         <BackButton>
           <ChevronLeft />
         </BackButton>
-        <h2 className="font-bold">{title}</h2>
+        <h1 className="font-bold">{title}</h1>
       </div>
       <div className="grow">{children}</div>
     </div>

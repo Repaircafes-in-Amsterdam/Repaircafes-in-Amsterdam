@@ -14,6 +14,7 @@ export default async function HomeServer() {
 function HomeClient({ events }: { events: Event[] }) {
   return (
     <div className="flex w-full max-w-body flex-col">
+      <h1 className="sr-only">Agenda</h1>
       <div className="flex flex-wrap gap-x-3 gap-y-2 px-3 py-3">
         <DistrictSelect />
         <OfficeHoursCheckbox />

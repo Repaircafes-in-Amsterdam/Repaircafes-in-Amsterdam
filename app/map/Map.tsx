@@ -24,6 +24,7 @@ export default function Map({ data }: { data: MapRC[] }) {
 
   return (
     <>
+      <h1 className="sr-only">Kaart</h1>
       <div id="zoom-control-portal" className="relative"></div>
       <MapContainer
         className="relative z-0 h-full w-full"
