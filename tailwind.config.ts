@@ -23,10 +23,11 @@ const config: Config = {
     colors,
     extend: {
       width: {
-        body: "calc(65ch + 0.75rem)",
+        // based on 65ch, but font loading caused layout shift
+        body: "calc(41rem + 0.75rem)",
       },
       maxWidth: {
-        body: "calc(65ch + 0.75rem)",
+        body: "calc(41rem + 0.75rem)",
       },
       typography: {
         DEFAULT: {
