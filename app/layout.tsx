@@ -7,7 +7,10 @@ import TopBar from "./TopBar";
 import classes from "./classes";
 import { BASE_URL } from "./constants";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
 
 export const metadata: Metadata = {
   title: "Repair Cafes in Amsterdam",
@@ -46,8 +49,12 @@ export default function RootLayout({
   return (
     <html lang="nl">
       <body
+        // Prevent FOUC
         style={{ display: "none" }}
-        className={classes(inter.className, "!flex h-dvh flex-col text-blue")}
+        className={classes(
+          inter.variable,
+          "!flex h-dvh flex-col font-sans text-blue",
+        )}
       >
         <TopBar />
         <main className="flex min-h-px shrink grow flex-col items-center overflow-y-auto">

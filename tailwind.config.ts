@@ -29,6 +29,9 @@ const config: Config = {
       maxWidth: {
         body: "calc(41rem + 0.75rem)",
       },
+      fontFamily: {
+        sans: ["var(--font-inter)"],
+      },
       typography: {
         DEFAULT: {
           css: {
