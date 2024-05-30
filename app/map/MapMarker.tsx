@@ -57,7 +57,12 @@ export default function MapMarker({
         }}
       >
         {showLabel && (
-          <Tooltip direction="bottom" permanent interactive>
+          <Tooltip
+            direction="bottom"
+            permanent
+            interactive
+            className="!rounded-none !px-2 !py-1 !font-sans !text-blue"
+          >
             {label}
           </Tooltip>
         )}
