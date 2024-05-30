@@ -61,7 +61,7 @@ export default function MapMarker({
             direction="bottom"
             permanent
             interactive
-            className="!rounded-none !px-2 !py-1 !font-sans !text-blue"
+            className="!rounded-none !px-2 !py-1 !font-sans font-medium !text-blue"
           >
             {label}
           </Tooltip>
