@@ -8,5 +8,5 @@ export default function Header({
   children: ReactNode;
   className?: string;
 }) {
-  return <h3 className={classes("font-bold", className)}>{children}</h3>;
+  return <h3 className={classes("font-semibold", className)}>{children}</h3>;
 }

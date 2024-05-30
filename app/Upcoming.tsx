@@ -54,7 +54,7 @@ export default function Upcoming({ events }: { events: Event[] }) {
                   className="flex cursor-pointer items-center gap-3 bg-blue px-3 py-1.5 text-white hover:bg-orange hover:text-blue-600"
                 >
                   <div className="flex grow flex-col">
-                    <em className="font-bold not-italic">{rc.name}</em>
+                    <em className="font-semibold not-italic">{rc.name}</em>
                     {rc.startTime} - {rc.endTime} in {rc.district}
                   </div>
                   {!rc.verified && <Warning />}

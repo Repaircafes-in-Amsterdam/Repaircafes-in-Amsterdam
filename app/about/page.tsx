@@ -4,6 +4,7 @@ import data from "@/data/data.json";
 import BasePage from "../components/BasePage";
 import { Metadata } from "next";
 import { BASE_URL } from "../constants";
+import DetailsSection from "../cafe/[slug]/DetailsSection";
 
 export const metadata: Metadata = {
   title: "Over ons - Repair Cafes in Amsterdam",
@@ -86,13 +87,12 @@ export default function Page() {
           </li>
         </ul>
       </div>
-      <div className="px-3 pb-3">
-        <h3 className="font-bold">Contact</h3>
+      <DetailsSection title="Contact" className="px-3 pb-3">
         <Link href="mailto:info@repaircafe.amsterdam" className="flex gap-1">
           <Mail />
           info@repaircafe.amsterdam
         </Link>
-      </div>
+      </DetailsSection>
     </BasePage>
   );
 }
