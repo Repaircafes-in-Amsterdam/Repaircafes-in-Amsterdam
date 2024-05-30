@@ -1,8 +1,8 @@
+import "./globals.css";
+import { Inter } from "next/font/google";
 import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Inter } from "next/font/google";
-import "./globals.css";
 import TopBar from "./TopBar";
 import classes from "./classes";
 import { BASE_URL } from "./constants";
@@ -46,7 +46,8 @@ export default function RootLayout({
   return (
     <html lang="nl">
       <body
-        className={classes(inter.className, "flex h-dvh flex-col text-blue")}
+        style={{ display: "none" }}
+        className={classes(inter.className, "!flex h-dvh flex-col text-blue")}
       >
         <TopBar />
         <main className="flex min-h-px shrink grow flex-col items-center overflow-y-auto">
