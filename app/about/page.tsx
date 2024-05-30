@@ -20,13 +20,13 @@ export default function Page() {
     <BasePage title="Over ons">
       <div className="prose px-3 pb-3">
         <p>
-          Deze website is een initiatief van vrijwilligers bij Repair Cafés in
+          Deze agenda is een initiatief van vrijwilligers bij Repair Cafés in
           Amsterdam. Het doel is Repair Cafés toegankelijker te maken door ze
           makkelijker vindbaar te maken met hun openingstijden.
         </p>
         <p>
-          Tot dusver staan er {numRepairCafes} Repair Cafés op deze website maar
-          we zijn bezig om de informatie van meer bevestigd te krijgen.
+          Tot dusver staan er {numRepairCafes} Repair Cafés op maar we zijn
+          bezig om de informatie van meer bevestigd te krijgen.
         </p>
         <p>
           De website is open source,{" "}
@@ -65,8 +65,8 @@ export default function Page() {
 
           <li>
             Community management. Iemand die communiceert met alle Repair Cafés
-            zodat deze website zo correct en volledig mogelijk is en dat blijft.
-            Op dit moment zijn er nog een handjevol Repair Cafés met wie we nog
+            zodat de agenda zo correct en volledig mogelijk is en dat blijft. Op
+            dit moment zijn er nog een handjevol Repair Cafés met wie we nog
             helemaal geen contact hebben kunnen krijgen.
           </li>
 
