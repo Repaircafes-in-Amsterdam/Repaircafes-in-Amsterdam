@@ -804,7 +804,7 @@
     "rrule": "FREQ=WEEKLY;BYDAY=WE;INTERVAL=1",
     "startTime": "10:00",
     "endTime": "12:00",
-    "closed": "We zijn altijd open, alleen op nationale feestdagen zijn wij gesloten.",
+    "closed": "Nationale feestdagen",
     "closedRanges": [],
     "exceptions": [],
     "district": "West",
