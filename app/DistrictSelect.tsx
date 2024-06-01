@@ -20,7 +20,9 @@ export default function DistrictSelect() {
           aria-label="Stadsdeel"
           id="district"
         >
-          <Select.Value />
+          <Select.Value aria-label={value}>
+            {options.find((item) => item.value === value)!.label}
+          </Select.Value>
           <Select.Icon>
             <ChevronDown />
           </Select.Icon>
