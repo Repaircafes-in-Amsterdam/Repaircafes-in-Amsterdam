@@ -12,6 +12,7 @@ import JsonLd from "../../components/JsonLd";
 import getCafeJsonLd from "./getCafeJsonLd";
 import getEvents from "@/app/getEvents";
 import { BASE_URL } from "@/app/constants";
+import upperFirst from "@/app/utils/upperFirst";
 
 export function generateMetadata({
   params,
@@ -26,15 +27,6 @@ export function generateMetadata({
       canonical: BASE_URL + "cafe/" + params.slug,
     },
   };
-}
-
-function mapLinkTypeToLabel(type: string) {
-  switch (type) {
-    case "orgPage":
-      return "Repaircafe.org pagina";
-    default:
-      return type[0].toUpperCase() + type.slice(1);
-  }
 }
 
 function getMapsLink(adres: string) {
@@ -119,7 +111,12 @@ function CafeClient({ rc, next }: { rc: RC; next: string }) {
                     target="_blank"
                   >
                     <ExternalLink />
-                    {mapLinkTypeToLabel(type)}
+                    <strong className="font-medium">
+                      {type === "orgPage"
+                        ? "Repaircafe.org pagina"
+                        : upperFirst(type)}
+                    </strong>
+                    van {rc.name}
                   </Link>
                 </li>
               ))}
