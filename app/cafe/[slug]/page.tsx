@@ -64,7 +64,7 @@ function CafeClient({ rc, next }: { rc: RC; next: string }) {
   return (
     <BasePage title={rc.name}>
       {!rc.verified && (
-        <div className="mb-1.5 flex items-center gap-3 bg-orange p-3 text-blue-600">
+        <div className="mb-1.5 flex items-center gap-3 bg-orange p-3 font-medium text-white">
           <Warning />
           De volgende informatie is nog niet bevestigd
         </div>
