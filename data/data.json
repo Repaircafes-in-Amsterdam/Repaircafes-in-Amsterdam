@@ -717,6 +717,32 @@
     ]
   },
   {
+    "name": "Rijnstraat - Rivierenbuurt",
+    "address": "Rijnstraat 115",
+    "open": "Elke dinsdagochtend 10:00 - 12:00",
+    "rrule": "FREQ=WEEKLY;BYDAY=TU;INTERVAL=1",
+    "startTime": "10:00",
+    "endTime": "12:00",
+    "closed": "Kerst en Nieuwjaar",
+    "closedRanges": [],
+    "exceptions": [],
+    "district": "Zuid",
+    "email": "programmacoordinator@woor.nl",
+    "doRepair": "Electronica, Kleding, Meubels",
+    "dontRepair": "Spullen die je niet de voordeur binnenkrijgt.",
+    "moreInfo": "Ook voor advies van onderhoud of aanschaf kun je bij ons terecht onder genot van een koffie of thee.",
+    "verified": true,
+    "links": {
+      "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-zuid-rivierenbuurt/",
+      "website": "https://www.huisvandewijkrivierenbuurt.nl"
+    },
+    "slug": "rijnstraat-rivierenbuurt",
+    "coordinate": [
+      52.3441792,
+      4.9063095
+    ]
+  },
+  {
     "name": "Sloten – Oud Osdorp",
     "address": "Nieuwe Akerweg 14",
     "open": "2e woensdagochtend 10:00 - 12:00",
