@@ -239,6 +239,31 @@
     ]
   },
   {
+    "name": "De Coenen",
+    "address": "J.M. Coenenstraat 4 - 6",
+    "open": "1e maandagochtend 10:00 - 12:30",
+    "rrule": "FREQ=MONTHLY;BYSETPOS=1;BYDAY=MO;INTERVAL=1",
+    "startTime": "10:00",
+    "endTime": "12:30",
+    "closed": "Bij feestdagen schuift het een week door",
+    "closedRanges": [],
+    "exceptions": [],
+    "district": "Zuid",
+    "email": "info@decoenen.com",
+    "doRepair": "Electronica, Meubels, klein/mechanisch/elektrisch/huishoudelijk/naaimachines",
+    "dontRepair": "wij onderzoeken in principe alles; dit leidt tot soms een reparatie, soms een advies",
+    "moreInfo": "",
+    "verified": true,
+    "links": {
+      "website": "https://decoenen.com/terugkerende-activiteiten/#repaircafe"
+    },
+    "slug": "de-coenen",
+    "coordinate": [
+      52.3526,
+      4.88142
+    ]
+  },
+  {
     "name": "De Diem",
     "address": "Arent Krijtsstraat 48hs",
     "open": "Elke tweede zaterdag 14:00 - 16:30",
@@ -479,31 +504,6 @@
     "coordinate": [
       52.3431199,
       4.8581587
-    ]
-  },
-  {
-    "name": "Harmoniebuurt",
-    "address": "J.M. Coenenstraat 4 - 6",
-    "open": "1e maandagochtend 10:00 - 12:30",
-    "rrule": "FREQ=MONTHLY;BYSETPOS=1;BYDAY=MO;INTERVAL=1",
-    "startTime": "10:00",
-    "endTime": "12:30",
-    "closed": "Bij feestdagen schuift het een week door",
-    "closedRanges": [],
-    "exceptions": [],
-    "district": "Zuid",
-    "email": "info@decoenen.com",
-    "doRepair": "Electronica, Meubels, klein/mechanisch/elektrisch/huishoudelijk/naaimachines",
-    "dontRepair": "wij onderzoeken in principe alles; dit leidt tot soms een reparatie, soms een advies",
-    "moreInfo": "",
-    "verified": true,
-    "links": {
-      "website": "https://decoenen.com/terugkerende-activiteiten/#repaircafe"
-    },
-    "slug": "harmoniebuurt",
-    "coordinate": [
-      52.3526,
-      4.88142
     ]
   },
   {
