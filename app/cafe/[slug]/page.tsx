@@ -114,7 +114,7 @@ function CafeClient({ rc, next }: { rc: RC; next: string }) {
                 <li key={type}>
                   <Link
                     href={href as string}
-                    className="mt-1 flex"
+                    className="mt-1 flex gap-1"
                     rel="noreferrer"
                     target="_blank"
                   >
