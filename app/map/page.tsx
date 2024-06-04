@@ -1,10 +1,8 @@
-import { Suspense, useMemo } from "react";
-import data from "@/data/data.json";
-import dynamic from "next/dynamic";
-import MapPanel from "./MapPanel";
-import { MapRC } from "../types";
+import { Suspense } from "react";
 import { Metadata } from "next";
 import { BASE_URL } from "../constants";
+import getMapData from "../utils/getMapData";
+import ClientPage from "./page.client";
 
 export const metadata: Metadata = {
   title: "Kaart - Repair Cafes in Amsterdam",
@@ -14,34 +12,11 @@ export const metadata: Metadata = {
   },
 };
 
-export default function MapServer() {
-  const mapData: MapRC[] = data.map((rc) => ({
-    slug: rc.slug,
-    coordinate: rc.coordinate,
-    name: rc.name,
-    open: rc.open,
-    address: rc.address,
-    verified: rc.verified,
-  }));
-  return <MapClient data={mapData} />;
-}
-
-function MapClient({ data }: { data: MapRC[] }) {
-  const Map = useMemo(
-    () =>
-      dynamic(() => import("./Map"), {
-        ssr: false,
-      }),
-    [],
-  );
-
+export default function Page() {
+  const mapData = getMapData();
   return (
-    <div className="relative flex h-full w-full flex-col">
-      <h1 className="sr-only">Kaart</h1>
-      <Map data={data} />
-      <Suspense>
-        <MapPanel data={data} />
-      </Suspense>
-    </div>
+    <Suspense>
+      <ClientPage data={mapData} />
+    </Suspense>
   );
 }
