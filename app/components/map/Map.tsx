@@ -3,12 +3,12 @@ import { useState } from "react";
 import "leaflet/dist/leaflet.css";
 import { MapContainer } from "react-leaflet/MapContainer";
 import { TileLayer } from "react-leaflet/TileLayer";
-import { MapRC } from "../types";
+import { MapRC } from "../../types";
 import { latLngBounds } from "leaflet";
 import MapMarker from "./MapMarker";
 import MapZoomControl from "./MapZoomControl";
 import MapZoomObserver from "./MapZoomObserver";
-import classes from "../classes";
+import classes from "../../utils/classes";
 
 // function ClickOutside({ onClick }: { onClick: (slug: string) => void }) {
 //   useMapEvent("click", () => onClick(""));

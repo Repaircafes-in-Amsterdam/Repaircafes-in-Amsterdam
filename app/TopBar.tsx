@@ -4,7 +4,7 @@ import MenuIcon from "@/app/icons/Menu.svg?react";
 import Link from "next/link";
 import MobileMenu from "./MobileMenu";
 import { useState } from "react";
-import classes from "./classes";
+import classes from "./utils/classes";
 import Menu from "./Menu";
 
 export default function TopBar() {

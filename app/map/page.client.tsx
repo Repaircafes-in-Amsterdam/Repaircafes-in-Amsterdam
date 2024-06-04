@@ -1,7 +1,7 @@
 "use client";
 import MapPanel from "./MapPanel";
 import { MapRC } from "../types";
-import useMap from "./useMap";
+import useMap from "@/app/utils/useMap";
 import useActive from "./useActive";
 
 export default function ClientPage({ data }: { data: MapRC[] }) {
