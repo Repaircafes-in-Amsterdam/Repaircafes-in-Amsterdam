@@ -1,5 +1,5 @@
 import Warning from "@/app/icons/Warning.svg?react";
-import classes from "../classes";
+import classes from "../utils/classes";
 
 export default function Unconfirmed({ className }: { className?: string }) {
   return (

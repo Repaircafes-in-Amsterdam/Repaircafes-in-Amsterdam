@@ -4,7 +4,7 @@ import { useMemo } from "react";
 export default function useMap() {
   const Map = useMemo(
     () =>
-      dynamic(() => import("./Map"), {
+      dynamic(() => import("../components/map/Map"), {
         ssr: false,
       }),
     [],

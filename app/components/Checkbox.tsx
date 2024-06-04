@@ -1,7 +1,7 @@
 "use client";
 import * as RadixCheckbox from "@radix-ui/react-checkbox";
 import Check from "@/app/icons/Check.svg?react";
-import classes from "../classes";
+import classes from "../utils/classes";
 
 type Props = RadixCheckbox.CheckboxProps & {
   label: string;

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ReactNode } from "react";
 import { usePathname } from "next/navigation";
-import classes from "./classes";
+import classes from "./utils/classes";
 
 function MenuLink({
   href,
