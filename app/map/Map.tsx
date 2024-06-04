@@ -5,25 +5,34 @@ import { MapContainer } from "react-leaflet/MapContainer";
 import { TileLayer } from "react-leaflet/TileLayer";
 import { MapRC } from "../types";
 import { latLngBounds } from "leaflet";
-import useActive from "./useActive";
 import MapMarker from "./MapMarker";
 import MapZoomControl from "./MapZoomControl";
 import MapZoomObserver from "./MapZoomObserver";
+import classes from "../classes";
 
 // function ClickOutside({ onClick }: { onClick: (slug: string) => void }) {
 //   useMapEvent("click", () => onClick(""));
 //   return null;
 // }
 
-export default function Map({ data }: { data: MapRC[] }) {
+export default function Map({
+  data,
+  active,
+  onSelect,
+  className,
+}: {
+  data: MapRC[];
+  active?: string;
+  onSelect?: (slug: string) => void;
+  className?: string;
+}) {
   const bounds = latLngBounds(
     data.map((rc) => rc.coordinate as [number, number]),
   );
-  const { value, setValue } = useActive();
   const [zoomLevel, setZoomLevel] = useState<number>(0);
 
   return (
-    <>
+    <div className={classes("relative flex h-full w-full flex-col", className)}>
       <div id="zoom-control-portal" className="relative"></div>
       <MapContainer
         className="relative z-0 h-full w-full"
@@ -41,8 +50,8 @@ export default function Map({ data }: { data: MapRC[] }) {
           <MapMarker
             key={rc.slug}
             position={rc.coordinate as [number, number]}
-            onClick={() => setValue(rc.slug)}
-            active={rc.slug === value}
+            onClick={() => onSelect && onSelect(rc.slug)}
+            active={rc.slug === active}
             label={rc.name}
             showLabel={zoomLevel > 13}
           />
@@ -51,6 +60,6 @@ export default function Map({ data }: { data: MapRC[] }) {
         <MapZoomControl />
         <MapZoomObserver onZoom={setZoomLevel} />
       </MapContainer>
-    </>
+    </div>
   );
 }
