@@ -3,7 +3,6 @@ import Link from "next/link";
 import ChevronRight from "@/app/icons/ChevronRight.svg?react";
 import Mail from "@/app/icons/Mail.svg?react";
 import ExternalLink from "@/app/icons/ExternalLink.svg?react";
-import Warning from "@/app/icons/Warning.svg?react";
 import BasePage from "@/app/components/BasePage";
 import DetailsSection from "./DetailsSection";
 import data from "@/data/data.json";
@@ -13,6 +12,7 @@ import getCafeJsonLd from "./getCafeJsonLd";
 import getEvents from "@/app/getEvents";
 import { BASE_URL } from "@/app/constants";
 import upperFirst from "@/app/utils/upperFirst";
+import Unconfirmed from "@/app/components/Unconfirmed";
 
 export function generateMetadata({
   params,
@@ -55,12 +55,7 @@ export default function CafeServer({ params }: { params: { slug: string } }) {
 function CafeClient({ rc, next }: { rc: RC; next: string }) {
   return (
     <BasePage title={rc.name}>
-      {!rc.verified && (
-        <div className="mb-1.5 flex items-center gap-3 bg-orange p-3 font-medium text-white">
-          <Warning />
-          De volgende informatie is nog niet bevestigd
-        </div>
-      )}
+      {!rc.verified && <Unconfirmed className="mb-1.5" />}
       <div className="flex grow flex-col gap-2 overflow-y-auto px-3 pb-3">
         <DetailsSection title="Geopend op">{rc.open}</DetailsSection>
         {next && (

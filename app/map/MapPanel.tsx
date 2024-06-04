@@ -6,7 +6,7 @@ import Header from "../components/Header";
 import ChevronRight from "@/app/icons/ChevronRight.svg?react";
 import Link from "next/link";
 import DetailsSection from "../cafe/[slug]/DetailsSection";
-import Warning from "@/app/icons/Warning.svg?react";
+import Unconfirmed from "../components/Unconfirmed";
 
 export default function MapPanel({
   active,
@@ -23,12 +23,7 @@ export default function MapPanel({
           <X />
         </button>
       </div>
-      {!active.verified && (
-        <div className="-mx-3 flex items-center gap-3 bg-orange p-3 text-blue-600">
-          <Warning />
-          De volgende informatie is nog niet bevestigd
-        </div>
-      )}
+      {!active.verified && <Unconfirmed className="-mx-3" />}
       <DetailsSection title="Adres">{active.address}</DetailsSection>
       <DetailsSection title="Open op">{active.open}</DetailsSection>
       <Link href={`/cafe/${active.slug}`} className="flex gap-1">
