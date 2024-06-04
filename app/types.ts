@@ -49,6 +49,7 @@ export type MapRC = {
   open: string;
   address: string;
   verified: boolean;
+  district: string;
 };
 
 export type Holiday = {
