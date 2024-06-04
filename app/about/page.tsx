@@ -34,7 +34,7 @@ export default function Page() {
             href="https://github.com/Repaircafes-in-Amsterdam/Repaircafes-in-Amsterdam"
             target="_blank"
           >
-            zie de source code op Github
+            zie de bron code op Github
           </a>
           .
         </p>
