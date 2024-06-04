@@ -123,7 +123,7 @@ function CafeClient({ rc, next }: { rc: RC; next: string }) {
             </ul>
           </DetailsSection>
         )}
-        <Link href="/repaircafes" className="flex gap-1">
+        <Link href="/repaircafes" className="mt-2 flex gap-1">
           <ChevronRight />
           Lees meer over Repair Cafés
         </Link>
