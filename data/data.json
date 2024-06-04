@@ -160,33 +160,6 @@
     ]
   },
   {
-    "name": "Centrum - Oost",
-    "address": "Kleine Wittenburgerstraat 201",
-    "open": "Elke eerste en derde woensdagmiddag 14:00 - 16:30",
-    "rrule": "FREQ=MONTHLY;BYDAY=1WE,3WE",
-    "startTime": "14:00",
-    "endTime": "16:30",
-    "closed": "",
-    "closedRanges": [],
-    "exceptions": [],
-    "district": "Centrum",
-    "email": "",
-    "doRepair": "",
-    "dontRepair": "",
-    "moreInfo": "",
-    "verified": false,
-    "links": {
-      "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-centrum-oost/",
-      "website": "https://repaircafeamsterdamcentrumoost.wordpress.com/over/",
-      "facebook": "https://www.facebook.com/WitteBoei"
-    },
-    "slug": "centrum-oost",
-    "coordinate": [
-      52.37151,
-      4.921735
-    ]
-  },
-  {
     "name": "De Boeg",
     "address": "Hoofdweg 495 a",
     "open": "Elke dinsdagochtend 10:00 - 12:00",
@@ -236,6 +209,34 @@
     "coordinate": [
       52.317242,
       4.98006
+    ]
+  },
+  {
+    "name": "De Boomsspijker",
+    "address": "Recht Boomssloot 52",
+    "open": "Elke eerste maandagmiddag 13:00 - 15:00",
+    "rrule": "FREQ=MONTHLY;BYSETPOS=1;BYDAY=MO;INTERVAL=1",
+    "startTime": "13:00",
+    "endTime": "15:00",
+    "closed": "Zomervakantie & kerstvakantie",
+    "closedRanges": [],
+    "exceptions": [],
+    "district": "Centrum",
+    "email": "dburger@dock.nl",
+    "doRepair": "Electronica, Van platenspelers tot koffiezetapparaten tot stofzuigers.",
+    "dontRepair": "",
+    "moreInfo": "",
+    "verified": true,
+    "links": {
+      "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-centrum-de-boomsspijker/",
+      "website": "https://www.dock.nl/locaties/amsterdam/centrum/huis-van-de-buurt-de-boomsspijker/",
+      "facebook": "https://www.facebook.com/Boomsspijker/",
+      "instagram": "https://www.instagram.com/boomsspijker/"
+    },
+    "slug": "de-boomsspijker",
+    "coordinate": [
+      52.371975,
+      4.903493
     ]
   },
   {
@@ -847,6 +848,33 @@
     "coordinate": [
       52.3835455,
       4.876798300000001
+    ]
+  },
+  {
+    "name": "Witte Boei",
+    "address": "Kleine Wittenburgerstraat 201",
+    "open": "Elke eerste woensdagmiddag 14:00 - 16:30",
+    "rrule": "FREQ=MONTHLY;BYDAY=1WE,3WE",
+    "startTime": "14:00",
+    "endTime": "16:30",
+    "closed": "Zomervakantie & kerstvakantie",
+    "closedRanges": [],
+    "exceptions": [],
+    "district": "Centrum",
+    "email": "dburger@dock.nl",
+    "doRepair": "Electronica, Huishoudelijke apparaten. Van platenspelers tot koffiezetapparaten tot stofzuigers.",
+    "dontRepair": "",
+    "moreInfo": "",
+    "verified": true,
+    "links": {
+      "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-centrum-oost/",
+      "website": "https://www.dock.nl/locaties/amsterdam/centrum/huis-van-de-buurt-de-witte-boei/",
+      "facebook": "https://www.facebook.com/WitteBoei/"
+    },
+    "slug": "witte-boei",
+    "coordinate": [
+      52.37151,
+      4.921735
     ]
   },
   {
