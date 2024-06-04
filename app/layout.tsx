@@ -53,7 +53,7 @@ export default function RootLayout({
         style={{ display: "none" }}
         className={classes(
           inter.variable,
-          "!flex h-dvh flex-col font-sans text-blue",
+          "!flex h-dvh flex-col font-sans text-blue selection:bg-orange selection:text-white",
         )}
       >
         <TopBar />
