@@ -52,7 +52,12 @@ export default function Page() {
         </p>
         <p>
           Wil je een Repair Café toevoegen of is er informatie incorrect of
-          onvolledig, dan stellen we een e-mail zeer op prijs.
+          onvolledig, dan stellen we een e-mail zeer op prijs. Toevoegen het
+          liefst via{" "}
+          <a href="https://forms.gle/AQJHMQ7xQsFJ77b47" target="_blank">
+            deze vragenlijst
+          </a>
+          .
         </p>
         <p>We zijn nog op zoek naar hulp bij:</p>
         <ul>
