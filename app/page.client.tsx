@@ -33,7 +33,7 @@ export default function ClientPage({
       </div>
       <Map
         data={filteredMapData}
-        className="hidden h-full md:flex"
+        className="hidden md:flex"
         onSelect={(slug) => router.push(`/cafe/${slug}`)}
       />
     </div>
