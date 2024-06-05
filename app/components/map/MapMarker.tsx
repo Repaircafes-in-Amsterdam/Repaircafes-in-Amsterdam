@@ -5,9 +5,9 @@ import { Tooltip } from "react-leaflet/Tooltip";
 // Can't add a shadow to a divIcon, so we need to use a regular icon for the shadow
 // We use a empty pixel as the icon, so it's not visible
 const markerShadow = icon({
-  iconUrl: "pixel.png",
-  shadowUrl: "rc-marker-shadow.png",
-  shadowRetinaUrl: "rc-marker-shadow-2x.png",
+  iconUrl: "/pixel.png",
+  shadowUrl: "/rc-marker-shadow.png",
+  shadowRetinaUrl: "/rc-marker-shadow-2x.png",
   shadowSize: [45, 33],
   shadowAnchor: [15, 29],
 });
