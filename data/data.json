@@ -162,6 +162,32 @@
     ]
   },
   {
+    "name": "Buitenveldert",
+    "address": "A.J. Ernststraat 112",
+    "open": "2e zaterdagmiddag 13:00 - 16:00",
+    "rrule": "FREQ=MONTHLY;BYSETPOS=2;BYDAY=SA;INTERVAL=1",
+    "startTime": "13:00",
+    "endTime": "16:00",
+    "closed": "",
+    "closedRanges": [],
+    "exceptions": [],
+    "district": "Zuid",
+    "email": "repaircafebuitenveldert@gmail.com",
+    "doRepair": "Electronica, Kleding, overige kleine reparaties aan producten in en om het huis",
+    "dontRepair": "Telefoons/computers/tv's en dergelijke complexe apparaten",
+    "moreInfo": "",
+    "verified": true,
+    "links": {
+      "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-zuid-buitenveldert/",
+      "website": "https://hvdwbuitenveldert.nl/agenda/"
+    },
+    "slug": "buitenveldert",
+    "coordinate": [
+      52.332798,
+      4.877867
+    ]
+  },
+  {
     "name": "De Boeg",
     "address": "Hoofdweg 495 a",
     "open": "Elke dinsdagochtend 10:00 - 12:00",
