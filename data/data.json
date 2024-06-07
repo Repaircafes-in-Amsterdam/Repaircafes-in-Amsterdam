@@ -3,9 +3,15 @@
     "name": "AC REEL Tussen de Bogen",
     "address": "Tussen de Bogen 16",
     "open": "Elke dinsdagmiddag 13:00 - 15:00",
-    "rrule": "FREQ=WEEKLY;BYDAY=TU;INTERVAL=1",
-    "startTime": "13:00",
-    "endTime": "15:00",
+    "rrule": [
+      "FREQ=WEEKLY;BYDAY=TU;INTERVAL=1"
+    ],
+    "startTime": [
+      "13:00"
+    ],
+    "endTime": [
+      "15:00"
+    ],
     "closed": "Schoolvakanties",
     "closedRanges": [],
     "exceptions": [],
@@ -25,9 +31,15 @@
     "name": "Afvalpaleis (elektra)",
     "address": "Dapperstraat 76",
     "open": "Elke woensdagmiddag 12:00 - 17:00",
-    "rrule": "FREQ=WEEKLY;BYDAY=WE;INTERVAL=1",
-    "startTime": "12:00",
-    "endTime": "17:00",
+    "rrule": [
+      "FREQ=WEEKLY;BYDAY=WE;INTERVAL=1"
+    ],
+    "startTime": [
+      "12:00"
+    ],
+    "endTime": [
+      "17:00"
+    ],
     "closed": "4 weken in het midden van de zomervakantie en de laatste week van het jaar.",
     "closedRanges": [
       "12-24:12-31"
@@ -55,9 +67,15 @@
     "name": "Afvalpaleis (textiel)",
     "address": "Dapperstraat 76",
     "open": "Elke donderdagmiddag 12:00 - 17:00",
-    "rrule": "FREQ=WEEKLY;BYDAY=TH;INTERVAL=1",
-    "startTime": "12:00",
-    "endTime": "17:00",
+    "rrule": [
+      "FREQ=WEEKLY;BYDAY=TH;INTERVAL=1"
+    ],
+    "startTime": [
+      "12:00"
+    ],
+    "endTime": [
+      "17:00"
+    ],
     "closed": "4 weken in het midden van de zomervakantie en de laatste week van het jaar.",
     "closedRanges": [
       "12-24:12-31"
@@ -85,9 +103,15 @@
     "name": "AMSTELhuis",
     "address": "Ceintuurbaan 480",
     "open": "2e en 4e vrijdagmiddag 13:00 - 16:00",
-    "rrule": "FREQ=MONTHLY;BYDAY=2FR,4FR",
-    "startTime": "13:00",
-    "endTime": "16:00",
+    "rrule": [
+      "FREQ=MONTHLY;BYDAY=2FR,4FR"
+    ],
+    "startTime": [
+      "13:00"
+    ],
+    "endTime": [
+      "16:00"
+    ],
     "closed": "",
     "closedRanges": [],
     "exceptions": [],
@@ -110,9 +134,15 @@
     "name": "Anarchist Repair Cafe",
     "address": "Eerste Schinkelstraat 14-16",
     "open": "Elke eerste maandagavond 19:00 - 22:00",
-    "rrule": "FREQ=MONTHLY;BYSETPOS=1;BYDAY=MO;INTERVAL=1",
-    "startTime": "19:00",
-    "endTime": "22:00",
+    "rrule": [
+      "FREQ=MONTHLY;BYSETPOS=1;BYDAY=MO;INTERVAL=1"
+    ],
+    "startTime": [
+      "19:00"
+    ],
+    "endTime": [
+      "22:00"
+    ],
     "closed": "Juli en Augustus",
     "closedRanges": [
       "2024-07:2024-08"
@@ -140,9 +170,15 @@
     "name": "Betondorp",
     "address": "Karnstraat 2",
     "open": "2e en 4e woensdagmiddag 14:00 - 16:30",
-    "rrule": "FREQ=MONTHLY;BYDAY=2WE,4WE",
-    "startTime": "14:00",
-    "endTime": "16:30",
+    "rrule": [
+      "FREQ=MONTHLY;BYDAY=2WE,4WE"
+    ],
+    "startTime": [
+      "14:00"
+    ],
+    "endTime": [
+      "16:30"
+    ],
     "closed": "",
     "closedRanges": [],
     "exceptions": [],
@@ -165,9 +201,15 @@
     "name": "Buitenveldert",
     "address": "A.J. Ernststraat 112",
     "open": "2e zaterdagmiddag 13:00 - 16:00",
-    "rrule": "FREQ=MONTHLY;BYSETPOS=2;BYDAY=SA;INTERVAL=1",
-    "startTime": "13:00",
-    "endTime": "16:00",
+    "rrule": [
+      "FREQ=MONTHLY;BYSETPOS=2;BYDAY=SA;INTERVAL=1"
+    ],
+    "startTime": [
+      "13:00"
+    ],
+    "endTime": [
+      "16:00"
+    ],
     "closed": "",
     "closedRanges": [],
     "exceptions": [],
@@ -191,9 +233,15 @@
     "name": "De Boeg",
     "address": "Hoofdweg 495 a",
     "open": "Elke dinsdagochtend 10:00 - 12:00",
-    "rrule": "FREQ=WEEKLY;BYDAY=TU;INTERVAL=1",
-    "startTime": "10:00",
-    "endTime": "12:00",
+    "rrule": [
+      "FREQ=WEEKLY;BYDAY=TU;INTERVAL=1"
+    ],
+    "startTime": [
+      "10:00"
+    ],
+    "endTime": [
+      "12:00"
+    ],
     "closed": "Zomervakantie, kerst oud- en nieuwjaar.",
     "closedRanges": [],
     "exceptions": [],
@@ -216,9 +264,15 @@
     "name": "De Bonte Kraai",
     "address": "Kraaiennest 68",
     "open": "Laatste vrijdagmiddag 15.00 - 18.00",
-    "rrule": "FREQ=MONTHLY;BYSETPOS=-1;BYDAY=FR;INTERVAL=1",
-    "startTime": "15:00",
-    "endTime": "18:00",
+    "rrule": [
+      "FREQ=MONTHLY;BYSETPOS=-1;BYDAY=FR;INTERVAL=1"
+    ],
+    "startTime": [
+      "15:00"
+    ],
+    "endTime": [
+      "18:00"
+    ],
     "closed": "",
     "closedRanges": [],
     "exceptions": [],
@@ -243,9 +297,15 @@
     "name": "De Boomsspijker",
     "address": "Recht Boomssloot 52",
     "open": "Elke eerste maandagmiddag 13:00 - 15:00",
-    "rrule": "FREQ=MONTHLY;BYSETPOS=1;BYDAY=MO;INTERVAL=1",
-    "startTime": "13:00",
-    "endTime": "15:00",
+    "rrule": [
+      "FREQ=MONTHLY;BYSETPOS=1;BYDAY=MO;INTERVAL=1"
+    ],
+    "startTime": [
+      "13:00"
+    ],
+    "endTime": [
+      "15:00"
+    ],
     "closed": "Zomervakantie & kerstvakantie",
     "closedRanges": [],
     "exceptions": [],
@@ -271,9 +331,15 @@
     "name": "De Coenen",
     "address": "J.M. Coenenstraat 4 - 6",
     "open": "1e maandagochtend 10:00 - 12:30",
-    "rrule": "FREQ=MONTHLY;BYSETPOS=1;BYDAY=MO;INTERVAL=1",
-    "startTime": "10:00",
-    "endTime": "12:30",
+    "rrule": [
+      "FREQ=MONTHLY;BYSETPOS=1;BYDAY=MO;INTERVAL=1"
+    ],
+    "startTime": [
+      "10:00"
+    ],
+    "endTime": [
+      "12:30"
+    ],
     "closed": "Bij feestdagen schuift het een week door",
     "closedRanges": [],
     "exceptions": [],
@@ -296,9 +362,15 @@
     "name": "De Diem",
     "address": "Arent Krijtsstraat 48hs",
     "open": "Elke tweede zaterdag 14:00 - 16:30",
-    "rrule": "FREQ=MONTHLY;BYSETPOS=2;BYDAY=SA;INTERVAL=1",
-    "startTime": "14:00",
-    "endTime": "16:30",
+    "rrule": [
+      "FREQ=MONTHLY;BYSETPOS=2;BYDAY=SA;INTERVAL=1"
+    ],
+    "startTime": [
+      "14:00"
+    ],
+    "endTime": [
+      "16:30"
+    ],
     "closed": "Juli en augustus",
     "closedRanges": [
       "07:08"
@@ -324,9 +396,15 @@
     "name": "De Groene Hub",
     "address": "Holendrechtplein 44",
     "open": "1e vrijdagmiddag 15.00 - 18.00",
-    "rrule": "FREQ=MONTHLY;BYSETPOS=1;BYDAY=FR;INTERVAL=1",
-    "startTime": "15:00",
-    "endTime": "18:00",
+    "rrule": [
+      "FREQ=MONTHLY;BYSETPOS=1;BYDAY=FR;INTERVAL=1"
+    ],
+    "startTime": [
+      "15:00"
+    ],
+    "endTime": [
+      "18:00"
+    ],
     "closed": "",
     "closedRanges": [],
     "exceptions": [],
@@ -351,9 +429,15 @@
     "name": "De Havelaar",
     "address": "Douwes Dekkerstraat 2",
     "open": "Elke derde vrijdagmiddag 13:00 - 16:00",
-    "rrule": "FREQ=MONTHLY;BYSETPOS=3;BYDAY=FR;INTERVAL=1",
-    "startTime": "13:00",
-    "endTime": "16:00",
+    "rrule": [
+      "FREQ=MONTHLY;BYSETPOS=3;BYDAY=FR;INTERVAL=1"
+    ],
+    "startTime": [
+      "13:00"
+    ],
+    "endTime": [
+      "16:00"
+    ],
     "closed": "Meestal in Augustus",
     "closedRanges": [
       "08"
@@ -380,9 +464,15 @@
     "name": "De Meeuw",
     "address": "Motorwal 300",
     "open": "Elke donderagochtend 10:00 - 12:00",
-    "rrule": "FREQ=WEEKLY;BYDAY=TH;INTERVAL=1",
-    "startTime": "10:00",
-    "endTime": "12:00",
+    "rrule": [
+      "FREQ=WEEKLY;BYDAY=TH;INTERVAL=1"
+    ],
+    "startTime": [
+      "10:00"
+    ],
+    "endTime": [
+      "12:00"
+    ],
     "closed": "Tussen kerst en nieuwjaar en in de zomervakanties.",
     "closedRanges": [],
     "exceptions": [],
@@ -406,9 +496,15 @@
     "name": "De Meevaart",
     "address": "Balistraat 48 A",
     "open": "1e, 2e, 3e woensdagmiddag en laatste zaterdagmiddag 14:00 - 16:30",
-    "rrule": "FREQ=MONTHLY;BYDAY=1WE,2WE,3WE,-1SA",
-    "startTime": "14:00",
-    "endTime": "16:30",
+    "rrule": [
+      "FREQ=MONTHLY;BYDAY=1WE,2WE,3WE,-1SA"
+    ],
+    "startTime": [
+      "14:00"
+    ],
+    "endTime": [
+      "16:30"
+    ],
     "closed": "",
     "closedRanges": [],
     "exceptions": [],
@@ -432,9 +528,15 @@
     "name": "De Pijp",
     "address": "Lutmastraat 61A",
     "open": "Laatste zondag 12:00 - 16:00",
-    "rrule": "FREQ=MONTHLY;BYSETPOS=-1;BYDAY=SU;INTERVAL=1",
-    "startTime": "12:00",
-    "endTime": "16:00",
+    "rrule": [
+      "FREQ=MONTHLY;BYSETPOS=-1;BYDAY=SU;INTERVAL=1"
+    ],
+    "startTime": [
+      "12:00"
+    ],
+    "endTime": [
+      "16:00"
+    ],
     "closed": "",
     "closedRanges": [],
     "exceptions": [],
@@ -459,9 +561,15 @@
     "name": "De steek",
     "address": "Van Der Hoopstraat 70HS",
     "open": "Elke donderdag 16:00 - 20:00 (in 2024)",
-    "rrule": "FREQ=WEEKLY;INTERVAL=1;BYDAY=TH",
-    "startTime": "16:00",
-    "endTime": "20:00",
+    "rrule": [
+      "FREQ=WEEKLY;INTERVAL=1;BYDAY=TH"
+    ],
+    "startTime": [
+      "16:00"
+    ],
+    "endTime": [
+      "20:00"
+    ],
     "closed": "Sinterklaas en kerst",
     "closedRanges": [],
     "exceptions": [],
@@ -485,9 +593,15 @@
     "name": "De Ster",
     "address": "Woudrichemstraat 8",
     "open": "2e vrijdagmiddag 15:00 - 18:00",
-    "rrule": "FREQ=MONTHLY;BYSETPOS=2;BYDAY=FR;INTERVAL=1",
-    "startTime": "15:00",
-    "endTime": "18:00",
+    "rrule": [
+      "FREQ=MONTHLY;BYSETPOS=2;BYDAY=FR;INTERVAL=1"
+    ],
+    "startTime": [
+      "15:00"
+    ],
+    "endTime": [
+      "18:00"
+    ],
     "closed": "",
     "closedRanges": [],
     "exceptions": [],
@@ -509,12 +623,53 @@
     ]
   },
   {
+    "name": "Gliphoeve kinderboerderij",
+    "address": "Geldershoofd 79",
+    "open": "Elke dinsdag 10:30 - 12:00 en zaterdag 14:00 - 16:00",
+    "rrule": [
+      "FREQ=WEEKLY;BYDAY=TU;INTERVAL=1",
+      "FREQ=WEEKLY;BYDAY=SA;INTERVAL=1"
+    ],
+    "startTime": [
+      "10:30",
+      "14:00"
+    ],
+    "endTime": [
+      "12:00",
+      "16:00"
+    ],
+    "closed": "",
+    "closedRanges": [],
+    "exceptions": [],
+    "district": "Zuidoost",
+    "email": "kinderboerderij.gliphoeve@gmail.com",
+    "doRepair": "Electronica, Fietsen, Meubels",
+    "dontRepair": "",
+    "moreInfo": "",
+    "verified": true,
+    "links": {
+      "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-zuidoost-gliphoeve/",
+      "website": "https://www.kinderboerderijgliphoeve.nl/over-ons-2"
+    },
+    "slug": "gliphoeve-kinderboerderij",
+    "coordinate": [
+      52.3230358,
+      4.9706961
+    ]
+  },
+  {
     "name": "Groenpunt Welkom",
     "address": "Stadionplein 65",
     "open": "1e woensdagavond 19.00 - 21.00",
-    "rrule": "FREQ=MONTHLY;BYSETPOS=1;BYDAY=WE;INTERVAL=1",
-    "startTime": "19:00",
-    "endTime": "21:00",
+    "rrule": [
+      "FREQ=MONTHLY;BYSETPOS=1;BYDAY=WE;INTERVAL=1"
+    ],
+    "startTime": [
+      "19:00"
+    ],
+    "endTime": [
+      "21:00"
+    ],
     "closed": "Zomervakantie",
     "closedRanges": [],
     "exceptions": [],
@@ -539,9 +694,15 @@
     "name": "Het Claverhuis",
     "address": "Elandsgracht 70",
     "open": "Elke donderdagmiddag 14:00 - 16:00",
-    "rrule": "FREQ=WEEKLY;BYDAY=TH;INTERVAL=1",
-    "startTime": "14:00",
-    "endTime": "16:00",
+    "rrule": [
+      "FREQ=WEEKLY;BYDAY=TH;INTERVAL=1"
+    ],
+    "startTime": [
+      "14:00"
+    ],
+    "endTime": [
+      "16:00"
+    ],
     "closed": "",
     "closedRanges": [],
     "exceptions": [],
@@ -564,9 +725,15 @@
     "name": "IJburg",
     "address": "Erich Salomonstraat 135 - 151",
     "open": "Elke woensdagmiddag 17:00 - 19:00",
-    "rrule": "FREQ=WEEKLY;BYDAY=WE;INTERVAL=1",
-    "startTime": "17:00",
-    "endTime": "19:00",
+    "rrule": [
+      "FREQ=WEEKLY;BYDAY=WE;INTERVAL=1"
+    ],
+    "startTime": [
+      "17:00"
+    ],
+    "endTime": [
+      "19:00"
+    ],
     "closed": "",
     "closedRanges": [],
     "exceptions": [],
@@ -591,9 +758,15 @@
     "name": "Jeltje",
     "address": "Eerste Helmersstraat 106-N",
     "open": "1e vrijdagavond 19:00 - 22:00",
-    "rrule": "FREQ=MONTHLY;BYSETPOS=1;BYDAY=FR;INTERVAL=1",
-    "startTime": "19:00",
-    "endTime": "22:00",
+    "rrule": [
+      "FREQ=MONTHLY;BYSETPOS=1;BYDAY=FR;INTERVAL=1"
+    ],
+    "startTime": [
+      "19:00"
+    ],
+    "endTime": [
+      "22:00"
+    ],
     "closed": "",
     "closedRanges": [
       "2024-09"
@@ -621,9 +794,15 @@
     "name": "Osdorp",
     "address": "Tussen Meer 68",
     "open": "Elke donderdagochtend 10:00 - 12:00",
-    "rrule": "FREQ=WEEKLY;BYDAY=TH;INTERVAL=1",
-    "startTime": "10:00",
-    "endTime": "12:00",
+    "rrule": [
+      "FREQ=WEEKLY;BYDAY=TH;INTERVAL=1"
+    ],
+    "startTime": [
+      "10:00"
+    ],
+    "endTime": [
+      "12:00"
+    ],
     "closed": "In de zomervakantie en met kerst",
     "closedRanges": [],
     "exceptions": [],
@@ -647,9 +826,15 @@
     "name": "Oud Noord",
     "address": "Kamperfoelieweg 207",
     "open": "1e woensdagavond 18:00 - 20:00",
-    "rrule": "FREQ=MONTHLY;BYSETPOS=1;BYDAY=WE;INTERVAL=1",
-    "startTime": "18:00",
-    "endTime": "20:00",
+    "rrule": [
+      "FREQ=MONTHLY;BYSETPOS=1;BYDAY=WE;INTERVAL=1"
+    ],
+    "startTime": [
+      "18:00"
+    ],
+    "endTime": [
+      "20:00"
+    ],
     "closed": "",
     "closedRanges": [],
     "exceptions": [],
@@ -673,9 +858,15 @@
     "name": "Repair Events Tolhuistuin",
     "address": "IJpromenade 2",
     "open": "Elke tweede zondagmiddag 14:00 - 17:00",
-    "rrule": "FREQ=MONTHLY;BYSETPOS=2;BYDAY=SU;INTERVAL=1",
-    "startTime": "14:00",
-    "endTime": "17:00",
+    "rrule": [
+      "FREQ=MONTHLY;BYSETPOS=2;BYDAY=SU;INTERVAL=1"
+    ],
+    "startTime": [
+      "14:00"
+    ],
+    "endTime": [
+      "17:00"
+    ],
     "closed": "",
     "closedRanges": [],
     "exceptions": [],
@@ -699,9 +890,15 @@
     "name": "Repairclub",
     "address": "Columbusplein 253",
     "open": "Elke woensdag avond 20:00-22:00",
-    "rrule": "FREQ=WEEKLY;BYDAY=WE;INTERVAL=1",
-    "startTime": "20:00",
-    "endTime": "22:00",
+    "rrule": [
+      "FREQ=WEEKLY;BYDAY=WE;INTERVAL=1"
+    ],
+    "startTime": [
+      "20:00"
+    ],
+    "endTime": [
+      "22:00"
+    ],
     "closed": "",
     "closedRanges": [],
     "exceptions": [],
@@ -724,9 +921,15 @@
     "name": "Reparatietafel de Eester",
     "address": "C van Eesterenlaan 266",
     "open": "Elke derde woensdagochtend van 10:00 - 13:00",
-    "rrule": "FREQ=MONTHLY;BYDAY=3WE;INTERVAL=1",
-    "startTime": "10:00",
-    "endTime": "13:00",
+    "rrule": [
+      "FREQ=MONTHLY;BYDAY=3WE;INTERVAL=1"
+    ],
+    "startTime": [
+      "10:00"
+    ],
+    "endTime": [
+      "13:00"
+    ],
     "closed": "",
     "closedRanges": [],
     "exceptions": [],
@@ -749,9 +952,15 @@
     "name": "Rijnstraat - Rivierenbuurt",
     "address": "Rijnstraat 115",
     "open": "Elke dinsdagochtend 10:00 - 12:00",
-    "rrule": "FREQ=WEEKLY;BYDAY=TU;INTERVAL=1",
-    "startTime": "10:00",
-    "endTime": "12:00",
+    "rrule": [
+      "FREQ=WEEKLY;BYDAY=TU;INTERVAL=1"
+    ],
+    "startTime": [
+      "10:00"
+    ],
+    "endTime": [
+      "12:00"
+    ],
     "closed": "Kerst en Nieuwjaar",
     "closedRanges": [],
     "exceptions": [],
@@ -774,9 +983,15 @@
     "name": "Sloten – Oud Osdorp",
     "address": "Nieuwe Akerweg 14",
     "open": "2e woensdagochtend 10:00 - 12:00",
-    "rrule": "FREQ=MONTHLY;BYSETPOS=2;BYDAY=WE;INTERVAL=1",
-    "startTime": "10:00",
-    "endTime": "12:00",
+    "rrule": [
+      "FREQ=MONTHLY;BYSETPOS=2;BYDAY=WE;INTERVAL=1"
+    ],
+    "startTime": [
+      "10:00"
+    ],
+    "endTime": [
+      "12:00"
+    ],
     "closed": "Feestdagen",
     "closedRanges": [],
     "exceptions": [],
@@ -799,9 +1014,15 @@
     "name": "Slotervaart De Kas",
     "address": "Jan Tooropstraat 8",
     "open": "Elke vrijdag middag 14:00 - 16:00",
-    "rrule": "FREQ=WEEKLY;BYDAY=FR;INTERVAL=1",
-    "startTime": "14:00",
-    "endTime": "16:00",
+    "rrule": [
+      "FREQ=WEEKLY;BYDAY=FR;INTERVAL=1"
+    ],
+    "startTime": [
+      "14:00"
+    ],
+    "endTime": [
+      "16:00"
+    ],
     "closed": "Augustus",
     "closedRanges": [
       "08"
@@ -828,9 +1049,15 @@
     "name": "t Kruidvat",
     "address": "Ouderkerkerlaan 30",
     "open": "1e zaterdagmiddag 14:00 - 16:30",
-    "rrule": "FREQ=MONTHLY;BYSETPOS=1;BYDAY=SA;INTERVAL=1",
-    "startTime": "14:00",
-    "endTime": "16:30",
+    "rrule": [
+      "FREQ=MONTHLY;BYSETPOS=1;BYDAY=SA;INTERVAL=1"
+    ],
+    "startTime": [
+      "14:00"
+    ],
+    "endTime": [
+      "16:30"
+    ],
     "closed": "Juli en augustus",
     "closedRanges": [
       "07:08"
@@ -855,9 +1082,15 @@
     "name": "Westerpark",
     "address": "Van Limburg Stirumstraat 119",
     "open": "Elke woensdagochtend 10:00 tot 12:00",
-    "rrule": "FREQ=WEEKLY;BYDAY=WE;INTERVAL=1",
-    "startTime": "10:00",
-    "endTime": "12:00",
+    "rrule": [
+      "FREQ=WEEKLY;BYDAY=WE;INTERVAL=1"
+    ],
+    "startTime": [
+      "10:00"
+    ],
+    "endTime": [
+      "12:00"
+    ],
     "closed": "Nationale feestdagen",
     "closedRanges": [],
     "exceptions": [],
@@ -882,9 +1115,15 @@
     "name": "Witte Boei",
     "address": "Kleine Wittenburgerstraat 201",
     "open": "Elke eerste woensdagmiddag 14:00 - 16:30",
-    "rrule": "FREQ=MONTHLY;BYDAY=1WE,3WE",
-    "startTime": "14:00",
-    "endTime": "16:30",
+    "rrule": [
+      "FREQ=MONTHLY;BYDAY=1WE,3WE"
+    ],
+    "startTime": [
+      "14:00"
+    ],
+    "endTime": [
+      "16:30"
+    ],
     "closed": "Zomervakantie & kerstvakantie",
     "closedRanges": [],
     "exceptions": [],
@@ -909,9 +1148,15 @@
     "name": "Zonneplein",
     "address": "Zonneplein 11",
     "open": "1e zaterdagmiddag 12:30 - 15:00",
-    "rrule": "FREQ=MONTHLY;BYSETPOS=1;BYDAY=SA;INTERVAL=1",
-    "startTime": "14:00",
-    "endTime": "16:00",
+    "rrule": [
+      "FREQ=MONTHLY;BYSETPOS=1;BYDAY=SA;INTERVAL=1"
+    ],
+    "startTime": [
+      "14:00"
+    ],
+    "endTime": [
+      "16:00"
+    ],
     "closed": "",
     "closedRanges": [
       "2024-07-06"

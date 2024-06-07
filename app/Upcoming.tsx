@@ -10,7 +10,7 @@ import useDistrict from "./useDistrict";
 import useOfficeHours from "./useOfficeHours";
 
 function isDuringOfficeHours(event: Event) {
-  const endTime = event.rc.endTime;
+  const endTime = event.endTime;
   const [endHours] = endTime.split(":").map(Number);
   // Might as well be 19?
   const duringDaytime = endHours < 18;
@@ -47,7 +47,7 @@ export default function Upcoming({ events }: { events: Event[] }) {
             {group.dateString}
           </h2>
           <ul className="mb-3 flex flex-col">
-            {group.events.map(({ rc }) => (
+            {group.events.map(({ startTime, endTime, rc }) => (
               <li key={rc.slug}>
                 <Link
                   href={`cafe/${rc.slug}`}
@@ -55,7 +55,7 @@ export default function Upcoming({ events }: { events: Event[] }) {
                 >
                   <div className="flex grow flex-col">
                     <em className="font-semibold not-italic">{rc.name}</em>
-                    {rc.startTime} - {rc.endTime} in {rc.district}
+                    {startTime} - {endTime} in {rc.district}
                   </div>
                   {!rc.verified && <Warning />}
                   <ChevronRight />
