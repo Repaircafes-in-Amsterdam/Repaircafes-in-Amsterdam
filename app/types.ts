@@ -1,3 +1,7 @@
+export type Links = {
+  [key: string]: string;
+};
+
 export type RC = {
   name: string;
   slug: string;
@@ -15,10 +19,8 @@ export type RC = {
   moreInfo: string;
   coordinate: number[];
   email: string;
-  links?: {
-    orgPage?: string;
-    [key: string]: string | undefined;
-  };
+  links?: Links;
+  socials?: Links;
   verified: boolean;
 };
 

@@ -13,7 +13,10 @@ const MAP_DATA_FILE_NAME = "map-data.json";
 const MANUAL_MAP_DATA_FILE_NAME = "manual-map-data.json";
 const SPREADSHEET = "1LYn_GX0iwo5IaJCk8wada3FjbwI_gpUprs9prWp0pIQ";
 const SHEET_ID = "1724498670";
-const LINK_COLUMNS = ["orgPage", "website", "facebook", "instagram"];
+const COLUMNS_TO_NEST = {
+  links: ["website", "orgPage"],
+  socials: ["instagram", "facebook"],
+};
 const MULTI_LINE_COLUMNS = [
   "closedRanges",
   "exceptions",
@@ -49,21 +52,31 @@ const sheet = doc.sheetsById[SHEET_ID];
 const rows = await sheet.getRows();
 const list = rows
   .map((row) => row.toObject())
-  // Move the link columns into a links object
-  .map((row) => {
-    const filtered = {};
-    const links = {};
-    for (const [column, value] of Object.entries(row)) {
-      const cleanedValue = value?.trim();
-      if (LINK_COLUMNS.includes(column)) {
-        if (cleanedValue) links[column] = cleanedValue;
+  // Trim all values
+  .map((row) =>
+    Object.fromEntries(
+      Object.entries(row).map(([column, value]) => [column, value.trim()]),
+    ),
+  )
+  // Move the link and social columns into nested objects
+  .map((row) =>
+    Object.entries(row).reduce((acc, [column, value]) => {
+      const nestedEntry = Object.entries(COLUMNS_TO_NEST).find(([, columns]) =>
+        columns.includes(column),
+      );
+
+      if (nestedEntry) {
+        if (value) {
+          const [key] = nestedEntry;
+          acc[key] = { ...(acc[key] || {}), [column]: value };
+        }
       } else {
-        filtered[column] = cleanedValue;
+        acc[column] = value;
       }
-    }
-    if (Object.keys(links).length > 0) filtered.links = links;
-    return filtered;
-  })
+
+      return acc;
+    }, {}),
+  )
   // Add slugs
   .map((row) => ({ ...row, slug: slugify(row.name).toLowerCase() }))
   // Turn verified into boolean

@@ -11,8 +11,8 @@ import JsonLd from "../../components/JsonLd";
 import getCafeJsonLd from "./getCafeJsonLd";
 import getEvents from "@/app/getEvents";
 import { BASE_URL } from "@/app/constants";
-import upperFirst from "@/app/utils/upperFirst";
 import Unconfirmed from "@/app/components/Unconfirmed";
+import LinksSection from "./LinksSection";
 
 export function generateMetadata({
   params,
@@ -35,7 +35,7 @@ function getMapsLink(adres: string) {
 }
 
 export default function CafeServer({ params }: { params: { slug: string } }) {
-  const rc = data.find((rc) => rc.slug === params.slug);
+  const rc = data.find((rc) => rc.slug === params.slug) as RC;
   if (!rc) {
     return (
       <BasePage title="Onbekend Repair Café">
@@ -95,28 +95,10 @@ function CafeClient({ rc, next }: { rc: RC; next: string }) {
           </DetailsSection>
         )}
         {rc.links && (
-          <DetailsSection title="Links">
-            <ul className="flex flex-col gap-1">
-              {Object.entries(rc.links).map(([type, href]) => (
-                <li key={type}>
-                  <Link
-                    href={href as string}
-                    className="mt-1 flex gap-1"
-                    rel="noreferrer"
-                    target="_blank"
-                  >
-                    <ExternalLink className="shrink-0" />
-                    <strong className="font-medium">
-                      {type === "orgPage"
-                        ? "Repaircafe.org pagina"
-                        : upperFirst(type)}
-                    </strong>
-                    van {rc.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </DetailsSection>
+          <LinksSection title="Links" links={rc.links} name={rc.name} />
+        )}
+        {rc.socials && (
+          <LinksSection title="Sociaal" links={rc.socials} name={rc.name} />
         )}
         <Link href="/repaircafes" className="mt-2 flex gap-1">
           <ChevronRight className="shrink-0" />
