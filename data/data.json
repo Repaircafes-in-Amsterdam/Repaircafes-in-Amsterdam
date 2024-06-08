@@ -782,7 +782,9 @@
     "verified": true,
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-oud-west-jeltje/",
-      "website": "https://repaircafejeltje.nl/"
+      "website": "https://repaircafejeltje.nl/",
+      "facebook": "https://www.facebook.com/repaircafejeltje",
+      "instagram": "https://www.instagram.com/repaircafejeltje/"
     },
     "slug": "jeltje",
     "coordinate": [
