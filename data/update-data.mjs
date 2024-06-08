@@ -69,46 +69,6 @@ const list = rows
   // Turn verified into boolean
   .map((row) => ({ ...row, verified: row.verified === "TRUE" }))
   // Split multi line items into an arrays
-  // split values of keys in MULTI_LINE_COLUMNS from multiple lines into array
-  // .map((row) => {
-  //   const filtered = {};
-  //   for (const [column, value] of Object.entries(row)) {
-  //     if (MULTI_LINE_COLUMNS.includes(column)) {
-  //       if (value) {
-  //         filtered[column] = value.split("\n").filter(Boolean);
-  //       }
-  //     } else {
-  //       filtered[column] = value;
-  //     }
-  //   }
-  //   return filtered;
-  // }
-  // split values of keys in MULTI_LINE_COLUMNS from multiple lines into array using Object.entries
-  // .map((row) => (
-  //   Object.entries(row).reduce((acc, [column, value]) => {
-  //     if (MULTI_LINE_COLUMNS.includes(column)) {
-  //       if (value) {
-  //         acc[column] = value.split("\n").filter(Boolean);
-  //       }
-  //     } else {
-  //       acc[column] = value;
-  //     }
-  //     return acc;
-  //   }, {})
-  // ))
-  // split values of keys in MULTI_LINE_COLUMNS from multiple lines into array using Object.entries and Object.fromEntries
-  // .map((row) => (
-  //   Object.fromEntries(
-  //     Object.entries(row).map(([column, value]) => {
-  //       if (MULTI_LINE_COLUMNS.includes(column)) {
-  //         if (value) {
-  //           return [column, value.split("\n").filter(Boolean)];
-  //         }
-  //       }
-  //       return [column, value];
-  //     })
-  //   )
-  // ))
   .map((row) =>
     Object.fromEntries(
       Object.entries(row).map(([column, value]) =>
@@ -118,11 +78,6 @@ const list = rows
       ),
     ),
   )
-  // .map((row) => ({
-  //   ...row,
-  //   closedRanges: row.closedRanges?.split("\n").filter(Boolean),
-  //   exceptions: row.exceptions?.split("\n").filter(Boolean),
-  // }))
   // Pull in coordinates from our manual map data or repaircafe.org map data
   // Save addresses without coordinates to manual map data
   .map((row) => {
