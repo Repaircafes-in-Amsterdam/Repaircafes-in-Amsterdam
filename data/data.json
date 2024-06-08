@@ -3,9 +3,15 @@
     "name": "AC REEL Tussen de Bogen",
     "address": "Tussen de Bogen 16",
     "open": "Elke dinsdagmiddag 13:00 - 15:00",
-    "rrule": "FREQ=WEEKLY;BYDAY=TU;INTERVAL=1",
-    "startTime": "13:00",
-    "endTime": "15:00",
+    "rrule": [
+      "FREQ=WEEKLY;BYDAY=TU;INTERVAL=1"
+    ],
+    "startTime": [
+      "13:00"
+    ],
+    "endTime": [
+      "15:00"
+    ],
     "closed": "Schoolvakanties",
     "closedRanges": [],
     "exceptions": [],
@@ -25,9 +31,15 @@
     "name": "Afvalpaleis (elektra)",
     "address": "Dapperstraat 76",
     "open": "Elke woensdagmiddag 12:00 - 17:00",
-    "rrule": "FREQ=WEEKLY;BYDAY=WE;INTERVAL=1",
-    "startTime": "12:00",
-    "endTime": "17:00",
+    "rrule": [
+      "FREQ=WEEKLY;BYDAY=WE;INTERVAL=1"
+    ],
+    "startTime": [
+      "12:00"
+    ],
+    "endTime": [
+      "17:00"
+    ],
     "closed": "4 weken in het midden van de zomervakantie en de laatste week van het jaar.",
     "closedRanges": [
       "12-24:12-31"
@@ -38,13 +50,15 @@
     "doRepair": "Electronica, Meubels",
     "dontRepair": "Magnetrons, computers, mobieltjes, fossiele brandstof verbrandende motoren.",
     "moreInfo": "We werken graag samen met ambachtsmensen, workshopgevers, knutselaars en kunstenaars  om hen van materiaal te voorzien. Alles om hergebruik en afvalvermindering te stimuleren.",
-    "verified": true,
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-oost-afvalpaleis/",
-      "website": "https://www.jungle.amsterdam/werkplaats-repaircafe",
+      "website": "https://www.jungle.amsterdam/werkplaats-repaircafe"
+    },
+    "socials": {
       "facebook": "https://www.facebook.com/afvalpaleis/",
       "instagram": "https://www.instagram.com/afvalpaleis/"
     },
+    "verified": true,
     "slug": "afvalpaleis-(elektra)",
     "coordinate": [
       52.36155369999999,
@@ -55,9 +69,15 @@
     "name": "Afvalpaleis (textiel)",
     "address": "Dapperstraat 76",
     "open": "Elke donderdagmiddag 12:00 - 17:00",
-    "rrule": "FREQ=WEEKLY;BYDAY=TH;INTERVAL=1",
-    "startTime": "12:00",
-    "endTime": "17:00",
+    "rrule": [
+      "FREQ=WEEKLY;BYDAY=TH;INTERVAL=1"
+    ],
+    "startTime": [
+      "12:00"
+    ],
+    "endTime": [
+      "17:00"
+    ],
     "closed": "4 weken in het midden van de zomervakantie en de laatste week van het jaar.",
     "closedRanges": [
       "12-24:12-31"
@@ -68,13 +88,15 @@
     "doRepair": "Kleding",
     "dontRepair": "Het repaircafe Textiel is gericht op helpen om het zelf te doen. Wij zijn nadrukkelijk geen naaiatelier maar een plek waar je de tijd neemt om zelf samen met anderen je kleding repareert zodat het langer mee gaat en je er weer liefde voor voelt.",
     "moreInfo": "We werken graag samen met ambachtsmensen, workshopgevers, knutselaars en kunstenaars  om hen van materiaal te voorzien. Alles om hergebruik en afvalvermindering te stimuleren.",
-    "verified": true,
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-oost-afvalpaleis/",
-      "website": "https://www.jungle.amsterdam/werkplaats-repaircafe",
+      "website": "https://www.jungle.amsterdam/werkplaats-repaircafe"
+    },
+    "socials": {
       "facebook": "https://www.facebook.com/afvalpaleis/",
       "instagram": "https://www.instagram.com/afvalpaleis/"
     },
+    "verified": true,
     "slug": "afvalpaleis-(textiel)",
     "coordinate": [
       52.36155369999999,
@@ -85,9 +107,15 @@
     "name": "AMSTELhuis",
     "address": "Ceintuurbaan 480",
     "open": "2e en 4e vrijdagmiddag 13:00 - 16:00",
-    "rrule": "FREQ=MONTHLY;BYDAY=2FR,4FR",
-    "startTime": "13:00",
-    "endTime": "16:00",
+    "rrule": [
+      "FREQ=MONTHLY;BYDAY=2FR,4FR"
+    ],
+    "startTime": [
+      "13:00"
+    ],
+    "endTime": [
+      "16:00"
+    ],
     "closed": "",
     "closedRanges": [],
     "exceptions": [],
@@ -96,10 +124,10 @@
     "doRepair": "Elektronica, kleding, fietsen, hout speelgoed.",
     "dontRepair": "Alles wat draagbaar is proberen wij te repareren.",
     "moreInfo": "",
-    "verified": true,
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-zuid-amstelhuis/"
     },
+    "verified": true,
     "slug": "amstelhuis",
     "coordinate": [
       52.35537189999999,
@@ -110,11 +138,19 @@
     "name": "Anarchist Repair Cafe",
     "address": "Eerste Schinkelstraat 14-16",
     "open": "Elke eerste maandagavond 19:00 - 22:00",
-    "rrule": "FREQ=MONTHLY;BYSETPOS=1;BYDAY=MO;INTERVAL=1",
-    "startTime": "19:00",
-    "endTime": "22:00",
-    "closed": "",
-    "closedRanges": [],
+    "rrule": [
+      "FREQ=MONTHLY;BYSETPOS=1;BYDAY=MO;INTERVAL=1"
+    ],
+    "startTime": [
+      "19:00"
+    ],
+    "endTime": [
+      "22:00"
+    ],
+    "closed": "Juli en Augustus",
+    "closedRanges": [
+      "2024-07:2024-08"
+    ],
     "exceptions": [
       "2025-05-05"
     ],
@@ -123,11 +159,13 @@
     "doRepair": "Electronica, Kleding",
     "dontRepair": "Nespresso",
     "moreInfo": "",
-    "verified": true,
     "links": {
-      "website": "https://deversterking.noblogs.org/repair-cafe/",
+      "website": "https://deversterking.noblogs.org/repair-cafe/"
+    },
+    "socials": {
       "instagram": "https://www.instagram.com/deversterking/"
     },
+    "verified": true,
     "slug": "anarchist-repair-cafe",
     "coordinate": [
       52.35398,
@@ -138,9 +176,15 @@
     "name": "Betondorp",
     "address": "Karnstraat 2",
     "open": "2e en 4e woensdagmiddag 14:00 - 16:30",
-    "rrule": "FREQ=MONTHLY;BYDAY=2WE,4WE",
-    "startTime": "14:00",
-    "endTime": "16:30",
+    "rrule": [
+      "FREQ=MONTHLY;BYDAY=2WE,4WE"
+    ],
+    "startTime": [
+      "14:00"
+    ],
+    "endTime": [
+      "16:30"
+    ],
     "closed": "",
     "closedRanges": [],
     "exceptions": [],
@@ -149,10 +193,10 @@
     "doRepair": "Electronica, Fietsen, Meubels, huishoudelijk",
     "dontRepair": "Wasmachines etc",
     "moreInfo": "",
-    "verified": true,
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-oost-betondorp/"
     },
+    "verified": true,
     "slug": "betondorp",
     "coordinate": [
       52.340691,
@@ -160,12 +204,50 @@
     ]
   },
   {
+    "name": "Buitenveldert",
+    "address": "A.J. Ernststraat 112",
+    "open": "2e zaterdagmiddag 13:00 - 16:00",
+    "rrule": [
+      "FREQ=MONTHLY;BYSETPOS=2;BYDAY=SA;INTERVAL=1"
+    ],
+    "startTime": [
+      "13:00"
+    ],
+    "endTime": [
+      "16:00"
+    ],
+    "closed": "",
+    "closedRanges": [],
+    "exceptions": [],
+    "district": "Zuid",
+    "email": "repaircafebuitenveldert@gmail.com",
+    "doRepair": "Electronica, Kleding, overige kleine reparaties aan producten in en om het huis",
+    "dontRepair": "Telefoons/computers/tv's en dergelijke complexe apparaten",
+    "moreInfo": "",
+    "links": {
+      "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-zuid-buitenveldert/",
+      "website": "https://hvdwbuitenveldert.nl/agenda/"
+    },
+    "verified": true,
+    "slug": "buitenveldert",
+    "coordinate": [
+      52.332798,
+      4.877867
+    ]
+  },
+  {
     "name": "De Boeg",
     "address": "Hoofdweg 495 a",
     "open": "Elke dinsdagochtend 10:00 - 12:00",
-    "rrule": "FREQ=WEEKLY;BYDAY=TU;INTERVAL=1",
-    "startTime": "10:00",
-    "endTime": "12:00",
+    "rrule": [
+      "FREQ=WEEKLY;BYDAY=TU;INTERVAL=1"
+    ],
+    "startTime": [
+      "10:00"
+    ],
+    "endTime": [
+      "12:00"
+    ],
     "closed": "Zomervakantie, kerst oud- en nieuwjaar.",
     "closedRanges": [],
     "exceptions": [],
@@ -174,10 +256,10 @@
     "doRepair": "Electronica, Kleding, Fietsen",
     "dontRepair": "Telefoons, laptops",
     "moreInfo": "",
-    "verified": true,
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-west-de-boeg/"
     },
+    "verified": true,
     "slug": "de-boeg",
     "coordinate": [
       52.375808,
@@ -188,9 +270,15 @@
     "name": "De Bonte Kraai",
     "address": "Kraaiennest 68",
     "open": "Laatste vrijdagmiddag 15.00 - 18.00",
-    "rrule": "FREQ=MONTHLY;BYSETPOS=-1;BYDAY=FR;INTERVAL=1",
-    "startTime": "15:00",
-    "endTime": "18:00",
+    "rrule": [
+      "FREQ=MONTHLY;BYSETPOS=-1;BYDAY=FR;INTERVAL=1"
+    ],
+    "startTime": [
+      "15:00"
+    ],
+    "endTime": [
+      "18:00"
+    ],
     "closed": "",
     "closedRanges": [],
     "exceptions": [],
@@ -199,12 +287,14 @@
     "doRepair": "Electronica, houdelijke apparaten, speelgoed, computers, tablets, telefoons, enz.",
     "dontRepair": "",
     "moreInfo": "",
-    "verified": true,
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-zuidoost/",
-      "website": "https://repaircafe-zuidoost.nl",
+      "website": "https://repaircafe-zuidoost.nl"
+    },
+    "socials": {
       "facebook": "https://www.facebook.com/RepairCafeAmsterdamZuidoost/"
     },
+    "verified": true,
     "slug": "de-bonte-kraai",
     "coordinate": [
       52.317242,
@@ -215,9 +305,15 @@
     "name": "De Boomsspijker",
     "address": "Recht Boomssloot 52",
     "open": "Elke eerste maandagmiddag 13:00 - 15:00",
-    "rrule": "FREQ=MONTHLY;BYSETPOS=1;BYDAY=MO;INTERVAL=1",
-    "startTime": "13:00",
-    "endTime": "15:00",
+    "rrule": [
+      "FREQ=MONTHLY;BYSETPOS=1;BYDAY=MO;INTERVAL=1"
+    ],
+    "startTime": [
+      "13:00"
+    ],
+    "endTime": [
+      "15:00"
+    ],
     "closed": "Zomervakantie & kerstvakantie",
     "closedRanges": [],
     "exceptions": [],
@@ -226,13 +322,15 @@
     "doRepair": "Electronica, Van platenspelers tot koffiezetapparaten tot stofzuigers.",
     "dontRepair": "",
     "moreInfo": "",
-    "verified": true,
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-centrum-de-boomsspijker/",
-      "website": "https://www.dock.nl/locaties/amsterdam/centrum/huis-van-de-buurt-de-boomsspijker/",
+      "website": "https://www.dock.nl/locaties/amsterdam/centrum/huis-van-de-buurt-de-boomsspijker/"
+    },
+    "socials": {
       "facebook": "https://www.facebook.com/Boomsspijker/",
       "instagram": "https://www.instagram.com/boomsspijker/"
     },
+    "verified": true,
     "slug": "de-boomsspijker",
     "coordinate": [
       52.371975,
@@ -243,9 +341,15 @@
     "name": "De Coenen",
     "address": "J.M. Coenenstraat 4 - 6",
     "open": "1e maandagochtend 10:00 - 12:30",
-    "rrule": "FREQ=MONTHLY;BYSETPOS=1;BYDAY=MO;INTERVAL=1",
-    "startTime": "10:00",
-    "endTime": "12:30",
+    "rrule": [
+      "FREQ=MONTHLY;BYSETPOS=1;BYDAY=MO;INTERVAL=1"
+    ],
+    "startTime": [
+      "10:00"
+    ],
+    "endTime": [
+      "12:30"
+    ],
     "closed": "Bij feestdagen schuift het een week door",
     "closedRanges": [],
     "exceptions": [],
@@ -254,10 +358,10 @@
     "doRepair": "Electronica, Meubels, klein/mechanisch/elektrisch/huishoudelijk/naaimachines",
     "dontRepair": "Wij onderzoeken in principe alles; dit leidt tot soms een reparatie, soms een advies",
     "moreInfo": "",
-    "verified": true,
     "links": {
       "website": "https://decoenen.com/terugkerende-activiteiten/#repaircafe"
     },
+    "verified": true,
     "slug": "de-coenen",
     "coordinate": [
       52.3526,
@@ -268,9 +372,15 @@
     "name": "De Diem",
     "address": "Arent Krijtsstraat 48hs",
     "open": "Elke tweede zaterdag 14:00 - 16:30",
-    "rrule": "FREQ=MONTHLY;BYSETPOS=2;BYDAY=SA;INTERVAL=1",
-    "startTime": "14:00",
-    "endTime": "16:30",
+    "rrule": [
+      "FREQ=MONTHLY;BYSETPOS=2;BYDAY=SA;INTERVAL=1"
+    ],
+    "startTime": [
+      "14:00"
+    ],
+    "endTime": [
+      "16:30"
+    ],
     "closed": "Juli en augustus",
     "closedRanges": [
       "07:08"
@@ -281,11 +391,11 @@
     "doRepair": "Electronica, Andere draagbare huishoudelijke apparaten",
     "dontRepair": "Beeldschermen, grote apparaten",
     "moreInfo": "Bestaat in april 2024 10 jaar!",
-    "verified": true,
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-diemen/",
       "website": "http://www.duurzaamdorpdiemen.nl/p/repair-cafe.html"
     },
+    "verified": true,
     "slug": "de-diem",
     "coordinate": [
       52.341541,
@@ -296,9 +406,15 @@
     "name": "De Groene Hub",
     "address": "Holendrechtplein 44",
     "open": "1e vrijdagmiddag 15.00 - 18.00",
-    "rrule": "FREQ=MONTHLY;BYSETPOS=1;BYDAY=FR;INTERVAL=1",
-    "startTime": "15:00",
-    "endTime": "18:00",
+    "rrule": [
+      "FREQ=MONTHLY;BYSETPOS=1;BYDAY=FR;INTERVAL=1"
+    ],
+    "startTime": [
+      "15:00"
+    ],
+    "endTime": [
+      "18:00"
+    ],
     "closed": "",
     "closedRanges": [],
     "exceptions": [],
@@ -307,12 +423,14 @@
     "doRepair": "Electronica, houdelijke apparaten, speelgoed, computers, tablets, telefoons, enz.",
     "dontRepair": "",
     "moreInfo": "",
-    "verified": true,
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-zuidoost/",
-      "website": "https://repaircafe-zuidoost.nl",
+      "website": "https://repaircafe-zuidoost.nl"
+    },
+    "socials": {
       "facebook": "https://www.facebook.com/RepairCafeAmsterdamZuidoost/"
     },
+    "verified": true,
     "slug": "de-groene-hub",
     "coordinate": [
       52.29929,
@@ -323,9 +441,15 @@
     "name": "De Havelaar",
     "address": "Douwes Dekkerstraat 2",
     "open": "Elke derde vrijdagmiddag 13:00 - 16:00",
-    "rrule": "FREQ=MONTHLY;BYSETPOS=3;BYDAY=FR;INTERVAL=1",
-    "startTime": "13:00",
-    "endTime": "16:00",
+    "rrule": [
+      "FREQ=MONTHLY;BYSETPOS=3;BYDAY=FR;INTERVAL=1"
+    ],
+    "startTime": [
+      "13:00"
+    ],
+    "endTime": [
+      "16:00"
+    ],
     "closed": "Meestal in Augustus",
     "closedRanges": [
       "08"
@@ -338,10 +462,10 @@
     "doRepair": "Electronica, Kleding",
     "dontRepair": "Fietsen, Telefoons, Koffie-apparaten",
     "moreInfo": "",
-    "verified": true,
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-oud-west-de-havelaar/"
     },
+    "verified": true,
     "slug": "de-havelaar",
     "coordinate": [
       52.36911,
@@ -352,9 +476,15 @@
     "name": "De Meeuw",
     "address": "Motorwal 300",
     "open": "Elke donderagochtend 10:00 - 12:00",
-    "rrule": "FREQ=WEEKLY;BYDAY=TH;INTERVAL=1",
-    "startTime": "10:00",
-    "endTime": "12:00",
+    "rrule": [
+      "FREQ=WEEKLY;BYDAY=TH;INTERVAL=1"
+    ],
+    "startTime": [
+      "10:00"
+    ],
+    "endTime": [
+      "12:00"
+    ],
     "closed": "Tussen kerst en nieuwjaar en in de zomervakanties.",
     "closedRanges": [],
     "exceptions": [],
@@ -363,11 +493,11 @@
     "doRepair": "Electronica, Kleding, Fietsen, Meubels",
     "dontRepair": "Laptops en telefoons",
     "moreInfo": "",
-    "verified": true,
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-noord-de-meeuw/",
       "website": "https://huisvandewijknoord.nl/de-meeuw"
     },
+    "verified": true,
     "slug": "de-meeuw",
     "coordinate": [
       52.3846872,
@@ -378,9 +508,15 @@
     "name": "De Meevaart",
     "address": "Balistraat 48 A",
     "open": "1e, 2e, 3e woensdagmiddag en laatste zaterdagmiddag 14:00 - 16:30",
-    "rrule": "FREQ=MONTHLY;BYDAY=1WE,2WE,3WE,-1SA",
-    "startTime": "14:00",
-    "endTime": "16:30",
+    "rrule": [
+      "FREQ=MONTHLY;BYDAY=1WE,2WE,3WE,-1SA"
+    ],
+    "startTime": [
+      "14:00"
+    ],
+    "endTime": [
+      "16:30"
+    ],
     "closed": "",
     "closedRanges": [],
     "exceptions": [],
@@ -389,11 +525,11 @@
     "doRepair": "",
     "dontRepair": "",
     "moreInfo": "",
-    "verified": false,
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-oost-de-meevaart/",
       "website": "https://repaircafe-demeevaart-amsterdam-oost.nl/"
     },
+    "verified": false,
     "slug": "de-meevaart",
     "coordinate": [
       52.36300920000001,
@@ -404,9 +540,15 @@
     "name": "De Pijp",
     "address": "Lutmastraat 61A",
     "open": "Laatste zondag 12:00 - 16:00",
-    "rrule": "FREQ=MONTHLY;BYSETPOS=-1;BYDAY=SU;INTERVAL=1",
-    "startTime": "12:00",
-    "endTime": "16:00",
+    "rrule": [
+      "FREQ=MONTHLY;BYSETPOS=-1;BYDAY=SU;INTERVAL=1"
+    ],
+    "startTime": [
+      "12:00"
+    ],
+    "endTime": [
+      "16:00"
+    ],
     "closed": "",
     "closedRanges": [],
     "exceptions": [],
@@ -415,12 +557,14 @@
     "doRepair": "Electronica, Kleding, electrische en mechanische apparatuur, fijn herstelwerk.",
     "dontRepair": "Magnetrons en apparaten die niet op de fiets te vervoeren zijn.",
     "moreInfo": "Zie onze repaircafe.org pagina voor actuele data.",
-    "verified": true,
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-zuid-de-pijp/",
-      "website": "http://nmtzuid.nl/project/repair-cafe/",
+      "website": "http://nmtzuid.nl/project/repair-cafe/"
+    },
+    "socials": {
       "facebook": "https://www.facebook.com/groups/588615051264468/"
     },
+    "verified": true,
     "slug": "de-pijp",
     "coordinate": [
       52.3509199,
@@ -431,9 +575,15 @@
     "name": "De steek",
     "address": "Van Der Hoopstraat 70HS",
     "open": "Elke donderdag 16:00 - 20:00 (in 2024)",
-    "rrule": "FREQ=WEEKLY;INTERVAL=1;BYDAY=TH",
-    "startTime": "16:00",
-    "endTime": "20:00",
+    "rrule": [
+      "FREQ=WEEKLY;INTERVAL=1;BYDAY=TH"
+    ],
+    "startTime": [
+      "16:00"
+    ],
+    "endTime": [
+      "20:00"
+    ],
     "closed": "Sinterklaas en kerst",
     "closedRanges": [],
     "exceptions": [],
@@ -442,11 +592,13 @@
     "doRepair": "Kleding",
     "dontRepair": "Andere dingen dan kleding",
     "moreInfo": "We organiseren dit tot het einde van 2024",
-    "verified": true,
     "links": {
-      "website": "https://desteekamsterdam.com/nl/gratis-kleding-repaircafe/",
+      "website": "https://desteekamsterdam.com/nl/gratis-kleding-repaircafe/"
+    },
+    "socials": {
       "instagram": "https://www.instagram.com/desteekamsterdam/"
     },
+    "verified": true,
     "slug": "de-steek",
     "coordinate": [
       52.38449,
@@ -457,9 +609,15 @@
     "name": "De Ster",
     "address": "Woudrichemstraat 8",
     "open": "2e vrijdagmiddag 15:00 - 18:00",
-    "rrule": "FREQ=MONTHLY;BYSETPOS=2;BYDAY=FR;INTERVAL=1",
-    "startTime": "15:00",
-    "endTime": "18:00",
+    "rrule": [
+      "FREQ=MONTHLY;BYSETPOS=2;BYDAY=FR;INTERVAL=1"
+    ],
+    "startTime": [
+      "15:00"
+    ],
+    "endTime": [
+      "18:00"
+    ],
     "closed": "",
     "closedRanges": [],
     "exceptions": [],
@@ -468,12 +626,14 @@
     "doRepair": "Electronica, houdelijke apparaten, speelgoed, computers, tablets, telefoons, enz.",
     "dontRepair": "",
     "moreInfo": "",
-    "verified": true,
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-zuidoost/",
-      "website": "https://repaircafe-zuidoost.nl",
+      "website": "https://repaircafe-zuidoost.nl"
+    },
+    "socials": {
       "facebook": "https://www.facebook.com/RepairCafeAmsterdamZuidoost/"
     },
+    "verified": true,
     "slug": "de-ster",
     "coordinate": [
       52.29424,
@@ -481,12 +641,53 @@
     ]
   },
   {
+    "name": "Gliphoeve kinderboerderij",
+    "address": "Geldershoofd 79",
+    "open": "Elke dinsdag 10:30 - 12:00 en zaterdag 14:00 - 16:00",
+    "rrule": [
+      "FREQ=WEEKLY;BYDAY=TU;INTERVAL=1",
+      "FREQ=WEEKLY;BYDAY=SA;INTERVAL=1"
+    ],
+    "startTime": [
+      "10:30",
+      "14:00"
+    ],
+    "endTime": [
+      "12:00",
+      "16:00"
+    ],
+    "closed": "",
+    "closedRanges": [],
+    "exceptions": [],
+    "district": "Zuidoost",
+    "email": "kinderboerderij.gliphoeve@gmail.com",
+    "doRepair": "Electronica, Fietsen, Meubels",
+    "dontRepair": "",
+    "moreInfo": "",
+    "links": {
+      "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-zuidoost-gliphoeve/",
+      "website": "https://www.kinderboerderijgliphoeve.nl/over-ons-2"
+    },
+    "verified": true,
+    "slug": "gliphoeve-kinderboerderij",
+    "coordinate": [
+      52.3230358,
+      4.9706961
+    ]
+  },
+  {
     "name": "Groenpunt Welkom",
     "address": "Stadionplein 65",
     "open": "1e woensdagavond 19.00 - 21.00",
-    "rrule": "FREQ=MONTHLY;BYSETPOS=1;BYDAY=WE;INTERVAL=1",
-    "startTime": "19:00",
-    "endTime": "21:00",
+    "rrule": [
+      "FREQ=MONTHLY;BYSETPOS=1;BYDAY=WE;INTERVAL=1"
+    ],
+    "startTime": [
+      "19:00"
+    ],
+    "endTime": [
+      "21:00"
+    ],
     "closed": "Zomervakantie",
     "closedRanges": [],
     "exceptions": [],
@@ -495,12 +696,14 @@
     "doRepair": "Electronica, Kleding, allerlei gebruiksvoorwerpen (bijv. koffer, rollater, mechanische typemachines), oud speelgoed",
     "dontRepair": "Telefoons, naaimachines, grote apparaten zoals wasmachines",
     "moreInfo": "",
-    "verified": true,
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-zuid-groenpunt-welkom/",
-      "website": "http://groenebuurten.nl/start-repair-cafe-olympus/",
+      "website": "http://groenebuurten.nl/start-repair-cafe-olympus/"
+    },
+    "socials": {
       "facebook": "https://www.facebook.com/events/357964950550086/357969440549637/"
     },
+    "verified": true,
     "slug": "groenpunt-welkom",
     "coordinate": [
       52.3431199,
@@ -511,9 +714,15 @@
     "name": "Het Claverhuis",
     "address": "Elandsgracht 70",
     "open": "Elke donderdagmiddag 14:00 - 16:00",
-    "rrule": "FREQ=WEEKLY;BYDAY=TH;INTERVAL=1",
-    "startTime": "14:00",
-    "endTime": "16:00",
+    "rrule": [
+      "FREQ=WEEKLY;BYDAY=TH;INTERVAL=1"
+    ],
+    "startTime": [
+      "14:00"
+    ],
+    "endTime": [
+      "16:00"
+    ],
     "closed": "",
     "closedRanges": [],
     "exceptions": [],
@@ -522,10 +731,10 @@
     "doRepair": "Electronica",
     "dontRepair": "Alle elektronica die niet naar de locatie gebracht kan worden",
     "moreInfo": "",
-    "verified": true,
     "links": {
       "website": "https://dock.nl/locaties/amsterdam/centrum/huis-van-de-buurt-het-claverhuis/"
     },
+    "verified": true,
     "slug": "het-claverhuis",
     "coordinate": [
       52.36986,
@@ -536,9 +745,15 @@
     "name": "IJburg",
     "address": "Erich Salomonstraat 135 - 151",
     "open": "Elke woensdagmiddag 17:00 - 19:00",
-    "rrule": "FREQ=WEEKLY;BYDAY=WE;INTERVAL=1",
-    "startTime": "17:00",
-    "endTime": "19:00",
+    "rrule": [
+      "FREQ=WEEKLY;BYDAY=WE;INTERVAL=1"
+    ],
+    "startTime": [
+      "17:00"
+    ],
+    "endTime": [
+      "19:00"
+    ],
     "closed": "",
     "closedRanges": [],
     "exceptions": [],
@@ -547,12 +762,14 @@
     "doRepair": "Electronica, Kleding, Fietsen, Meubels, Veel koffiemachines, stofzuifgers",
     "dontRepair": "We hebben geen speciale hulpmiddelen voor telefoons, maar kunnen altijd kijken",
     "moreInfo": "",
-    "verified": true,
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-ijburg/",
-      "website": "https://www.set-ijburg.nl/",
+      "website": "https://www.set-ijburg.nl/"
+    },
+    "socials": {
       "facebook": "https://www.facebook.com/circulaircafeijburg"
     },
+    "verified": true,
     "slug": "ijburg",
     "coordinate": [
       52.359386,
@@ -563,9 +780,15 @@
     "name": "Jeltje",
     "address": "Eerste Helmersstraat 106-N",
     "open": "1e vrijdagavond 19:00 - 22:00",
-    "rrule": "FREQ=MONTHLY;BYSETPOS=1;BYDAY=FR;INTERVAL=1",
-    "startTime": "19:00",
-    "endTime": "22:00",
+    "rrule": [
+      "FREQ=MONTHLY;BYSETPOS=1;BYDAY=FR;INTERVAL=1"
+    ],
+    "startTime": [
+      "19:00"
+    ],
+    "endTime": [
+      "22:00"
+    ],
     "closed": "",
     "closedRanges": [
       "2024-09"
@@ -578,11 +801,15 @@
     "doRepair": "Electronica, Kleding, Fietsen",
     "dontRepair": "",
     "moreInfo": "",
-    "verified": true,
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-oud-west-jeltje/",
       "website": "https://repaircafejeltje.nl/"
     },
+    "socials": {
+      "facebook": "https://www.facebook.com/repaircafejeltje",
+      "instagram": "https://www.instagram.com/repaircafejeltje/"
+    },
+    "verified": true,
     "slug": "jeltje",
     "coordinate": [
       52.3621249,
@@ -593,9 +820,15 @@
     "name": "Osdorp",
     "address": "Tussen Meer 68",
     "open": "Elke donderdagochtend 10:00 - 12:00",
-    "rrule": "FREQ=WEEKLY;BYDAY=TH;INTERVAL=1",
-    "startTime": "10:00",
-    "endTime": "12:00",
+    "rrule": [
+      "FREQ=WEEKLY;BYDAY=TH;INTERVAL=1"
+    ],
+    "startTime": [
+      "10:00"
+    ],
+    "endTime": [
+      "12:00"
+    ],
     "closed": "In de zomervakantie en met kerst",
     "closedRanges": [],
     "exceptions": [],
@@ -604,11 +837,11 @@
     "doRepair": "Electronica, Kleding, Fietsen, Meubels",
     "dontRepair": "",
     "moreInfo": "",
-    "verified": true,
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-osdorp/",
       "website": "https://repaircafeosdorp.jouwweb.nl/"
     },
+    "verified": true,
     "slug": "osdorp",
     "coordinate": [
       52.3580345,
@@ -619,9 +852,15 @@
     "name": "Oud Noord",
     "address": "Kamperfoelieweg 207",
     "open": "1e woensdagavond 18:00 - 20:00",
-    "rrule": "FREQ=MONTHLY;BYSETPOS=1;BYDAY=WE;INTERVAL=1",
-    "startTime": "18:00",
-    "endTime": "20:00",
+    "rrule": [
+      "FREQ=MONTHLY;BYSETPOS=1;BYDAY=WE;INTERVAL=1"
+    ],
+    "startTime": [
+      "18:00"
+    ],
+    "endTime": [
+      "20:00"
+    ],
     "closed": "",
     "closedRanges": [],
     "exceptions": [],
@@ -630,11 +869,13 @@
     "doRepair": "Electronica, Kleding, Fietsen, Meubels",
     "dontRepair": "Telefoons",
     "moreInfo": "",
-    "verified": true,
     "links": {
-      "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-oud-noord/",
+      "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-oud-noord/"
+    },
+    "socials": {
       "facebook": "https://www.facebook.com/repaircafeamsterdam"
     },
+    "verified": true,
     "slug": "oud-noord",
     "coordinate": [
       52.3990892,
@@ -645,9 +886,15 @@
     "name": "Repair Events Tolhuistuin",
     "address": "IJpromenade 2",
     "open": "Elke tweede zondagmiddag 14:00 - 17:00",
-    "rrule": "FREQ=MONTHLY;BYSETPOS=2;BYDAY=SU;INTERVAL=1",
-    "startTime": "14:00",
-    "endTime": "17:00",
+    "rrule": [
+      "FREQ=MONTHLY;BYSETPOS=2;BYDAY=SU;INTERVAL=1"
+    ],
+    "startTime": [
+      "14:00"
+    ],
+    "endTime": [
+      "17:00"
+    ],
     "closed": "",
     "closedRanges": [],
     "exceptions": [],
@@ -656,11 +903,13 @@
     "doRepair": "Kleding, Electronica, messen (slijpen)",
     "dontRepair": "",
     "moreInfo": "Elk seizoen hebben wij weer wisselende dagen en tijden. In de winter staan we binnen, in de zomer buiten in de tuin. De data voor de komende zomer zijn: 19 mei, 9 juni, 14 juli, 11 aug \n\nIn plaats van iets uit handen te geven, léér je bij Repair Events samen met een reparateur hoe je je eigen spullen repareert of zelfs mooier maakt (upcyclen). Je mag alles mee brengen; van kleding tot huishoudelijke apparaten en elektronica. Wij zorgen voor de ruimte, de kennis en de tools; er zijn naaimachines, gereedschapskisten, borduursetjes en dergelijke aanwezig. Zo kan jij eindelijk dat gat in je broek repareren, die leuke lamp weer laten branden, of dat bloesje pimpen...",
-    "verified": true,
     "links": {
-      "website": "https://tolhuistuin.nl/zoeken?q=repair+events",
+      "website": "https://tolhuistuin.nl/zoeken?q=repair+events"
+    },
+    "socials": {
       "instagram": "https://www.instagram.com/repair_events/"
     },
+    "verified": true,
     "slug": "repair-events-tolhuistuin",
     "coordinate": [
       52.38309,
@@ -671,9 +920,15 @@
     "name": "Repairclub",
     "address": "Columbusplein 253",
     "open": "Elke woensdag avond 20:00-22:00",
-    "rrule": "FREQ=WEEKLY;BYDAY=WE;INTERVAL=1",
-    "startTime": "20:00",
-    "endTime": "22:00",
+    "rrule": [
+      "FREQ=WEEKLY;BYDAY=WE;INTERVAL=1"
+    ],
+    "startTime": [
+      "20:00"
+    ],
+    "endTime": [
+      "22:00"
+    ],
     "closed": "",
     "closedRanges": [],
     "exceptions": [],
@@ -682,10 +937,10 @@
     "doRepair": "",
     "dontRepair": "",
     "moreInfo": "",
-    "verified": false,
     "links": {
       "website": "https://jacobmaris.com/activiteiten/volwassenen/repairclub/"
     },
+    "verified": false,
     "slug": "repairclub",
     "coordinate": [
       52.36571,
@@ -696,9 +951,15 @@
     "name": "Reparatietafel de Eester",
     "address": "C van Eesterenlaan 266",
     "open": "Elke derde woensdagochtend van 10:00 - 13:00",
-    "rrule": "FREQ=MONTHLY;BYDAY=3WE;INTERVAL=1",
-    "startTime": "10:00",
-    "endTime": "13:00",
+    "rrule": [
+      "FREQ=MONTHLY;BYDAY=3WE;INTERVAL=1"
+    ],
+    "startTime": [
+      "10:00"
+    ],
+    "endTime": [
+      "13:00"
+    ],
     "closed": "",
     "closedRanges": [],
     "exceptions": [],
@@ -707,10 +968,10 @@
     "doRepair": "Electronica, Kleding, Meubels",
     "dontRepair": "",
     "moreInfo": "",
-    "verified": true,
     "links": {
       "website": "https://buurtcooperatieohg.nl/verduurzaamt/reparatietafel/"
     },
+    "verified": true,
     "slug": "reparatietafel-de-eester",
     "coordinate": [
       52.37058,
@@ -721,9 +982,15 @@
     "name": "Rijnstraat - Rivierenbuurt",
     "address": "Rijnstraat 115",
     "open": "Elke dinsdagochtend 10:00 - 12:00",
-    "rrule": "FREQ=WEEKLY;BYDAY=TU;INTERVAL=1",
-    "startTime": "10:00",
-    "endTime": "12:00",
+    "rrule": [
+      "FREQ=WEEKLY;BYDAY=TU;INTERVAL=1"
+    ],
+    "startTime": [
+      "10:00"
+    ],
+    "endTime": [
+      "12:00"
+    ],
     "closed": "Kerst en Nieuwjaar",
     "closedRanges": [],
     "exceptions": [],
@@ -732,10 +999,10 @@
     "doRepair": "Electronica, Kleding, Meubels",
     "dontRepair": "Spullen die je niet de voordeur binnenkrijgt.",
     "moreInfo": "Ook voor advies van onderhoud of aanschaf kun je bij ons terecht onder genot van een koffie of thee.",
-    "verified": true,
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-zuid-rivierenbuurt/"
     },
+    "verified": true,
     "slug": "rijnstraat-rivierenbuurt",
     "coordinate": [
       52.3441792,
@@ -746,9 +1013,15 @@
     "name": "Sloten – Oud Osdorp",
     "address": "Nieuwe Akerweg 14",
     "open": "2e woensdagochtend 10:00 - 12:00",
-    "rrule": "FREQ=MONTHLY;BYSETPOS=2;BYDAY=WE;INTERVAL=1",
-    "startTime": "10:00",
-    "endTime": "12:00",
+    "rrule": [
+      "FREQ=MONTHLY;BYSETPOS=2;BYDAY=WE;INTERVAL=1"
+    ],
+    "startTime": [
+      "10:00"
+    ],
+    "endTime": [
+      "12:00"
+    ],
     "closed": "Feestdagen",
     "closedRanges": [],
     "exceptions": [],
@@ -757,10 +1030,10 @@
     "doRepair": "Electronica, Kleding, memorabilia, kleine huisraad, laptops, audio",
     "dontRepair": "Grote huisraad, telefoons",
     "moreInfo": "",
-    "verified": true,
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-sloten-oud-osdorp/"
     },
+    "verified": true,
     "slug": "sloten-oud-osdorp",
     "coordinate": [
       52.3420301,
@@ -771,9 +1044,15 @@
     "name": "Slotervaart De Kas",
     "address": "Jan Tooropstraat 8",
     "open": "Elke vrijdag middag 14:00 - 16:00",
-    "rrule": "FREQ=WEEKLY;BYDAY=FR;INTERVAL=1",
-    "startTime": "14:00",
-    "endTime": "16:00",
+    "rrule": [
+      "FREQ=WEEKLY;BYDAY=FR;INTERVAL=1"
+    ],
+    "startTime": [
+      "14:00"
+    ],
+    "endTime": [
+      "16:00"
+    ],
     "closed": "Augustus",
     "closedRanges": [
       "08"
@@ -784,12 +1063,14 @@
     "doRepair": "Elektra, soms kleding (zie instagram)",
     "dontRepair": "",
     "moreInfo": "",
-    "verified": false,
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-slotervaart/",
-      "website": "https://www.flinkin.nl/",
+      "website": "https://www.flinkin.nl/"
+    },
+    "socials": {
       "instagram": "https://www.instagram.com/tantetoorop"
     },
+    "verified": false,
     "slug": "slotervaart-de-kas",
     "coordinate": [
       52.36106109999999,
@@ -800,9 +1081,15 @@
     "name": "t Kruidvat",
     "address": "Ouderkerkerlaan 30",
     "open": "1e zaterdagmiddag 14:00 - 16:30",
-    "rrule": "FREQ=MONTHLY;BYSETPOS=1;BYDAY=SA;INTERVAL=1",
-    "startTime": "14:00",
-    "endTime": "16:30",
+    "rrule": [
+      "FREQ=MONTHLY;BYSETPOS=1;BYDAY=SA;INTERVAL=1"
+    ],
+    "startTime": [
+      "14:00"
+    ],
+    "endTime": [
+      "16:30"
+    ],
     "closed": "Juli en augustus",
     "closedRanges": [
       "07:08"
@@ -813,10 +1100,10 @@
     "doRepair": "",
     "dontRepair": "",
     "moreInfo": "",
-    "verified": false,
     "links": {
       "website": "http://www.duurzaamdorpdiemen.nl/p/repair-cafe.html"
     },
+    "verified": false,
     "slug": "t-kruidvat",
     "coordinate": [
       52.33423,
@@ -827,9 +1114,15 @@
     "name": "Westerpark",
     "address": "Van Limburg Stirumstraat 119",
     "open": "Elke woensdagochtend 10:00 tot 12:00",
-    "rrule": "FREQ=WEEKLY;BYDAY=WE;INTERVAL=1",
-    "startTime": "10:00",
-    "endTime": "12:00",
+    "rrule": [
+      "FREQ=WEEKLY;BYDAY=WE;INTERVAL=1"
+    ],
+    "startTime": [
+      "10:00"
+    ],
+    "endTime": [
+      "12:00"
+    ],
     "closed": "Nationale feestdagen",
     "closedRanges": [],
     "exceptions": [],
@@ -838,12 +1131,14 @@
     "doRepair": "Electronica, Meubels",
     "dontRepair": "",
     "moreInfo": "Het Repair Café vind plaats in Huis van de wijk Koperen Knoop.",
-    "verified": true,
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-west-westerpark/",
-      "website": "https://west.combiwelbuurtwerk.nl/west-westerpark/",
+      "website": "https://west.combiwelbuurtwerk.nl/west-westerpark/"
+    },
+    "socials": {
       "facebook": "https://www.facebook.com/koperenknoop/"
     },
+    "verified": true,
     "slug": "westerpark",
     "coordinate": [
       52.3835455,
@@ -854,9 +1149,15 @@
     "name": "Witte Boei",
     "address": "Kleine Wittenburgerstraat 201",
     "open": "Elke eerste woensdagmiddag 14:00 - 16:30",
-    "rrule": "FREQ=MONTHLY;BYDAY=1WE,3WE",
-    "startTime": "14:00",
-    "endTime": "16:30",
+    "rrule": [
+      "FREQ=MONTHLY;BYDAY=1WE,3WE"
+    ],
+    "startTime": [
+      "14:00"
+    ],
+    "endTime": [
+      "16:30"
+    ],
     "closed": "Zomervakantie & kerstvakantie",
     "closedRanges": [],
     "exceptions": [],
@@ -865,12 +1166,14 @@
     "doRepair": "Electronica, Huishoudelijke apparaten. Van platenspelers tot koffiezetapparaten tot stofzuigers.",
     "dontRepair": "",
     "moreInfo": "",
-    "verified": true,
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-centrum-oost/",
-      "website": "https://www.dock.nl/locaties/amsterdam/centrum/huis-van-de-buurt-de-witte-boei/",
+      "website": "https://www.dock.nl/locaties/amsterdam/centrum/huis-van-de-buurt-de-witte-boei/"
+    },
+    "socials": {
       "facebook": "https://www.facebook.com/WitteBoei/"
     },
+    "verified": true,
     "slug": "witte-boei",
     "coordinate": [
       52.37151,
@@ -881,9 +1184,15 @@
     "name": "Zonneplein",
     "address": "Zonneplein 11",
     "open": "1e zaterdagmiddag 12:30 - 15:00",
-    "rrule": "FREQ=MONTHLY;BYSETPOS=1;BYDAY=SA;INTERVAL=1",
-    "startTime": "14:00",
-    "endTime": "16:00",
+    "rrule": [
+      "FREQ=MONTHLY;BYSETPOS=1;BYDAY=SA;INTERVAL=1"
+    ],
+    "startTime": [
+      "14:00"
+    ],
+    "endTime": [
+      "16:00"
+    ],
     "closed": "",
     "closedRanges": [
       "2024-07-06"
@@ -896,12 +1205,14 @@
     "doRepair": "Electronica, Kleding, Meubels",
     "dontRepair": "Fietsen en verder alles wat niet meegenomen kan worden naar het repair cafe",
     "moreInfo": "",
-    "verified": true,
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-noord-zonneplein-tuindorp/",
-      "website": "https://www.jofelamsterdam.nl/",
+      "website": "https://www.jofelamsterdam.nl/"
+    },
+    "socials": {
       "instagram": "https://instagram.com/repaircafe_zonneplein"
     },
+    "verified": true,
     "slug": "zonneplein",
     "coordinate": [
       52.4130968,

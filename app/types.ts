@@ -1,10 +1,14 @@
+export type Links = {
+  [key: string]: string;
+};
+
 export type RC = {
   name: string;
   slug: string;
   open: string;
-  rrule: string;
-  startTime: string;
-  endTime: string;
+  rrule: string[];
+  startTime: string[];
+  endTime: string[];
   closed: string;
   closedRanges: string[];
   exceptions: string[];
@@ -15,18 +19,14 @@ export type RC = {
   moreInfo: string;
   coordinate: number[];
   email: string;
-  links?: {
-    orgPage?: string;
-    [key: string]: string | undefined;
-  };
+  links?: Links;
+  socials?: Links;
   verified: boolean;
 };
 
 export type EventRC = {
   name: string;
   slug: string;
-  startTime: string;
-  endTime: string;
   district: string;
   verified: boolean;
 };
@@ -34,6 +34,8 @@ export type EventRC = {
 export type Event = {
   date: Date;
   dateString: string;
+  startTime: string;
+  endTime: string;
   rc: EventRC;
 };
 

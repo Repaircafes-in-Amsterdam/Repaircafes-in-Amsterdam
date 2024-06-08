@@ -14,15 +14,20 @@ dayjs.extend(utc);
 dayjs.extend(timezone);
 dayjs.tz.setDefault("Europe/Amsterdam");
 
-function createEvent(rc: RC, date: Date): Event {
+function createEvent(
+  rc: RC,
+  date: Date,
+  startTime: string,
+  endTime: string,
+): Event {
   return {
     date,
     dateString: getDateString(date),
+    startTime,
+    endTime,
     rc: {
       name: rc.name,
       slug: rc.slug,
-      startTime: rc.startTime,
-      endTime: rc.endTime,
       district: rc.district,
       verified: rc.verified,
     },
@@ -46,32 +51,37 @@ export default function getEvents({
 
   for (const rc of rcs as RC[]) {
     if (!rc.rrule) continue;
+    rc.rrule.forEach((rrule: string, index: number) => {
+      const startTime = rc.startTime[index] || rc.startTime[0];
+      const endTime = rc.endTime[index] || rc.endTime[0];
+      const [hours, minutes] = startTime.split(":").map(Number);
+      const fullRRule = `${rrule};BYHOUR=${hours};BYMINUTE=${minutes};BYSECOND=0`;
 
-    const [hours, minutes] = rc.startTime.split(":").map(Number);
-    const fullRRule = `${rc.rrule};BYHOUR=${hours};BYMINUTE=${minutes};BYSECOND=0`;
+      const rule = rrulestr(fullRRule, {
+        // tzid: TIME_ZONE,
+      });
+      const occurrences = rule.between(startDate.toDate(), endDate.toDate());
+      // occurances.tzid(TIME_ZONE);
+      for (const occurrence of occurrences) {
+        const event: Event = createEvent(rc, occurrence, startTime, endTime);
 
-    const rule = rrulestr(fullRRule, {
-      // tzid: TIME_ZONE,
-    });
-    const occurrences = rule.between(startDate.toDate(), endDate.toDate());
-    // occurances.tzid(TIME_ZONE);
-    for (const occurrence of occurrences) {
-      const event: Event = createEvent(rc, occurrence);
-
-      if (eventFilter(event, rc)) {
-        events.push(event);
+        if (eventFilter(event, rc)) {
+          events.push(event);
+        }
       }
-    }
+    });
 
     // add exceptions
     for (const exception of rc.exceptions) {
-      const exceptionStartDate = dayjs.tz(`${exception} ${rc.startTime}`);
-      const exceptionEndDate = dayjs.tz(`${exception} ${rc.endTime}`);
+      const startTime = rc.startTime[0];
+      const endTime = rc.endTime[0];
+      const exceptionStartDate = dayjs.tz(`${exception} ${startTime}`);
+      const exceptionEndDate = dayjs.tz(`${exception} ${endTime}`);
       if (
         exceptionEndDate.isAfter(startDate) &&
         exceptionStartDate.isBefore(endDate)
       ) {
-        events.push(createEvent(rc, new Date(exception)));
+        events.push(createEvent(rc, new Date(exception), startTime, endTime));
       }
     }
   }
