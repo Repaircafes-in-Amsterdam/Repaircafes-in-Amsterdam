@@ -58,9 +58,8 @@ export default function RootLayout({
         )}
       >
         <TopBar />
-        <main className="flex min-h-px w-full shrink grow  justify-center overflow-y-auto md:overflow-y-visible">
+        <main className="flex min-h-px w-full shrink grow justify-center overflow-y-auto md:overflow-y-visible">
           {children}
-          <MapServer />
         </main>
         <Analytics />
         <SpeedInsights />

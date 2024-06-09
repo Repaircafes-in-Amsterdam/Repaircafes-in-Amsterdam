@@ -1,8 +1,8 @@
 "use client";
-import DistrictSelect from "./DistrictSelect";
-import OfficeHoursCheckbox from "./OfficeHoursCheckbox";
+import DistrictSelect from "../components/DistrictSelect";
+import OfficeHoursCheckbox from "../components/OfficeHoursCheckbox";
 import Upcoming from "./Upcoming";
-import { Event } from "./types";
+import { Event } from "../types";
 
 export default function ClientPage({ events }: { events: Event[] }) {
   return (

@@ -1,13 +1,13 @@
 "use client";
-import { Event, EventGroup } from "./types";
+import { Event, EventGroup } from "../types";
 import { Fragment } from "react";
 import ChevronRight from "@/app/icons/ChevronRight.svg?react";
 import Warning from "@/app/icons/Warning.svg?react";
 
 import Link from "next/link";
 import groupBy from "lodash/groupBy";
-import useDistrict from "./useDistrict";
-import useOfficeHours from "./useOfficeHours";
+import useDistrict from "../useDistrict";
+import useOfficeHours from "../useOfficeHours";
 
 function isDuringOfficeHours(event: Event) {
   const endTime = event.endTime;

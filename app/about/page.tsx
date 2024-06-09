@@ -4,7 +4,7 @@ import data from "@/data/data.json";
 import BasePage from "../components/BasePage";
 import { Metadata } from "next";
 import { BASE_URL } from "../constants";
-import DetailsSection from "../cafe/[slug]/DetailsSection";
+import DetailsSection from "@/app/components/DetailsSection";
 
 export const metadata: Metadata = {
   title: "Over ons - Repair Cafes in Amsterdam",

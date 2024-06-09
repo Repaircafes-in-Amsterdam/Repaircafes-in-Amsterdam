@@ -4,15 +4,15 @@ import ChevronRight from "@/app/icons/ChevronRight.svg?react";
 import Mail from "@/app/icons/Mail.svg?react";
 import ExternalLink from "@/app/icons/ExternalLink.svg?react";
 import BasePage from "@/app/components/BasePage";
-import DetailsSection from "./DetailsSection";
+import DetailsSection from "@/app/components/DetailsSection";
 import data from "@/data/data.json";
 import { RC, Event } from "@/app/types";
-import JsonLd from "../../components/JsonLd";
+import JsonLd from "@/app/components/JsonLd";
 import getCafeJsonLd from "./getCafeJsonLd";
 import getEvents from "@/app/getEvents";
 import { BASE_URL } from "@/app/constants";
 import Unconfirmed from "@/app/components/Unconfirmed";
-import LinksSection from "./LinksSection";
+import LinksSection from "@/app/components/LinksSection";
 
 export function generateMetadata({
   params,
