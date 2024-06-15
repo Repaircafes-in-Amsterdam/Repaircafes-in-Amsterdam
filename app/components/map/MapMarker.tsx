@@ -58,7 +58,10 @@ export default function MapMarker({
         icon={active || isHovered ? markerIconActive : markerIcon}
         position={position}
         eventHandlers={{
-          click: onClick,
+          click: () => {
+            setHoveredSlug("");
+            onClick();
+          },
           mouseover: () => setHoveredSlug(slug),
           mouseout: () => setHoveredSlug(""),
         }}
