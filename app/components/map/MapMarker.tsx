@@ -1,3 +1,4 @@
+import useHoverStore from "@/app/useHoverStore";
 import { DivIconOptions, divIcon, icon } from "leaflet";
 import { Marker } from "react-leaflet/Marker";
 import { Tooltip } from "react-leaflet/Tooltip";
@@ -37,23 +38,29 @@ export default function MapMarker({
   position,
   onClick,
   active,
+  slug,
   label,
   showLabel,
 }: {
   position: [number, number];
   onClick: () => void;
   active: boolean;
+  slug: string;
   label: string;
   showLabel: boolean;
 }) {
+  const { hoveredSlug, setHoveredSlug } = useHoverStore();
+  const isHovered = hoveredSlug === slug;
   return (
     <>
       <Marker icon={markerShadow} position={position} />
       <Marker
-        icon={active ? markerIconActive : markerIcon}
+        icon={active || isHovered ? markerIconActive : markerIcon}
         position={position}
         eventHandlers={{
           click: onClick,
+          mouseover: () => setHoveredSlug(slug),
+          mouseout: () => setHoveredSlug(""),
         }}
       >
         {showLabel && (

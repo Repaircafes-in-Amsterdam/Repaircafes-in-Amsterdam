@@ -1,13 +1,10 @@
 "use client";
 import { Event, EventGroup } from "../types";
 import { Fragment } from "react";
-import ChevronRight from "@/app/icons/ChevronRight.svg?react";
-import Warning from "@/app/icons/Warning.svg?react";
-
-import Link from "next/link";
 import groupBy from "lodash/groupBy";
 import useDistrict from "../useDistrict";
 import useOfficeHours from "../useOfficeHours";
+import UpcomingItem from "./UpcomingItem";
 
 function isDuringOfficeHours(event: Event) {
   const endTime = event.endTime;
@@ -49,17 +46,7 @@ export default function Upcoming({ events }: { events: Event[] }) {
           <ul className="mb-3 flex flex-col last:mb-0">
             {group.events.map(({ startTime, endTime, rc }) => (
               <li key={rc.slug}>
-                <Link
-                  href={`cafe/${rc.slug}`}
-                  className="flex cursor-pointer items-center gap-3 bg-blue px-3 py-1.5 text-white [@media(hover:hover)]:hover:bg-orange [@media(hover:hover)]:hover:text-blue-600"
-                >
-                  <div className="flex grow flex-col">
-                    <em className="font-semibold not-italic">{rc.name}</em>
-                    {startTime} - {endTime} in {rc.district}
-                  </div>
-                  {!rc.verified && <Warning />}
-                  <ChevronRight />
-                </Link>
+                <UpcomingItem {...{ startTime, endTime, rc }} />
               </li>
             ))}
           </ul>
