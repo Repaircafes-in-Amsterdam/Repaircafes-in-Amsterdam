@@ -23,7 +23,7 @@ export default function MapClient({ data }: { data: MapRC[] }) {
         <Map
           data={filteredData}
           active={slug}
-          onSelect={(slug: string) => router.push(`/cafe/${slug}`)}
+          onSelect={(slug: string) => router.push(slug ? `/cafe/${slug}` : "/")}
         />
       )}
     </div>

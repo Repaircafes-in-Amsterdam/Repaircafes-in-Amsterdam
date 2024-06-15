@@ -9,11 +9,12 @@ import MapMarker from "./MapMarker";
 import MapZoomControl from "./MapZoomControl";
 import MapZoomObserver from "./MapZoomObserver";
 import classes from "../../utils/classes";
+import { useMapEvent } from "react-leaflet/hooks";
 
-// function ClickOutside({ onClick }: { onClick: (slug: string) => void }) {
-//   useMapEvent("click", () => onClick(""));
-//   return null;
-// }
+function ClickOutside({ onClick }: { onClick: (slug: string) => void }) {
+  useMapEvent("click", () => onClick(""));
+  return null;
+}
 
 export default function Map({
   data,
@@ -57,7 +58,7 @@ export default function Map({
             showLabel={zoomLevel > 13}
           />
         ))}
-        {/* <ClickOutside onClick={onClick} /> */}
+        <ClickOutside onClick={() => onSelect && onSelect("")} />
         <MapZoomControl />
         <MapZoomObserver onZoom={setZoomLevel} />
       </MapContainer>
