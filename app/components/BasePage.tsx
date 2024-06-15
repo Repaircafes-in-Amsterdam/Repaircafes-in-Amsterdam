@@ -7,10 +7,12 @@ export default function BasePage({
   title,
   children,
   className,
+  enableBackHome = false,
 }: {
   title?: string;
   children: ReactNode;
   className?: string;
+  enableBackHome?: boolean;
 }) {
   return (
     <div
@@ -20,9 +22,14 @@ export default function BasePage({
       )}
     >
       <div className="sticky top-0 z-10 flex gap-3 bg-white p-3">
-        <BackButton>
+        <BackButton className="md:hidden">
           <ChevronLeft />
         </BackButton>
+        {enableBackHome && (
+          <BackButton backHome className="hidden md:block">
+            <ChevronLeft />
+          </BackButton>
+        )}
         <h1 className="font-bold">{title}</h1>
       </div>
       <div className="grow">{children}</div>

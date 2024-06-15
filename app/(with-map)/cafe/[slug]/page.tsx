@@ -54,10 +54,10 @@ export default function CafeServer({ params }: { params: { slug: string } }) {
 
 function CafeClient({ rc, next }: { rc: RC; next: string }) {
   return (
-    // TODO when in sidebar / md breakpoint, back should go to /
     <BasePage
       title={rc.name}
-      className="md:max-w-side min-h-px border-blue md:shrink-0 md:overflow-y-auto md:border-r-2"
+      enableBackHome
+      className="min-h-px border-blue md:max-w-side md:shrink-0 md:overflow-y-auto md:border-r-2"
     >
       {!rc.verified && <Unconfirmed className="mb-1.5" />}
       <div className="flex grow flex-col gap-2 overflow-y-auto px-3 pb-3">
