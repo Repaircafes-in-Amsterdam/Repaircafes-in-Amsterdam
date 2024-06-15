@@ -53,6 +53,7 @@ export default function Map({
             onClick={() => onSelect && onSelect(rc.slug)}
             active={rc.slug === active}
             label={rc.name}
+            slug={rc.slug}
             showLabel={zoomLevel > 13}
           />
         ))}

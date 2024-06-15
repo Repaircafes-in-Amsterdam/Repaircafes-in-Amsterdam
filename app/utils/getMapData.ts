@@ -11,5 +11,6 @@ export default function getMapData(): MapRC[] {
     open: rc.open,
     address: rc.address,
     verified: rc.verified,
+    district: rc.district,
   }));
 }

@@ -1,6 +1,6 @@
 "use client";
-import useOfficeHours from "./useOfficeHours";
-import Checkbox from "./components/Checkbox";
+import useOfficeHours from "../useOfficeHours";
+import Checkbox from "./Checkbox";
 
 export default function OfficeHoursCheckbox() {
   const { value, setValue } = useOfficeHours();

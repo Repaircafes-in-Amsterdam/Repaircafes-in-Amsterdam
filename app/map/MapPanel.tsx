@@ -5,7 +5,7 @@ import { MapRC } from "../types";
 import Header from "../components/Header";
 import ChevronRight from "@/app/icons/ChevronRight.svg?react";
 import Link from "next/link";
-import DetailsSection from "../cafe/[slug]/DetailsSection";
+import DetailsSection from "@/app/components/DetailsSection";
 import Unconfirmed from "../components/Unconfirmed";
 
 export default function MapPanel({

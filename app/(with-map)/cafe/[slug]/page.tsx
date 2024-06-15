@@ -4,15 +4,15 @@ import ChevronRight from "@/app/icons/ChevronRight.svg?react";
 import Mail from "@/app/icons/Mail.svg?react";
 import ExternalLink from "@/app/icons/ExternalLink.svg?react";
 import BasePage from "@/app/components/BasePage";
-import DetailsSection from "./DetailsSection";
+import DetailsSection from "@/app/components/DetailsSection";
 import data from "@/data/data.json";
 import { RC, Event } from "@/app/types";
-import JsonLd from "../../components/JsonLd";
+import JsonLd from "@/app/components/JsonLd";
 import getCafeJsonLd from "./getCafeJsonLd";
 import getEvents from "@/app/getEvents";
 import { BASE_URL } from "@/app/constants";
 import Unconfirmed from "@/app/components/Unconfirmed";
-import LinksSection from "./LinksSection";
+import LinksSection from "@/app/components/LinksSection";
 
 export function generateMetadata({
   params,
@@ -54,7 +54,11 @@ export default function CafeServer({ params }: { params: { slug: string } }) {
 
 function CafeClient({ rc, next }: { rc: RC; next: string }) {
   return (
-    <BasePage title={rc.name}>
+    <BasePage
+      title={rc.name}
+      enableBackHome
+      className="min-h-px border-blue md:max-w-side md:shrink-0 md:overflow-y-auto md:border-r-2"
+    >
       {!rc.verified && <Unconfirmed className="mb-1.5" />}
       <div className="flex grow flex-col gap-2 overflow-y-auto px-3 pb-3">
         <DetailsSection title="Geopend op">{rc.open}</DetailsSection>

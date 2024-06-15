@@ -2,7 +2,7 @@
 import { LegacyRef, ReactNode, forwardRef } from "react";
 import * as Select from "@radix-ui/react-select";
 import * as Label from "@radix-ui/react-label";
-import useDistrict, { options } from "./useDistrict";
+import useDistrict, { options } from "../useDistrict";
 import ChevronDown from "@/app/icons/ChevronDown.svg?react";
 import ChevronUp from "@/app/icons/ChevronUp.svg?react";
 import Check from "@/app/icons/Check.svg?react";

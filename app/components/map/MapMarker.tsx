@@ -1,3 +1,4 @@
+import useHoverStore from "@/app/useHoverStore";
 import { DivIconOptions, divIcon, icon } from "leaflet";
 import { Marker } from "react-leaflet/Marker";
 import { Tooltip } from "react-leaflet/Tooltip";
@@ -5,9 +6,9 @@ import { Tooltip } from "react-leaflet/Tooltip";
 // Can't add a shadow to a divIcon, so we need to use a regular icon for the shadow
 // We use a empty pixel as the icon, so it's not visible
 const markerShadow = icon({
-  iconUrl: "pixel.png",
-  shadowUrl: "rc-marker-shadow.png",
-  shadowRetinaUrl: "rc-marker-shadow-2x.png",
+  iconUrl: "/pixel.png",
+  shadowUrl: "/rc-marker-shadow.png",
+  shadowRetinaUrl: "/rc-marker-shadow-2x.png",
   shadowSize: [45, 33],
   shadowAnchor: [15, 29],
 });
@@ -37,23 +38,32 @@ export default function MapMarker({
   position,
   onClick,
   active,
+  slug,
   label,
   showLabel,
 }: {
   position: [number, number];
   onClick: () => void;
   active: boolean;
+  slug: string;
   label: string;
   showLabel: boolean;
 }) {
+  const { hoveredSlug, setHoveredSlug } = useHoverStore();
+  const isHovered = hoveredSlug === slug;
   return (
     <>
       <Marker icon={markerShadow} position={position} />
       <Marker
-        icon={active ? markerIconActive : markerIcon}
+        icon={active || isHovered ? markerIconActive : markerIcon}
         position={position}
         eventHandlers={{
-          click: onClick,
+          click: () => {
+            setHoveredSlug("");
+            onClick();
+          },
+          mouseover: () => setHoveredSlug(slug),
+          mouseout: () => setHoveredSlug(""),
         }}
       >
         {showLabel && (
