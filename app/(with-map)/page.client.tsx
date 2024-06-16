@@ -44,7 +44,7 @@ export default function ClientPage({
       </div>
       <Upcoming events={events} />
       <div className="px-3 pb-3" ref={loadMoreRef}>
-        Bezig met laden van meer...
+        {/* Bezig met laden van meer... */}
       </div>
     </div>
   );
