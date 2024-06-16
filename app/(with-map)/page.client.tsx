@@ -6,6 +6,7 @@ import { Event } from "../types";
 import { useEffect, useRef, useState } from "react";
 import getEvents from "@/app/actions/getEvents";
 import useIntersectionObserver from "@/app/utils/useIntersectionObserver";
+import useHoverStore from "../useHoverStore";
 
 export default function ClientPage({
   initialEvents,
@@ -23,6 +24,12 @@ export default function ClientPage({
     setEvents([...events, ...additionalEvents]);
     setOffset(offset + 1);
   };
+
+  // reset on hover on mount
+  const { setHoveredSlug } = useHoverStore();
+  useEffect(() => {
+    setHoveredSlug("");
+  }, [setHoveredSlug]);
 
   useEffect(() => {
     if (loadMoreVisible) loadMore();
