@@ -1,8 +1,9 @@
+"use server";
 import { rrulestr } from "rrule";
 import data from "@/data/data.json";
-import { RC, Event } from "./types";
-import getDateString from "./utils/getDateString";
-import eventFilter from "./eventFilter";
+import { RC, Event } from "../types";
+import getDateString from "@/app/utils/getDateString";
+import eventFilter from "@/app/utils/eventFilter";
 import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
@@ -36,16 +37,18 @@ function createEvent(
 
 // Get all events organized until next month
 // If a slug is provided, only get events for that Repair Café
-export default function getEvents({
+export default async function getEvents({
   slug,
-  months = 1,
+  monthsOffset = 0,
+  numMonths = 1,
 }: {
   slug?: string;
-  months?: number;
+  monthsOffset?: number;
+  numMonths?: number;
 } = {}) {
   const events: Event[] = [];
-  const startDate = dayjs().tz();
-  const endDate = startDate.add(months, "month");
+  const startDate = dayjs().tz().add(monthsOffset, "month");
+  const endDate = startDate.add(numMonths, "month");
 
   const rcs = slug ? data.filter((rc) => rc.slug === slug) : data;
 

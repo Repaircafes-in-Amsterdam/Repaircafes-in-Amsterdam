@@ -12,14 +12,16 @@ type Observer = {
 
 export default function useIntersectionObserver(
   reference: RefObject<Element> | null,
+  once: boolean = false,
 ) {
   const [isVisible, setIsVisible] = useState<boolean>(false);
 
   useEffect(() => {
     const handleIntersect = (entries: Entry[], observer: Observer) => {
-      if (entries[0].isIntersecting) {
-        setIsVisible(true);
-        observer.unobserve(entries[0].target);
+      const entry = entries[0];
+      setIsVisible(entry.isIntersecting);
+      if (once && entry.isIntersecting) {
+        observer.unobserve(entry.target);
         observer.disconnect();
       }
     };
@@ -34,7 +36,7 @@ export default function useIntersectionObserver(
 
     // If unmounting, disconnect the observer
     return () => observer.disconnect();
-  }, [reference]);
+  }, [reference, once]);
 
   return isVisible;
 }

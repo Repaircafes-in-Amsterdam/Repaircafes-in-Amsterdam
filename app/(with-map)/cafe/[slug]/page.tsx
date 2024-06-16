@@ -9,7 +9,7 @@ import data from "@/data/data.json";
 import { RC, Event } from "@/app/types";
 import JsonLd from "@/app/components/JsonLd";
 import getCafeJsonLd from "./getCafeJsonLd";
-import getEvents from "@/app/getEvents";
+import getEvents from "@/app/actions/getEvents";
 import { BASE_URL } from "@/app/constants";
 import Unconfirmed from "@/app/components/Unconfirmed";
 import LinksSection from "@/app/components/LinksSection";
@@ -34,7 +34,11 @@ function getMapsLink(adres: string) {
   return `https://maps.google.com?q=${encodeURIComponent(fullAdres)}`;
 }
 
-export default function CafeServer({ params }: { params: { slug: string } }) {
+export default async function CafeServer({
+  params,
+}: {
+  params: { slug: string };
+}) {
   const rc = data.find((rc) => rc.slug === params.slug) as RC;
   if (!rc) {
     return (
@@ -46,7 +50,7 @@ export default function CafeServer({ params }: { params: { slug: string } }) {
     );
   }
 
-  const events: Event[] = getEvents({ slug: rc.slug, months: 3 });
+  const events: Event[] = await getEvents({ slug: rc.slug, numMonths: 3 });
   const next = events[0]?.dateString;
 
   return <CafeClient rc={rc} next={next} />;

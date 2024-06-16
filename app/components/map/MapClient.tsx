@@ -15,7 +15,7 @@ export default function MapClient({ data }: { data: MapRC[] }) {
   const { slug } = useParams<{ slug: string }>();
   const Map = useMap();
   const mapRef = useRef(null);
-  const isMapVisible = useIntersectionObserver(mapRef);
+  const isMapVisible = useIntersectionObserver(mapRef, true);
 
   return (
     <div className="hidden h-full w-full md:flex" ref={mapRef}>

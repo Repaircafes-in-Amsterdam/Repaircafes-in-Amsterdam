@@ -1,9 +1,9 @@
-import { RC, Event } from "./types";
+import { RC, Event } from "../types";
 import holidaysData from "@/data/holidays-data.json";
 import schoolHolidaysData from "@/data/school-holidays-data.json";
-import isDuring from "./utils/findHoliday";
-import findHoliday from "./utils/findHoliday";
-import isDateInRange from "./utils/isDateInRange";
+import isDuring from "./findHoliday";
+import findHoliday from "./findHoliday";
+import isDateInRange from "./isDateInRange";
 
 const summerHolidaysData = schoolHolidaysData.filter(
   (holiday) => holiday.name === "Zomervakantie",
