@@ -12,7 +12,10 @@ import classes from "../../utils/classes";
 import { useMapEvent } from "react-leaflet/hooks";
 
 function ClickOutside({ onClick }: { onClick: (slug: string) => void }) {
-  useMapEvent("click", () => onClick(""));
+  useMapEvent("click", (event) => {
+    const target = event.originalEvent.target as HTMLElement;
+    if (target?.id === "map-container") onClick("");
+  });
   return null;
 }
 
@@ -36,6 +39,7 @@ export default function Map({
     <div className={classes("relative flex h-full w-full flex-col", className)}>
       <div id="zoom-control-portal" className="relative"></div>
       <MapContainer
+        id="map-container"
         className="relative z-0 h-full w-full"
         bounds={bounds}
         scrollWheelZoom={true}
