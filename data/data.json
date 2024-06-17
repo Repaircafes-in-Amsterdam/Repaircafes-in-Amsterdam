@@ -817,6 +817,40 @@
     ]
   },
   {
+    "name": "Kids Repair middag WG",
+    "address": "Nicolaas Beetsstraat 325",
+    "open": "Elke 2e en 4e woensdag middag 14:00 - 16:00",
+    "rrule": [
+      "FREQ=MONTHLY;INTERVAL=1;BYDAY=2WE,4WE"
+    ],
+    "startTime": [
+      "14:00"
+    ],
+    "endTime": [
+      "16:00"
+    ],
+    "closed": "2e en 4e woensdag in juli en 2e woensdag in augustus",
+    "closedRanges": [
+      "07",
+      "08-01:08-14"
+    ],
+    "exceptions": [],
+    "district": "West",
+    "email": "r.riede@hccnet.nl",
+    "doRepair": "Uitsluitend kinderspeelgoed",
+    "dontRepair": "Textielreparaties zoals knuffels, verder bijna alle speelgoed.",
+    "moreInfo": "Kinderen komen met een ouder en gaan samen met een reparateur aan de slag. Graag vooraf laten weten dat je komt en met wat voor soort reparatievraag. Bijeenkomsten zijn in het ToekomsthuisWG naast Lab111",
+    "links": {
+      "website": "https://www.toekomsthuiswg.nl/kids-repair-middag/"
+    },
+    "verified": true,
+    "slug": "kids-repair-middag-wg",
+    "coordinate": [
+      52.363659,
+      4.86729
+    ]
+  },
+  {
     "name": "Osdorp",
     "address": "Tussen Meer 68",
     "open": "Elke donderdagochtend 10:00 - 12:00",
