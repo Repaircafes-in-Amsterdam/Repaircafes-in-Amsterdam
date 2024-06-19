@@ -951,7 +951,7 @@
     ]
   },
   {
-    "name": "Repairclub",
+    "name": "Repairclub Jacob Maris",
     "address": "Columbusplein 253",
     "open": "Elke woensdag avond 20:00-22:00",
     "rrule": [
@@ -963,19 +963,19 @@
     "endTime": [
       "22:00"
     ],
-    "closed": "",
+    "closed": "Zomervakantie",
     "closedRanges": [],
     "exceptions": [],
     "district": "West",
     "email": "info@jacobmaris.com",
-    "doRepair": "",
-    "dontRepair": "",
+    "doRepair": "Electronica, Kleding, Fietsen, Meubels",
+    "dontRepair": "Kleine electronica zoals mobiele telefoons, fotocamera's, e.d.",
     "moreInfo": "",
     "links": {
       "website": "https://jacobmaris.com/activiteiten/volwassenen/repairclub/"
     },
-    "verified": false,
-    "slug": "repairclub",
+    "verified": true,
+    "slug": "repairclub-jacob-maris",
     "coordinate": [
       52.36571,
       4.85528
