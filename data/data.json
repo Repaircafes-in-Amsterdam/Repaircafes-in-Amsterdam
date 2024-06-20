@@ -517,21 +517,21 @@
     "endTime": [
       "16:30"
     ],
-    "closed": "Zomervakantie en kerstvakantie",
+    "closed": "Zomervakantie en kerstvakantie.\nWij volgen de vakantie kalender v/d Meevaart.",
     "closedRanges": [
       "2024-09-01:2024-09-09"
     ],
     "exceptions": [],
     "district": "Oost",
     "email": "repaircafe.demeevaart@gmail.com",
-    "doRepair": "",
-    "dontRepair": "",
+    "doRepair": "Electronica, Kleding",
+    "dontRepair": "Mobiele telefoons",
     "moreInfo": "",
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-oost-de-meevaart/",
       "website": "https://repaircafe-demeevaart-amsterdam-oost.nl/"
     },
-    "verified": false,
+    "verified": true,
     "slug": "de-meevaart",
     "coordinate": [
       52.36300920000001,
@@ -1160,20 +1160,20 @@
     "endTime": [
       "16:30"
     ],
-    "closed": "Juli en augustus",
+    "closed": "Juli en augustus\nVolgen vakantie kalender t Kruidvat",
     "closedRanges": [
       "07:08"
     ],
     "exceptions": [],
     "district": "Diemen",
     "email": "repaircafe@duurzaamdorpdiemen.nl",
-    "doRepair": "",
-    "dontRepair": "",
+    "doRepair": "Electronica, Kleding",
+    "dontRepair": "Mobiele telefoons",
     "moreInfo": "",
     "links": {
       "website": "http://www.duurzaamdorpdiemen.nl/p/repair-cafe.html"
     },
-    "verified": false,
+    "verified": true,
     "slug": "t-kruidvat",
     "coordinate": [
       52.33423,
