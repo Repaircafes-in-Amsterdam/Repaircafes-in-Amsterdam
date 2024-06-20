@@ -517,8 +517,10 @@
     "endTime": [
       "16:30"
     ],
-    "closed": "Zomervakantie",
-    "closedRanges": [],
+    "closed": "Zomervakantie en kerstvakantie",
+    "closedRanges": [
+      "2024-09-01:2024-09-09"
+    ],
     "exceptions": [],
     "district": "Oost",
     "email": "repaircafe.demeevaart@gmail.com",
