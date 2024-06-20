@@ -5,10 +5,6 @@ import isDuring from "./findHoliday";
 import findHoliday from "./findHoliday";
 import isDateInRange from "./isDateInRange";
 
-const summerHolidaysData = schoolHolidaysData.filter(
-  (holiday) => holiday.name === "Zomervakantie",
-);
-
 export default function eventFilter(event: Event, rc: RC) {
   const closed = rc.closed.toLowerCase();
 
@@ -23,11 +19,14 @@ export default function eventFilter(event: Event, rc: RC) {
   )
     return false;
 
-  if (
-    closed.includes("zomervakantie") &&
-    findHoliday(event.date, summerHolidaysData)
-  )
-    return false;
+  for (const holiday of schoolHolidaysData) {
+    if (
+      closed.includes(holiday.name.toLowerCase()) &&
+      findHoliday(event.date, [holiday])
+    ) {
+      return false;
+    }
+  }
 
   return true;
 }
