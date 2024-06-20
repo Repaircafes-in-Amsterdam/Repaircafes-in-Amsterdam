@@ -35,8 +35,14 @@ async function updateData(url, fileName, transform) {
     // Add a day to the end date to make it include the end date
     const endDate = new Date(item.endDate);
     endDate.setDate(endDate.getDate() + 1);
+
+    const name = item.name[0].text;
+    if (name === "Koningsdag" && item.startDate === "2025-04-27") {
+      item.startDate = item.endDate = "2025-04-26";
+    }
+
     return {
-      name: item.name[0].text,
+      name,
       startDate: item.startDate,
       endDate: item.endDate,
       startTime: new Date(item.startDate).getTime(),

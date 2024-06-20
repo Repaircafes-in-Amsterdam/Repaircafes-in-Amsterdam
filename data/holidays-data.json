@@ -1,19 +1,5 @@
 [
   {
-    "name": "Eerste pinksterdag",
-    "startDate": "2024-05-19",
-    "endDate": "2024-05-19",
-    "startTime": 1716076800000,
-    "endTime": 1716163200000
-  },
-  {
-    "name": "Tweede pinksterdag",
-    "startDate": "2024-05-20",
-    "endDate": "2024-05-20",
-    "startTime": 1716163200000,
-    "endTime": 1716249600000
-  },
-  {
     "name": "Eerste kerstdag",
     "startDate": "2024-12-25",
     "endDate": "2024-12-25",
@@ -57,9 +43,9 @@
   },
   {
     "name": "Koningsdag",
-    "startDate": "2025-04-27",
-    "endDate": "2025-04-27",
-    "startTime": 1745712000000,
+    "startDate": "2025-04-26",
+    "endDate": "2025-04-26",
+    "startTime": 1745625600000,
     "endTime": 1745798400000
   },
   {
@@ -152,5 +138,19 @@
     "endDate": "2026-05-14",
     "startTime": 1778716800000,
     "endTime": 1778803200000
+  },
+  {
+    "name": "Eerste pinksterdag",
+    "startDate": "2026-05-24",
+    "endDate": "2026-05-24",
+    "startTime": 1779580800000,
+    "endTime": 1779667200000
+  },
+  {
+    "name": "Tweede pinksterdag",
+    "startDate": "2026-05-25",
+    "endDate": "2026-05-25",
+    "startTime": 1779667200000,
+    "endTime": 1779753600000
   }
 ]
