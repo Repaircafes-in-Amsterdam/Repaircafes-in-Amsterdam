@@ -4,7 +4,7 @@ import Warning from "@/app/icons/Warning.svg?react";
 import { EventRC } from "../types";
 import useHoverStore from "../useHoverStore";
 import classes from "../utils/classes";
-import { useSearchParams } from "next/navigation";
+import useLinkPostfix from "../utils/useLinkPostfix";
 
 export default function UpcomingItem({
   startTime,
@@ -15,12 +15,12 @@ export default function UpcomingItem({
   endTime: string;
   rc: EventRC;
 }) {
-  const searchParams = useSearchParams();
+  const linkPostfix = useLinkPostfix();
   const { hoveredSlug, setHoveredSlug } = useHoverStore();
   const isHovered = hoveredSlug === rc.slug;
   return (
     <Link
-      href={`cafe/${rc.slug}?${searchParams.toString()}`}
+      href={`cafe/${rc.slug}${linkPostfix}`}
       className={classes(
         "flex cursor-pointer items-center gap-3  px-3 py-1.5 [@media(hover:hover)]:hover:bg-orange [@media(hover:hover)]:hover:text-blue-600",
         isHovered ? "bg-orange text-blue-600" : "bg-blue text-white",

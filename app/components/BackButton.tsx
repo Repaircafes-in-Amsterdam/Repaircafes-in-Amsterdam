@@ -1,7 +1,8 @@
 "use client";
 import Link from "next/link";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { ReactNode } from "react";
+import useLinkPostfix from "../utils/useLinkPostfix";
 
 export default function BackButton({
   className,
@@ -12,11 +13,11 @@ export default function BackButton({
   children: ReactNode;
   backHome?: boolean;
 }) {
-  const searchParams = useSearchParams();
+  const linkPostfix = useLinkPostfix();
   const router = useRouter();
   return (
     <Link
-      href={`/?${searchParams.toString()}`}
+      href={`/${linkPostfix}`}
       className={className}
       aria-label="Go back"
       title="Go back"
