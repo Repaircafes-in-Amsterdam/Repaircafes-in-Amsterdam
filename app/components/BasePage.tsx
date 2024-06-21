@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode, Suspense } from "react";
 import ChevronLeft from "@/app/icons/ChevronLeft.svg?react";
 import BackButton from "./BackButton";
 import classes from "../utils/classes";
@@ -7,11 +7,13 @@ export default function BasePage({
   title,
   children,
   className,
+  enableBack = true,
   enableBackHome = false,
 }: {
   title?: string;
   children: ReactNode;
   className?: string;
+  enableBack?: boolean;
   enableBackHome?: boolean;
 }) {
   return (
@@ -22,9 +24,11 @@ export default function BasePage({
       )}
     >
       <div className="sticky top-0 z-10 flex gap-3 bg-white p-3">
-        <BackButton className="md:hidden">
-          <ChevronLeft />
-        </BackButton>
+        <Suspense>
+          <BackButton className="md:hidden">
+            <ChevronLeft />
+          </BackButton>
+        </Suspense>
         {enableBackHome && (
           <BackButton backHome className="hidden md:block">
             <ChevronLeft />
