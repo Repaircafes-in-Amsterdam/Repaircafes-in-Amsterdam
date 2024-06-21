@@ -22,17 +22,19 @@ export default function LinksSection({
           <li key={type}>
             <Link
               href={href as string}
-              className="mt-1 flex gap-1"
+              className="mt-1 flex items-center gap-1"
               rel="noreferrer"
               target="_blank"
             >
               <ExternalLink className="shrink-0" />
-              <strong className="font-medium">
-                {type === "orgPage"
-                  ? "Repaircafe.org pagina"
-                  : upperFirst(type)}
-              </strong>
-              van {name}
+              <div>
+                <strong className="font-medium">
+                  {type === "orgPage"
+                    ? "Repaircafe.org pagina"
+                    : upperFirst(type)}
+                </strong>{" "}
+                van {name}
+              </div>
             </Link>
           </li>
         ))}
