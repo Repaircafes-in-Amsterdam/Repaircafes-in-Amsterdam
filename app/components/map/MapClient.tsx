@@ -1,5 +1,5 @@
 "use client";
-import { useParams, useRouter } from "next/navigation";
+import { useParams, useRouter, useSearchParams } from "next/navigation";
 import { MapRC } from "@/app/types";
 import useDistrict from "@/app/useDistrict";
 import useIntersectionObserver from "@/app/utils/useIntersectionObserver";
@@ -16,6 +16,7 @@ export default function MapClient({ data }: { data: MapRC[] }) {
   const Map = useMap();
   const mapRef = useRef(null);
   const isMapVisible = useIntersectionObserver(mapRef, true);
+  const searchParams = useSearchParams();
 
   return (
     <div className="hidden h-full w-full md:flex" ref={mapRef}>
@@ -23,7 +24,11 @@ export default function MapClient({ data }: { data: MapRC[] }) {
         <Map
           data={filteredData}
           active={slug}
-          onSelect={(slug: string) => router.push(slug ? `/cafe/${slug}` : "/")}
+          onSelect={(slug: string) =>
+            router.push(
+              (slug ? `/cafe/${slug}` : "/") + "?" + searchParams.toString(),
+            )
+          }
         />
       )}
     </div>
