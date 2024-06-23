@@ -16,8 +16,8 @@ export default function UpcomingItem({
   rc: EventRC;
 }) {
   const linkPostfix = useLinkPostfix();
-  const { hoveredMarker, setHoveredRow } = useHoverStore();
-  const isHovered = hoveredMarker === rc.slug;
+  const isHovered = useHoverStore((state) => state.hoveredMarker === rc.slug);
+  const setHoveredRow = useHoverStore((state) => state.setHoveredRow);
   return (
     <Link
       href={`cafe/${rc.slug}${linkPostfix}`}

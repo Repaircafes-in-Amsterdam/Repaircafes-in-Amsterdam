@@ -49,8 +49,10 @@ export default function MapMarker({
   label: string;
   showLabel: boolean;
 }) {
-  const { hoveredRow, hoveredMarker, setHoveredMarker } = useHoverStore();
-  const isHovered = hoveredRow === slug || hoveredMarker === slug;
+  const isHovered = useHoverStore(
+    (state) => state.hoveredRow === slug || state.hoveredMarker === slug,
+  );
+  const setHoveredMarker = useHoverStore((state) => state.setHoveredMarker);
   return (
     <>
       <Marker icon={markerShadow} position={position} />

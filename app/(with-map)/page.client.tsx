@@ -29,7 +29,8 @@ export default function ClientPage({
   };
 
   // reset on hover on mount
-  const { setHoveredMarker, setHoveredRow } = useHoverStore();
+  const setHoveredMarker = useHoverStore((state) => state.setHoveredMarker);
+  const setHoveredRow = useHoverStore((state) => state.setHoveredRow);
   useEffect(() => {
     setHoveredMarker("");
     setHoveredRow("");
