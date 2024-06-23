@@ -7,6 +7,7 @@ import { useEffect, useRef, useState } from "react";
 import getEvents from "@/app/actions/getEvents";
 import useIntersectionObserver from "@/app/utils/useIntersectionObserver";
 import useHoverStore from "../useHoverStore";
+import classes from "../utils/classes";
 
 export default function ClientPage({
   initialEvents,
@@ -17,12 +18,14 @@ export default function ClientPage({
   const [events, setEvents] = useState<Event[]>(initialEvents);
   const loadMoreRef = useRef(null);
   const loadMoreVisible = useIntersectionObserver(loadMoreRef);
-  loadMoreRef;
+  const [loadingMore, setLoadingMore] = useState(false);
 
   const loadMore = async () => {
+    setLoadingMore(true);
     const additionalEvents = await getEvents({ monthsOffset: offset });
     setEvents([...events, ...additionalEvents]);
     setOffset(offset + 1);
+    setLoadingMore(false);
   };
 
   // reset on hover on mount
@@ -44,7 +47,10 @@ export default function ClientPage({
         <OfficeHoursCheckbox />
       </div>
       <Upcoming events={events} />
-      <div className="px-3 pb-3" ref={loadMoreRef}>
+      <div
+        className={classes("px-3 pb-3", loadingMore && "hidden")}
+        ref={loadMoreRef}
+      >
         {/* Bezig met laden van meer... */}
       </div>
     </div>
