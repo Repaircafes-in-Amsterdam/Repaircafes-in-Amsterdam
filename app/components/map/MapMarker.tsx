@@ -49,8 +49,8 @@ export default function MapMarker({
   label: string;
   showLabel: boolean;
 }) {
-  const { hoveredSlug, setHoveredSlug } = useHoverStore();
-  const isHovered = hoveredSlug === slug;
+  const { hoveredRow, hoveredMarker, setHoveredMarker } = useHoverStore();
+  const isHovered = hoveredRow === slug || hoveredMarker === slug;
   return (
     <>
       <Marker icon={markerShadow} position={position} />
@@ -59,11 +59,11 @@ export default function MapMarker({
         position={position}
         eventHandlers={{
           click: () => {
-            setHoveredSlug("");
+            setHoveredMarker("");
             onClick();
           },
-          mouseover: () => setHoveredSlug(slug),
-          mouseout: () => setHoveredSlug(""),
+          mouseover: () => setHoveredMarker(slug),
+          mouseout: () => setHoveredMarker(""),
         }}
       >
         {showLabel && (

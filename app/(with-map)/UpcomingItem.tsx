@@ -16,8 +16,8 @@ export default function UpcomingItem({
   rc: EventRC;
 }) {
   const linkPostfix = useLinkPostfix();
-  const { hoveredSlug, setHoveredSlug } = useHoverStore();
-  const isHovered = hoveredSlug === rc.slug;
+  const { hoveredMarker, setHoveredRow } = useHoverStore();
+  const isHovered = hoveredMarker === rc.slug;
   return (
     <Link
       href={`cafe/${rc.slug}${linkPostfix}`}
@@ -26,10 +26,10 @@ export default function UpcomingItem({
         isHovered ? "bg-orange text-blue-600" : "bg-blue text-white",
       )}
       onPointerOver={(event) =>
-        event.pointerType !== "touch" && setHoveredSlug(rc.slug)
+        event.pointerType !== "touch" && setHoveredRow(rc.slug)
       }
       onPointerOut={(event) =>
-        event.pointerType !== "touch" && setHoveredSlug("")
+        event.pointerType !== "touch" && setHoveredRow("")
       }
     >
       <div className="flex grow flex-col">

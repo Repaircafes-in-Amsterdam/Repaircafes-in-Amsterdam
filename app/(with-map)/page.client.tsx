@@ -26,10 +26,11 @@ export default function ClientPage({
   };
 
   // reset on hover on mount
-  const { setHoveredSlug } = useHoverStore();
+  const { setHoveredMarker, setHoveredRow } = useHoverStore();
   useEffect(() => {
-    setHoveredSlug("");
-  }, [setHoveredSlug]);
+    setHoveredMarker("");
+    setHoveredRow("");
+  }, [setHoveredMarker, setHoveredRow]);
 
   useEffect(() => {
     if (loadMoreVisible) loadMore();
