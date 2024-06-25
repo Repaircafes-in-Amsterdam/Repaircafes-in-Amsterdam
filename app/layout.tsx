@@ -18,6 +18,8 @@ export const metadata: Metadata = {
   description:
     "Agenda en kaart van van alle Repair Cafés in Amsterdam. Zie duidelijk wanneer ze open zijn en waar ze te bezoeken zijn",
   keywords: [
+    "repaircafe",
+    "repaircafes",
     "repair café",
     "repair cafe",
     "amsterdam",
@@ -32,6 +34,8 @@ export const metadata: Metadata = {
     "repair",
     "overzicht",
     "overview",
+    "locaties",
+    "locations",
   ],
   alternates: {
     canonical: BASE_URL,
