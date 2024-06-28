@@ -450,9 +450,9 @@
     "endTime": [
       "16:00"
     ],
-    "closed": "Meestal in Augustus",
+    "closed": "Meestal zomermaanden juli en augustus",
     "closedRanges": [
-      "08"
+      "07:08"
     ],
     "exceptions": [
       "2025-04-18"
