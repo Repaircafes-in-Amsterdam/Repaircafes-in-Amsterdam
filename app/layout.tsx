@@ -6,7 +6,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import TopBar from "./TopBar";
 import classes from "./utils/classes";
 import { BASE_URL } from "./constants";
-import MapServer from "./components/map/MapServer";
+import HoverResetter from "./components/HoverResetter";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -65,6 +65,7 @@ export default function RootLayout({
         <main className="flex min-h-px w-full shrink grow justify-center overflow-y-auto md:overflow-y-visible">
           {children}
         </main>
+        <HoverResetter />
         <Analytics />
         <SpeedInsights />
       </body>

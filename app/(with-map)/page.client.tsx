@@ -24,14 +24,6 @@ export default function ClientPage({
     setOffset(offset + 1);
   };
 
-  // reset on hover on mount
-  const setHoveredMarker = useHoverStore((state) => state.setHoveredMarker);
-  const setHoveredRow = useHoverStore((state) => state.setHoveredRow);
-  useEffect(() => {
-    setHoveredMarker("");
-    setHoveredRow("");
-  }, [setHoveredMarker, setHoveredRow]);
-
   return (
     <BasePage showHeader={false} title="Agenda" side>
       <div className="flex flex-wrap gap-x-3 gap-y-2 px-3 py-3">
