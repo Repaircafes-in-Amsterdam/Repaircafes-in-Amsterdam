@@ -7,8 +7,6 @@ export default function BasePage({
   title,
   children,
   className,
-  // TODO remove?
-  enableBack = true,
   enableBackHome = false,
   showHeader = true,
   side = false,
@@ -16,7 +14,6 @@ export default function BasePage({
   title?: string;
   children: ReactNode;
   className?: string;
-  enableBack?: boolean;
   enableBackHome?: boolean;
   showHeader?: boolean;
   side?: boolean;
