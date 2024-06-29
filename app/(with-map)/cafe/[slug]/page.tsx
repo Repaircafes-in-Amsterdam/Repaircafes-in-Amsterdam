@@ -58,11 +58,7 @@ export default async function CafeServer({
 
 function CafeClient({ rc, next }: { rc: RC; next: string }) {
   return (
-    <BasePage
-      title={rc.name}
-      enableBackHome
-      className="min-h-px border-blue md:max-w-side md:shrink-0 md:overflow-y-auto md:border-r-2"
-    >
+    <BasePage title={rc.name} enableBackHome side>
       {!rc.verified && <Unconfirmed className="mb-1.5" />}
       <div className="flex grow flex-col gap-2 overflow-y-auto px-3 pb-3">
         <DetailsSection title="Geopend op">{rc.open}</DetailsSection>

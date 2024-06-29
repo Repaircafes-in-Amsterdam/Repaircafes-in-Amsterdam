@@ -8,6 +8,7 @@ import getEvents from "@/app/actions/getEvents";
 import useIntersectionObserver from "@/app/utils/useIntersectionObserver";
 import useHoverStore from "../useHoverStore";
 import LoadMore from "../components/LoadMore";
+import BasePage from "../components/BasePage";
 
 export default function ClientPage({
   initialEvents,
@@ -32,14 +33,13 @@ export default function ClientPage({
   }, [setHoveredMarker, setHoveredRow]);
 
   return (
-    <div className="flex min-h-px w-full max-w-body flex-col border-blue md:max-w-side md:shrink-0 md:overflow-y-auto md:border-r-2">
-      <h1 className="sr-only">Agenda</h1>
+    <BasePage showHeader={false} title="Agenda" side>
       <div className="flex flex-wrap gap-x-3 gap-y-2 px-3 py-3">
         <DistrictSelect />
         <OfficeHoursCheckbox />
       </div>
       <Upcoming events={events} />
       <LoadMore loadMore={loadMore} />
-    </div>
+    </BasePage>
   );
 }
