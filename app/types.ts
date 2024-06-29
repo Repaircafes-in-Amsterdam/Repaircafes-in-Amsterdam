@@ -37,6 +37,8 @@ export type Event = {
   startTime: string;
   endTime: string;
   rc: EventRC;
+  closedCause?: string;
+  exceptionCause?: string;
 };
 
 export type EventGroup = {

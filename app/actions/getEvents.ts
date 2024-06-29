@@ -3,7 +3,7 @@ import { rrulestr } from "rrule";
 import data from "@/data/data.json";
 import { RC, Event } from "../types";
 import getDateString from "@/app/utils/getDateString";
-import eventFilter from "@/app/utils/eventFilter";
+import isClosed from "@/app/utils/isClosed";
 import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
@@ -15,17 +15,28 @@ dayjs.extend(utc);
 dayjs.extend(timezone);
 dayjs.tz.setDefault("Europe/Amsterdam");
 
-function createEvent(
-  rc: RC,
-  date: Date,
-  startTime: string,
-  endTime: string,
-): Event {
+function createEvent({
+  rc,
+  date,
+  startTime,
+  endTime,
+  closedCause,
+  exceptionCause,
+}: {
+  rc: RC;
+  date: Date;
+  startTime: string;
+  endTime: string;
+  closedCause?: string;
+  exceptionCause?: string;
+}): Event {
   return {
     date,
     dateString: getDateString(date),
     startTime,
     endTime,
+    closedCause,
+    exceptionCause,
     rc: {
       name: rc.name,
       slug: rc.slug,
@@ -41,10 +52,12 @@ export default async function getEvents({
   slug,
   monthsOffset = 0,
   numMonths = 1,
+  debug = false,
 }: {
   slug?: string;
   monthsOffset?: number;
   numMonths?: number;
+  debug?: boolean;
 } = {}) {
   const events: Event[] = [];
   const startDate = dayjs().tz().add(monthsOffset, "month");
@@ -66,9 +79,18 @@ export default async function getEvents({
       const occurrences = rule.between(startDate.toDate(), endDate.toDate());
       // occurances.tzid(TIME_ZONE);
       for (const occurrence of occurrences) {
-        const event: Event = createEvent(rc, occurrence, startTime, endTime);
+        const event: Event = createEvent({
+          rc,
+          date: occurrence,
+          startTime,
+          endTime,
+        });
 
-        if (eventFilter(event, rc)) {
+        const closedCause = isClosed(event, rc);
+        if (debug && closedCause) {
+          event.closedCause = closedCause;
+        }
+        if (!closedCause || debug) {
           events.push(event);
         }
       }
@@ -84,7 +106,15 @@ export default async function getEvents({
         exceptionEndDate.isAfter(startDate) &&
         exceptionStartDate.isBefore(endDate)
       ) {
-        events.push(createEvent(rc, new Date(exception), startTime, endTime));
+        events.push(
+          createEvent({
+            rc,
+            date: new Date(exception),
+            startTime,
+            endTime,
+            exceptionCause: exception,
+          }),
+        );
       }
     }
   }
