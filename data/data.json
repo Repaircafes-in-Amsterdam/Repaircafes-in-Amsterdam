@@ -1081,40 +1081,6 @@
     ]
   },
   {
-    "name": "Sloterdijk Zuid",
-    "address": "Velserweg 24",
-    "open": "Elke vrijdagmiddag 13:00 - 15:00",
-    "rrule": [
-      "FREQ=WEEKLY;BYDAY=FR;INTERVAL=1"
-    ],
-    "startTime": [
-      "13:00"
-    ],
-    "endTime": [
-      "15:00"
-    ],
-    "closed": "",
-    "closedRanges": [],
-    "exceptions": [],
-    "district": "West",
-    "email": "frank.nijhoff38@gmail.com",
-    "doRepair": "Apparaten m/z elektra, lijmen, slijpen",
-    "dontRepair": "Electronica, dus waar het probleem op de printplaat zit",
-    "moreInfo": "Graag het hele apparaat meenemen",
-    "links": {
-      "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-sloterdijk-zuid/"
-    },
-    "socials": {
-      "facebook": "https://www.facebook.com/p/Repair-Cafe-Sloterdijk-Zuid-100064030538627/"
-    },
-    "verified": true,
-    "slug": "sloterdijk-zuid",
-    "coordinate": [
-      52.3862968,
-      4.8455553
-    ]
-  },
-  {
     "name": "Slotervaart De Kas",
     "address": "Jan Tooropstraat 8",
     "open": "Elke vrijdag middag 14:00 - 16:00",
