@@ -31,7 +31,7 @@ export default function EventsClient({
   };
 
   return (
-    <BasePage title={rc.name} enableBackHome side>
+    <BasePage title={rc.name} side>
       <div className="flex grow flex-col gap-2 overflow-y-auto px-3 pb-3">
         <DetailsSection title="Geopend op">{rc.open}</DetailsSection>
         {rc.rrule && (
