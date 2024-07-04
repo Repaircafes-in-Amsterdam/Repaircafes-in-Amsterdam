@@ -3,10 +3,8 @@ import DistrictSelect from "../components/DistrictSelect";
 import OfficeHoursCheckbox from "../components/OfficeHoursCheckbox";
 import Upcoming from "./Upcoming";
 import { Event } from "../types";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import getEvents from "@/app/actions/getEvents";
-import useIntersectionObserver from "@/app/utils/useIntersectionObserver";
-import useHoverStore from "../useHoverStore";
 import LoadMore from "../components/LoadMore";
 import BasePage from "../components/BasePage";
 
