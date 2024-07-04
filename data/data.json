@@ -553,8 +553,10 @@
     "endTime": [
       "16:00"
     ],
-    "closed": "",
-    "closedRanges": [],
+    "closed": "December",
+    "closedRanges": [
+      "12"
+    ],
     "exceptions": [],
     "district": "Zuid",
     "email": "repaircafedepijp@gmail.com",
