@@ -4,6 +4,7 @@ import { Metadata } from "next";
 import { BASE_URL } from "../constants";
 import { EventRC } from "../types";
 import ListItem from "./ListItem";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "Repair Cafés - Repair Cafes in Amsterdam",
@@ -22,9 +23,11 @@ export default function Page() {
   }));
   return (
     <BasePage title="Repair Cafés">
-      {rcs.map((rc) => (
-        <ListItem key={rc.slug} rc={rc} />
-      ))}
+      <Suspense>
+        {rcs.map((rc) => (
+          <ListItem key={rc.slug} rc={rc} />
+        ))}
+      </Suspense>
     </BasePage>
   );
 }
