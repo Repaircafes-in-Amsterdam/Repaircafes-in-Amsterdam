@@ -485,8 +485,10 @@
     "endTime": [
       "12:00"
     ],
-    "closed": "Tussen kerst en nieuwjaar en in de zomervakanties.",
-    "closedRanges": [],
+    "closed": "Tussen kerst en nieuwjaar en een periode in de zomer.",
+    "closedRanges": [
+      "2024-07-05:2024-08-21"
+    ],
     "exceptions": [],
     "district": "Noord",
     "email": "jansprenger@kpnmail.nl",
