@@ -73,18 +73,17 @@ export default function MapMarker({
           mouseover: () => setHoveredMarker(slug),
           mouseout: () => setHoveredMarker(""),
         }}
-        // TODO add aria-label somehow...
+        // TODO Add an aria-label with rc name
       >
-        {showLabel && (
-          <Tooltip
-            direction="bottom"
-            permanent
-            interactive
-            className="!rounded-none !px-2 !py-1 !font-sans font-medium !text-blue"
-          >
-            {label}
-          </Tooltip>
-        )}
+        <Tooltip
+          key={showLabel ? "permanent" : "hover"}
+          direction="bottom"
+          permanent={showLabel}
+          interactive={showLabel}
+          className="!rounded-none !px-2 !py-1 !font-sans font-medium !text-blue"
+        >
+          {label}
+        </Tooltip>
       </Marker>
     </>
   );
