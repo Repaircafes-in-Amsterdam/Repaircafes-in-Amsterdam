@@ -77,7 +77,7 @@ export default function MapMarker({
         <Tooltip
           key={showLabel ? "permanent" : "hover"}
           direction="bottom"
-          permanent={showLabel}
+          permanent
           interactive={showLabel}
           className="!rounded-none !px-2 !py-1 !font-sans font-medium !text-blue"
         >
