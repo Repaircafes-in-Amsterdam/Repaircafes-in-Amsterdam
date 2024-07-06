@@ -62,7 +62,6 @@ export default function MapMarker({
         keyboard={false}
         alt={`${label} shadow`}
       />
-      // TODO add aria-label somehow...
       <Marker
         icon={active || isHovered ? markerIconActive : markerIcon}
         position={position}
@@ -74,6 +73,7 @@ export default function MapMarker({
           mouseover: () => setHoveredMarker(slug),
           mouseout: () => setHoveredMarker(""),
         }}
+        // TODO add aria-label somehow...
       >
         {showLabel && (
           <Tooltip
