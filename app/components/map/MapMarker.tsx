@@ -74,16 +74,15 @@ export default function MapMarker({
           mouseout: () => setHoveredMarker(""),
         }}
       >
-        {showLabel && (
-          <Tooltip
-            direction="bottom"
-            permanent
-            interactive
-            className="!rounded-none !px-2 !py-1 !font-sans font-medium !text-blue"
-          >
-            {label}
-          </Tooltip>
-        )}
+        <Tooltip
+          key={showLabel ? "permanent" : "hover"}
+          direction="bottom"
+          permanent={showLabel}
+          interactive={showLabel}
+          className="!rounded-none !px-2 !py-1 !font-sans font-medium !text-blue"
+        >
+          {label}
+        </Tooltip>
       </Marker>
     </>
   );
