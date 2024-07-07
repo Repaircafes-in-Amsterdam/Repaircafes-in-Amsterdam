@@ -54,6 +54,7 @@ export type MapRC = {
   address: string;
   verified: boolean;
   district: string;
+  someOutOfOfficeHours: boolean;
 };
 
 export type Holiday = {

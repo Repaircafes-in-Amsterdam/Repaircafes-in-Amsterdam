@@ -1,5 +1,6 @@
 import data from "@/data/data.json";
 import { MapRC, RC } from "../types";
+import hasOutOfOfficeHours from "./hasOutOfOfficeHours";
 
 const rcs = data as RC[];
 
@@ -12,5 +13,6 @@ export default function getMapData(): MapRC[] {
     address: rc.address,
     verified: rc.verified,
     district: rc.district,
+    someOutOfOfficeHours: hasOutOfOfficeHours(rc),
   }));
 }
