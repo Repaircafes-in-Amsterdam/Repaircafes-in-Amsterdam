@@ -16,7 +16,7 @@ export default function EventsClient({
   initialEvents: Event[];
   numMonths: number;
 }) {
-  const [offset, setOffset] = useState(6);
+  const [offset, setOffset] = useState(numMonths);
   const [events, setEvents] = useState<Event[]>(initialEvents);
 
   const loadMore = async () => {
