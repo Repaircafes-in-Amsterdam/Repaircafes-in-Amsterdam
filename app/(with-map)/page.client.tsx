@@ -10,16 +10,18 @@ import BasePage from "../components/BasePage";
 
 export default function ClientPage({
   initialEvents,
+  numMonths,
 }: {
   initialEvents: Event[];
+  numMonths: number;
 }) {
-  const [offset, setOffset] = useState(1);
+  const [offset, setOffset] = useState(numMonths);
   const [events, setEvents] = useState<Event[]>(initialEvents);
 
   const loadMore = async () => {
     const additionalEvents = await getEvents({ monthsOffset: offset });
     setEvents([...events, ...additionalEvents]);
-    setOffset(offset + 1);
+    setOffset(offset + numMonths);
   };
 
   return (
