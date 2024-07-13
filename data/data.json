@@ -1233,9 +1233,10 @@
     "endTime": [
       "16:00"
     ],
-    "closed": "",
+    "closed": "Augustus",
     "closedRanges": [
-      "2024-07-06"
+      "2024-07-06",
+      "08"
     ],
     "exceptions": [
       "2024-07-13"
