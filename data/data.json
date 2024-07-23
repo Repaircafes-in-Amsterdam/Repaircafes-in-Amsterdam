@@ -857,6 +857,37 @@
     ]
   },
   {
+    "name": "Kleding Repair Café",
+    "address": "Waterlandplein 302",
+    "open": "Elke maandagochtend 10:00 - 11:30",
+    "rrule": [
+      "FREQ=WEEKLY;INTERVAL=1;BYDAY=MO"
+    ],
+    "startTime": [
+      "10:00"
+    ],
+    "endTime": [
+      "11:30"
+    ],
+    "closed": "Schoolvakanties, feestdagen en ramadan",
+    "closedRanges": [],
+    "exceptions": [],
+    "district": "Noord",
+    "email": "waterlandplein@huisvandewijknoord.nl",
+    "doRepair": "Kleding",
+    "dontRepair": "Apparaten",
+    "moreInfo": "",
+    "socials": {
+      "facebook": "https://www.facebook.com/HuisvandeWijkWaterlandplein"
+    },
+    "verified": true,
+    "slug": "kleding-repair-cafe",
+    "coordinate": [
+      52.393188,
+      4.95472
+    ]
+  },
+  {
     "name": "Osdorp",
     "address": "Tussen Meer 68",
     "open": "Elke donderdagochtend 10:00 - 12:00",
@@ -1148,6 +1179,37 @@
     "coordinate": [
       52.33423,
       4.95629
+    ]
+  },
+  {
+    "name": "Textiel Repair Café",
+    "address": "President Allendelaan 733",
+    "open": "Elke woensdagochtend 10:00 - 12:00",
+    "rrule": [
+      "FREQ=WEEKLY;INTERVAL=1;BYDAY=WE"
+    ],
+    "startTime": [
+      "10:00"
+    ],
+    "endTime": [
+      "12:00"
+    ],
+    "closed": "Zomervakantie",
+    "closedRanges": [],
+    "exceptions": [],
+    "district": "Nieuw-West",
+    "email": "m.ouaouirst@sezo.nl",
+    "doRepair": "Kleding",
+    "dontRepair": "Alles behalve textiel",
+    "moreInfo": "",
+    "links": {
+      "website": "https://www.vrouwenvaart.nl"
+    },
+    "verified": true,
+    "slug": "textiel-repair-cafe",
+    "coordinate": [
+      52.36568,
+      4.80533
     ]
   },
   {
