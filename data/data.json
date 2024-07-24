@@ -82,7 +82,9 @@
     "closedRanges": [
       "12-24:12-31"
     ],
-    "exceptions": [],
+    "exceptions": [
+      "2024-07-25"
+    ],
     "district": "Oost",
     "email": "afvalpaleis@jungle.amsterdam",
     "doRepair": "Kleding",
