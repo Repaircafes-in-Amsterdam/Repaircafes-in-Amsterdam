@@ -25,6 +25,8 @@ export default function UpcomingItem({
         "flex cursor-pointer items-center gap-3  px-3 py-1.5 focus-visible:bg-orange focus-visible:text-blue-600 focus-visible:outline-none [@media(hover:hover)]:hover:bg-orange [@media(hover:hover)]:hover:text-blue-600",
         isHovered ? "bg-orange text-blue-600" : "bg-blue text-white",
       )}
+      onFocus={() => setHoveredRow(rc.slug)}
+      onBlur={() => setHoveredRow("")}
       onPointerOver={(event) =>
         event.pointerType !== "touch" && setHoveredRow(rc.slug)
       }
