@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:focus-visible {
+  @apply outline outline-2 outline-offset-2 outline-orange;
+}
