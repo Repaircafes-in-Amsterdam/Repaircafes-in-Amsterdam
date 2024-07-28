@@ -58,7 +58,7 @@ export type MapRC = {
 };
 
 export type Holiday = {
-  name: string;
+  name?: string;
   startDate: string;
   endDate: string;
   startTime: number;

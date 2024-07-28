@@ -1,6 +1,7 @@
 import { RC, Event } from "../types";
 import holidaysData from "@/data/holidays-data.json";
 import schoolHolidaysData from "@/data/school-holidays-data.json";
+import ramadanData from "@/data/ramadan-data.json";
 import findHoliday from "./findHoliday";
 import isDateInRange from "./isDateInRange";
 
@@ -26,6 +27,12 @@ export default function isClosed(event: Event, rc: RC) {
       findHoliday(event.date, [schoolHoliday])
     ) {
       return "tijdens schoolvakantie: " + schoolHoliday.name;
+    }
+  }
+
+  if (closed.includes("ramadan")) {
+    if (findHoliday(event.date, ramadanData)) {
+      return "tijdens Ramadan";
     }
   }
 

@@ -33,6 +33,14 @@ We use openholidaysapi.org to retrieve accurate dates on public and school holid
 npm run update-holidays-data
 ```
 
+### Ramadan data
+
+We use api.aladhan.com to retrieve Ramadan dates. We download it to a json to prevent being directly dependant on it for the function of the website. It enables downloading 5 years into the future, so ones in a while we need to run the update data script. To update the data run:
+
+```bash
+npm run update-ramadan-data
+```
+
 ### Repaircafe.org map data
 
 We use the [repair.org API](https://www.repaircafe.org/api/) to pull in the coordinates they know. We download it to a json to prevent being directly dependant on it for the function of the website. To update that data run:
