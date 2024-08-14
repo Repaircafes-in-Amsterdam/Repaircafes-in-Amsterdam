@@ -1,5 +1,5 @@
 import { rrulestr } from "rrule";
-import { RC } from "../types";
+import { RC } from "@/app/types";
 
 // either on a weekend or after 18:00
 export default function hasOutOfOfficeHours(rc: RC): boolean {

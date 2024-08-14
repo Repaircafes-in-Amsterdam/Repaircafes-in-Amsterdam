@@ -1,12 +1,12 @@
 "use client";
 import X from "@/app/icons/X.svg?react";
 import useActive from "./useActive";
-import { MapRC } from "../types";
-import Header from "../components/Header";
+import { MapRC } from "@/app/types";
+import Header from "@/app/components/Header";
 import ChevronRight from "@/app/icons/ChevronRight.svg?react";
 import Link from "next/link";
 import DetailsSection from "@/app/components/DetailsSection";
-import Unconfirmed from "../components/Unconfirmed";
+import Unconfirmed from "@/app/components/Unconfirmed";
 
 export default function MapPanel({
   active,

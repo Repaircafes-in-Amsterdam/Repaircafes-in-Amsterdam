@@ -1,4 +1,4 @@
-import { RC, Event } from "../types";
+import { RC, Event } from "@/app/types";
 import holidaysData from "@/data/holidays-data.json";
 import schoolHolidaysData from "@/data/school-holidays-data.json";
 import ramadanData from "@/data/ramadan-data.json";

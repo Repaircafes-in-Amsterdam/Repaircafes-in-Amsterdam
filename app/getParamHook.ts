@@ -1,4 +1,4 @@
-// import { trackEvent } from "../utils/analytics";
+// import { trackEvent } from "@/app/utils/analytics";
 import { useSearchParams } from "next/navigation";
 import { useCallback } from "react";
 

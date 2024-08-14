@@ -1,9 +1,9 @@
 "use client";
-import { Event, EventGroup } from "../types";
+import { Event, EventGroup } from "@/app/types";
 import { Fragment } from "react";
 import groupBy from "lodash/groupBy";
-import useDistrict from "../useDistrict";
-import useOfficeHours from "../useOfficeHours";
+import useDistrict from "@/app/useDistrict";
+import useOfficeHours from "@/app/useOfficeHours";
 import UpcomingItem from "./UpcomingItem";
 
 function isDuringOfficeHours(event: Event) {

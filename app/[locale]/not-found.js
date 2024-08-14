@@ -1,4 +1,4 @@
-import BasePage from "./components/BasePage";
+import BasePage from "@/app/components/BasePage";
 
 export default function Page() {
   return (

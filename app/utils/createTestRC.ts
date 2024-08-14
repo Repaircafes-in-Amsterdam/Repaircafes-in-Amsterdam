@@ -1,4 +1,4 @@
-import { RC } from "../types";
+import { RC } from "@/app/types";
 
 export default function createTestRC(options: Partial<RC>): RC {
   return {

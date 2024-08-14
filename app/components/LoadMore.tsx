@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import useIntersectionObserver from "@/app/utils/useIntersectionObserver";
-import classes from "../utils/classes";
+import classes from "@/app/utils/classes";
 
 export default function LoadMoreWhenVisible({
   loadMore,

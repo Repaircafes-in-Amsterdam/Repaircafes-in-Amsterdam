@@ -1,9 +1,10 @@
-import Header from "../components/Header";
-import BasePage from "../components/BasePage";
 import { Metadata } from "next";
-import { BASE_URL } from "../constants";
-import Details from "../components/Details";
-import Summary from "../components/Summary";
+import Header from "@/app/components/Header";
+import BasePage from "@/app/components/BasePage";
+import { BASE_URL } from "@/app/constants";
+import Details from "@/app/components/Details";
+import Summary from "@/app/components/Summary";
+import { unstable_setRequestLocale } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Over Repair Cafés - Repair Cafes in Amsterdam",
@@ -14,7 +15,12 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Page() {
+export default function Page({
+  params: { locale },
+}: {
+  params: { locale: string };
+}) {
+  unstable_setRequestLocale(locale);
   return (
     <BasePage title="Over Repair Cafés">
       <div className="prose grow px-3 pb-3">

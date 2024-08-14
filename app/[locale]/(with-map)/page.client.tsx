@@ -1,12 +1,12 @@
 "use client";
-import DistrictSelect from "../components/DistrictSelect";
-import OfficeHoursCheckbox from "../components/OfficeHoursCheckbox";
+import DistrictSelect from "@/app/components/DistrictSelect";
+import OfficeHoursCheckbox from "@/app/components/OfficeHoursCheckbox";
 import Upcoming from "./Upcoming";
-import { Event } from "../types";
+import { Event } from "@/app/types";
 import { useState } from "react";
 import getEvents from "@/app/actions/getEvents";
-import LoadMore from "../components/LoadMore";
-import BasePage from "../components/BasePage";
+import LoadMore from "@/app/components/LoadMore";
+import BasePage from "@/app/components/BasePage";
 
 export default function ClientPage({
   initialEvents,

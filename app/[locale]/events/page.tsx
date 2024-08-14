@@ -1,8 +1,8 @@
 import data from "@/data/data.json";
-import BasePage from "../components/BasePage";
+import BasePage from "@/app/components/BasePage";
 import { Metadata } from "next";
-import { BASE_URL } from "../constants";
-import { EventRC } from "../types";
+import { BASE_URL } from "@/app/constants";
+import { EventRC } from "@/app/types";
 import ListItem from "./ListItem";
 import { Suspense } from "react";
 

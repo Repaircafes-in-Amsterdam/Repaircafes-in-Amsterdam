@@ -6,13 +6,15 @@ import useDistrict, { options } from "../useDistrict";
 import ChevronDown from "@/app/icons/ChevronDown.svg?react";
 import ChevronUp from "@/app/icons/ChevronUp.svg?react";
 import Check from "@/app/icons/Check.svg?react";
+import { useTranslations } from "next-intl";
 
 export default function DistrictSelect() {
+  const t = useTranslations("district");
   const { value, setValue } = useDistrict();
   return (
     <div className="flex flex-wrap items-center gap-x-2">
       <Label.Root className="" htmlFor="district">
-        Stadsdeel
+        {t("label")}
       </Label.Root>
       <Select.Root value={value} onValueChange={setValue}>
         <Select.Trigger

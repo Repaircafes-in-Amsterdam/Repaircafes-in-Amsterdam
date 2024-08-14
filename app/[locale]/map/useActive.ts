@@ -1,5 +1,5 @@
 "use client";
-import getParamHook, { Option } from "../getParamHook";
+import getParamHook, { Option } from "@/app/getParamHook";
 
 const defaultValue = "";
 

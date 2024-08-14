@@ -1,10 +1,11 @@
 import Link from "next/link";
 import Mail from "@/app/icons/Mail.svg?react";
 import data from "@/data/data.json";
-import BasePage from "../components/BasePage";
+import BasePage from "@/app/components/BasePage";
 import { Metadata } from "next";
-import { BASE_URL } from "../constants";
+import { BASE_URL } from "@/app/constants";
 import DetailsSection from "@/app/components/DetailsSection";
+import { unstable_setRequestLocale } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Over ons - Repair Cafes in Amsterdam",
@@ -14,7 +15,12 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Page() {
+export default function Page({
+  params: { locale },
+}: {
+  params: { locale: string };
+}) {
+  unstable_setRequestLocale(locale);
   const numRepairCafes = data.length;
   return (
     <BasePage title="Over ons">

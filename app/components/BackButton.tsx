@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { ReactNode } from "react";
-import useLinkPostfix from "../utils/useLinkPostfix";
+import useLinkPostfix from "@/app/utils/useLinkPostfix";
 
 export default function BackButton({
   className,

@@ -1,10 +1,10 @@
 import Link from "next/link";
 import ChevronRight from "@/app/icons/ChevronRight.svg?react";
 import Warning from "@/app/icons/Warning.svg?react";
-import { EventRC } from "../types";
-import useHoverStore from "../useHoverStore";
-import classes from "../utils/classes";
-import useLinkPostfix from "../utils/useLinkPostfix";
+import { EventRC } from "@/app/types";
+import useHoverStore from "@/app/useHoverStore";
+import classes from "@/app/utils/classes";
+import useLinkPostfix from "@/app/utils/useLinkPostfix";
 
 export default function UpcomingItem({
   startTime,

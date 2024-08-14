@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import { Metadata } from "next";
-import { BASE_URL } from "../constants";
-import getMapData from "../utils/getMapData";
+import { BASE_URL } from "@/app/constants";
+import getMapData from "@/app/utils/getMapData";
 import ClientPage from "./page.client";
 
 export const metadata: Metadata = {

@@ -1,7 +1,7 @@
 import { ReactNode, Suspense } from "react";
 import ChevronLeft from "@/app/icons/ChevronLeft.svg?react";
 import BackButton from "./BackButton";
-import classes from "../utils/classes";
+import classes from "@/app/utils/classes";
 
 export default function BasePage({
   title,

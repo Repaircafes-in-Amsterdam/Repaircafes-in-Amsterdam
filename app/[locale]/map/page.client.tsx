@@ -1,6 +1,6 @@
 "use client";
 import MapPanel from "./MapPanel";
-import { MapRC } from "../types";
+import { MapRC } from "@/app/types";
 import useMap from "@/app/utils/useMap";
 import useActive from "./useActive";
 

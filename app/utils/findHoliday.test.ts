@@ -1,5 +1,5 @@
 import { expect, test } from "vitest";
-import { Holiday } from "../types";
+import { Holiday } from "@/app/types";
 import findHoliday from "./findHoliday";
 
 const holidays: Holiday[] = [

@@ -1,5 +1,5 @@
 import data from "@/data/data.json";
-import { MapRC, RC } from "../types";
+import { MapRC, RC } from "@/app/types";
 import hasOutOfOfficeHours from "./hasOutOfOfficeHours";
 
 const rcs = data as RC[];

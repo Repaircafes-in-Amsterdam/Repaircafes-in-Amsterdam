@@ -1,4 +1,4 @@
-import MapServer from "../components/map/MapServer";
+import MapServer from "@/app/components/map/MapServer";
 
 export default function layout({
   children,

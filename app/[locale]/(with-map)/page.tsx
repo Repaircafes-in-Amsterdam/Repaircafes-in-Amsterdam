@@ -1,6 +1,6 @@
 import getEvents from "@/app/actions/getEvents";
 import ClientPage from "./page.client";
-import { Event } from "../types";
+import { Event } from "@/app/types";
 
 export const dynamic = "force-dynamic";
 

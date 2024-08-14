@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
-
 import withBundleAnalyzer from "@next/bundle-analyzer";
+import createNextIntlPlugin from "next-intl/plugin";
+const withNextIntl = createNextIntlPlugin();
 
 const analyzeBundle = !!process.env.npm_config_analyzebundle;
 
@@ -18,4 +19,6 @@ const nextConfig = {
   },
 };
 
-export default analyzeBundle ? withBundleAnalyzer()(nextConfig) : nextConfig;
+export default withNextIntl(
+  analyzeBundle ? withBundleAnalyzer()(nextConfig) : nextConfig,
+);
