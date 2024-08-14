@@ -7,14 +7,10 @@ export default createMiddleware({
 
   // Used when no locale matches
   defaultLocale: LOCALES[0],
+
+  localePrefix: "as-needed",
 });
 
-// console.log("LOCALES: ", LOCALES);
-// // const path = `/(${LOCALES.join("|")})/:path*`;
-// const path = "/(en|nl)/:path*";
-// console.log("path: ", path);
-
 export const config = {
-  // Match only internationalized pathnames
-  matcher: ["/", "/(en|nl)/:path*"],
+  matcher: ["/((?!api|_next|_vercel|.*\\..*).*)"],
 };
