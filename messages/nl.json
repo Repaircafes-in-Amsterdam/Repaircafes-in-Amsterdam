@@ -6,5 +6,8 @@
   },
   "district": {
     "label": "Stadsdeel"
+  },
+  "not-found": {
+    "title": "Niet gevonden",
+    "body": "Deze pagina is niet gevonden"
   }
-}

@@ -6,5 +6,9 @@
   },
   "district": {
     "label": "District"
+  },
+  "not-found": {
+    "title": "Not found",
+    "body": "This page was not found"
   }
 }
