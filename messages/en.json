@@ -21,5 +21,26 @@
     "Zuid": "Zuid",
     "Zuidoost": "Zuidoost",
     "Diemen": "Diemen"
+  },
+  "go-back": "Go back",
+  "agenda": "Agenda",
+  "of": "of",
+  "repaircafe-page": "Repaircafe.org page",
+  "cafe": {
+    "unknown": {
+      "title": "Unknown Repair Café",
+      "body": "Unfortunately, we are not aware of this Repair Café."
+    },
+    "open": "Open on",
+    "next": "Next time",
+    "closed": "Closed on",
+    "address": "Address",
+    "doRepair": "We repair",
+    "dontRepair": "We do not repair",
+    "moreInfo": "More information",
+    "contact": "Contact",
+    "links": "Links",
+    "social": "Social",
+    "read-more-about-repair-cafes": "Read more about Repair Cafés"
   }
 }

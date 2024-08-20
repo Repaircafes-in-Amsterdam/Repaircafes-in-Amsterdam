@@ -21,5 +21,26 @@
     "Zuid": "Zuid",
     "Zuidoost": "Zuidoost",
     "Diemen": "Diemen"
+  },
+  "go-back": "Ga terug",
+  "agenda": "Agenda",
+  "of": "van",
+  "repaircafe-page": "Repaircafe.org pagina",
+  "cafe": {
+    "unknown": {
+      "title": "Onbekend Repair Café",
+      "body": "Helaas, dit Repair Café is niet bekend bij ons."
+    },
+    "open": "Geopend op",
+    "next": "Eerst volgende keer",
+    "closed": "Gesloten op",
+    "address": "Adres",
+    "doRepair": "Wij repareren",
+    "dontRepair": "Wij repareren geen",
+    "moreInfo": "Meer informatie",
+    "contact": "Contact",
+    "links": "Links",
+    "social": "Sociaal",
+    "read-more-about-repair-cafes": "Lees meer over Repair Cafés"
   }
 }

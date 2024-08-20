@@ -13,6 +13,8 @@ import getEvents from "@/app/actions/getEvents";
 import { BASE_URL } from "@/app/constants";
 import Unconfirmed from "@/app/components/Unconfirmed";
 import LinksSection from "@/app/components/LinksSection";
+import { useTranslations } from "next-intl";
+import { unstable_setRequestLocale } from "next-intl/server";
 
 export function generateMetadata({
   params,
@@ -37,8 +39,13 @@ function getMapsLink(adres: string) {
 export default async function CafeServer({
   params,
 }: {
-  params: { slug: string };
+  params: { slug: string; locale: string };
 }) {
+  unstable_setRequestLocale(params.locale);
+  // TODO Translate
+  // Throws: Internal error: Error: Expected a suspended thenable.
+  // const t = useTranslations("cafe");
+
   const rc = data.find((rc) => rc.slug === params.slug) as RC;
   if (!rc) {
     return (
@@ -57,18 +64,17 @@ export default async function CafeServer({
 }
 
 function CafeClient({ rc, next }: { rc: RC; next: string }) {
+  const t = useTranslations("cafe");
   return (
     <BasePage title={rc.name} enableBackHome side>
       {!rc.verified && <Unconfirmed className="mb-1.5" />}
       <div className="flex grow flex-col gap-2 overflow-y-auto px-3 pb-3">
-        <DetailsSection title="Geopend op">{rc.open}</DetailsSection>
-        {next && (
-          <DetailsSection title="Eerst volgende keer">{next}</DetailsSection>
-        )}
+        <DetailsSection title={t("open")}>{rc.open}</DetailsSection>
+        {next && <DetailsSection title={t("next")}>{next}</DetailsSection>}
         {rc.closed && (
-          <DetailsSection title="Gesloten op">{rc.closed}</DetailsSection>
+          <DetailsSection title={t("closed")}>{rc.closed}</DetailsSection>
         )}
-        <DetailsSection title="Adres">
+        <DetailsSection title={t("address")}>
           <Link
             href={getMapsLink(rc.address)}
             className="flex gap-1"
@@ -80,18 +86,18 @@ function CafeClient({ rc, next }: { rc: RC; next: string }) {
           </Link>
         </DetailsSection>
         {rc.doRepair && (
-          <DetailsSection title="Wij repareren">{rc.doRepair}</DetailsSection>
+          <DetailsSection title={t("doRepair")}>{rc.doRepair}</DetailsSection>
         )}
         {rc.dontRepair && (
-          <DetailsSection title="Wij repareren geen">
+          <DetailsSection title={t("dontRepair")}>
             {rc.dontRepair}
           </DetailsSection>
         )}
         {rc.moreInfo && (
-          <DetailsSection title="Meer informatie">{rc.moreInfo}</DetailsSection>
+          <DetailsSection title={t("moreInfo")}>{rc.moreInfo}</DetailsSection>
         )}
         {rc.email && (
-          <DetailsSection title="Contact">
+          <DetailsSection title={t("contact")}>
             <Link href={`mailto:${rc.email}`} className="flex gap-1">
               <Mail className="shrink-0" />
               {rc.email}
@@ -99,14 +105,14 @@ function CafeClient({ rc, next }: { rc: RC; next: string }) {
           </DetailsSection>
         )}
         {rc.links && (
-          <LinksSection title="Links" links={rc.links} name={rc.name} />
+          <LinksSection title={t("links")} links={rc.links} name={rc.name} />
         )}
         {rc.socials && (
-          <LinksSection title="Sociaal" links={rc.socials} name={rc.name} />
+          <LinksSection title={t("social")} links={rc.socials} name={rc.name} />
         )}
         <Link href="/repaircafes" className="mt-2 flex gap-1">
           <ChevronRight className="shrink-0" />
-          Lees meer over Repair Cafés
+          {t("read-more-about-repair-cafes")}
         </Link>
       </div>
       <JsonLd jsonLd={getCafeJsonLd(rc)} />

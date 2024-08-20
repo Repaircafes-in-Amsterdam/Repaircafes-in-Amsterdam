@@ -3,6 +3,7 @@ import { Links } from "@/app/types";
 import Link from "next/link";
 import ExternalLink from "@/app/icons/ExternalLink.svg?react";
 import upperFirst from "@/app/utils/upperFirst";
+import { useTranslations } from "next-intl";
 
 export default function LinksSection({
   title,
@@ -15,6 +16,7 @@ export default function LinksSection({
   links: Links;
   name: string;
 }) {
+  const t = useTranslations();
   return (
     <DetailsSection title={title} className={className}>
       <ul className="flex flex-col gap-1">
@@ -29,11 +31,9 @@ export default function LinksSection({
               <ExternalLink className="shrink-0" />
               <div>
                 <strong className="font-medium">
-                  {type === "orgPage"
-                    ? "Repaircafe.org pagina"
-                    : upperFirst(type)}
-                </strong>{" "}
-                van {name}
+                  {type === "orgPage" ? t("repaircafe-page") : upperFirst(type)}
+                </strong>
+                {` ${t("of")} ${name}`}
               </div>
             </Link>
           </li>
