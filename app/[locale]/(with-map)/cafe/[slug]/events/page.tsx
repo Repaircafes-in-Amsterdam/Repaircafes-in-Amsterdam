@@ -6,6 +6,7 @@ import BasePage from "@/app/components/BasePage";
 import getEvents from "@/app/actions/getEvents";
 import EventsClient from "./page.client";
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
+import { notFound } from "next/navigation";
 
 const NUM_MONTHS = 12;
 
@@ -31,19 +32,8 @@ export default async function EventsServer({
   params: { slug: string; locale: string };
 }) {
   unstable_setRequestLocale(locale);
-  // TODO Translate
-  // Throws: Internal error: Error: Expected a suspended thenable.
-  // const t = useTranslations("cafe-events.unknown");
   const rc = data.find((rc) => rc.slug === slug) as RC;
-  if (!rc) {
-    return (
-      <BasePage title="Onbekend Repair Café">
-        <div className="p-3">
-          Helaas, dit Repair Café is niet bekend bij ons.
-        </div>
-      </BasePage>
-    );
-  }
+  if (!rc) notFound();
 
   const events: Event[] = await getEvents({
     slug: rc.slug,

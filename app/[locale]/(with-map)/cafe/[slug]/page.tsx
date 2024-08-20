@@ -15,6 +15,7 @@ import Unconfirmed from "@/app/components/Unconfirmed";
 import LinksSection from "@/app/components/LinksSection";
 import { useTranslations } from "next-intl";
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
+import { notFound } from "next/navigation";
 
 export async function generateMetadata({
   params: { locale, slug },
@@ -43,20 +44,9 @@ export default async function CafeServer({
   params: { slug: string; locale: string };
 }) {
   unstable_setRequestLocale(locale);
-  // TODO Translate
-  // Throws: Internal error: Error: Expected a suspended thenable.
-  // const t = useTranslations("cafe");
 
   const rc = data.find((rc) => rc.slug === slug) as RC;
-  if (!rc) {
-    return (
-      <BasePage title="Onbekend Repair Café">
-        <div className="p-3">
-          Helaas, dit Repair Café is niet bekend bij ons.
-        </div>
-      </BasePage>
-    );
-  }
+  if (!rc) notFound();
 
   const events: Event[] = await getEvents({
     slug: rc.slug,
