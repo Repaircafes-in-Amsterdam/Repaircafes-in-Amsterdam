@@ -26,6 +26,8 @@ export async function generateMetadata({
   };
 }
 
+// TODO Translate body
+// https://next-intl-docs.vercel.app/docs/environments/mdx
 export default function Page({
   params: { locale },
 }: {

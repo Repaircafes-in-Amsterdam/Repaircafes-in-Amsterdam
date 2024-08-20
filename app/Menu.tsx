@@ -3,6 +3,8 @@ import { ReactNode } from "react";
 import { usePathname } from "next/navigation";
 import classes from "./utils/classes";
 
+// TODO Auto prefix links with locale
+// https://next-intl-docs.vercel.app/docs/routing/navigation
 function MenuLink({
   href,
   children,
@@ -27,6 +29,7 @@ function MenuLink({
   );
 }
 
+// TODO Add language chooser
 export default function Menu() {
   return (
     <div className="flex gap-3 font-medium text-white">

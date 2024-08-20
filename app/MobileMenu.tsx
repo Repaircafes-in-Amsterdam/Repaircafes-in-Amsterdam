@@ -14,6 +14,8 @@ function MenuItem({ href, children }: { href: string; children: ReactNode }) {
     </Link>
   );
 }
+
+// TODO Add language chooser
 export default function MobileMenu({
   isOpen,
   onOpenChange,
