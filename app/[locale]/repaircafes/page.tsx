@@ -4,16 +4,26 @@ import BasePage from "@/app/components/BasePage";
 import { BASE_URL } from "@/app/constants";
 import Details from "@/app/components/Details";
 import Summary from "@/app/components/Summary";
-import { unstable_setRequestLocale } from "next-intl/server";
+import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 
-export const metadata: Metadata = {
-  title: "Over Repair Cafés - Repair Cafes in Amsterdam",
-  description:
-    "Over Repair Cafés in het algemeen en vaak voorkomende vragen (FAQ)",
-  alternates: {
-    canonical: BASE_URL + "repaircafes",
-  },
-};
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: string };
+}): Promise<Metadata> {
+  const t = await getTranslations({
+    locale,
+    namespace: "repaircafes.metadata",
+  });
+
+  return {
+    title: t("title"),
+    description: t("description"),
+    alternates: {
+      canonical: BASE_URL + "repaircafes",
+    },
+  };
+}
 
 export default function Page({
   params: { locale },

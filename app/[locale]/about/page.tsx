@@ -5,15 +5,23 @@ import BasePage from "@/app/components/BasePage";
 import { Metadata } from "next";
 import { BASE_URL } from "@/app/constants";
 import DetailsSection from "@/app/components/DetailsSection";
-import { unstable_setRequestLocale } from "next-intl/server";
+import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 
-export const metadata: Metadata = {
-  title: "Over ons - Repair Cafes in Amsterdam",
-  description: "Over Repair Cafés in Amsterdam",
-  alternates: {
-    canonical: BASE_URL + "about",
-  },
-};
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: string };
+}): Promise<Metadata> {
+  const t = await getTranslations({ locale, namespace: "about.metadata" });
+
+  return {
+    title: t("title"),
+    description: t("description"),
+    alternates: {
+      canonical: BASE_URL + "about",
+    },
+  };
+}
 
 export default function Page({
   params: { locale },

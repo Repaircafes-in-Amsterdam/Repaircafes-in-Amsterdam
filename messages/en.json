@@ -42,12 +42,44 @@
     "contact": "Contact",
     "links": "Links",
     "social": "Social",
-    "read-more-about-repair-cafes": "Read more about Repair Cafés"
+    "read-more-about-repair-cafes": "Read more about Repair Cafés",
+    "metadata": {
+      "title": "{name} - Repair Cafes in Amsterdam"
+    }
   },
   "map": {
     "title": "Map",
     "address": "Address",
     "open": "Open on",
-    "more-info": "More info"
+    "more-info": "More info",
+    "metadata": {
+      "title": "Map - Repair Cafes in Amsterdam",
+      "description": "Map of all Repair Cafés in Amsterdam"
+    }
+  },
+  "about": {
+    "metadata": {
+      "title": "About us - Repair Cafes in Amsterdam",
+      "description": "About Repair Cafés in Amsterdam"
+    }
+  },
+  "repaircafes": {
+    "metadata": {
+      "title": "About Repair Cafés - Repair Cafes in Amsterdam",
+      "description": "About Repair Cafés in general and frequently asked questions (FAQ)"
+    }
+  },
+  "events": {
+    "metadata": {
+      "title": "Events - Repair Cafes in Amsterdam"
+    }
+  },
+  "cafe-events": {
+    "unknown": {
+      "title": "Unknown Repair Café"
+    },
+    "metadata": {
+      "title": "{name} events - Repair Cafes in Amsterdam"
+    }
   }
 }

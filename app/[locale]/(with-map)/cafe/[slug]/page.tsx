@@ -14,19 +14,20 @@ import { BASE_URL } from "@/app/constants";
 import Unconfirmed from "@/app/components/Unconfirmed";
 import LinksSection from "@/app/components/LinksSection";
 import { useTranslations } from "next-intl";
-import { unstable_setRequestLocale } from "next-intl/server";
+import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 
-export function generateMetadata({
-  params,
+export async function generateMetadata({
+  params: { locale, slug },
 }: {
-  params: { slug: string };
-}): Metadata {
-  const rc = data.find((rc) => rc.slug === params.slug);
-  const name = rc?.name || "Onbekend Repair Café";
+  params: { locale: string; slug: string };
+}): Promise<Metadata> {
+  const t = await getTranslations({ locale, namespace: "cafe" });
+  const rc = data.find((rc) => rc.slug === slug);
+  const name = rc?.name || t("unknown.title");
   return {
-    title: `${name} - Repair Cafes in Amsterdam`,
+    title: t("metadata.title", { name }),
     alternates: {
-      canonical: BASE_URL + "cafe/" + params.slug,
+      canonical: BASE_URL + "cafe/" + slug,
     },
   };
 }

@@ -5,14 +5,25 @@ import { BASE_URL } from "@/app/constants";
 import { EventRC } from "@/app/types";
 import ListItem from "./ListItem";
 import { Suspense } from "react";
+import { getTranslations } from "next-intl/server";
 
-export const metadata: Metadata = {
-  title: "Repair Cafés - Repair Cafes in Amsterdam",
-  description: "Repair Cafés in Amsterdam",
-  alternates: {
-    canonical: BASE_URL + "events",
-  },
-};
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: string };
+}): Promise<Metadata> {
+  const t = await getTranslations({
+    locale,
+    namespace: "events.metadata",
+  });
+
+  return {
+    title: t("title"),
+    alternates: {
+      canonical: BASE_URL + "events",
+    },
+  };
+}
 
 export default function Page() {
   const rcs: EventRC[] = data.map((rc) => ({
