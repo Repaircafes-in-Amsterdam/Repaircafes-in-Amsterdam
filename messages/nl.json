@@ -43,5 +43,11 @@
     "links": "Links",
     "social": "Sociaal",
     "read-more-about-repair-cafes": "Lees meer over Repair Cafés"
+  },
+  "map": {
+    "title": "Kaart",
+    "address": "Adres",
+    "open": "Open op",
+    "more-info": "Meer info"
   }
 }

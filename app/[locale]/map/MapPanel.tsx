@@ -7,6 +7,7 @@ import ChevronRight from "@/app/icons/ChevronRight.svg?react";
 import Link from "next/link";
 import DetailsSection from "@/app/components/DetailsSection";
 import Unconfirmed from "@/app/components/Unconfirmed";
+import { useTranslations } from "next-intl";
 
 export default function MapPanel({
   active,
@@ -15,6 +16,7 @@ export default function MapPanel({
   active: MapRC;
   onClose: () => void;
 }) {
+  const t = useTranslations("map");
   return (
     <div className="absolute bottom-0 flex w-full flex-col gap-2 border-t-2 border-blue bg-white p-3">
       <div className="flex items-start justify-between gap-3">
@@ -24,11 +26,11 @@ export default function MapPanel({
         </button>
       </div>
       {!active.verified && <Unconfirmed className="-mx-3" />}
-      <DetailsSection title="Adres">{active.address}</DetailsSection>
-      <DetailsSection title="Open op">{active.open}</DetailsSection>
+      <DetailsSection title={t("address")}>{active.address}</DetailsSection>
+      <DetailsSection title={t("open")}>{active.open}</DetailsSection>
       <Link href={`/cafe/${active.slug}`} className="flex gap-1">
         <ChevronRight />
-        Meer info
+        {t("more-info")}
       </Link>
     </div>
   );

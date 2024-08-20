@@ -43,5 +43,11 @@
     "links": "Links",
     "social": "Social",
     "read-more-about-repair-cafes": "Read more about Repair Cafés"
+  },
+  "map": {
+    "title": "Map",
+    "address": "Address",
+    "open": "Open on",
+    "more-info": "More info"
   }
 }
