@@ -6,6 +6,7 @@ import { EventRC } from "@/app/types";
 import ListItem from "./ListItem";
 import { Suspense } from "react";
 import { getTranslations } from "next-intl/server";
+import { useTranslations } from "next-intl";
 
 export async function generateMetadata({
   params: { locale },
@@ -26,6 +27,7 @@ export async function generateMetadata({
 }
 
 export default function Page() {
+  const t = useTranslations("events");
   const rcs: EventRC[] = data.map((rc) => ({
     name: rc.name,
     slug: rc.slug,
@@ -33,7 +35,7 @@ export default function Page() {
     verified: rc.verified,
   }));
   return (
-    <BasePage title="Repair Cafés">
+    <BasePage title={t("title")}>
       <Suspense>
         {rcs.map((rc) => (
           <ListItem key={rc.slug} rc={rc} />

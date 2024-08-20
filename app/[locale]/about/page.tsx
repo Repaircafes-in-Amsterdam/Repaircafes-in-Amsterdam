@@ -6,6 +6,7 @@ import { Metadata } from "next";
 import { BASE_URL } from "@/app/constants";
 import DetailsSection from "@/app/components/DetailsSection";
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
+import { useTranslations } from "next-intl";
 
 export async function generateMetadata({
   params: { locale },
@@ -29,9 +30,10 @@ export default function Page({
   params: { locale: string };
 }) {
   unstable_setRequestLocale(locale);
+  const t = useTranslations("about");
   const numRepairCafes = data.length;
   return (
-    <BasePage title="Over ons">
+    <BasePage title={t("title")}>
       <div className="prose px-3 pb-3">
         <p>
           Deze agenda is een initiatief van vrijwilligers bij Repair Cafés in
@@ -106,7 +108,7 @@ export default function Page({
           </li>
         </ul>
       </div>
-      <DetailsSection title="Contact" className="px-3 pb-3">
+      <DetailsSection title={t("contact")} className="px-3 pb-3">
         <Link href="mailto:info@repaircafe.amsterdam" className="flex gap-1">
           <Mail />
           info@repaircafe.amsterdam

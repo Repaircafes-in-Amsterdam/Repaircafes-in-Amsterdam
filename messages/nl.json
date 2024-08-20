@@ -58,25 +58,36 @@
     }
   },
   "about": {
+    "title": "Over ons",
+    "contact": "Contact",
     "metadata": {
       "title": "Over ons - Repair Cafes in Amsterdam",
       "description": "Over Repair Cafés in Amsterdam"
     }
   },
   "repaircafes": {
+    "title": "Over Repair Cafés",
     "metadata": {
       "title": "Over Repair Cafés - Repair Cafes in Amsterdam",
       "description": "Over Repair Cafés in het algemeen en vaak voorkomende vragen (FAQ)"
     }
   },
   "events": {
+    "title": "Repair Cafés",
     "metadata": {
       "title": "Evenementen - Repair Cafes in Amsterdam"
     }
   },
   "cafe-events": {
+    "open": "Geopend op",
+    "next": "Eerst volgende keren",
+    "closed": "Gesloten op",
+    "rrule": "RRule",
+    "closedCause": "Want {closedCause}",
+    "exceptionCause": "Want uitzondering: {exceptionCause}",
     "unknown": {
-      "title": "Onbekend Repair Café"
+      "title": "Onbekend Repair Café",
+      "body": "Helaas, dit Repair Café is niet bekend bij ons."
     },
     "metadata": {
       "title": "{name} evenementen - Repair Cafes in Amsterdam"

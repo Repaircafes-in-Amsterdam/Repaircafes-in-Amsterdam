@@ -5,6 +5,7 @@ import ramadanData from "@/data/ramadan-data.json";
 import findHoliday from "./findHoliday";
 import isDateInRange from "./isDateInRange";
 
+// TODO Translate isClosed reasons?
 export default function isClosed(event: Event, rc: RC) {
   const closed = rc.closed.toLowerCase();
 

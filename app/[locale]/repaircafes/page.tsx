@@ -5,6 +5,7 @@ import { BASE_URL } from "@/app/constants";
 import Details from "@/app/components/Details";
 import Summary from "@/app/components/Summary";
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
+import { useTranslations } from "next-intl";
 
 export async function generateMetadata({
   params: { locale },
@@ -31,8 +32,9 @@ export default function Page({
   params: { locale: string };
 }) {
   unstable_setRequestLocale(locale);
+  const t = useTranslations("repaircafes");
   return (
-    <BasePage title="Over Repair Cafés">
+    <BasePage title={t("title")}>
       <div className="prose grow px-3 pb-3">
         <Header>Wat is een Repair Café?</Header>
         <p>

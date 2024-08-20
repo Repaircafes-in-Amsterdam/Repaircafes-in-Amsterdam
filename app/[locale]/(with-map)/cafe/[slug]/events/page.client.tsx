@@ -6,6 +6,7 @@ import DetailsSection from "@/app/components/DetailsSection";
 import classes from "@/app/utils/classes";
 import LoadMore from "@/app/components/LoadMore";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
 export default function EventsClient({
   rc,
@@ -20,6 +21,7 @@ export default function EventsClient({
 }) {
   const [offset, setOffset] = useState(numMonths);
   const [events, setEvents] = useState<Event[]>(initialEvents);
+  const t = useTranslations("cafe-events");
 
   const loadMore = async () => {
     const additionalEvents = await getEvents({
@@ -36,19 +38,19 @@ export default function EventsClient({
   return (
     <BasePage title={rc.name} side>
       <div className="flex grow flex-col gap-2 overflow-y-auto px-3 pb-3">
-        <DetailsSection title="Geopend op">{rc.open}</DetailsSection>
+        <DetailsSection title={t("open")}>{rc.open}</DetailsSection>
         {rc.rrule && (
           <DetailsSection
-            title="RRule"
+            title={t("rrule")}
             infoLink="https://medium.com/@edouard.courty/the-best-way-to-programmatically-handle-recurrence-11e9b489b27d"
           >
             {rc.rrule}
           </DetailsSection>
         )}
         {rc.closed && (
-          <DetailsSection title="Gesloten op">{rc.closed}</DetailsSection>
+          <DetailsSection title={t("closed")}>{rc.closed}</DetailsSection>
         )}
-        <DetailsSection title="Eerst volgende keren">
+        <DetailsSection title={t("next")}>
           <ul className="list-outside space-y-1 pl-4">
             {events.map(({ dateString, date, closedCause, exceptionCause }) => (
               <li key={dateString + date.getFullYear()} className="list-disc">
@@ -60,9 +62,9 @@ export default function EventsClient({
                 >
                   {dateString} {date.getFullYear()}
                 </strong>
-                {closedCause && <p>{"Want " + closedCause}</p>}
+                {closedCause && <p>{t("closedCause", { closedCause })}</p>}
                 {exceptionCause && (
-                  <p>{"Want uitzondering: " + exceptionCause}</p>
+                  <p>{t("exceptionCause", { exceptionCause })}</p>
                 )}
               </li>
             ))}
