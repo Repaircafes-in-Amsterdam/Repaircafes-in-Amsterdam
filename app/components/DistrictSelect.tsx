@@ -18,7 +18,7 @@ export default function DistrictSelect() {
       </Label.Root>
       <Select.Root value={value} onValueChange={setValue}>
         <Select.Trigger
-          className="inline-flex w-[144px] items-center justify-between gap-2 border-2 border-blue bg-white px-2 py-1 leading-none outline-none"
+          className="inline-flex w-[145px] items-center justify-between gap-2 border-2 border-blue bg-white px-2 py-1 leading-none outline-none"
           aria-label="Stadsdeel"
           id="district"
         >
