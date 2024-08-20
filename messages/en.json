@@ -10,5 +10,16 @@
   "not-found": {
     "title": "Not found",
     "body": "This page was not found"
+  },
+  "districts": {
+    "any": "All",
+    "Centrum": "Centrum",
+    "Nieuw-West": "Nieuw-West",
+    "Noord": "Noord",
+    "Oost": "Oost",
+    "West": "West",
+    "Zuid": "Zuid",
+    "Zuidoost": "Zuidoost",
+    "Diemen": "Diemen"
   }
 }

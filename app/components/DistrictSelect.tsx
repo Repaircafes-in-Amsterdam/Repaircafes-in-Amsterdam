@@ -2,7 +2,7 @@
 import { LegacyRef, ReactNode, forwardRef } from "react";
 import * as Select from "@radix-ui/react-select";
 import * as Label from "@radix-ui/react-label";
-import useDistrict, { options } from "../useDistrict";
+import useDistrict from "../useDistrict";
 import ChevronDown from "@/app/icons/ChevronDown.svg?react";
 import ChevronUp from "@/app/icons/ChevronUp.svg?react";
 import Check from "@/app/icons/Check.svg?react";
@@ -10,7 +10,7 @@ import { useTranslations } from "next-intl";
 
 export default function DistrictSelect() {
   const t = useTranslations("district");
-  const { value, setValue } = useDistrict();
+  const { value, label, options, setValue } = useDistrict();
   return (
     <div className="flex flex-wrap items-center gap-x-2">
       <Label.Root className="" htmlFor="district">
@@ -22,9 +22,7 @@ export default function DistrictSelect() {
           aria-label="Stadsdeel"
           id="district"
         >
-          <Select.Value aria-label={value}>
-            {options.find((item) => item.value === value)!.label}
-          </Select.Value>
+          <Select.Value aria-label={value}>{label}</Select.Value>
           <Select.Icon>
             <ChevronDown />
           </Select.Icon>
