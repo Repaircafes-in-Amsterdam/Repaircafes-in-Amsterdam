@@ -11,10 +11,12 @@ export default function EventsClient({
   rc,
   initialEvents,
   numMonths,
+  locale,
 }: {
   rc: RC;
   initialEvents: Event[];
   numMonths: number;
+  locale: string;
 }) {
   const [offset, setOffset] = useState(numMonths);
   const [events, setEvents] = useState<Event[]>(initialEvents);
@@ -25,6 +27,7 @@ export default function EventsClient({
       monthsOffset: offset,
       numMonths: numMonths,
       debug: true,
+      locale,
     });
     setEvents([...events, ...additionalEvents]);
     setOffset(offset + numMonths);

@@ -1,7 +1,5 @@
-const LOCALE = "NL-nl";
-
-export default function getDateString(date: Date) {
-  const string = date.toLocaleDateString(LOCALE, {
+export default function getDateString(date: Date, locale: string) {
+  const string = date.toLocaleDateString(locale, {
     weekday: "long",
     month: "long",
     day: "numeric",

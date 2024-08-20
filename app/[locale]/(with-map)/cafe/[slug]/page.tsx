@@ -37,16 +37,16 @@ function getMapsLink(adres: string) {
 }
 
 export default async function CafeServer({
-  params,
+  params: { slug, locale },
 }: {
   params: { slug: string; locale: string };
 }) {
-  unstable_setRequestLocale(params.locale);
+  unstable_setRequestLocale(locale);
   // TODO Translate
   // Throws: Internal error: Error: Expected a suspended thenable.
   // const t = useTranslations("cafe");
 
-  const rc = data.find((rc) => rc.slug === params.slug) as RC;
+  const rc = data.find((rc) => rc.slug === slug) as RC;
   if (!rc) {
     return (
       <BasePage title="Onbekend Repair Café">
@@ -57,7 +57,11 @@ export default async function CafeServer({
     );
   }
 
-  const events: Event[] = await getEvents({ slug: rc.slug, numMonths: 3 });
+  const events: Event[] = await getEvents({
+    slug: rc.slug,
+    numMonths: 3,
+    locale,
+  });
   const next = events[0]?.dateString;
 
   return <CafeClient rc={rc} next={next} />;

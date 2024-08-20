@@ -12,16 +12,18 @@ import { useTranslations } from "next-intl";
 export default function ClientPage({
   initialEvents,
   numMonths,
+  locale,
 }: {
   initialEvents: Event[];
   numMonths: number;
+  locale: string;
 }) {
   const [offset, setOffset] = useState(numMonths);
   const [events, setEvents] = useState<Event[]>(initialEvents);
   const t = useTranslations();
 
   const loadMore = async () => {
-    const additionalEvents = await getEvents({ monthsOffset: offset });
+    const additionalEvents = await getEvents({ monthsOffset: offset, locale });
     setEvents([...events, ...additionalEvents]);
     setOffset(offset + numMonths);
   };

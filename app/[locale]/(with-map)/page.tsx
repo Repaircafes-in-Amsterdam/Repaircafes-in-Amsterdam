@@ -13,6 +13,8 @@ export default async function HomeServer({
   params: { locale: string };
 }) {
   unstable_setRequestLocale(locale);
-  const events: Event[] = await getEvents({ numMonths: NUM_MONTHS });
-  return <ClientPage initialEvents={events} numMonths={NUM_MONTHS} />;
+  const events: Event[] = await getEvents({ numMonths: NUM_MONTHS, locale });
+  return (
+    <ClientPage initialEvents={events} numMonths={NUM_MONTHS} locale={locale} />
+  );
 }

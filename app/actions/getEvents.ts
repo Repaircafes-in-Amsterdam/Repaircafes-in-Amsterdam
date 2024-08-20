@@ -22,6 +22,7 @@ function createEvent({
   endTime,
   closedCause,
   exceptionCause,
+  locale,
 }: {
   rc: RC;
   date: Date;
@@ -29,10 +30,11 @@ function createEvent({
   endTime: string;
   closedCause?: string;
   exceptionCause?: string;
+  locale: string;
 }): Event {
   return {
     date,
-    dateString: getDateString(date),
+    dateString: getDateString(date, locale),
     startTime,
     endTime,
     closedCause,
@@ -53,12 +55,14 @@ export default async function getEvents({
   monthsOffset = 0,
   numMonths = 1,
   debug = false,
+  locale,
 }: {
   slug?: string;
   monthsOffset?: number;
   numMonths?: number;
   debug?: boolean;
-} = {}) {
+  locale: string;
+}) {
   const events: Event[] = [];
   const startDate = dayjs().tz().add(monthsOffset, "month");
   const endDate = startDate.add(numMonths, "month");
@@ -84,6 +88,7 @@ export default async function getEvents({
           date: occurrence,
           startTime,
           endTime,
+          locale,
         });
 
         const closedCause = isClosed(event, rc);
@@ -113,6 +118,7 @@ export default async function getEvents({
             startTime,
             endTime,
             exceptionCause: exception,
+            locale,
           }),
         );
       }

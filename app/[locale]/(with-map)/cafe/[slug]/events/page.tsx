@@ -24,11 +24,11 @@ export function generateMetadata({
 }
 
 export default async function EventsServer({
-  params,
+  params: { slug, locale },
 }: {
-  params: { slug: string };
+  params: { slug: string; locale: string };
 }) {
-  const rc = data.find((rc) => rc.slug === params.slug) as RC;
+  const rc = data.find((rc) => rc.slug === slug) as RC;
   if (!rc) {
     return (
       <BasePage title="Onbekend Repair Café">
@@ -43,7 +43,15 @@ export default async function EventsServer({
     slug: rc.slug,
     numMonths: NUM_MONTHS,
     debug: true,
+    locale,
   });
 
-  return <EventsClient rc={rc} initialEvents={events} numMonths={NUM_MONTHS} />;
+  return (
+    <EventsClient
+      rc={rc}
+      initialEvents={events}
+      numMonths={NUM_MONTHS}
+      locale={locale}
+    />
+  );
 }
