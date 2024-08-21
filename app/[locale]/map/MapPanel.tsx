@@ -8,6 +8,7 @@ import { Link } from "@/app/navigation";
 import DetailsSection from "@/app/components/DetailsSection";
 import Unconfirmed from "@/app/components/Unconfirmed";
 import { useTranslations } from "next-intl";
+import Multilingual from "@/app/components/Multilingual";
 
 export default function MapPanel({
   active,
@@ -27,7 +28,9 @@ export default function MapPanel({
       </div>
       {!active.verified && <Unconfirmed className="-mx-3" />}
       <DetailsSection title={t("address")}>{active.address}</DetailsSection>
-      <DetailsSection title={t("open")}>{active.open}</DetailsSection>
+      <DetailsSection title={t("open")}>
+        <Multilingual>{active.open}</Multilingual>
+      </DetailsSection>
       <Link href={`/cafe/${active.slug}`} className="flex gap-1">
         <ChevronRight />
         {t("more-info")}

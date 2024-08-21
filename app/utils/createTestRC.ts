@@ -7,7 +7,7 @@ export default function createTestRC(options: Partial<RC>): RC {
     startTime: ["0:00"],
     endTime: ["23:00"],
     rrule: [""],
-    open: "",
+    open: { nl: "" },
     closed: "",
     closedRanges: [],
     exceptions: [],

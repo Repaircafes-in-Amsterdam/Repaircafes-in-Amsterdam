@@ -7,6 +7,7 @@ import classes from "@/app/utils/classes";
 import LoadMore from "@/app/components/LoadMore";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
+import Multilingual from "@/app/components/Multilingual";
 
 export default function EventsClient({
   rc,
@@ -38,7 +39,9 @@ export default function EventsClient({
   return (
     <BasePage title={rc.name} side>
       <div className="flex grow flex-col gap-2 overflow-y-auto px-3 pb-3">
-        <DetailsSection title={t("open")}>{rc.open}</DetailsSection>
+        <DetailsSection title={t("open")}>
+          <Multilingual>{rc.open}</Multilingual>
+        </DetailsSection>
         {rc.rrule && (
           <DetailsSection
             title={t("rrule")}

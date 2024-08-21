@@ -2,7 +2,10 @@
   {
     "name": "AC REEL Tussen de Bogen",
     "address": "Tussen de Bogen 16",
-    "open": "Elke dinsdagmiddag 13:00 - 15:00",
+    "open": {
+      "nl": "Elke dinsdagmiddag 13:00 - 15:00",
+      "en": "Every Tuesday afternoon 13:00 - 15:00"
+    },
     "rrule": [
       "FREQ=WEEKLY;BYDAY=TU;INTERVAL=1"
     ],
@@ -30,7 +33,10 @@
   {
     "name": "Afvalpaleis (elektra)",
     "address": "Dapperstraat 76",
-    "open": "Elke woensdagmiddag 12:00 - 17:00",
+    "open": {
+      "nl": "Elke woensdagmiddag 12:00 - 17:00",
+      "en": "Every Wednesday afternoon 12:00 - 17:00"
+    },
     "rrule": [
       "FREQ=WEEKLY;BYDAY=WE;INTERVAL=1"
     ],
@@ -68,7 +74,10 @@
   {
     "name": "Afvalpaleis (textiel)",
     "address": "Dapperstraat 76",
-    "open": "Elke donderdagmiddag 12:00 - 17:00",
+    "open": {
+      "nl": "Elke donderdagmiddag 12:00 - 17:00",
+      "en": "Every Thursday afternoon 12:00 - 17:00"
+    },
     "rrule": [
       "FREQ=WEEKLY;BYDAY=TH;INTERVAL=1"
     ],
@@ -108,7 +117,10 @@
   {
     "name": "AMSTELhuis",
     "address": "Ceintuurbaan 480",
-    "open": "2e en 4e vrijdagmiddag 13:00 - 16:00",
+    "open": {
+      "nl": "2e en 4e vrijdagmiddag 13:00 - 16:00",
+      "en": "2nd and 4th Friday afternoon 13:00 - 16:00"
+    },
     "rrule": [
       "FREQ=MONTHLY;BYDAY=2FR,4FR"
     ],
@@ -139,7 +151,10 @@
   {
     "name": "Anarchist Repair Cafe",
     "address": "Eerste Schinkelstraat 14-16",
-    "open": "Elke eerste maandagavond 19:00 - 22:00",
+    "open": {
+      "nl": "Elke eerste maandagavond 19:00 - 22:00",
+      "en": "Every first Monday evening 19:00 - 22:00"
+    },
     "rrule": [
       "FREQ=MONTHLY;BYSETPOS=1;BYDAY=MO;INTERVAL=1"
     ],
@@ -177,7 +192,10 @@
   {
     "name": "Betondorp",
     "address": "Karnstraat 2",
-    "open": "2e en 4e woensdagmiddag 14:00 - 16:30",
+    "open": {
+      "nl": "2e en 4e woensdagmiddag 14:00 - 16:30",
+      "en": "2nd and 4th Wednesday afternoon 14:00 - 16:30"
+    },
     "rrule": [
       "FREQ=MONTHLY;BYDAY=2WE,4WE"
     ],
@@ -208,7 +226,10 @@
   {
     "name": "Buitenveldert",
     "address": "A.J. Ernststraat 112",
-    "open": "2e zaterdagmiddag 13:00 - 16:00",
+    "open": {
+      "nl": "2e zaterdagmiddag 13:00 - 16:00",
+      "en": "2nd Saturday afternoon 13:00 - 16:00"
+    },
     "rrule": [
       "FREQ=MONTHLY;BYSETPOS=2;BYDAY=SA;INTERVAL=1"
     ],
@@ -240,7 +261,10 @@
   {
     "name": "De Boeg",
     "address": "Hoofdweg 495 a",
-    "open": "Elke dinsdagochtend 10:00 - 12:00",
+    "open": {
+      "nl": "Elke dinsdagochtend 10:00 - 12:00",
+      "en": "Every Tuesday morning 10:00 - 12:00"
+    },
     "rrule": [
       "FREQ=WEEKLY;BYDAY=TU;INTERVAL=1"
     ],
@@ -271,7 +295,10 @@
   {
     "name": "De Bonte Kraai",
     "address": "Kraaiennest 68",
-    "open": "Laatste vrijdagmiddag 15.00 - 18.00",
+    "open": {
+      "nl": "Laatste vrijdagmiddag 15.00 - 18.00",
+      "en": "Last Friday afternoon 15:00 - 18:00"
+    },
     "rrule": [
       "FREQ=MONTHLY;BYSETPOS=-1;BYDAY=FR;INTERVAL=1"
     ],
@@ -306,7 +333,10 @@
   {
     "name": "De Boomsspijker",
     "address": "Recht Boomssloot 52",
-    "open": "Elke eerste maandagmiddag 13:00 - 15:00",
+    "open": {
+      "nl": "Elke eerste maandagmiddag 13:00 - 15:00",
+      "en": "Every first Monday afternoon 13:00 - 15:00"
+    },
     "rrule": [
       "FREQ=MONTHLY;BYSETPOS=1;BYDAY=MO;INTERVAL=1"
     ],
@@ -342,7 +372,10 @@
   {
     "name": "De Coenen",
     "address": "J.M. Coenenstraat 4 - 6",
-    "open": "1e maandagochtend 10:00 - 12:30",
+    "open": {
+      "nl": "1e maandagochtend 10:00 - 12:30",
+      "en": "1st Monday morning 10:00 - 12:30"
+    },
     "rrule": [
       "FREQ=MONTHLY;BYSETPOS=1;BYDAY=MO;INTERVAL=1"
     ],
@@ -373,7 +406,10 @@
   {
     "name": "De Diem",
     "address": "Arent Krijtsstraat 48hs",
-    "open": "Elke tweede zaterdag 14:00 - 16:30",
+    "open": {
+      "nl": "Elke tweede zaterdag 14:00 - 16:30",
+      "en": "Every second Saturday 14:00 - 16:30"
+    },
     "rrule": [
       "FREQ=MONTHLY;BYSETPOS=2;BYDAY=SA;INTERVAL=1"
     ],
@@ -407,7 +443,10 @@
   {
     "name": "De Groene Hub",
     "address": "Holendrechtplein 44",
-    "open": "1e vrijdagmiddag 15.00 - 18.00",
+    "open": {
+      "nl": "1e vrijdagmiddag 15.00 - 18.00",
+      "en": "1st Friday afternoon 15:00 - 18:00"
+    },
     "rrule": [
       "FREQ=MONTHLY;BYSETPOS=1;BYDAY=FR;INTERVAL=1"
     ],
@@ -442,7 +481,10 @@
   {
     "name": "De Havelaar",
     "address": "Douwes Dekkerstraat 2",
-    "open": "Elke derde vrijdagmiddag 13:00 - 16:00",
+    "open": {
+      "nl": "Elke derde vrijdagmiddag 13:00 - 16:00",
+      "en": "Every third Friday afternoon 13:00 - 16:00"
+    },
     "rrule": [
       "FREQ=MONTHLY;BYSETPOS=3;BYDAY=FR;INTERVAL=1"
     ],
@@ -477,7 +519,10 @@
   {
     "name": "De Meeuw",
     "address": "Motorwal 300",
-    "open": "Elke donderagochtend 10:00 - 12:00",
+    "open": {
+      "nl": "Elke donderagochtend 10:00 - 12:00",
+      "en": "Every Thursday morning 10:00 - 12:00"
+    },
     "rrule": [
       "FREQ=WEEKLY;BYDAY=TH;INTERVAL=1"
     ],
@@ -511,7 +556,10 @@
   {
     "name": "De Meevaart",
     "address": "Balistraat 48 A",
-    "open": "1e, 2e, 3e woensdagmiddag en laatste zaterdagmiddag 14:00 - 16:30",
+    "open": {
+      "nl": "1e, 2e, 3e woensdagmiddag en laatste zaterdagmiddag 14:00 - 16:30",
+      "en": "1st, 2nd, 3rd Wednesday afternoon and last Saturday afternoon 14:00 - 16:30"
+    },
     "rrule": [
       "FREQ=MONTHLY;BYDAY=1WE,2WE,3WE,-1SA"
     ],
@@ -545,7 +593,10 @@
   {
     "name": "De Pijp",
     "address": "Lutmastraat 61A",
-    "open": "Laatste zondag 12:00 - 16:00",
+    "open": {
+      "nl": "Laatste zondag 12:00 - 16:00",
+      "en": "Last Sunday 12:00 - 16:00"
+    },
     "rrule": [
       "FREQ=MONTHLY;BYSETPOS=-1;BYDAY=SU;INTERVAL=1"
     ],
@@ -582,7 +633,10 @@
   {
     "name": "De steek",
     "address": "Van Der Hoopstraat 70HS",
-    "open": "Elke donderdag 16:00 - 20:00 (in 2024)",
+    "open": {
+      "nl": "Elke donderdag 16:00 - 20:00 (in 2024)",
+      "en": "Every Thursday 16:00 - 20:00 (in 2024)"
+    },
     "rrule": [
       "FREQ=WEEKLY;INTERVAL=1;BYDAY=TH"
     ],
@@ -616,7 +670,10 @@
   {
     "name": "De Ster",
     "address": "Woudrichemstraat 8",
-    "open": "2e vrijdagmiddag 15:00 - 18:00",
+    "open": {
+      "nl": "2e vrijdagmiddag 15:00 - 18:00",
+      "en": "2nd Friday afternoon 15:00 - 18:00"
+    },
     "rrule": [
       "FREQ=MONTHLY;BYSETPOS=2;BYDAY=FR;INTERVAL=1"
     ],
@@ -651,7 +708,10 @@
   {
     "name": "Gliphoeve kinderboerderij",
     "address": "Geldershoofd 79",
-    "open": "Elke dinsdag 10:30 - 12:00 en zaterdag 14:00 - 16:00",
+    "open": {
+      "nl": "Elke dinsdag 10:30 - 12:00 en zaterdag 14:00 - 16:00",
+      "en": "Every Tuesday 10:30 - 12:00 and Saturday 14:00 - 16:00"
+    },
     "rrule": [
       "FREQ=WEEKLY;BYDAY=TU;INTERVAL=1",
       "FREQ=WEEKLY;BYDAY=SA;INTERVAL=1"
@@ -686,7 +746,10 @@
   {
     "name": "Groenpunt Welkom",
     "address": "Stadionplein 65",
-    "open": "1e woensdagavond 19.00 - 21.00",
+    "open": {
+      "nl": "1e woensdagavond 19.00 - 21.00",
+      "en": "1st Wednesday evening 19:00 - 21:00"
+    },
     "rrule": [
       "FREQ=MONTHLY;BYSETPOS=1;BYDAY=WE;INTERVAL=1"
     ],
@@ -721,7 +784,10 @@
   {
     "name": "Het Claverhuis",
     "address": "Elandsgracht 70",
-    "open": "Elke donderdagmiddag 14:00 - 16:00",
+    "open": {
+      "nl": "Elke donderdagmiddag 14:00 - 16:00",
+      "en": "Every Thursday afternoon 14:00 - 16:00"
+    },
     "rrule": [
       "FREQ=WEEKLY;BYDAY=TH;INTERVAL=1"
     ],
@@ -752,7 +818,10 @@
   {
     "name": "IJburg",
     "address": "Erich Salomonstraat 135 - 151",
-    "open": "Elke woensdagmiddag 17:00 - 19:00",
+    "open": {
+      "nl": "Elke woensdagmiddag 17:00 - 19:00",
+      "en": "Every Wednesday afternoon 17:00 - 19:00"
+    },
     "rrule": [
       "FREQ=WEEKLY;BYDAY=WE;INTERVAL=1"
     ],
@@ -787,7 +856,10 @@
   {
     "name": "Jeltje",
     "address": "Eerste Helmersstraat 106-N",
-    "open": "1e vrijdagavond 19:00 - 22:00",
+    "open": {
+      "nl": "1e vrijdagavond 19:00 - 22:00",
+      "en": "1st Friday evening 19:00 - 22:00"
+    },
     "rrule": [
       "FREQ=MONTHLY;BYSETPOS=1;BYDAY=FR;INTERVAL=1"
     ],
@@ -827,7 +899,10 @@
   {
     "name": "Kids Repair middag WG",
     "address": "Nicolaas Beetsstraat 325",
-    "open": "Elke 2e en 4e woensdag middag 14:00 - 16:00",
+    "open": {
+      "nl": "Elke 2e en 4e woensdag middag 14:00 - 16:00",
+      "en": "Every 2nd and 4th Wednesday afternoon 14:00 - 16:00"
+    },
     "rrule": [
       "FREQ=MONTHLY;INTERVAL=1;BYDAY=2WE,4WE"
     ],
@@ -861,7 +936,10 @@
   {
     "name": "Kleding Repair Café",
     "address": "Waterlandplein 302",
-    "open": "Elke maandagochtend 10:00 - 11:30",
+    "open": {
+      "nl": "Elke maandagochtend 10:00 - 11:30",
+      "en": "Every Monday morning 10:00 - 11:30"
+    },
     "rrule": [
       "FREQ=WEEKLY;INTERVAL=1;BYDAY=MO"
     ],
@@ -892,7 +970,10 @@
   {
     "name": "Osdorp",
     "address": "Tussen Meer 68",
-    "open": "Elke donderdagochtend 10:00 - 12:00",
+    "open": {
+      "nl": "Elke donderdagochtend 10:00 - 12:00",
+      "en": "Every Thursday morning 10:00 - 12:00"
+    },
     "rrule": [
       "FREQ=WEEKLY;BYDAY=TH;INTERVAL=1"
     ],
@@ -924,7 +1005,10 @@
   {
     "name": "Oud Noord",
     "address": "Kamperfoelieweg 207",
-    "open": "1e woensdagavond 18:00 - 20:00",
+    "open": {
+      "nl": "1e woensdagavond 18:00 - 20:00",
+      "en": "1st Wednesday evening 18:00 - 20:00"
+    },
     "rrule": [
       "FREQ=MONTHLY;BYSETPOS=1;BYDAY=WE;INTERVAL=1"
     ],
@@ -958,7 +1042,10 @@
   {
     "name": "Repair Events Tolhuistuin",
     "address": "IJpromenade 2",
-    "open": "Elke tweede zondagmiddag 14:00 - 17:00",
+    "open": {
+      "nl": "Elke tweede zondagmiddag 14:00 - 17:00",
+      "en": "Every second Sunday afternoon 14:00 - 17:00"
+    },
     "rrule": [
       "FREQ=MONTHLY;BYSETPOS=2;BYDAY=SU;INTERVAL=1"
     ],
@@ -992,7 +1079,10 @@
   {
     "name": "Repairclub Jacob Maris",
     "address": "Columbusplein 253",
-    "open": "Elke woensdag avond 20:00-22:00",
+    "open": {
+      "nl": "Elke woensdag avond 20:00-22:00",
+      "en": "Every Wednesday evening 20:00 - 22:00"
+    },
     "rrule": [
       "FREQ=WEEKLY;BYDAY=WE;INTERVAL=1"
     ],
@@ -1023,7 +1113,10 @@
   {
     "name": "Reparatietafel de Eester",
     "address": "C van Eesterenlaan 266",
-    "open": "Elke derde woensdagochtend van 10:00 - 13:00",
+    "open": {
+      "nl": "Elke derde woensdagochtend van 10:00 - 13:00",
+      "en": "Every third Wednesday morning 10:00 - 13:00"
+    },
     "rrule": [
       "FREQ=MONTHLY;BYDAY=3WE;INTERVAL=1"
     ],
@@ -1054,7 +1147,10 @@
   {
     "name": "Rijnstraat - Rivierenbuurt",
     "address": "Rijnstraat 115",
-    "open": "Elke dinsdagochtend 10:00 - 12:00",
+    "open": {
+      "nl": "Elke dinsdagochtend 10:00 - 12:00",
+      "en": "Every Tuesday morning 10:00 - 12:00"
+    },
     "rrule": [
       "FREQ=WEEKLY;BYDAY=TU;INTERVAL=1"
     ],
@@ -1085,7 +1181,10 @@
   {
     "name": "Sloten – Oud Osdorp",
     "address": "Nieuwe Akerweg 14",
-    "open": "2e woensdagochtend 10:00 - 12:00",
+    "open": {
+      "nl": "2e woensdagochtend 10:00 - 12:00",
+      "en": "2nd Wednesday morning 10:00 - 12:00"
+    },
     "rrule": [
       "FREQ=MONTHLY;BYSETPOS=2;BYDAY=WE;INTERVAL=1"
     ],
@@ -1116,7 +1215,10 @@
   {
     "name": "Slotervaart De Kas",
     "address": "Jan Tooropstraat 8",
-    "open": "Elke vrijdag middag 14:00 - 16:00",
+    "open": {
+      "nl": "Elke vrijdag middag 14:00 - 16:00",
+      "en": "Every Friday afternoon 14:00 - 16:00"
+    },
     "rrule": [
       "FREQ=WEEKLY;BYDAY=FR;INTERVAL=1"
     ],
@@ -1153,7 +1255,10 @@
   {
     "name": "t Kruidvat",
     "address": "Ouderkerkerlaan 30",
-    "open": "1e zaterdagmiddag 14:00 - 16:30",
+    "open": {
+      "nl": "1e zaterdagmiddag 14:00 - 16:30",
+      "en": "1st Saturday afternoon 14:00 - 16:30"
+    },
     "rrule": [
       "FREQ=MONTHLY;BYSETPOS=1;BYDAY=SA;INTERVAL=1"
     ],
@@ -1186,7 +1291,10 @@
   {
     "name": "Textiel Repair Café",
     "address": "President Allendelaan 733",
-    "open": "Elke woensdagochtend 10:00 - 12:00",
+    "open": {
+      "nl": "Elke woensdagochtend 10:00 - 12:00",
+      "en": "Every Wednesday morning 10:00 - 12:00"
+    },
     "rrule": [
       "FREQ=WEEKLY;INTERVAL=1;BYDAY=WE"
     ],
@@ -1217,7 +1325,10 @@
   {
     "name": "Westerpark",
     "address": "Van Limburg Stirumstraat 119",
-    "open": "Elke woensdagochtend 10:00 tot 12:00",
+    "open": {
+      "nl": "Elke woensdagochtend 10:00 tot 12:00",
+      "en": "Every Wednesday morning 10:00 - 12:00"
+    },
     "rrule": [
       "FREQ=WEEKLY;BYDAY=WE;INTERVAL=1"
     ],
@@ -1252,7 +1363,10 @@
   {
     "name": "Witte Boei",
     "address": "Kleine Wittenburgerstraat 201",
-    "open": "Elke eerste woensdagmiddag 14:00 - 16:30",
+    "open": {
+      "nl": "Elke eerste woensdagmiddag 14:00 - 16:30",
+      "en": "Every first Wednesday afternoon 14:00 - 16:30"
+    },
     "rrule": [
       "FREQ=MONTHLY;BYDAY=1WE,3WE"
     ],
@@ -1287,7 +1401,10 @@
   {
     "name": "Zonneplein",
     "address": "Zonneplein 11",
-    "open": "1e zaterdagmiddag 12:30 - 15:00",
+    "open": {
+      "nl": "1e zaterdagmiddag 12:30 - 15:00",
+      "en": "1st Saturday afternoon 12:30 - 15:00"
+    },
     "rrule": [
       "FREQ=MONTHLY;BYSETPOS=1;BYDAY=SA;INTERVAL=1"
     ],

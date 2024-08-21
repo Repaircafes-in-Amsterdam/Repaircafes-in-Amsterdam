@@ -13,9 +13,10 @@ import getEvents from "@/app/actions/getEvents";
 import { BASE_URL } from "@/app/constants";
 import Unconfirmed from "@/app/components/Unconfirmed";
 import LinksSection from "@/app/components/LinksSection";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
+import Multilingual from "@/app/components/Multilingual";
 
 export async function generateMetadata({
   params: { locale, slug },
@@ -59,12 +60,15 @@ export default async function CafeServer({
 }
 
 function CafeClient({ rc, next }: { rc: RC; next: string }) {
+  const locale = useLocale();
   const t = useTranslations("cafe");
   return (
     <BasePage title={rc.name} enableBackHome side>
       {!rc.verified && <Unconfirmed className="mb-1.5" />}
       <div className="flex grow flex-col gap-2 overflow-y-auto px-3 pb-3">
-        <DetailsSection title={t("open")}>{rc.open}</DetailsSection>
+        <DetailsSection title={t("open")}>
+          <Multilingual>{rc.open}</Multilingual>
+        </DetailsSection>
         {next && <DetailsSection title={t("next")}>{next}</DetailsSection>}
         {rc.closed && (
           <DetailsSection title={t("closed")}>{rc.closed}</DetailsSection>
@@ -110,7 +114,7 @@ function CafeClient({ rc, next }: { rc: RC; next: string }) {
           {t("read-more-about-repair-cafes")}
         </Link>
       </div>
-      <JsonLd jsonLd={getCafeJsonLd(rc)} />
+      <JsonLd jsonLd={getCafeJsonLd(rc, locale)} />
     </BasePage>
   );
 }
