@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/app/navigation";
 import Mail from "@/app/icons/Mail.svg?react";
 import data from "@/data/data.json";
 import BasePage from "@/app/components/BasePage";

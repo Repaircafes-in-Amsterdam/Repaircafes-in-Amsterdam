@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/app/navigation";
 import ChevronRight from "@/app/icons/ChevronRight.svg?react";
 import Warning from "@/app/icons/Warning.svg?react";
 import { EventRC } from "@/app/types";
@@ -20,7 +20,7 @@ export default function UpcomingItem({
   const setHoveredRow = useHoverStore((state) => state.setHoveredRow);
   return (
     <Link
-      href={`cafe/${rc.slug}${linkPostfix}`}
+      href={`/cafe/${rc.slug}${linkPostfix}`}
       className={classes(
         "flex cursor-pointer items-center gap-3  px-3 py-1.5 focus-visible:bg-orange focus-visible:text-blue-600 focus-visible:outline-none [@media(hover:hover)]:hover:bg-orange [@media(hover:hover)]:hover:text-blue-600",
         isHovered ? "bg-orange text-blue-600" : "bg-blue text-white",

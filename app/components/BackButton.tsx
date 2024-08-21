@@ -1,9 +1,8 @@
 "use client";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { ReactNode } from "react";
 import useLinkPostfix from "@/app/utils/useLinkPostfix";
 import { useTranslations } from "next-intl";
+import { Link, useRouter } from "../navigation";
 
 export default function BackButton({
   className,

@@ -1,7 +1,7 @@
 "use client";
 import Logo from "@/app/Logo.svg?react";
 import MenuIcon from "@/app/icons/Menu.svg?react";
-import Link from "next/link";
+import { Link } from "@/app/navigation";
 import MobileMenu from "./MobileMenu";
 import { useState } from "react";
 import classes from "./utils/classes";

@@ -1,5 +1,5 @@
 "use client";
-import Link from "next/link";
+import { Link } from "@/app/navigation";
 import { EventRC } from "@/app/types";
 import useLinkPostfix from "@/app/utils/useLinkPostfix";
 import ChevronRight from "@/app/icons/ChevronRight.svg?react";

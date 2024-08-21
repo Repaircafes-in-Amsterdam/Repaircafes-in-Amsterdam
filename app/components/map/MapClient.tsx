@@ -1,5 +1,5 @@
 "use client";
-import { useParams, useRouter } from "next/navigation";
+import { useParams } from "next/navigation";
 import { MapRC } from "@/app/types";
 import useDistrict from "@/app/useDistrict";
 import useIntersectionObserver from "@/app/utils/useIntersectionObserver";
@@ -7,6 +7,7 @@ import { useRef } from "react";
 import useMap from "@/app/utils/useMap";
 import useLinkPostfix from "@/app/utils/useLinkPostfix";
 import useOfficeHours from "@/app/useOfficeHours";
+import { useRouter } from "@/app/navigation";
 
 export default function MapClient({ data }: { data: MapRC[] }) {
   const router = useRouter();

@@ -1,6 +1,6 @@
 import DetailsSection from "./DetailsSection";
 import { Links } from "@/app/types";
-import Link from "next/link";
+import { Link } from "@/app/navigation";
 import ExternalLink from "@/app/icons/ExternalLink.svg?react";
 import upperFirst from "@/app/utils/upperFirst";
 import { useTranslations } from "next-intl";

@@ -1,10 +1,7 @@
-import Link from "next/link";
 import { ReactNode } from "react";
-import { usePathname } from "next/navigation";
 import classes from "./utils/classes";
+import { Link, usePathname } from "@/app/navigation";
 
-// TODO Auto prefix links with locale
-// https://next-intl-docs.vercel.app/docs/routing/navigation
 function MenuLink({
   href,
   children,
