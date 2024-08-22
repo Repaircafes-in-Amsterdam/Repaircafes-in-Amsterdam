@@ -123,21 +123,21 @@ const list = rows
 
     // Iterate through each key in the object
     for (const key in item) {
-      if (item.hasOwnProperty(key)) {
-        const [locale, fieldName] = key.split(":");
+      if (!item.hasOwnProperty(key)) continue;
+      const [locale, fieldName] = key.split(":");
+      const value = item[key];
 
-        // Check if the key is prefixed with a locale (like 'nl', 'en')
-        if (fieldName) {
-          // Initialize the field if it doesn't exist
-          if (!transformedItem[fieldName]) {
-            transformedItem[fieldName] = {};
-          }
-          // Set the locale translation
-          transformedItem[fieldName][locale] = item[key];
-        } else {
-          // Copy the field as is if it's not locale-prefixed
-          transformedItem[key] = item[key];
+      // Check if the key is prefixed with a locale (like 'nl', 'en')
+      if (fieldName) {
+        // Initialize the field if it doesn't exist
+        if (!transformedItem[fieldName]) {
+          transformedItem[fieldName] = {};
         }
+        // Set the locale translation
+        transformedItem[fieldName][locale] = value;
+      } else {
+        // Copy the field as is if it's not locale-prefixed
+        transformedItem[key] = value;
       }
     }
 
