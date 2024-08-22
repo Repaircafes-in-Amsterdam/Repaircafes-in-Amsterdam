@@ -15,14 +15,26 @@
     "endTime": [
       "15:00"
     ],
-    "closed": "Schoolvakanties",
     "closedRanges": [],
+    "closed": {
+      "nl": "Schoolvakanties",
+      "en": "School holidays"
+    },
     "exceptions": [],
     "district": "Centrum",
     "email": "mazaoum@dock.nl",
-    "doRepair": "Electronica, Kleding, Fietsen",
-    "dontRepair": "Grote apparaten",
-    "moreInfo": "",
+    "doRepair": {
+      "nl": "Electronica, Kleding, Fietsen",
+      "en": "Electronics, Clothing, Bicycles"
+    },
+    "dontRepair": {
+      "nl": "Grote apparaten",
+      "en": "Large appliances"
+    },
+    "moreInfo": {
+      "nl": "",
+      "en": ""
+    },
     "verified": true,
     "slug": "ac-reel-tussen-de-bogen",
     "coordinate": [
@@ -46,16 +58,28 @@
     "endTime": [
       "17:00"
     ],
-    "closed": "4 weken in het midden van de zomervakantie en de laatste week van het jaar.",
     "closedRanges": [
       "12-24:12-31"
     ],
+    "closed": {
+      "nl": "4 weken in het midden van de zomervakantie en de laatste week van het jaar.",
+      "en": "4 weeks in the middle of summer vacation and the last week of the year."
+    },
     "exceptions": [],
     "district": "Oost",
     "email": "afvalpaleis@jungle.amsterdam",
-    "doRepair": "Electronica, Meubels",
-    "dontRepair": "Magnetrons, computers, mobieltjes, fossiele brandstof verbrandende motoren.",
-    "moreInfo": "We werken graag samen met ambachtsmensen, workshopgevers, knutselaars en kunstenaars  om hen van materiaal te voorzien. Alles om hergebruik en afvalvermindering te stimuleren.",
+    "doRepair": {
+      "nl": "Electronica, Meubels",
+      "en": "Electronics, Furniture"
+    },
+    "dontRepair": {
+      "nl": "Magnetrons, computers, mobieltjes, fossiele brandstof verbrandende motoren.",
+      "en": "Microwaves, computers, mobiles, fossil fuel-burning engines."
+    },
+    "moreInfo": {
+      "nl": "We werken graag samen met ambachtsmensen, workshopgevers, knutselaars en kunstenaars  om hen van materiaal te voorzien. Alles om hergebruik en afvalvermindering te stimuleren.",
+      "en": "We enjoy working with craftspeople, workshop hosts, tinkerers and artists to provide them with materials. All to encourage recycling and waste reduction."
+    },
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-oost-afvalpaleis/",
       "website": "https://www.jungle.amsterdam/werkplaats-repaircafe"
@@ -87,18 +111,30 @@
     "endTime": [
       "17:00"
     ],
-    "closed": "4 weken in het midden van de zomervakantie en de laatste week van het jaar.",
     "closedRanges": [
       "12-24:12-31"
     ],
+    "closed": {
+      "nl": "4 weken in het midden van de zomervakantie en de laatste week van het jaar.",
+      "en": "4 weeks in the middle of summer vacation and the last week of the year."
+    },
     "exceptions": [
       "2024-07-25"
     ],
     "district": "Oost",
     "email": "afvalpaleis@jungle.amsterdam",
-    "doRepair": "Kleding",
-    "dontRepair": "Het repaircafe Textiel is gericht op helpen om het zelf te doen. Wij zijn nadrukkelijk geen naaiatelier maar een plek waar je de tijd neemt om zelf samen met anderen je kleding repareert zodat het langer mee gaat en je er weer liefde voor voelt.",
-    "moreInfo": "We werken graag samen met ambachtsmensen, workshopgevers, knutselaars en kunstenaars  om hen van materiaal te voorzien. Alles om hergebruik en afvalvermindering te stimuleren.",
+    "doRepair": {
+      "nl": "Kleding",
+      "en": "Clothing"
+    },
+    "dontRepair": {
+      "nl": "Het repaircafe Textiel is gericht op helpen om het zelf te doen. Wij zijn nadrukkelijk geen naaiatelier maar een plek waar je de tijd neemt om zelf samen met anderen je kleding repareert zodat het langer mee gaat en je er weer liefde voor voelt.",
+      "en": "The Repair Cafe Textiles is focused on helping you to do it yourself. We are emphatically not a sewing workshop but a place where you take the time to repair your clothes yourself with others so that they last longer and you feel love for them again."
+    },
+    "moreInfo": {
+      "nl": "We werken graag samen met ambachtsmensen, workshopgevers, knutselaars en kunstenaars  om hen van materiaal te voorzien. Alles om hergebruik en afvalvermindering te stimuleren.",
+      "en": "We enjoy working with craftspeople, workshop hosts, tinkerers and artists to provide them with materials. All to encourage recycling and waste reduction."
+    },
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-oost-afvalpaleis/",
       "website": "https://www.jungle.amsterdam/werkplaats-repaircafe"
@@ -130,14 +166,26 @@
     "endTime": [
       "16:00"
     ],
-    "closed": "",
     "closedRanges": [],
+    "closed": {
+      "nl": "",
+      "en": ""
+    },
     "exceptions": [],
     "district": "Zuid",
     "email": "a.j.smit@freeler.nl",
-    "doRepair": "Elektronica, kleding, fietsen, hout speelgoed.",
-    "dontRepair": "Printers en naaimachines, maar anders alles wat draagbaar is proberen wij te repareren.",
-    "moreInfo": "",
+    "doRepair": {
+      "nl": "Elektronica, kleding, fietsen, hout speelgoed.",
+      "en": "Electronics, clothing, bicycles, wooden toys."
+    },
+    "dontRepair": {
+      "nl": "Printers en naaimachines, maar anders alles wat draagbaar is proberen wij te repareren.",
+      "en": "Printers and sewing machines, but otherwise anything portable we try to repair."
+    },
+    "moreInfo": {
+      "nl": "",
+      "en": ""
+    },
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-zuid-amstelhuis/"
     },
@@ -164,18 +212,30 @@
     "endTime": [
       "22:00"
     ],
-    "closed": "Juli en Augustus",
     "closedRanges": [
       "2024-07:2024-08"
     ],
+    "closed": {
+      "nl": "Juli en Augustus",
+      "en": "July and August"
+    },
     "exceptions": [
       "2025-05-05"
     ],
     "district": "West",
     "email": "deversterking@riseup.net",
-    "doRepair": "Electronica, Kleding",
-    "dontRepair": "Nespresso",
-    "moreInfo": "",
+    "doRepair": {
+      "nl": "Electronica, Kleding",
+      "en": "Electronics, Clothing"
+    },
+    "dontRepair": {
+      "nl": "Nespresso",
+      "en": "Nespresso"
+    },
+    "moreInfo": {
+      "nl": "",
+      "en": ""
+    },
     "links": {
       "website": "https://deversterking.noblogs.org/repair-cafe/"
     },
@@ -205,14 +265,26 @@
     "endTime": [
       "16:30"
     ],
-    "closed": "",
     "closedRanges": [],
+    "closed": {
+      "nl": "",
+      "en": ""
+    },
     "exceptions": [],
     "district": "Oost",
     "email": "repairbeton@gmail.com",
-    "doRepair": "Electronica, Fietsen, Meubels, huishoudelijk",
-    "dontRepair": "Wasmachines etc",
-    "moreInfo": "",
+    "doRepair": {
+      "nl": "Electronica, Fietsen, Meubels, huishoudelijk",
+      "en": "Electronics, Bicycles, Furniture, household items"
+    },
+    "dontRepair": {
+      "nl": "Wasmachines etc",
+      "en": "Washing machines etc"
+    },
+    "moreInfo": {
+      "nl": "",
+      "en": ""
+    },
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-oost-betondorp/"
     },
@@ -239,14 +311,26 @@
     "endTime": [
       "16:00"
     ],
-    "closed": "",
     "closedRanges": [],
+    "closed": {
+      "nl": "",
+      "en": ""
+    },
     "exceptions": [],
     "district": "Zuid",
     "email": "repaircafebuitenveldert@gmail.com",
-    "doRepair": "Electronica, Kleding, overige kleine reparaties aan producten in en om het huis",
-    "dontRepair": "Telefoons/computers/tv's en dergelijke complexe apparaten",
-    "moreInfo": "",
+    "doRepair": {
+      "nl": "Electronica, Kleding, overige kleine reparaties aan producten in en om het huis",
+      "en": "Electronics, Clothing, other minor repairs to products in and around the house"
+    },
+    "dontRepair": {
+      "nl": "Telefoons/computers/tv's en dergelijke complexe apparaten",
+      "en": "Phones/computers/TVs and similarly complex devices"
+    },
+    "moreInfo": {
+      "nl": "",
+      "en": ""
+    },
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-zuid-buitenveldert/",
       "website": "https://hvdwbuitenveldert.nl/agenda/"
@@ -274,14 +358,26 @@
     "endTime": [
       "12:00"
     ],
-    "closed": "Zomervakantie, kerst oud- en nieuwjaar.",
     "closedRanges": [],
+    "closed": {
+      "nl": "Zomervakantie, kerst, oud- en nieuwjaar.",
+      "en": "Summer vacation, Christmas, New Year's Eve."
+    },
     "exceptions": [],
     "district": "West",
     "email": "repaircafedeboeg@gmail.com",
-    "doRepair": "Electronica, Kleding, Fietsen",
-    "dontRepair": "Telefoons, laptops",
-    "moreInfo": "",
+    "doRepair": {
+      "nl": "Electronica, Kleding, Fietsen",
+      "en": "Electronics, Clothing, Bicycles"
+    },
+    "dontRepair": {
+      "nl": "Telefoons, laptops",
+      "en": "Phones, laptops"
+    },
+    "moreInfo": {
+      "nl": "",
+      "en": ""
+    },
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-west-de-boeg/"
     },
@@ -308,14 +404,26 @@
     "endTime": [
       "18:00"
     ],
-    "closed": "",
     "closedRanges": [],
+    "closed": {
+      "nl": "",
+      "en": ""
+    },
     "exceptions": [],
     "district": "Zuidoost",
     "email": "repaircafe.zuidoost@gmail.com",
-    "doRepair": "Electronica, houdelijke apparaten, speelgoed, computers, tablets, telefoons, enz.",
-    "dontRepair": "",
-    "moreInfo": "",
+    "doRepair": {
+      "nl": "Electronica, houdelijke apparaten, speelgoed, computers, tablets, telefoons, enz.",
+      "en": "Electronics, household appliances, toys, computers, tablets, phones, etc."
+    },
+    "dontRepair": {
+      "nl": "",
+      "en": ""
+    },
+    "moreInfo": {
+      "nl": "",
+      "en": ""
+    },
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-zuidoost/",
       "website": "https://repaircafe-zuidoost.nl"
@@ -346,14 +454,26 @@
     "endTime": [
       "15:00"
     ],
-    "closed": "Zomervakantie & kerstvakantie",
     "closedRanges": [],
+    "closed": {
+      "nl": "Zomervakantie & kerstvakantie",
+      "en": "Summer vacation & Christmas vacation"
+    },
     "exceptions": [],
     "district": "Centrum",
     "email": "dburger@dock.nl",
-    "doRepair": "Electronica, Van platenspelers tot koffiezetapparaten tot stofzuigers.",
-    "dontRepair": "",
-    "moreInfo": "",
+    "doRepair": {
+      "nl": "Electronica, Van platenspelers tot koffiezetapparaten tot stofzuigers.",
+      "en": "Electronics, From turntables to coffee machines to vacuum cleaners."
+    },
+    "dontRepair": {
+      "nl": "",
+      "en": ""
+    },
+    "moreInfo": {
+      "nl": "",
+      "en": ""
+    },
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-centrum-de-boomsspijker/",
       "website": "https://www.dock.nl/locaties/amsterdam/centrum/huis-van-de-buurt-de-boomsspijker/"
@@ -385,14 +505,26 @@
     "endTime": [
       "12:30"
     ],
-    "closed": "Bij feestdagen schuift het een week door",
     "closedRanges": [],
+    "closed": {
+      "nl": "Bij feestdagen schuift het een week door",
+      "en": "If it falls on a holiday, it shifts by a week"
+    },
     "exceptions": [],
     "district": "Zuid",
     "email": "info@decoenen.com",
-    "doRepair": "Electronica, Meubels, klein/mechanisch/elektrisch/huishoudelijk/naaimachines",
-    "dontRepair": "Wij onderzoeken in principe alles; dit leidt tot soms een reparatie, soms een advies",
-    "moreInfo": "",
+    "doRepair": {
+      "nl": "Electronica, Meubels, klein/mechanisch/elektrisch/huishoudelijk/naaimachines",
+      "en": "Electronics, Furniture, small/mechanical/electrical/household/sewing machines"
+    },
+    "dontRepair": {
+      "nl": "Wij onderzoeken in principe alles; dit leidt tot soms een reparatie, soms een advies",
+      "en": "We examine basically everything; this sometimes leads to a repair, sometimes to advice"
+    },
+    "moreInfo": {
+      "nl": "",
+      "en": ""
+    },
     "links": {
       "website": "https://decoenen.com/terugkerende-activiteiten/#repaircafe"
     },
@@ -419,16 +551,28 @@
     "endTime": [
       "16:30"
     ],
-    "closed": "Juli en augustus",
     "closedRanges": [
       "07:08"
     ],
+    "closed": {
+      "nl": "Juli en augustus",
+      "en": "July and August"
+    },
     "exceptions": [],
     "district": "Diemen",
     "email": "repaircafe@duurzaamdorpdiemen.nl",
-    "doRepair": "Electronica, Andere draagbare huishoudelijke apparaten",
-    "dontRepair": "Beeldschermen, grote apparaten",
-    "moreInfo": "Bestaat in april 2024 10 jaar!",
+    "doRepair": {
+      "nl": "Electronica, Andere draagbare huishoudelijke apparaten",
+      "en": "Electronics, Other portable household appliances"
+    },
+    "dontRepair": {
+      "nl": "Beeldschermen, grote apparaten",
+      "en": "Screens, large appliances"
+    },
+    "moreInfo": {
+      "nl": "Bestaat in april 2024 10 jaar!",
+      "en": "Exists 10 years in April 2024!"
+    },
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-diemen/",
       "website": "http://www.duurzaamdorpdiemen.nl/p/repair-cafe.html"
@@ -456,14 +600,26 @@
     "endTime": [
       "18:00"
     ],
-    "closed": "",
     "closedRanges": [],
+    "closed": {
+      "nl": "",
+      "en": ""
+    },
     "exceptions": [],
     "district": "Zuidoost",
     "email": "repaircafe.zuidoost@gmail.com",
-    "doRepair": "Electronica, houdelijke apparaten, speelgoed, computers, tablets, telefoons, enz.",
-    "dontRepair": "",
-    "moreInfo": "",
+    "doRepair": {
+      "nl": "Electronica, houdelijke apparaten, speelgoed, computers, tablets, telefoons, enz.",
+      "en": "Electronics, household appliances, toys, computers, tablets, phones, etc."
+    },
+    "dontRepair": {
+      "nl": "",
+      "en": ""
+    },
+    "moreInfo": {
+      "nl": "",
+      "en": ""
+    },
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-zuidoost/",
       "website": "https://repaircafe-zuidoost.nl"
@@ -494,18 +650,30 @@
     "endTime": [
       "16:00"
     ],
-    "closed": "Meestal zomermaanden juli en augustus",
     "closedRanges": [
       "07:08"
     ],
+    "closed": {
+      "nl": "Meestal zomermaanden juli en augustus",
+      "en": "Usually summer months July and August"
+    },
     "exceptions": [
       "2025-04-18"
     ],
     "district": "West",
     "email": "r.riede@hccnet.nl",
-    "doRepair": "Electronica, Kleding",
-    "dontRepair": "Fietsen, Telefoons, Koffie-apparaten",
-    "moreInfo": "",
+    "doRepair": {
+      "nl": "Electronica, Kleding",
+      "en": "Electronics, Clothing"
+    },
+    "dontRepair": {
+      "nl": "Fietsen, Telefoons, Koffie-apparaten",
+      "en": "Bicycles, Phones, Coffee machines"
+    },
+    "moreInfo": {
+      "nl": "",
+      "en": ""
+    },
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-oud-west-de-havelaar/"
     },
@@ -532,16 +700,28 @@
     "endTime": [
       "12:00"
     ],
-    "closed": "Tussen kerst en nieuwjaar en een periode in de zomer.",
     "closedRanges": [
       "2024-07-05:2024-08-21"
     ],
+    "closed": {
+      "nl": "Tussen kerst en nieuwjaar en een periode in de zomer.",
+      "en": "Between Christmas and New Year and a period in the summer."
+    },
     "exceptions": [],
     "district": "Noord",
     "email": "jansprenger@kpnmail.nl",
-    "doRepair": "Electronica, Kleding, Fietsen, Meubels",
-    "dontRepair": "Laptops en telefoons",
-    "moreInfo": "",
+    "doRepair": {
+      "nl": "Electronica, Kleding, Fietsen, Meubels",
+      "en": "Electronics, Clothing, Bicycles, Furniture"
+    },
+    "dontRepair": {
+      "nl": "Laptops en telefoons",
+      "en": "Laptops and telephones"
+    },
+    "moreInfo": {
+      "nl": "",
+      "en": ""
+    },
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-noord-de-meeuw/",
       "website": "https://huisvandewijknoord.nl/de-meeuw"
@@ -569,16 +749,28 @@
     "endTime": [
       "16:30"
     ],
-    "closed": "Zomervakantie en kerstvakantie.\nWij volgen de vakantie kalender v/d Meevaart.",
     "closedRanges": [
       "2024-09-01:2024-09-09"
     ],
+    "closed": {
+      "nl": "Zomervakantie en kerstvakantie.\nWij volgen de vakantie kalender v/d Meevaart.",
+      "en": "Summer vacation and Christmas vacation. \nWe follow the vacation calendar of Meevaart."
+    },
     "exceptions": [],
     "district": "Oost",
     "email": "repaircafe.demeevaart@gmail.com",
-    "doRepair": "Electronica, Kleding",
-    "dontRepair": "Mobiele telefoons",
-    "moreInfo": "",
+    "doRepair": {
+      "nl": "Electronica, Kleding",
+      "en": "Electronics, Clothing"
+    },
+    "dontRepair": {
+      "nl": "Mobiele telefoons",
+      "en": "Mobile phones"
+    },
+    "moreInfo": {
+      "nl": "",
+      "en": ""
+    },
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-oost-de-meevaart/",
       "website": "https://repaircafe-demeevaart-amsterdam-oost.nl/"
@@ -606,16 +798,28 @@
     "endTime": [
       "16:00"
     ],
-    "closed": "December",
     "closedRanges": [
       "12"
     ],
+    "closed": {
+      "nl": "December",
+      "en": "December"
+    },
     "exceptions": [],
     "district": "Zuid",
     "email": "repaircafedepijp@gmail.com",
-    "doRepair": "Electronica, Kleding, electrische en mechanische apparatuur, fijn herstelwerk.",
-    "dontRepair": "Magnetrons en apparaten die niet op de fiets te vervoeren zijn.",
-    "moreInfo": "Zie onze repaircafe.org pagina voor actuele data.",
+    "doRepair": {
+      "nl": "Electronica, Kleding, electrische en mechanische apparatuur, fijn herstelwerk.",
+      "en": "Electronics, Clothing, electrical and mechanical equipment, fine repairs."
+    },
+    "dontRepair": {
+      "nl": "Magnetrons en apparaten die niet op de fiets te vervoeren zijn.",
+      "en": "Microwaves and appliances that cannot be transported on bicycles"
+    },
+    "moreInfo": {
+      "nl": "Zie onze repaircafe.org pagina voor actuele data.",
+      "en": "See our repaircafe.org page for current dates."
+    },
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-zuid-de-pijp/",
       "website": "http://nmtzuid.nl/project/repair-cafe/"
@@ -646,14 +850,26 @@
     "endTime": [
       "20:00"
     ],
-    "closed": "Sinterklaas en kerst",
     "closedRanges": [],
+    "closed": {
+      "nl": "Sinterklaas en kerst",
+      "en": "Sinterklaas and Christmas"
+    },
     "exceptions": [],
     "district": "West",
     "email": "info@desteekamsterdam.nl",
-    "doRepair": "Kleding",
-    "dontRepair": "Andere dingen dan kleding",
-    "moreInfo": "We organiseren dit tot het einde van 2024",
+    "doRepair": {
+      "nl": "Kleding",
+      "en": "Clothing"
+    },
+    "dontRepair": {
+      "nl": "Andere dingen dan kleding",
+      "en": "Things other than clothes"
+    },
+    "moreInfo": {
+      "nl": "We organiseren dit tot het einde van 2024",
+      "en": "We will organise this until the end of 2024"
+    },
     "links": {
       "website": "https://desteekamsterdam.com/nl/gratis-kleding-repaircafe/"
     },
@@ -683,14 +899,26 @@
     "endTime": [
       "18:00"
     ],
-    "closed": "",
     "closedRanges": [],
+    "closed": {
+      "nl": "",
+      "en": ""
+    },
     "exceptions": [],
     "district": "Zuidoost",
     "email": "repaircafe.zuidoost@gmail.com",
-    "doRepair": "Electronica, houdelijke apparaten, speelgoed, computers, tablets, telefoons, enz.",
-    "dontRepair": "",
-    "moreInfo": "",
+    "doRepair": {
+      "nl": "Electronica, houdelijke apparaten, speelgoed, computers, tablets, telefoons, enz.",
+      "en": "Electronics, household appliances, toys, computers, tablets, phones, etc."
+    },
+    "dontRepair": {
+      "nl": "",
+      "en": ""
+    },
+    "moreInfo": {
+      "nl": "",
+      "en": ""
+    },
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-zuidoost/",
       "website": "https://repaircafe-zuidoost.nl"
@@ -724,14 +952,26 @@
       "12:00",
       "16:00"
     ],
-    "closed": "",
     "closedRanges": [],
+    "closed": {
+      "nl": "",
+      "en": ""
+    },
     "exceptions": [],
     "district": "Zuidoost",
     "email": "kinderboerderij.gliphoeve@gmail.com",
-    "doRepair": "Electronica, Fietsen, Meubels",
-    "dontRepair": "",
-    "moreInfo": "",
+    "doRepair": {
+      "nl": "Electronica, Fietsen, Meubels",
+      "en": "Electronics, Bicycles, Furniture"
+    },
+    "dontRepair": {
+      "nl": "",
+      "en": ""
+    },
+    "moreInfo": {
+      "nl": "",
+      "en": ""
+    },
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-zuidoost-gliphoeve/",
       "website": "https://www.kinderboerderijgliphoeve.nl/over-ons-2"
@@ -759,14 +999,26 @@
     "endTime": [
       "21:00"
     ],
-    "closed": "Zomervakantie",
     "closedRanges": [],
+    "closed": {
+      "nl": "Zomervakantie",
+      "en": "Summer vacation"
+    },
     "exceptions": [],
     "district": "Zuid",
     "email": "info@groenebuurten.nl",
-    "doRepair": "Electronica, Kleding, allerlei gebruiksvoorwerpen (bijv. koffer, rollater, mechanische typemachines), oud speelgoed",
-    "dontRepair": "Telefoons, naaimachines, grote apparaten zoals wasmachines",
-    "moreInfo": "",
+    "doRepair": {
+      "nl": "Electronica, Kleding, allerlei gebruiksvoorwerpen (bijv. koffer, rollater, mechanische typemachines), oud speelgoed",
+      "en": "Electronics, Clothing, all kinds of utensils (e.g. suitcase, rollator, mechanical typewriters), old toys"
+    },
+    "dontRepair": {
+      "nl": "Telefoons, naaimachines, grote apparaten zoals wasmachines",
+      "en": "Telephones, sewing machines, large appliances such as washing machines"
+    },
+    "moreInfo": {
+      "nl": "",
+      "en": ""
+    },
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-zuid-groenpunt-welkom/",
       "website": "http://groenebuurten.nl/start-repair-cafe-olympus/"
@@ -797,14 +1049,26 @@
     "endTime": [
       "16:00"
     ],
-    "closed": "",
     "closedRanges": [],
+    "closed": {
+      "nl": "",
+      "en": ""
+    },
     "exceptions": [],
     "district": "Centrum",
     "email": "ssaruhan@dock.nl",
-    "doRepair": "Electronica",
-    "dontRepair": "Alle elektronica die niet naar de locatie gebracht kan worden",
-    "moreInfo": "",
+    "doRepair": {
+      "nl": "Electronica",
+      "en": "Electronics"
+    },
+    "dontRepair": {
+      "nl": "Alle elektronica die niet naar de locatie gebracht kan worden",
+      "en": "All electronics that cannot be brought to the location"
+    },
+    "moreInfo": {
+      "nl": "",
+      "en": ""
+    },
     "links": {
       "website": "https://dock.nl/locaties/amsterdam/centrum/huis-van-de-buurt-het-claverhuis/"
     },
@@ -831,14 +1095,26 @@
     "endTime": [
       "19:00"
     ],
-    "closed": "",
     "closedRanges": [],
+    "closed": {
+      "nl": "",
+      "en": ""
+    },
     "exceptions": [],
     "district": "Oost",
     "email": "circulair@set-ijburg.nl",
-    "doRepair": "Electronica, Kleding, Fietsen, Meubels, Veel koffiemachines, stofzuifgers",
-    "dontRepair": "We hebben geen speciale hulpmiddelen voor telefoons, maar kunnen altijd kijken",
-    "moreInfo": "",
+    "doRepair": {
+      "nl": "Electronica, Kleding, Fietsen, Meubels, Veel koffiemachines, stofzuifgers",
+      "en": "Electronics, Clothing, Bicycles, Furniture, Many coffee machines, vacuum cleaners"
+    },
+    "dontRepair": {
+      "nl": "We hebben geen speciale hulpmiddelen voor telefoons, maar kunnen altijd kijken",
+      "en": "We have no special tools for phones, but can always have a look"
+    },
+    "moreInfo": {
+      "nl": "",
+      "en": ""
+    },
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-ijburg/",
       "website": "https://www.set-ijburg.nl/"
@@ -869,18 +1145,30 @@
     "endTime": [
       "22:00"
     ],
-    "closed": "",
     "closedRanges": [
       "2024-09"
     ],
+    "closed": {
+      "nl": "",
+      "en": ""
+    },
     "exceptions": [
       "2024-08-30"
     ],
     "district": "West",
     "email": "bericht@repaircafejeltje.nl",
-    "doRepair": "Electronica, Kleding, Fietsen",
-    "dontRepair": "",
-    "moreInfo": "",
+    "doRepair": {
+      "nl": "Electronica, Kleding, Fietsen",
+      "en": "Electronics, Clothing, Bicycles"
+    },
+    "dontRepair": {
+      "nl": "",
+      "en": ""
+    },
+    "moreInfo": {
+      "nl": "",
+      "en": ""
+    },
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-oud-west-jeltje/",
       "website": "https://repaircafejeltje.nl/"
@@ -912,17 +1200,29 @@
     "endTime": [
       "16:00"
     ],
-    "closed": "2e en 4e woensdag in juli en 2e woensdag in augustus",
     "closedRanges": [
       "07",
       "08-01:08-14"
     ],
+    "closed": {
+      "nl": "2e en 4e woensdag in juli en 2e woensdag in augustus",
+      "en": "2nd and 4th Wednesday in July and 2nd Wednesday in August"
+    },
     "exceptions": [],
     "district": "West",
     "email": "r.riede@hccnet.nl",
-    "doRepair": "Uitsluitend kinderspeelgoed",
-    "dontRepair": "Textielreparaties zoals knuffels, verder bijna alle speelgoed.",
-    "moreInfo": "Kinderen komen met een ouder en gaan samen met een reparateur aan de slag. Graag vooraf laten weten dat je komt en met wat voor soort reparatievraag. Bijeenkomsten zijn in het ToekomsthuisWG naast Lab111",
+    "doRepair": {
+      "nl": "Uitsluitend kinderspeelgoed",
+      "en": "Exclusively children's toys"
+    },
+    "dontRepair": {
+      "nl": "Textielreparaties zoals knuffels, verder bijna alle speelgoed.",
+      "en": "Textile repairs such as soft toys, otherwise almost all toys."
+    },
+    "moreInfo": {
+      "nl": "Kinderen komen met een ouder en gaan samen met een reparateur aan de slag. Graag vooraf laten weten dat je komt en met wat voor soort reparatievraag. Bijeenkomsten zijn in het ToekomsthuisWG naast Lab111",
+      "en": "Children come with a parent and get to work with a repairer. Please let us know in advance that you are coming and with what kind of repair question. Meetings are at the Future ToekomsthuisWG next to Lab111"
+    },
     "links": {
       "website": "https://www.toekomsthuiswg.nl/kids-repair-middag/"
     },
@@ -949,14 +1249,26 @@
     "endTime": [
       "11:30"
     ],
-    "closed": "Schoolvakanties, feestdagen en ramadan",
     "closedRanges": [],
+    "closed": {
+      "nl": "Schoolvakanties, feestdagen en ramadan",
+      "en": "School holidays, holidays, and Ramadan 2nd and 4th Wednesday in July and 2nd Wednesday in August Summer vacation"
+    },
     "exceptions": [],
     "district": "Noord",
     "email": "waterlandplein@huisvandewijknoord.nl",
-    "doRepair": "Kleding",
-    "dontRepair": "Apparaten",
-    "moreInfo": "",
+    "doRepair": {
+      "nl": "Kleding",
+      "en": "Clothing"
+    },
+    "dontRepair": {
+      "nl": "Apparaten",
+      "en": "Appliances"
+    },
+    "moreInfo": {
+      "nl": "",
+      "en": ""
+    },
     "socials": {
       "facebook": "https://www.facebook.com/HuisvandeWijkWaterlandplein"
     },
@@ -983,14 +1295,26 @@
     "endTime": [
       "12:00"
     ],
-    "closed": "In de zomervakantie en met kerst",
     "closedRanges": [],
+    "closed": {
+      "nl": "In de zomervakantie en met kerst",
+      "en": "Summer vacation and Christmas"
+    },
     "exceptions": [],
     "district": "Nieuw-West",
     "email": "herman.bouma@gmail.com",
-    "doRepair": "Electronica, Kleding, Fietsen, Meubels",
-    "dontRepair": "",
-    "moreInfo": "",
+    "doRepair": {
+      "nl": "Electronica, Kleding, Fietsen, Meubels",
+      "en": "Electronics, Clothing, Bicycles, Furniture"
+    },
+    "dontRepair": {
+      "nl": "",
+      "en": ""
+    },
+    "moreInfo": {
+      "nl": "",
+      "en": ""
+    },
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-osdorp/",
       "website": "https://repaircafeosdorp.jouwweb.nl/"
@@ -1018,14 +1342,26 @@
     "endTime": [
       "20:00"
     ],
-    "closed": "",
     "closedRanges": [],
+    "closed": {
+      "nl": "",
+      "en": ""
+    },
     "exceptions": [],
     "district": "Noord",
     "email": "repaircafeoudnoord@gmail.com",
-    "doRepair": "Electronica, Kleding, Fietsen, Meubels",
-    "dontRepair": "Telefoons",
-    "moreInfo": "",
+    "doRepair": {
+      "nl": "Electronica, Kleding, Fietsen, Meubels",
+      "en": "Electronics, Clothing, Bicycles, Furniture"
+    },
+    "dontRepair": {
+      "nl": "Telefoons",
+      "en": "Phones"
+    },
+    "moreInfo": {
+      "nl": "",
+      "en": ""
+    },
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-oud-noord/"
     },
@@ -1055,14 +1391,26 @@
     "endTime": [
       "17:00"
     ],
-    "closed": "",
     "closedRanges": [],
+    "closed": {
+      "nl": "",
+      "en": ""
+    },
     "exceptions": [],
     "district": "Noord",
     "email": "repair.events@gmail.com",
-    "doRepair": "Kleding, Electronica, messen (slijpen)",
-    "dontRepair": "",
-    "moreInfo": "Elk seizoen hebben wij weer wisselende dagen en tijden. In de winter staan we binnen, in de zomer buiten in de tuin. De data voor de komende zomer zijn: 19 mei, 9 juni, 14 juli, 11 aug \n\nIn plaats van iets uit handen te geven, léér je bij Repair Events samen met een reparateur hoe je je eigen spullen repareert of zelfs mooier maakt (upcyclen). Je mag alles mee brengen; van kleding tot huishoudelijke apparaten en elektronica. Wij zorgen voor de ruimte, de kennis en de tools; er zijn naaimachines, gereedschapskisten, borduursetjes en dergelijke aanwezig. Zo kan jij eindelijk dat gat in je broek repareren, die leuke lamp weer laten branden, of dat bloesje pimpen...",
+    "doRepair": {
+      "nl": "Kleding, Electronica, messen (slijpen)",
+      "en": "Clothing, Electronics, knives (sharpening)"
+    },
+    "dontRepair": {
+      "nl": "",
+      "en": ""
+    },
+    "moreInfo": {
+      "nl": "Elk seizoen hebben wij weer wisselende dagen en tijden. In de winter staan we binnen, in de zomer buiten in de tuin. De data voor de komende zomer zijn: 19 mei, 9 juni, 14 juli, 11 aug \n\nIn plaats van iets uit handen te geven, léér je bij Repair Events samen met een reparateur hoe je je eigen spullen repareert of zelfs mooier maakt (upcyclen). Je mag alles mee brengen; van kleding tot huishoudelijke apparaten en elektronica. Wij zorgen voor de ruimte, de kennis en de tools; er zijn naaimachines, gereedschapskisten, borduursetjes en dergelijke aanwezig. Zo kan jij eindelijk dat gat in je broek repareren, die leuke lamp weer laten branden, of dat bloesje pimpen...",
+      "en": "Every season we have changing days and times. In winter we are inside, in summer outside in the garden. The dates for next summer are: 19 May, 9 June, 14 July, 11 Aug \n\nInstead of handing things over, at Repair Events you learn together with a repairman how to repair your own stuff or even make it more beautiful (upcycling). You can bring everything from clothes to household appliances and electronics. We provide the space, knowledge and tools; sewing machines, toolboxes, embroidery kits and the like are available. So you can finally fix that hole in your trousers, get that cute lamp lit again, or pimp that blouse..."
+    },
     "links": {
       "website": "https://tolhuistuin.nl/zoeken?q=repair+events"
     },
@@ -1092,14 +1440,26 @@
     "endTime": [
       "22:00"
     ],
-    "closed": "Zomervakantie",
     "closedRanges": [],
+    "closed": {
+      "nl": "Zomervakantie",
+      "en": "Summer vacation"
+    },
     "exceptions": [],
     "district": "West",
     "email": "info@jacobmaris.com",
-    "doRepair": "Electronica, Kleding, Fietsen, Meubels",
-    "dontRepair": "Kleine electronica zoals mobiele telefoons, fotocamera's, e.d.",
-    "moreInfo": "",
+    "doRepair": {
+      "nl": "Electronica, Kleding, Fietsen, Meubels",
+      "en": "Electronics, Clothing, Bicycles, Furniture"
+    },
+    "dontRepair": {
+      "nl": "Kleine electronica zoals mobiele telefoons, fotocamera's, e.d.",
+      "en": "Small electronics such as mobile phones, photo cameras, etc."
+    },
+    "moreInfo": {
+      "nl": "",
+      "en": ""
+    },
     "links": {
       "website": "https://jacobmaris.com/activiteiten/volwassenen/repairclub/"
     },
@@ -1126,14 +1486,26 @@
     "endTime": [
       "13:00"
     ],
-    "closed": "",
     "closedRanges": [],
+    "closed": {
+      "nl": "",
+      "en": ""
+    },
     "exceptions": [],
     "district": "Oost",
     "email": "duurzaam@buurtcooperatieohg.nl",
-    "doRepair": "Electronica, Kleding, Meubels",
-    "dontRepair": "",
-    "moreInfo": "",
+    "doRepair": {
+      "nl": "Electronica, Kleding, Meubels",
+      "en": "Electronics, Clothing, Furniture"
+    },
+    "dontRepair": {
+      "nl": "",
+      "en": ""
+    },
+    "moreInfo": {
+      "nl": "",
+      "en": ""
+    },
     "links": {
       "website": "https://buurtcooperatieohg.nl/verduurzaamt/reparatietafel/"
     },
@@ -1160,14 +1532,26 @@
     "endTime": [
       "12:00"
     ],
-    "closed": "Kerst en Nieuwjaar",
     "closedRanges": [],
+    "closed": {
+      "nl": "Kerst en Nieuwjaar",
+      "en": "Christmas and New Year"
+    },
     "exceptions": [],
     "district": "Zuid",
     "email": "programmacoordinator@woor.nl",
-    "doRepair": "Electronica, Kleding, Meubels",
-    "dontRepair": "Spullen die je niet de voordeur binnenkrijgt.",
-    "moreInfo": "Ook voor advies van onderhoud of aanschaf kun je bij ons terecht onder genot van een koffie of thee.",
+    "doRepair": {
+      "nl": "Electronica, Kleding, Meubels",
+      "en": "Electronics, Clothing, Furniture"
+    },
+    "dontRepair": {
+      "nl": "Spullen die je niet de voordeur binnenkrijgt.",
+      "en": "Stuff you can't get through the front door."
+    },
+    "moreInfo": {
+      "nl": "Ook voor advies van onderhoud of aanschaf kun je bij ons terecht onder genot van een koffie of thee.",
+      "en": "You can also come to us for maintenance or purchase advice over a coffee or tea."
+    },
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-zuid-rivierenbuurt/"
     },
@@ -1194,14 +1578,26 @@
     "endTime": [
       "12:00"
     ],
-    "closed": "Feestdagen",
     "closedRanges": [],
+    "closed": {
+      "nl": "Feestdagen",
+      "en": "National holidays"
+    },
     "exceptions": [],
     "district": "Nieuw-West",
     "email": "repaircafesloten@gmail.com",
-    "doRepair": "Electronica, Kleding, memorabilia, kleine huisraad, laptops, audio",
-    "dontRepair": "Grote huisraad, telefoons",
-    "moreInfo": "",
+    "doRepair": {
+      "nl": "Electronica, Kleding, memorabilia, kleine huisraad, laptops, audio",
+      "en": "Electronics, Clothing, memorabilia, small household items, laptops, audio"
+    },
+    "dontRepair": {
+      "nl": "Grote huisraad, telefoons",
+      "en": "Large household goods, telephones"
+    },
+    "moreInfo": {
+      "nl": "",
+      "en": ""
+    },
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-sloten-oud-osdorp/"
     },
@@ -1228,16 +1624,28 @@
     "endTime": [
       "16:00"
     ],
-    "closed": "Zomer",
     "closedRanges": [
       "07:08"
     ],
+    "closed": {
+      "nl": "Zomer",
+      "en": "Summer"
+    },
     "exceptions": [],
     "district": "Nieuw-West",
     "email": "info@flinkin.nl",
-    "doRepair": "Elektra, soms kleding (zie instagram)",
-    "dontRepair": "",
-    "moreInfo": "",
+    "doRepair": {
+      "nl": "Elektra, soms kleding (zie instagram)",
+      "en": "Electrical, sometimes clothing (see Instagram)"
+    },
+    "dontRepair": {
+      "nl": "",
+      "en": ""
+    },
+    "moreInfo": {
+      "nl": "",
+      "en": ""
+    },
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-slotervaart/",
       "website": "https://www.flinkin.nl/"
@@ -1268,16 +1676,28 @@
     "endTime": [
       "16:30"
     ],
-    "closed": "Juli en augustus\nVolgen vakantie kalender t Kruidvat",
     "closedRanges": [
       "07:08"
     ],
+    "closed": {
+      "nl": "Juli en augustus\nVolgen vakantie kalender t Kruidvat",
+      "en": "July and August\nFollowing the vacation calendar of Kruidvat\""
+    },
     "exceptions": [],
     "district": "Diemen",
     "email": "repaircafe@duurzaamdorpdiemen.nl",
-    "doRepair": "Electronica, Kleding",
-    "dontRepair": "Mobiele telefoons",
-    "moreInfo": "",
+    "doRepair": {
+      "nl": "Electronica, Kleding",
+      "en": "Electronics, Clothing"
+    },
+    "dontRepair": {
+      "nl": "Mobiele telefoons",
+      "en": "Mobile phones"
+    },
+    "moreInfo": {
+      "nl": "",
+      "en": ""
+    },
     "links": {
       "website": "http://www.duurzaamdorpdiemen.nl/p/repair-cafe.html"
     },
@@ -1304,14 +1724,26 @@
     "endTime": [
       "12:00"
     ],
-    "closed": "Zomervakantie",
     "closedRanges": [],
+    "closed": {
+      "nl": "Zomervakantie",
+      "en": "Summer vacation"
+    },
     "exceptions": [],
     "district": "Nieuw-West",
     "email": "m.ouaouirst@sezo.nl",
-    "doRepair": "Kleding",
-    "dontRepair": "Alles behalve textiel",
-    "moreInfo": "",
+    "doRepair": {
+      "nl": "Kleding",
+      "en": "Clothing"
+    },
+    "dontRepair": {
+      "nl": "Alles behalve textiel",
+      "en": "Everything except textiles"
+    },
+    "moreInfo": {
+      "nl": "",
+      "en": ""
+    },
     "links": {
       "website": "https://www.vrouwenvaart.nl"
     },
@@ -1338,14 +1770,26 @@
     "endTime": [
       "12:00"
     ],
-    "closed": "Nationale feestdagen",
     "closedRanges": [],
+    "closed": {
+      "nl": "Nationale feestdagen",
+      "en": "National holidays"
+    },
     "exceptions": [],
     "district": "West",
     "email": "l.vanberkum@combiwel.nl",
-    "doRepair": "Electronica, Meubels",
-    "dontRepair": "",
-    "moreInfo": "Het Repair Café vind plaats in Huis van de wijk Koperen Knoop.",
+    "doRepair": {
+      "nl": "Electronica, Meubels",
+      "en": "Electronics, Furniture"
+    },
+    "dontRepair": {
+      "nl": "",
+      "en": ""
+    },
+    "moreInfo": {
+      "nl": "Het Repair Café vind plaats in Huis van de wijk Koperen Knoop.",
+      "en": "The Repair Café takes place in Huis van de wijk Koperen Knoop."
+    },
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-west-westerpark/",
       "website": "https://west.combiwelbuurtwerk.nl/west-westerpark/"
@@ -1376,14 +1820,26 @@
     "endTime": [
       "16:30"
     ],
-    "closed": "Zomervakantie & kerstvakantie",
     "closedRanges": [],
+    "closed": {
+      "nl": "Zomervakantie & kerstvakantie",
+      "en": "Summer vacation & Christmas vacation"
+    },
     "exceptions": [],
     "district": "Centrum",
     "email": "dburger@dock.nl",
-    "doRepair": "Electronica, Huishoudelijke apparaten. Van platenspelers tot koffiezetapparaten tot stofzuigers.",
-    "dontRepair": "",
-    "moreInfo": "",
+    "doRepair": {
+      "nl": "Electronica, Huishoudelijke apparaten. Van platenspelers tot koffiezetapparaten tot stofzuigers.",
+      "en": "Electronics, Household appliances. From turntables to coffee machines to vacuum cleaners."
+    },
+    "dontRepair": {
+      "nl": "",
+      "en": ""
+    },
+    "moreInfo": {
+      "nl": "",
+      "en": ""
+    },
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-centrum-oost/",
       "website": "https://www.dock.nl/locaties/amsterdam/centrum/huis-van-de-buurt-de-witte-boei/"
@@ -1414,19 +1870,31 @@
     "endTime": [
       "16:00"
     ],
-    "closed": "Augustus",
     "closedRanges": [
       "2024-07-06",
       "08"
     ],
+    "closed": {
+      "nl": "Augustus",
+      "en": "August"
+    },
     "exceptions": [
       "2024-07-13"
     ],
     "district": "Noord",
     "email": "repaircafezonneplein@gmail.com",
-    "doRepair": "Electronica, Kleding, Meubels",
-    "dontRepair": "Fietsen en verder alles wat niet meegenomen kan worden naar het repair cafe",
-    "moreInfo": "",
+    "doRepair": {
+      "nl": "Electronica, Kleding, Meubels",
+      "en": "Electronics, Clothing, Furniture"
+    },
+    "dontRepair": {
+      "nl": "Fietsen en verder alles wat niet meegenomen kan worden naar het repair cafe",
+      "en": "Bicycles and anything else that cannot be taken to the repair café"
+    },
+    "moreInfo": {
+      "nl": "",
+      "en": ""
+    },
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-noord-zonneplein-tuindorp/",
       "website": "https://www.jofelamsterdam.nl/"

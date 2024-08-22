@@ -7,7 +7,7 @@ import isDateInRange from "./isDateInRange";
 
 // TODO Translate isClosed reasons?
 export default function isClosed(event: Event, rc: RC) {
-  const closed = rc.closed.toLowerCase();
+  const closed = rc.closed.nl.toLowerCase();
 
   for (const closedRange of rc.closedRanges) {
     if (isDateInRange(event.date, closedRange))

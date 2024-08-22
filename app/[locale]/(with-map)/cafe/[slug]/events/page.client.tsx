@@ -7,7 +7,7 @@ import classes from "@/app/utils/classes";
 import LoadMore from "@/app/components/LoadMore";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import Multilingual from "@/app/components/Multilingual";
+import useMultilingual from "@/app/utils/useMultilingual";
 
 export default function EventsClient({
   rc,
@@ -23,6 +23,9 @@ export default function EventsClient({
   const [offset, setOffset] = useState(numMonths);
   const [events, setEvents] = useState<Event[]>(initialEvents);
   const t = useTranslations("cafe-events");
+  const multilingual = useMultilingual();
+
+  const closed = multilingual(rc.closed);
 
   const loadMore = async () => {
     const additionalEvents = await getEvents({
@@ -40,7 +43,7 @@ export default function EventsClient({
     <BasePage title={rc.name} side>
       <div className="flex grow flex-col gap-2 overflow-y-auto px-3 pb-3">
         <DetailsSection title={t("open")}>
-          <Multilingual>{rc.open}</Multilingual>
+          {multilingual(rc.open)}
         </DetailsSection>
         {rc.rrule && (
           <DetailsSection
@@ -50,8 +53,8 @@ export default function EventsClient({
             {rc.rrule}
           </DetailsSection>
         )}
-        {rc.closed && (
-          <DetailsSection title={t("closed")}>{rc.closed}</DetailsSection>
+        {closed && (
+          <DetailsSection title={t("closed")}>{closed}</DetailsSection>
         )}
         <DetailsSection title={t("next")}>
           <ul className="list-outside space-y-1 pl-4">

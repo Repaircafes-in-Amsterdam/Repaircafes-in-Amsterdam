@@ -16,7 +16,7 @@ import LinksSection from "@/app/components/LinksSection";
 import { useLocale, useTranslations } from "next-intl";
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
-import Multilingual from "@/app/components/Multilingual";
+import useMultilingual from "@/app/utils/useMultilingual";
 
 export async function generateMetadata({
   params: { locale, slug },
@@ -62,16 +62,23 @@ export default async function CafeServer({
 function CafeClient({ rc, next }: { rc: RC; next: string }) {
   const locale = useLocale();
   const t = useTranslations("cafe");
+  const multilingual = useMultilingual();
+
+  const closed = multilingual(rc.closed);
+  const doRepair = multilingual(rc.doRepair);
+  const dontRepair = multilingual(rc.dontRepair);
+  const moreInfo = multilingual(rc.moreInfo);
+
   return (
     <BasePage title={rc.name} enableBackHome side>
       {!rc.verified && <Unconfirmed className="mb-1.5" />}
       <div className="flex grow flex-col gap-2 overflow-y-auto px-3 pb-3">
         <DetailsSection title={t("open")}>
-          <Multilingual>{rc.open}</Multilingual>
+          {multilingual(rc.open)}
         </DetailsSection>
         {next && <DetailsSection title={t("next")}>{next}</DetailsSection>}
-        {rc.closed && (
-          <DetailsSection title={t("closed")}>{rc.closed}</DetailsSection>
+        {closed && (
+          <DetailsSection title={t("closed")}>{closed}</DetailsSection>
         )}
         <DetailsSection title={t("address")}>
           <Link
@@ -84,16 +91,14 @@ function CafeClient({ rc, next }: { rc: RC; next: string }) {
             {rc.address}
           </Link>
         </DetailsSection>
-        {rc.doRepair && (
-          <DetailsSection title={t("doRepair")}>{rc.doRepair}</DetailsSection>
+        {doRepair && (
+          <DetailsSection title={t("doRepair")}>{doRepair}</DetailsSection>
         )}
-        {rc.dontRepair && (
-          <DetailsSection title={t("dontRepair")}>
-            {rc.dontRepair}
-          </DetailsSection>
+        {dontRepair && (
+          <DetailsSection title={t("dontRepair")}>{dontRepair}</DetailsSection>
         )}
-        {rc.moreInfo && (
-          <DetailsSection title={t("moreInfo")}>{rc.moreInfo}</DetailsSection>
+        {moreInfo && (
+          <DetailsSection title={t("moreInfo")}>{moreInfo}</DetailsSection>
         )}
         {rc.email && (
           <DetailsSection title={t("contact")}>
