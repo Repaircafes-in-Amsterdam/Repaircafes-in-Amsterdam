@@ -6,7 +6,6 @@ export type Links = {
   [key: string]: string;
 };
 
-// TODO add fields for translations
 export type RC = {
   name: string;
   slug: string;
