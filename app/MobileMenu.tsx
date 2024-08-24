@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import ChevronRight from "@/app/icons/ChevronRight.svg?react";
 import classes from "./utils/classes";
 import { Link } from "@/app/navigation";
+import LocaleToggleGroup from "./components/LocaleToggleGroup";
 
 function MenuItem({ href, children }: { href: string; children: ReactNode }) {
   return (
@@ -35,6 +36,9 @@ export default function MobileMenu({
       <MenuItem href="/map">Kaart</MenuItem>
       <MenuItem href="/repaircafes">Over Repair Cafés</MenuItem>
       <MenuItem href="/about">Over ons</MenuItem>
+      <div className="flex justify-end p-3">
+        <LocaleToggleGroup />
+      </div>
     </nav>
   );
 }
