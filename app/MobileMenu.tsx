@@ -3,6 +3,7 @@ import ChevronRight from "@/app/icons/ChevronRight.svg?react";
 import classes from "./utils/classes";
 import { Link } from "@/app/navigation";
 import LocaleToggleGroup from "./components/LocaleToggleGroup";
+import { useTranslations } from "next-intl";
 
 function MenuItem({ href, children }: { href: string; children: ReactNode }) {
   return (
@@ -24,6 +25,7 @@ export default function MobileMenu({
   isOpen: boolean;
   onOpenChange: (isOpen: boolean) => void;
 }) {
+  const t = useTranslations();
   return (
     <nav
       className={classes(
@@ -32,10 +34,10 @@ export default function MobileMenu({
       )}
       onClick={() => onOpenChange(false)}
     >
-      <MenuItem href="/">Agenda</MenuItem>
-      <MenuItem href="/map">Kaart</MenuItem>
-      <MenuItem href="/repaircafes">Over Repair Cafés</MenuItem>
-      <MenuItem href="/about">Over ons</MenuItem>
+      <MenuItem href="/">{t("nav.agenda")}</MenuItem>
+      <MenuItem href="/map">{t("nav.map")}</MenuItem>
+      <MenuItem href="/repaircafes">{t("nav.repaircafes")}</MenuItem>
+      <MenuItem href="/about">{t("nav.about")}</MenuItem>
       <div className="flex justify-end p-3">
         <LocaleToggleGroup />
       </div>

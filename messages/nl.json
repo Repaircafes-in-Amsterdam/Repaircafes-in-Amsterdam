@@ -28,6 +28,12 @@
   "of": "van",
   "repaircafe-page": "Repaircafe.org pagina",
   "language": "Taal",
+  "nav": {
+    "agenda": "Agenda",
+    "map": "Kaart",
+    "repaircafes": "Over Repair Cafés",
+    "about": "Over ons"
+  },
   "cafe": {
     "unknown": {
       "title": "Onbekend Repair Café",

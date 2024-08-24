@@ -28,6 +28,12 @@
   "of": "of",
   "repaircafe-page": "Repaircafe.org page",
   "language": "Language",
+  "nav": {
+    "agenda": "Agenda",
+    "map": "Map",
+    "repaircafes": "About Repair Cafés",
+    "about": "About us"
+  },
   "cafe": {
     "unknown": {
       "title": "Unknown Repair Café",
