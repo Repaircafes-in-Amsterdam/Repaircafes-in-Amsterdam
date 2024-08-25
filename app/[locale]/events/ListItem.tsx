@@ -4,9 +4,11 @@ import { EventRC } from "@/app/types";
 import useLinkPostfix from "@/app/utils/useLinkPostfix";
 import ChevronRight from "@/app/icons/ChevronRight.svg?react";
 import Warning from "@/app/icons/Warning.svg?react";
+import { useTranslations } from "next-intl";
 
 export default function ListItem({ rc }: { rc: EventRC }) {
   const linkPostfix = useLinkPostfix();
+  const t = useTranslations("events");
   return (
     <Link
       href={`cafe/${rc.slug}/events${linkPostfix}`}
@@ -14,7 +16,7 @@ export default function ListItem({ rc }: { rc: EventRC }) {
     >
       <div className="flex grow flex-col">
         <em className="font-semibold not-italic">{rc.name}</em>
-        In {rc.district}
+        {t("in")} {rc.district}
       </div>
       {!rc.verified && <Warning />}
       <ChevronRight />

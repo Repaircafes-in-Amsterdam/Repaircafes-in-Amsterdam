@@ -1,7 +1,9 @@
 import Warning from "@/app/icons/Warning.svg?react";
 import classes from "@/app/utils/classes";
+import { useTranslations } from "next-intl";
 
 export default function Unconfirmed({ className }: { className?: string }) {
+  const t = useTranslations();
   return (
     <div
       className={classes(
@@ -10,7 +12,7 @@ export default function Unconfirmed({ className }: { className?: string }) {
       )}
     >
       <Warning className="shrink-0" />
-      De volgende informatie is nog niet bevestigd
+      {t("unconfirmed")}
     </div>
   );
 }

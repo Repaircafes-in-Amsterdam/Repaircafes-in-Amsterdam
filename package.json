@@ -49,6 +49,7 @@
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
+    "eslint-plugin-i18next": "^6.0.9",
     "google-auth-library": "^9.9.0",
     "google-spreadsheet": "^4.1.1",
     "jsdom": "^24.0.0",

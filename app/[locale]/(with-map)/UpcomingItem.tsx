@@ -5,6 +5,7 @@ import { EventRC } from "@/app/types";
 import useHoverStore from "@/app/useHoverStore";
 import classes from "@/app/utils/classes";
 import useLinkPostfix from "@/app/utils/useLinkPostfix";
+import { useTranslations } from "next-intl";
 
 export default function UpcomingItem({
   startTime,
@@ -18,6 +19,7 @@ export default function UpcomingItem({
   const linkPostfix = useLinkPostfix();
   const isHovered = useHoverStore((state) => state.hoveredMarker === rc.slug);
   const setHoveredRow = useHoverStore((state) => state.setHoveredRow);
+  const t = useTranslations("agenda");
   return (
     <Link
       href={`/cafe/${rc.slug}${linkPostfix}`}
@@ -36,7 +38,7 @@ export default function UpcomingItem({
     >
       <div className="flex grow flex-col">
         <em className="font-semibold not-italic">{rc.name}</em>
-        {startTime} - {endTime} in {rc.district}
+        {startTime} - {endTime} {t("in")} {rc.district}
       </div>
       {!rc.verified && <Warning />}
       <ChevronRight />

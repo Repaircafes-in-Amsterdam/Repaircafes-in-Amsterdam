@@ -1,3 +1,4 @@
+/* eslint-disable i18next/no-literal-string */
 import { Metadata } from "next";
 import Header from "@/app/components/Header";
 import BasePage from "@/app/components/BasePage";

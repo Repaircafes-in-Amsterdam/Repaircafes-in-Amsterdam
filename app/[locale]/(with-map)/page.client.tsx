@@ -20,7 +20,7 @@ export default function ClientPage({
 }) {
   const [offset, setOffset] = useState(numMonths);
   const [events, setEvents] = useState<Event[]>(initialEvents);
-  const t = useTranslations();
+  const t = useTranslations("agenda");
 
   const loadMore = async () => {
     const additionalEvents = await getEvents({ monthsOffset: offset, locale });
@@ -29,7 +29,7 @@ export default function ClientPage({
   };
 
   return (
-    <BasePage showHeader={false} title={t("agenda")} side>
+    <BasePage showHeader={false} title={t("title")} side>
       <div className="flex flex-wrap gap-x-3 gap-y-2 px-3 py-3">
         <DistrictSelect />
         <OfficeHoursCheckbox />

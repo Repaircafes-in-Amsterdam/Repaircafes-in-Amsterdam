@@ -24,15 +24,19 @@
   },
   "outside-office-hours-only": "Outside office hours only",
   "go-back": "Go back",
-  "agenda": "Agenda",
   "of": "of",
   "repaircafe-page": "Repaircafe.org page",
+  "unconfirmed": "The following information has not yet been confirmed",
   "language": "Language",
   "nav": {
     "agenda": "Agenda",
     "map": "Map",
     "repaircafes": "About Repair Cafés",
     "about": "About us"
+  },
+  "agenda": {
+    "title": "Agenda",
+    "in": "in"
   },
   "cafe": {
     "unknown": {
@@ -81,6 +85,7 @@
   },
   "events": {
     "title": "Repair Cafés",
+    "in": "In",
     "metadata": {
       "title": "Events - Repair Cafes in Amsterdam"
     }

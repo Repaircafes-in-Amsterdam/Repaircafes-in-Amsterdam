@@ -1,3 +1,4 @@
+/* eslint-disable i18next/no-literal-string */
 import { Link } from "@/app/navigation";
 import Mail from "@/app/icons/Mail.svg?react";
 import data from "@/data/data.json";
