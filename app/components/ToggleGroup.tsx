@@ -22,7 +22,7 @@ export default function ToggleButton({
     <div className="flex items-center gap-x-3">
       <div>{label}</div>
       <RadioGroup.Root
-        className="whitespace-nowrap border border-blue"
+        className="whitespace-nowrap border-2 border-blue"
         value={value}
         onValueChange={onChange}
         aria-label={label}
@@ -33,8 +33,8 @@ export default function ToggleButton({
             value={value}
             className={classes(
               "border-2 border-blue/0 px-4 py-1",
-              "-m-px", //overlap border of parent
-              "data-[state=checked]:border-blue data-[state=checked]:font-bold",
+              "-m-0.5", //overlap border of parent
+              "data-[state=checked]:border-blue data-[state=checked]:bg-blue-250 data-[state=checked]:font-bold",
             )}
           >
             {label}
