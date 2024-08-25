@@ -1,11 +1,15 @@
 /** @type {import('next').NextConfig} */
 import withBundleAnalyzer from "@next/bundle-analyzer";
 import createNextIntlPlugin from "next-intl/plugin";
+import createMDX from "@next/mdx";
 const withNextIntl = createNextIntlPlugin();
 
 const analyzeBundle = !!process.env.npm_config_analyzebundle;
 
+const withMDX = createMDX({});
+
 const nextConfig = {
+  pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
@@ -19,6 +23,6 @@ const nextConfig = {
   },
 };
 
-export default withNextIntl(
-  analyzeBundle ? withBundleAnalyzer()(nextConfig) : nextConfig,
+export default withMDX(
+  withNextIntl(analyzeBundle ? withBundleAnalyzer()(nextConfig) : nextConfig),
 );
