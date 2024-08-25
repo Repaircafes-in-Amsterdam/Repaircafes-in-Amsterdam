@@ -1,7 +1,7 @@
 import Header from "@/app/components/Header";
 import { ReactNode } from "react";
 import Info from "@/app/icons/Info.svg?react";
-import Link from "next/link";
+import { Link } from "@/app/navigation";
 
 export default function DetailsSection({
   title,

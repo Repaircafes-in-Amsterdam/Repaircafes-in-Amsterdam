@@ -1,12 +1,13 @@
-import { RC, Event } from "../types";
+import { RC, Event } from "@/app/types";
 import holidaysData from "@/data/holidays-data.json";
 import schoolHolidaysData from "@/data/school-holidays-data.json";
 import ramadanData from "@/data/ramadan-data.json";
 import findHoliday from "./findHoliday";
 import isDateInRange from "./isDateInRange";
 
+// TODO Translate isClosed reasons?
 export default function isClosed(event: Event, rc: RC) {
-  const closed = rc.closed.toLowerCase();
+  const closed = rc.closed.nl.toLowerCase();
 
   for (const closedRange of rc.closedRanges) {
     if (isDateInRange(event.date, closedRange))

@@ -1,8 +1,8 @@
 "use client";
 
-import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 import useHoverStore from "../useHoverStore";
+import { usePathname } from "../navigation";
 
 export default function HoverResetter() {
   const pathname = usePathname();

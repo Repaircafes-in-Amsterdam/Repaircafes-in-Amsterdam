@@ -1,7 +1,7 @@
-import Link from "next/link";
 import { ReactNode } from "react";
-import { usePathname } from "next/navigation";
 import classes from "./utils/classes";
+import { Link, usePathname } from "@/app/navigation";
+import { useTranslations } from "next-intl";
 
 function MenuLink({
   href,
@@ -27,16 +27,18 @@ function MenuLink({
   );
 }
 
+// TODO Add language chooser
 export default function Menu() {
+  const t = useTranslations();
   return (
     <div className="flex gap-3 font-medium text-white">
-      <MenuLink href="/">Agenda</MenuLink>
-      <MenuLink href="/map">Kaart</MenuLink>
+      <MenuLink href="/">{t("nav.agenda")}</MenuLink>
+      <MenuLink href="/map">{t("nav.map")}</MenuLink>
       <MenuLink href="/repaircafes" className="hidden md:block">
-        Over Repair Cafés
+        {t("nav.repaircafes")}
       </MenuLink>
       <MenuLink href="/about" className="hidden md:block">
-        Over ons
+        {t("nav.about")}
       </MenuLink>
     </div>
   );

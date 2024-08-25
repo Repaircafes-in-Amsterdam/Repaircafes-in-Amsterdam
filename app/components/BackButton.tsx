@@ -1,8 +1,8 @@
 "use client";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { ReactNode } from "react";
-import useLinkPostfix from "../utils/useLinkPostfix";
+import useLinkPostfix from "@/app/utils/useLinkPostfix";
+import { useTranslations } from "next-intl";
+import { Link, useRouter } from "../navigation";
 
 export default function BackButton({
   className,
@@ -15,12 +15,13 @@ export default function BackButton({
 }) {
   const linkPostfix = useLinkPostfix();
   const router = useRouter();
+  const t = useTranslations();
   return (
     <Link
       href={`/${linkPostfix}`}
       className={className}
-      aria-label="Go back"
-      title="Go back"
+      aria-label={t("go-back")}
+      title={t("go-back")}
       {...(!backHome ? { onClick: () => router.back() } : {})}
     >
       {children}

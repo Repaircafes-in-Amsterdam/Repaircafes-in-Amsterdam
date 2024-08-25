@@ -1,3 +1,7 @@
+export type MultilingualData = {
+  [key: string]: string;
+};
+
 export type Links = {
   [key: string]: string;
 };
@@ -5,18 +9,18 @@ export type Links = {
 export type RC = {
   name: string;
   slug: string;
-  open: string;
+  open: MultilingualData;
   rrule: string[];
   startTime: string[];
   endTime: string[];
-  closed: string;
+  closed: MultilingualData;
   closedRanges: string[];
   exceptions: string[];
   address: string;
   district: string;
-  doRepair: string;
-  dontRepair: string;
-  moreInfo: string;
+  doRepair: MultilingualData;
+  dontRepair: MultilingualData;
+  moreInfo: MultilingualData;
   coordinate: number[];
   email: string;
   links?: Links;
@@ -50,7 +54,7 @@ export type MapRC = {
   slug: string;
   coordinate: number[];
   name: string;
-  open: string;
+  open: MultilingualData;
   address: string;
   verified: boolean;
   district: string;

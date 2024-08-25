@@ -1,11 +1,12 @@
 "use client";
 import Logo from "@/app/Logo.svg?react";
 import MenuIcon from "@/app/icons/Menu.svg?react";
-import Link from "next/link";
+import { Link } from "@/app/navigation";
 import MobileMenu from "./MobileMenu";
 import { useState } from "react";
 import classes from "./utils/classes";
 import Menu from "./Menu";
+import LocaleSelect from "./components/LocaleSelect";
 
 export default function TopBar() {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
@@ -20,11 +21,14 @@ export default function TopBar() {
           )}
           onClick={() => setMenuIsOpen(false)}
         ></div>
-        <div className="flex flex-col gap-2.5 md:grow md:flex-row md:items-end md:justify-between">
+        <div className="flex flex-col gap-2.5 md:grow md:flex-row md:justify-between">
           <Link href="/" aria-label="Logo">
             <Logo />
           </Link>
-          <Menu />
+          <div className="flex flex-col justify-between md:items-end">
+            <LocaleSelect className="hidden md:block" />
+            <Menu />
+          </div>
         </div>
         <button
           onClick={() => setMenuIsOpen(!menuIsOpen)}

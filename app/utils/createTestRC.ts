@@ -1,4 +1,4 @@
-import { RC } from "../types";
+import { RC } from "@/app/types";
 
 export default function createTestRC(options: Partial<RC>): RC {
   return {
@@ -7,15 +7,15 @@ export default function createTestRC(options: Partial<RC>): RC {
     startTime: ["0:00"],
     endTime: ["23:00"],
     rrule: [""],
-    open: "",
-    closed: "",
+    open: { nl: "" },
+    closed: { nl: "" },
     closedRanges: [],
     exceptions: [],
     address: "",
     district: "",
-    doRepair: "",
-    dontRepair: "",
-    moreInfo: "",
+    doRepair: { nl: "" },
+    dontRepair: { nl: "" },
+    moreInfo: { nl: "" },
     coordinate: [],
     email: "",
     verified: true,

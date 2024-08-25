@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next";
 
+// TODO Translate manifest
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "Repair Cafes in Amsterdam",

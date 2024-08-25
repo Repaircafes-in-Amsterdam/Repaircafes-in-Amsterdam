@@ -1,18 +1,41 @@
-import getParamHook, { Option } from "./getParamHook";
+import { useTranslations } from "next-intl";
+import getParamHook from "./getParamHook";
+import { useMemo } from "react";
 
 const defaultValue = "any";
 
-export const options: Option[] = [
-  { value: defaultValue, label: "Alle" },
-  { value: "Centrum", label: "Centrum" },
-  { value: "Nieuw-West", label: "Nieuw-West" },
-  { value: "Noord", label: "Noord" },
-  { value: "Oost", label: "Oost" },
-  { value: "West", label: "West" },
-  { value: "Zuid", label: "Zuid" },
-  { value: "Zuidoost", label: "Zuidoost" },
-  // { value: "Weesp", label: "Weesp" },
-  { value: "Diemen", label: "Diemen" },
+const values = [
+  defaultValue,
+  "Centrum",
+  "Nieuw-West",
+  "Noord",
+  "Oost",
+  "West",
+  "Zuid",
+  "Zuidoost",
+  "Diemen",
 ];
 
-export default getParamHook("district", defaultValue, options);
+const useHook = getParamHook("district", defaultValue);
+
+export default function useDistrict() {
+  const { value, setValue } = useHook();
+
+  const t = useTranslations("districts");
+
+  const options = useMemo(
+    () =>
+      values.map((value) => ({
+        value,
+        label: t(value),
+      })),
+    [t],
+  );
+
+  return {
+    value,
+    label: t(value),
+    options,
+    setValue,
+  };
+}

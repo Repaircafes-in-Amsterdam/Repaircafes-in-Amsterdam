@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import hasOutOfOfficeHours from "./hasOutOfOfficeHours";
-import { RC } from "../types";
+import { RC } from "@/app/types";
 import createTestRC from "./createTestRC";
 
 describe("hasOutOfOfficeHours", () => {

@@ -1,0 +1,109 @@
+{
+  "metadata": {
+    "title": "Repair Cafes in Amsterdam",
+    "description": "Agenda en kaart van van alle Repair Cafés in Amsterdam. Zie duidelijk wanneer ze open zijn en waar ze te bezoeken zijn",
+    "keywords": "repaircafe,repaircafes,repair café,repair cafe,amsterdam,openingstijden,agenda,kalender,aankomende,eerstvolgende,kaart,reparatie,overzicht,locaties"
+  },
+  "district": {
+    "label": "Stadsdeel"
+  },
+  "not-found": {
+    "title": "Niet gevonden",
+    "body": "Deze pagina is niet gevonden"
+  },
+  "districts": {
+    "any": "Alle",
+    "Centrum": "Centrum",
+    "Nieuw-West": "Nieuw-West",
+    "Noord": "Noord",
+    "Oost": "Oost",
+    "West": "West",
+    "Zuid": "Zuid",
+    "Zuidoost": "Zuidoost",
+    "Diemen": "Diemen"
+  },
+  "outside-office-hours-only": "Alleen buiten kantooruren",
+  "go-back": "Ga terug",
+  "of": "van",
+  "repaircafe-page": "Repaircafe.org pagina",
+  "unconfirmed": "De volgende informatie is nog niet bevestigd",
+  "language": "Taal",
+  "nav": {
+    "agenda": "Agenda",
+    "map": "Kaart",
+    "repaircafes": "Over Repair Cafés",
+    "about": "Over ons"
+  },
+  "agenda": {
+    "title": "Agenda",
+    "in": "in"
+  },
+  "cafe": {
+    "unknown": {
+      "title": "Onbekend Repair Café",
+      "body": "Helaas, dit Repair Café is niet bekend bij ons."
+    },
+    "open": "Geopend op",
+    "next": "Eerst volgende keer",
+    "closed": "Gesloten op",
+    "address": "Adres",
+    "doRepair": "Wij repareren",
+    "dontRepair": "Wij repareren geen",
+    "moreInfo": "Meer informatie",
+    "contact": "Contact",
+    "links": "Links",
+    "social": "Sociaal",
+    "read-more-about-repair-cafes": "Lees meer over Repair Cafés",
+    "metadata": {
+      "title": "{name} - Repair Cafes in Amsterdam"
+    }
+  },
+  "map": {
+    "title": "Kaart",
+    "address": "Adres",
+    "open": "Open op",
+    "more-info": "Meer info",
+    "metadata": {
+      "title": "Kaart - Repair Cafes in Amsterdam",
+      "description": "Kaart van alle Repair Cafés in Amsterdam"
+    }
+  },
+  "about": {
+    "title": "Over ons",
+    "contact": "Contact",
+    "email": "info@repaircafe.amsterdam",
+    "metadata": {
+      "title": "Over ons - Repair Cafes in Amsterdam",
+      "description": "Over Repair Cafés in Amsterdam"
+    }
+  },
+  "repaircafes": {
+    "title": "Over Repair Cafés",
+    "metadata": {
+      "title": "Over Repair Cafés - Repair Cafes in Amsterdam",
+      "description": "Over Repair Cafés in het algemeen en vaak voorkomende vragen (FAQ)"
+    }
+  },
+  "events": {
+    "title": "Repair Cafés",
+    "in": "In",
+    "metadata": {
+      "title": "Evenementen - Repair Cafes in Amsterdam"
+    }
+  },
+  "cafe-events": {
+    "open": "Geopend op",
+    "next": "Eerst volgende keren",
+    "closed": "Gesloten op",
+    "rrule": "RRule",
+    "closedCause": "Want {closedCause}",
+    "exceptionCause": "Want uitzondering: {exceptionCause}",
+    "unknown": {
+      "title": "Onbekend Repair Café",
+      "body": "Helaas, dit Repair Café is niet bekend bij ons."
+    },
+    "metadata": {
+      "title": "{name} evenementen - Repair Cafes in Amsterdam"
+    }
+  }
+}

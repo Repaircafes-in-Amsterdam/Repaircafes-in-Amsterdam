@@ -1,4 +1,4 @@
-import { Holiday } from "../types";
+import { Holiday } from "@/app/types";
 
 export default function findHoliday(
   date: Date,
