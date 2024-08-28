@@ -7,6 +7,7 @@ import Check from "@/app/icons/Check.svg?react";
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname, useRouter } from "../navigation";
 import { LOCALES } from "../constants";
+import classes from "../utils/classes";
 
 export default function LocaleSelect({ className }: { className?: string }) {
   const locale = useLocale();
@@ -14,7 +15,7 @@ export default function LocaleSelect({ className }: { className?: string }) {
   const router = useRouter();
   const t = useTranslations();
   return (
-    <div className={className}>
+    <div className={classes("-mx-2 -my-1", className)}>
       <Label.Root className="sr-only" htmlFor="locale">
         {t("language")}
       </Label.Root>
@@ -25,7 +26,7 @@ export default function LocaleSelect({ className }: { className?: string }) {
         }}
       >
         <Select.Trigger
-          className="inline-flex items-center justify-between gap-1 leading-none text-white outline-none"
+          className="inline-flex items-center justify-between gap-1 px-2 py-1 leading-none text-white outline-none"
           aria-label={t("language")}
           id="locale"
         >
