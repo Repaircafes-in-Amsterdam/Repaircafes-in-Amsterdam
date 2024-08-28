@@ -32,7 +32,7 @@ export default function TopBar() {
         </div>
         <button
           onClick={() => setMenuIsOpen(!menuIsOpen)}
-          className="cursor-pointer text-white md:hidden"
+          className="-m-3 cursor-pointer p-3 text-white md:hidden"
           aria-label="Menu"
         >
           <MenuIcon />
