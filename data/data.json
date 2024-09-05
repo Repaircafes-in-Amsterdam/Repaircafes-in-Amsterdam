@@ -1391,7 +1391,9 @@
     "endTime": [
       "17:00"
     ],
-    "closedRanges": [],
+    "closedRanges": [
+      "2024-09-08"
+    ],
     "closed": {
       "nl": "",
       "en": ""
