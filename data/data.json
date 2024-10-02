@@ -1376,6 +1376,53 @@
     ]
   },
   {
+    "name": "RE-UPsalon",
+    "address": "Bilderdijkstraat 183",
+    "open": {
+      "nl": "Elke vrijdag 14:00 - 17:00",
+      "en": "Every Friday 14:00 - 17:00"
+    },
+    "rrule": [
+      "FREQ=WEEKLY;INTERVAL=1;BYDAY=FR"
+    ],
+    "startTime": [
+      "14:00"
+    ],
+    "endTime": [
+      "17:00"
+    ],
+    "closedRanges": [],
+    "closed": {
+      "nl": "Zon- en feestdagen",
+      "en": "National holidays"
+    },
+    "exceptions": [],
+    "district": "West",
+    "email": "carla.robben@legerdesheils.nl",
+    "doRepair": {
+      "nl": "Kleding",
+      "en": "Clothing"
+    },
+    "dontRepair": {
+      "nl": "",
+      "en": ""
+    },
+    "moreInfo": {
+      "nl": "Er wordt niet voor jou gerepareerd, maar je krijgt hulp bij je project. Maak gebruik van de naaimachines, materialen én expertise van Truus en Brunette.",
+      "en": "No repair is done for you, but you get help with your project. Use the sewing machines, materials and expertise of Truus and Brunette."
+    },
+    "socials": {
+      "facebook": "https://www.facebook.com/profile.php?id=100075982767206",
+      "instagram": "https://www.instagram.com/reupsalon/"
+    },
+    "verified": true,
+    "slug": "re-upsalon",
+    "coordinate": [
+      52.366676330566406,
+      4.872640132904053
+    ]
+  },
+  {
     "name": "Repair Events Tolhuistuin",
     "address": "IJpromenade 2",
     "open": {
