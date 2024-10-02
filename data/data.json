@@ -1659,58 +1659,6 @@
     ]
   },
   {
-    "name": "Slotervaart De Kas",
-    "address": "Jan Tooropstraat 8",
-    "open": {
-      "nl": "Elke vrijdag middag 14:00 - 16:00",
-      "en": "Every Friday afternoon 14:00 - 16:00"
-    },
-    "rrule": [
-      "FREQ=WEEKLY;BYDAY=FR;INTERVAL=1"
-    ],
-    "startTime": [
-      "14:00"
-    ],
-    "endTime": [
-      "16:00"
-    ],
-    "closedRanges": [
-      "07:08"
-    ],
-    "closed": {
-      "nl": "Zomer",
-      "en": "Summer"
-    },
-    "exceptions": [],
-    "district": "Nieuw-West",
-    "email": "info@flinkin.nl",
-    "doRepair": {
-      "nl": "Elektra, soms kleding (zie instagram)",
-      "en": "Electrical, sometimes clothing (see Instagram)"
-    },
-    "dontRepair": {
-      "nl": "",
-      "en": ""
-    },
-    "moreInfo": {
-      "nl": "",
-      "en": ""
-    },
-    "links": {
-      "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-slotervaart/",
-      "website": "https://www.flinkin.nl/"
-    },
-    "socials": {
-      "instagram": "https://www.instagram.com/tantetoorop"
-    },
-    "verified": false,
-    "slug": "slotervaart-de-kas",
-    "coordinate": [
-      52.36106109999999,
-      4.836834
-    ]
-  },
-  {
     "name": "t Kruidvat",
     "address": "Ouderkerkerlaan 30",
     "open": {
