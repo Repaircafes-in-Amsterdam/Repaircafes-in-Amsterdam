@@ -1426,11 +1426,11 @@
     "name": "Repair Events Tolhuistuin",
     "address": "IJpromenade 2",
     "open": {
-      "nl": "Elke tweede zondagmiddag 14:00 - 17:00",
-      "en": "Every second Sunday afternoon 14:00 - 17:00"
+      "nl": "Elke derde zondagmiddag 14:00 - 17:00",
+      "en": "Every third Sunday afternoon 14:00 - 17:00"
     },
     "rrule": [
-      "FREQ=MONTHLY;BYSETPOS=2;BYDAY=SU;INTERVAL=1"
+      "FREQ=MONTHLY;BYSETPOS=3;BYDAY=SU;INTERVAL=1"
     ],
     "startTime": [
       "14:00"
@@ -1439,7 +1439,8 @@
       "17:00"
     ],
     "closedRanges": [
-      "2024-09-08"
+      "2024-10-20",
+      "2025:2035"
     ],
     "closed": {
       "nl": "",
