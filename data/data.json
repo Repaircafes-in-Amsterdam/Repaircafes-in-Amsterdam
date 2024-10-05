@@ -1058,12 +1058,12 @@
     "district": "Centrum",
     "email": "ssaruhan@dock.nl",
     "doRepair": {
-      "nl": "Huishoudelijke apparaten",
-      "en": "Household appliances"
+      "nl": "Huishoudelijke apparaten, oude boeken",
+      "en": "Household appliances, old books"
     },
     "dontRepair": {
-      "nl": "Alle apparaten die niet naar de locatie gebracht kan worden",
-      "en": "All appliances that cannot be brought to the location"
+      "nl": "Alle apparaten die niet naar de locatie gebracht kan worden",
+      "en": "All appliances that cannot be brought to the location"
     },
     "moreInfo": {
       "nl": "",
