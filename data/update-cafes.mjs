@@ -1,10 +1,8 @@
-import nextEnv from "@next/env";
-const { loadEnvConfig } = nextEnv;
 import { GoogleSpreadsheet } from "google-spreadsheet";
-import { JWT } from "google-auth-library";
 import slugify from "slugify";
 import saveJSON from "./saveJSON.mjs";
 import loadJSON from "./loadJSON.mjs";
+import getAuth from "./getAuth.mjs";
 
 const DATA_FILE_NAME = "cafes.json";
 const MAP_DATA_FILE_NAME = "map-data.json";
@@ -33,18 +31,7 @@ for (const item of mapData) {
 // Load manually looked up coordinates per address
 const manualMapData = await loadJSON(MANUAL_MAP_DATA_FILE_NAME);
 
-// Authenticate with google
-const projectDir = process.cwd();
-loadEnvConfig(projectDir);
-const { GOOGLE_SERVICE_ACCOUNT_EMAIL, GOOGLE_PRIVATE_KEY } = process.env;
-// See https://theoephraim.github.io/node-google-spreadsheet/#/guides/authentication
-const serviceAccountAuth = new JWT({
-  email: GOOGLE_SERVICE_ACCOUNT_EMAIL,
-  key: GOOGLE_PRIVATE_KEY,
-  scopes: ["https://www.googleapis.com/auth/spreadsheets"],
-});
-
-const doc = new GoogleSpreadsheet(SPREADSHEET, serviceAccountAuth);
+const doc = new GoogleSpreadsheet(SPREADSHEET, getAuth());
 await doc.loadInfo(); // loads document properties and worksheets
 const sheet = doc.sheetsById[SHEET_ID];
 const rows = await sheet.getRows();
