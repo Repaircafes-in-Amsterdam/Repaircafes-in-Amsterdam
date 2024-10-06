@@ -1,7 +1,7 @@
 import { RC, Event } from "@/app/types";
-import holidaysData from "@/data/holidays-data.json";
-import schoolHolidaysData from "@/data/school-holidays-data.json";
-import ramadanData from "@/data/ramadan-data.json";
+import holidaysData from "@/data/data/holidays-data.json";
+import schoolHolidaysData from "@/data/data/school-holidays-data.json";
+import ramadanData from "@/data/data/ramadan-data.json";
 import findHoliday from "./findHoliday";
 import isDateInRange from "./isDateInRange";
 

@@ -1,4 +1,4 @@
-import data from "@/data/data.json";
+import data from "@/data/data/cafes.json";
 import BasePage from "@/app/components/BasePage";
 import { Metadata } from "next";
 import { BASE_URL } from "@/app/constants";

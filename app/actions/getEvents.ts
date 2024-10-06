@@ -1,6 +1,6 @@
 "use server";
 import { rrulestr } from "rrule";
-import data from "@/data/data.json";
+import data from "@/data/data/cafes.json";
 import { RC, Event } from "@/app/types";
 import getDateString from "@/app/utils/getDateString";
 import isClosed from "@/app/utils/isClosed";

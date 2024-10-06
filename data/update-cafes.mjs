@@ -2,13 +2,11 @@ import nextEnv from "@next/env";
 const { loadEnvConfig } = nextEnv;
 import { GoogleSpreadsheet } from "google-spreadsheet";
 import { JWT } from "google-auth-library";
-import path from "path";
-import { promises as fs } from "fs";
-import { fileURLToPath } from "url";
 import slugify from "slugify";
 import saveJSON from "./saveJSON.mjs";
+import loadJSON from "./loadJSON.mjs";
 
-const DATA_FILE_NAME = "data.json";
+const DATA_FILE_NAME = "cafes.json";
 const MAP_DATA_FILE_NAME = "map-data.json";
 const MANUAL_MAP_DATA_FILE_NAME = "manual-map-data.json";
 const SPREADSHEET = "1LYn_GX0iwo5IaJCk8wada3FjbwI_gpUprs9prWp0pIQ";
@@ -154,10 +152,3 @@ console.log(`Missing coordinates for ${missingCoordinatesCount} addresses`);
 
 saveJSON(DATA_FILE_NAME, list);
 console.log(`Updated data for ${list.length} Repair Cafés`);
-
-async function loadJSON(fileName) {
-  const dataFolder = path.dirname(fileURLToPath(import.meta.url));
-  const filePath = path.join(dataFolder, fileName);
-  const rawData = await fs.readFile(filePath, "utf8");
-  return JSON.parse(rawData);
-}
