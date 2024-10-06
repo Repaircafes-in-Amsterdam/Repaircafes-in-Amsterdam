@@ -22,7 +22,7 @@ export default function Upcoming({ events }: { events: Event[] }) {
   const justOfficeHours = rawJustOfficeHours === "true";
 
   let filtered = events
-    .filter((event) => district === "any" || district === event.rc.district)
+    .filter((event) => district === "any" || district === event.district)
     .filter(
       (event) =>
         !justOfficeHours || (justOfficeHours && !isDuringOfficeHours(event)),
@@ -44,9 +44,9 @@ export default function Upcoming({ events }: { events: Event[] }) {
             {group.dateString}
           </h2>
           <ul className="mb-3 flex flex-col last:mb-0">
-            {group.events.map(({ startTime, endTime, rc }) => (
-              <li key={rc.slug}>
-                <UpcomingItem {...{ startTime, endTime, rc }} />
+            {group.events.map((event) => (
+              <li key={event.slug}>
+                <UpcomingItem event={event} />
               </li>
             ))}
           </ul>

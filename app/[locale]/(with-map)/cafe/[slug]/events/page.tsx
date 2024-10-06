@@ -1,6 +1,6 @@
 import { BASE_URL } from "@/app/constants";
 import { Metadata } from "next";
-import data from "@/data/data.json";
+import data from "@/data/data/cafes.json";
 import { RC, Event } from "@/app/types";
 import BasePage from "@/app/components/BasePage";
 import getEvents from "@/app/actions/getEvents";

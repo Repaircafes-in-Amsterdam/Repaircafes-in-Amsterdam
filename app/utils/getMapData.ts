@@ -1,4 +1,4 @@
-import data from "@/data/data.json";
+import data from "@/data/data/cafes.json";
 import { MapRC, RC } from "@/app/types";
 import hasOutOfOfficeHours from "./hasOutOfOfficeHours";
 

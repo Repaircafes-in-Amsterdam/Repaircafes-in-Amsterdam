@@ -1,14 +1,10 @@
-import nextEnv from "@next/env";
-const { loadEnvConfig } = nextEnv;
 import { GoogleSpreadsheet } from "google-spreadsheet";
-import { JWT } from "google-auth-library";
-import path from "path";
-import { promises as fs } from "fs";
-import { fileURLToPath } from "url";
 import slugify from "slugify";
 import saveJSON from "./saveJSON.mjs";
+import loadJSON from "./loadJSON.mjs";
+import getAuth from "./getAuth.mjs";
 
-const DATA_FILE_NAME = "data.json";
+const DATA_FILE_NAME = "cafes.json";
 const MAP_DATA_FILE_NAME = "map-data.json";
 const MANUAL_MAP_DATA_FILE_NAME = "manual-map-data.json";
 const SPREADSHEET = "1LYn_GX0iwo5IaJCk8wada3FjbwI_gpUprs9prWp0pIQ";
@@ -35,18 +31,7 @@ for (const item of mapData) {
 // Load manually looked up coordinates per address
 const manualMapData = await loadJSON(MANUAL_MAP_DATA_FILE_NAME);
 
-// Authenticate with google
-const projectDir = process.cwd();
-loadEnvConfig(projectDir);
-const { GOOGLE_SERVICE_ACCOUNT_EMAIL, GOOGLE_PRIVATE_KEY } = process.env;
-// See https://theoephraim.github.io/node-google-spreadsheet/#/guides/authentication
-const serviceAccountAuth = new JWT({
-  email: GOOGLE_SERVICE_ACCOUNT_EMAIL,
-  key: GOOGLE_PRIVATE_KEY,
-  scopes: ["https://www.googleapis.com/auth/spreadsheets"],
-});
-
-const doc = new GoogleSpreadsheet(SPREADSHEET, serviceAccountAuth);
+const doc = new GoogleSpreadsheet(SPREADSHEET, getAuth());
 await doc.loadInfo(); // loads document properties and worksheets
 const sheet = doc.sheetsById[SHEET_ID];
 const rows = await sheet.getRows();
@@ -154,10 +139,3 @@ console.log(`Missing coordinates for ${missingCoordinatesCount} addresses`);
 
 saveJSON(DATA_FILE_NAME, list);
 console.log(`Updated data for ${list.length} Repair Cafés`);
-
-async function loadJSON(fileName) {
-  const dataFolder = path.dirname(fileURLToPath(import.meta.url));
-  const filePath = path.join(dataFolder, fileName);
-  const rawData = await fs.readFile(filePath, "utf8");
-  return JSON.parse(rawData);
-}

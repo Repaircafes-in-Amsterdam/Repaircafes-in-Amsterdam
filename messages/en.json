@@ -58,6 +58,20 @@
       "title": "{name} - Repair Cafes in Amsterdam"
     }
   },
+  "festival": {
+    "unknown": {
+      "title": "Unknown festival",
+      "body": "Unfortunately, we are not aware of this festival."
+    },
+    "date": "Date",
+    "information": "Information",
+    "moreInfo": "More info",
+    "location": "Location",
+    "address": "Address",
+    "metadata": {
+      "title": "{name} - Repair Cafes in Amsterdam"
+    }
+  },
   "map": {
     "title": "Map",
     "address": "Address",
