@@ -1,7 +1,8 @@
 "use server";
 import { rrulestr } from "rrule";
-import data from "@/data/data/cafes.json";
-import { RC, Event } from "@/app/types";
+import cafesData from "@/data/data/cafes.json";
+import festivalsData from "@/data/data/festivals.json";
+import { RC, Event, Festival } from "@/app/types";
 import getDateString from "@/app/utils/getDateString";
 import isClosed from "@/app/utils/isClosed";
 import dayjs from "dayjs";
@@ -16,7 +17,11 @@ dayjs.extend(timezone);
 dayjs.tz.setDefault("Europe/Amsterdam");
 
 function createEvent({
-  rc,
+  name,
+  slug,
+  district,
+  verified = true,
+  festival = false,
   date,
   startTime,
   endTime,
@@ -24,7 +29,11 @@ function createEvent({
   exceptionCause,
   locale,
 }: {
-  rc: RC;
+  name: string;
+  slug: string;
+  district: string;
+  verified?: boolean;
+  festival?: boolean;
   date: Date;
   startTime: string;
   endTime: string;
@@ -39,12 +48,11 @@ function createEvent({
     endTime,
     closedCause,
     exceptionCause,
-    rc: {
-      name: rc.name,
-      slug: rc.slug,
-      district: rc.district,
-      verified: rc.verified,
-    },
+    name: name,
+    slug: slug,
+    district: district,
+    verified: verified,
+    festival: festival,
   };
 }
 
@@ -67,7 +75,7 @@ export default async function getEvents({
   const startDate = dayjs().tz().add(monthsOffset, "month");
   const endDate = startDate.add(numMonths, "month");
 
-  const rcs = slug ? data.filter((rc) => rc.slug === slug) : data;
+  const rcs = slug ? cafesData.filter((rc) => rc.slug === slug) : cafesData;
 
   for (const rc of rcs as RC[]) {
     if (!rc.rrule) continue;
@@ -83,8 +91,12 @@ export default async function getEvents({
       const occurrences = rule.between(startDate.toDate(), endDate.toDate());
       // occurances.tzid(TIME_ZONE);
       for (const occurrence of occurrences) {
+        const { name, slug, district, verified } = rc;
         const event: Event = createEvent({
-          rc,
+          name,
+          slug,
+          district,
+          verified,
           date: occurrence,
           startTime,
           endTime,
@@ -111,9 +123,13 @@ export default async function getEvents({
         exceptionEndDate.isAfter(startDate) &&
         exceptionStartDate.isBefore(endDate)
       ) {
+        const { name, slug, district, verified } = rc;
         events.push(
           createEvent({
-            rc,
+            name,
+            slug,
+            district,
+            verified,
             date: new Date(exception),
             startTime,
             endTime,
@@ -122,6 +138,33 @@ export default async function getEvents({
           }),
         );
       }
+    }
+  }
+
+  // Add festivals
+  for (const festival of festivalsData as Festival[]) {
+    const {
+      name,
+      slug,
+      district,
+      date: rawDate,
+      startTime,
+      endTime,
+    } = festival;
+    const date = dayjs.tz(`${rawDate}T${startTime}`);
+    if (date.isAfter(startDate) && date.isBefore(endDate)) {
+      events.push(
+        createEvent({
+          name,
+          slug,
+          district,
+          festival: true,
+          date: new Date(`${rawDate}T${startTime}`),
+          startTime,
+          endTime,
+          locale,
+        }),
+      );
     }
   }
 
