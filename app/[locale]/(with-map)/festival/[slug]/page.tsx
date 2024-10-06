@@ -4,9 +4,9 @@ import ExternalLink from "@/app/icons/ExternalLink.svg?react";
 import BasePage from "@/app/components/BasePage";
 import DetailsSection from "@/app/components/DetailsSection";
 import festivalsData from "@/data/data/festivals.json";
-import { RC, Event, Festival } from "@/app/types";
+import { Festival } from "@/app/types";
 import JsonLd from "@/app/components/JsonLd";
-import getCafeJsonLd from "./getCafeJsonLd";
+import getFestivalJsonLd from "./getFestivalJsonLd";
 import { BASE_URL } from "@/app/constants";
 import { useLocale, useTranslations } from "next-intl";
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
@@ -97,7 +97,7 @@ function FestivalClient({ festival }: { festival: Festival }) {
           </Link>
         </DetailsSection>
       </div>
-      {/* <JsonLd jsonLd={getCafeJsonLd(rc, locale)} /> */}
+      <JsonLd jsonLd={getFestivalJsonLd(festival, locale)} />
     </BasePage>
   );
 }
