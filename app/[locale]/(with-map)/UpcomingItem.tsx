@@ -36,7 +36,7 @@ export default function UpcomingItem({ event }: { event: Event }) {
         <em className="font-semibold not-italic">{name}</em>
         {startTime} - {endTime} {t("in")} {district}
       </div>
-      {festival && <CalendarSingle />}
+      {festival && <CalendarSingle title="Festival" />}
       {!verified && <Warning />}
       <ChevronRight />
     </Link>
