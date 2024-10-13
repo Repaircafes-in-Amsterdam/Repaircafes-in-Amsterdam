@@ -16,7 +16,7 @@ const nextConfig = {
       // Only when using .svg?react
       // Requires *.svg?react declaration, see global.d.ts
       resourceQuery: /react/,
-      use: ["@svgr/webpack"],
+      use: [{ loader: "@svgr/webpack", options: { titleProp: true } }],
     });
 
     return config;

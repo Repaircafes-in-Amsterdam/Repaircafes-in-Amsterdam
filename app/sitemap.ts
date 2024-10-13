@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import data from "@/data/data.json";
+import data from "@/data/data/cafes.json";
 import { BASE_URL, DEFAULT_LOCALE, LOCALES } from "./constants";
 
 const cafes: MetadataRoute.Sitemap = data.map((rc) => ({

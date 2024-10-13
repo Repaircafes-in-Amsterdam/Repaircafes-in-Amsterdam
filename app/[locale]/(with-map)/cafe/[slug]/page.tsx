@@ -5,7 +5,7 @@ import Mail from "@/app/icons/Mail.svg?react";
 import ExternalLink from "@/app/icons/ExternalLink.svg?react";
 import BasePage from "@/app/components/BasePage";
 import DetailsSection from "@/app/components/DetailsSection";
-import data from "@/data/data.json";
+import data from "@/data/data/cafes.json";
 import { RC, Event } from "@/app/types";
 import JsonLd from "@/app/components/JsonLd";
 import getCafeJsonLd from "./getCafeJsonLd";

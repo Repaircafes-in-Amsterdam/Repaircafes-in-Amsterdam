@@ -28,6 +28,19 @@ export type RC = {
   verified: boolean;
 };
 
+export type Festival = {
+  name: string;
+  slug: string;
+  district: string;
+  location: string;
+  address: string;
+  date: string;
+  startTime: string;
+  endTime: string;
+  link: string;
+  description: MultilingualData;
+};
+
 export type EventRC = {
   name: string;
   slug: string;
@@ -36,11 +49,15 @@ export type EventRC = {
 };
 
 export type Event = {
+  name: string;
+  slug: string;
+  district: string;
+  verified: boolean;
+  festival: boolean;
   date: Date;
   dateString: string;
   startTime: string;
   endTime: string;
-  rc: EventRC;
   closedCause?: string;
   exceptionCause?: string;
 };
