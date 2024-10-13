@@ -36,7 +36,8 @@
   },
   "agenda": {
     "title": "Agenda",
-    "in": "in"
+    "in": "in",
+    "festival": "Festival"
   },
   "cafe": {
     "unknown": {
