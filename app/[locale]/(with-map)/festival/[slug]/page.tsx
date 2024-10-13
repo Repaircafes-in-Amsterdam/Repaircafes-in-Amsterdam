@@ -13,6 +13,7 @@ import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import useMultilingual from "@/app/utils/useMultilingual";
 import getDateString from "@/app/utils/getDateString";
+import ScrollToTop from "@/app/components/ScrollToTop";
 
 export async function generateMetadata({
   params: { locale, slug },
@@ -72,6 +73,7 @@ function FestivalClient({ festival }: { festival: Festival }) {
 
   return (
     <BasePage title={name} enableBackHome side>
+      <ScrollToTop selector="main" />
       <div className="flex grow flex-col gap-2 overflow-y-auto px-3 pb-3">
         <DetailsSection title={t("date")}>{date}</DetailsSection>
         <DetailsSection title={t("information")}>{description}</DetailsSection>

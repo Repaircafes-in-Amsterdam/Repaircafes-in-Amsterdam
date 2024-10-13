@@ -17,6 +17,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import useMultilingual from "@/app/utils/useMultilingual";
+import ScrollToTop from "@/app/components/ScrollToTop";
 
 export async function generateMetadata({
   params: { locale, slug },
@@ -71,6 +72,7 @@ function CafeClient({ rc, next }: { rc: RC; next: string }) {
 
   return (
     <BasePage title={rc.name} enableBackHome side>
+      <ScrollToTop selector="main" />
       {!rc.verified && <Unconfirmed className="mb-1.5" />}
       <div className="flex grow flex-col gap-2 overflow-y-auto px-3 pb-3">
         <DetailsSection title={t("open")}>
