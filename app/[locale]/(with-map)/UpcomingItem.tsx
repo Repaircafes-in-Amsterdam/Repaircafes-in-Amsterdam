@@ -1,7 +1,7 @@
 import { Link } from "@/app/navigation";
 import ChevronRight from "@/app/icons/ChevronRight.svg?react";
 import Warning from "@/app/icons/Warning.svg?react";
-import CalendarSingle from "@/app/icons/CalendarSingle.svg?react";
+import Calendar1 from "@/app/icons/Calendar1.svg?react";
 import { Event } from "@/app/types";
 import useHoverStore from "@/app/useHoverStore";
 import classes from "@/app/utils/classes";
@@ -36,7 +36,7 @@ export default function UpcomingItem({ event }: { event: Event }) {
         <em className="font-semibold not-italic">{name}</em>
         {startTime} - {endTime} {t("in")} {district}
       </div>
-      {festival && <CalendarSingle title="Festival" />}
+      {festival && <Calendar1 title="Festival" />}
       {!verified && <Warning />}
       <ChevronRight />
     </Link>
