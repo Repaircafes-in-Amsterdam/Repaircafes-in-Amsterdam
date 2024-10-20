@@ -2,6 +2,7 @@ import { ReactNode, Suspense } from "react";
 import ChevronLeft from "@/app/icons/ChevronLeft.svg?react";
 import BackButton from "./BackButton";
 import classes from "@/app/utils/classes";
+import { useTranslations } from "next-intl";
 
 export default function BasePage({
   title,
@@ -18,6 +19,7 @@ export default function BasePage({
   showHeader?: boolean;
   side?: boolean;
 }) {
+  const t = useTranslations();
   return (
     <div
       className={classes(
@@ -31,7 +33,7 @@ export default function BasePage({
         <div className="sticky top-0 z-10 flex gap-3 bg-white p-3">
           <Suspense>
             <BackButton className="md:hidden">
-              <ChevronLeft />
+              <ChevronLeft title={t("go-back")} />
             </BackButton>
           </Suspense>
           {enableBackHome && (

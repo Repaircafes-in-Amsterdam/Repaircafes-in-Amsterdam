@@ -16,7 +16,7 @@ export default function LocaleSelect({ className }: { className?: string }) {
   const t = useTranslations();
   return (
     <div className={classes("-mx-2 -my-1", className)}>
-      <Label.Root className="sr-only" htmlFor="locale">
+      <Label.Root className="sr-only text-white" htmlFor="locale">
         {t("language")}
       </Label.Root>
       <Select.Root

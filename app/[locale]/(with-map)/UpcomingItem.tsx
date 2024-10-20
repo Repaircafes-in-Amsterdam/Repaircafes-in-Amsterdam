@@ -15,6 +15,7 @@ export default function UpcomingItem({ event }: { event: Event }) {
   const isHovered = useHoverStore((state) => state.hoveredMarker === slug);
   const setHoveredRow = useHoverStore((state) => state.setHoveredRow);
   const t = useTranslations("agenda");
+  const rootT = useTranslations();
   const linkBase = festival ? "/festival" : "/cafe";
   return (
     <Link
@@ -37,8 +38,8 @@ export default function UpcomingItem({ event }: { event: Event }) {
         {startTime} - {endTime} {t("in")} {district}
       </div>
       {festival && <Calendar1 title={t("festival")} />}
-      {!verified && <Warning />}
-      <ChevronRight />
+      {!verified && <Warning title={rootT("unconfirmed")} />}
+      <ChevronRight role="presentation" />
     </Link>
   );
 }

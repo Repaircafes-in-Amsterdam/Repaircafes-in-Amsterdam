@@ -10,14 +10,16 @@ export default function MapZoomControl() {
       <div
         className="border-2 border-blue p-1"
         onClick={() => map.zoomIn(1, { animate: true })}
+        aria-label="Zoom in"
       >
-        <Plus />
+        <Plus title="Zoom in" />
       </div>
       <div
         className="border-2 border-t-0 border-blue p-1"
         onClick={() => map.zoomOut(1, { animate: true })}
+        aria-label="Zoom out"
       >
-        <Minus />
+        <Minus title="Zoom out" />
       </div>
     </div>,
     document.getElementById("zoom-control-portal")!,

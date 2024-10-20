@@ -28,6 +28,8 @@
   "repaircafe-page": "Repaircafe.org pagina",
   "unconfirmed": "De volgende informatie is nog niet bevestigd",
   "language": "Taal",
+  "logo": "Repair Cafés in Amsterdam logo",
+  "menu": "Menu",
   "nav": {
     "agenda": "Agenda",
     "map": "Kaart",
@@ -78,6 +80,7 @@
     "address": "Adres",
     "open": "Open op",
     "more-info": "Meer info",
+    "close": "Sluit",
     "metadata": {
       "title": "Kaart - Repair Cafes in Amsterdam",
       "description": "Kaart van alle Repair Cafés in Amsterdam"
