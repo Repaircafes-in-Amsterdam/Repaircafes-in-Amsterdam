@@ -12,7 +12,7 @@ function MenuItem({ href, children }: { href: string; children: ReactNode }) {
       className="flex items-center justify-between gap-3 p-3 pr-2.5 font-medium focus-visible:bg-blue-250 focus-visible:text-blue-600 focus-visible:outline-none focus-visible:-outline-offset-2 [@media(hover:hover)]:hover:bg-blue-250 [@media(hover:hover)]:hover:text-blue-600"
     >
       {children}
-      <ChevronRight role="presentation" aria-hidden />
+      <ChevronRight aria-hidden />
     </Link>
   );
 }
