@@ -7,8 +7,10 @@ import { useState } from "react";
 import classes from "./utils/classes";
 import Menu from "./Menu";
 import LocaleSelect from "./components/LocaleSelect";
+import { useTranslations } from "next-intl";
 
 export default function TopBar() {
+  const t = useTranslations();
   const [menuIsOpen, setMenuIsOpen] = useState(false);
   return (
     <>
@@ -23,7 +25,7 @@ export default function TopBar() {
         ></div>
         <div className="flex flex-col gap-2.5 md:grow md:flex-row md:justify-between">
           <Link href="/" aria-label="Logo">
-            <Logo title="logo" className="pointer-events-none" />
+            <Logo title={t("logo")} className="pointer-events-none" />
           </Link>
           <div className="flex flex-col justify-between md:items-end">
             <LocaleSelect className="hidden md:block" />
@@ -33,9 +35,8 @@ export default function TopBar() {
         <button
           onClick={() => setMenuIsOpen(!menuIsOpen)}
           className="-m-3 cursor-pointer p-3 text-white md:hidden"
-          aria-label="Menu"
         >
-          <MenuIcon title="Menu" />
+          <MenuIcon title={t("menu")} />
         </button>
       </header>
       <div className="relative">
