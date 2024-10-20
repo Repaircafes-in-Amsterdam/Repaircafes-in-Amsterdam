@@ -14,8 +14,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ### Repair Café data
 
-We have a Google Spreadsheet with data about Repair Cafés we couldn't find elsewhere. In the future we hope to move this into a database and make it editable by the Repair Café organizers using their own logins.
-It contains the columns mentioned in the `RC` type (see [Types](https://github.com/Repaircafes-in-Amsterdam/Repaircafes-in-Amsterdam/blob/main/app/types.ts)) + the ones that are put nested under links see LINK_COLUMNS in [update-data](https://github.com/Repaircafes-in-Amsterdam/Repaircafes-in-Amsterdam/blob/main/data/update-data.mjs).
+We have a Google Spreadsheet that stores the Repair Cafés data. In the future we hope to move this into a database and make it editable by the Repair Café organizers using their own logins.
+It contains the columns mentioned in the `RC` type (see [Types](https://github.com/Repaircafes-in-Amsterdam/Repaircafes-in-Amsterdam/blob/main/app/types.ts)) + the ones that are put nested under links see LINK_COLUMNS in [update-data](https://github.com/Repaircafes-in-Amsterdam/Repaircafes-in-Amsterdam/blob/main/data/update-data.mjs). The `slug` is automatically generated. The `MultilingualData` columns are prefixed by locales like `en:` and `nl:`.
 We export it's data, combine it with the sources below and save it into a json file by running:
 
 ```bash
@@ -24,6 +24,15 @@ npm run update-data
 
 For this to work you'll need to create a service account, duplicate `.env.local.example` to `.env.local` fill in `GOOGLE_PRIVATE_KEY` `GOOGLE_PRIVATE_KEY` and give the the service account access to your spreadsheet.  
 More info: https://theoephraim.github.io/node-google-spreadsheet/#/guides/authentication
+
+### Festivals data
+
+Similar to Repair Cafés data we have a sheet in our Google Spreadsheet with Festivals data. These are events that happen only once. It contains the columns mentioned in the `Festival` type (see [Types](https://github.com/Repaircafes-in-Amsterdam/Repaircafes-in-Amsterdam/blob/main/app/types.ts)).
+We export it's data and save it into a json file by running:
+
+```bash
+npm run update-festivals
+```
 
 ### Holidays data
 
