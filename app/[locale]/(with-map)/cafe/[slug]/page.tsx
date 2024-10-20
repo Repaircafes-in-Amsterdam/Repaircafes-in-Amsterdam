@@ -89,7 +89,7 @@ function CafeClient({ rc, next }: { rc: RC; next: string }) {
             rel="noreferrer"
             target="_blank"
           >
-            <ExternalLink className="shrink-0" role="presentation" />
+            <ExternalLink className="shrink-0" aria-hidden />
             {rc.address}
           </Link>
         </DetailsSection>
@@ -105,7 +105,7 @@ function CafeClient({ rc, next }: { rc: RC; next: string }) {
         {rc.email && (
           <DetailsSection title={t("contact")}>
             <Link href={`mailto:${rc.email}`} className="flex gap-1">
-              <Mail className="shrink-0" role="presentation" />
+              <Mail className="shrink-0" aria-hidden />
               {rc.email}
             </Link>
           </DetailsSection>
@@ -117,7 +117,7 @@ function CafeClient({ rc, next }: { rc: RC; next: string }) {
           <LinksSection title={t("social")} links={rc.socials} name={rc.name} />
         )}
         <Link href="/repaircafes" className="mt-2 flex gap-1">
-          <ChevronRight className="shrink-0" role="presentation" />
+          <ChevronRight className="shrink-0" aria-hidden />
           {t("read-more-about-repair-cafes")}
         </Link>
       </div>

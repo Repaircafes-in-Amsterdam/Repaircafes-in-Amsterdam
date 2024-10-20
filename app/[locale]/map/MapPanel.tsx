@@ -33,7 +33,7 @@ export default function MapPanel({
         {multilingual(active.open)}
       </DetailsSection>
       <Link href={`/cafe/${active.slug}`} className="flex gap-1">
-        <ChevronRight role="presentation" />
+        <ChevronRight aria-hidden />
         {t("more-info")}
       </Link>
     </div>
