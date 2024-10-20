@@ -23,7 +23,7 @@ export default function TopBar() {
         ></div>
         <div className="flex flex-col gap-2.5 md:grow md:flex-row md:justify-between">
           <Link href="/" aria-label="Logo">
-            <Logo />
+            <Logo title="logo" className="pointer-events-none" />
           </Link>
           <div className="flex flex-col justify-between md:items-end">
             <LocaleSelect className="hidden md:block" />
@@ -35,7 +35,7 @@ export default function TopBar() {
           className="-m-3 cursor-pointer p-3 text-white md:hidden"
           aria-label="Menu"
         >
-          <MenuIcon />
+          <MenuIcon title="Menu" />
         </button>
       </header>
       <div className="relative">
