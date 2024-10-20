@@ -11,7 +11,7 @@ export default function Unconfirmed({ className }: { className?: string }) {
         className,
       )}
     >
-      <Warning className="shrink-0" role="presentation" />
+      <Warning className="shrink-0" role="presentation" aria-hidden />
       {t("unconfirmed")}
     </div>
   );

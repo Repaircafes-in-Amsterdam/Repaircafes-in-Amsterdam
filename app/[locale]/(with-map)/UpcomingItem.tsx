@@ -39,7 +39,7 @@ export default function UpcomingItem({ event }: { event: Event }) {
       </div>
       {festival && <Calendar1 title={t("festival")} />}
       {!verified && <Warning title={rootT("unconfirmed")} />}
-      <ChevronRight role="presentation" />
+      <ChevronRight role="presentation" aria-hidden />
     </Link>
   );
 }

@@ -28,7 +28,11 @@ export default function LinksSection({
               rel="noreferrer"
               target="_blank"
             >
-              <ExternalLink className="shrink-0" role="presentation" />
+              <ExternalLink
+                className="shrink-0"
+                role="presentation"
+                aria-hidden
+              />
               <div>
                 <strong className="font-medium">
                   {type === "orgPage" ? t("repaircafe-page") : upperFirst(type)}

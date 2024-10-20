@@ -7,6 +7,7 @@ export default function Summary({ children }: { children: string }) {
       <ChevronRight
         role="presentation"
         className="shrink-0 transition-transform duration-100 ease-out group-open:rotate-90"
+        aria-hidden
       />
       <Header className="m-0 text-white">{children}</Header>
     </summary>
