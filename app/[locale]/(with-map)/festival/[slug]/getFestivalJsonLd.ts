@@ -10,7 +10,7 @@ export default function getFestivalJsonLd(
     "@type": "Event",
     name: festival.name,
     description: festival.description[locale],
-    startDate: `${festival.date}T${festival.startTime}:00`,
+    startDate: `${festival.dates[0]}T${festival.startTime}:00`,
     location: {
       "@type": "Place",
       name: festival.location,
