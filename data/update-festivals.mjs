@@ -7,6 +7,8 @@ const DATA_FILE_NAME = "festivals.json";
 const SPREADSHEET = "1LYn_GX0iwo5IaJCk8wada3FjbwI_gpUprs9prWp0pIQ";
 const SHEET_ID = "585183766";
 
+const MULTI_LINE_COLUMNS = ["dates"];
+
 const doc = new GoogleSpreadsheet(SPREADSHEET, getAuth());
 await doc.loadInfo(); // loads document properties and worksheets
 const sheet = doc.sheetsById[SHEET_ID];
@@ -19,10 +21,26 @@ const list = rows
       Object.entries(row).map(([column, value]) => [column, value.trim()]),
     ),
   )
+  // Split multi line items into an arrays
+  .map((row) =>
+    Object.fromEntries(
+      Object.entries(row).map(([column, value]) =>
+        MULTI_LINE_COLUMNS.includes(column)
+          ? [
+              column,
+              value
+                .split("\n")
+                .map((value) => value.trim())
+                .filter(Boolean),
+            ]
+          : [column, value],
+      ),
+    ),
+  )
   // Add slugs, including the date for recurring festivals
   .map((row) => ({
     ...row,
-    slug: `${slugify(row.name).toLowerCase()}-${row.date}`,
+    slug: `${slugify(row.name).toLowerCase()}-${row.dates[0]}`,
   }))
 
   // Nest multilingual columns into objects under one field
