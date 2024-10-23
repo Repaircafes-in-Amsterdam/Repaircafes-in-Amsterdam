@@ -26,7 +26,13 @@ const list = rows
     Object.fromEntries(
       Object.entries(row).map(([column, value]) =>
         MULTI_LINE_COLUMNS.includes(column)
-          ? [column, value.split("\n").filter(Boolean)]
+          ? [
+              column,
+              value
+                .split("\n")
+                .map((value) => value.trim())
+                .filter(Boolean),
+            ]
           : [column, value],
       ),
     ),
