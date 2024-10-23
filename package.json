@@ -17,6 +17,7 @@
     "test:watch": "vitest watch"
   },
   "dependencies": {
+    "@adamscybot/react-leaflet-component-marker": "^2.0.1",
     "@mdx-js/loader": "^3.0.1",
     "@mdx-js/react": "^3.0.1",
     "@next/bundle-analyzer": "^14.2.3",
