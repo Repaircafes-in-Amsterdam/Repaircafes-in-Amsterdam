@@ -34,7 +34,7 @@ export type Festival = {
   district: string;
   location: string;
   address: string;
-  date: string;
+  dates: string[];
   startTime: string;
   endTime: string;
   link: string;

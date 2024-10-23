@@ -4,7 +4,9 @@
     "location": "De Hallen",
     "address": "Hannie Dankbaarpassage 47",
     "district": "West",
-    "date": "2024-11-02",
+    "dates": [
+      "2024-11-02"
+    ],
     "startTime": "12:00",
     "endTime": "17:00",
     "link": "https://dehallen-amsterdam.nl/agenda/het-ruilfestival/",
@@ -19,8 +21,11 @@
     "location": "De Hallen",
     "address": "Hannie Dankbaarpassage 47",
     "district": "West",
-    "date": "2024-11-29",
-    "startTime": "11:00",
+    "dates": [
+      "2024-11-29",
+      "2024-11-30"
+    ],
+    "startTime": "12:00",
     "endTime": "17:00",
     "link": "https://dehallen-amsterdam.nl/agenda/het-grote-speel-ruil-recycle-festival/",
     "description": {

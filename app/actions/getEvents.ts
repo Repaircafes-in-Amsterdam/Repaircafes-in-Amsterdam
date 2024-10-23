@@ -147,24 +147,26 @@ export default async function getEvents({
       name,
       slug,
       district,
-      date: rawDate,
+      dates: rawDates,
       startTime,
       endTime,
     } = festival;
-    const date = dayjs.tz(`${rawDate}T${startTime}`);
-    if (date.isAfter(startDate) && date.isBefore(endDate)) {
-      events.push(
-        createEvent({
-          name,
-          slug,
-          district,
-          festival: true,
-          date: new Date(`${rawDate}T${startTime}`),
-          startTime,
-          endTime,
-          locale,
-        }),
-      );
+    for (const rawDate of rawDates) {
+      const date = dayjs.tz(`${rawDate}T${startTime}`);
+      if (date.isAfter(startDate) && date.isBefore(endDate)) {
+        events.push(
+          createEvent({
+            name,
+            slug,
+            district,
+            festival: true,
+            date: new Date(`${rawDate}T${startTime}`),
+            startTime,
+            endTime,
+            locale,
+          }),
+        );
+      }
     }
   }
 
