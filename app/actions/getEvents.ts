@@ -160,7 +160,7 @@ export default async function getEvents({
             slug,
             district,
             festival: true,
-            date: new Date(`${rawDate}T${startTime}`),
+            date: date.toDate(),
             startTime,
             endTime,
             locale,
