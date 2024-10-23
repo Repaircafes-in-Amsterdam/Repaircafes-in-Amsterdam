@@ -40,7 +40,7 @@ export default function MapMarker({
             />
             <MarkerIcon
               className={classes(
-                "relative",
+                "pointer-events-none relative",
                 active || isHovered ? "text-orange" : "text-blue",
               )}
               title={label}
