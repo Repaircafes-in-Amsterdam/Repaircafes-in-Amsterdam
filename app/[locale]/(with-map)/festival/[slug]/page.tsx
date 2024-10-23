@@ -58,7 +58,7 @@ function FestivalClient({ festival }: { festival: Festival }) {
 
   const {
     name,
-    date: rawDate,
+    dates: rawDates,
     description: rawDescription,
     startTime,
     endTime,
@@ -69,13 +69,22 @@ function FestivalClient({ festival }: { festival: Festival }) {
 
   const description = multilingual(rawDescription);
 
-  const date = `${getDateString(new Date(rawDate), locale)} ${startTime} - ${endTime}`;
+  const dates = rawDates.map(
+    (rawDate) =>
+      `${getDateString(new Date(rawDate), locale)} ${startTime} - ${endTime}`,
+  );
 
   return (
     <BasePage title={name} enableBackHome side>
       <ScrollToTop selector="main" />
       <div className="flex grow flex-col gap-2 overflow-y-auto px-3 pb-3">
-        <DetailsSection title={t("date")}>{date}</DetailsSection>
+        <DetailsSection title={t("date")}>
+          <ul className="flex flex-col gap-1">
+            {dates.map((date) => (
+              <li key={date}>{date}</li>
+            ))}
+          </ul>
+        </DetailsSection>
         <DetailsSection title={t("information")}>{description}</DetailsSection>
         <Link
           href={link}
