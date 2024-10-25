@@ -142,30 +142,32 @@ export default async function getEvents({
   }
 
   // Add festivals
-  for (const festival of festivalsData as Festival[]) {
-    const {
-      name,
-      slug,
-      district,
-      dates: rawDates,
-      startTime,
-      endTime,
-    } = festival;
-    for (const rawDate of rawDates) {
-      const date = dayjs.tz(`${rawDate}T${startTime}`);
-      if (date.isAfter(startDate) && date.isBefore(endDate)) {
-        events.push(
-          createEvent({
-            name,
-            slug,
-            district,
-            festival: true,
-            date: date.toDate(),
-            startTime,
-            endTime,
-            locale,
-          }),
-        );
+  if (!slug) {
+    for (const festival of festivalsData as Festival[]) {
+      const {
+        name,
+        slug,
+        district,
+        dates: rawDates,
+        startTime,
+        endTime,
+      } = festival;
+      for (const rawDate of rawDates) {
+        const date = dayjs.tz(`${rawDate}T${startTime}`);
+        if (date.isAfter(startDate) && date.isBefore(endDate)) {
+          events.push(
+            createEvent({
+              name,
+              slug,
+              district,
+              festival: true,
+              date: date.toDate(),
+              startTime,
+              endTime,
+              locale,
+            }),
+          );
+        }
       }
     }
   }
