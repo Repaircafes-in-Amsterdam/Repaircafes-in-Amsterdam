@@ -984,56 +984,6 @@
     ]
   },
   {
-    "name": "Groenpunt Welkom",
-    "address": "Stadionplein 65",
-    "open": {
-      "nl": "1e woensdagavond 19.00 - 21.00",
-      "en": "1st Wednesday evening 19:00 - 21:00"
-    },
-    "rrule": [
-      "FREQ=MONTHLY;BYSETPOS=1;BYDAY=WE;INTERVAL=1"
-    ],
-    "startTime": [
-      "19:00"
-    ],
-    "endTime": [
-      "21:00"
-    ],
-    "closedRanges": [],
-    "closed": {
-      "nl": "Zomervakantie",
-      "en": "Summer vacation"
-    },
-    "exceptions": [],
-    "district": "Zuid",
-    "email": "info@groenebuurten.nl",
-    "doRepair": {
-      "nl": "Electronica, Kleding, allerlei gebruiksvoorwerpen (bijv. koffer, rollater, mechanische typemachines), oud speelgoed",
-      "en": "Electronics, Clothing, all kinds of utensils (e.g. suitcase, rollator, mechanical typewriters), old toys"
-    },
-    "dontRepair": {
-      "nl": "Telefoons, naaimachines, grote apparaten zoals wasmachines",
-      "en": "Telephones, sewing machines, large appliances such as washing machines"
-    },
-    "moreInfo": {
-      "nl": "",
-      "en": ""
-    },
-    "links": {
-      "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-zuid-groenpunt-welkom/",
-      "website": "http://groenebuurten.nl/start-repair-cafe-olympus/"
-    },
-    "socials": {
-      "facebook": "https://www.facebook.com/events/357964950550086/357969440549637/"
-    },
-    "verified": true,
-    "slug": "groenpunt-welkom",
-    "coordinate": [
-      52.3431199,
-      4.8581587
-    ]
-  },
-  {
     "name": "Het Claverhuis",
     "address": "Elandsgracht 70",
     "open": {
