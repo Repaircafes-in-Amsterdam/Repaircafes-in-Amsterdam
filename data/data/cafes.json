@@ -1153,7 +1153,8 @@
     ],
     "closedRanges": [
       "07",
-      "08-01:08-14"
+      "08-01:08-14",
+      "2024-12-12:2035"
     ],
     "closed": {
       "nl": "2e en 4e woensdag in juli en 2e woensdag in augustus",
