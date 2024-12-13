@@ -851,7 +851,9 @@
     "endTime": [
       "20:00"
     ],
-    "closedRanges": [],
+    "closedRanges": [
+      "2025:2035"
+    ],
     "closed": {
       "nl": "Sinterklaas en kerst",
       "en": "Sinterklaas and Christmas"
