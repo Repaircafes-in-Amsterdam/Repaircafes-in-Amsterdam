@@ -358,7 +358,9 @@
     "endTime": [
       "12:00"
     ],
-    "closedRanges": [],
+    "closedRanges": [
+      "12-31"
+    ],
     "closed": {
       "nl": "Zomervakantie, kerst, oud- en nieuwjaar.",
       "en": "Summer vacation, Christmas, New Year's Eve."
