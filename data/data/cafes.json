@@ -1538,7 +1538,9 @@
     "endTime": [
       "12:00"
     ],
-    "closedRanges": [],
+    "closedRanges": [
+      "12-31"
+    ],
     "closed": {
       "nl": "Kerst en Nieuwjaar",
       "en": "Christmas and New Year"
