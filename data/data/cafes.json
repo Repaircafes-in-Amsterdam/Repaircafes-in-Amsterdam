@@ -1140,56 +1140,6 @@
     ]
   },
   {
-    "name": "Kids Repair middag WG",
-    "address": "Nicolaas Beetsstraat 325",
-    "open": {
-      "nl": "Elke 2e en 4e woensdag middag 14:00 - 16:00",
-      "en": "Every 2nd and 4th Wednesday afternoon 14:00 - 16:00"
-    },
-    "rrule": [
-      "FREQ=MONTHLY;INTERVAL=1;BYDAY=2WE,4WE"
-    ],
-    "startTime": [
-      "14:00"
-    ],
-    "endTime": [
-      "16:00"
-    ],
-    "closedRanges": [
-      "07",
-      "08-01:08-14",
-      "2024-12-12:2035"
-    ],
-    "closed": {
-      "nl": "2e en 4e woensdag in juli en 2e woensdag in augustus",
-      "en": "2nd and 4th Wednesday in July and 2nd Wednesday in August"
-    },
-    "exceptions": [],
-    "district": "West",
-    "email": "r.riede@hccnet.nl",
-    "doRepair": {
-      "nl": "Uitsluitend kinderspeelgoed",
-      "en": "Exclusively children's toys"
-    },
-    "dontRepair": {
-      "nl": "Textielreparaties zoals knuffels, verder bijna alle speelgoed.",
-      "en": "Textile repairs such as soft toys, otherwise almost all toys."
-    },
-    "moreInfo": {
-      "nl": "Kinderen komen met een ouder en gaan samen met een reparateur aan de slag. Graag vooraf laten weten dat je komt en met wat voor soort reparatievraag. Bijeenkomsten zijn in het ToekomsthuisWG naast Lab111",
-      "en": "Children come with a parent and get to work with a repairer. Please let us know in advance that you are coming and with what kind of repair question. Meetings are at the Future ToekomsthuisWG next to Lab111"
-    },
-    "links": {
-      "website": "https://www.toekomsthuiswg.nl/kids-repairwg/"
-    },
-    "verified": true,
-    "slug": "kids-repair-middag-wg",
-    "coordinate": [
-      52.363659,
-      4.86729
-    ]
-  },
-  {
     "name": "Kleding Repair Café",
     "address": "Waterlandplein 302",
     "open": {
