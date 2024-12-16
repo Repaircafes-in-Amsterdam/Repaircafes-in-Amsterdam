@@ -46,8 +46,8 @@
     "name": "Afvalpaleis (elektra)",
     "address": "Dapperstraat 76",
     "open": {
-      "nl": "Elke woensdagmiddag 12:00 - 17:00",
-      "en": "Every Wednesday afternoon 12:00 - 17:00"
+      "nl": "Elke woensdagmiddag 12:00 - 16:00",
+      "en": "Every Wednesday afternoon 12:00 - 16:00"
     },
     "rrule": [
       "FREQ=WEEKLY;BYDAY=WE;INTERVAL=1"
@@ -99,8 +99,8 @@
     "name": "Afvalpaleis (textiel)",
     "address": "Dapperstraat 76",
     "open": {
-      "nl": "Elke donderdagmiddag 12:00 - 17:00",
-      "en": "Every Thursday afternoon 12:00 - 17:00"
+      "nl": "Elke donderdagmiddag 12:00 - 16:00",
+      "en": "Every Thursday afternoon 12:00 - 16:00"
     },
     "rrule": [
       "FREQ=WEEKLY;BYDAY=TH;INTERVAL=1"
