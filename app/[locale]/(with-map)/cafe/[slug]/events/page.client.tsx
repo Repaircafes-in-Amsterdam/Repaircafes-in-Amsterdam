@@ -50,7 +50,15 @@ export default function EventsClient({
             title={t("rrule")}
             infoLink="https://medium.com/@edouard.courty/the-best-way-to-programmatically-handle-recurrence-11e9b489b27d"
           >
-            {rc.rrule}
+            {rc.rrule.length < 2 ? (
+              rc.rrule
+            ) : (
+              <ul className="list-outside list-disc space-y-1 pl-4">
+                {rc.rrule.map((rrule) => (
+                  <li key={rrule}>{rrule}</li>
+                ))}
+              </ul>
+            )}
           </DetailsSection>
         )}
         {closed && (
