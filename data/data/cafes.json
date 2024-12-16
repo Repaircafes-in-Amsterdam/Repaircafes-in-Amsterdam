@@ -691,8 +691,8 @@
     "name": "De Meeuw",
     "address": "Motorwal 300",
     "open": {
-      "nl": "Elke donderagochtend 10:00 - 12:00\nEn vanaf february ook elke 2de zaterdag 11:00 - 14:00",
-      "en": "Every Thursday morning 10:00 - 12:00\nAnd from February also every 2nd Saturday 11:00 - 14:00"
+      "nl": "Elke donderdagochtend 10:00 - 12:00\nEn vanaf februari ook elke 2de zaterdag 11:00 - 14:00",
+      "en": "Every Thursday morning 10:00 - 12:00\nAnd starting February also every 2nd Saturday 11:00 - 14:00"
     },
     "rrule": [
       "FREQ=WEEKLY;BYDAY=TH;INTERVAL=1",
