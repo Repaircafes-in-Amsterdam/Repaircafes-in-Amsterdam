@@ -1435,19 +1435,24 @@
     "name": "Reparatietafel de Eester",
     "address": "C van Eesterenlaan 266",
     "open": {
-      "nl": "Elke derde woensdagochtend van 10:00 - 13:00",
-      "en": "Every third Wednesday morning 10:00 - 13:00"
+      "nl": "Elke derde woensdag van 10:00 - 13:00\nEn vanaf 3 februari weer elke eerste donderdag 19:00 - 20:00",
+      "en": "Every third Wednesday 10:00 - 13:00\nAnd starting February 3 every first Thursday 19:00 - 20:00"
     },
     "rrule": [
-      "FREQ=MONTHLY;BYDAY=3WE;INTERVAL=1"
+      "FREQ=MONTHLY;BYDAY=3WE;INTERVAL=1",
+      "FREQ=MONTHLY;INTERVAL=1;BYDAY=1TH"
     ],
     "startTime": [
-      "10:00"
+      "10:00",
+      "19:00"
     ],
     "endTime": [
-      "13:00"
+      "13:00",
+      "20:00"
     ],
-    "closedRanges": [],
+    "closedRanges": [
+      "2025-01-02"
+    ],
     "closed": {
       "nl": "",
       "en": ""
