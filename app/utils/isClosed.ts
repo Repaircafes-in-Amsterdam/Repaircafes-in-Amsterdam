@@ -5,9 +5,16 @@ import ramadanData from "@/data/data/ramadan-data.json";
 import findHoliday from "./findHoliday";
 import isDateInRange from "./isDateInRange";
 
+const hardcodedClosedRanges = ["12-31"];
+
 // TODO Translate isClosed reasons?
 export default function isClosed(event: Event, rc: RC) {
   const closed = rc.closed.nl.toLowerCase();
+
+  for (const closedRange of hardcodedClosedRanges) {
+    if (isDateInRange(event.date, closedRange))
+      return "gesloten op: " + closedRange;
+  }
 
   for (const closedRange of rc.closedRanges) {
     if (isDateInRange(event.date, closedRange))
