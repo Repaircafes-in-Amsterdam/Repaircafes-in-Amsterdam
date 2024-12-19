@@ -1338,8 +1338,8 @@
     "name": "Repair Events Tolhuistuin",
     "address": "Tolhuisweg 3",
     "open": {
-      "nl": "Elke derde zondagmiddag 14:00 - 17:00",
-      "en": "Every third Sunday afternoon 14:00 - 17:00"
+      "nl": "In februari gaan we weer open",
+      "en": "We will reopen in February"
     },
     "rrule": [
       "FREQ=MONTHLY;BYSETPOS=3;BYDAY=SU;INTERVAL=1"
