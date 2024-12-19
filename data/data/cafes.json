@@ -112,7 +112,8 @@
       "16:00"
     ],
     "closedRanges": [
-      "12-24:12-31"
+      "12-24:12-31",
+      "2025-01-02"
     ],
     "closed": {
       "nl": "4 weken in het midden van de zomervakantie en de laatste week van het jaar.",
