@@ -14,6 +14,7 @@ import TopBar from "../TopBar";
 import classes from "@/app/utils/classes";
 import { BASE_URL, LOCALES } from "@/app/constants";
 import HoverResetter from "@/app/components/HoverResetter";
+import { CSPostHogProvider } from "../providers";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -57,24 +58,26 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <body
-        // Prevent FOUC
-        style={{ display: "none" }}
-        className={classes(
-          inter.variable,
-          "!flex h-dvh flex-col font-sans text-blue selection:bg-orange selection:text-white",
-        )}
-      >
-        <NextIntlClientProvider messages={messages}>
-          <TopBar />
-          <main className="flex min-h-px w-full shrink grow justify-center overflow-y-auto md:overflow-y-visible">
-            {children}
-          </main>
-        </NextIntlClientProvider>
-        <HoverResetter />
-        <Analytics />
-        <SpeedInsights />
-      </body>
+      <CSPostHogProvider>
+        <body
+          // Prevent FOUC
+          style={{ display: "none" }}
+          className={classes(
+            inter.variable,
+            "!flex h-dvh flex-col font-sans text-blue selection:bg-orange selection:text-white",
+          )}
+        >
+          <NextIntlClientProvider messages={messages}>
+            <TopBar />
+            <main className="flex min-h-px w-full shrink grow justify-center overflow-y-auto md:overflow-y-visible">
+              {children}
+            </main>
+          </NextIntlClientProvider>
+          <HoverResetter />
+          <Analytics />
+          <SpeedInsights />
+        </body>
+      </CSPostHogProvider>
     </html>
   );
 }
