@@ -15,6 +15,7 @@ import classes from "@/app/utils/classes";
 import { BASE_URL, LOCALES } from "@/app/constants";
 import HoverResetter from "@/app/components/HoverResetter";
 import { CSPostHogProvider } from "../providers";
+import dynamic from "next/dynamic";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -46,6 +47,10 @@ export function generateStaticParams() {
   return LOCALES.map((locale) => ({ locale }));
 }
 
+const PageViewTracker = dynamic(() => import("../components/PageViewTracker"), {
+  ssr: false,
+});
+
 export default async function LocaleLayout({
   children,
   params: { locale },
@@ -76,6 +81,7 @@ export default async function LocaleLayout({
           <HoverResetter />
           <Analytics />
           <SpeedInsights />
+          <PageViewTracker />
         </body>
       </CSPostHogProvider>
     </html>
