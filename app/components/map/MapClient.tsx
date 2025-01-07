@@ -6,13 +6,13 @@ import useIntersectionObserver from "@/app/utils/useIntersectionObserver";
 import { useRef } from "react";
 import useMap from "@/app/utils/useMap";
 import useLinkPostfix from "@/app/utils/useLinkPostfix";
-import useOfficeHours from "@/app/useOfficeHours";
+import useOutsideOfficeHours from "@/app/useOutsideOfficeHours";
 import { useRouter } from "@/app/navigation";
 
 export default function MapClient({ data }: { data: MapRC[] }) {
   const router = useRouter();
   const { value: district } = useDistrict();
-  const { value: rawOutsideOfficeHours } = useOfficeHours();
+  const { value: rawOutsideOfficeHours } = useOutsideOfficeHours();
   const outsideOfficeHours = rawOutsideOfficeHours === "true";
   const filteredData = data
     .filter((rc) => district === "any" || district === rc.district)

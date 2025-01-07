@@ -1,10 +1,10 @@
 "use client";
 import { useTranslations } from "next-intl";
-import useOfficeHours from "../useOfficeHours";
+import useOutsideOfficeHours from "../useOutsideOfficeHours";
 import Checkbox from "./Checkbox";
 
 export default function OfficeHoursCheckbox() {
-  const { value, setValue } = useOfficeHours();
+  const { value, setValue } = useOutsideOfficeHours();
   const t = useTranslations();
   return (
     <Checkbox

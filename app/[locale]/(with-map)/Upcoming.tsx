@@ -3,7 +3,7 @@ import { Event, EventGroup } from "@/app/types";
 import { Fragment } from "react";
 import groupBy from "lodash/groupBy";
 import useDistrict from "@/app/useDistrict";
-import useOfficeHours from "@/app/useOfficeHours";
+import useOutsideOfficeHours from "@/app/useOutsideOfficeHours";
 import UpcomingItem from "./UpcomingItem";
 
 function isDuringOfficeHours(event: Event) {
@@ -18,14 +18,15 @@ function isDuringOfficeHours(event: Event) {
 
 export default function Upcoming({ events }: { events: Event[] }) {
   const { value: district } = useDistrict();
-  const { value: rawJustOfficeHours } = useOfficeHours();
-  const justOfficeHours = rawJustOfficeHours === "true";
+  const { value: rawOutsideOfficeHours } = useOutsideOfficeHours();
+  const outsideOfficeHours = rawOutsideOfficeHours === "true";
 
   let filtered = events
     .filter((event) => district === "any" || district === event.district)
     .filter(
       (event) =>
-        !justOfficeHours || (justOfficeHours && !isDuringOfficeHours(event)),
+        !outsideOfficeHours ||
+        (outsideOfficeHours && !isDuringOfficeHours(event)),
     );
   // Group events by date
   const grouped = groupBy(filtered, (event: Event) => event.dateString);
