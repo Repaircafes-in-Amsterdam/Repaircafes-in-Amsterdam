@@ -47,7 +47,7 @@ export function generateStaticParams() {
   return LOCALES.map((locale) => ({ locale }));
 }
 
-const PageViewTracker = dynamic(() => import("../components/PageViewTracker"), {
+const PostHogTracker = dynamic(() => import("../components/PostHogTracker"), {
   ssr: false,
 });
 
@@ -77,11 +77,11 @@ export default async function LocaleLayout({
             <main className="flex min-h-px w-full shrink grow justify-center overflow-y-auto md:overflow-y-visible">
               {children}
             </main>
+            <PostHogTracker />
           </NextIntlClientProvider>
           <HoverResetter />
           <Analytics />
           <SpeedInsights />
-          <PageViewTracker />
         </body>
       </CSPostHogProvider>
     </html>
