@@ -88,6 +88,7 @@ function CafeClient({ rc, next }: { rc: RC; next: string }) {
             className="flex gap-1"
             rel="noreferrer"
             target="_blank"
+            data-ph-capture-attribute-link-type="map"
           >
             <ExternalLink className="shrink-0" aria-hidden />
             {rc.address}
@@ -104,7 +105,11 @@ function CafeClient({ rc, next }: { rc: RC; next: string }) {
         )}
         {rc.email && (
           <DetailsSection title={t("contact")}>
-            <Link href={`mailto:${rc.email}`} className="flex gap-1">
+            <Link
+              href={`mailto:${rc.email}`}
+              className="flex gap-1"
+              data-ph-capture-attribute-link-type="email"
+            >
               <Mail className="shrink-0" aria-hidden />
               {rc.email}
             </Link>
@@ -116,7 +121,11 @@ function CafeClient({ rc, next }: { rc: RC; next: string }) {
         {rc.socials && (
           <LinksSection title={t("social")} links={rc.socials} name={rc.name} />
         )}
-        <Link href="/repaircafes" className="mt-2 flex gap-1">
+        <Link
+          href="/repaircafes"
+          className="mt-2 flex gap-1"
+          data-ph-capture-attribute-link-type="repaircafes"
+        >
           <ChevronRight className="shrink-0" aria-hidden />
           {t("read-more-about-repair-cafes")}
         </Link>

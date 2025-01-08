@@ -27,6 +27,7 @@ export default function LinksSection({
               className="mt-1 flex items-center gap-1"
               rel="noreferrer"
               target="_blank"
+              data-ph-capture-attribute-link-type={type}
             >
               <ExternalLink className="shrink-0" aria-hidden />
               <div>
