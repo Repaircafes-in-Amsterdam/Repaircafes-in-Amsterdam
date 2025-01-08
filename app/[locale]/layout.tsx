@@ -77,7 +77,7 @@ export default async function LocaleLayout({
             <main className="flex min-h-px w-full shrink grow justify-center overflow-y-auto md:overflow-y-visible">
               {children}
             </main>
-            <PostHogTracker />
+            <PostHogTracker locale={locale} />
           </NextIntlClientProvider>
           <HoverResetter />
           <Analytics />

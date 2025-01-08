@@ -6,7 +6,9 @@ import { usePostHog } from "posthog-js/react";
 import useDistrict from "../useDistrict";
 import useOutsideOfficeHours from "../useOutsideOfficeHours";
 
-export default function PostHogTracker() {
+export default function PostHogTracker({
+  locale,
+}: Readonly<{ locale: string }>) {
   const pathname = usePathname();
   const postHog = usePostHog();
 
@@ -17,8 +19,9 @@ export default function PostHogTracker() {
     postHog.capture("$pageview", {
       $current_url: url,
       title: document.title,
+      locale,
     });
-  }, [pathname, postHog]);
+  }, [pathname, postHog, locale]);
 
   const { value: district } = useDistrict();
   useEffect(() => {
