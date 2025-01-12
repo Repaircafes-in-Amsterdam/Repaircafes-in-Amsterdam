@@ -1,5 +1,6 @@
 import { ReactNode, Suspense } from "react";
 import ChevronLeft from "@/app/icons/ChevronLeft.svg?react";
+import X from "@/app/icons/X.svg?react";
 import BackButton from "./BackButton";
 import classes from "@/app/utils/classes";
 import { useTranslations } from "next-intl";
@@ -30,7 +31,7 @@ export default function BasePage({
       )}
     >
       {showHeader ? (
-        <div className="sticky top-0 z-10 flex gap-3 bg-white p-3">
+        <div className="sticky top-0 z-10 flex gap-3 bg-white p-3  xl:flex-row-reverse">
           <Suspense>
             <BackButton className="md:hidden">
               <ChevronLeft title={t("go-back")} />
@@ -38,10 +39,11 @@ export default function BasePage({
           </Suspense>
           {enableBackHome && (
             <BackButton backHome className="hidden md:block">
-              <ChevronLeft />
+              <ChevronLeft title={t("go-back")} className="xl:hidden" />
+              <X title={t("close")} className="hidden xl:block" />
             </BackButton>
           )}
-          <h1 className="font-bold">{title}</h1>
+          <h1 className="flex-grow font-bold">{title}</h1>
         </div>
       ) : (
         <h1 className="sr-only">{title}</h1>
