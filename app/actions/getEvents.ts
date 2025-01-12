@@ -14,7 +14,7 @@ const TIME_ZONE = "Europe/Amsterdam";
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
-dayjs.tz.setDefault("Europe/Amsterdam");
+dayjs.tz.setDefault(TIME_ZONE);
 
 function createEvent({
   name,
@@ -81,16 +81,20 @@ export default async function getEvents({
     if (!rc.rrule) continue;
     rc.rrule.forEach((rrule: string, index: number) => {
       const startTime = rc.startTime[index] || rc.startTime[0];
+      const [startHours, startMinutes] = startTime.split(":").map(Number);
       const endTime = rc.endTime[index] || rc.endTime[0];
-      const [hours, minutes] = startTime.split(":").map(Number);
-      const fullRRule = `${rrule};BYHOUR=${hours};BYMINUTE=${minutes};BYSECOND=0`;
+      const [endHours, endMinutes] = endTime.split(":").map(Number);
+      const endHoursUTC = endHours - 1; // timezone offset
+      // rrule using end time so we include already started events
+      const fullRRule = `${rrule};BYHOUR=${endHoursUTC};BYMINUTE=${endMinutes};BYSECOND=0`;
 
       const rule = rrulestr(fullRRule, {
-        // tzid: TIME_ZONE,
+        tzid: TIME_ZONE,
       });
       const occurrences = rule.between(startDate.toDate(), endDate.toDate());
-      // occurances.tzid(TIME_ZONE);
       for (const occurrence of occurrences) {
+        // reset occurrence time to start time
+        occurrence.setHours(startHours, startMinutes);
         const { name, slug, district, verified } = rc;
         const event: Event = createEvent({
           name,
