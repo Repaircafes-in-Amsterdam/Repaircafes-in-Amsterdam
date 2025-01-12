@@ -7,11 +7,14 @@ import useHoverStore from "@/app/useHoverStore";
 import classes from "@/app/utils/classes";
 import useLinkPostfix from "@/app/utils/useLinkPostfix";
 import { useTranslations } from "next-intl";
+import { useParams } from "next/navigation";
 
 export default function UpcomingItem({ event }: { event: Event }) {
   const { slug, name, startTime, endTime, district, verified, festival } =
     event;
   const linkPostfix = useLinkPostfix();
+  const params = useParams();
+  const isOpen = params?.slug === slug;
   const isHovered = useHoverStore((state) => state.hoveredMarker === slug);
   const setHoveredRow = useHoverStore((state) => state.setHoveredRow);
   const t = useTranslations("agenda");
@@ -22,7 +25,7 @@ export default function UpcomingItem({ event }: { event: Event }) {
       href={`${linkBase}/${slug}${linkPostfix}`}
       className={classes(
         "flex cursor-pointer items-center gap-3  px-3 py-1.5 focus-visible:bg-orange focus-visible:text-blue-600 focus-visible:outline-none [@media(hover:hover)]:hover:bg-orange [@media(hover:hover)]:hover:text-blue-600",
-        isHovered ? "bg-orange text-blue-600" : "bg-blue text-white",
+        isHovered || isOpen ? "bg-orange text-blue-600" : "bg-blue text-white",
       )}
       onFocus={() => setHoveredRow(slug)}
       onBlur={() => setHoveredRow("")}
