@@ -13,6 +13,9 @@ const colors = {
   white: "#ffffff",
 };
 
+// based on 65ch, but font loading caused layout shift
+const bodyWidth = "calc(41rem + 0.75rem)";
+
 const config: Config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -23,12 +26,14 @@ const config: Config = {
     colors,
     extend: {
       width: {
-        // based on 65ch, but font loading caused layout shift
-        body: "calc(41rem + 0.75rem)",
+        body: bodyWidth,
       },
       maxWidth: {
-        body: "calc(41rem + 0.75rem)",
+        body: bodyWidth,
         side: "calc(30rem + 0.75rem)",
+      },
+      screens: {
+        body: bodyWidth,
       },
       fontFamily: {
         sans: ["var(--font-inter)"],
