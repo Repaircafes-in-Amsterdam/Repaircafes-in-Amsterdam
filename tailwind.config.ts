@@ -30,6 +30,9 @@ const config: Config = {
         body: "calc(41rem + 0.75rem)",
         side: "calc(30rem + 0.75rem)",
       },
+      screens: {
+        body: "calc(41rem + 0.75rem)",
+      },
       fontFamily: {
         sans: ["var(--font-inter)"],
       },

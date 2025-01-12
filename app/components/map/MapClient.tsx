@@ -27,7 +27,7 @@ export default function MapClient({ data }: { data: MapRC[] }) {
   const linkPostfix = useLinkPostfix();
 
   return (
-    <div className="hidden h-full w-full md:flex" ref={mapRef}>
+    <div className="body:flex hidden h-full w-full" ref={mapRef}>
       {isMapVisible && (
         <Map
           data={filteredData}
