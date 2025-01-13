@@ -85,7 +85,7 @@ function CafeClient({ rc, next }: { rc: RC; next: string }) {
         <DetailsSection title={t("address")}>
           <Link
             href={getMapsLink(rc.address)}
-            className="flex gap-1"
+            className="flex items-center gap-1"
             rel="noreferrer"
             target="_blank"
             data-ph-capture-attribute-link-type="map"
@@ -107,7 +107,7 @@ function CafeClient({ rc, next }: { rc: RC; next: string }) {
           <DetailsSection title={t("contact")}>
             <Link
               href={`mailto:${rc.email}`}
-              className="flex gap-1"
+              className="flex items-center gap-1 break-all"
               data-ph-capture-attribute-link-type="email"
             >
               <Mail className="shrink-0" aria-hidden />
@@ -123,7 +123,7 @@ function CafeClient({ rc, next }: { rc: RC; next: string }) {
         )}
         <Link
           href="/repaircafes"
-          className="mt-2 flex gap-1"
+          className="mt-2 flex items-center gap-1"
           data-ph-capture-attribute-link-type="repaircafes"
         >
           <ChevronRight className="shrink-0" aria-hidden />

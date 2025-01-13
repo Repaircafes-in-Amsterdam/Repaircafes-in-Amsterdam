@@ -46,8 +46,11 @@ export default async function Page({
         <Content numRepairCafes={numRepairCafes} />
       </div>
       <DetailsSection title={t("contact")} className="px-3 pb-3">
-        <Link href="mailto:info@repaircafe.amsterdam" className="flex gap-1">
-          <Mail aria-hidden />
+        <Link
+          href="mailto:info@repaircafe.amsterdam"
+          className="flex items-center gap-1 break-all"
+        >
+          <Mail aria-hidden className="shrink-0" />
           {t("email")}
         </Link>
       </DetailsSection>
