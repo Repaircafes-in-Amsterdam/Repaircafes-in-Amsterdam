@@ -25,7 +25,10 @@ export default function TopBar() {
         ></div>
         <div className="flex flex-col gap-2.5 md:grow md:flex-row md:justify-between">
           <Link href="/" aria-label="Logo">
-            <Logo title={t("logo")} className="pointer-events-none" />
+            <Logo
+              title={t("logo")}
+              className="pointer-events-none max-w-full"
+            />
           </Link>
           <div className="flex flex-col justify-between md:items-end">
             <LocaleSelect className="hidden md:block" />
