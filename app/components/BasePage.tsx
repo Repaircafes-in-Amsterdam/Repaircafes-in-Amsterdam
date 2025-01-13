@@ -25,8 +25,9 @@ export default function BasePage({
     <div
       className={classes(
         "relative flex w-full max-w-body grow flex-col",
-        side &&
-          "min-h-px overflow-y-auto border-blue focus-visible:-outline-offset-2 body:max-w-side body:shrink-0 body:border-r-2",
+        side
+          ? "min-h-px overflow-y-auto border-blue focus-visible:-outline-offset-2 body:max-w-side body:shrink-0 body:border-r-2"
+          : "h-max",
         className,
       )}
     >
