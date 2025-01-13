@@ -74,7 +74,7 @@ export default async function LocaleLayout({
         >
           <NextIntlClientProvider messages={messages}>
             <TopBar />
-            <main className="body:overflow-y-visible flex min-h-px w-full shrink grow justify-center overflow-y-auto">
+            <main className="flex min-h-px w-full shrink grow justify-center overflow-y-auto">
               {children}
             </main>
             <PostHogTracker locale={locale} />
