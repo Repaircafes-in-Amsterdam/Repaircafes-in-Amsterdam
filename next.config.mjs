@@ -26,7 +26,7 @@ const nextConfig = {
       {
         source: "/cafe/:slug/events",
         destination: "/events/:slug",
-        permanent: false,
+        permanent: true,
         locale: false,
       },
     ];
