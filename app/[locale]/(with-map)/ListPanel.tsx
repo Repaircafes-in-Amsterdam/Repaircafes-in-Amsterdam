@@ -3,13 +3,16 @@ import DistrictSelect from "@/app/components/DistrictSelect";
 import OfficeHoursCheckbox from "@/app/components/OfficeHoursCheckbox";
 import Upcoming from "./Upcoming";
 import { Event } from "@/app/types";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import getEvents from "@/app/actions/getEvents";
 import LoadMore from "@/app/components/LoadMore";
 import BasePage from "@/app/components/BasePage";
 import { useTranslations } from "next-intl";
 import { useSelectedLayoutSegment } from "next/navigation";
 import classes from "@/app/utils/classes";
+import useDistrict from "@/app/useDistrict";
+import useOutsideOfficeHours from "@/app/useOutsideOfficeHours";
+import filterEvents from "@/app/utils/filterEvents";
 
 export default function ListPanel({
   initialEvents,
@@ -25,12 +28,26 @@ export default function ListPanel({
   const [offset, setOffset] = useState(numMonths);
   const [events, setEvents] = useState<Event[]>(initialEvents);
   const t = useTranslations("agenda");
+  const numEmpty = useRef(0);
+  const { value: district } = useDistrict();
+  const { value: rawOutsideOfficeHours } = useOutsideOfficeHours();
+  const outsideOfficeHours = rawOutsideOfficeHours === "true";
+  const filteredEvents = filterEvents(events, district, outsideOfficeHours);
 
   const loadMore = async () => {
+    if (numEmpty.current > 3) return;
     const additionalEvents = await getEvents({ monthsOffset: offset, locale });
+    numEmpty.current =
+      filterEvents(additionalEvents, district, outsideOfficeHours).length === 0
+        ? numEmpty.current + 1
+        : 0;
     setEvents([...events, ...additionalEvents]);
     setOffset(offset + numMonths);
   };
+
+  useEffect(() => {
+    numEmpty.current = 0;
+  }, [district, outsideOfficeHours]);
 
   return (
     <BasePage
@@ -43,7 +60,7 @@ export default function ListPanel({
         <DistrictSelect />
         <OfficeHoursCheckbox />
       </div>
-      <Upcoming events={events} />
+      <Upcoming events={filteredEvents} />
       <LoadMore loadMore={loadMore} />
     </BasePage>
   );
