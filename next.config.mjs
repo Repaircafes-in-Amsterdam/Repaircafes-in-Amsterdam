@@ -21,6 +21,15 @@ const nextConfig = {
 
     return config;
   },
+  async redirects() {
+    return [
+      {
+        source: "/:locale/cafe/:slug/events",
+        destination: "/:locale/events/:slug",
+        permanent: false,
+      },
+    ];
+  },
 };
 
 export default withMDX(
