@@ -18,6 +18,7 @@ export default function LocaleToggleGroup() {
         ariaLabel: t(`locale.${locale}`),
       }))}
       value={locale}
+      id="locale"
       onChange={(value) => {
         router.replace(pathname, { locale: value });
       }}

@@ -1,6 +1,7 @@
 import * as RadioGroup from "@radix-ui/react-radio-group";
 
 import classes from "../utils/classes";
+import { Label } from "@radix-ui/react-label";
 
 export type Option = {
   value: string;
@@ -13,20 +14,22 @@ export default function ToggleButton({
   value,
   options,
   onChange,
+  id,
 }: {
   label: string;
   value: string;
   onChange: (value: string) => unknown;
   options: Option[];
+  id: string;
 }) {
   return (
     <div className="flex items-center gap-x-3">
-      <label>{label}</label>
+      <Label htmlFor={id}>{label}</Label>
       <RadioGroup.Root
         className="whitespace-nowrap border-2 border-blue"
         value={value}
         onValueChange={onChange}
-        aria-label={label}
+        id={id}
       >
         {options.map(({ value, label, ariaLabel }) => (
           <RadioGroup.Item
