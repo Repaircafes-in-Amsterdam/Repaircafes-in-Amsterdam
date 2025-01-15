@@ -1,4 +1,5 @@
 import { Event } from "@/app/types";
+import { defaultValue as defaultDistrict } from "../useDistrict";
 
 export default function filterEvents(
   events: Event[],
@@ -6,7 +7,9 @@ export default function filterEvents(
   outsideOfficeHours: boolean,
 ) {
   return events
-    .filter((event) => district === "any" || district === event.district)
+    .filter(
+      (event) => district === defaultDistrict || district === event.district,
+    )
     .filter(
       (event) =>
         !outsideOfficeHours ||

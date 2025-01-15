@@ -2,7 +2,7 @@ import { useTranslations } from "next-intl";
 import getParamHook from "./getParamHook";
 import { useMemo } from "react";
 
-const defaultValue = "any";
+export const defaultValue = "any";
 
 const values = [
   defaultValue,

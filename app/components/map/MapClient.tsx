@@ -1,7 +1,9 @@
 "use client";
 import { useParams } from "next/navigation";
 import { MapRC } from "@/app/types";
-import useDistrict from "@/app/useDistrict";
+import useDistrict, {
+  defaultValue as defaultDistrict,
+} from "@/app/useDistrict";
 import useIntersectionObserver from "@/app/utils/useIntersectionObserver";
 import { useRef } from "react";
 import useMap from "@/app/utils/useMap";
@@ -15,7 +17,7 @@ export default function MapClient({ data }: { data: MapRC[] }) {
   const { value: rawOutsideOfficeHours } = useOutsideOfficeHours();
   const outsideOfficeHours = rawOutsideOfficeHours === "true";
   const filteredData = data
-    .filter((rc) => district === "any" || district === rc.district)
+    .filter((rc) => district === defaultDistrict || district === rc.district)
     .filter(
       (rc) =>
         !outsideOfficeHours || (outsideOfficeHours && rc.someOutOfOfficeHours),
