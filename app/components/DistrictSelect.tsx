@@ -22,7 +22,7 @@ export default function DistrictSelect() {
           aria-label={t("label")}
           id="district"
         >
-          <Select.Value aria-label={value}>{label}</Select.Value>
+          <Select.Value aria-label={label}>{label}</Select.Value>
           <Select.Icon>
             <ChevronDown />
           </Select.Icon>
