@@ -5,6 +5,7 @@ import classes from "../utils/classes";
 export type Option = {
   value: string;
   label: string;
+  ariaLabel?: string;
 };
 
 export default function ToggleButton({
@@ -20,17 +21,18 @@ export default function ToggleButton({
 }) {
   return (
     <div className="flex items-center gap-x-3">
-      <div>{label}</div>
+      <label>{label}</label>
       <RadioGroup.Root
         className="whitespace-nowrap border-2 border-blue"
         value={value}
         onValueChange={onChange}
         aria-label={label}
       >
-        {options.map(({ value, label }) => (
+        {options.map(({ value, label, ariaLabel }) => (
           <RadioGroup.Item
             key={value}
             value={value}
+            aria-label={ariaLabel}
             className={classes(
               "border-2 border-blue/0 px-4 py-1",
               "-m-0.5", //overlap border of parent

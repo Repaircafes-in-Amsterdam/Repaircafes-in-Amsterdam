@@ -15,6 +15,7 @@ export default function LocaleToggleGroup() {
       options={LOCALES.map((locale) => ({
         value: locale,
         label: locale.toUpperCase(),
+        ariaLabel: t(`locale.${locale}`),
       }))}
       value={locale}
       onChange={(value) => {

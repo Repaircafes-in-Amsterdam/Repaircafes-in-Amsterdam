@@ -29,6 +29,10 @@
   "repaircafe-page": "Repaircafe.org pagina",
   "unconfirmed": "De volgende informatie is nog niet bevestigd",
   "language": "Taal",
+  "locale": {
+    "en": "Engels",
+    "nl": "Nederlands"
+  },
   "logo": "Repair Cafés in Amsterdam logo",
   "menu": "Menu",
   "nav": {
