@@ -24,9 +24,10 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: "/:locale/cafe/:slug/events",
-        destination: "/:locale/events/:slug",
+        source: "/cafe/:slug/events",
+        destination: "/events/:slug",
         permanent: false,
+        locale: false,
       },
     ];
   },
