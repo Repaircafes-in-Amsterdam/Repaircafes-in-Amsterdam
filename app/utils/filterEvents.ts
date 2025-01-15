@@ -7,14 +7,19 @@ export default function filterEvents(
   outsideOfficeHours: boolean,
 ) {
   return events
-    .filter(
-      (event) => district === defaultDistrict || district === event.district,
-    )
-    .filter(
-      (event) =>
-        !outsideOfficeHours ||
-        (outsideOfficeHours && !isDuringOfficeHours(event)),
-    );
+    .filter(districtFilter(district))
+    .filter(officeHoursFilter(outsideOfficeHours));
+}
+
+function districtFilter(district: string) {
+  return (event: Event) =>
+    district === defaultDistrict || district === event.district;
+}
+
+// when outsideOfficeHours is true filter on events that are outside office hours
+function officeHoursFilter(outsideOfficeHours: boolean) {
+  return (event: Event) =>
+    !outsideOfficeHours || (outsideOfficeHours && !isDuringOfficeHours(event));
 }
 
 function isDuringOfficeHours(event: Event) {
