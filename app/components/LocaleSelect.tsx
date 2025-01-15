@@ -30,7 +30,7 @@ export default function LocaleSelect({ className }: { className?: string }) {
           aria-label={t("language")}
           id="locale"
         >
-          <Select.Value aria-label={locale}>
+          <Select.Value aria-label={t(`locale.${locale}`)}>
             {locale.toUpperCase()}
           </Select.Value>
           <Select.Icon>
