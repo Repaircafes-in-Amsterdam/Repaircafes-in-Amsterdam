@@ -40,7 +40,7 @@ export default function EventsClient({
   };
 
   return (
-    <BasePage title={rc.name} side>
+    <BasePage title={rc.name}>
       <div className="flex grow flex-col gap-2 overflow-y-auto px-3 pb-3">
         <DetailsSection title={t("open")}>
           {multilingual(rc.open)}
@@ -49,6 +49,7 @@ export default function EventsClient({
           <DetailsSection
             title={t("rrule")}
             infoLink="https://medium.com/@edouard.courty/the-best-way-to-programmatically-handle-recurrence-11e9b489b27d"
+            className="break-all"
           >
             {rc.rrule.length < 2 ? (
               rc.rrule

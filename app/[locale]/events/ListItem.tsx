@@ -11,7 +11,7 @@ export default function ListItem({ rc }: { rc: EventRC }) {
   const t = useTranslations("events");
   return (
     <Link
-      href={`cafe/${rc.slug}/events${linkPostfix}`}
+      href={`events/${rc.slug}${linkPostfix}`}
       className="flex cursor-pointer items-center gap-3 bg-blue px-3  py-1.5 text-white [@media(hover:hover)]:hover:bg-orange [@media(hover:hover)]:hover:text-blue-600"
     >
       <div className="flex grow flex-col">

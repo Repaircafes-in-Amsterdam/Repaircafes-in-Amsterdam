@@ -2,7 +2,6 @@ import { BASE_URL } from "@/app/constants";
 import { Metadata } from "next";
 import data from "@/data/data/cafes.json";
 import { RC, Event } from "@/app/types";
-import BasePage from "@/app/components/BasePage";
 import getEvents from "@/app/actions/getEvents";
 import EventsClient from "./page.client";
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
