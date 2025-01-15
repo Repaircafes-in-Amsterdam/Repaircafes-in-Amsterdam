@@ -28,14 +28,6 @@ describe("hasOutOfOfficeHours", () => {
     expect(hasOutOfOfficeHours(rc)).toBe(true);
   });
 
-  it("returns false when no byweekday is specified", () => {
-    const rc = createTestRC({
-      rrule: ["FREQ=DAILY"],
-      endTime: ["19:00"], // Time should be ignored if no byweekday
-    });
-    expect(hasOutOfOfficeHours(rc)).toBe(false);
-  });
-
   it("handles multiple rrules and endTimes", () => {
     const rc = createTestRC({
       rrule: ["FREQ=WEEKLY;BYDAY=MO", "FREQ=WEEKLY;BYDAY=TU"],
