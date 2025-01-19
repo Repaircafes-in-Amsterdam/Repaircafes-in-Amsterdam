@@ -1,6 +1,6 @@
 import getEvents from "@/app/actions/getEvents";
 import MapServer from "@/app/components/map/MapServer";
-import { unstable_setRequestLocale } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 import { Event } from "@/app/types";
 import ListPanel from "./ListPanel";
 
@@ -14,7 +14,7 @@ export default async function Layout({
   children: React.ReactNode;
   params: { locale: string };
 }>) {
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
   const events: Event[] = await getEvents({ numMonths: NUM_MONTHS, locale });
   return (
     <>

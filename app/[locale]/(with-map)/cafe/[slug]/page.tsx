@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Link } from "@/app/navigation";
+import { Link } from "@/i18n/routing";
 import ChevronRight from "@/app/icons/ChevronRight.svg?react";
 import Mail from "@/app/icons/Mail.svg?react";
 import ExternalLink from "@/app/icons/ExternalLink.svg?react";
@@ -14,7 +14,7 @@ import { BASE_URL } from "@/app/constants";
 import Unconfirmed from "@/app/components/Unconfirmed";
 import LinksSection from "@/app/components/LinksSection";
 import { useLocale, useTranslations } from "next-intl";
-import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import useMultilingual from "@/app/utils/useMultilingual";
 import ScrollToTop from "@/app/components/ScrollToTop";
@@ -45,7 +45,7 @@ export default async function CafeServer({
 }: {
   params: { slug: string; locale: string };
 }) {
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
 
   const rc = data.find((rc) => rc.slug === slug) as RC;
   if (!rc) notFound();

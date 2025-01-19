@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import useHoverStore from "../useHoverStore";
-import { usePathname } from "../navigation";
+import { usePathname } from "@/i18n/routing";
 
 export default function HoverResetter() {
   const pathname = usePathname();

@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import data from "@/data/data/cafes.json";
-import { BASE_URL, DEFAULT_LOCALE, LOCALES } from "./constants";
+import { BASE_URL } from "./constants";
+import { routing } from "@/i18n/routing";
 
 const cafes: MetadataRoute.Sitemap = data.map((rc) => ({
   url: `cafe/${rc.slug}`,
@@ -46,9 +47,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     alternates: {
       languages: {
         ...Object.fromEntries(
-          LOCALES.map((locale) => [
+          routing.locales.map((locale) => [
             locale,
-            `${BASE_URL}${locale === DEFAULT_LOCALE ? "" : `${locale}/`}${entry.url}`,
+            `${BASE_URL}${locale === routing.defaultLocale ? "" : `${locale}/`}${entry.url}`,
           ]),
         ),
         "x-default": `${BASE_URL}${entry.url}`,

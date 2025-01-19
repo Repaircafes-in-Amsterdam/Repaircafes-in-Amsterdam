@@ -1,11 +1,11 @@
-import { Link } from "@/app/navigation";
+import { Link } from "@/i18n/routing";
 import Mail from "@/app/icons/Mail.svg?react";
 import data from "@/data/data/cafes.json";
 import BasePage from "@/app/components/BasePage";
 import { Metadata } from "next";
 import { BASE_URL } from "@/app/constants";
 import DetailsSection from "@/app/components/DetailsSection";
-import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { useTranslations } from "next-intl";
 import { notFound } from "next/navigation";
 
@@ -30,7 +30,7 @@ export default async function Page({
 }: {
   params: { locale: string };
 }) {
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "about" });
   const numRepairCafes = data.length;
   let Content;

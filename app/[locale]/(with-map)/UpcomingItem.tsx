@@ -1,4 +1,4 @@
-import { Link } from "@/app/navigation";
+import { Link } from "@/i18n/routing";
 import ChevronRight from "@/app/icons/ChevronRight.svg?react";
 import Warning from "@/app/icons/Warning.svg?react";
 import Calendar1 from "@/app/icons/Calendar1.svg?react";

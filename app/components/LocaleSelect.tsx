@@ -5,9 +5,8 @@ import * as Label from "@radix-ui/react-label";
 import ChevronDown from "@/app/icons/ChevronDown.svg?react";
 import Check from "@/app/icons/Check.svg?react";
 import { useLocale, useTranslations } from "next-intl";
-import { usePathname, useRouter } from "../navigation";
-import { LOCALES } from "../constants";
 import classes from "../utils/classes";
+import { routing, usePathname, useRouter } from "@/i18n/routing";
 
 export default function LocaleSelect({ className }: { className?: string }) {
   const locale = useLocale();
@@ -40,7 +39,7 @@ export default function LocaleSelect({ className }: { className?: string }) {
         <Select.Portal>
           <Select.Content className="border-2 border-blue bg-white text-blue shadow-[0px_10px_38px_-10px_rgba(22,_23,_24,_0.35),0px_10px_20px_-15px_rgba(22,_23,_24,_0.2)]">
             <Select.Viewport className="flex flex-col">
-              {LOCALES.map((locale) => (
+              {routing.locales.map((locale) => (
                 <SelectItem key={locale} value={locale}>
                   {locale.toUpperCase()}
                 </SelectItem>

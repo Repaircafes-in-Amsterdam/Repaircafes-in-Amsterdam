@@ -8,14 +8,16 @@ import { NextIntlClientProvider } from "next-intl";
 import {
   getMessages,
   getTranslations,
-  unstable_setRequestLocale,
+  setRequestLocale,
 } from "next-intl/server";
 import TopBar from "../TopBar";
 import classes from "@/app/utils/classes";
-import { BASE_URL, LOCALES } from "@/app/constants";
+import { BASE_URL } from "@/app/constants";
 import HoverResetter from "@/app/components/HoverResetter";
 import { CSPostHogProvider } from "../providers";
 import dynamic from "next/dynamic";
+import { routing } from "@/i18n/routing";
+import { notFound } from "next/navigation";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -44,7 +46,7 @@ export const viewport: Viewport = {
 };
 
 export function generateStaticParams() {
-  return LOCALES.map((locale) => ({ locale }));
+  return routing.locales.map((locale) => ({ locale }));
 }
 
 const PostHogTracker = dynamic(() => import("../components/PostHogTracker"), {
@@ -58,7 +60,12 @@ export default async function LocaleLayout({
   children: ReactNode;
   params: { locale: string };
 }>) {
-  unstable_setRequestLocale(locale);
+  // Ensure that the incoming `locale` is valid
+  if (!routing.locales.includes(locale as any)) {
+    notFound();
+  }
+
+  setRequestLocale(locale); // Enable static rendering
   const messages = await getMessages();
 
   return (

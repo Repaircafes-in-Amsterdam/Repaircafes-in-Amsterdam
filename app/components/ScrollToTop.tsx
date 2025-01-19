@@ -1,7 +1,7 @@
 "use client";
 
+import { usePathname } from "@/i18n/routing";
 import { useEffect } from "react";
-import { usePathname } from "../navigation";
 
 export default function ScrollToTop({ selector }: { selector: string }) {
   const pathname = usePathname();

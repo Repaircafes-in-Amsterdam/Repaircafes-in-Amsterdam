@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import { BASE_URL } from "@/app/constants";
 import getMapData from "@/app/utils/getMapData";
 import ClientPage from "./page.client";
-import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
 export async function generateMetadata({
   params: { locale },
@@ -26,7 +26,7 @@ export default function Page({
 }: {
   params: { locale: string };
 }) {
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
   const mapData = getMapData();
   return (
     <Suspense>
