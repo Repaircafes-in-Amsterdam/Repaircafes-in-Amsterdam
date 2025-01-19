@@ -71,25 +71,25 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <CSPostHogProvider>
-        <body
-          // Prevent FOUC
-          style={{ display: "none" }}
-          className={classes(
-            inter.variable,
-            "!flex h-dvh flex-col font-sans text-blue selection:bg-orange selection:text-white",
-          )}
-        >
-          <NextIntlClientProvider messages={messages}>
+        <NextIntlClientProvider messages={messages}>
+          <body
+            // Prevent FOUC
+            style={{ display: "none" }}
+            className={classes(
+              inter.variable,
+              "!flex h-dvh flex-col font-sans text-blue selection:bg-orange selection:text-white",
+            )}
+          >
             <TopBar />
             <main className="flex min-h-px w-full shrink grow justify-center overflow-y-auto">
               {children}
             </main>
             <PostHogTracker locale={locale} />
-          </NextIntlClientProvider>
-          <HoverResetter />
-          <Analytics />
-          <SpeedInsights />
-        </body>
+            <HoverResetter />
+            <Analytics />
+            <SpeedInsights />
+          </body>
+        </NextIntlClientProvider>
       </CSPostHogProvider>
     </html>
   );
