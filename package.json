@@ -43,7 +43,7 @@
     "react-leaflet": "^4.2.1",
     "rrule": "^2.8.1",
     "schema-dts": "^1.1.2",
-    "zustand": "^4.5.2"
+    "zustand": "^4.5.6"
   },
   "devDependencies": {
     "@next/env": "^14.2.3",
