@@ -94,8 +94,8 @@ export default async function LocaleLayout(
             </main>
             {/* <PostHogTracker locale={locale} /> */}
             <HoverResetter />
-            <Analytics />
-            <SpeedInsights />
+            <Analytics debug={false} />
+            <SpeedInsights debug={false} />
           </body>
         </NextIntlClientProvider>
       </CSPostHogProvider>
