@@ -7,13 +7,18 @@ import ListPanel from "./ListPanel";
 const NUM_MONTHS = 1;
 export const dynamic = "force-dynamic";
 
-export default async function Layout({
-  children,
-  params: { locale },
-}: Readonly<{
-  children: React.ReactNode;
-  params: { locale: string };
-}>) {
+export default async function Layout(
+  props: Readonly<{
+    children: React.ReactNode;
+    params: { locale: string };
+  }>,
+) {
+  const params = await props.params;
+
+  const { locale } = params;
+
+  const { children } = props;
+
   setRequestLocale(locale);
   const events: Event[] = await getEvents({ numMonths: NUM_MONTHS, locale });
   return (

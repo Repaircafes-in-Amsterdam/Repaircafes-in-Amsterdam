@@ -11,7 +11,7 @@ type Observer = {
 };
 
 export default function useIntersectionObserver(
-  reference: RefObject<Element> | null,
+  reference: RefObject<Element | null> | null,
   once: boolean = false,
 ) {
   const [isVisible, setIsVisible] = useState<boolean>(false);

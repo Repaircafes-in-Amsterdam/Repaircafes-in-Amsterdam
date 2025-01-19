@@ -1,5 +1,5 @@
 "use client";
-import { LegacyRef, ReactNode, forwardRef } from "react";
+import { Ref, ReactNode, forwardRef } from "react";
 import * as Select from "@radix-ui/react-select";
 import * as Label from "@radix-ui/react-label";
 import ChevronDown from "@/app/icons/ChevronDown.svg?react";
@@ -55,7 +55,7 @@ export default function LocaleSelect({ className }: { className?: string }) {
 const SelectItem = forwardRef(
   (
     { children, ...props }: { children: ReactNode; value: string },
-    forwardedRef: LegacyRef<HTMLDivElement> | undefined,
+    forwardedRef: Ref<HTMLDivElement> | undefined,
   ) => {
     return (
       <Select.Item

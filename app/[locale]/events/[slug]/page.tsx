@@ -9,11 +9,13 @@ import { notFound } from "next/navigation";
 
 const NUM_MONTHS = 12;
 
-export async function generateMetadata({
-  params: { locale, slug },
-}: {
-  params: { locale: string; slug: string };
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
+  const params = await props.params;
+
+  const { locale, slug } = params;
+
   const t = await getTranslations({ locale, namespace: "cafe-events" });
   const rc = data.find((rc) => rc.slug === slug);
   const name = rc?.name || t("unknown.title");
@@ -25,11 +27,13 @@ export async function generateMetadata({
   };
 }
 
-export default async function EventsServer({
-  params: { slug, locale },
-}: {
-  params: { slug: string; locale: string };
+export default async function EventsServer(props: {
+  params: Promise<{ slug: string; locale: string }>;
 }) {
+  const params = await props.params;
+
+  const { slug, locale } = params;
+
   setRequestLocale(locale);
   const rc = data.find((rc) => rc.slug === slug) as RC;
   if (!rc) notFound();
