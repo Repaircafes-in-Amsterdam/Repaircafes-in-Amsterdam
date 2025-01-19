@@ -1,7 +1,6 @@
 import { useLocale, useTranslations } from "next-intl";
 import ToggleGroup from "./ToggleGroup";
-import { LOCALES } from "../constants";
-import { usePathname, useRouter } from "../navigation";
+import { routing, usePathname, useRouter } from "@/i18n/routing";
 
 export default function LocaleToggleGroup() {
   const locale = useLocale();
@@ -12,7 +11,7 @@ export default function LocaleToggleGroup() {
   return (
     <ToggleGroup
       label={t("language")}
-      options={LOCALES.map((locale) => ({
+      options={routing.locales.map((locale) => ({
         value: locale,
         label: locale.toUpperCase(),
         ariaLabel: t(`locale.${locale}`),

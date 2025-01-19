@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import classes from "./utils/classes";
-import { Link, usePathname } from "@/app/navigation";
+import { Link, usePathname } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 
 function MenuLink({

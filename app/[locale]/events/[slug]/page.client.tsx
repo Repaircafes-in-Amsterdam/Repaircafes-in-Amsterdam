@@ -72,7 +72,7 @@ export default function EventsClient({
                 <strong
                   className={classes(
                     "font-medium",
-                    closedCause && "line-through ",
+                    closedCause && "line-through",
                   )}
                 >
                   {dateString} {date.getFullYear()}

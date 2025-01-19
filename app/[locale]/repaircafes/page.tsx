@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import BasePage from "@/app/components/BasePage";
 import { BASE_URL } from "@/app/constants";
-import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 
 export async function generateMetadata({
@@ -28,7 +28,7 @@ export default async function Page({
 }: {
   params: { locale: string };
 }) {
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "repaircafes" });
 
   let Content;

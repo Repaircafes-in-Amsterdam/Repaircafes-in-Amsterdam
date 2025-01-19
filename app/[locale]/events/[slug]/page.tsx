@@ -4,7 +4,7 @@ import data from "@/data/data/cafes.json";
 import { RC, Event } from "@/app/types";
 import getEvents from "@/app/actions/getEvents";
 import EventsClient from "./page.client";
-import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 
 const NUM_MONTHS = 12;
@@ -30,7 +30,7 @@ export default async function EventsServer({
 }: {
   params: { slug: string; locale: string };
 }) {
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
   const rc = data.find((rc) => rc.slug === slug) as RC;
   if (!rc) notFound();
 

@@ -2,7 +2,7 @@
 import { ReactNode } from "react";
 import useLinkPostfix from "@/app/utils/useLinkPostfix";
 import { useTranslations } from "next-intl";
-import { Link, useRouter } from "../navigation";
+import { Link, useRouter } from "@/i18n/routing";
 
 export default function BackButton({
   className,

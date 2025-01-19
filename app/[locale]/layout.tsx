@@ -8,14 +8,16 @@ import { NextIntlClientProvider } from "next-intl";
 import {
   getMessages,
   getTranslations,
-  unstable_setRequestLocale,
+  setRequestLocale,
 } from "next-intl/server";
 import TopBar from "../TopBar";
 import classes from "@/app/utils/classes";
-import { BASE_URL, LOCALES } from "@/app/constants";
+import { BASE_URL } from "@/app/constants";
 import HoverResetter from "@/app/components/HoverResetter";
 import { CSPostHogProvider } from "../providers";
 import dynamic from "next/dynamic";
+import { routing } from "@/i18n/routing";
+import { notFound } from "next/navigation";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -44,7 +46,7 @@ export const viewport: Viewport = {
 };
 
 export function generateStaticParams() {
-  return LOCALES.map((locale) => ({ locale }));
+  return routing.locales.map((locale) => ({ locale }));
 }
 
 const PostHogTracker = dynamic(() => import("../components/PostHogTracker"), {
@@ -58,31 +60,36 @@ export default async function LocaleLayout({
   children: ReactNode;
   params: { locale: string };
 }>) {
-  unstable_setRequestLocale(locale);
+  // Ensure that the incoming `locale` is valid
+  if (!routing.locales.includes(locale as any)) {
+    notFound();
+  }
+
+  setRequestLocale(locale); // Enable static rendering
   const messages = await getMessages();
 
   return (
     <html lang={locale}>
       <CSPostHogProvider>
-        <body
-          // Prevent FOUC
-          style={{ display: "none" }}
-          className={classes(
-            inter.variable,
-            "!flex h-dvh flex-col font-sans text-blue selection:bg-orange selection:text-white",
-          )}
-        >
-          <NextIntlClientProvider messages={messages}>
+        <NextIntlClientProvider messages={messages}>
+          <body
+            // Prevent FOUC
+            style={{ display: "none" }}
+            className={classes(
+              inter.variable,
+              "!flex h-dvh flex-col font-sans text-blue selection:bg-orange selection:text-white",
+            )}
+          >
             <TopBar />
             <main className="flex min-h-px w-full shrink grow justify-center overflow-y-auto">
               {children}
             </main>
             <PostHogTracker locale={locale} />
-          </NextIntlClientProvider>
-          <HoverResetter />
-          <Analytics />
-          <SpeedInsights />
-        </body>
+            <HoverResetter />
+            <Analytics />
+            <SpeedInsights />
+          </body>
+        </NextIntlClientProvider>
       </CSPostHogProvider>
     </html>
   );

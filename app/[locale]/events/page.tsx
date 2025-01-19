@@ -5,7 +5,7 @@ import { BASE_URL } from "@/app/constants";
 import { EventRC } from "@/app/types";
 import ListItem from "./ListItem";
 import { Suspense } from "react";
-import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { useTranslations } from "next-intl";
 
 export async function generateMetadata({
@@ -31,7 +31,7 @@ export default function Page({
 }: {
   params: { locale: string };
 }) {
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
   const t = useTranslations("events");
   const rcs: EventRC[] = data.map((rc) => ({
     name: rc.name,

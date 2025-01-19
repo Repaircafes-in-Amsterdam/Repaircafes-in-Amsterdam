@@ -32,7 +32,7 @@ export default function BasePage({
       )}
     >
       {showHeader ? (
-        <div className="sticky top-0 z-10 flex gap-3 bg-white p-3  xl:flex-row-reverse">
+        <div className="sticky top-0 z-10 flex gap-3 bg-white p-3 xl:flex-row-reverse">
           <Suspense>
             <BackButton className="body:hidden">
               <ChevronLeft title={t("go-back")} />

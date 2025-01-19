@@ -1,10 +1,10 @@
 "use client";
 
-import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 import { usePostHog } from "posthog-js/react";
 import useDistrict from "../useDistrict";
 import useOutsideOfficeHours from "../useOutsideOfficeHours";
+import { usePathname } from "@/i18n/routing";
 
 export default function PostHogTracker({
   locale,

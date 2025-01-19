@@ -4,7 +4,7 @@ import useActive from "./useActive";
 import { MapRC } from "@/app/types";
 import Header from "@/app/components/Header";
 import ChevronRight from "@/app/icons/ChevronRight.svg?react";
-import { Link } from "@/app/navigation";
+import { Link } from "@/i18n/routing";
 import DetailsSection from "@/app/components/DetailsSection";
 import Unconfirmed from "@/app/components/Unconfirmed";
 import { useTranslations } from "next-intl";

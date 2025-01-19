@@ -7,7 +7,7 @@ import { useRef } from "react";
 import useMap from "@/app/utils/useMap";
 import useLinkPostfix from "@/app/utils/useLinkPostfix";
 import useOutsideOfficeHours from "@/app/useOutsideOfficeHours";
-import { useRouter } from "@/app/navigation";
+import { useRouter } from "@/i18n/routing";
 import districtFilter from "@/app/utils/districtFilter";
 
 export default function MapClient({ data }: { data: MapRC[] }) {

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Link } from "@/app/navigation";
+import { Link } from "@/i18n/routing";
 import ExternalLink from "@/app/icons/ExternalLink.svg?react";
 import BasePage from "@/app/components/BasePage";
 import DetailsSection from "@/app/components/DetailsSection";
@@ -9,7 +9,7 @@ import JsonLd from "@/app/components/JsonLd";
 import getFestivalJsonLd from "./getFestivalJsonLd";
 import { BASE_URL } from "@/app/constants";
 import { useLocale, useTranslations } from "next-intl";
-import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import useMultilingual from "@/app/utils/useMultilingual";
 import getDateString from "@/app/utils/getDateString";
@@ -41,7 +41,7 @@ export default async function FestivalServer({
 }: {
   params: { slug: string; locale: string };
 }) {
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
 
   const festival = festivalsData.find(
     (festival) => festival.slug === slug,

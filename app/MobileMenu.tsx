@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import ChevronRight from "@/app/icons/ChevronRight.svg?react";
 import classes from "./utils/classes";
-import { Link } from "@/app/navigation";
+import { Link } from "@/i18n/routing";
 import LocaleToggleGroup from "./components/LocaleToggleGroup";
 import { useTranslations } from "next-intl";
 

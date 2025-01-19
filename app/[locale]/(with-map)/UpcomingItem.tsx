@@ -1,4 +1,4 @@
-import { Link } from "@/app/navigation";
+import { Link } from "@/i18n/routing";
 import ChevronRight from "@/app/icons/ChevronRight.svg?react";
 import Warning from "@/app/icons/Warning.svg?react";
 import Calendar1 from "@/app/icons/Calendar1.svg?react";
@@ -24,7 +24,7 @@ export default function UpcomingItem({ event }: { event: Event }) {
     <Link
       href={`${linkBase}/${slug}${linkPostfix}`}
       className={classes(
-        "flex cursor-pointer items-center gap-3  px-3 py-1.5 focus-visible:bg-orange focus-visible:text-blue-600 focus-visible:outline-none [@media(hover:hover)]:hover:bg-orange [@media(hover:hover)]:hover:text-blue-600",
+        "flex cursor-pointer items-center gap-3 px-3 py-1.5 focus-visible:bg-orange focus-visible:text-blue-600 focus-visible:outline-none [@media(hover:hover)]:hover:bg-orange [@media(hover:hover)]:hover:text-blue-600",
         isHovered || isOpen ? "bg-orange text-blue-600" : "bg-blue text-white",
       )}
       onFocus={() => setHoveredRow(slug)}
