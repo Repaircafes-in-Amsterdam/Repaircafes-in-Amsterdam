@@ -5,7 +5,7 @@ import { MapContainer } from "react-leaflet/MapContainer";
 import { TileLayer } from "react-leaflet/TileLayer";
 import { MapRC } from "../../types";
 import { latLngBounds } from "leaflet";
-import MapMarker from "./MapMarker";
+// import MapMarker from "./MapMarker";
 import MapZoomControl from "./MapZoomControl";
 import MapZoomObserver from "./MapZoomObserver";
 import classes from "../../utils/classes";
@@ -51,7 +51,8 @@ export default function Map({
           url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
         />
-        {data.map((rc) => (
+        {/* TODO Re-enable map markers */}
+        {/* {data.map((rc) => (
           <MapMarker
             key={rc.slug}
             position={rc.coordinate as [number, number]}
@@ -61,7 +62,7 @@ export default function Map({
             slug={rc.slug}
             showLabel={zoomLevel > 13}
           />
-        ))}
+        ))} */}
         <ClickOutside onClick={() => onSelect && onSelect("")} />
         <MapZoomControl />
         <MapZoomObserver onZoom={setZoomLevel} />
