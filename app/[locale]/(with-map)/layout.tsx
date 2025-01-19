@@ -10,7 +10,7 @@ export const dynamic = "force-dynamic";
 export default async function Layout(
   props: Readonly<{
     children: React.ReactNode;
-    params: { locale: string };
+    params: Promise<{ locale: string }>;
   }>,
 ) {
   const params = await props.params;

@@ -15,9 +15,9 @@ import classes from "@/app/utils/classes";
 import { BASE_URL } from "@/app/constants";
 import HoverResetter from "@/app/components/HoverResetter";
 import { CSPostHogProvider } from "../providers";
-import dynamic from "next/dynamic";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
+import SuspendedPostHogTracker from "../components/PostHogTracker";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -88,11 +88,11 @@ export default async function LocaleLayout(
               "!flex h-dvh flex-col font-sans text-blue selection:bg-orange selection:text-white",
             )}
           >
+            <SuspendedPostHogTracker locale={locale} />
             <TopBar />
             <main className="flex min-h-px w-full shrink grow justify-center overflow-y-auto">
               {children}
             </main>
-            {/* <PostHogTracker locale={locale} /> */}
             <HoverResetter />
             <Analytics debug={false} />
             <SpeedInsights debug={false} />
