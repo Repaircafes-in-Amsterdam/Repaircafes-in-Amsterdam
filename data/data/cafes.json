@@ -947,6 +947,52 @@
     ]
   },
   {
+    "name": "Geuzenveld",
+    "address": "Albardakade 5-7",
+    "open": {
+      "nl": "Elke maandag 10:00 - 12:00",
+      "en": "Every Monday 10:00 - 12:00"
+    },
+    "rrule": [
+      "FREQ=WEEKLY;INTERVAL=1;BYDAY=MO"
+    ],
+    "startTime": [
+      "10:00"
+    ],
+    "endTime": [
+      "12:00"
+    ],
+    "closedRanges": [],
+    "closed": {
+      "nl": "",
+      "en": ""
+    },
+    "exceptions": [],
+    "district": "Nieuw-West",
+    "email": "repaircafegeuzenveld@gmail.com",
+    "doRepair": {
+      "nl": "Electronica, Meubels",
+      "en": "Electronics, Furniture"
+    },
+    "dontRepair": {
+      "nl": "Telefoons",
+      "en": "Phones"
+    },
+    "moreInfo": {
+      "nl": "",
+      "en": ""
+    },
+    "links": {
+      "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-geuzenveld-amsterdam-west/"
+    },
+    "verified": true,
+    "slug": "geuzenveld",
+    "coordinate": [
+      52.378172,
+      4.8029369
+    ]
+  },
+  {
     "name": "Gliphoeve kinderboerderij",
     "address": "Geldershoofd 79",
     "open": {
