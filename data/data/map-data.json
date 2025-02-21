@@ -63,7 +63,7 @@
     "last_updated": "2023-12-01 12:01:56"
   },
   {
-    "email": "sibbele@eigenwijks.nl",
+    "email": "pippi@eigenwijks.nl",
     "link": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-slotermeer-de-honingraat",
     "address": "Slotermeerlaan 103-H, Amsterdam, 1063 JN",
     "name": "Repair Café Amsterdam Slotermeer De Honingraat",
@@ -72,22 +72,22 @@
     "last_updated": "2023-07-28 14:33:32"
   },
   {
-    "email": "mpheijffer@dock.nl",
+    "email": "dburger@dock.nl",
     "link": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-centrum-de-boomsspijker",
-    "address": "Recht Boomssloot 52, Amsterdam, 1011 EC",
+    "address": "Recht Boomssloot 52, 1011 EC Amsterdam, Nederland",
     "name": "Repair Café Amsterdam-Centrum De Boomsspijker",
-    "coordinate": "52.371975,4.903493",
+    "coordinate": "52.3719741,4.9034932",
     "external_link": "https://www.dock.nl/",
-    "last_updated": "2021-09-30 13:19:08"
+    "last_updated": "2024-10-09 08:48:29"
   },
   {
-    "email": "pwisse@dock.nl",
+    "email": "mjanssen@dock.nl",
     "link": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-centrum-oost",
-    "address": "Kleine Wittenburgerstraat 201, Amsterdam, 1018 LT",
+    "address": "Kleine Wittenburgerstraat 201, 1018 KX Amsterdam, Nederland",
     "name": "Repair Café Amsterdam-Centrum Oost",
-    "coordinate": "52.371510,4.921735",
+    "coordinate": "52.3715077,4.9217355",
     "external_link": null,
-    "last_updated": "2022-05-17 08:22:48"
+    "last_updated": "2024-12-04 16:12:27"
   },
   {
     "email": "mazaoum@dock.nl",
@@ -153,13 +153,13 @@
     "last_updated": "2023-11-13 14:56:35"
   },
   {
-    "email": "frank@repaircafejeltje.nl",
+    "email": "bericht@repaircafejeltje.nl",
     "link": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-oud-west-jeltje",
     "address": "Eerste Helmersstraat 106N, 1054 EG Amsterdam, Nederland",
     "name": "Repair Café Amsterdam-Oud West Jeltje",
     "coordinate": "52.3621249,4.8686069",
     "external_link": "https://repaircafejeltje.nl",
-    "last_updated": "2023-02-27 12:44:38"
+    "last_updated": "2024-08-29 07:31:59"
   },
   {
     "email": "info@wachterliedpaviljoen.nl",
@@ -186,7 +186,7 @@
     "name": "Repair Café Amsterdam-West Westerpark",
     "coordinate": "52.3835455,4.876798300000001",
     "external_link": "https://west.combiwelbuurtwerk.nl/west-westerpark/",
-    "last_updated": "2024-01-30 11:05:17"
+    "last_updated": "2024-12-09 13:14:05"
   },
   {
     "email": "repaircafebuitenveldert@gmail.com",
@@ -194,8 +194,8 @@
     "address": "A.J. Ernststraat 112, Amsterdam, 1082 LP",
     "name": "Repair Café Amsterdam-Zuid Buitenveldert",
     "coordinate": "52.332798,4.877867",
-    "external_link": "https://www.hvdwbuitenveldert.nl/agenda.html",
-    "last_updated": "2023-03-07 11:28:56"
+    "external_link": "https://hvdwbuitenveldert.nl/agenda/",
+    "last_updated": "2024-07-05 09:46:14"
   },
   {
     "email": "repaircafedepijp@gmail.com",
@@ -204,7 +204,7 @@
     "name": "Repair Café Amsterdam-Zuid De Pijp",
     "coordinate": "52.3509199,4.8979308",
     "external_link": "http://nmtzuid.nl/project/repair-cafe/",
-    "last_updated": "2023-06-14 07:58:39"
+    "last_updated": "2025-01-23 10:52:34"
   },
   {
     "email": "info@groenebuurten.nl",
@@ -275,17 +275,17 @@
     "address": "Diederick van Haarlemstraat 3, 1191 BC Ouderkerk aan de Amstel, Nederland",
     "name": "Repair Café Ouder-Amstel",
     "coordinate": "52.29804710000001,4.9044431",
-    "external_link": "http://www.coherente.nl/dienstverlening/repair-café",
-    "last_updated": "2023-05-15 12:35:32"
+    "external_link": "https://coherente.nl/repair-naai",
+    "last_updated": "2024-06-04 08:45:10"
   },
   {
     "email": "ivan@seiler.nl",
-    "link": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-oost-olvg",
-    "address": "Camperstraat 57, 1091 AD Amsterdam, Nederland",
-    "name": "Repair Café Amsterdam-Oost (OLVG)",
-    "coordinate": "52.35856209999999,4.913306299999999",
+    "link": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-oost-nieuwland",
+    "address": "Pieter Nieuwlandstraat 93, 1093 XN Amsterdam, Nederland",
+    "name": "Repair Café Amsterdam-Oost (Nieuwland)",
+    "coordinate": "52.3622816,4.929924199999999",
     "external_link": null,
-    "last_updated": "2021-10-12 13:37:18"
+    "last_updated": "2025-01-10 21:26:26"
   },
   {
     "email": "repaircafeoudnoord@gmail.com",
@@ -294,16 +294,16 @@
     "name": "Repair Café Amsterdam Oud-Noord",
     "coordinate": "52.3990892,4.9105161",
     "external_link": null,
-    "last_updated": "2024-04-13 06:54:02"
+    "last_updated": "2024-12-30 22:01:50"
   },
   {
-    "email": "larissakorporaal@gmail.com",
+    "email": "info@flinkin.nl",
     "link": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-slotervaart",
     "address": "Jan Tooropstraat 8, 1062 BM Amsterdam, Nederland",
     "name": "Repair Café Amsterdam-Slotervaart",
     "coordinate": "52.36106109999999,4.836834",
-    "external_link": null,
-    "last_updated": "2023-05-09 13:35:05"
+    "external_link": "www.tantetoorop.nl",
+    "last_updated": "2024-11-07 14:15:50"
   },
   {
     "email": "repaircafesloten@gmail.com",
@@ -321,7 +321,7 @@
     "name": "Repair Café Amsterdam-Noord De Meeuw",
     "coordinate": "52.3846872,4.9180786",
     "external_link": null,
-    "last_updated": "2024-01-25 13:05:37"
+    "last_updated": "2025-01-08 10:35:13"
   },
   {
     "email": "kinderboerderij.gliphoeve@gmail.com",
@@ -369,12 +369,21 @@
     "last_updated": "2024-04-16 09:22:26"
   },
   {
-    "email": "freya.ruijs@waternet.nl",
-    "link": "https://www.repaircafe.org/cafe/waternet-repair-cafe-amsterdam-oost",
-    "address": "Korte Ouderkerkerdijk 7, 1096 GB Amsterdam, Nederland",
-    "name": "Waternet Repair Café Amsterdam-Oost",
-    "coordinate": "52.3399178,4.9171795",
+    "email": "e.tetenburg@coherente.nl",
+    "link": "https://www.repaircafe.org/cafe/repair-cafe-duivendrecht",
+    "address": "Dorpshuis, Dorpsplein 60, 1115 CX Duivendrecht, Nederland",
+    "name": "Repair Café Duivendrecht",
+    "coordinate": "52.3326173,4.9383856",
+    "external_link": "www.coherente.nl",
+    "last_updated": "2024-12-16 08:42:01"
+  },
+  {
+    "email": "repaircafegeuzenveld@gmail.com",
+    "link": "https://www.repaircafe.org/cafe/repair-cafe-geuzenveld-amsterdam-west",
+    "address": "Buurthuis Pluspunt, Albardakade 5-7, 1067 DD Amsterdam Geuzenveld, Nederland",
+    "name": "Repair Café Geuzenveld Amsterdam-West",
+    "coordinate": "52.378172,4.8029369",
     "external_link": null,
-    "last_updated": "2024-03-01 11:59:16"
+    "last_updated": "2025-01-07 10:21:30"
   }
 ]
