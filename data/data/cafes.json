@@ -1394,10 +1394,10 @@
       "FREQ=MONTHLY;BYSETPOS=3;BYDAY=SU;INTERVAL=2"
     ],
     "startTime": [
-      "16:00"
+      "14:00"
     ],
     "endTime": [
-      "18:00"
+      "17:00"
     ],
     "closedRanges": [
       "2024-10-20",
