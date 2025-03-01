@@ -1829,17 +1829,17 @@
     "name": "Zonneplein",
     "address": "Zonneplein 11",
     "open": {
-      "nl": "1e zaterdagmiddag 12:30 - 15:00",
-      "en": "1st Saturday afternoon 12:30 - 15:00"
+      "nl": "1e zaterdagmiddag 12:30 - 14:45",
+      "en": "1st Saturday afternoon 12:30 - 14:45"
     },
     "rrule": [
       "FREQ=MONTHLY;BYSETPOS=1;BYDAY=SA;INTERVAL=1"
     ],
     "startTime": [
-      "14:00"
+      "12:30"
     ],
     "endTime": [
-      "16:00"
+      "14:45"
     ],
     "closedRanges": [
       "2024-07-06",
