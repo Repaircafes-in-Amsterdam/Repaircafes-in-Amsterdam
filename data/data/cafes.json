@@ -692,8 +692,8 @@
     "name": "De Meeuw",
     "address": "Motorwal 300",
     "open": {
-      "nl": "Elke donderdagochtend 10:00 - 12:00\nEn vanaf februari ook elke 2de zaterdag 11:00 - 14:00",
-      "en": "Every Thursday morning 10:00 - 12:00\nAnd starting February also every 2nd Saturday 11:00 - 14:00"
+      "nl": "Elke donderdagochtend 10:00 - 12:00\nEn elke 2de zaterdag 11:00 - 14:00",
+      "en": "Every Thursday morning 10:00 - 12:00\nAnd every 2nd Saturday 11:00 - 14:00"
     },
     "rrule": [
       "FREQ=WEEKLY;BYDAY=TH;INTERVAL=1",
@@ -1387,8 +1387,8 @@
     "name": "Repair Events Tolhuistuin",
     "address": "Tolhuisweg 3",
     "open": {
-      "nl": "23 februari 16:00 - 18:00. \n20 april en 15 juni 14:00 - 17:00.",
-      "en": "23 February 16:00 - 18:00. \n20 April and 15 June 14:00 - 17:00."
+      "nl": "20 april en 15 juni 14:00 - 17:00.",
+      "en": "20 April and 15 June 14:00 - 17:00."
     },
     "rrule": [
       "FREQ=MONTHLY;BYSETPOS=3;BYDAY=SU;INTERVAL=2"
