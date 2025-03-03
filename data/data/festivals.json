@@ -1,37 +1,36 @@
 [
   {
+    "name": "Speel Deel en Recycle Festival",
+    "location": "De Hallen",
+    "address": "Hannie Dankbaarpassage 47",
+    "district": "West",
+    "dates": [
+      "2025-03-15"
+    ],
+    "startTime": "12:00",
+    "endTime": "17:00",
+    "link": "https://dehallen-amsterdam.nl/agenda/speel-deel-ruil-en-recycle-project/",
+    "description": {
+      "nl": "Doe mee aan de grote Spring Cleaning en ruil kinderkleding en speelgoed!\n\nBreng items mee die je niet meer nodig hebt en ontdek nieuwe schatten—een prachtig kinderboek, een knuffel die een nieuw thuis zoekt of een bijna gloednieuwe voorjaarsjas. Daarnaast kun je deelnemen aan inspirerende workshops over reparatie, hergebruik en duurzaamheid.\n\nMensen van Repair Cafés zijn hier aanwezig om aanwezig elektrisch/batterijgevoed speelgoed te controleren en mogelijk te repareren.",
+      "en": "Join the big Spring Cleaning and swap children's clothes and toys!\n\nBring items you no longer need and discover new treasures-a beautiful children's book, a stuffed toy looking for a new home or an almost brand-new spring coat. In addition, you can participate in inspiring workshops on repair, reuse and sustainability.\n\nPeople from Repair Cafés will be here to check and possibly repair present electric/battery powered toys."
+    },
+    "slug": "speel-deel-en-recycle-festival-2025-03-15"
+  },
+  {
     "name": "Het Ruilfestival",
     "location": "De Hallen",
     "address": "Hannie Dankbaarpassage 47",
     "district": "West",
     "dates": [
-      "2024-11-02"
+      "2025-05-31"
     ],
     "startTime": "12:00",
     "endTime": "17:00",
-    "link": "https://dehallen-amsterdam.nl/agenda/het-ruilfestival/",
+    "link": "",
     "description": {
       "nl": "Van ruilen komt een gezellige recycle-markt voor alle leeftijden! Neem je spullen mee en kies iets anders uit.\n\nWe ruilen: boeken, kleding, speelgoed, kunst, interieur, planten, zaden & stekjes, en energiebesparend materiaal. Verschillende bewoners en organisaties uit Oud-West bundelen hun krachten voor dit tweede Grote Ruilfestival De Hallen. Naast ruilen kun je bij het Repair Café kapotte kleding en elektronica laten repareren, deelnemen aan creatieve workshops, schminken, en genieten van live muziek!\n\nKom langs, neem iets leuks mee, maak nieuwe contacten en draag bij aan een duurzaam Oud-West!",
       "en": "From swapping comes a fun recycle market for all ages! Bring your stuff and pick something different.\n\nWe swap: books, clothes, toys, art, interior design, plants, seeds & cuttings, and energy-saving materials. Several Oud-West residents and organizations are joining forces for this second Great Swap Festival De Hallen. Besides bartering, you can have broken clothes and electronics repaired at the Repair Café, participate in creative workshops, face painting, and enjoy live music!\n\nCome by, bring something fun, make new contacts, and contribute to a sustainable Oud-West!"
     },
-    "slug": "het-ruilfestival-2024-11-02"
-  },
-  {
-    "name": "Speelgoed ruilbeurs",
-    "location": "De Hallen",
-    "address": "Hannie Dankbaarpassage 47",
-    "district": "West",
-    "dates": [
-      "2024-11-29",
-      "2024-11-30"
-    ],
-    "startTime": "12:00",
-    "endTime": "17:00",
-    "link": "https://dehallen-amsterdam.nl/agenda/het-grote-speel-ruil-recycle-festival/",
-    "description": {
-      "nl": "Heb je speelgoed of kinderkleding die een tweede kans verdienen? Ruil tot 5 stuks en ontdek “nieuwe” schatten van andere families. Doe mee aan workshops en activiteiten waarbij we speelgoed of kleding repareren, knuffels maken of een enorme knikkerbaan maken. \n\nMensen van Repair Cafés zijn hier aanwezig om aanwezig elektrisch/batterijgevoed speelgoed te controleren en mogelijk te repareren. \n\nToegang is gratis! Kom langs en beleef een dag vol plezier, creativiteit en duurzaamheid.",
-      "en": "Do you have toys or children's clothing that deserve a second chance? Swap up to 5 items and discover “new” treasures from other families. Join us for workshops and activities where we will repair toys or clothes, make stuffed animals or make a giant marble track. \n\nPeople from Repair Cafés will be here to check and possibly repair present electric/battery powered toys. \n\nAdmission is free! Stop by and experience a day of fun, creativity and sustainability."
-    },
-    "slug": "speelgoed-ruilbeurs-2024-11-29"
+    "slug": "het-ruilfestival-2025-05-31"
   }
 ]
