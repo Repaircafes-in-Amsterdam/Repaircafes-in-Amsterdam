@@ -488,8 +488,8 @@
     "verified": true,
     "slug": "de-boomsspijker",
     "coordinate": [
-      52.371975,
-      4.903493
+      52.3719741,
+      4.9034932
     ]
   },
   {
@@ -564,7 +564,7 @@
     },
     "exceptions": [],
     "district": "Diemen",
-    "email": "repaircafe@duurzaamdorpdiemen.nl",
+    "email": "repaircafediemen@gmail.com",
     "doRepair": {
       "nl": "Electronica, Andere draagbare huishoudelijke apparaten",
       "en": "Electronics, Other portable household appliances"
@@ -692,8 +692,8 @@
     "name": "De Meeuw",
     "address": "Motorwal 300",
     "open": {
-      "nl": "Elke donderdagochtend 10:00 - 12:00\nEn vanaf februari ook elke 2de zaterdag 11:00 - 14:00",
-      "en": "Every Thursday morning 10:00 - 12:00\nAnd starting February also every 2nd Saturday 11:00 - 14:00"
+      "nl": "Elke donderdagochtend 10:00 - 12:00\nEn elke 2de zaterdag 11:00 - 14:00",
+      "en": "Every Thursday morning 10:00 - 12:00\nAnd every 2nd Saturday 11:00 - 14:00"
     },
     "rrule": [
       "FREQ=WEEKLY;BYDAY=TH;INTERVAL=1",
@@ -808,7 +808,9 @@
       "16:00"
     ],
     "closedRanges": [
-      "12"
+      "12",
+      "2025-01-26",
+      "2025-02-23"
     ],
     "closed": {
       "nl": "December",
@@ -943,6 +945,52 @@
     "coordinate": [
       52.29424,
       4.98769
+    ]
+  },
+  {
+    "name": "Geuzenveld",
+    "address": "Albardakade 5-7",
+    "open": {
+      "nl": "Elke maandag 10:00 - 12:00",
+      "en": "Every Monday 10:00 - 12:00"
+    },
+    "rrule": [
+      "FREQ=WEEKLY;INTERVAL=1;BYDAY=MO"
+    ],
+    "startTime": [
+      "10:00"
+    ],
+    "endTime": [
+      "12:00"
+    ],
+    "closedRanges": [],
+    "closed": {
+      "nl": "",
+      "en": ""
+    },
+    "exceptions": [],
+    "district": "Nieuw-West",
+    "email": "repaircafegeuzenveld@gmail.com",
+    "doRepair": {
+      "nl": "Electronica, Meubels",
+      "en": "Electronics, Furniture"
+    },
+    "dontRepair": {
+      "nl": "Telefoons",
+      "en": "Phones"
+    },
+    "moreInfo": {
+      "nl": "",
+      "en": ""
+    },
+    "links": {
+      "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-geuzenveld-amsterdam-west/"
+    },
+    "verified": true,
+    "slug": "geuzenveld",
+    "coordinate": [
+      52.378172,
+      4.8029369
     ]
   },
   {
@@ -1193,6 +1241,57 @@
     ]
   },
   {
+    "name": "Nieuwland",
+    "address": "Pieter Nieuwlandstraat 93",
+    "open": {
+      "nl": "Elke 2de zaterdag 13:00 - 16:00",
+      "en": "Every 2nd saturday 13:00 - 16:00"
+    },
+    "rrule": [
+      "FREQ=MONTHLY;BYDAY=2SA"
+    ],
+    "startTime": [
+      "13:00"
+    ],
+    "endTime": [
+      "16:00"
+    ],
+    "closedRanges": [
+      "07:08"
+    ],
+    "closed": {
+      "nl": "Juli en augustus",
+      "en": "July and August"
+    },
+    "exceptions": [],
+    "district": "Oost",
+    "email": "ivan@seiler.nl",
+    "doRepair": {
+      "nl": "Electronica",
+      "en": "Electronics"
+    },
+    "dontRepair": {
+      "nl": "Telefoons, Nespresso, tv's, witgoed",
+      "en": "Phones, Nespresso, TVs, white goods"
+    },
+    "moreInfo": {
+      "nl": "Ik ben ook muzikant en repareer muziekinstrumenten.\nVrijwilligers zijn altijd welkom.",
+      "en": "I am also a musician and repair musical instruments.\nVolunteers are always welcome."
+    },
+    "links": {
+      "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-oost-nieuwland/"
+    },
+    "socials": {
+      "instagram": "https://www.instagram.com/werepair.amsterdam/"
+    },
+    "verified": true,
+    "slug": "nieuwland",
+    "coordinate": [
+      52.3622816,
+      4.929924199999999
+    ]
+  },
+  {
     "name": "Osdorp",
     "address": "Tussen Meer 68",
     "open": {
@@ -1339,11 +1438,11 @@
     "name": "Repair Events Tolhuistuin",
     "address": "Tolhuisweg 3",
     "open": {
-      "nl": "In februari gaan we weer open",
-      "en": "We will reopen in February"
+      "nl": "20 april en 15 juni 14:00 - 17:00.",
+      "en": "20 April and 15 June 14:00 - 17:00."
     },
     "rrule": [
-      "FREQ=MONTHLY;BYSETPOS=3;BYDAY=SU;INTERVAL=1"
+      "FREQ=MONTHLY;BYSETPOS=3;BYDAY=SU;INTERVAL=2"
     ],
     "startTime": [
       "14:00"
@@ -1359,7 +1458,11 @@
       "nl": "",
       "en": ""
     },
-    "exceptions": [],
+    "exceptions": [
+      "2025-02-23",
+      "2025-04-20",
+      "2025-06-15"
+    ],
     "district": "Noord",
     "email": "repair.events@gmail.com",
     "doRepair": {
@@ -1727,8 +1830,8 @@
     "name": "Witte Boei",
     "address": "Kleine Wittenburgerstraat 201",
     "open": {
-      "nl": "Elke eerste woensdagmiddag 14:00 - 16:30",
-      "en": "Every first Wednesday afternoon 14:00 - 16:30"
+      "nl": "Elke eerste en derde woensdagmiddag 14:00 - 16:30",
+      "en": "Every first and third Wednesday afternoon 14:00 - 16:30"
     },
     "rrule": [
       "FREQ=MONTHLY;BYDAY=1WE,3WE"
@@ -1746,7 +1849,7 @@
     },
     "exceptions": [],
     "district": "Centrum",
-    "email": "dburger@dock.nl",
+    "email": "mjanssen@dock.nl",
     "doRepair": {
       "nl": "Electronica, Huishoudelijke apparaten. Van platenspelers tot koffiezetapparaten tot stofzuigers.",
       "en": "Electronics, Household appliances. From turntables to coffee machines to vacuum cleaners."
@@ -1769,25 +1872,25 @@
     "verified": true,
     "slug": "witte-boei",
     "coordinate": [
-      52.37151,
-      4.921735
+      52.3715077,
+      4.9217355
     ]
   },
   {
     "name": "Zonneplein",
     "address": "Zonneplein 11",
     "open": {
-      "nl": "1e zaterdagmiddag 12:30 - 15:00",
-      "en": "1st Saturday afternoon 12:30 - 15:00"
+      "nl": "1e zaterdagmiddag 12:30 - 14:45",
+      "en": "1st Saturday afternoon 12:30 - 14:45"
     },
     "rrule": [
       "FREQ=MONTHLY;BYSETPOS=1;BYDAY=SA;INTERVAL=1"
     ],
     "startTime": [
-      "14:00"
+      "12:30"
     ],
     "endTime": [
-      "16:00"
+      "14:45"
     ],
     "closedRanges": [
       "2024-07-06",
