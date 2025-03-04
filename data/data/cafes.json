@@ -1241,6 +1241,57 @@
     ]
   },
   {
+    "name": "Nieuwland",
+    "address": "Pieter Nieuwlandstraat 93",
+    "open": {
+      "nl": "Elke 2de zaterdag 13:00 - 16:00",
+      "en": "Every 2nd saturday 13:00 - 16:00"
+    },
+    "rrule": [
+      "FREQ=MONTHLY;BYDAY=2SA"
+    ],
+    "startTime": [
+      "13:00"
+    ],
+    "endTime": [
+      "16:00"
+    ],
+    "closedRanges": [
+      "07:08"
+    ],
+    "closed": {
+      "nl": "Juli en augustus",
+      "en": "July and August"
+    },
+    "exceptions": [],
+    "district": "Oost",
+    "email": "ivan@seiler.nl",
+    "doRepair": {
+      "nl": "Electronica",
+      "en": "Electronics"
+    },
+    "dontRepair": {
+      "nl": "Telefoons, Nespresso, tv's, witgoed",
+      "en": "Phones, Nespresso, TVs, white goods"
+    },
+    "moreInfo": {
+      "nl": "Ik ben ook muzikant en repareer muziekinstrumenten.\nVrijwilligers zijn altijd welkom.",
+      "en": "I am also a musician and repair musical instruments.\nVolunteers are always welcome."
+    },
+    "links": {
+      "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-oost-nieuwland/"
+    },
+    "socials": {
+      "instagram": "https://www.instagram.com/werepair.amsterdam/"
+    },
+    "verified": true,
+    "slug": "nieuwland",
+    "coordinate": [
+      52.3622816,
+      4.929924199999999
+    ]
+  },
+  {
     "name": "Osdorp",
     "address": "Tussen Meer 68",
     "open": {
