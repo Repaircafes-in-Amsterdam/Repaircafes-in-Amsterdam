@@ -51,11 +51,6 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
-// TODO Re-enable PostHogTracker
-// const PostHogTracker = dynamic(() => import("../components/PostHogTracker"), {
-//   ssr: false,
-// });
-
 export default async function LocaleLayout(
   props: Readonly<{
     children: ReactNode;
