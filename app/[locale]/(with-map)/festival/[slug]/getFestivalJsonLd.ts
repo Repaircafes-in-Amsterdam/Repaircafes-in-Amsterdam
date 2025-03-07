@@ -24,9 +24,7 @@ function getOffsetForTimeZone(date: Date): string {
 function getDateTime(date: string, time: string): string {
   const dateTime = new Date(`${date}T${getTime(time)}`);
   const offset = getOffsetForTimeZone(dateTime);
-  const result = `${date}T${getTime(time)}+${offset}`;
-  console.log("date time: ", result);
-  return result;
+  return `${date}T${getTime(time)}+${offset}`;
 }
 
 export default function getFestivalJsonLd(
