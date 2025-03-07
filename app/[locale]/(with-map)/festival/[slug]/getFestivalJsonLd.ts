@@ -18,6 +18,8 @@ export default function getFestivalJsonLd(
       endTime: `${festival.endTime}:00`,
       scheduleTimezone: "Europe/Amsterdam",
     },
+    startDate: `${festival.dates[0]}T${festival.startTime}:00`,
+    endDate: `${festival.dates[festival.dates.length - 1]}T${festival.endTime}:00`,
     location: {
       "@type": "Place",
       name: festival.location,
