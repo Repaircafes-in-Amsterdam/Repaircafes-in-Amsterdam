@@ -8,8 +8,8 @@ import isClosed from "@/app/utils/isClosed";
 import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
+import { TIME_ZONE } from "../constants";
 
-const TIME_ZONE = "Europe/Amsterdam";
 // const LOCALE = "NL-nl";
 
 dayjs.extend(utc);
