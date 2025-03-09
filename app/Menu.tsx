@@ -27,7 +27,6 @@ function MenuLink({
   );
 }
 
-// TODO Add language chooser
 export default function Menu() {
   const t = useTranslations();
   return (
