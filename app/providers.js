@@ -10,6 +10,7 @@ export function CSPostHogProvider({ children }) {
         api_host: process.env.NEXT_PUBLIC_POSTHOG_HOST,
         persistence: "memory",
         capture_pageview: false,
+        capture_pageleave: true,
       });
     }
   }, []);
