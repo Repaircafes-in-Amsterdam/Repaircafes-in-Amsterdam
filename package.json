@@ -20,7 +20,7 @@
     "update-festivals": "node data/update-festivals.mjs"
   },
   "dependencies": {
-    "@adamscybot/react-leaflet-component-marker": "^2.0.2",
+    "@adamscybot/react-leaflet-component-marker": "^2.0.3",
     "@mdx-js/loader": "^3.1.0",
     "@mdx-js/react": "^3.1.0",
     "@next/bundle-analyzer": "15.1.5",
