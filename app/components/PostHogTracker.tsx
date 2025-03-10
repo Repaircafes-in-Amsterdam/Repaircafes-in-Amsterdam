@@ -1,14 +1,12 @@
 "use client";
 
-import { useEffect } from "react";
+import { Suspense, useEffect } from "react";
 import { usePostHog } from "posthog-js/react";
 import useDistrict from "../useDistrict";
 import useOutsideOfficeHours from "../useOutsideOfficeHours";
 import { usePathname } from "@/i18n/routing";
 
-export default function PostHogTracker({
-  locale,
-}: Readonly<{ locale: string }>) {
+function PostHogTracker({ locale }: Readonly<{ locale: string }>) {
   const pathname = usePathname();
   const postHog = usePostHog();
 
@@ -39,4 +37,17 @@ export default function PostHogTracker({
   }, [outsideOfficeHours, postHog]);
 
   return null;
+}
+
+// Wrap this in Suspense to avoid the `useSearchParams` usage above
+// from de-opting the whole app into client-side rendering
+// See: https://nextjs.org/docs/messages/deopted-into-client-rendering
+export default function SuspendedPostHogTracker({
+  locale,
+}: Readonly<{ locale: string }>) {
+  return (
+    <Suspense fallback={null}>
+      <PostHogTracker locale={locale} />
+    </Suspense>
+  );
 }

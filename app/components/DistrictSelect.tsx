@@ -1,5 +1,5 @@
 "use client";
-import { LegacyRef, ReactNode, forwardRef } from "react";
+import { Ref, ReactNode, forwardRef } from "react";
 import * as Select from "@radix-ui/react-select";
 import * as Label from "@radix-ui/react-label";
 import useDistrict from "../useDistrict";
@@ -52,7 +52,7 @@ export default function DistrictSelect() {
 const SelectItem = forwardRef(
   (
     { children, ...props }: { children: ReactNode; value: string },
-    forwardedRef: LegacyRef<HTMLDivElement> | undefined,
+    forwardedRef: Ref<HTMLDivElement> | undefined,
   ) => {
     return (
       <Select.Item

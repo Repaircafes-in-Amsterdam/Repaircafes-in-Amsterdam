@@ -3,6 +3,6 @@ declare module "*.svg?react" {
 
   const content: (
     props: SVGProps<SVGElement> | { title: string },
-  ) => ReactElement;
+  ) => ReactElement<any>;
   export default content;
 }

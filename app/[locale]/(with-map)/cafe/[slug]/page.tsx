@@ -19,11 +19,13 @@ import { notFound } from "next/navigation";
 import useMultilingual from "@/app/utils/useMultilingual";
 import ScrollToTop from "@/app/components/ScrollToTop";
 
-export async function generateMetadata({
-  params: { locale, slug },
-}: {
-  params: { locale: string; slug: string };
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
+  const params = await props.params;
+
+  const { locale, slug } = params;
+
   const t = await getTranslations({ locale, namespace: "cafe" });
   const rc = data.find((rc) => rc.slug === slug);
   const name = rc?.name || t("unknown.title");
@@ -40,11 +42,13 @@ function getMapsLink(adres: string) {
   return `https://maps.google.com?q=${encodeURIComponent(fullAdres)}`;
 }
 
-export default async function CafeServer({
-  params: { slug, locale },
-}: {
-  params: { slug: string; locale: string };
+export default async function CafeServer(props: {
+  params: Promise<{ slug: string; locale: string }>;
 }) {
+  const params = await props.params;
+
+  const { slug, locale } = params;
+
   setRequestLocale(locale);
 
   const rc = data.find((rc) => rc.slug === slug) as RC;

@@ -15,11 +15,13 @@ import useMultilingual from "@/app/utils/useMultilingual";
 import getDateString from "@/app/utils/getDateString";
 import ScrollToTop from "@/app/components/ScrollToTop";
 
-export async function generateMetadata({
-  params: { locale, slug },
-}: {
-  params: { locale: string; slug: string };
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
+  const params = await props.params;
+
+  const { locale, slug } = params;
+
   const t = await getTranslations({ locale, namespace: "festival" });
   const festival = festivalsData.find((festival) => festival.slug === slug);
   const name = festival?.name || t("unknown.title");
@@ -36,11 +38,13 @@ function getMapsLink(adres: string) {
   return `https://maps.google.com?q=${encodeURIComponent(fullAdres)}`;
 }
 
-export default async function FestivalServer({
-  params: { slug, locale },
-}: {
-  params: { slug: string; locale: string };
+export default async function FestivalServer(props: {
+  params: Promise<{ slug: string; locale: string }>;
 }) {
+  const params = await props.params;
+
+  const { slug, locale } = params;
+
   setRequestLocale(locale);
 
   const festival = festivalsData.find(
