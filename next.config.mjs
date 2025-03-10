@@ -10,6 +10,11 @@ const withMDX = createMDX({});
 
 const nextConfig = {
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
+  experimental: {
+    staleTimes: {
+      dynamic: 30, // default from before v15.0.0
+    },
+  },
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
