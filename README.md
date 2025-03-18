@@ -15,6 +15,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ### Repair Café data
 
 We have a Google Spreadsheet that stores the Repair Cafés data. In the future we hope to move this into a database and make it editable by the Repair Café organizers using their own logins.
+[Example spreadsheet](https://docs.google.com/spreadsheets/d/1Jm1jFasNHkmciVD3OYLXgb0SqZuI_2GF7tIlcbyOQKw/edit?gid=0#gid=0).
 It contains the columns mentioned in the `RC` type (see [Types](https://github.com/Repaircafes-in-Amsterdam/Repaircafes-in-Amsterdam/blob/main/app/types.ts)) + the ones that are put nested under links see LINK_COLUMNS in [update-data](https://github.com/Repaircafes-in-Amsterdam/Repaircafes-in-Amsterdam/blob/main/data/update-data.mjs). The `slug` is automatically generated. The `MultilingualData` columns are prefixed by locales like `en:` and `nl:`.
 We export it's data, combine it with the sources below and save it into a json file by running:
 
@@ -27,7 +28,9 @@ More info: https://theoephraim.github.io/node-google-spreadsheet/#/guides/authen
 
 ### Festivals data
 
-Similar to Repair Cafés data we have a sheet in our Google Spreadsheet with Festivals data. These are events that happen only once. It contains the columns mentioned in the `Festival` type (see [Types](https://github.com/Repaircafes-in-Amsterdam/Repaircafes-in-Amsterdam/blob/main/app/types.ts)).
+Similar to Repair Cafés data we have a sheet in our Google Spreadsheet with Festivals data. These are events that happen only once.
+[Example spreadsheet](https://docs.google.com/spreadsheets/d/1Jm1jFasNHkmciVD3OYLXgb0SqZuI_2GF7tIlcbyOQKw/edit?gid=22042023#gid=22042023).
+It contains the columns mentioned in the `Festival` type (see [Types](https://github.com/Repaircafes-in-Amsterdam/Repaircafes-in-Amsterdam/blob/main/app/types.ts)).
 We export it's data and save it into a json file by running:
 
 ```bash
