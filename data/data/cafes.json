@@ -1047,17 +1047,17 @@
     "name": "Het Claverhuis",
     "address": "Elandsgracht 70",
     "open": {
-      "nl": "Elke donderdagmiddag 14:00 - 16:00",
-      "en": "Every Thursday afternoon 14:00 - 16:00"
+      "nl": "Elke donderdagmiddag 13:00 - 15:30",
+      "en": "Every Thursday afternoon 13:00 - 15:30"
     },
     "rrule": [
       "FREQ=WEEKLY;BYDAY=TH;INTERVAL=1"
     ],
     "startTime": [
-      "14:00"
+      "13:00"
     ],
     "endTime": [
-      "16:00"
+      "15:30"
     ],
     "closedRanges": [],
     "closed": {
