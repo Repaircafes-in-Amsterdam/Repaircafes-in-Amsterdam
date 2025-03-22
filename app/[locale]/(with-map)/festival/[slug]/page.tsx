@@ -90,15 +90,17 @@ function FestivalClient({ festival }: { festival: Festival }) {
           </ul>
         </DetailsSection>
         <DetailsSection title={t("information")}>{description}</DetailsSection>
-        <Link
-          href={link}
-          className="flex gap-1"
-          rel="noreferrer"
-          target="_blank"
-        >
-          <ExternalLink className="shrink-0" />
-          {t("moreInfo")}
-        </Link>
+        {link && (
+          <Link
+            href={link}
+            className="flex gap-1"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <ExternalLink className="shrink-0" />
+            {t("moreInfo")}
+          </Link>
+        )}
         <DetailsSection title={t("location")}>{location}</DetailsSection>
         <DetailsSection title={t("address")}>
           <Link
