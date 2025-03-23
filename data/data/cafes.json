@@ -793,7 +793,7 @@
   },
   {
     "name": "De Pijp",
-    "address": "Tweede van der Helststraat 66",
+    "address": "Lutmastraat 61a",
     "open": {
       "nl": "Laatste zondag 12:00 - 16:00",
       "en": "Last Sunday 12:00 - 16:00"
@@ -841,8 +841,8 @@
     "verified": true,
     "slug": "de-pijp",
     "coordinate": [
-      52.3509199,
-      4.8979308
+      52.35101,
+      4.89536
     ]
   },
   {
