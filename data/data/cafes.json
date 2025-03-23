@@ -1438,8 +1438,8 @@
     "name": "Repair Events Tolhuistuin",
     "address": "Tolhuisweg 3",
     "open": {
-      "nl": "20 april en 15 juni 14:00 - 17:00.",
-      "en": "20 April and 15 June 14:00 - 17:00."
+      "nl": "Elke 2de zondag 14:00 - 17:00\nIn mei zijn we de 18de open",
+      "en": "Every 2nd Sunday 14:00 - 17:00\nIn May we will open on the 18th"
     },
     "rrule": [
       "FREQ=MONTHLY;BYSETPOS=3;BYDAY=SU;INTERVAL=2"
@@ -1459,9 +1459,11 @@
       "en": ""
     },
     "exceptions": [
-      "2025-02-23",
-      "2025-04-20",
-      "2025-06-15"
+      "2025-04-13",
+      "2025-05-18",
+      "2025-06-08",
+      "2025-07-13",
+      "2025-08-10"
     ],
     "district": "Noord",
     "email": "repair.events@gmail.com",
