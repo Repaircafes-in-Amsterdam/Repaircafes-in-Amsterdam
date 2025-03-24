@@ -4,7 +4,7 @@
     "address": "Spuistraat 216",
     "open": {
       "nl": "Elke 1e en 3e dinsdag 15:00 - 19:00\nBekijk ook de vrankrijk website of radar.squat pagina",
-      "en": "Every 1st and 3th tuesday 15:00 - 19:00\nAlso check the vrankrijk website or radar.squat page"
+      "en": "Every 1st and 3rd Tuesday 15:00 - 19:00\nAlso check the vrankrijk website or radar.squat page"
     },
     "rrule": [
       "FREQ=MONTHLY;INTERVAL=1;BYDAY=1TU,3TU"
@@ -41,7 +41,7 @@
         "https://vrankrijk.org/events/categories/diy/"
       ]
     },
-    "verified": false,
+    "verified": true,
     "slug": "abc-community-bike-repair",
     "coordinate": [
       52.371616,
