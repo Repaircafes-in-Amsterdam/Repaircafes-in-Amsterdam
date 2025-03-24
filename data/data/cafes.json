@@ -1,5 +1,54 @@
 [
   {
+    "name": "ABC Community bike repair",
+    "address": "Spuistraat 216",
+    "open": {
+      "nl": "Elke 1e en 3e dinsdag 15:00 - 19:00\nBekijk ook de vrankrijk website of radar.squat pagina",
+      "en": "Every 1st and 3rd Tuesday 15:00 - 19:00\nAlso check the vrankrijk website or radar.squat page"
+    },
+    "rrule": [
+      "FREQ=MONTHLY;INTERVAL=1;BYDAY=1TU,3TU"
+    ],
+    "startTime": [
+      "15:00"
+    ],
+    "endTime": [
+      "19:00"
+    ],
+    "closedRanges": [],
+    "closed": {
+      "nl": "",
+      "en": ""
+    },
+    "exceptions": [],
+    "district": "Centrum",
+    "email": "",
+    "doRepair": {
+      "nl": "Fietsen",
+      "en": "Bikes"
+    },
+    "dontRepair": {
+      "nl": "Fatbikes of andere onhandige ebikes, coole ebikes zijn welkom",
+      "en": "Fatbikes or other clunky ebikes, cool ebikes are welcome"
+    },
+    "moreInfo": {
+      "nl": "",
+      "en": ""
+    },
+    "links": {
+      "otherLinks": [
+        "https://radar.squat.net/en/amsterdam/vrankrijk/events",
+        "https://vrankrijk.org/events/categories/diy/"
+      ]
+    },
+    "verified": true,
+    "slug": "abc-community-bike-repair",
+    "coordinate": [
+      52.371616,
+      4.889102
+    ]
+  },
+  {
     "name": "AC REEL Tussen de Bogen",
     "address": "Tussen de Bogen 16",
     "open": {

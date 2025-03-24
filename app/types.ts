@@ -3,7 +3,7 @@ export type MultilingualData = {
 };
 
 export type Links = {
-  [key: string]: string;
+  [key: string]: string | string[];
 };
 
 export type RC = {
