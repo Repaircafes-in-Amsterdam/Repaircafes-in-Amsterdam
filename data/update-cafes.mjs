@@ -10,7 +10,7 @@ const MANUAL_MAP_DATA_FILE_NAME = "manual-map-data.json";
 const SPREADSHEET = "1LYn_GX0iwo5IaJCk8wada3FjbwI_gpUprs9prWp0pIQ";
 const SHEET_ID = "1724498670";
 const COLUMNS_TO_NEST = {
-  links: ["website", "orgPage"],
+  links: ["website", "orgPage", "otherLinks"],
   socials: ["instagram", "facebook"],
 };
 const MULTI_LINE_COLUMNS = [
@@ -19,6 +19,7 @@ const MULTI_LINE_COLUMNS = [
   "rrule",
   "startTime",
   "endTime",
+  "otherLinks",
 ];
 
 // Prepare map data from repaircafe.org for reading by link
@@ -43,15 +44,27 @@ const list = rows
       Object.entries(row).map(([column, value]) => [column, value.trim()]),
     ),
   )
+  // Split multi line items into an arrays
+  .map((row) =>
+    Object.fromEntries(
+      Object.entries(row).map(([column, value]) =>
+        MULTI_LINE_COLUMNS.includes(column)
+          ? [column, value.split("\n").filter(Boolean)]
+          : [column, value],
+      ),
+    ),
+  )
   // Move the link and social columns into nested objects
   .map((row) =>
     Object.entries(row).reduce((acc, [column, value]) => {
       const nestedEntry = Object.entries(COLUMNS_TO_NEST).find(([, columns]) =>
         columns.includes(column),
       );
-
       if (nestedEntry) {
-        if (value) {
+        if (
+          value &&
+          (!Array.isArray(value) || (Array.isArray(value) && value.length > 0))
+        ) {
           const [key] = nestedEntry;
           acc[key] = { ...(acc[key] || {}), [column]: value };
         }
@@ -66,16 +79,6 @@ const list = rows
   .map((row) => ({ ...row, slug: slugify(row.name).toLowerCase() }))
   // Turn verified into boolean
   .map((row) => ({ ...row, verified: row.verified === "TRUE" }))
-  // Split multi line items into an arrays
-  .map((row) =>
-    Object.fromEntries(
-      Object.entries(row).map(([column, value]) =>
-        MULTI_LINE_COLUMNS.includes(column)
-          ? [column, value.split("\n").filter(Boolean)]
-          : [column, value],
-      ),
-    ),
-  )
   // Pull in coordinates from our manual map data or repaircafe.org map data
   // Save addresses without coordinates to manual map data
   .map((row) => {
