@@ -32,5 +32,22 @@
       "en": "From swapping comes a fun recycle market for all ages! Bring your stuff and pick something different.\n\nWe swap: books, clothes, toys, art, interior design, plants, seeds & cuttings, and energy-saving materials. Several Oud-West residents and organizations are joining forces for this second Great Swap Festival De Hallen. Besides bartering, you can have broken clothes and electronics repaired at the Repair Café, participate in creative workshops, face painting, and enjoy live music!\n\nCome by, bring something fun, make new contacts, and contribute to a sustainable Oud-West!"
     },
     "slug": "het-ruilfestival-2025-05-31"
+  },
+  {
+    "name": "Sprouts film festival",
+    "location": "Studio/K",
+    "address": "Timorplein 62",
+    "district": "Oost",
+    "dates": [
+      "2025-04-15"
+    ],
+    "startTime": "19:00",
+    "endTime": "22:00",
+    "link": "https://sproutsfilmfestival.com/Repair-cafe",
+    "description": {
+      "nl": "Tijdens het Sprouts Film Festival, een jaarlijks fictiefilmfestival voor ecocinema & debuutfilms, kun je bij Studio/K terecht met je kapotte elektronica die al een tijdje achter in de kast staat omdat ze gerepareerd moeten worden maar je niet weet hoe.\n\nDe reparateurs van Repair Café de Meevaart staan vanaf 19:00 uur met hun gereedschap klaar bij Studio/K en leren je alles wat ze weten over het repareren van je elektronica en repareren ondertussen gratis samen met jou je kapotte spullen!\n\nDus gooi je kapotte spullen niet weg maar kom naar Sprouts om ze te repareren!",
+      "en": "During the Sprouts Film Festival, a yearly fiction film festival for ecocinema & debut films, you can come to Studio/K with your broken-down electronics that have been sitting in the back of the closet because they need fixing but you don’t know how.\n\nThe handy people from Repair Café de Meevaart will be ready with their tools at Studio/K from 19:00 and will teach you everything they know about fixing your  electronics and in the meantime fix your broken items together with you for free!\n\nSo don’t throw out your broken stuff but come to Sprouts to repair them!"
+    },
+    "slug": "sprouts-film-festival-2025-04-15"
   }
 ]
