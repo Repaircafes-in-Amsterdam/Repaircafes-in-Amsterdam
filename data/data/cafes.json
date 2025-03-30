@@ -1468,16 +1468,16 @@
     "district": "Noord",
     "email": "repair.events@gmail.com",
     "doRepair": {
-      "nl": "Kleding, Electronica, messen (slijpen)",
-      "en": "Clothing, Electronics, knives (sharpening)"
+      "nl": "Kleding, Elektronica, Messen (slijpen), Breien",
+      "en": "Clothing, Electronics, Knives (sharpening), Knitting"
     },
     "dontRepair": {
       "nl": "",
       "en": ""
     },
     "moreInfo": {
-      "nl": "Elk seizoen hebben wij weer wisselende dagen en tijden. In de winter staan we binnen, in de zomer buiten in de tuin.\nIn plaats van iets uit handen te geven, léér je bij Repair Events samen met een reparateur hoe je je eigen spullen repareert of zelfs mooier maakt (upcyclen). Je mag alles mee brengen; van kleding tot huishoudelijke apparaten en elektronica. Wij zorgen voor de ruimte, de kennis en de tools; er zijn naaimachines, gereedschapskisten, borduursetjes en dergelijke aanwezig. Zo kan jij eindelijk dat gat in je broek repareren, die leuke lamp weer laten branden, of dat bloesje pimpen...",
-      "en": "Every season we have changing days and times. In winter we are inside, in summer outside in the garden.\n\nInstead of handing things over, at Repair Events you learn together with a repairman how to repair your own stuff or even make it more beautiful (upcycling). You can bring everything from clothes to household appliances and electronics. We provide the space, knowledge and tools; sewing machines, toolboxes, embroidery kits and the like are available. So you can finally fix that hole in your trousers, get that cute lamp lit again, or pimp that blouse..."
+      "nl": "In samenwerking met de Tolhuistuin, organiseren we maandelijks Reparatie Cafés. In de winter zijn we binnen, in de zomer buiten in de tuin. In plaats van dingen over te dragen, leer je bij Repair Events samen met een reparateur hoe je je eigen spullen kunt repareren of zelfs mooier kunt maken (upcycling). Wij zorgen voor de ruimte, kennis en gereedschappen; naaimachines, gereedschapskisten, borduursets, messenslijpset en dergelijke zijn beschikbaar. Zo kun je eindelijk dat gat in je broek repareren, die schattige lamp weer aan de praat krijgen, dat botte mes slijpen of die blouse pimpen…",
+      "en": "In collaboration with the Tolhuistuin, we organize monthly Repair Cafés. In winter we are inside, in summer outside in the garden. Instead of handing things over, at Repair Events you learn together with a repairman how to repair your own stuff or even make it more beautiful (upcycling). We provide the space, knowledge and tools; sewing machines, toolboxes, embroidery kits, knife sharpening kit and the like are available. So you can finally fix that hole in your trousers, get that cute lamp lit again, sharpen that dull knife or pimp that blouse..."
     },
     "links": {
       "website": "https://tolhuistuin.nl/zoeken?q=repair+events"
