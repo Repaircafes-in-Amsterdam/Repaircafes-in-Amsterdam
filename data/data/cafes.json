@@ -254,8 +254,8 @@
     "name": "Betondorp",
     "address": "Karnstraat 2",
     "open": {
-      "nl": "2e en 4e woensdagmiddag 14:00 - 16:30",
-      "en": "2nd and 4th Wednesday afternoon 14:00 - 16:30"
+      "nl": "2e en 4e woensdagmiddag 14:00 - 16:00",
+      "en": "2nd and 4th Wednesday afternoon 14:00 - 16:00"
     },
     "rrule": [
       "FREQ=MONTHLY;BYDAY=2WE,4WE"
@@ -264,7 +264,7 @@
       "14:00"
     ],
     "endTime": [
-      "16:30"
+      "16:00"
     ],
     "closedRanges": [],
     "closed": {
@@ -283,8 +283,8 @@
       "en": "Washing machines etc"
     },
     "moreInfo": {
-      "nl": "",
-      "en": ""
+      "nl": "Vanwege beperkte ruimte voeren wij de reparaties niet samen uit maar laat je ze bij ons achter en kun je ze later op komen halen. \n\nVanwege herhaaldelijk bezoek van mensen die gevonden spullen willen laten repareren om deze door te verkopen, vragen we mogelijk minimaal 6 euro per reparatie.",
+      "en": "Due to limited space, we do not perform the repairs together but you leave them with us and you can pick them up later. \n\nDue to repeated visits from people who want to have found items repaired in order to resell them, we may charge a minimum of 6 euros per repair."
     },
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-oost-betondorp/"
