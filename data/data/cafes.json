@@ -214,15 +214,14 @@
       "22:00"
     ],
     "closedRanges": [
-      "2024-07:2024-08"
+      "2024-07:2024-08",
+      "2025-05:2035-05"
     ],
     "closed": {
       "nl": "Juli en Augustus",
       "en": "July and August"
     },
-    "exceptions": [
-      "2025-05-05"
-    ],
+    "exceptions": [],
     "district": "West",
     "email": "deversterking@riseup.net",
     "doRepair": {
