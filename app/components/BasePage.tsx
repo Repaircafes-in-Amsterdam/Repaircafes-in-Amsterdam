@@ -24,9 +24,9 @@ export default function BasePage({
   return (
     <div
       className={classes(
-        "relative flex w-full max-w-body grow flex-col",
+        "max-w-body relative flex w-full grow flex-col",
         side
-          ? "min-h-px overflow-y-auto border-blue focus-visible:-outline-offset-2 body:max-w-side body:shrink-0 body:border-r-2"
+          ? "border-blue body:max-w-side body:shrink-0 body:border-r-2 min-h-px overflow-y-auto focus-visible:-outline-offset-2"
           : "h-max",
         className,
       )}
@@ -39,12 +39,12 @@ export default function BasePage({
             </BackButton>
           </Suspense>
           {enableBackHome && (
-            <BackButton backHome className="hidden body:block">
+            <BackButton backHome className="body:block hidden">
               <ChevronLeft title={t("go-back")} className="xl:hidden" />
               <X title={t("close")} className="hidden xl:block" />
             </BackButton>
           )}
-          <h1 className="flex-grow font-bold">{title}</h1>
+          <h1 className="grow font-bold">{title}</h1>
         </div>
       ) : (
         <h1 className="sr-only">{title}</h1>

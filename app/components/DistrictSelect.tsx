@@ -18,7 +18,7 @@ export default function DistrictSelect() {
       </Label.Root>
       <Select.Root value={value} onValueChange={setValue}>
         <Select.Trigger
-          className="inline-flex w-[145px] items-center justify-between gap-2 border-2 border-blue bg-white px-2 py-1 leading-none outline-none"
+          className="border-blue inline-flex w-[145px] items-center justify-between gap-2 border-2 bg-white px-2 py-1 leading-none"
           aria-label={t("label")}
           id="district"
         >
@@ -28,11 +28,11 @@ export default function DistrictSelect() {
           </Select.Icon>
         </Select.Trigger>
         <Select.Portal>
-          <Select.Content className="overflow-hidden border-2 border-blue bg-white text-blue shadow-[0px_10px_38px_-10px_rgba(22,_23,_24,_0.35),0px_10px_20px_-15px_rgba(22,_23,_24,_0.2)]">
+          <Select.Content className="border-blue text-blue overflow-hidden border-2 bg-white shadow-[0px_10px_38px_-10px_rgba(22,_23,_24,_0.35),0px_10px_20px_-15px_rgba(22,_23,_24,_0.2)]">
             <Select.ScrollUpButton className="flex cursor-default items-center justify-center bg-white py-1">
               <ChevronUp />
             </Select.ScrollUpButton>
-            <Select.Viewport className="flex flex-col text-blue">
+            <Select.Viewport className="text-blue flex flex-col">
               {options.map(({ value, label }) => (
                 <SelectItem key={value as string} value={value as string}>
                   {label}
@@ -56,7 +56,7 @@ const SelectItem = forwardRef(
   ) => {
     return (
       <Select.Item
-        className="relative flex select-none items-center justify-between px-2 py-1 leading-none data-[disabled]:pointer-events-none data-[highlighted]:bg-blue-250 data-[highlighted]:text-blue data-[highlighted]:outline-none"
+        className="data-highlighted:bg-blue-250 data-highlighted:text-blue relative flex items-center justify-between px-2 py-1 leading-none select-none data-disabled:pointer-events-none data-highlighted:outline-hidden"
         {...props}
         ref={forwardedRef}
       >

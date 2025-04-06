@@ -20,7 +20,7 @@ export default function MapPanel({
   const multilingual = useMultilingual();
   const t = useTranslations("map");
   return (
-    <div className="absolute bottom-0 flex w-full flex-col gap-2 border-t-2 border-blue bg-white p-3">
+    <div className="border-blue absolute bottom-0 flex w-full flex-col gap-2 border-t-2 bg-white p-3">
       <div className="flex items-start justify-between gap-3">
         <Header className="text-lg">{active.name}</Header>
         <button onClick={onClose} aria-label={t("close")}>

@@ -6,16 +6,16 @@ import { createPortal } from "react-dom";
 export default function MapZoomControl() {
   const map = useMap();
   return createPortal(
-    <div className="absolute right-3 top-3 z-10 cursor-pointer bg-white">
+    <div className="absolute top-3 right-3 z-10 cursor-pointer bg-white">
       <div
-        className="border-2 border-blue p-1"
+        className="border-blue border-2 p-1"
         onClick={() => map.zoomIn(1, { animate: true })}
         aria-label="Zoom in"
       >
         <Plus title="Zoom in" />
       </div>
       <div
-        className="border-2 border-t-0 border-blue p-1"
+        className="border-blue border-2 border-t-0 p-1"
         onClick={() => map.zoomOut(1, { animate: true })}
         aria-label="Zoom out"
       >

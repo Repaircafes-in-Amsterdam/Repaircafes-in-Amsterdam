@@ -9,7 +9,7 @@ function MenuItem({ href, children }: { href: string; children: ReactNode }) {
   return (
     <Link
       href={href}
-      className="flex items-center justify-between gap-3 p-3 pr-2.5 font-medium focus-visible:bg-blue-250 focus-visible:text-blue-600 focus-visible:outline-none focus-visible:-outline-offset-2 [@media(hover:hover)]:hover:bg-blue-250 [@media(hover:hover)]:hover:text-blue-600"
+      className="focus-visible:bg-blue-250 [@media(hover:hover)]:hover:bg-blue-250 flex items-center justify-between gap-3 p-3 pr-2.5 font-medium focus-visible:text-blue-600 focus-visible:outline-hidden focus-visible:-outline-offset-2 [@media(hover:hover)]:hover:text-blue-600"
     >
       {children}
       <ChevronRight aria-hidden />
@@ -28,7 +28,7 @@ export default function MobileMenu({
   return (
     <nav
       className={classes(
-        "absolute z-20 w-full border-b-2 border-blue bg-white",
+        "border-blue absolute z-20 w-full border-b-2 bg-white",
         !isOpen && "hidden",
       )}
       onClick={() => onOpenChange(false)}

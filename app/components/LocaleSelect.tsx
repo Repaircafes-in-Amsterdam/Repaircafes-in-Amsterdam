@@ -25,7 +25,7 @@ export default function LocaleSelect({ className }: { className?: string }) {
         }}
       >
         <Select.Trigger
-          className="inline-flex items-center justify-between gap-1 px-2 py-1 leading-none text-white outline-none"
+          className="inline-flex items-center justify-between gap-1 px-2 py-1 leading-none text-white"
           aria-label={t("language")}
           id="locale"
         >
@@ -37,7 +37,7 @@ export default function LocaleSelect({ className }: { className?: string }) {
           </Select.Icon>
         </Select.Trigger>
         <Select.Portal>
-          <Select.Content className="border-2 border-blue bg-white text-blue shadow-[0px_10px_38px_-10px_rgba(22,_23,_24,_0.35),0px_10px_20px_-15px_rgba(22,_23,_24,_0.2)]">
+          <Select.Content className="border-blue text-blue border-2 bg-white shadow-[0px_10px_38px_-10px_rgba(22,_23,_24,_0.35),0px_10px_20px_-15px_rgba(22,_23,_24,_0.2)]">
             <Select.Viewport className="flex flex-col">
               {routing.locales.map((locale) => (
                 <SelectItem key={locale} value={locale}>
@@ -59,7 +59,7 @@ const SelectItem = forwardRef(
   ) => {
     return (
       <Select.Item
-        className="relative flex select-none items-center justify-between gap-2 px-2 py-1 leading-none data-[disabled]:pointer-events-none data-[highlighted]:bg-blue-250 data-[highlighted]:text-blue data-[highlighted]:outline-none"
+        className="data-highlighted:bg-blue-250 data-highlighted:text-blue relative flex items-center justify-between gap-2 px-2 py-1 leading-none select-none data-disabled:pointer-events-none data-highlighted:outline-hidden"
         {...props}
         ref={forwardedRef}
       >

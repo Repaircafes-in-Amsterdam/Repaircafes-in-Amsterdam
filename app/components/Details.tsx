@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 
 export default function Details({ children }: { children: ReactNode }) {
   return (
-    <details className="group mb-3 overflow-hidden bg-blue-250 px-3">
+    <details className="group bg-blue-250 mb-3 overflow-hidden px-3">
       {children}
     </details>
   );

@@ -14,11 +14,11 @@ export default function TopBar() {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
   return (
     <>
-      <header className="relative flex items-center justify-between gap-2.5 bg-blue p-3">
+      <header className="bg-blue relative flex items-center justify-between gap-2.5 p-3">
         {/* Hidden overlay to dismiss menu */}
         <div
           className={classes(
-            "absolute left-0 top-0 z-10 h-screen w-screen",
+            "absolute top-0 left-0 z-10 h-screen w-screen",
             !menuIsOpen && "hidden",
           )}
           onClick={() => setMenuIsOpen(false)}

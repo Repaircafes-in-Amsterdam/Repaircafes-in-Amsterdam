@@ -1,7 +1,9 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-:focus-visible {
-  @apply outline outline-2 outline-offset-2 outline-orange;
+@config '../tailwind.config.ts';
+
+@layer utilities {
+  :focus-visible {
+    @apply outline-orange outline outline-2 outline-offset-2;
+  }
 }

@@ -7,7 +7,7 @@ export default function Unconfirmed({ className }: { className?: string }) {
   return (
     <div
       className={classes(
-        "flex items-center gap-3 bg-orange p-3 font-medium text-white",
+        "bg-orange flex items-center gap-3 p-3 font-medium text-white",
         className,
       )}
     >

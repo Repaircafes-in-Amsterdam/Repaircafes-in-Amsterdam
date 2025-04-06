@@ -35,7 +35,7 @@ export default function MapMarker({
             height="33"
             alt=""
             aria-hidden
-            className="pointer-events-none absolute -left-[3px] top-px"
+            className="pointer-events-none absolute top-px -left-[3px]"
           />
           <MarkerIcon
             className={classes(
@@ -68,7 +68,7 @@ export default function MapMarker({
         direction="bottom"
         permanent={showLabel}
         interactive={showLabel}
-        className="!rounded-none !px-2 !py-1 !font-sans font-medium !text-blue"
+        className="text-blue! rounded-none! px-2! py-1! font-sans! font-medium"
         // TODO add tab index?
       >
         {label}
