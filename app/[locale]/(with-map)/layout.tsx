@@ -22,9 +22,11 @@ export default async function Layout(
 
   setRequestLocale(locale);
   const events: Event[] = await getEvents({ numMonths: NUM_MONTHS, locale });
+
   return (
     <>
-      <Suspense>
+      {/* <div className="w-full bg-[#ff0000]">Loading...</div> */}
+      <Suspense fallback={<div className="w-full"></div>}>
         <ListPanel
           initialEvents={events}
           numMonths={NUM_MONTHS}
