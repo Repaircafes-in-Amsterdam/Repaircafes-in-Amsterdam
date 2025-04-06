@@ -37,7 +37,7 @@
     "leaflet-defaulticon-compatibility": "^0.1.2",
     "lodash": "^4.17.21",
     "next": "15.2.4",
-    "next-intl": "^3.26.3",
+    "next-intl": "^4.0.2",
     "posthog-js": "^1.234.9",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
