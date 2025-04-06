@@ -25,7 +25,7 @@ export default function LocaleSelect({ className }: { className?: string }) {
         }}
       >
         <Select.Trigger
-          className="inline-flex items-center justify-between gap-1 px-2 py-1 leading-none text-white outline-hidden"
+          className="inline-flex items-center justify-between gap-1 px-2 py-1 leading-none text-white"
           aria-label={t("language")}
           id="locale"
         >

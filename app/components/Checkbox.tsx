@@ -14,7 +14,7 @@ export default function Checkbox({ label, className, id, ...props }: Props) {
     <div className="flex items-center gap-2">
       <RadixCheckbox.Root
         className={classes(
-          "border-blue data-[state=checked]:bg-blue flex h-[20px] w-[20px] shrink-0 appearance-none items-center justify-center border-2 bg-white outline-hidden",
+          "border-blue data-[state=checked]:bg-blue flex h-[20px] w-[20px] shrink-0 appearance-none items-center justify-center border-2 bg-white",
           className,
         )}
         id={id}
