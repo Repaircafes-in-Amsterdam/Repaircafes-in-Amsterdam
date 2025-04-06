@@ -5,11 +5,7 @@ import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { NextIntlClientProvider } from "next-intl";
-import {
-  getMessages,
-  getTranslations,
-  setRequestLocale,
-} from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import TopBar from "../TopBar";
 import classes from "@/app/utils/classes";
 import { BASE_URL } from "@/app/constants";
@@ -19,10 +15,7 @@ import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import SuspendedPostHogTracker from "../components/PostHogTracker";
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export async function generateMetadata(props: {
   params: Promise<{ locale: string }>;
@@ -37,25 +30,18 @@ export async function generateMetadata(props: {
     title: t("title"),
     description: t("description"),
     keywords: t("keywords"),
-    alternates: {
-      canonical: BASE_URL,
-    },
+    alternates: { canonical: BASE_URL },
   };
 }
 
-export const viewport: Viewport = {
-  themeColor: "#2D2E82",
-};
+export const viewport: Viewport = { themeColor: "#2D2E82" };
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
 export default async function LocaleLayout(
-  props: Readonly<{
-    children: ReactNode;
-    params: Promise<{ locale: string }>;
-  }>,
+  props: Readonly<{ children: ReactNode; params: Promise<{ locale: string }> }>,
 ) {
   const params = await props.params;
 
@@ -69,12 +55,11 @@ export default async function LocaleLayout(
   }
 
   setRequestLocale(locale); // Enable static rendering
-  const messages = await getMessages();
 
   return (
     <html lang={locale}>
       <CSPostHogProvider>
-        <NextIntlClientProvider messages={messages}>
+        <NextIntlClientProvider>
           <body
             // Prevent FOUC
             style={{ display: "none" }}
