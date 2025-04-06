@@ -14,7 +14,7 @@ export default function Checkbox({ label, className, id, ...props }: Props) {
     <div className="flex items-center gap-2">
       <RadixCheckbox.Root
         className={classes(
-          "flex h-[20px] w-[20px] shrink-0 appearance-none items-center justify-center border-2 border-blue bg-white outline-none data-[state=checked]:bg-blue",
+          "border-blue data-[state=checked]:bg-blue flex h-[20px] w-[20px] shrink-0 appearance-none items-center justify-center border-2 bg-white outline-hidden",
           className,
         )}
         id={id}
@@ -25,7 +25,7 @@ export default function Checkbox({ label, className, id, ...props }: Props) {
           <Check className="w-[18px] text-white" />
         </RadixCheckbox.Indicator>
       </RadixCheckbox.Root>
-      <label className="select-none leading-none" htmlFor={id}>
+      <label className="leading-none select-none" htmlFor={id}>
         {label}
       </label>
     </div>

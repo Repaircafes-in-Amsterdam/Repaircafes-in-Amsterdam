@@ -65,7 +65,7 @@ export default async function LocaleLayout(
             style={{ display: "none" }}
             className={classes(
               inter.variable,
-              "!flex h-dvh flex-col font-sans text-blue selection:bg-orange selection:text-white",
+              "text-blue selection:bg-orange flex! h-dvh flex-col font-sans selection:text-white",
             )}
           >
             <SuspendedPostHogTracker locale={locale} />

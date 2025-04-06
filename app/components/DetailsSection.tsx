@@ -20,7 +20,7 @@ export default function DetailsSection({
         {title}
         {infoLink && (
           <Link href={infoLink} target="_blank" rel="noopener noreferrer">
-            <Info className="size-4 !stroke-[1.5]" />
+            <Info className="size-4 stroke-[1.5]!" />
           </Link>
         )}
       </Header>
