@@ -88,9 +88,7 @@ export default async function getEvents({
       // rrule using end time so we include already started events
       const fullRRule = `${rrule};BYHOUR=${endHoursUTC};BYMINUTE=${endMinutes};BYSECOND=0`;
 
-      const rule = rrulestr(fullRRule, {
-        tzid: TIME_ZONE,
-      });
+      const rule = rrulestr(fullRRule, { tzid: TIME_ZONE });
       const occurrences = rule.between(startDate.toDate(), endDate.toDate());
       for (const occurrence of occurrences) {
         // reset occurrence time to start time
