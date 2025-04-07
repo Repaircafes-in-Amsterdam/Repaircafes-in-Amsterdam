@@ -5,16 +5,24 @@ import Calendar1 from "@/app/icons/Calendar1.svg?react";
 import { Event } from "@/app/types";
 import useHoverStore from "@/app/useHoverStore";
 import classes from "@/app/utils/classes";
-import useLinkPostfix from "@/app/utils/useLinkPostfix";
+// import useLinkPostfix from "@/app/utils/useLinkPostfix";
 import { useTranslations } from "next-intl";
-import { useParams } from "next/navigation";
+// import { useParams } from "next/navigation";
 
-export default function UpcomingItem({ event }: { event: Event }) {
+export default function UpcomingItem({
+  event,
+  openSlug,
+  linkPostfix,
+}: {
+  event: Event;
+  openSlug: string;
+  linkPostfix: string;
+}) {
   const { slug, name, startTime, endTime, district, verified, festival } =
     event;
-  const linkPostfix = useLinkPostfix();
-  const params = useParams();
-  const isOpen = params?.slug === slug;
+  // const linkPostfix = useLinkPostfix();
+  // const params = useParams();
+  const isOpen = openSlug === slug;
   const isHovered = useHoverStore((state) => state.hoveredMarker === slug);
   const setHoveredRow = useHoverStore((state) => state.setHoveredRow);
   const t = useTranslations("agenda");

@@ -3,6 +3,8 @@ import { Event, EventGroup } from "@/app/types";
 import { Fragment } from "react";
 import groupBy from "lodash/groupBy";
 import UpcomingItem from "./UpcomingItem";
+import useLinkPostfix from "@/app/utils/useLinkPostfix";
+import { useParams } from "next/navigation";
 
 export default function Upcoming({ events }: { events: Event[] }) {
   // Group events by date
@@ -10,6 +12,10 @@ export default function Upcoming({ events }: { events: Event[] }) {
   const groupedEvents: EventGroup[] = Object.entries(grouped).map(
     ([dateString, events]) => ({ dateString, events }),
   );
+
+  const linkPostfix = useLinkPostfix();
+  const params = useParams();
+  const openSlug = (params?.slug as string) || "";
 
   return (
     <>
@@ -21,7 +27,11 @@ export default function Upcoming({ events }: { events: Event[] }) {
           <ul className="mb-3 flex flex-col last:mb-0">
             {group.events.map((event) => (
               <li key={event.slug}>
-                <UpcomingItem event={event} />
+                <UpcomingItem
+                  event={event}
+                  openSlug={openSlug}
+                  linkPostfix={linkPostfix}
+                />
               </li>
             ))}
           </ul>
