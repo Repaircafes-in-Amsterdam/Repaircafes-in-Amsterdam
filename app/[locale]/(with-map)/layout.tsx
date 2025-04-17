@@ -5,7 +5,7 @@ import { Event } from "@/app/types";
 import ListPanel from "./ListPanel";
 
 const NUM_MONTHS = 1;
-export const dynamic = "force-dynamic";
+export const revalidate = 3600; // Every hour
 
 export default async function Layout(
   props: Readonly<{
