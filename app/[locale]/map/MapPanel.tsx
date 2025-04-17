@@ -1,6 +1,5 @@
 "use client";
 import X from "@/app/icons/X.svg?react";
-import useActive from "./useActive";
 import { MapRC } from "@/app/types";
 import Header from "@/app/components/Header";
 import ChevronRight from "@/app/icons/ChevronRight.svg?react";

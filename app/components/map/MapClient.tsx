@@ -5,7 +5,6 @@ import useDistrict from "@/app/useDistrict";
 import useIntersectionObserver from "@/app/utils/useIntersectionObserver";
 import { useRef } from "react";
 import useMap from "@/app/utils/useMap";
-import useLinkPostfix from "@/app/utils/useLinkPostfix";
 import useOutsideOfficeHours from "@/app/useOutsideOfficeHours";
 import { useRouter } from "@/i18n/routing";
 import districtFilter from "@/app/utils/districtFilter";
@@ -13,8 +12,7 @@ import districtFilter from "@/app/utils/districtFilter";
 export default function MapClient({ data }: { data: MapRC[] }) {
   const router = useRouter();
   const { value: district } = useDistrict();
-  const { value: rawOutsideOfficeHours } = useOutsideOfficeHours();
-  const outsideOfficeHours = rawOutsideOfficeHours === "true";
+  const outsideOfficeHours = useOutsideOfficeHours((state) => state.value);
   const filteredData = data
     .filter(districtFilter(district))
     .filter(
@@ -25,7 +23,6 @@ export default function MapClient({ data }: { data: MapRC[] }) {
   const Map = useMap();
   const mapRef = useRef(null);
   const isMapVisible = useIntersectionObserver(mapRef, true);
-  const linkPostfix = useLinkPostfix();
 
   return (
     <div className="body:flex hidden h-full w-full" ref={mapRef}>
@@ -33,9 +30,7 @@ export default function MapClient({ data }: { data: MapRC[] }) {
         <Map
           data={filteredData}
           active={slug}
-          onSelect={(slug: string) =>
-            router.push((slug ? `/cafe/${slug}` : "/") + linkPostfix)
-          }
+          onSelect={(slug: string) => router.push(slug ? `/cafe/${slug}` : "/")}
         />
       )}
     </div>
