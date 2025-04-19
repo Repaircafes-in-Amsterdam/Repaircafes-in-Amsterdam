@@ -157,7 +157,8 @@ export default async function getEvents({
         endTime,
       } = festival;
       for (const rawDate of rawDates) {
-        const date = dayjs.tz(`${rawDate}T${startTime}`);
+        // using end time so we include already started festivals
+        const date = dayjs.tz(`${rawDate}T${endTime}`);
         if (date.isAfter(startDate) && date.isBefore(endDate)) {
           events.push(
             createEvent({
