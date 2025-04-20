@@ -8,7 +8,7 @@ import TopBar from "../TopBar";
 import classes from "@/app/utils/classes";
 import { BASE_URL } from "@/app/constants";
 import HoverResetter from "@/app/components/HoverResetter";
-import { CSPostHogProvider } from "../providers";
+import CSPostHogProvider from "../CSPostHogProvider";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import SuspendedPostHogTracker from "../components/PostHogTracker";
