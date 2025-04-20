@@ -2,8 +2,6 @@ import "@/app/globals.css";
 import { ReactNode } from "react";
 import { Inter } from "next/font/google";
 import type { Metadata, Viewport } from "next";
-import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import { NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import TopBar from "../TopBar";
@@ -74,8 +72,6 @@ export default async function LocaleLayout(
               {children}
             </main>
             <HoverResetter />
-            <Analytics debug={false} />
-            <SpeedInsights debug={false} />
           </body>
         </NextIntlClientProvider>
       </CSPostHogProvider>
