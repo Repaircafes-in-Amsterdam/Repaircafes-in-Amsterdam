@@ -1,5 +1,51 @@
 [
   {
+    "name": "ABC Community bike repair",
+    "address": "Spuistraat 216",
+    "open": {
+      "nl": "Elke 1e en 3e dinsdag 13:00 - 17:00",
+      "en": "Every 1st and 3rd Tuesday 13:00 - 17:00"
+    },
+    "rrule": [
+      "FREQ=MONTHLY;INTERVAL=1;BYDAY=1TU,3TU"
+    ],
+    "startTime": [
+      "13:00"
+    ],
+    "endTime": [
+      "17:00"
+    ],
+    "closedRanges": [],
+    "closed": {
+      "nl": "Speciale gelegenheden, zie onze website",
+      "en": "Special occasions, check our website"
+    },
+    "exceptions": [],
+    "district": "Centrum",
+    "email": "Abikecollective@protonmail.com",
+    "doRepair": {
+      "nl": "Fietsen",
+      "en": "Bikes"
+    },
+    "dontRepair": {
+      "nl": "Fatbikes en elektische fietsen",
+      "en": "Fatbikes and ebikes"
+    },
+    "moreInfo": {
+      "nl": "",
+      "en": ""
+    },
+    "links": {
+      "website": "https://vrankrijk.org/events/categories/diy/"
+    },
+    "verified": true,
+    "slug": "abc-community-bike-repair",
+    "coordinate": [
+      52.371616,
+      4.889102
+    ]
+  },
+  {
     "name": "AC REEL Tussen de Bogen",
     "address": "Tussen de Bogen 16",
     "open": {
