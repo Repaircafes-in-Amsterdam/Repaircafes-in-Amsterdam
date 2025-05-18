@@ -1479,7 +1479,7 @@
   },
   {
     "name": "Repair Events Tolhuistuin",
-    "address": "IJpromenade 2",
+    "address": "Tolhuisweg 5",
     "open": {
       "nl": "Elke 2de zondag 14:00 - 17:00\nIn mei zijn we de 18de open",
       "en": "Every 2nd Sunday 14:00 - 17:00\nIn May we will open on the 18th"
@@ -1531,8 +1531,8 @@
     "verified": true,
     "slug": "repair-events-tolhuistuin",
     "coordinate": [
-      52.38309,
-      4.90303
+      52.383972,
+      4.904874
     ]
   },
   {
