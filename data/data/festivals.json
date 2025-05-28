@@ -56,7 +56,10 @@
     "address": "Javaplein 2",
     "district": "Oost",
     "dates": [
-      "2025-05-17"
+      "2025-05-31",
+      "2025-06-14",
+      "2025-06-28",
+      "2025-07-12"
     ],
     "startTime": "13:00",
     "endTime": "16:00",
@@ -65,6 +68,6 @@
       "nl": "Wat doe je met een oude laptop die al jaren in een la ligt? Weggooien? Mooi niet! In het Linux Repair Café ontdek je hoe je jouw apparaat weer veilig opnieuw kunt gebruiken. Zo bespaar je geld en voorkom je elektronisch afval.",
       "en": "What do you do with an old laptop that has been sitting in a drawer for years? Throw it away? Hell no! At the Linux Repair Café you will discover how to safely reuse your device. That way you save money and prevent electronic waste."
     },
-    "slug": "linux-repair-cafe-2025-05-17"
+    "slug": "linux-repair-cafe-2025-05-31"
   }
 ]
