@@ -82,7 +82,7 @@ const list = rows
     const orgPage = row.links?.orgPage;
     let coordinate = manualMapData[row.address];
 
-    if (!coordinate) {
+    if (!coordinate || coordinate.length === 0) {
       if (orgPage) {
         // Remove trailing /
         const orgPageCleaned = orgPage.replace(/\/$/, "");
