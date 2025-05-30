@@ -49,25 +49,5 @@
       "en": "During the Sprouts Film Festival, a yearly fiction film festival for ecocinema & debut films, you can come to Studio/K with your broken-down electronics that have been sitting in the back of the closet because they need fixing but you don’t know how.\n\nThe handy people from Repair Café de Meevaart will be ready with their tools at Studio/K from 19:00 and will teach you everything they know about fixing your  electronics and in the meantime fix your broken items together with you for free!\n\nSo don’t throw out your broken stuff but come to Sprouts to repair them!"
     },
     "slug": "sprouts-film-festival-2025-04-15"
-  },
-  {
-    "name": "Linux Repair Café",
-    "location": "Maakplaats van OBA Javaplein",
-    "address": "Javaplein 2",
-    "district": "Oost",
-    "dates": [
-      "2025-05-31",
-      "2025-06-14",
-      "2025-06-28",
-      "2025-07-12"
-    ],
-    "startTime": "13:00",
-    "endTime": "16:00",
-    "link": "https://www.repaircafe.org/linux-repair-cafe/",
-    "description": {
-      "nl": "Wat doe je met een oude laptop die al jaren in een la ligt? Weggooien? Mooi niet! In het Linux Repair Café ontdek je hoe je jouw apparaat weer veilig opnieuw kunt gebruiken. Zo bespaar je geld en voorkom je elektronisch afval.",
-      "en": "What do you do with an old laptop that has been sitting in a drawer for years? Throw it away? Hell no! At the Linux Repair Café you will discover how to safely reuse your device. That way you save money and prevent electronic waste."
-    },
-    "slug": "linux-repair-cafe-2025-05-31"
   }
 ]

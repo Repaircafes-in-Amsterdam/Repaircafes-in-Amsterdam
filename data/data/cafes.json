@@ -1284,6 +1284,57 @@
     ]
   },
   {
+    "name": "Linux Repair Café OBA javaplein",
+    "address": "OBA maakplaats, Javaplein 2 (oost)",
+    "open": {
+      "nl": "31 mei, 28 juni en 12 juli 13:00 - 16:00 \nNa de vakantie starten we opnieuw op",
+      "en": "May 31, June 28 and July 12 13:00 - 16:00 \nAfter the vacations we start up again"
+    },
+    "rrule": [
+      "FREQ=MONTHLY;INTERVAL=1;BYDAY=2SA,-1SA"
+    ],
+    "startTime": [
+      "13:00"
+    ],
+    "endTime": [
+      "16:00"
+    ],
+    "closedRanges": [
+      "2025-06-14",
+      "2025-07-13:2035"
+    ],
+    "closed": {
+      "nl": "Zomervakantie",
+      "en": "Summer vacation"
+    },
+    "exceptions": [
+      "2025-07-12"
+    ],
+    "district": "Oost",
+    "email": "linuxrepaircafe-1@protonmail.com",
+    "doRepair": {
+      "nl": "Wij installeren Linux op computers die volgens Microsoft niet geschikt zijn om Windows 11 op te installeren\nDit zijn computers die na 14 oktober geen veiligheidsupdates meer ontvangen, tenzij daar een apart abonnement voor wordt afgesloten (euro 29)\nLinux kan ook geïnstalleerd worden op oude Mac computers",
+      "en": "We install Linux on computers that, according to Microsoft, are not suitable for installing Windows 11.\nThese are computers that will no longer receive security updates after October 14, unless a separate subscription is taken out for them (euro 29)\nLinux can also be installed on old Mac computers"
+    },
+    "dontRepair": {
+      "nl": "Computers of overige electronische apparatuur, kleding etc",
+      "en": "Computers or other electronic equipment, clothing, etc."
+    },
+    "moreInfo": {
+      "nl": "Computer + adapter meenemen, zorg zelf voor een back-up van je data.",
+      "en": "Bring computer + adapter, take care of backing up your data yourself."
+    },
+    "links": {
+      "orgPage": "https://www.repaircafe.org/cafe/linux-repair-cafe-amsterdam-javaplein/"
+    },
+    "verified": true,
+    "slug": "linux-repair-cafe-oba-javaplein",
+    "coordinate": [
+      52.3642513,
+      4.938873399999999
+    ]
+  },
+  {
     "name": "Nieuwland",
     "address": "Pieter Nieuwlandstraat 93",
     "open": {
