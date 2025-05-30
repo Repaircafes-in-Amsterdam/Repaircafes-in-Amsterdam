@@ -572,8 +572,7 @@
       "en": "Exists 10 years in April 2024!"
     },
     "links": {
-      "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-diemen/",
-      "website": "http://www.duurzaamdorpdiemen.nl/p/repair-cafe.html"
+      "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-diemen/"
     },
     "verified": true,
     "slug": "de-diem",
@@ -1803,7 +1802,7 @@
     },
     "exceptions": [],
     "district": "Diemen",
-    "email": "repaircafe@duurzaamdorpdiemen.nl",
+    "email": "repaircafediemen@gmail.com",
     "doRepair": {
       "nl": "Electronica, Kleding",
       "en": "Electronics, Clothing"
@@ -1815,9 +1814,6 @@
     "moreInfo": {
       "nl": "",
       "en": ""
-    },
-    "links": {
-      "website": "http://www.duurzaamdorpdiemen.nl/p/repair-cafe.html"
     },
     "verified": true,
     "slug": "t-kruidvat",
