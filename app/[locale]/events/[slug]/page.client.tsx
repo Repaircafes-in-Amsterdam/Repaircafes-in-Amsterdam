@@ -68,7 +68,14 @@ export default function EventsClient({
         <DetailsSection title={t("next")}>
           <ul className="list-outside space-y-1 pl-4">
             {events.map(({ dateString, date, closedCause, exceptionCause }) => (
-              <li key={dateString + date.getFullYear()} className="list-disc">
+              <li
+                key={
+                  dateString +
+                  date.getFullYear() +
+                  (exceptionCause ? "-exception" : "")
+                }
+                className="list-disc"
+              >
                 <strong
                   className={classes(
                     "font-medium",
