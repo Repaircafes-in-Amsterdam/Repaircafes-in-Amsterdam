@@ -204,16 +204,7 @@
     "name": "Repair Café Amsterdam-Zuid De Pijp",
     "coordinate": "52.3509199,4.8979308",
     "external_link": "http://nmtzuid.nl/project/repair-cafe/",
-    "last_updated": "2025-01-23 10:52:34"
-  },
-  {
-    "email": "info@groenebuurten.nl",
-    "link": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-zuid-groenpunt-welkom",
-    "address": "Buurtkamer Welkom, Stadionplein 65, 1076 CJ Amsterdam, Nederland",
-    "name": "Repair Café Amsterdam-Zuid Groenpunt Welkom",
-    "coordinate": "52.3431199,4.8581587",
-    "external_link": "http://groenebuurten.nl/start-repair-cafe-olympus/",
-    "last_updated": "2023-03-27 14:56:11"
+    "last_updated": "2025-02-19 17:23:50"
   },
   {
     "email": "programmacoordinator@woor.nl",
@@ -231,7 +222,7 @@
     "name": "Repair Café Amsterdam-Zuidoost",
     "coordinate": "52.3172364,4.980042399999999",
     "external_link": "https://repaircafe-zuidoost.nl",
-    "last_updated": "2024-04-20 14:27:06"
+    "last_updated": "2025-05-09 16:01:20"
   },
   {
     "email": "repaircafe@duurzaamdorpdiemen.nl",
@@ -294,7 +285,7 @@
     "name": "Repair Café Amsterdam Oud-Noord",
     "coordinate": "52.3990892,4.9105161",
     "external_link": null,
-    "last_updated": "2024-12-30 22:01:50"
+    "last_updated": "2025-05-23 14:39:45"
   },
   {
     "email": "info@flinkin.nl",
@@ -385,6 +376,15 @@
     "coordinate": "52.378172,4.8029369",
     "external_link": null,
     "last_updated": "2025-01-07 10:21:30"
+  },
+  {
+    "email": "ssaruhan@dock.nl",
+    "link": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-zuidwest-het-claverhuis",
+    "address": "Het Claverhuis, Elandsgracht 70, 1016 TX Amsterdam, Nederland",
+    "name": "Repair Café Amsterdam-Zuidwest Het Claverhuis",
+    "coordinate": "52.3699318,4.880792599999999",
+    "external_link": null,
+    "last_updated": "2025-03-25 15:11:35"
   },
   {
     "email": "linuxrepaircafe-1@protonmail.com",
