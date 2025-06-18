@@ -339,7 +339,7 @@
   },
   {
     "name": "De Boeg",
-    "address": "Karel Doormanstraat 125",
+    "address": "Hoofdweg 495 a",
     "open": {
       "nl": "Elke dinsdagochtend 10:00 - 12:00",
       "en": "Every Tuesday morning 10:00 - 12:00"
@@ -372,8 +372,8 @@
       "en": "Phones, laptops"
     },
     "moreInfo": {
-      "nl": "Op 10 en 17 juni zitten wij tijdelijk in Huis van de Wijk Mansvelt, daarna gaan we weer terug naar Huis van de buurt De Boeg.",
-      "en": "On June 10 and 17 we will be temporarily in Huis van de Wijk Mansvelt, then return to Huis van de buurt De Boeg."
+      "nl": "",
+      "en": ""
     },
     "links": {
       "orgPage": "https://www.repaircafe.org/cafe/repair-cafe-amsterdam-west-de-boeg/"
@@ -381,8 +381,8 @@
     "verified": true,
     "slug": "de-boeg",
     "coordinate": [
-      52.379377,
-      4.858255
+      52.375808,
+      4.846868499999998
     ]
   },
   {
