@@ -15,7 +15,9 @@
     "endTime": [
       "17:00"
     ],
-    "closedRanges": [],
+    "closedRanges": [
+      "07:08"
+    ],
     "closed": {
       "nl": "Speciale gelegenheden, zie onze website",
       "en": "Special occasions, check our website"
