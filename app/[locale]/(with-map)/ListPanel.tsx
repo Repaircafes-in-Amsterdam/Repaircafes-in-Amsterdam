@@ -30,8 +30,7 @@ export default function ListPanel({
   const t = useTranslations("agenda");
   const numEmpty = useRef(0);
   const { value: district } = useDistrict();
-  const { value: rawOutsideOfficeHours } = useOutsideOfficeHours();
-  const outsideOfficeHours = rawOutsideOfficeHours === "true";
+  const outsideOfficeHours = useOutsideOfficeHours((state) => state.value);
   const filteredEvents = filterEvents(events, district, outsideOfficeHours);
 
   const loadMore = async () => {
