@@ -53,6 +53,7 @@ export default function MapMarker({
           iconAnchor: [12, 30],
         },
       }}
+      zIndexOffset={isHovered ? 10 : 0}
       position={position}
       eventHandlers={{
         click: () => {
@@ -62,13 +63,16 @@ export default function MapMarker({
         mouseover: () => setHoveredMarker(slug),
         mouseout: () => setHoveredMarker(""),
       }}
+      riseOnHover
     >
       <Tooltip
         key={showLabel ? "permanent" : "hover"}
         direction="bottom"
         permanent={showLabel}
         interactive={showLabel}
-        className="text-blue! rounded-none! px-2! py-1! font-sans! font-medium"
+        className={
+          "text-blue! rounded-none! px-2! py-1! font-sans! font-medium"
+        }
         // TODO add tab index?
       >
         {label}
