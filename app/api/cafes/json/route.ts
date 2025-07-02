@@ -1,8 +1,9 @@
 import { promises as fs } from "fs";
 import path from "path";
 import { NextResponse } from "next/server";
+import { RC } from "../../../types";
 
-let cachedData: any = null;
+let cachedData: RC[] = [];
 let lastModified: number = 0;
 
 export async function GET() {
