@@ -1,7 +1,7 @@
 import { promises as fs } from "fs";
 import path from "path";
 import { NextResponse } from "next/server";
-import { RC } from "../../../types";
+import { RC } from "../../types";
 
 let cachedData: RC[] = [];
 let lastModified: number = 0;
