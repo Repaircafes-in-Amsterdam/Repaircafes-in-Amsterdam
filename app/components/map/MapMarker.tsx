@@ -25,6 +25,8 @@ export default function MapMarker({
   );
   const setHoveredMarker = useHoverStore((state) => state.setHoveredMarker);
 
+  const shouldbeHighlighted = active || isHovered;
+
   return (
     <Marker
       icon={
@@ -40,7 +42,7 @@ export default function MapMarker({
           <MarkerIcon
             className={classes(
               "pointer-events-none relative",
-              active || isHovered ? "text-orange" : "text-blue",
+              shouldbeHighlighted ? "text-orange" : "text-blue",
             )}
             title={label}
           />
@@ -53,7 +55,6 @@ export default function MapMarker({
           iconAnchor: [12, 30],
         },
       }}
-      zIndexOffset={isHovered ? 10 : 0}
       position={position}
       eventHandlers={{
         click: () => {
@@ -63,16 +64,15 @@ export default function MapMarker({
         mouseover: () => setHoveredMarker(slug),
         mouseout: () => setHoveredMarker(""),
       }}
-      riseOnHover
+      // riseOnHover will not bring the marker to the top on hover from upcoming row
+      zIndexOffset={shouldbeHighlighted ? 10 : 0}
     >
       <Tooltip
         key={showLabel ? "permanent" : "hover"}
         direction="bottom"
         permanent={showLabel}
         interactive={showLabel}
-        className={
-          "text-blue! rounded-none! px-2! py-1! font-sans! font-medium"
-        }
+        className="text-blue! rounded-none! px-2! py-1! font-sans! font-medium"
         // TODO add tab index?
       >
         {label}
