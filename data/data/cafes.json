@@ -996,11 +996,11 @@
     "name": "Geuzenveld",
     "address": "Albardakade 5-7",
     "open": {
-      "nl": "Elke maandag 10:00 - 12:00",
-      "en": "Every Monday 10:00 - 12:00"
+      "nl": "Elke dinsdag 10:00 - 12:00",
+      "en": "Every Tuesday 10:00 - 12:00"
     },
     "rrule": [
-      "FREQ=WEEKLY;INTERVAL=1;BYDAY=MO"
+      "FREQ=WEEKLY;INTERVAL=1;BYDAY=TU"
     ],
     "startTime": [
       "10:00"
