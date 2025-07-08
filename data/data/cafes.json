@@ -114,7 +114,9 @@
       "nl": "4 weken in het midden van de zomervakantie en de laatste week van het jaar.",
       "en": "4 weeks in the middle of summer vacation and the last week of the year."
     },
-    "exceptions": [],
+    "exceptions": [
+      "2025-07-16"
+    ],
     "district": "Oost",
     "email": "afvalpaleis@jungle.amsterdam",
     "doRepair": {
@@ -169,7 +171,8 @@
       "en": "4 weeks in the middle of summer vacation and the last week of the year."
     },
     "exceptions": [
-      "2024-07-25"
+      "2025-07-17",
+      "2025-08-21"
     ],
     "district": "Oost",
     "email": "afvalpaleis@jungle.amsterdam",
