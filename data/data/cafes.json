@@ -1657,13 +1657,16 @@
       "20:00"
     ],
     "closedRanges": [
-      "2025-01-02"
+      "2025-01-02",
+      "2025-07-16:2025-09-17"
     ],
     "closed": {
       "nl": "",
       "en": ""
     },
-    "exceptions": [],
+    "exceptions": [
+      "2025-09-04"
+    ],
     "district": "Oost",
     "email": "duurzaam@buurtcooperatieohg.nl",
     "doRepair": {
