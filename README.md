@@ -1,3 +1,9 @@
+# Repair Cafés in Amsterdam
+
+A volunteer-run initiative by and for Repair Cafés in Amsterdam. Our goal is to make Repair Cafés easier to find by listing them with clear opening hours. The agenda is currently Amsterdam specific but we'd like to enable other cities or regions to use it as well. For general info on Repair Cafés see https://repaircafe.org. The agenda is open source and community-driven.
+
+Want to add a Repair Café or report incorrect/incomplete info? Please get in touch. For adding new cafés we prefer this questionnaire (Dutch): https://forms.gle/AQJHMQ7xQsFJ77b47.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -9,6 +15,28 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Contributing
+
+We welcome contributions of all kinds. A few valuable ways to help:
+
+- Community management: help communicate with Repair Cafés to keep the agenda accurate and complete.
+- Visual/UI/UX design: improve structure, navigation, and user experience.
+- Development: mainly front‑end (React, Next.js, Tailwind). Check the codebase and pick an issue to work on.
+
+New to the project? Start by browsing open issues:
+
+- Open issues: https://github.com/Repaircafes-in-Amsterdam/Repaircafes-in-Amsterdam/issues
+- Good first issues (if available): filter by the label on the issues page
+
+Suggested workflow:
+
+1. Comment on an issue to express interest or ask clarifying questions or open a new one for other improvements.
+2. Fork it.
+3. and create a feature branch.
+4. Run the app locally (see Getting Started).
+5. Make changes.
+6. And open a PR.
 
 ## Data
 
