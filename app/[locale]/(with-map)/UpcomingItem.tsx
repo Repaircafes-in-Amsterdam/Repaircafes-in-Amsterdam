@@ -40,8 +40,10 @@ export default function UpcomingItem({ event }: { event: Event }) {
         <em className="font-semibold not-italic">{name}</em>
         {startTime} - {endTime} {t("in")} {district}
       </div>
-      {festival && <Calendar1 title={t("festival")} />}
-      {!verified && <Warning title={rootT("unconfirmed")} />}
+      {festival && <Calendar1 className="shrink-0" title={t("festival")} />}
+      {!verified && (
+        <Warning className="shrink-0" title={rootT("unconfirmed")} />
+      )}
       <ChevronRight aria-hidden />
     </Link>
   );
