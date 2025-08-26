@@ -134,7 +134,7 @@ export default async function getEvents({
             slug,
             district,
             verified,
-            date: new Date(exception),
+            date: exceptionStartDate.toDate(),
             startTime,
             endTime,
             exceptionCause: exception,
