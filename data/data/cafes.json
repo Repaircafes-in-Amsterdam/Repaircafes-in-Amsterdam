@@ -2008,8 +2008,8 @@
     "district": "Noord",
     "email": "repaircafezonneplein@gmail.com",
     "doRepair": {
-      "nl": "Electronica, Kleding, Meubels",
-      "en": "Electronics, Clothing, Furniture"
+      "nl": "Electronica, Kleding, Meubels. \nTevens installeren wij Linux op computers die volgens Microsoft niet geschikt zijn om Windows 11 op te installeren en na 14 oktober 2025 daardoor onveilig worden. Ook uw oude Mac computer kunnen wij een tweede leven geven. Uitleg en hulp worden geboden.",
+      "en": "Electronics, clothing, furniture.\nWe also install Linux on computers that are, according to Microsoft, not suitable for installing Windows 11 and will therefore become unsafe after October 14, 2025. We can also give your old Mac computer a second life. Explanations and assistance are provided."
     },
     "dontRepair": {
       "nl": "Fietsen en verder alles wat niet meegenomen kan worden naar het repair cafe",
