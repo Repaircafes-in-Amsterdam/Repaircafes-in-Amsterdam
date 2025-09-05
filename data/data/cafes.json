@@ -1192,8 +1192,8 @@
     "name": "Jeltje",
     "address": "Eerste Helmersstraat 106-N",
     "open": {
-      "nl": "1e vrijdagavond 19:00 - 22:00",
-      "en": "1st Friday evening 19:00 - 22:00"
+      "nl": "1e vrijdagavond 19:00 - 22:00\nBij uitzondering zijn we deze maand op 12 september open",
+      "en": "1st Friday evening 19:00 - 22:00\nAs an exception, we will be open on September 12 this month"
     },
     "rrule": [
       "FREQ=MONTHLY;BYSETPOS=1;BYDAY=FR;INTERVAL=1"
