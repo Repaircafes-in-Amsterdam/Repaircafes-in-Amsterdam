@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
-import getParamHook from "./getParamHook";
 import { useMemo } from "react";
+import { create } from "zustand";
+import { combine } from "zustand/middleware";
 
 export const defaultValue = "any";
 
@@ -16,11 +17,15 @@ const values = [
   "Diemen",
 ];
 
-const useHook = getParamHook("district", defaultValue);
+const useStore = create(
+  combine({ value: defaultValue }, (set) => ({
+    setValue: (value: string) => set(() => ({ value })),
+  })),
+);
 
 export default function useDistrict() {
-  const { value, setValue } = useHook();
-
+  const value = useStore((state) => state.value);
+  const setValue = useStore((state) => state.setValue);
   const t = useTranslations("districts");
 
   const options = useMemo(

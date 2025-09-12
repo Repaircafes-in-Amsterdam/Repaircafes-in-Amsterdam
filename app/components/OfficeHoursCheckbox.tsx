@@ -4,13 +4,15 @@ import useOutsideOfficeHours from "../useOutsideOfficeHours";
 import Checkbox from "./Checkbox";
 
 export default function OfficeHoursCheckbox() {
-  const { value, setValue } = useOutsideOfficeHours();
+  const value = useOutsideOfficeHours((state) => state.value);
+  const setValue = useOutsideOfficeHours((state) => state.setValue);
+
   const t = useTranslations();
   return (
     <Checkbox
       id="office-hours"
-      checked={value === "true"}
-      onCheckedChange={(value) => setValue(String(value))}
+      checked={value}
+      onCheckedChange={setValue}
       label={t("outside-office-hours-only")}
     />
   );
