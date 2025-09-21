@@ -5,16 +5,17 @@
     "address": "Hannie Dankbaarpassage 47",
     "district": "West",
     "dates": [
-      "2025-03-15"
+      "2025-10-31",
+      "2025-11-01"
     ],
     "startTime": "12:00",
     "endTime": "17:00",
-    "link": "https://dehallen-amsterdam.nl/agenda/speel-deel-ruil-en-recycle-project/",
+    "link": "https://www.dehallen-amsterdam.nl/agenda/speel-deel-ruil-en-recycle-festival-nov-25",
     "description": {
       "nl": "Doe mee aan de grote Spring Cleaning en ruil kinderkleding en speelgoed!\n\nBreng items mee die je niet meer nodig hebt en ontdek nieuwe schatten—een prachtig kinderboek, een knuffel die een nieuw thuis zoekt of een bijna gloednieuwe voorjaarsjas. Daarnaast kun je deelnemen aan inspirerende workshops over reparatie, hergebruik en duurzaamheid.\n\nMensen van Repair Cafés zijn hier aanwezig om aanwezig elektrisch/batterijgevoed speelgoed te controleren en mogelijk te repareren.",
       "en": "Join the big Spring Cleaning and swap children's clothes and toys!\n\nBring items you no longer need and discover new treasures-a beautiful children's book, a stuffed toy looking for a new home or an almost brand-new spring coat. In addition, you can participate in inspiring workshops on repair, reuse and sustainability.\n\nPeople from Repair Cafés will be here to check and possibly repair present electric/battery powered toys."
     },
-    "slug": "speel-deel-en-recycle-festival-2025-03-15"
+    "slug": "speel-deel-en-recycle-festival-2025-10-31"
   },
   {
     "name": "Het Ruilfestival",
