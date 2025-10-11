@@ -34,12 +34,12 @@ export default function BasePage({
       {showHeader ? (
         <div className="sticky top-0 z-10 flex gap-3 bg-white p-3 xl:flex-row-reverse">
           <Suspense>
-            <BackButton className="body:hidden">
+            <BackButton className="body:hidden flex items-center">
               <ChevronLeft title={t("go-back")} />
             </BackButton>
           </Suspense>
           {enableBackHome && (
-            <BackButton backHome className="body:block hidden">
+            <BackButton backHome className="body:flex hidden items-center">
               <ChevronLeft title={t("go-back")} className="xl:hidden" />
               <X title={t("close")} className="hidden xl:block" />
             </BackButton>
