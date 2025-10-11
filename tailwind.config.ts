@@ -30,7 +30,7 @@ const config: Config = {
       },
       maxWidth: {
         body: bodyWidth,
-        side: "calc(30rem + 0.75rem)",
+        side: "calc(30.6rem + 0.75rem)",
       },
       screens: {
         body: bodyWidth,
