@@ -49,7 +49,7 @@ export default function BasePage({
       ) : (
         <h1 className="sr-only">{title}</h1>
       )}
-      <div className="grow">{children}</div>
+      <div className="flex grow flex-col">{children}</div>
     </div>
   );
 }

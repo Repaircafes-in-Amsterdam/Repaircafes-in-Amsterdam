@@ -60,8 +60,10 @@ export default function ListPanel({
         <DistrictSelect />
         <OfficeHoursCheckbox />
       </div>
-      <Upcoming events={filteredEvents} />
-      <LoadMore loadMore={loadMore} />
+      <div className="flex h-px grow flex-col overflow-y-auto">
+        <Upcoming events={filteredEvents} />
+        <LoadMore loadMore={loadMore} />
+      </div>
     </BasePage>
   );
 }
