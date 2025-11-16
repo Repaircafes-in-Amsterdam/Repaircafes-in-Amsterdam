@@ -1,6 +1,7 @@
 [
   {
     "name": "Speel Deel en Recycle Festival",
+    "slug": "speel-deel-en-recycle-festival",
     "location": "De Hallen",
     "address": "Hannie Dankbaarpassage 47",
     "district": "West",
@@ -14,11 +15,11 @@
     "description": {
       "nl": "Doe mee aan de grote Spring Cleaning en ruil kinderkleding en speelgoed!\n\nBreng items mee die je niet meer nodig hebt en ontdek nieuwe schatten—een prachtig kinderboek, een knuffel die een nieuw thuis zoekt of een bijna gloednieuwe voorjaarsjas. Daarnaast kun je deelnemen aan inspirerende workshops over reparatie, hergebruik en duurzaamheid.\n\nMensen van Repair Cafés zijn hier aanwezig om aanwezig elektrisch/batterijgevoed speelgoed te controleren en mogelijk te repareren.",
       "en": "Join the big Spring Cleaning and swap children's clothes and toys!\n\nBring items you no longer need and discover new treasures-a beautiful children's book, a stuffed toy looking for a new home or an almost brand-new spring coat. In addition, you can participate in inspiring workshops on repair, reuse and sustainability.\n\nPeople from Repair Cafés will be here to check and possibly repair present electric/battery powered toys."
-    },
-    "slug": "speel-deel-en-recycle-festival-2025-10-31"
+    }
   },
   {
     "name": "Het Ruilfestival",
+    "slug": "ruilfestival",
     "location": "De Hallen",
     "address": "Hannie Dankbaarpassage 47",
     "district": "West",
@@ -31,11 +32,11 @@
     "description": {
       "nl": "Van ruilen komt een gezellige recycle-markt voor alle leeftijden! Neem je spullen mee en kies iets anders uit.\n\nWe ruilen: boeken, kleding, speelgoed, kunst, interieur, planten, zaden & stekjes, en energiebesparend materiaal. Verschillende bewoners en organisaties uit Oud-West bundelen hun krachten voor dit tweede Grote Ruilfestival De Hallen. Naast ruilen kun je bij het Repair Café kapotte kleding en elektronica laten repareren, deelnemen aan creatieve workshops, schminken, en genieten van live muziek!\n\nKom langs, neem iets leuks mee, maak nieuwe contacten en draag bij aan een duurzaam Oud-West!",
       "en": "From swapping comes a fun recycle market for all ages! Bring your stuff and pick something different.\n\nWe swap: books, clothes, toys, art, interior design, plants, seeds & cuttings, and energy-saving materials. Several Oud-West residents and organizations are joining forces for this second Great Swap Festival De Hallen. Besides bartering, you can have broken clothes and electronics repaired at the Repair Café, participate in creative workshops, face painting, and enjoy live music!\n\nCome by, bring something fun, make new contacts, and contribute to a sustainable Oud-West!"
-    },
-    "slug": "het-ruilfestival-2025-11-15"
+    }
   },
   {
     "name": "Sprouts film festival",
+    "slug": "sprouts-film-festival",
     "location": "Studio/K",
     "address": "Timorplein 62",
     "district": "Oost",
@@ -48,11 +49,11 @@
     "description": {
       "nl": "Tijdens het Sprouts Film Festival, een jaarlijks fictiefilmfestival voor ecocinema & debuutfilms, kun je bij Studio/K terecht met je kapotte elektronica die al een tijdje achter in de kast staat omdat ze gerepareerd moeten worden maar je niet weet hoe.\n\nDe reparateurs van Repair Café de Meevaart staan vanaf 19:00 uur met hun gereedschap klaar bij Studio/K en leren je alles wat ze weten over het repareren van je elektronica en repareren ondertussen gratis samen met jou je kapotte spullen!\n\nDus gooi je kapotte spullen niet weg maar kom naar Sprouts om ze te repareren!",
       "en": "During the Sprouts Film Festival, a yearly fiction film festival for ecocinema & debut films, you can come to Studio/K with your broken-down electronics that have been sitting in the back of the closet because they need fixing but you don’t know how.\n\nThe handy people from Repair Café de Meevaart will be ready with their tools at Studio/K from 19:00 and will teach you everything they know about fixing your  electronics and in the meantime fix your broken items together with you for free!\n\nSo don’t throw out your broken stuff but come to Sprouts to repair them!"
-    },
-    "slug": "sprouts-film-festival-2025-04-15"
+    }
   },
   {
     "name": "Cinekid Speelgoed Repair Café",
+    "slug": "cinekid-speelgoed-repair-cafe",
     "location": "Bioscoop Pathé Amsterdam-Noord",
     "address": "Buikslotermeerplein 2003",
     "district": "Noord",
@@ -65,11 +66,11 @@
     "description": {
       "nl": "Tijdens de feestelijke première van het tweede seizoen van de serie Saïd & Anna op het Cinekid Festival kun je samen met je (klein)kind langskomen bij een speciaal pop-up Repair Café. Dit Repair Café is uitsluitend bedoeld voor (elektronisch) kinderspeelgoed. \n\nDus neem kapot (elektronisch) speelgoed mee en onze reparateurs helpen je om het weer te maken. Kinderen mogen natuurlijk meekijken en meedenken!\n\nHet Cinekid Festival vindt plaats in de hele herfstvakantie op 40 locaties door heel Nederland. In Saïd & Anna denken kinderen na over hoe we omgaan met kapotte spullen én met elkaar. Precies wat we ook doen bij Repair Cafés!",
       "en": "During the festive premiere of the second season of the series Saïd & Anna at the Cinekid Festival, you and your (grand)child can visit a special pop-up Repair Café. This Repair Café is exclusively for (electronic) children's toys. \n\nSo bring along any broken (electronic) toys, and our repairers will help you fix them. Children are welcome to watch and contribute their ideas!\n\nThe Cinekid Festival takes place throughout the fall break at 40 locations throughout the Netherlands. In Saïd & Anna, children think about how we deal with broken things and with each other. Exactly what we do at Repair Cafés!"
-    },
-    "slug": "speelgoed-en-knuffels-repair-cafe-bij-said-and-anna-premiere-2025-10-18"
+    }
   },
   {
     "name": "Bakfietsfeest van De groene Kring West",
+    "slug": "bakfietsfeest",
     "location": "Wachterliedpaviljoen",
     "address": "Wachterliedpaviljoen 1-3",
     "district": "West",
@@ -82,7 +83,6 @@
     "description": {
       "nl": "De Groene Kring West is een platform voor circulaire en sociale initiatieven in Amsterdam-West. Afgelopen zomer hebben zij een tweedehands bakfiets omgebouwd tot een modulaire Groene Kring Bakfiets. Op 21 september viert de Groene Kring West hun eenjarig bestaan daarom met een bakfietsfeest. Dat doen zij samen met allerlei initiatieven die zich inzetten voor een groene en sociale wijk, en die – waar mogelijk – met de bakfiets naar het plein komen om zich te presenteren. Zo ontstaat er een circulair mini-buurtfestivalletje waar alles gratis is. \n\nHet Repair Café is natuurlijk ook van de partij. Onze reparateurs nemen geen bakfiets mee, maar komen uiteraard wél milieubewust met de fiets of het openbaar vervoer. Ze staan klaar om jouw kapotte spullen te repareren en zo samen afval te voorkomen.\n\nHeb je een broodrooster, oude bandrecorder, lamp, stofzuiger of ander apparaat dat niet meer werkt? Neem het mee – grote kans dat we het samen weer tot leven wekken! Kom langs bij de werkplek van het Repair Café – we kijken naar jullie uit!",
       "en": "De Groene Kring West is a platform for circular and social initiatives in Amsterdam-West. Last summer, they converted a second-hand cargo bike into a modular Groene Kring Cargo Bike. On September 21, De Groene Kring West will celebrate its first anniversary with a cargo bike party. They will do so together with all kinds of initiatives that are committed to a green and social neighborhood and that—where possible—will come to the square by cargo bike to present themselves. This will create a circular mini-neighborhood festival where everything is free. \n\nThe Repair Café will of course also be there. Our repairers will not be bringing cargo bikes, but will of course be coming in an environmentally conscious manner by bicycle or public transport. They will be ready to repair your broken items and thus help prevent waste.\n\nDo you have a toaster, old tape recorder, lamp, vacuum cleaner, or other device that no longer works? Bring it along—there's a good chance we can bring it back to life together! Come visit the Repair Café workshop—we look forward to seeing you!"
-    },
-    "slug": "bakfietsfeest-van-de-groene-kring-west-2025-09-21"
+    }
   }
 ]
