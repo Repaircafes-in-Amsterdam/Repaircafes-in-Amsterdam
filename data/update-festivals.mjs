@@ -40,7 +40,7 @@ const list = rows
   // Add slugs, including the date for recurring festivals
   .map((row) => ({
     ...row,
-    slug: `${slugify(row.name).toLowerCase()}-${row.dates[0]}`,
+    slug: row.slug || `${slugify(row.name).toLowerCase()}-${row.dates[0]}`,
   }))
 
   // Nest multilingual columns into objects under one field
