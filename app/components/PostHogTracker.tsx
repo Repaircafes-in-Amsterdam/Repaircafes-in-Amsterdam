@@ -3,8 +3,8 @@
 import { Suspense, useEffect } from "react";
 import { usePostHog } from "posthog-js/react";
 import useDistrict from "../useDistrict";
-import useOutsideOfficeHours from "../useOutsideOfficeHours";
 import { usePathname } from "@/i18n/routing";
+import useOutsideOfficeHours from "../useOutsideOfficeHours";
 
 function PostHogTracker({ locale }: Readonly<{ locale: string }>) {
   const pathname = usePathname();
@@ -28,8 +28,8 @@ function PostHogTracker({ locale }: Readonly<{ locale: string }>) {
     });
   }, [district, postHog]);
 
-  const { value: rawOutsideOfficeHours } = useOutsideOfficeHours();
-  const outsideOfficeHours = rawOutsideOfficeHours === "true";
+  const outsideOfficeHours = useOutsideOfficeHours((state) => state.value);
+
   useEffect(() => {
     postHog?.capture("outside office hours set", {
       outsideOfficeHours,
