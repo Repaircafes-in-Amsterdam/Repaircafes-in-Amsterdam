@@ -1744,51 +1744,6 @@
     ]
   },
   {
-    "name": "t Kruidvat",
-    "address": "Ouderkerkerlaan 30",
-    "open": {
-      "nl": "1e zaterdagmiddag 14:00 - 16:30",
-      "en": "1st Saturday afternoon 14:00 - 16:30"
-    },
-    "rrule": [
-      "FREQ=MONTHLY;BYSETPOS=1;BYDAY=SA;INTERVAL=1"
-    ],
-    "startTime": [
-      "14:00"
-    ],
-    "endTime": [
-      "16:30"
-    ],
-    "closedRanges": [
-      "07:08"
-    ],
-    "closed": {
-      "nl": "Juli en augustus\nVolgen vakantie kalender t Kruidvat",
-      "en": "July and August\nFollowing the vacation calendar of Kruidvat\""
-    },
-    "exceptions": [],
-    "district": "Diemen",
-    "email": "repaircafediemen@gmail.com",
-    "doRepair": {
-      "nl": "Electronica, Kleding",
-      "en": "Electronics, Clothing"
-    },
-    "dontRepair": {
-      "nl": "Mobiele telefoons",
-      "en": "Mobile phones"
-    },
-    "moreInfo": {
-      "nl": "",
-      "en": ""
-    },
-    "verified": true,
-    "slug": "t-kruidvat",
-    "coordinate": [
-      52.33423,
-      4.95629
-    ]
-  },
-  {
     "name": "Textiel Repair Café",
     "address": "President Allendelaan 733",
     "open": {
