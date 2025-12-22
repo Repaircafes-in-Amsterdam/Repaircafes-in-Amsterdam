@@ -845,6 +845,52 @@
     ]
   },
   {
+    "name": "De Piramide",
+    "address": "Haarlemmer Houttuinen 8",
+    "open": {
+      "nl": "Elke 2de woensdag 13:00 - 15:00",
+      "en": "Every 2nd Wednesday 13:00 - 15:00"
+    },
+    "rrule": [
+      "FREQ=MONTHLY;INTERVAL=1;BYDAY=2WE"
+    ],
+    "startTime": [
+      "13:00"
+    ],
+    "endTime": [
+      "15:00"
+    ],
+    "closedRanges": [],
+    "closed": {
+      "nl": "Kerst, nieuwjaar, zomervakantie, Pasen",
+      "en": "Christmas, New Year, Summer vacation, Easter"
+    },
+    "exceptions": [],
+    "district": "Centrum",
+    "email": "mkwame@dock.nl",
+    "doRepair": {
+      "nl": "Electronica, Kleding",
+      "en": "Electronics, Clothing"
+    },
+    "dontRepair": {
+      "nl": "",
+      "en": ""
+    },
+    "moreInfo": {
+      "nl": "",
+      "en": ""
+    },
+    "links": {
+      "website": "https://www.dock.nl/locaties/amsterdam/centrum/activiteitencentrum-de-piramide/"
+    },
+    "verified": true,
+    "slug": "de-piramide",
+    "coordinate": [
+      52.380765,
+      4.892518
+    ]
+  },
+  {
     "name": "De steek",
     "address": "Van Der Hoopstraat 70HS",
     "open": {
