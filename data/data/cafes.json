@@ -1294,11 +1294,11 @@
     "name": "Linux Repair Café OBA javaplein",
     "address": "OBA maakplaats, Javaplein 2 (oost)",
     "open": {
-      "nl": "31 mei, 28 juni en 12 juli 13:00 - 16:00 \nNa de vakantie starten we opnieuw op",
-      "en": "May 31, June 28 and July 12 13:00 - 16:00 \nAfter the vacations we start up again"
+      "nl": "Elke 1e en 3de zaterdag middag 13:00 - 16:00",
+      "en": "Every 1st and 3rd Saturday afternoon 13:00 - 16:00"
     },
     "rrule": [
-      "FREQ=MONTHLY;INTERVAL=1;BYDAY=2SA,-1SA"
+      "FREQ=MONTHLY;INTERVAL=1;BYDAY=1SA,3SA"
     ],
     "startTime": [
       "13:00"
@@ -1307,16 +1307,13 @@
       "16:00"
     ],
     "closedRanges": [
-      "2025-06-14",
-      "2025-07-13:2035"
+      "2025-06-14"
     ],
     "closed": {
       "nl": "Zomervakantie",
       "en": "Summer vacation"
     },
-    "exceptions": [
-      "2025-07-12"
-    ],
+    "exceptions": [],
     "district": "Oost",
     "email": "linuxrepaircafe-1@protonmail.com",
     "doRepair": {
