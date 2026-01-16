@@ -1039,6 +1039,59 @@
     ]
   },
   {
+    "name": "GIFTED",
+    "address": "Nassaukade 373A",
+    "open": {
+      "nl": "Donderdag 22 januari 12:00 - 19:00",
+      "en": "Thursday, January 22, 12:00 - 19:00"
+    },
+    "rrule": [
+      "FREQ=MONTHLY;INTERVAL=1;BYDAY=4TU"
+    ],
+    "startTime": [
+      "12:00"
+    ],
+    "endTime": [
+      "19:00"
+    ],
+    "closedRanges": [
+      "2025:2035"
+    ],
+    "closed": {
+      "nl": "",
+      "en": ""
+    },
+    "exceptions": [
+      "2026-01-22"
+    ],
+    "district": "",
+    "email": "Rafael@gainmomentum.nl",
+    "doRepair": {
+      "nl": "Kleding",
+      "en": "Clothing"
+    },
+    "dontRepair": {
+      "nl": "Schoenen",
+      "en": "Shoes"
+    },
+    "moreInfo": {
+      "nl": "",
+      "en": ""
+    },
+    "links": {
+      "website": "https://gainmomentum.nl/"
+    },
+    "socials": {
+      "instagram": "https://www.instagram.com/gainmomentum.nl/"
+    },
+    "verified": true,
+    "slug": "gifted",
+    "coordinate": [
+      52.365319,
+      4.878419
+    ]
+  },
+  {
     "name": "Gliphoeve kinderboerderij",
     "address": "Geldershoofd 79",
     "open": {
