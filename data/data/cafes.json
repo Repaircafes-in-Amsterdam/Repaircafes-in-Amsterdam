@@ -566,8 +566,8 @@
     "district": "Diemen",
     "email": "repaircafediemen@gmail.com",
     "doRepair": {
-      "nl": "Electronica, Andere draagbare huishoudelijke apparaten",
-      "en": "Electronics, Other portable household appliances"
+      "nl": "Electronica, Andere draagbare huishoudelijke apparaten, Kleding",
+      "en": "Electronics, Other portable household appliances, Clothing"
     },
     "dontRepair": {
       "nl": "Beeldschermen, grote apparaten",
