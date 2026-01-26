@@ -795,14 +795,14 @@
     "name": "De Pijp",
     "address": "Lutmastraat 61a",
     "open": {
-      "nl": "Laatste zondag 12:00 - 16:00",
-      "en": "Last Sunday 12:00 - 16:00"
+      "nl": "Laatste zondag 13:00 - 16:00",
+      "en": "Last Sunday 13:00 - 16:00"
     },
     "rrule": [
       "FREQ=MONTHLY;BYSETPOS=-1;BYDAY=SU;INTERVAL=1"
     ],
     "startTime": [
-      "12:00"
+      "13:00"
     ],
     "endTime": [
       "16:00"
