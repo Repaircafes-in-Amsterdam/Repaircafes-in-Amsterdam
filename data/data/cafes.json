@@ -848,11 +848,11 @@
     "name": "De Piramide",
     "address": "Haarlemmer Houttuinen 8",
     "open": {
-      "nl": "Elke 2de woensdag 13:00 - 15:00",
-      "en": "Every 2nd Wednesday 13:00 - 15:00"
+      "nl": "Elke woensdag 13:00 - 15:00",
+      "en": "Every Wednesday 13:00 - 15:00"
     },
     "rrule": [
-      "FREQ=MONTHLY;INTERVAL=1;BYDAY=2WE"
+      "FREQ=WEEKLY;INTERVAL=1;BYDAY=WE"
     ],
     "startTime": [
       "13:00"
