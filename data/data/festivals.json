@@ -1,20 +1,19 @@
 [
   {
-    "name": "Speel Deel en Recycle Festival",
-    "slug": "speel-deel-en-recycle-festival",
+    "name": "Speel Deel Ruil & Recycle festival",
+    "slug": "speel-deel-ruil-and-recycle-festival",
     "location": "De Hallen",
     "address": "Hannie Dankbaarpassage 47",
     "district": "West",
     "dates": [
-      "2025-10-31",
-      "2025-11-01"
+      "2026-03-14"
     ],
-    "startTime": "12:00",
-    "endTime": "16:00",
-    "link": "https://www.dehallen-amsterdam.nl/agenda/speel-deel-ruil-en-recycle-festival-nov-25",
+    "startTime": "11:00",
+    "endTime": "17:00",
+    "link": "https://motherhood.amsterdam/speel-deel/amsterdam-maart-2026",
     "description": {
-      "nl": "Doe mee aan de grote Spring Cleaning en ruil kinderkleding en speelgoed!\n\nBreng items mee die je niet meer nodig hebt en ontdek nieuwe schatten—een prachtig kinderboek, een knuffel die een nieuw thuis zoekt of een bijna gloednieuwe voorjaarsjas. Daarnaast kun je deelnemen aan inspirerende workshops over reparatie, hergebruik en duurzaamheid.\n\nMensen van Repair Cafés zijn hier aanwezig om aanwezig elektrisch/batterijgevoed speelgoed te controleren en mogelijk te repareren.",
-      "en": "Join the big Spring Cleaning and swap children's clothes and toys!\n\nBring items you no longer need and discover new treasures-a beautiful children's book, a stuffed toy looking for a new home or an almost brand-new spring coat. In addition, you can participate in inspiring workshops on repair, reuse and sustainability.\n\nPeople from Repair Cafés will be here to check and possibly repair present electric/battery powered toys."
+      "nl": "Kom weer een hele dag speelgoed en kinderkleding ruilen en meedoen aan onze recycle workshops. Samen gaan we weer schatten ontdekken, speelgoed redden en samen ervaren dat we veel minder nieuwe spullen nodig hebben dan we denken. Let op: Verwacht je toffe spullen te vinden? Neem dan ook super coole items mee voor een ander. (Inname max 5 stuks van ieder).\n\nMensen van Repair Cafés zijn hier aanwezig om aanwezig elektrisch/batterijgevoed speelgoed te controleren en mogelijk te repareren.",
+      "en": "Come and spend another whole day swapping toys and children's clothing and taking part in our recycling workshops. Together, we will discover treasures, rescue toys, and learn that we need far fewer new things than we think. Please note: Expecting to find some great stuff? Then bring some super cool items for someone else. (Maximum of 5 items of each).\n\nPeople from Repair Cafés will be here to check and possibly repair any electric/battery-powered toys you bring along."
     }
   },
   {
