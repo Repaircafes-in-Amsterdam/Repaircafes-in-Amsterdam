@@ -1939,8 +1939,8 @@
     "name": "Witte Boei",
     "address": "Kleine Wittenburgerstraat 201",
     "open": {
-      "nl": "Elke eerste en derde woensdagmiddag 14:00 - 16:30",
-      "en": "Every first and third Wednesday afternoon 14:00 - 16:30"
+      "nl": "Elke eerste en derde woensdagmiddag 14:00 - 15:30",
+      "en": "Every first and third Wednesday afternoon 14:00 - 15:30"
     },
     "rrule": [
       "FREQ=MONTHLY;BYDAY=1WE,3WE"
@@ -1949,7 +1949,7 @@
       "14:00"
     ],
     "endTime": [
-      "16:30"
+      "15:30"
     ],
     "closedRanges": [],
     "closed": {
@@ -1960,8 +1960,8 @@
     "district": "Centrum",
     "email": "mjanssen@dock.nl",
     "doRepair": {
-      "nl": "Electronica, Huishoudelijke apparaten. Van platenspelers tot koffiezetapparaten tot stofzuigers.",
-      "en": "Electronics, Household appliances. From turntables to coffee machines to vacuum cleaners."
+      "nl": "Electronica, Huishoudelijke apparaten, Kleding. Van platenspelers tot koffiezetapparaten tot stofzuigers.",
+      "en": "Electronics, Household appliances, Clothing. From turntables to coffee machines to vacuum cleaners."
     },
     "dontRepair": {
       "nl": "",
