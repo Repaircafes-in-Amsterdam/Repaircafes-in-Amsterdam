@@ -20,7 +20,7 @@ export default function Upcoming({ events }: { events: Event[] }) {
           </h2>
           <ul className="mb-3 flex flex-col last:mb-0">
             {group.events.map((event) => (
-              <li key={event.slug}>
+              <li key={event.slug} id={event.slug}>
                 <UpcomingItem event={event} />
               </li>
             ))}
