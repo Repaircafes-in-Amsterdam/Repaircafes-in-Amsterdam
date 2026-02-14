@@ -5,14 +5,12 @@ import Calendar1 from "@/app/icons/Calendar1.svg?react";
 import { Event } from "@/app/types";
 import useHoverStore from "@/app/useHoverStore";
 import classes from "@/app/utils/classes";
-import useLinkPostfix from "@/app/utils/useLinkPostfix";
 import { useTranslations } from "next-intl";
 import { useParams } from "next/navigation";
 
 export default function UpcomingItem({ event }: { event: Event }) {
   const { slug, name, startTime, endTime, district, verified, festival } =
     event;
-  const linkPostfix = useLinkPostfix();
   const params = useParams();
   const isOpen = params?.slug === slug;
   const isHovered = useHoverStore((state) => state.hoveredMarker === slug);
@@ -22,7 +20,7 @@ export default function UpcomingItem({ event }: { event: Event }) {
   const linkBase = festival ? "/festival" : "/cafe";
   return (
     <Link
-      href={`${linkBase}/${slug}${linkPostfix}`}
+      href={`${linkBase}/${slug}`}
       className={classes(
         "focus-visible:bg-orange [@media(hover:hover)]:hover:bg-orange flex cursor-pointer items-center gap-3 px-3 py-1.5 focus-visible:text-blue-600 focus-visible:outline-hidden [@media(hover:hover)]:hover:text-blue-600",
         isHovered || isOpen ? "bg-orange text-blue-600" : "bg-blue text-white",
