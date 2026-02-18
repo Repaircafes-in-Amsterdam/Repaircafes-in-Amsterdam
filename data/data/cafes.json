@@ -891,6 +891,53 @@
     ]
   },
   {
+    "name": "De Schinkel",
+    "address": "Derde Schinkelstraat 9",
+    "open": {
+      "nl": "Elke 1e en 3de  maandag 14:00 - 17:00",
+      "en": "Every 1st and 3rd Monday 14:00 - 17:00"
+    },
+    "rrule": [
+      "FREQ=MONTHLY;INTERVAL=1;BYDAY=1MO,3MO"
+    ],
+    "startTime": [
+      "14:00"
+    ],
+    "endTime": [
+      "17:00"
+    ],
+    "closedRanges": [
+      "2026-02:2026-03"
+    ],
+    "closed": {
+      "nl": "",
+      "en": ""
+    },
+    "exceptions": [
+      "2026-04-06"
+    ],
+    "district": "Zuid",
+    "email": "repaircafe.deschinkel@proton.me",
+    "doRepair": {
+      "nl": "Electronica, Kleding, Meubels",
+      "en": "Electronics, Clothing, Furniture"
+    },
+    "dontRepair": {
+      "nl": "Telefoons en laptops",
+      "en": "Phones and laptops"
+    },
+    "moreInfo": {
+      "nl": "",
+      "en": ""
+    },
+    "verified": true,
+    "slug": "de-schinkel",
+    "coordinate": [
+      52.352913,
+      4.855224
+    ]
+  },
+  {
     "name": "De steek",
     "address": "Van Der Hoopstraat 70HS",
     "open": {
@@ -1064,7 +1111,7 @@
     "exceptions": [
       "2026-01-22"
     ],
-    "district": "",
+    "district": "West",
     "email": "Rafael@gainmomentum.nl",
     "doRepair": {
       "nl": "Kleding",
