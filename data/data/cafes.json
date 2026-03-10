@@ -94,8 +94,8 @@
     "name": "Afvalpaleis (elektra)",
     "address": "Dapperstraat 76",
     "open": {
-      "nl": "Elke woensdagmiddag 12:00 - 16:00",
-      "en": "Every Wednesday afternoon 12:00 - 16:00"
+      "nl": "Elke woensdagmiddag 12:00 - 17:00",
+      "en": "Every Wednesday afternoon 12:00 - 17:00"
     },
     "rrule": [
       "FREQ=WEEKLY;BYDAY=WE;INTERVAL=1"
@@ -104,7 +104,7 @@
       "12:00"
     ],
     "endTime": [
-      "16:00"
+      "17:00"
     ],
     "closedRanges": [
       "12-24:12-31",
@@ -137,7 +137,6 @@
       "website": "https://www.jungle.amsterdam/werkplaats-repaircafe"
     },
     "socials": {
-      "facebook": "https://www.facebook.com/afvalpaleis/",
       "instagram": "https://www.instagram.com/afvalpaleis/"
     },
     "verified": true,
@@ -151,8 +150,8 @@
     "name": "Afvalpaleis (textiel)",
     "address": "Dapperstraat 76",
     "open": {
-      "nl": "Elke donderdagmiddag 12:00 - 16:00",
-      "en": "Every Thursday afternoon 12:00 - 16:00"
+      "nl": "Elke donderdagmiddag 12:00 - 17:00",
+      "en": "Every Thursday afternoon 12:00 - 17:00"
     },
     "rrule": [
       "FREQ=WEEKLY;BYDAY=TH;INTERVAL=1"
@@ -161,7 +160,7 @@
       "12:00"
     ],
     "endTime": [
-      "16:00"
+      "17:00"
     ],
     "closedRanges": [
       "12-24:12-31",
@@ -194,7 +193,6 @@
       "website": "https://www.jungle.amsterdam/werkplaats-repaircafe"
     },
     "socials": {
-      "facebook": "https://www.facebook.com/afvalpaleis/",
       "instagram": "https://www.instagram.com/afvalpaleis/"
     },
     "verified": true,
