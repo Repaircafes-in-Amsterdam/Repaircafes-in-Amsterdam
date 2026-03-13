@@ -1931,6 +1931,52 @@
     ]
   },
   {
+    "name": "Weesp",
+    "address": "Wintertuin 24",
+    "open": {
+      "nl": "Elke 2de zaterdag 10:00 - 12:00",
+      "en": "Every 2nd Saturday 10:00 - 12:00"
+    },
+    "rrule": [
+      "FREQ=MONTHLY;INTERVAL=1;BYDAY=2SA"
+    ],
+    "startTime": [
+      "10:00"
+    ],
+    "endTime": [
+      "12:00"
+    ],
+    "closedRanges": [],
+    "closed": {
+      "nl": "",
+      "en": ""
+    },
+    "exceptions": [],
+    "district": "Weesp",
+    "email": "Yolanda@repaircafeweesp.nl",
+    "doRepair": {
+      "nl": "Electronica, Kleding",
+      "en": "Electronics, Clothing"
+    },
+    "dontRepair": {
+      "nl": "Ovens, fietsen, kookplaten",
+      "en": "Ovens, bikes, stovetops"
+    },
+    "moreInfo": {
+      "nl": "Er is altijd thee/koffie te koop",
+      "en": "Tea and coffee are always available for purchase"
+    },
+    "links": {
+      "website": "https://www.repaircafeweesp.nl/"
+    },
+    "verified": true,
+    "slug": "weesp",
+    "coordinate": [
+      52.30521,
+      5.043302
+    ]
+  },
+  {
     "name": "Westerpark",
     "address": "Van Limburg Stirumstraat 119",
     "open": {
