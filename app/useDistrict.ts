@@ -14,6 +14,7 @@ const values = [
   "Zuid",
   "Zuidoost",
   "Diemen",
+  "Weesp",
 ];
 
 const useHook = getParamHook("district", defaultValue);
