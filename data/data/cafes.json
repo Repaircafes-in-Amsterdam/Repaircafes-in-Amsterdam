@@ -295,6 +295,52 @@
     ]
   },
   {
+    "name": "Breedhuis",
+    "address": "Het Breed 16",
+    "open": {
+      "nl": "Elke woensdag 10:00 - 12:00",
+      "en": "Every Wednesday 10:00 - 12:00"
+    },
+    "rrule": [
+      "FREQ=WEEKLY;INTERVAL=1;BYDAY=WE"
+    ],
+    "startTime": [
+      "10:00"
+    ],
+    "endTime": [
+      "12:00"
+    ],
+    "closedRanges": [],
+    "closed": {
+      "nl": "Schoolvakanties",
+      "en": "School holidays"
+    },
+    "exceptions": [],
+    "district": "Noord",
+    "email": "d.brouwer@civicamsterdam.nl",
+    "doRepair": {
+      "nl": "Kleding, gordijnen, beddengoed, kussens - alle textiel",
+      "en": "Clothing, curtains, bedding, pillows—all textiles"
+    },
+    "dontRepair": {
+      "nl": "",
+      "en": ""
+    },
+    "moreInfo": {
+      "nl": "",
+      "en": ""
+    },
+    "socials": {
+      "instagram": "https://www.instagram.com/buurthuis.breedhuis/"
+    },
+    "verified": true,
+    "slug": "breedhuis",
+    "coordinate": [
+      52.397235,
+      4.931725
+    ]
+  },
+  {
     "name": "Buitenveldert",
     "address": "A.J. Ernststraat 112",
     "open": {
