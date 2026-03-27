@@ -985,11 +985,11 @@
     "name": "De steek",
     "address": "Van Der Hoopstraat 70HS",
     "open": {
-      "nl": "Elke donderdag 16:00 - 20:00",
-      "en": "Every Thursday 16:00 - 20:00"
+      "nl": "Elke maandag 16:00 - 20:00",
+      "en": "Every Monday 16:00 - 20:00"
     },
     "rrule": [
-      "FREQ=WEEKLY;INTERVAL=1;BYDAY=TH"
+      "FREQ=WEEKLY;INTERVAL=1;BYDAY=MO"
     ],
     "startTime": [
       "16:00"
@@ -997,13 +997,10 @@
     "endTime": [
       "20:00"
     ],
-    "closedRanges": [
-      "2024-12-23:2025-01-06",
-      "2026:2035"
-    ],
+    "closedRanges": [],
     "closed": {
-      "nl": "Sinterklaas en kerst",
-      "en": "Sinterklaas and Christmas"
+      "nl": "Koningsdag",
+      "en": "Koningsdag"
     },
     "exceptions": [],
     "district": "West",
