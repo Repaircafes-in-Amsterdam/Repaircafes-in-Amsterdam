@@ -5,6 +5,7 @@ import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
 import { TIME_ZONE } from "../constants";
+import createTestFestival from "../utils/createTestFestival";
 
 type GetEventsModule = typeof import("./getEvents");
 
@@ -14,22 +15,6 @@ dayjs.extend(timezone);
 function setAmsterdamTime(dateTime: string) {
   vi.useFakeTimers();
   vi.setSystemTime(dayjs.tz(dateTime, TIME_ZONE).toDate());
-}
-
-function createTestFestival(overrides: Partial<Festival> = {}): Festival {
-  return {
-    name: "Festival",
-    slug: "festival",
-    district: "Centrum",
-    location: "Square",
-    address: "Main street 1",
-    dates: ["2025-02-08"],
-    startTime: "10:00",
-    endTime: "16:00",
-    link: "https://example.com",
-    description: { nl: "", en: "" },
-    ...overrides,
-  };
 }
 
 async function loadGetEvents({
