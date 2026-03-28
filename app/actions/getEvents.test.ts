@@ -88,11 +88,12 @@ describe("getEvents", () => {
       "monday-cafe",
       "monday-cafe",
     ]);
+    // Note these times are in UTC, so often 1 or 2 hours before the local time depending on daylight saving time
     expect(events.map((event) => event.date.toISOString())).toEqual([
-      "2025-02-03T13:30:00.000Z",
-      "2025-02-10T13:30:00.000Z",
-      "2025-02-17T13:30:00.000Z",
-      "2025-02-24T13:30:00.000Z",
+      "2025-02-03T12:30:00.000Z",
+      "2025-02-10T12:30:00.000Z",
+      "2025-02-17T12:30:00.000Z",
+      "2025-02-24T12:30:00.000Z",
     ]);
     expect(events.every((event) => event.startTime === "13:30")).toBe(true);
     expect(events.every((event) => event.endTime === "15:00")).toBe(true);
@@ -125,11 +126,13 @@ describe("getEvents", () => {
       "monday-cafe",
       "monday-cafe",
     ]);
+
+    // Note these times are in UTC, so often 1 or 2 hours before the local time depending on daylight saving time
     expect(events.map((event) => event.date.toISOString())).toEqual([
-      "2025-02-03T13:00:00.000Z",
-      "2025-02-10T13:00:00.000Z",
-      "2025-02-17T13:00:00.000Z",
-      "2025-02-24T13:00:00.000Z",
+      "2025-02-03T12:00:00.000Z",
+      "2025-02-10T12:00:00.000Z",
+      "2025-02-17T12:00:00.000Z",
+      "2025-02-24T12:00:00.000Z",
     ]);
     expect(events.every((event) => event.startTime === "13:00")).toBe(true);
     expect(events.every((event) => event.endTime === "15:00")).toBe(true);
