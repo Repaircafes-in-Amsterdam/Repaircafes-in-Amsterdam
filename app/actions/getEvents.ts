@@ -16,6 +16,15 @@ dayjs.extend(utc);
 dayjs.extend(timezone);
 dayjs.tz.setDefault(TIME_ZONE);
 
+// Construct a date object for the occurrence date with the time from the RC data, in the correct timezone
+function getOccurrenceDateTime(occurrence: Date, time: string) {
+  const year = occurrence.getUTCFullYear();
+  const month = String(occurrence.getUTCMonth() + 1).padStart(2, "0");
+  const day = String(occurrence.getUTCDate()).padStart(2, "0");
+
+  return dayjs.tz(`${year}-${month}-${day}T${time}`, TIME_ZONE);
+}
+
 function createEvent({
   name,
   slug,
@@ -72,8 +81,10 @@ export default async function getEvents({
   locale: string;
 }) {
   const events: Event[] = [];
-  const startDate = dayjs().tz().add(monthsOffset, "month");
+  const startDate = dayjs().tz(TIME_ZONE).add(monthsOffset, "month");
   const endDate = startDate.add(numMonths, "month");
+  const rangeStart = startDate.startOf("day");
+  const rangeEnd = endDate.endOf("day");
 
   const rcs = slug ? cafesData.filter((rc) => rc.slug === slug) : cafesData;
 
@@ -81,27 +92,39 @@ export default async function getEvents({
     if (!rc.rrule) continue;
     rc.rrule.forEach((rrule: string, index: number) => {
       const startTime = rc.startTime[index] || rc.startTime[0];
-      const [startHours, startMinutes] = startTime.split(":").map(Number);
       const endTime = rc.endTime[index] || rc.endTime[0];
-      const [endHours, endMinutes] = endTime.split(":").map(Number);
-      const endHoursUTC = endHours - 1; // timezone offset
-      // rrule using end time so we include already started events
-      const fullRRule = `${rrule};BYHOUR=${endHoursUTC};BYMINUTE=${endMinutes};BYSECOND=0`;
+      const fullRRule = `${rrule};BYHOUR=0;BYMINUTE=0;BYSECOND=0`;
 
       const rule = rrulestr(fullRRule, {
         tzid: TIME_ZONE,
       });
-      const occurrences = rule.between(startDate.toDate(), endDate.toDate());
+      const occurrences = rule.between(
+        rangeStart.toDate(),
+        rangeEnd.toDate(),
+        true,
+      );
       for (const occurrence of occurrences) {
-        // reset occurrence time to start time
-        occurrence.setHours(startHours, startMinutes);
+        const occurrenceStartDate = getOccurrenceDateTime(
+          occurrence,
+          startTime,
+        );
+        const occurrenceEndDate = getOccurrenceDateTime(occurrence, endTime);
+
+        // Filter against the event's real Amsterdam end time so DST transitions are handled correctly.
+        if (
+          !occurrenceEndDate.isAfter(startDate) ||
+          !occurrenceStartDate.isBefore(endDate)
+        ) {
+          continue;
+        }
+
         const { name, slug, district, verified } = rc;
         const event: Event = createEvent({
           name,
           slug,
           district,
           verified,
-          date: occurrence,
+          date: occurrenceStartDate.toDate(),
           startTime,
           endTime,
           locale,
