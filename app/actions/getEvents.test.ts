@@ -40,10 +40,10 @@ async function loadGetEvents({
     default: isClosed,
   }));
 
-  const module: GetEventsModule = await import("./getEvents");
+  const getEventsModule: GetEventsModule = await import("./getEvents");
 
   return {
-    getEvents: module.default,
+    getEvents: getEventsModule.default,
     isClosed,
   };
 }
