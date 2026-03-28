@@ -96,6 +96,8 @@ export default async function getEvents({
       const fullRRule = `${rrule};BYHOUR=0;BYMINUTE=0;BYSECOND=0`;
 
       const rule = rrulestr(fullRRule, {
+        // Start the rule a day earlier to ensure we include events that started before the range but end within the range
+        dtstart: rangeStart.subtract(1, "day").toDate(),
         tzid: TIME_ZONE,
       });
       const occurrences = rule.between(
