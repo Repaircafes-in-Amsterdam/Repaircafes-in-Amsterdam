@@ -173,4 +173,113 @@ describe("getEvents", () => {
     expect(events.every((event) => event.startTime === "13:00")).toBe(true);
     expect(events.every((event) => event.endTime === "15:00")).toBe(true);
   });
+
+  it("filters by slug, keeps exception dates, and excludes festivals", async () => {
+    setAmsterdamTime("2025-01-01 10:00");
+
+    const selectedCafe = createTestRC({
+      name: "Selected",
+      slug: "selected-cafe",
+      district: "West",
+      rrule: ["FREQ=WEEKLY;BYDAY=WE"],
+      startTime: ["18:00"],
+      endTime: ["20:00"],
+      exceptions: ["2025-01-09"],
+    });
+    const otherCafe = createTestRC({
+      name: "Other",
+      slug: "other-cafe",
+      district: "Noord",
+      rrule: ["FREQ=WEEKLY;BYDAY=FR"],
+      startTime: ["19:00"],
+      endTime: ["21:00"],
+    });
+
+    const { getEvents } = await loadGetEvents({
+      cafes: [selectedCafe, otherCafe],
+      festivals: [
+        createTestFestival({
+          slug: "winter-festival",
+          dates: ["2025-01-18"],
+        }),
+      ],
+    });
+
+    const events = await getEvents({
+      slug: "selected-cafe",
+      locale: "en",
+    });
+
+    expect(events.every((event) => event.slug === "selected-cafe")).toBe(true);
+    expect(events.some((event) => event.exceptionCause === "2025-01-09")).toBe(
+      true,
+    );
+    expect(events.some((event) => event.festival)).toBe(false);
+  });
+
+  it("includes festivals only when no slug is provided", async () => {
+    setAmsterdamTime("2025-01-01 10:00");
+
+    const { getEvents } = await loadGetEvents({
+      cafes: [
+        createTestRC({
+          slug: "cafe",
+          rrule: ["FREQ=WEEKLY;BYDAY=WE"],
+          startTime: ["18:00"],
+          endTime: ["20:00"],
+        }),
+      ],
+      festivals: [
+        createTestFestival({
+          slug: "festival-only",
+          dates: ["2025-01-18"],
+        }),
+      ],
+    });
+
+    const allEvents = await getEvents({ locale: "en" });
+    const cafeEvents = await getEvents({ slug: "cafe", locale: "en" });
+
+    expect(allEvents.some((event) => event.slug === "festival-only")).toBe(
+      true,
+    );
+    expect(cafeEvents.some((event) => event.slug === "festival-only")).toBe(
+      false,
+    );
+  });
+
+  it("omits closed events unless debug is enabled", async () => {
+    setAmsterdamTime("2025-01-01 10:00");
+
+    const openCafe = createTestRC({
+      slug: "open-cafe",
+      rrule: ["FREQ=WEEKLY;BYDAY=WE"],
+      startTime: ["18:00"],
+      endTime: ["20:00"],
+    });
+    const closedCafe = createTestRC({
+      slug: "closed-cafe",
+      rrule: ["FREQ=WEEKLY;BYDAY=WE"],
+      startTime: ["18:00"],
+      endTime: ["20:00"],
+    });
+
+    const { getEvents, isClosed } = await loadGetEvents({
+      cafes: [openCafe, closedCafe],
+      closedCauseBySlug: {
+        "closed-cafe": "Closed for maintenance",
+      },
+    });
+
+    const visibleEvents = await getEvents({ locale: "en" });
+    const debugEvents = await getEvents({ locale: "en", debug: true });
+
+    expect(visibleEvents.some((event) => event.slug === "closed-cafe")).toBe(
+      false,
+    );
+    expect(
+      debugEvents.find((event) => event.slug === "closed-cafe")?.closedCause,
+    ).toBe("Closed for maintenance");
+    expect(isClosed).toHaveBeenCalled();
+  });
 });
