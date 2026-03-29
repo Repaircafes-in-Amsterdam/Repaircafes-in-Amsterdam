@@ -28,7 +28,13 @@ async function loadGetEvents({
 }) {
   vi.resetModules();
 
-  const isClosed = vi.fn((event: Event) => closedCauseBySlug[event.slug] ?? "");
+  const isClosed = vi.fn((event: Event, rc?: RC) => {
+    if (!rc) {
+      throw new Error("Expected getEvents to forward rc to isClosed");
+    }
+
+    return closedCauseBySlug[event.slug] ?? "";
+  });
 
   vi.doMock("@/data/data/cafes.json", () => ({
     default: cafes,
