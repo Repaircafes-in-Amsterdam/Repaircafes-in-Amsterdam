@@ -8,6 +8,7 @@ import { TIME_ZONE } from "../constants";
 import createTestFestival from "../utils/createTestFestival";
 
 type GetEventsModule = typeof import("./getEvents");
+const ORIGINAL_TIME_ZONE = process.env.TZ;
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
@@ -15,6 +16,15 @@ dayjs.extend(timezone);
 function setAmsterdamTime(dateTime: string) {
   vi.useFakeTimers();
   vi.setSystemTime(dayjs.tz(dateTime, TIME_ZONE).toDate());
+}
+
+function restoreProcessTimeZone() {
+  if (ORIGINAL_TIME_ZONE === undefined) {
+    delete process.env.TZ;
+    return;
+  }
+
+  process.env.TZ = ORIGINAL_TIME_ZONE;
 }
 
 async function loadGetEvents({
@@ -55,6 +65,7 @@ async function loadGetEvents({
 }
 
 afterEach(() => {
+  restoreProcessTimeZone();
   vi.useRealTimers();
   vi.clearAllMocks();
   vi.resetModules();
@@ -204,6 +215,36 @@ describe("getEvents", () => {
     ]);
     expect(events.every((event) => event.startTime === "13:00")).toBe(true);
     expect(events.every((event) => event.endTime === "15:00")).toBe(true);
+  });
+
+  it("keeps the Amsterdam calendar day when the host timezone is UTC", async () => {
+    process.env.TZ = "UTC";
+    setAmsterdamTime("2025-03-28 12:00");
+
+    const recurringCafe = createTestRC({
+      name: "Saturday Cafe",
+      slug: "saturday-cafe",
+      district: "Centrum",
+      rrule: ["FREQ=WEEKLY;BYDAY=SA"],
+      startTime: ["13:00"],
+      endTime: ["15:00"],
+    });
+
+    const { getEvents } = await loadGetEvents({
+      cafes: [recurringCafe],
+    });
+
+    const events = await getEvents({
+      locale: "en",
+    });
+
+    expect(events.map((event) => event.date.toISOString())).toEqual([
+      "2025-03-29T12:00:00.000Z",
+      "2025-04-05T11:00:00.000Z",
+      "2025-04-12T11:00:00.000Z",
+      "2025-04-19T11:00:00.000Z",
+      "2025-04-26T11:00:00.000Z",
+    ]);
   });
 
   it("handles near-closing monthly events correctly both outside and during daylight saving time", async () => {

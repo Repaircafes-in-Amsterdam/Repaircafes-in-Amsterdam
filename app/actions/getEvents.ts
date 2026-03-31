@@ -18,11 +18,14 @@ dayjs.tz.setDefault(TIME_ZONE);
 
 // Construct a date object for the occurrence date with the time from the RC data, in the correct timezone
 function getOccurrenceDateTime(occurrence: Date, time: string) {
-  const year = occurrence.getUTCFullYear();
-  const month = String(occurrence.getUTCMonth() + 1).padStart(2, "0");
-  const day = String(occurrence.getUTCDate()).padStart(2, "0");
+  const [hour, minute] = time.split(":").map(Number);
 
-  return dayjs.tz(`${year}-${month}-${day}T${time}`, TIME_ZONE);
+  return dayjs(occurrence)
+    .tz(TIME_ZONE)
+    .hour(hour)
+    .minute(minute)
+    .second(0)
+    .millisecond(0);
 }
 
 function createEvent({
