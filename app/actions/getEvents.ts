@@ -18,11 +18,14 @@ dayjs.tz.setDefault(TIME_ZONE);
 
 // Construct a date object for the occurrence date with the time from the RC data, in the correct timezone
 function getOccurrenceDateTime(occurrence: Date, time: string) {
+  console.log("occurrence: ", occurrence.toString());
   const year = occurrence.getUTCFullYear();
   const month = String(occurrence.getUTCMonth() + 1).padStart(2, "0");
   const day = String(occurrence.getUTCDate()).padStart(2, "0");
 
-  return dayjs.tz(`${year}-${month}-${day}T${time}`, TIME_ZONE);
+  const dateTime = dayjs.tz(`${year}-${month}-${day}T${time}`, TIME_ZONE);
+  console.log("dateTime: ", dateTime.format());
+  return dateTime;
 }
 
 function createEvent({
@@ -85,6 +88,8 @@ export default async function getEvents({
   const endDate = startDate.add(numMonths, "month");
   const rangeStart = startDate.startOf("day");
   const rangeEnd = endDate.endOf("day");
+
+  console.log("startDate: ", startDate.format());
 
   const rcs = slug ? cafesData.filter((rc) => rc.slug === slug) : cafesData;
 
