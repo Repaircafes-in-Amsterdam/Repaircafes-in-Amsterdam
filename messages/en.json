@@ -129,5 +129,19 @@
     "metadata": {
       "title": "{name} events - Repair Cafes in Amsterdam"
     }
+  },
+  "stats": {
+    "title": "Statistics",
+    "metadata": {
+      "title": "Statistics - Repair Cafes in Amsterdam"
+    },
+    "rcs": "{numRepairCafes} Repair {numRepairCafes, plural, one {Café} other {Cafés}}",
+    "period": "During the next {periodMonths} {periodMonths, plural, one {month} other {months}}:",
+    "events": "{numEvents} Repair {numEvents, plural, one {Café is} other {Cafés are}} organized",
+    "eventsPerMonth": "±{numEventsPerMonth} per month",
+    "eventsPerDay": "±{numEventsPerDay} per day",
+    "daysWithEvents": "{numDaysWithEvents} {numDaysWithEvents, plural, one {day} other {days}} with at least one Repair Café",
+    "dailyCoverage": "{dailyCoverage} days have at least one Repair Café",
+    "daysWithoutEvents": "{numDaysWithoutEvents} {numDaysWithoutEvents, plural, one {day} other {days}} without any Repair Café"
   }
 }
