@@ -2,12 +2,14 @@ import data from "@/data/data/cafes.json";
 import BasePage from "@/app/components/BasePage";
 import { Metadata } from "next";
 import { BASE_URL } from "@/app/constants";
-import { Event } from "@/app/types";
+import { Event, RC } from "@/app/types";
 import { Suspense } from "react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { useTranslations } from "next-intl";
 import getEvents from "@/app/actions/getEvents";
 import groupBy from "lodash/groupBy";
+import getCafeFrequencyStats, {
+  type FrequencyBucketCount,
+} from "../../utils/getCafeFrequencyStats";
 
 export async function generateMetadata(props: {
   params: Promise<{ locale: string }>;
@@ -35,6 +37,7 @@ type Stats = {
   periodDays: number;
   numEvents: number;
   numDaysWithEvents: number;
+  frequencyBuckets: { label: string; value: number }[];
 };
 
 export default async function Page(props: {
@@ -54,12 +57,19 @@ export default async function Page(props: {
   });
   const eventsByDate = groupBy(events, (event: Event) => event.dateString);
   const numDaysWithEvents = Object.keys(eventsByDate).length;
+  const frequencyBuckets = getCafeFrequencyStats(data as RC[]).map(
+    ({ id, value }: FrequencyBucketCount) => ({
+      label: t(`frequencyBuckets.${id}`),
+      value,
+    }),
+  );
   const stats: Stats = {
     numRepairCafes: data.length,
     periodMonths,
     periodDays,
     numEvents: events.length,
     numDaysWithEvents,
+    frequencyBuckets,
   };
   return (
     <BasePage title={t("title")}>
@@ -77,6 +87,7 @@ async function ClientPage(props: { stats: Stats; locale: string }) {
     periodDays,
     numEvents,
     numDaysWithEvents,
+    frequencyBuckets,
   } = props.stats;
   const { locale } = props;
   const t = await getTranslations({ locale, namespace: "stats" });
@@ -111,6 +122,16 @@ async function ClientPage(props: { stats: Stats; locale: string }) {
               {t("daysWithoutEvents", {
                 numDaysWithoutEvents: periodDays - numDaysWithEvents,
               })}
+            </li>
+            <li>
+              {t("frequencyTitle")}
+              <ul>
+                {frequencyBuckets.map((bucket) => (
+                  <li key={bucket.label}>
+                    {bucket.label}: {bucket.value}
+                  </li>
+                ))}
+              </ul>
             </li>
           </ul>
         </li>

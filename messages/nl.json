@@ -142,6 +142,13 @@
     "eventsPerDay": "±{numEventsPerDay} per dag",
     "daysWithEvents": "{numDaysWithEvents} {numDaysWithEvents, plural, one {dag} other {dagen}} met minstens één Repair Café",
     "dailyCoverage": "{dailyCoverage} van de dagen hebben minstens één Repair Café",
-    "daysWithoutEvents": "{numDaysWithoutEvents} {numDaysWithoutEvents, plural, one {dag} other {dagen}} zonder Repair Café"
+    "daysWithoutEvents": "{numDaysWithoutEvents} {numDaysWithoutEvents, plural, one {dag} other {dagen}} zonder Repair Café",
+    "frequencyTitle": "Frequentiecategorieën:",
+    "frequencyBuckets": {
+      "weekly": "Wekelijks",
+      "biweekly": "Tweewekelijks",
+      "monthly": "Maandelijks",
+      "other": "Overig"
+    }
   }
 }
