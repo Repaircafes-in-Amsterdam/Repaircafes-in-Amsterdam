@@ -1,10 +1,7 @@
 import { describe, expect, it } from "vitest";
-import createTestRC from "@/app/utils/createTestRC";
-import getCafeFrequencyStats, {
-  classifyRRuleFrequency,
-} from "./getCafeFrequencyStats";
+import classifyRRuleFrequency from "./classifyFrequency";
 
-describe("classifyFrequencyRule", () => {
+describe("classifyFrequency", () => {
   it("classifies weekly rules as weekly", () => {
     expect(classifyRRuleFrequency(["FREQ=WEEKLY;BYDAY=MO;INTERVAL=1"])).toBe(
       "weekly",
@@ -62,34 +59,5 @@ describe("classifyFrequencyRule", () => {
         "FREQ=WEEKLY;BYDAY=SA;INTERVAL=1",
       ]),
     ).toBe("other");
-  });
-});
-
-describe("getCafeFrequencyStats", () => {
-  it("counts each cafe once based on its combined rrules", () => {
-    const cafes = [
-      createTestRC({
-        rrule: [
-          "FREQ=MONTHLY;BYDAY=1WE,3WE",
-          "FREQ=MONTHLY;INTERVAL=1;BYDAY=1TH",
-        ],
-      }),
-      createTestRC({
-        rrule: ["FREQ=WEEKLY;BYDAY=TU;INTERVAL=1"],
-      }),
-      createTestRC({
-        rrule: ["FREQ=MONTHLY;BYDAY=1WE,2WE,3WE,-1SA"],
-      }),
-      createTestRC({
-        rrule: ["FREQ=MONTHLY;BYDAY=2SA"],
-      }),
-    ];
-
-    expect(getCafeFrequencyStats(cafes)).toEqual([
-      { id: "weekly", value: 3 },
-      { id: "biweekly", value: 0 },
-      { id: "monthly", value: 1 },
-      { id: "other", value: 0 },
-    ]);
   });
 });

@@ -7,9 +7,21 @@ import { Suspense } from "react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import getEvents from "@/app/actions/getEvents";
 import groupBy from "lodash/groupBy";
-import getCafeFrequencyStats, {
-  type FrequencyBucketCount,
-} from "../../utils/getCafeFrequencyStats";
+import type { BucketCount } from "../../utils/stats/countBuckets";
+import countBuckets, {
+  countDynamicBuckets,
+} from "../../utils/stats/countBuckets";
+import { FREQUENCY_BUCKET_IDS } from "../../utils/stats/classifyFrequency";
+import { DAY_BUCKET_IDS } from "../../utils/stats/classifyDay";
+import { DAY_TYPE_BUCKET_IDS } from "../../utils/stats/classifyDayType";
+import { OFFICE_HOURS_BUCKET_IDS } from "../../utils/stats/classifyOfficeHours";
+import { getCafesStats } from "../../utils/stats/getCafeStats";
+
+type LabeledBucket = {
+  id: string;
+  label: string;
+  value: number;
+};
 
 export async function generateMetadata(props: {
   params: Promise<{ locale: string }>;
@@ -37,7 +49,11 @@ type Stats = {
   periodDays: number;
   numEvents: number;
   numDaysWithEvents: number;
-  frequencyBuckets: { label: string; value: number }[];
+  frequencyBuckets: LabeledBucket[];
+  dayBuckets: LabeledBucket[];
+  dayTypeBuckets: LabeledBucket[];
+  officeHoursBuckets: LabeledBucket[];
+  districtBuckets: LabeledBucket[];
 };
 
 export default async function Page(props: {
@@ -55,21 +71,49 @@ export default async function Page(props: {
     numMonths: periodMonths,
     locale,
   });
+  const districtsT = await getTranslations({ locale, namespace: "districts" });
   const eventsByDate = groupBy(events, (event: Event) => event.dateString);
   const numDaysWithEvents = Object.keys(eventsByDate).length;
-  const frequencyBuckets = getCafeFrequencyStats(data as RC[]).map(
-    ({ id, value }: FrequencyBucketCount) => ({
-      label: t(`frequencyBuckets.${id}`),
+  const cafeStats = getCafesStats(data as RC[]);
+  const createBuckets = (
+    buckets: BucketCount<string>[],
+    getLabel: (id: string) => string,
+  ): LabeledBucket[] =>
+    buckets.map(({ id, value }) => ({
+      id,
+      label: getLabel(id),
       value,
-    }),
-  );
+    }));
   const stats: Stats = {
     numRepairCafes: data.length,
     periodMonths,
     periodDays,
     numEvents: events.length,
     numDaysWithEvents,
-    frequencyBuckets,
+    frequencyBuckets: createBuckets(
+      countBuckets(cafeStats, FREQUENCY_BUCKET_IDS, (cafe) => cafe.frequency),
+      (id) => t(`frequencyBuckets.${id}`),
+    ),
+    dayBuckets: createBuckets(
+      countBuckets(cafeStats, DAY_BUCKET_IDS, (cafe) => cafe.day),
+      (id) => t(`dayBuckets.${id}`),
+    ),
+    dayTypeBuckets: createBuckets(
+      countBuckets(cafeStats, DAY_TYPE_BUCKET_IDS, (cafe) => cafe.dayType),
+      (id) => t(`dayTypeBuckets.${id}`),
+    ),
+    officeHoursBuckets: createBuckets(
+      countBuckets(
+        cafeStats,
+        OFFICE_HOURS_BUCKET_IDS,
+        (cafe) => cafe.officeHours,
+      ),
+      (id) => t(`officeHoursBuckets.${id}`),
+    ),
+    districtBuckets: createBuckets(
+      countDynamicBuckets(cafeStats, (cafe) => cafe.district),
+      (id) => districtsT(id),
+    ),
   };
   return (
     <BasePage title={t("title")}>
@@ -88,9 +132,24 @@ async function ClientPage(props: { stats: Stats; locale: string }) {
     numEvents,
     numDaysWithEvents,
     frequencyBuckets,
+    dayBuckets,
+    dayTypeBuckets,
+    officeHoursBuckets,
+    districtBuckets,
   } = props.stats;
   const { locale } = props;
   const t = await getTranslations({ locale, namespace: "stats" });
+
+  const renderBuckets = (buckets: LabeledBucket[]) => (
+    <ul>
+      {buckets.map((bucket) => (
+        <li key={bucket.id}>
+          {bucket.label}: {bucket.value}
+        </li>
+      ))}
+    </ul>
+  );
+
   return (
     <div className="prose px-3 pb-3">
       <ul>
@@ -125,13 +184,23 @@ async function ClientPage(props: { stats: Stats; locale: string }) {
             </li>
             <li>
               {t("frequencyTitle")}
-              <ul>
-                {frequencyBuckets.map((bucket) => (
-                  <li key={bucket.label}>
-                    {bucket.label}: {bucket.value}
-                  </li>
-                ))}
-              </ul>
+              {renderBuckets(frequencyBuckets)}
+            </li>
+            <li>
+              {t("dayTitle")}
+              {renderBuckets(dayBuckets)}
+            </li>
+            <li>
+              {t("dayTypeTitle")}
+              {renderBuckets(dayTypeBuckets)}
+            </li>
+            <li>
+              {t("officeHoursTitle")}
+              {renderBuckets(officeHoursBuckets)}
+            </li>
+            <li>
+              {t("districtTitle")}
+              {renderBuckets(districtBuckets)}
             </li>
           </ul>
         </li>
