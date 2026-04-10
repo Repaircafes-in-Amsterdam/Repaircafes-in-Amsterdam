@@ -137,8 +137,11 @@
     },
     "rcs": "{numRepairCafes} Repair Cafés",
     "period": "In the last {periodMonths} months:",
-    "events": "{numEvents} events",
-    "eventsPerMonth": "±{numEventsPerMonth} events per month",
-    "eventsPerDay": "±{numEventsPerDay} events per day"
+    "events": "{numEvents} Repair Cafés were organized",
+    "eventsPerMonth": "±{numEventsPerMonth} per month",
+    "eventsPerDay": "±{numEventsPerDay} per day",
+    "daysWithEvents": "{numDaysWithEvents} days with Repair Cafés",
+    "dailyCoverage": "±{dailyCoverage} of days with at least one Repair Café",
+    "daysWithoutEvents": "{numDaysWithoutEvents} days without any Repair Café"
   }
 }

@@ -129,5 +129,19 @@
     "metadata": {
       "title": "{name} evenementen - Repair Cafes in Amsterdam"
     }
+  },
+  "stats": {
+    "title": "Statistieken",
+    "metadata": {
+      "title": "Statistieken - Repair Cafes in Amsterdam"
+    },
+    "rcs": "{numRepairCafes} Repair Cafés",
+    "period": "In de laatste {periodMonths} maanden:",
+    "events": "{numEvents} Repair Cafés werden georganiseerd",
+    "eventsPerMonth": "±{numEventsPerMonth} per maand",
+    "eventsPerDay": "±{numEventsPerDay} per dag",
+    "daysWithEvents": "{numDaysWithEvents} dagen met Repair Cafés",
+    "dailyCoverage": "±{dailyCoverage} van de dagen met minstens één Repair Café",
+    "daysWithoutEvents": "{numDaysWithoutEvents} dagen zonder Repair Café"
   }
 }
