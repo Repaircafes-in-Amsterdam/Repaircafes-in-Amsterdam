@@ -79,7 +79,7 @@ async function ClientPage(props: { stats: Stats; locale: string }) {
     numDaysWithEvents,
   } = props.stats;
   const { locale } = props;
-  const t = useTranslations("stats");
+  const t = await getTranslations({ locale, namespace: "stats" });
   return (
     <div className="prose px-3 pb-3">
       <ul>
