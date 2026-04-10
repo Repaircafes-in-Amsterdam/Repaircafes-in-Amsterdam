@@ -129,5 +129,16 @@
     "metadata": {
       "title": "{name} events - Repair Cafes in Amsterdam"
     }
+  },
+  "stats": {
+    "title": "Statistics",
+    "metadata": {
+      "title": "Statistics - Repair Cafes in Amsterdam"
+    },
+    "rcs": "{numRepairCafes} Repair Cafés",
+    "period": "In the last {periodMonths} months:",
+    "events": "{numEvents} events",
+    "eventsPerMonth": "±{numEventsPerMonth} events per month",
+    "eventsPerDay": "±{numEventsPerDay} events per day"
   }
 }
