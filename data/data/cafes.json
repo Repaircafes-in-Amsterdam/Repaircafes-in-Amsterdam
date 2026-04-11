@@ -2008,19 +2008,19 @@
   },
   {
     "name": "Zonneplein",
-    "address": "Zonneplein 11",
+    "address": "Zonneplein 19",
     "open": {
-      "nl": "1e zaterdagmiddag 12:30 - 14:45",
-      "en": "1st Saturday afternoon 12:30 - 14:45"
+      "nl": "1e zaterdagmiddag 13:30 - 15:45",
+      "en": "1st Saturday afternoon 13:30 - 15:45"
     },
     "rrule": [
       "FREQ=MONTHLY;BYSETPOS=1;BYDAY=SA;INTERVAL=1"
     ],
     "startTime": [
-      "12:30"
+      "13:30"
     ],
     "endTime": [
-      "14:45"
+      "15:45"
     ],
     "closedRanges": [
       "2024-07-06",
