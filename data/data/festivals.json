@@ -83,5 +83,24 @@
       "nl": "De Groene Kring West is een platform voor circulaire en sociale initiatieven in Amsterdam-West. Afgelopen zomer hebben zij een tweedehands bakfiets omgebouwd tot een modulaire Groene Kring Bakfiets. Op 21 september viert de Groene Kring West hun eenjarig bestaan daarom met een bakfietsfeest. Dat doen zij samen met allerlei initiatieven die zich inzetten voor een groene en sociale wijk, en die – waar mogelijk – met de bakfiets naar het plein komen om zich te presenteren. Zo ontstaat er een circulair mini-buurtfestivalletje waar alles gratis is. \n\nHet Repair Café is natuurlijk ook van de partij. Onze reparateurs nemen geen bakfiets mee, maar komen uiteraard wél milieubewust met de fiets of het openbaar vervoer. Ze staan klaar om jouw kapotte spullen te repareren en zo samen afval te voorkomen.\n\nHeb je een broodrooster, oude bandrecorder, lamp, stofzuiger of ander apparaat dat niet meer werkt? Neem het mee – grote kans dat we het samen weer tot leven wekken! Kom langs bij de werkplek van het Repair Café – we kijken naar jullie uit!",
       "en": "De Groene Kring West is a platform for circular and social initiatives in Amsterdam-West. Last summer, they converted a second-hand cargo bike into a modular Groene Kring Cargo Bike. On September 21, De Groene Kring West will celebrate its first anniversary with a cargo bike party. They will do so together with all kinds of initiatives that are committed to a green and social neighborhood and that—where possible—will come to the square by cargo bike to present themselves. This will create a circular mini-neighborhood festival where everything is free. \n\nThe Repair Café will of course also be there. Our repairers will not be bringing cargo bikes, but will of course be coming in an environmentally conscious manner by bicycle or public transport. They will be ready to repair your broken items and thus help prevent waste.\n\nDo you have a toaster, old tape recorder, lamp, vacuum cleaner, or other device that no longer works? Bring it along—there's a good chance we can bring it back to life together! Come visit the Repair Café workshop—we look forward to seeing you!"
     }
+  },
+  {
+    "name": "Repair Academie",
+    "slug": "repair-academie",
+    "location": "OOK BIJ JOFEL",
+    "address": "Zonneplein 19, Amsterdam",
+    "district": "Noord",
+    "dates": [
+      "2026-04-21",
+      "2026-05-26",
+      "2026-06-16"
+    ],
+    "startTime": "18:30",
+    "endTime": "21:00",
+    "link": "https://www.instagram.com/repair_academie?igsh=dzllMHo0cThsd3Fo",
+    "description": {
+      "nl": "De Repair Academie is een initiatief van het Repair Cafe Zonneplein. Op deze Inloop avond kun je zelf aan de slag met het repareren van je eigen kapotte electronica of kleding. Er zijn ervaren reparateurs aanwezig om je te begeleiden en je te leren hoe je zelf repareert. Alle tools en naaimachines zijn aanwezig op locatie. Kom leren repareren!",
+      "en": "The Repair Academy is an initiative of Repair Cafe Zonneplein. During this open evening, you can start learning how to fix your own broken electronics or cloths. There are skilled repairers to guide you in the process of learning how to fix your own stuff. All tools and sewing machines are available on side. Come by and learn how to repair!"
+    }
   }
 ]
