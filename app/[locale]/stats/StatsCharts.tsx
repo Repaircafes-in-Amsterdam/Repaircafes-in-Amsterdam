@@ -253,6 +253,7 @@ function DistrictChart({
               tick={{ fill: "#2D2E82", fontSize: 13 }}
             />
             <Tooltip
+              cursor={false}
               content={(props) => (
                 <DistrictTooltip {...props} locale={locale} />
               )}
