@@ -15,8 +15,13 @@ export type CafeStats = {
   district: string;
 };
 
-export default function getCafeStats(cafe: RC): CafeStats {
+export default function getCafeStats(cafe: RC): CafeStats | null {
   const occurrences = getCafeOccurrences(cafe);
+
+  if (occurrences.length === 0) {
+    return null;
+  }
+
   const dates = occurrences.map((occurrence) => occurrence.date);
 
   return {
@@ -29,5 +34,7 @@ export default function getCafeStats(cafe: RC): CafeStats {
 }
 
 export function getCafesStats(cafes: RC[]): CafeStats[] {
-  return cafes.map((cafe) => getCafeStats(cafe));
+  return cafes
+    .map((cafe) => getCafeStats(cafe))
+    .filter((stats): stats is CafeStats => stats !== null);
 }

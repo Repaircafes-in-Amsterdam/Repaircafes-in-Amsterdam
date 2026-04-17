@@ -5,7 +5,7 @@ import { DAY_BUCKET_IDS } from "./classifyDay";
 import { DAY_TYPE_BUCKET_IDS } from "./classifyDayType";
 import { FREQUENCY_BUCKET_IDS } from "./classifyFrequency";
 import { OFFICE_HOURS_BUCKET_IDS } from "./classifyOfficeHours";
-import getCafeStats from "./getCafeStats";
+import getCafeStats, { getCafesStats } from "./getCafeStats";
 
 describe("getCafeStats", () => {
   it("classifies day, day type, office hours, district, and frequency", () => {
@@ -39,7 +39,7 @@ describe("getCafeStats", () => {
       }),
     ];
 
-    const stats = cafes.map((cafe) => getCafeStats(cafe));
+    const stats = getCafesStats(cafes);
 
     expect(countBuckets(stats, DAY_BUCKET_IDS, (cafe) => cafe.day)).toEqual([
       { id: "monday", value: 1 },
@@ -81,6 +81,36 @@ describe("getCafeStats", () => {
       { id: "biweekly", value: 0 },
       { id: "monthly", value: 0 },
       { id: "other", value: 1 },
+    ]);
+  });
+
+  it("returns null when a cafe has no occurrences in the sample period", () => {
+    const cafe = createTestRC({
+      slug: "inactive",
+      district: "Noord",
+      rrule: ["UNTIL=20200101T000000Z;FREQ=WEEKLY;BYDAY=MO;INTERVAL=1"],
+      endTime: ["17:00"],
+    });
+
+    expect(getCafeStats(cafe)).toBeNull();
+  });
+
+  it("filters out cafes without occurrences", () => {
+    const activeCafe = createTestRC({
+      slug: "active",
+      district: "Centrum",
+      rrule: ["FREQ=WEEKLY;BYDAY=MO;INTERVAL=1"],
+      endTime: ["17:00"],
+    });
+    const inactiveCafe = createTestRC({
+      slug: "inactive",
+      district: "Noord",
+      rrule: ["UNTIL=20200101T000000Z;FREQ=WEEKLY;BYDAY=MO;INTERVAL=1"],
+      endTime: ["17:00"],
+    });
+
+    expect(getCafesStats([activeCafe, inactiveCafe])).toEqual([
+      expect.objectContaining({ district: "Centrum" }),
     ]);
   });
 });
