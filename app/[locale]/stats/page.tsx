@@ -99,56 +99,49 @@ export default async function Page(props: {
   };
   const dailyCoverage = numDaysWithEvents / periodDays;
 
+  const numEventsPerMonth = (stats.numEvents / periodMonths).toFixed(2);
+  const numEventsPerDay = (stats.numEvents / periodDays).toFixed(2);
+
   return (
     <BasePage title={t("title")}>
       <div className="text-blue space-y-3 px-3 pb-6">
         <section className="space-y-3">
-          <div className="border-blue bg-blue-250 border-2 px-3 py-2 text-sm">
-            {trimTrailingColon(t("period", { periodMonths }))}
-          </div>
-          <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
-            <StatCard
-              value={stats.numRepairCafes.toLocaleString(locale)}
-              description={t("rcs", { numRepairCafes: stats.numRepairCafes })}
-            />
-            <StatCard
-              value={stats.numEvents.toLocaleString(locale)}
-              description={t("events", { numEvents: stats.numEvents })}
-            />
-            <StatCard
-              value={stats.numDaysWithEvents.toLocaleString(locale)}
-              description={t("daysWithEvents", { numDaysWithEvents })}
-            />
-            <StatCard
-              value={dailyCoverage.toLocaleString(locale, {
-                style: "percent",
-                minimumFractionDigits: 1,
-              })}
-              description={t("dailyCoverage", {
-                dailyCoverage: dailyCoverage.toLocaleString(locale, {
+          <StatCard
+            value={stats.numRepairCafes.toLocaleString(locale)}
+            description={t("rcs", { numRepairCafes: stats.numRepairCafes })}
+          />
+          <GroupedStatCard title={t("period", { periodMonths })}>
+            <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+              <StatCard
+                value={stats.numEvents.toLocaleString(locale)}
+                description={t("events", { numEvents: stats.numEvents })}
+              />
+              <StatCard
+                value={`±${numEventsPerMonth}`}
+                description={t("eventsPerMonth")}
+              />
+              <StatCard
+                value={`±${numEventsPerDay}`}
+                description={t("eventsPerDay")}
+              />
+              <StatCard
+                value={stats.numDaysWithEvents.toLocaleString(locale)}
+                description={t("daysWithEvents", { numDaysWithEvents })}
+              />
+              <StatCard
+                value={dailyCoverage.toLocaleString(locale, {
                   style: "percent",
-                  minimumFractionDigits: 2,
-                }),
-              })}
-            />
-          </div>
-          <div className="grid gap-3 text-sm text-slate-600 sm:grid-cols-2 xl:grid-cols-3">
-            <InlineStat>
-              {t("eventsPerMonth", {
-                numEventsPerMonth: (stats.numEvents / periodMonths).toFixed(2),
-              })}
-            </InlineStat>
-            <InlineStat>
-              {t("eventsPerDay", {
-                numEventsPerDay: (stats.numEvents / periodDays).toFixed(2),
-              })}
-            </InlineStat>
-            <InlineStat>
-              {t("daysWithoutEvents", {
-                numDaysWithoutEvents: periodDays - numDaysWithEvents,
-              })}
-            </InlineStat>
-          </div>
+                  minimumFractionDigits: 1,
+                })}
+                description={t("dailyCoverage", {
+                  dailyCoverage: dailyCoverage.toLocaleString(locale, {
+                    style: "percent",
+                    minimumFractionDigits: 2,
+                  }),
+                })}
+              />
+            </div>
+          </GroupedStatCard>
         </section>
 
         <StatsCharts
@@ -179,17 +172,26 @@ function StatCard({
   description: string;
 }) {
   return (
-    <section className="border-blue border-2 bg-white">
-      <div className="bg-blue px-3 py-2 text-sm font-bold text-white">
-        {value}
-      </div>
-      <p className="bg-blue-250 px-3 py-3 text-sm">{description}</p>
+    <section className="border-blue bg-blue-250 border-l-2 px-3 py-2">
+      <p className="text-2xl font-bold">{value}</p>
+      <p className="text-sm">{description}</p>
     </section>
   );
 }
 
-function InlineStat({ children }: { children: string }) {
+function GroupedStatCard({
+  title,
+  children,
+}: {
+  title: string;
+  children: React.ReactNode;
+}) {
   return (
-    <div className="border-blue bg-blue-250 border-2 px-3 py-3">{children}</div>
+    <article className="border-blue border-2 bg-white">
+      <div className="bg-blue flex items-center justify-between gap-3 px-3 py-2 text-white">
+        <h2 className="font-bold">{title}</h2>
+      </div>
+      <div className="p-3">{children}</div>
+    </article>
   );
 }
