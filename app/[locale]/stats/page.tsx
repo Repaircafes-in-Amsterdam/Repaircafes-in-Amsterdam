@@ -3,7 +3,6 @@ import BasePage from "@/app/components/BasePage";
 import { Metadata } from "next";
 import { BASE_URL } from "@/app/constants";
 import { Event, RC } from "@/app/types";
-import { Suspense } from "react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import getEvents from "@/app/actions/getEvents";
 import groupBy from "lodash/groupBy";
@@ -16,12 +15,8 @@ import { DAY_BUCKET_IDS } from "../../utils/stats/classifyDay";
 import { DAY_TYPE_BUCKET_IDS } from "../../utils/stats/classifyDayType";
 import { OFFICE_HOURS_BUCKET_IDS } from "../../utils/stats/classifyOfficeHours";
 import { getCafesStats } from "../../utils/stats/getCafeStats";
-
-type LabeledBucket = {
-  id: string;
-  label: string;
-  value: number;
-};
+import StatsCharts from "./StatsCharts";
+import type { LabeledBucket, Stats } from "./types";
 
 export async function generateMetadata(props: {
   params: Promise<{ locale: string }>;
@@ -42,19 +37,6 @@ export async function generateMetadata(props: {
     },
   };
 }
-
-type Stats = {
-  numRepairCafes: number;
-  periodMonths: number;
-  periodDays: number;
-  numEvents: number;
-  numDaysWithEvents: number;
-  frequencyBuckets: LabeledBucket[];
-  dayBuckets: LabeledBucket[];
-  dayTypeBuckets: LabeledBucket[];
-  officeHoursBuckets: LabeledBucket[];
-  districtBuckets: LabeledBucket[];
-};
 
 export default async function Page(props: {
   params: Promise<{ locale: string }>;
@@ -115,96 +97,101 @@ export default async function Page(props: {
       (id) => districtsT(id),
     ),
   };
+  const dailyCoverage = numDaysWithEvents / periodDays;
+
   return (
     <BasePage title={t("title")}>
-      <Suspense>
-        <ClientPage stats={stats} locale={locale} />
-      </Suspense>
+      <div className="space-y-6 px-3 pb-6">
+        <section className="space-y-3">
+          <p className="text-sm text-slate-600">
+            {trimTrailingColon(t("period", { periodMonths }))}
+          </p>
+          <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+            <StatCard
+              value={stats.numRepairCafes.toLocaleString(locale)}
+              description={t("rcs", { numRepairCafes: stats.numRepairCafes })}
+            />
+            <StatCard
+              value={stats.numEvents.toLocaleString(locale)}
+              description={t("events", { numEvents: stats.numEvents })}
+            />
+            <StatCard
+              value={stats.numDaysWithEvents.toLocaleString(locale)}
+              description={t("daysWithEvents", { numDaysWithEvents })}
+            />
+            <StatCard
+              value={dailyCoverage.toLocaleString(locale, {
+                style: "percent",
+                minimumFractionDigits: 1,
+              })}
+              description={t("dailyCoverage", {
+                dailyCoverage: dailyCoverage.toLocaleString(locale, {
+                  style: "percent",
+                  minimumFractionDigits: 2,
+                }),
+              })}
+            />
+          </div>
+          <div className="grid gap-3 text-sm text-slate-600 sm:grid-cols-2 xl:grid-cols-3">
+            <InlineStat>
+              {t("eventsPerMonth", {
+                numEventsPerMonth: (stats.numEvents / periodMonths).toFixed(2),
+              })}
+            </InlineStat>
+            <InlineStat>
+              {t("eventsPerDay", {
+                numEventsPerDay: (stats.numEvents / periodDays).toFixed(2),
+              })}
+            </InlineStat>
+            <InlineStat>
+              {t("daysWithoutEvents", {
+                numDaysWithoutEvents: periodDays - numDaysWithEvents,
+              })}
+            </InlineStat>
+          </div>
+        </section>
+
+        <StatsCharts
+          stats={stats}
+          locale={locale}
+          titles={{
+            frequency: trimTrailingColon(t("frequencyTitle")),
+            day: trimTrailingColon(t("dayTitle")),
+            dayType: trimTrailingColon(t("dayTypeTitle")),
+            officeHours: trimTrailingColon(t("officeHoursTitle")),
+            district: trimTrailingColon(t("districtTitle")),
+          }}
+        />
+      </div>
     </BasePage>
   );
 }
 
-async function ClientPage(props: { stats: Stats; locale: string }) {
-  const {
-    numRepairCafes,
-    periodMonths,
-    periodDays,
-    numEvents,
-    numDaysWithEvents,
-    frequencyBuckets,
-    dayBuckets,
-    dayTypeBuckets,
-    officeHoursBuckets,
-    districtBuckets,
-  } = props.stats;
-  const { locale } = props;
-  const t = await getTranslations({ locale, namespace: "stats" });
+function trimTrailingColon(value: string) {
+  return value.replace(/:\s*$/, "");
+}
 
-  const renderBuckets = (buckets: LabeledBucket[]) => (
-    <ul>
-      {buckets.map((bucket) => (
-        <li key={bucket.id}>
-          {bucket.label}: {bucket.value}
-        </li>
-      ))}
-    </ul>
-  );
-
+function StatCard({
+  value,
+  description,
+}: {
+  value: string;
+  description: string;
+}) {
   return (
-    <div className="prose px-3 pb-3">
-      <ul>
-        <li>{t("rcs", { numRepairCafes })}</li>
-        <li>
-          {t("period", { periodMonths })}
-          <ul>
-            <li>{t("events", { numEvents })}</li>
-            <li>
-              {t("eventsPerMonth", {
-                numEventsPerMonth: (numEvents / periodMonths).toFixed(2),
-              })}
-            </li>
-            <li>
-              {t("eventsPerDay", {
-                numEventsPerDay: (numEvents / periodDays).toFixed(2),
-              })}
-            </li>
-            <li>{t("daysWithEvents", { numDaysWithEvents })}</li>
-            <li>
-              {t("dailyCoverage", {
-                dailyCoverage: (numDaysWithEvents / periodDays).toLocaleString(
-                  locale,
-                  { style: "percent", minimumFractionDigits: 2 },
-                ),
-              })}
-            </li>
-            <li>
-              {t("daysWithoutEvents", {
-                numDaysWithoutEvents: periodDays - numDaysWithEvents,
-              })}
-            </li>
-            <li>
-              {t("frequencyTitle")}
-              {renderBuckets(frequencyBuckets)}
-            </li>
-            <li>
-              {t("dayTitle")}
-              {renderBuckets(dayBuckets)}
-            </li>
-            <li>
-              {t("dayTypeTitle")}
-              {renderBuckets(dayTypeBuckets)}
-            </li>
-            <li>
-              {t("officeHoursTitle")}
-              {renderBuckets(officeHoursBuckets)}
-            </li>
-            <li>
-              {t("districtTitle")}
-              {renderBuckets(districtBuckets)}
-            </li>
-          </ul>
-        </li>
-      </ul>
+    <div className="rounded-3xl border border-slate-200 bg-slate-50/80 p-4 shadow-sm shadow-slate-200/50">
+      <p className="text-3xl font-semibold tracking-tight text-slate-950">
+        {value}
+      </p>
+      <p className="mt-2 text-sm text-slate-600">{description}</p>
+    </div>
+  );
+}
+
+function InlineStat({ children }: { children: string }) {
+  return (
+    <div className="rounded-2xl border border-slate-200 bg-white px-4 py-3 shadow-sm shadow-slate-200/40">
+      {children}
     </div>
   );
 }
