@@ -101,11 +101,11 @@ export default async function Page(props: {
 
   return (
     <BasePage title={t("title")}>
-      <div className="space-y-6 px-3 pb-6">
+      <div className="text-blue space-y-3 px-3 pb-6">
         <section className="space-y-3">
-          <p className="text-sm text-slate-600">
+          <div className="border-blue bg-blue-250 border-2 px-3 py-2 text-sm">
             {trimTrailingColon(t("period", { periodMonths }))}
-          </p>
+          </div>
           <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
             <StatCard
               value={stats.numRepairCafes.toLocaleString(locale)}
@@ -179,19 +179,17 @@ function StatCard({
   description: string;
 }) {
   return (
-    <div className="rounded-3xl border border-slate-200 bg-slate-50/80 p-4 shadow-sm shadow-slate-200/50">
-      <p className="text-3xl font-semibold tracking-tight text-slate-950">
+    <section className="border-blue border-2 bg-white">
+      <div className="bg-blue px-3 py-2 text-sm font-bold text-white">
         {value}
-      </p>
-      <p className="mt-2 text-sm text-slate-600">{description}</p>
-    </div>
+      </div>
+      <p className="bg-blue-250 px-3 py-3 text-sm">{description}</p>
+    </section>
   );
 }
 
 function InlineStat({ children }: { children: string }) {
   return (
-    <div className="rounded-2xl border border-slate-200 bg-white px-4 py-3 shadow-sm shadow-slate-200/40">
-      {children}
-    </div>
+    <div className="border-blue bg-blue-250 border-2 px-3 py-3">{children}</div>
   );
 }

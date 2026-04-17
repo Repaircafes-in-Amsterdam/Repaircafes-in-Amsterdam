@@ -17,17 +17,17 @@ import {
 import type { LabeledBucket, Stats } from "./types";
 
 const PIE_COLORS = [
-  "#2563eb",
-  "#ef4444",
-  "#f59e0b",
-  "#10b981",
-  "#8b5cf6",
-  "#f97316",
-  "#06b6d4",
-  "#64748b",
+  "#2D2E82",
+  "#ED6A42",
+  "#5A5DB8",
+  "#EF8565",
+  "#B7B9FF",
+  "#1F205A",
+  "#F4B29D",
+  "#7E82D9",
 ];
 
-const BAR_COLOR = "#2563eb";
+const BAR_COLOR = "#2D2E82";
 const RADIAN = Math.PI / 180;
 
 type PieLabelProps = {
@@ -84,13 +84,13 @@ function renderPieLabel(locale: string) {
         y={y}
         textAnchor={x > cx ? "start" : "end"}
         dominantBaseline="central"
-        fill="#0f172a"
+        fill="#2D2E82"
         fontSize={12}
       >
         <tspan x={x} dy="-0.15em">
           {name}
         </tspan>
-        <tspan x={x} dy="1.2em" fill="#64748b" fontSize={11}>
+        <tspan x={x} dy="1.2em" fill="#ED6A42" fontSize={11}>
           {formatPercent(percent, locale)}
         </tspan>
       </text>
@@ -113,18 +113,14 @@ function PieChartCard({ title, buckets, locale }: PieChartCardProps) {
   );
 
   return (
-    <article className="rounded-3xl border border-slate-200 bg-white p-4 shadow-sm shadow-slate-200/60">
-      <div className="flex items-start justify-between gap-3">
-        <div>
-          <h2 className="text-lg font-semibold text-slate-950">{title}</h2>
-          <p className="mt-1 text-sm text-slate-500">
-            {numberFormatter.format(total)}
-          </p>
-        </div>
+    <article className="border-blue border-2 bg-white">
+      <div className="bg-blue flex items-center justify-between gap-3 px-3 py-2 text-white">
+        <h2 className="font-bold">{title}</h2>
+        <p className="text-sm">{numberFormatter.format(total)}</p>
       </div>
-      <div className="mt-4 h-72">
+      <div className="bg-blue-250 h-72 px-2 py-3">
         <ResponsiveContainer width="100%" height="100%">
-          <PieChart margin={{ top: 16, right: 36, bottom: 16, left: 36 }}>
+          <PieChart margin={{ top: 16, right: 44, bottom: 16, left: 44 }}>
             <Pie
               data={data}
               dataKey="value"
@@ -156,10 +152,12 @@ function PieChartCard({ title, buckets, locale }: PieChartCardProps) {
                 ];
               }}
               contentStyle={{
-                borderRadius: "16px",
-                borderColor: "#cbd5e1",
-                boxShadow: "0 10px 30px rgba(15, 23, 42, 0.08)",
+                borderRadius: "0",
+                border: "2px solid #2D2E82",
+                boxShadow: "none",
+                color: "#2D2E82",
               }}
+              itemStyle={{ color: "#2D2E82" }}
             />
           </PieChart>
         </ResponsiveContainer>
@@ -192,22 +190,24 @@ function DistrictChart({
   const chartHeight = Math.max(320, data.length * 44);
 
   return (
-    <article className="rounded-3xl border border-slate-200 bg-white p-4 shadow-sm shadow-slate-200/60 lg:col-span-2">
-      <h2 className="text-lg font-semibold text-slate-950">{title}</h2>
-      <div className="mt-4" style={{ height: chartHeight }}>
+    <article className="border-blue border-2 bg-white lg:col-span-2">
+      <div className="bg-blue px-3 py-2 text-white">
+        <h2 className="font-bold">{title}</h2>
+      </div>
+      <div className="bg-blue-250 px-3 py-3" style={{ height: chartHeight }}>
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
             data={data}
             layout="vertical"
             margin={{ top: 8, right: 32, bottom: 8, left: 8 }}
           >
-            <CartesianGrid stroke="#e2e8f0" horizontal={false} />
+            <CartesianGrid stroke="#B7B9FF" horizontal={false} />
             <XAxis
               type="number"
               allowDecimals={false}
               axisLine={false}
               tickLine={false}
-              tick={{ fill: "#64748b", fontSize: 12 }}
+              tick={{ fill: "#2D2E82", fontSize: 12 }}
             />
             <YAxis
               type="category"
@@ -215,24 +215,26 @@ function DistrictChart({
               width={110}
               axisLine={false}
               tickLine={false}
-              tick={{ fill: "#0f172a", fontSize: 13 }}
+              tick={{ fill: "#2D2E82", fontSize: 13 }}
             />
             <Tooltip
               formatter={(value) => numberFormatter.format(Number(value))}
               contentStyle={{
-                borderRadius: "16px",
-                borderColor: "#cbd5e1",
-                boxShadow: "0 10px 30px rgba(15, 23, 42, 0.08)",
+                borderRadius: "0",
+                border: "2px solid #2D2E82",
+                boxShadow: "none",
+                color: "#2D2E82",
               }}
+              itemStyle={{ color: "#2D2E82" }}
             />
-            <Bar dataKey="value" fill={BAR_COLOR} radius={[0, 10, 10, 0]}>
+            <Bar dataKey="value" fill={BAR_COLOR} radius={[0, 0, 0, 0]}>
               <LabelList
                 dataKey="value"
                 position="right"
                 formatter={(value) =>
                   numberFormatter.format(Number(value ?? 0))
                 }
-                fill="#0f172a"
+                fill="#2D2E82"
                 fontSize={12}
               />
             </Bar>
@@ -245,7 +247,7 @@ function DistrictChart({
 
 function LoadingCard() {
   return (
-    <div className="h-[24rem] animate-pulse rounded-3xl border border-slate-200 bg-slate-100" />
+    <div className="border-blue bg-blue-250 h-[24rem] animate-pulse border-2" />
   );
 }
 
@@ -262,7 +264,7 @@ export default function StatsCharts({
 
   if (!isMounted) {
     return (
-      <div className="grid gap-4 lg:grid-cols-2">
+      <div className="grid gap-3 lg:grid-cols-2">
         <LoadingCard />
         <LoadingCard />
         <LoadingCard />
@@ -275,7 +277,7 @@ export default function StatsCharts({
   }
 
   return (
-    <div className="grid gap-4 lg:grid-cols-2">
+    <div className="grid gap-3 lg:grid-cols-2">
       <PieChartCard
         title={titles.frequency}
         buckets={stats.frequencyBuckets}
