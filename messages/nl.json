@@ -147,6 +147,7 @@
     "dayTypeTitle": "Dagtype:",
     "officeHoursTitle": "Tijdens kantooruren:",
     "districtTitle": "Stadsdeel:",
+    "districtTooltip": "{value} in {district}",
     "frequencyBuckets": {
       "weekly": "Wekelijks",
       "biweekly": "Tweewekelijks",

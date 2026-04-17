@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { useTranslations } from "next-intl";
 import {
   Bar,
   BarChart,
@@ -165,6 +166,39 @@ function PieChartCard({ title, buckets, locale }: PieChartCardProps) {
   );
 }
 
+type DistrictTooltipProps = {
+  active?: boolean;
+  payload?: ReadonlyArray<{ value?: unknown }>;
+  label?: string | number;
+  locale: string;
+};
+
+function DistrictTooltip({
+  active,
+  payload,
+  label,
+  locale,
+}: DistrictTooltipProps) {
+  const t = useTranslations("stats");
+
+  if (!active || !payload?.length) {
+    return null;
+  }
+
+  const value = Number(payload[0].value ?? 0);
+  const district = String(label ?? "");
+  const formattedValue = new Intl.NumberFormat(locale).format(value);
+
+  return (
+    <div className="border-blue text-blue border-2 bg-white px-3 py-2 text-sm">
+      {t("districtTooltip", {
+        value: formattedValue,
+        district,
+      })}
+    </div>
+  );
+}
+
 function DistrictChart({
   title,
   buckets,
@@ -217,14 +251,9 @@ function DistrictChart({
               tick={{ fill: "#2D2E82", fontSize: 13 }}
             />
             <Tooltip
-              formatter={(value) => numberFormatter.format(Number(value))}
-              contentStyle={{
-                borderRadius: "0",
-                border: "2px solid #2D2E82",
-                boxShadow: "none",
-                color: "#2D2E82",
-              }}
-              itemStyle={{ color: "#2D2E82" }}
+              content={(props) => (
+                <DistrictTooltip {...props} locale={locale} />
+              )}
             />
             <Bar dataKey="value" fill={BAR_COLOR} radius={[0, 0, 0, 0]}>
               <LabelList

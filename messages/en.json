@@ -147,6 +147,7 @@
     "dayTypeTitle": "Day type:",
     "officeHoursTitle": "During office hours:",
     "districtTitle": "District:",
+    "districtTooltip": "{value} in {district}",
     "frequencyBuckets": {
       "weekly": "Weekly",
       "biweekly": "Biweekly",
