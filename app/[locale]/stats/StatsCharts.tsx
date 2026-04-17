@@ -127,6 +127,8 @@ function PieChartCard({ title, buckets, locale }: PieChartCardProps) {
               nameKey="label"
               cx="50%"
               cy="50%"
+              startAngle={90}
+              endAngle={-270}
               outerRadius="68%"
               // paddingAngle={data.length > 1 ? 2 : 0}
               labelLine
