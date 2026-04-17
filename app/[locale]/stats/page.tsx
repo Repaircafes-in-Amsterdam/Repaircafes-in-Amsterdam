@@ -148,11 +148,11 @@ export default async function Page(props: {
           stats={stats}
           locale={locale}
           titles={{
-            frequency: trimTrailingColon(t("frequencyTitle")),
-            day: trimTrailingColon(t("dayTitle")),
-            dayType: trimTrailingColon(t("dayTypeTitle")),
-            officeHours: trimTrailingColon(t("officeHoursTitle")),
-            district: trimTrailingColon(t("districtTitle")),
+            frequency: t("frequencyTitle"),
+            day: t("dayTitle"),
+            dayType: t("dayTypeTitle"),
+            officeHours: t("officeHoursTitle"),
+            district: t("districtTitle"),
           }}
         />
       </div>
