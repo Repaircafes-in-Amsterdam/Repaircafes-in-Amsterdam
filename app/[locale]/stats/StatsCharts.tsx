@@ -118,7 +118,7 @@ function PieChartCard({ title, buckets, locale }: PieChartCardProps) {
       <div className="bg-blue flex items-center justify-between gap-3 px-3 py-2 text-white">
         <h2 className="font-bold">{title}</h2>
       </div>
-      <div className="bg-blue-250 h-72 px-2 py-3">
+      <div className="bg-blue-250 h-72">
         <ResponsiveContainer width="100%" height="100%">
           <PieChart margin={{ top: 16, right: 44, bottom: 16, left: 44 }}>
             <Pie
@@ -129,9 +129,8 @@ function PieChartCard({ title, buckets, locale }: PieChartCardProps) {
               cy="50%"
               startAngle={90}
               endAngle={-270}
-              outerRadius="68%"
-              // paddingAngle={data.length > 1 ? 2 : 0}
-              labelLine
+              outerRadius="60%"
+              labelLine={{ stroke: "#2D2E82" }}
               label={renderPieLabel(locale)}
               isAnimationActive={false}
             >
