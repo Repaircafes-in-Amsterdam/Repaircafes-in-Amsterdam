@@ -99,8 +99,13 @@ export default async function Page(props: {
   };
   const dailyCoverage = numDaysWithEvents / periodDays;
 
-  const numEventsPerMonth = (stats.numEvents / periodMonths).toFixed(2);
-  const numEventsPerDay = (stats.numEvents / periodDays).toFixed(2);
+  const decimalFormatter = new Intl.NumberFormat(locale, {
+    maximumFractionDigits: 2,
+  });
+  const numEventsPerMonth = decimalFormatter.format(
+    stats.numEvents / periodMonths,
+  );
+  const numEventsPerDay = decimalFormatter.format(stats.numEvents / periodDays);
 
   return (
     <BasePage title={t("title")}>
@@ -131,13 +136,9 @@ export default async function Page(props: {
               <StatCard
                 value={dailyCoverage.toLocaleString(locale, {
                   style: "percent",
-                  minimumFractionDigits: 1,
                 })}
                 description={t("dailyCoverage", {
-                  dailyCoverage: dailyCoverage.toLocaleString(locale, {
-                    style: "percent",
-                    minimumFractionDigits: 2,
-                  }),
+                  dailyCoverage,
                 })}
               />
             </div>
@@ -158,10 +159,6 @@ export default async function Page(props: {
       </div>
     </BasePage>
   );
-}
-
-function trimTrailingColon(value: string) {
-  return value.replace(/:\s*$/, "");
 }
 
 function StatCard({
