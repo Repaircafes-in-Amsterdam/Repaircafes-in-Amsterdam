@@ -17,6 +17,8 @@ import { OFFICE_HOURS_BUCKET_IDS } from "../../utils/stats/classifyOfficeHours";
 import { getCafesStats } from "../../utils/stats/getCafeStats";
 import StatsCharts from "./StatsCharts";
 import type { LabeledBucket, Stats } from "./types";
+import GroupCard from "./GroupCard";
+import StatCard from "./StatCard";
 
 export async function generateMetadata(props: {
   params: Promise<{ locale: string }>;
@@ -115,7 +117,7 @@ export default async function Page(props: {
             value={stats.numRepairCafes.toLocaleString(locale)}
             description={t("rcs", { numRepairCafes: stats.numRepairCafes })}
           />
-          <GroupedStatCard title={t("period", { periodMonths })}>
+          <GroupCard title={t("period", { periodMonths })}>
             <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
               <StatCard
                 value={stats.numEvents.toLocaleString(locale)}
@@ -142,7 +144,7 @@ export default async function Page(props: {
                 })}
               />
             </div>
-          </GroupedStatCard>
+          </GroupCard>
         </section>
 
         <StatsCharts
@@ -158,37 +160,5 @@ export default async function Page(props: {
         />
       </div>
     </BasePage>
-  );
-}
-
-function StatCard({
-  value,
-  description,
-}: {
-  value: string;
-  description: string;
-}) {
-  return (
-    <section className="border-blue bg-blue-250 border-l-2 px-3 py-2">
-      <p className="text-2xl font-bold">{value}</p>
-      <p className="text-sm">{description}</p>
-    </section>
-  );
-}
-
-function GroupedStatCard({
-  title,
-  children,
-}: {
-  title: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <article className="border-blue border-2 bg-white">
-      <div className="bg-blue flex items-center justify-between gap-3 px-3 py-2 text-white">
-        <h2 className="font-bold">{title}</h2>
-      </div>
-      <div className="p-3">{children}</div>
-    </article>
   );
 }
