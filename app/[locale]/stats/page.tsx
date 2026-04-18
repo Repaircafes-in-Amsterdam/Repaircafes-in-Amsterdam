@@ -104,10 +104,8 @@ export default async function Page(props: {
   const decimalFormatter = new Intl.NumberFormat(locale, {
     maximumFractionDigits: 2,
   });
-  const numEventsPerMonth = decimalFormatter.format(
-    stats.numEvents / periodMonths,
-  );
-  const numEventsPerDay = decimalFormatter.format(stats.numEvents / periodDays);
+  const numEventsPerMonth = stats.numEvents / periodMonths;
+  const numEventsPerDay = stats.numEvents / periodDays;
 
   return (
     <BasePage title={t("title")}>
@@ -124,12 +122,12 @@ export default async function Page(props: {
                 description={t("events", { numEvents: stats.numEvents })}
               />
               <StatCard
-                value={`±${numEventsPerMonth}`}
-                description={t("eventsPerMonth")}
+                value={`±${decimalFormatter.format(numEventsPerMonth)}`}
+                description={t("eventsPerMonth", { numEventsPerMonth })}
               />
               <StatCard
-                value={`±${numEventsPerDay}`}
-                description={t("eventsPerDay")}
+                value={`±${decimalFormatter.format(numEventsPerDay)}`}
+                description={t("eventsPerDay", { numEventsPerDay })}
               />
               <StatCard
                 value={stats.numDaysWithEvents.toLocaleString(locale)}
