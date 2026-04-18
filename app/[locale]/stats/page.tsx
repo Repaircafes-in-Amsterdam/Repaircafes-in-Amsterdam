@@ -139,9 +139,7 @@ export default async function Page(props: {
                 value={dailyCoverage.toLocaleString(locale, {
                   style: "percent",
                 })}
-                description={t("dailyCoverage", {
-                  dailyCoverage,
-                })}
+                description={t("dailyCoverage")}
               />
             </div>
           </GroupCard>
