@@ -3,7 +3,6 @@ import BasePage from "@/app/components/BasePage";
 import { Metadata } from "next";
 import { BASE_URL } from "@/app/constants";
 import { Event, RC } from "@/app/types";
-import { Suspense } from "react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import getEvents from "@/app/actions/getEvents";
 import groupBy from "lodash/groupBy";
@@ -16,12 +15,10 @@ import { DAY_BUCKET_IDS } from "../../utils/stats/classifyDay";
 import { DAY_TYPE_BUCKET_IDS } from "../../utils/stats/classifyDayType";
 import { OFFICE_HOURS_BUCKET_IDS } from "../../utils/stats/classifyOfficeHours";
 import { getCafesStats } from "../../utils/stats/getCafeStats";
-
-type LabeledBucket = {
-  id: string;
-  label: string;
-  value: number;
-};
+import StatsCharts from "./StatsCharts";
+import type { LabeledBucket, Stats } from "./types";
+import GroupCard from "./GroupCard";
+import StatCard from "./StatCard";
 
 export async function generateMetadata(props: {
   params: Promise<{ locale: string }>;
@@ -42,19 +39,6 @@ export async function generateMetadata(props: {
     },
   };
 }
-
-type Stats = {
-  numRepairCafes: number;
-  periodMonths: number;
-  periodDays: number;
-  numEvents: number;
-  numDaysWithEvents: number;
-  frequencyBuckets: LabeledBucket[];
-  dayBuckets: LabeledBucket[];
-  dayTypeBuckets: LabeledBucket[];
-  officeHoursBuckets: LabeledBucket[];
-  districtBuckets: LabeledBucket[];
-};
 
 export default async function Page(props: {
   params: Promise<{ locale: string }>;
@@ -115,96 +99,64 @@ export default async function Page(props: {
       (id) => districtsT(id),
     ),
   };
+  const dailyCoverage = numDaysWithEvents / periodDays;
+
+  const decimalFormatter = new Intl.NumberFormat(locale, {
+    maximumFractionDigits: 2,
+  });
+  const numEventsPerMonth = decimalFormatter.format(
+    stats.numEvents / periodMonths,
+  );
+  const numEventsPerDay = decimalFormatter.format(stats.numEvents / periodDays);
+
   return (
     <BasePage title={t("title")}>
-      <Suspense>
-        <ClientPage stats={stats} locale={locale} />
-      </Suspense>
+      <div className="text-blue space-y-3 px-3 pb-6">
+        <section className="space-y-3">
+          <StatCard
+            value={stats.numRepairCafes.toLocaleString(locale)}
+            description={t("rcs", { numRepairCafes: stats.numRepairCafes })}
+          />
+          <GroupCard title={t("period", { periodMonths })}>
+            <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+              <StatCard
+                value={stats.numEvents.toLocaleString(locale)}
+                description={t("events", { numEvents: stats.numEvents })}
+              />
+              <StatCard
+                value={`±${numEventsPerMonth}`}
+                description={t("eventsPerMonth")}
+              />
+              <StatCard
+                value={`±${numEventsPerDay}`}
+                description={t("eventsPerDay")}
+              />
+              <StatCard
+                value={stats.numDaysWithEvents.toLocaleString(locale)}
+                description={t("daysWithEvents", { numDaysWithEvents })}
+              />
+              <StatCard
+                value={dailyCoverage.toLocaleString(locale, {
+                  style: "percent",
+                })}
+                description={t("dailyCoverage")}
+              />
+            </div>
+          </GroupCard>
+        </section>
+
+        <StatsCharts
+          stats={stats}
+          locale={locale}
+          titles={{
+            frequency: t("frequencyTitle"),
+            day: t("dayTitle"),
+            dayType: t("dayTypeTitle"),
+            officeHours: t("officeHoursTitle"),
+            district: t("districtTitle"),
+          }}
+        />
+      </div>
     </BasePage>
-  );
-}
-
-async function ClientPage(props: { stats: Stats; locale: string }) {
-  const {
-    numRepairCafes,
-    periodMonths,
-    periodDays,
-    numEvents,
-    numDaysWithEvents,
-    frequencyBuckets,
-    dayBuckets,
-    dayTypeBuckets,
-    officeHoursBuckets,
-    districtBuckets,
-  } = props.stats;
-  const { locale } = props;
-  const t = await getTranslations({ locale, namespace: "stats" });
-
-  const renderBuckets = (buckets: LabeledBucket[]) => (
-    <ul>
-      {buckets.map((bucket) => (
-        <li key={bucket.id}>
-          {bucket.label}: {bucket.value}
-        </li>
-      ))}
-    </ul>
-  );
-
-  return (
-    <div className="prose px-3 pb-3">
-      <ul>
-        <li>{t("rcs", { numRepairCafes })}</li>
-        <li>
-          {t("period", { periodMonths })}
-          <ul>
-            <li>{t("events", { numEvents })}</li>
-            <li>
-              {t("eventsPerMonth", {
-                numEventsPerMonth: (numEvents / periodMonths).toFixed(2),
-              })}
-            </li>
-            <li>
-              {t("eventsPerDay", {
-                numEventsPerDay: (numEvents / periodDays).toFixed(2),
-              })}
-            </li>
-            <li>{t("daysWithEvents", { numDaysWithEvents })}</li>
-            <li>
-              {t("dailyCoverage", {
-                dailyCoverage: (numDaysWithEvents / periodDays).toLocaleString(
-                  locale,
-                  { style: "percent", minimumFractionDigits: 2 },
-                ),
-              })}
-            </li>
-            <li>
-              {t("daysWithoutEvents", {
-                numDaysWithoutEvents: periodDays - numDaysWithEvents,
-              })}
-            </li>
-            <li>
-              {t("frequencyTitle")}
-              {renderBuckets(frequencyBuckets)}
-            </li>
-            <li>
-              {t("dayTitle")}
-              {renderBuckets(dayBuckets)}
-            </li>
-            <li>
-              {t("dayTypeTitle")}
-              {renderBuckets(dayTypeBuckets)}
-            </li>
-            <li>
-              {t("officeHoursTitle")}
-              {renderBuckets(officeHoursBuckets)}
-            </li>
-            <li>
-              {t("districtTitle")}
-              {renderBuckets(districtBuckets)}
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </div>
   );
 }
