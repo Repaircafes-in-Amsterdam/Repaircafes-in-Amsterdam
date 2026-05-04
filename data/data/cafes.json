@@ -1549,8 +1549,8 @@
     "district": "Noord",
     "email": "repaircafeoudnoord@gmail.com",
     "doRepair": {
-      "nl": "Electronica, Kleding, Fietsen, Meubels",
-      "en": "Electronics, Clothing, Bicycles, Furniture"
+      "nl": "Electronica, Kleding",
+      "en": "Electronics, Clothing"
     },
     "dontRepair": {
       "nl": "Telefoons",
