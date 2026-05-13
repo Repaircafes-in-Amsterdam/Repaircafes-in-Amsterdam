@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin";
 
 const colors = {
   blue: {
@@ -15,6 +16,16 @@ const colors = {
 
 // based on 65ch, but font loading caused layout shift
 const bodyWidth = "calc(41rem + 0.75rem)";
+
+const scrollbarColorUtilities = plugin(({ addUtilities }) => {
+  addUtilities({
+    ".scrollbar-default": {
+      "--tw-scrollbar-thumb": colors.orange.DEFAULT,
+      "--tw-scrollbar-track": colors.white,
+      "scrollbar-color": "var(--tw-scrollbar-thumb) var(--tw-scrollbar-track)",
+    },
+  });
+});
 
 const config: Config = {
   content: [
@@ -60,6 +71,7 @@ const config: Config = {
   plugins: [
     require("@tailwindcss/typography"),
     require("@tailwindcss/aspect-ratio"),
+    scrollbarColorUtilities,
   ],
 };
 export default config;
