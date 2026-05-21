@@ -18,6 +18,7 @@
     "update-cafes": "node data/update-cafes.mjs",
     "update-map-data": "node data/update-map-data.mjs",
     "update-holidays-data": "node data/update-holidays-data.mjs",
+    "update-ramadan-data": "node data/update-ramadan-data.mjs",
     "update-festivals": "node data/update-festivals.mjs"
   },
   "dependencies": {
