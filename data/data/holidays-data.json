@@ -1,145 +1,5 @@
 [
   {
-    "name": "Eerste kerstdag",
-    "startDate": "2024-12-25",
-    "endDate": "2024-12-25",
-    "startTime": 1735084800000,
-    "endTime": 1735171200000
-  },
-  {
-    "name": "Tweede kerstdag",
-    "startDate": "2024-12-26",
-    "endDate": "2024-12-26",
-    "startTime": 1735171200000,
-    "endTime": 1735257600000
-  },
-  {
-    "name": "Nieuwjaarsdag",
-    "startDate": "2025-01-01",
-    "endDate": "2025-01-01",
-    "startTime": 1735689600000,
-    "endTime": 1735776000000
-  },
-  {
-    "name": "Goede vrijdag",
-    "startDate": "2025-04-18",
-    "endDate": "2025-04-18",
-    "startTime": 1744934400000,
-    "endTime": 1745020800000
-  },
-  {
-    "name": "Eerste paasdag",
-    "startDate": "2025-04-20",
-    "endDate": "2025-04-20",
-    "startTime": 1745107200000,
-    "endTime": 1745193600000
-  },
-  {
-    "name": "Tweede paasdag",
-    "startDate": "2025-04-21",
-    "endDate": "2025-04-21",
-    "startTime": 1745193600000,
-    "endTime": 1745280000000
-  },
-  {
-    "name": "Koningsdag",
-    "startDate": "2025-04-26",
-    "endDate": "2025-04-26",
-    "startTime": 1745625600000,
-    "endTime": 1745712000000
-  },
-  {
-    "name": "Bevrijdingsdag",
-    "startDate": "2025-05-05",
-    "endDate": "2025-05-05",
-    "startTime": 1746403200000,
-    "endTime": 1746489600000
-  },
-  {
-    "name": "Hemelvaartsdag",
-    "startDate": "2025-05-29",
-    "endDate": "2025-05-29",
-    "startTime": 1748476800000,
-    "endTime": 1748563200000
-  },
-  {
-    "name": "Eerste pinksterdag",
-    "startDate": "2025-06-08",
-    "endDate": "2025-06-08",
-    "startTime": 1749340800000,
-    "endTime": 1749427200000
-  },
-  {
-    "name": "Tweede pinksterdag",
-    "startDate": "2025-06-09",
-    "endDate": "2025-06-09",
-    "startTime": 1749427200000,
-    "endTime": 1749513600000
-  },
-  {
-    "name": "Eerste kerstdag",
-    "startDate": "2025-12-25",
-    "endDate": "2025-12-25",
-    "startTime": 1766620800000,
-    "endTime": 1766707200000
-  },
-  {
-    "name": "Tweede kerstdag",
-    "startDate": "2025-12-26",
-    "endDate": "2025-12-26",
-    "startTime": 1766707200000,
-    "endTime": 1766793600000
-  },
-  {
-    "name": "Nieuwjaarsdag",
-    "startDate": "2026-01-01",
-    "endDate": "2026-01-01",
-    "startTime": 1767225600000,
-    "endTime": 1767312000000
-  },
-  {
-    "name": "Goede vrijdag",
-    "startDate": "2026-04-03",
-    "endDate": "2026-04-03",
-    "startTime": 1775174400000,
-    "endTime": 1775260800000
-  },
-  {
-    "name": "Eerste paasdag",
-    "startDate": "2026-04-05",
-    "endDate": "2026-04-05",
-    "startTime": 1775347200000,
-    "endTime": 1775433600000
-  },
-  {
-    "name": "Tweede paasdag",
-    "startDate": "2026-04-06",
-    "endDate": "2026-04-06",
-    "startTime": 1775433600000,
-    "endTime": 1775520000000
-  },
-  {
-    "name": "Koningsdag",
-    "startDate": "2026-04-27",
-    "endDate": "2026-04-27",
-    "startTime": 1777248000000,
-    "endTime": 1777334400000
-  },
-  {
-    "name": "Bevrijdingsdag",
-    "startDate": "2026-05-05",
-    "endDate": "2026-05-05",
-    "startTime": 1777939200000,
-    "endTime": 1778025600000
-  },
-  {
-    "name": "Hemelvaartsdag",
-    "startDate": "2026-05-14",
-    "endDate": "2026-05-14",
-    "startTime": 1778716800000,
-    "endTime": 1778803200000
-  },
-  {
     "name": "Eerste pinksterdag",
     "startDate": "2026-05-24",
     "endDate": "2026-05-24",
@@ -152,5 +12,138 @@
     "endDate": "2026-05-25",
     "startTime": 1779667200000,
     "endTime": 1779753600000
+  },
+  {
+    "name": "Eerste kerstdag",
+    "startDate": "2026-12-25",
+    "endDate": "2026-12-25",
+    "startTime": 1798156800000,
+    "endTime": 1798243200000
+  },
+  {
+    "name": "Tweede kerstdag",
+    "startDate": "2026-12-26",
+    "endDate": "2026-12-26",
+    "startTime": 1798243200000,
+    "endTime": 1798329600000
+  },
+  {
+    "name": "Nieuwjaarsdag",
+    "startDate": "2027-01-01",
+    "endDate": "2027-01-01",
+    "startTime": 1798761600000,
+    "endTime": 1798848000000
+  },
+  {
+    "name": "Goede vrijdag",
+    "startDate": "2027-03-26",
+    "endDate": "2027-03-26",
+    "startTime": 1806019200000,
+    "endTime": 1806105600000
+  },
+  {
+    "name": "Eerste paasdag",
+    "startDate": "2027-03-28",
+    "endDate": "2027-03-28",
+    "startTime": 1806192000000,
+    "endTime": 1806274800000
+  },
+  {
+    "name": "Tweede paasdag",
+    "startDate": "2027-03-29",
+    "endDate": "2027-03-29",
+    "startTime": 1806278400000,
+    "endTime": 1806364800000
+  },
+  {
+    "name": "Koningsdag",
+    "startDate": "2027-04-27",
+    "endDate": "2027-04-27",
+    "startTime": 1808784000000,
+    "endTime": 1808870400000
+  },
+  {
+    "name": "Bevrijdingsdag",
+    "startDate": "2027-05-05",
+    "endDate": "2027-05-05",
+    "startTime": 1809475200000,
+    "endTime": 1809561600000
+  },
+  {
+    "name": "Hemelvaartsdag",
+    "startDate": "2027-05-06",
+    "endDate": "2027-05-06",
+    "startTime": 1809561600000,
+    "endTime": 1809648000000
+  },
+  {
+    "name": "Eerste pinksterdag",
+    "startDate": "2027-05-16",
+    "endDate": "2027-05-16",
+    "startTime": 1810425600000,
+    "endTime": 1810512000000
+  },
+  {
+    "name": "Tweede pinksterdag",
+    "startDate": "2027-05-17",
+    "endDate": "2027-05-17",
+    "startTime": 1810512000000,
+    "endTime": 1810598400000
+  },
+  {
+    "name": "Eerste kerstdag",
+    "startDate": "2027-12-25",
+    "endDate": "2027-12-25",
+    "startTime": 1829692800000,
+    "endTime": 1829779200000
+  },
+  {
+    "name": "Tweede kerstdag",
+    "startDate": "2027-12-26",
+    "endDate": "2027-12-26",
+    "startTime": 1829779200000,
+    "endTime": 1829865600000
+  },
+  {
+    "name": "Nieuwjaarsdag",
+    "startDate": "2028-01-01",
+    "endDate": "2028-01-01",
+    "startTime": 1830297600000,
+    "endTime": 1830384000000
+  },
+  {
+    "name": "Goede vrijdag",
+    "startDate": "2028-04-14",
+    "endDate": "2028-04-14",
+    "startTime": 1839283200000,
+    "endTime": 1839369600000
+  },
+  {
+    "name": "Eerste paasdag",
+    "startDate": "2028-04-16",
+    "endDate": "2028-04-16",
+    "startTime": 1839456000000,
+    "endTime": 1839542400000
+  },
+  {
+    "name": "Tweede paasdag",
+    "startDate": "2028-04-17",
+    "endDate": "2028-04-17",
+    "startTime": 1839542400000,
+    "endTime": 1839628800000
+  },
+  {
+    "name": "Koningsdag",
+    "startDate": "2028-04-27",
+    "endDate": "2028-04-27",
+    "startTime": 1840406400000,
+    "endTime": 1840492800000
+  },
+  {
+    "name": "Bevrijdingsdag",
+    "startDate": "2028-05-05",
+    "endDate": "2028-05-05",
+    "startTime": 1841097600000,
+    "endTime": 1841184000000
   }
 ]

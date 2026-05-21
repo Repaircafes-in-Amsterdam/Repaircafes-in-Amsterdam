@@ -1,72 +1,72 @@
 [
   {
     "name": "Zomervakantie",
-    "startDate": "2024-07-20",
-    "endDate": "2024-09-01",
-    "startTime": 1721433600000,
-    "endTime": 1725235200000
+    "startDate": "2026-07-04",
+    "endDate": "2026-08-16",
+    "startTime": 1783123200000,
+    "endTime": 1786924800000
   },
   {
     "name": "Herfstvakantie",
-    "startDate": "2024-10-26",
-    "endDate": "2024-11-03",
-    "startTime": 1729900800000,
-    "endTime": 1730678400000
+    "startDate": "2026-10-10",
+    "endDate": "2026-10-18",
+    "startTime": 1791590400000,
+    "endTime": 1792368000000
   },
   {
     "name": "Kerstvakantie",
-    "startDate": "2024-12-21",
-    "endDate": "2025-01-05",
-    "startTime": 1734739200000,
-    "endTime": 1736121600000
+    "startDate": "2026-12-19",
+    "endDate": "2027-01-03",
+    "startTime": 1797638400000,
+    "endTime": 1799020800000
   },
   {
     "name": "Voorjaarsvakantie",
-    "startDate": "2025-02-15",
-    "endDate": "2025-02-23",
-    "startTime": 1739577600000,
-    "endTime": 1740355200000
+    "startDate": "2027-02-20",
+    "endDate": "2027-02-28",
+    "startTime": 1803081600000,
+    "endTime": 1803859200000
   },
   {
     "name": "Meivakantie",
-    "startDate": "2025-04-26",
-    "endDate": "2025-05-04",
-    "startTime": 1745625600000,
-    "endTime": 1746403200000
+    "startDate": "2027-04-24",
+    "endDate": "2027-05-02",
+    "startTime": 1808524800000,
+    "endTime": 1809302400000
   },
   {
     "name": "Zomervakantie",
-    "startDate": "2025-07-12",
-    "endDate": "2025-08-24",
-    "startTime": 1752278400000,
-    "endTime": 1756080000000
+    "startDate": "2027-07-10",
+    "endDate": "2027-08-22",
+    "startTime": 1815177600000,
+    "endTime": 1818979200000
   },
   {
     "name": "Herfstvakantie",
-    "startDate": "2025-10-18",
-    "endDate": "2025-10-26",
-    "startTime": 1760745600000,
-    "endTime": 1761526800000
+    "startDate": "2027-10-16",
+    "endDate": "2027-10-24",
+    "startTime": 1823644800000,
+    "endTime": 1824422400000
   },
   {
     "name": "Kerstvakantie",
-    "startDate": "2025-12-20",
-    "endDate": "2026-01-04",
-    "startTime": 1766188800000,
-    "endTime": 1767571200000
+    "startDate": "2027-12-25",
+    "endDate": "2028-01-09",
+    "startTime": 1829692800000,
+    "endTime": 1831075200000
   },
   {
     "name": "Voorjaarsvakantie",
-    "startDate": "2026-02-21",
-    "endDate": "2026-03-01",
-    "startTime": 1771632000000,
-    "endTime": 1772409600000
+    "startDate": "2028-02-19",
+    "endDate": "2028-02-27",
+    "startTime": 1834531200000,
+    "endTime": 1835308800000
   },
   {
     "name": "Meivakantie",
-    "startDate": "2026-04-25",
-    "endDate": "2026-05-03",
-    "startTime": 1777075200000,
-    "endTime": 1777852800000
+    "startDate": "2028-04-29",
+    "endDate": "2028-05-07",
+    "startTime": 1840579200000,
+    "endTime": 1841356800000
   }
 ]
