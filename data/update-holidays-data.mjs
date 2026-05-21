@@ -5,11 +5,6 @@ updateData("https://openholidaysapi.org/PublicHolidays?", "holidays-data.json");
 updateData(
   "https://openholidaysapi.org/SchoolHolidays?",
   "school-holidays-data.json",
-  (list) =>
-    // Filter on school holidays for regio Noord
-    list.filter((item) =>
-      item.subdivisions.some((subdivision) => subdivision.code === "NL-NO"),
-    ),
 );
 
 async function updateData(url, fileName, transform) {
@@ -26,6 +21,7 @@ async function updateData(url, fileName, transform) {
     validTo,
     countryIsoCode: country,
     languageIsoCode: country,
+    subdivisionCode: "NL-NH-AD",
   });
 
   const response = await fetch(url + params.toString());
