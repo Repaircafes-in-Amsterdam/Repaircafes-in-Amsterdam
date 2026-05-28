@@ -1296,14 +1296,16 @@
     ],
     "closedRanges": [
       "2024-09",
-      "2025-09-05"
+      "2025-09-05",
+      "2026-09-04"
     ],
     "closed": {
       "nl": "",
       "en": ""
     },
     "exceptions": [
-      "2026-04-03"
+      "2026-04-03",
+      "2026-09-11"
     ],
     "district": "West",
     "email": "bericht@repaircafejeltje.nl",
