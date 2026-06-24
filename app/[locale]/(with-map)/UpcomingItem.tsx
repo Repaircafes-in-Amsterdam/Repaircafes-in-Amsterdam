@@ -8,6 +8,7 @@ import classes from "@/app/utils/classes";
 import useLinkPostfix from "@/app/utils/useLinkPostfix";
 import { useTranslations } from "next-intl";
 import { useParams } from "next/navigation";
+import { useEffect } from "react";
 
 export default function UpcomingItem({ event }: { event: Event }) {
   const { slug, name, startTime, endTime, district, verified, festival } =
@@ -20,6 +21,18 @@ export default function UpcomingItem({ event }: { event: Event }) {
   const t = useTranslations("agenda");
   const rootT = useTranslations();
   const linkBase = festival ? "/festival" : "/cafe";
+
+  useEffect(() => {
+    if (isOpen) {
+      const selectedItem = document.getElementById(slug);
+      selectedItem?.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+        inline: "center",
+      });
+    }
+  }, [isOpen, slug]);
+
   return (
     <Link
       href={`${linkBase}/${slug}${linkPostfix}`}
