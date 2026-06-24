@@ -1,5 +1,9 @@
-import getParamHook from "./getParamHook";
+import { create } from "zustand";
+import { combine } from "zustand/middleware";
 
-const defaultValue = "false";
-
-export default getParamHook("outside-office-hours", defaultValue);
+const useOutsideOfficeHours = create(
+  combine({ value: false }, (set) => ({
+    setValue: (value: boolean) => set(() => ({ value })),
+  })),
+);
+export default useOutsideOfficeHours;
