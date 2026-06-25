@@ -109,10 +109,10 @@
     "closedRanges": [
       "12-24:12-31",
       "2025-04-09",
-      "2026-05-27:2026-06-23"
+      "2026-07-13:2026-07-27"
     ],
     "closed": {
-      "nl": "4 weken in het midden van de zomervakantie en de laatste week van het jaar.",
+      "nl": "4 weken in het midden van de zomer vakantie en de laatste week van het jaar.",
       "en": "4 weeks in the middle of summer vacation and the last week of the year."
     },
     "exceptions": [
@@ -166,10 +166,10 @@
     "closedRanges": [
       "12-24:12-31",
       "2025-04-09",
-      "2026-05-27:2026-06-23"
+      "2026-07-13:2026-07-27"
     ],
     "closed": {
-      "nl": "4 weken in het midden van de zomervakantie en de laatste week van het jaar.",
+      "nl": "4 weken in het midden van de zomer vakantie en de laatste week van het jaar.",
       "en": "4 weeks in the middle of summer vacation and the last week of the year."
     },
     "exceptions": [
