@@ -1099,10 +1099,12 @@
     "endTime": [
       "12:00"
     ],
-    "closedRanges": [],
+    "closedRanges": [
+      "2026-07-12:2026-08-04"
+    ],
     "closed": {
-      "nl": "",
-      "en": ""
+      "nl": "12 juli tm 4 augustus",
+      "en": "July 12 through August 4"
     },
     "exceptions": [],
     "district": "Nieuw-West",
