@@ -941,8 +941,8 @@
     "name": "De Schinkel",
     "address": "Derde Schinkelstraat 9",
     "open": {
-      "nl": "Elke 1e en 3de  maandag 14:00 - 17:00",
-      "en": "Every 1st and 3rd Monday 14:00 - 17:00"
+      "nl": "Elke 1e en 3de  maandag 13:00 - 17:00",
+      "en": "Every 1st and 3rd Monday 13:00 - 17:00"
     },
     "rrule": [
       "FREQ=MONTHLY;INTERVAL=1;BYDAY=1MO,3MO"
