@@ -1644,8 +1644,8 @@
     ],
     "closedRanges": [],
     "closed": {
-      "nl": "Zomervakantie",
-      "en": "Summer vacation"
+      "nl": "Officiële feestdagen",
+      "en": "Official holidays"
     },
     "exceptions": [],
     "district": "West",
@@ -1655,8 +1655,8 @@
       "en": "Electronics, Clothing, Bicycles, Furniture"
     },
     "dontRepair": {
-      "nl": "Kleine electronica zoals mobiele telefoons, fotocamera's, e.d.",
-      "en": "Small electronics such as mobile phones, photo cameras, etc."
+      "nl": "Mobiele Telefoons, TV’s, Witgoed",
+      "en": "Cell Phones, TVs, Home Appliances"
     },
     "moreInfo": {
       "nl": "",
