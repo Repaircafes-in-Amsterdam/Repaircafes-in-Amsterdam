@@ -738,20 +738,17 @@
     "name": "De Meeuw",
     "address": "Motorwal 300",
     "open": {
-      "nl": "Elke donderdagochtend 10:00 - 12:00\nEn elke 2de zaterdag 11:00 - 14:00",
-      "en": "Every Thursday morning 10:00 - 12:00\nAnd every 2nd Saturday 11:00 - 14:00"
+      "nl": "Elke donderdagochtend 10:00 - 12:00",
+      "en": "Every Thursday morning 10:00 - 12:00"
     },
     "rrule": [
-      "FREQ=WEEKLY;BYDAY=TH;INTERVAL=1",
-      "FREQ=MONTHLY;INTERVAL=1;BYDAY=2SA"
+      "FREQ=WEEKLY;BYDAY=TH;INTERVAL=1"
     ],
     "startTime": [
-      "10:00",
-      "11:00"
+      "10:00"
     ],
     "endTime": [
-      "12:00",
-      "14:00"
+      "12:00"
     ],
     "closedRanges": [
       "2024-07-05:2024-08-21",
