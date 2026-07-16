@@ -701,11 +701,11 @@
       "16:00"
     ],
     "closedRanges": [
-      "07:08"
+      "08"
     ],
     "closed": {
-      "nl": "Meestal zomermaanden juli en augustus",
-      "en": "Usually summer months July and August"
+      "nl": "Meestal in augustus",
+      "en": "Usually during August"
     },
     "exceptions": [
       "2025-04-18"
