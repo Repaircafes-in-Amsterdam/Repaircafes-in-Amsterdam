@@ -1195,11 +1195,11 @@
       "12:30"
     ],
     "closedRanges": [
-      "08"
+      "07:08"
     ],
     "closed": {
-      "nl": "Augustus",
-      "en": "August"
+      "nl": "Juli en augustus",
+      "en": "July and August"
     },
     "exceptions": [],
     "district": "Centrum",
