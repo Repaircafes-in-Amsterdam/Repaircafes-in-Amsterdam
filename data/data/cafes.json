@@ -1773,6 +1773,51 @@
     ]
   },
   {
+    "name": "Schoon Schip",
+    "address": "Johan van Hasseltkade 225-b",
+    "open": {
+      "nl": "Elke 2de zaterdag 11:00 - 14:00",
+      "en": "Every 2nd Saturday 11:00 - 14:00"
+    },
+    "rrule": [
+      "FREQ=MONTHLY;INTERVAL=1;BYDAY=2SA"
+    ],
+    "startTime": [
+      "11:00"
+    ],
+    "endTime": [
+      "14:00"
+    ],
+    "closedRanges": [
+      "08"
+    ],
+    "closed": {
+      "nl": "Tussen kerst en nieuwjaar en een periode in de zomer.",
+      "en": "Between Christmas and New Year and a period in the summer."
+    },
+    "exceptions": [],
+    "district": "Noord",
+    "email": "jansprenger@kpnmail.nl",
+    "doRepair": {
+      "nl": "Electronica, Fietsen, Meubels",
+      "en": "Electronics, Bicycles, Furniture"
+    },
+    "dontRepair": {
+      "nl": "Laptops en telefoons",
+      "en": "Laptops and telephones"
+    },
+    "moreInfo": {
+      "nl": "",
+      "en": ""
+    },
+    "verified": true,
+    "slug": "schoon-schip",
+    "coordinate": [
+      52.394643,
+      4.906248
+    ]
+  },
+  {
     "name": "Sloten – Oud Osdorp",
     "address": "Nieuwe Akerweg 14",
     "open": {
