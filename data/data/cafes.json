@@ -1648,12 +1648,12 @@
     "district": "West",
     "email": "info@jacobmaris.com",
     "doRepair": {
-      "nl": "Electronica, Kleding, Fietsen, Meubels",
-      "en": "Electronics, Clothing, Bicycles, Furniture"
+      "nl": "Electronica, Fietsen, Meubels",
+      "en": "Electronics, Bicycles, Furniture"
     },
     "dontRepair": {
-      "nl": "Mobiele Telefoons, TV’s, Witgoed",
-      "en": "Cell Phones, TVs, Home Appliances"
+      "nl": "Mobiele telefoons, TV’s, witgoed, kleding",
+      "en": "Cell phones, TVs, home appliances, clothing"
     },
     "moreInfo": {
       "nl": "",
