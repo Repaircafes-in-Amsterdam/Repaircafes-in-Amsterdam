@@ -1578,7 +1578,7 @@
   },
   {
     "name": "RE-UPsalon",
-    "address": "Bilderdijkstraat 183",
+    "address": "Toekomsthuis, Arie Biemondstraat 113",
     "open": {
       "nl": "Elke vrijdag 14:00 - 17:00",
       "en": "Every Friday 14:00 - 17:00"
@@ -1592,7 +1592,9 @@
     "endTime": [
       "17:00"
     ],
-    "closedRanges": [],
+    "closedRanges": [
+      "08:09"
+    ],
     "closed": {
       "nl": "Feestdagen",
       "en": "National holidays"
@@ -1619,8 +1621,8 @@
     "verified": true,
     "slug": "re-upsalon",
     "coordinate": [
-      52.366676330566406,
-      4.872640132904053
+      52.363346,
+      4.867168
     ]
   },
   {
