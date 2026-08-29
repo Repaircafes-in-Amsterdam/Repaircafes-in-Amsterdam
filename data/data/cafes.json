@@ -1798,7 +1798,7 @@
     },
     "exceptions": [],
     "district": "Noord",
-    "email": "jansprenger@kpnmail.nl",
+    "email": "pflie61@gmail.com",
     "doRepair": {
       "nl": "Electronica, Fietsen, Meubels",
       "en": "Electronics, Bicycles, Furniture"
@@ -1810,6 +1810,9 @@
     "moreInfo": {
       "nl": "",
       "en": ""
+    },
+    "links": {
+      "orgPage": "https://www.repaircafe.org/en/cafe/repair-cafe-schoonschip/"
     },
     "verified": true,
     "slug": "schoon-schip",
