@@ -34,6 +34,7 @@ export default function Map({
     data.map((rc) => rc.coordinate as [number, number]),
   );
   const [zoomLevel, setZoomLevel] = useState<number>(0);
+  const tileUrl = `https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png?key=${process.env.NEXT_PUBLIC_MAP_TILE_API_KEY}`;
 
   return (
     <div className={classes("relative flex h-full w-full flex-col", className)}>
@@ -48,7 +49,7 @@ export default function Map({
         boundsOptions={{ padding: [20, 20] }}
       >
         <TileLayer
-          url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
+          url={tileUrl}
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
         />
         {data.map((rc) => (
