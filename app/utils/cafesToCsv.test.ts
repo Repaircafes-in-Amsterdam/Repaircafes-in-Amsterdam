@@ -141,15 +141,37 @@ describe("cafesToCsv", () => {
     expect(rowB.verified).toBe("false");
   });
 
-  it("keeps a stable column order: fixed, multilingual, arrays, then links/socials", () => {
+  it("orders columns by each field's first appearance in the source data", () => {
     const cafes = [createTestRC({ links: { website: "a" } })];
 
     const header = cafesToCsv(cafes).split("\n")[0];
 
-    expect(header.indexOf("name")).toBeLessThan(header.indexOf("open_nl"));
-    expect(header.indexOf("moreInfo_en")).toBeLessThan(header.indexOf("rrule"));
-    expect(header.indexOf("exceptions")).toBeLessThan(
+    // matches the key order returned by createTestRC: name, slug, startTime, endTime, rrule, open, ...
+    expect(header.indexOf("startTime")).toBeLessThan(header.indexOf("open_nl"));
+    expect(header.indexOf("open_en")).toBeLessThan(
+      header.indexOf("closedRanges"),
+    );
+    expect(header.indexOf("moreInfo_en")).toBeLessThan(
+      header.indexOf("coordinate"),
+    );
+    expect(header.indexOf("verified")).toBeLessThan(
       header.indexOf("links_website"),
     );
+  });
+
+  it("derives columns for fields not hardcoded, based purely on their runtime shape", () => {
+    const cafe = {
+      ...createTestRC({}),
+      rating: 4.5,
+      photos: ["a.jpg", "b.jpg"],
+      contact: { phone: "123", fax: "456" },
+    } as unknown as ReturnType<typeof createTestRC>;
+
+    const [row] = parseCsv(cafesToCsv([cafe]));
+
+    expect(row.rating).toBe("4.5");
+    expect(row.photos).toBe("a.jpg\nb.jpg");
+    expect(row.contact_phone).toBe("123");
+    expect(row.contact_fax).toBe("456");
   });
 });
