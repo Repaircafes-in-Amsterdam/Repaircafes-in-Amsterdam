@@ -102,22 +102,5 @@
       "nl": "De Repair Academie is een initiatief van het Repair Cafe Zonneplein. Op deze Inloop avond kun je zelf aan de slag met het repareren van je eigen kapotte electronica of kleding. Er zijn ervaren reparateurs aanwezig om je te begeleiden en je te leren hoe je zelf repareert. Alle tools en naaimachines zijn aanwezig op locatie. Neem je eigen kapotte spullen mee en kom leren repareren!",
       "en": "The Repair Academy is an initiative of Repair Cafe Zonneplein. During this open evening, you bring your own broken electronics or clothes and start learning how to fix them yourself. There are skilled repairers to guide you in the process of learning how to fix your own stuff. All tools and sewing machines are available on side. Come by and learn how to repair!"
     }
-  },
-  {
-    "name": "Repair Night",
-    "slug": "repair-night",
-    "location": "Filth",
-    "address": "Papaverweg 46",
-    "district": "Noord",
-    "dates": [
-      "2026-09-16"
-    ],
-    "startTime": "18:00",
-    "endTime": "22:00",
-    "link": "https://unlisted.to/o/filth/events/repair-night",
-    "description": {
-      "nl": "Kom langs voor een avond vol documentaires, reparaties en gesprekken, georganiseerd door Filth, Circular.Amsterdam en de Repair Cafés in Amsterdam.\n\n18:00 - Deuren open\n18:15 - Vertoning van de Repair Café-documentaire van Masato Sezawa (2024)\n19:00 - Reparatienacht: fietsen, textiel & elektronica\n\nKom langs, neem iets mee dat gerepareerd moet worden, leer nieuwe vaardigheden, ontmoet mensen of geniet gewoon van de avond!\nVrijwilligers zijn ook van harte welkom. We hebben al het gereedschap dat je nodig hebt, neem gewoon je nieuwsgierigheid en bereidheid om te helpen mee.\n\nWil je meedoen? Meld je aan via de Meer info link.\n\nFilth | repaircafe.amsterdam | circularamsterdam.nl",
-      "en": "Join us for an evening of documentary, repairs, and conversation, brought to you by Filth, Circular.Amsterdam, and Repair Cafés in Amsterdam.\n\n18:00 - Doors open\n18:15 - Screening of Repair Café documentary by Masato Sezawa (2024)\n19:00 - Repair Night: bikes, textiles & electronics\n\nCome along, bring something that needs repairing, learn new skills, meet people, or simply enjoy the evening!\nVolunteers are also very welcome. We have all the tools you need, just bring your curiosity and willingness to help.\n\nWould you like to join us? Sign up at the More info link.\n\nFilth | repaircafe.amsterdam | circularamsterdam.nl"
-    }
   }
 ]
