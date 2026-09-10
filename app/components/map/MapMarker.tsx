@@ -70,7 +70,7 @@ export default function MapMarker({
           offset={[0, 6] as [number, number]}
           closeButton={false}
           closeOnClick={false}
-          className="[&_.maplibregl-popup-content]:text-blue [&_.maplibregl-popup-content]:rounded-none! [&_.maplibregl-popup-content]:bg-white [&_.maplibregl-popup-content]:px-2! [&_.maplibregl-popup-content]:py-1! [&_.maplibregl-popup-content]:font-sans [&_.maplibregl-popup-content]:font-medium [&_.maplibregl-popup-content]:shadow [&_.maplibregl-popup-tip]:hidden"
+          className="popup-content:text-blue popup-content:rounded-none! popup-content:bg-white popup-content:px-2! popup-content:py-1! popup-content:font-sans popup-content:font-medium popup-content:shadow popup-tip:hidden"
         >
           {label}
         </Popup>
