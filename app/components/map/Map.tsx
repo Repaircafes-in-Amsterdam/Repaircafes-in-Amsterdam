@@ -31,11 +31,17 @@ export default function Map({
   const mapStyleUrl = `https://basemaps.cartocdn.com/gl/positron-gl-style/style.json?key=${process.env.NEXT_PUBLIC_MAP_TILE_API_KEY}`;
 
   return (
-    <div className={classes("relative flex h-full w-full flex-col", className)}>
+    <div
+      className={classes(
+        "attrib-link:text-blue! attrib:bg-white! relative flex h-full w-full flex-col",
+        className,
+      )}
+    >
       <MapLibreMap
         id="map-container"
         initialViewState={{ bounds, fitBoundsOptions: { padding: 20 } }}
         mapStyle={mapStyleUrl}
+        attributionControl={{ compact: false }}
         onZoom={(event) => setZoomLevel(event.viewState.zoom)}
         onClick={() => onSelect && onSelect("")}
       >
