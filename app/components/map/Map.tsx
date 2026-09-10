@@ -1,12 +1,8 @@
 "use client";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import "maplibre-gl/dist/maplibre-gl.css";
 import { Map as MapLibreMap } from "@vis.gl/react-maplibre";
-import {
-  LngLatBounds,
-  setWorkerUrl,
-  type LineLayerSpecification,
-} from "maplibre-gl";
+import { LngLatBounds, setWorkerUrl } from "maplibre-gl";
 import { MapRC } from "../../types";
 import MapMarker from "./MapMarker";
 import MapZoomControl from "./MapZoomControl";
@@ -35,6 +31,11 @@ export default function Map({
   );
   const [zoomLevel, setZoomLevel] = useState<number>(0);
   console.log("zoomLevel: ", zoomLevel);
+  // Render north-to-south so southern markers paint on top for the 3D stacking effect.
+  const sortedData = useMemo(
+    () => data.slice().sort((a, b) => b.coordinate[0] - a.coordinate[0]),
+    [data],
+  );
   const mapStyleUrl = `https://basemaps.cartocdn.com/gl/positron-gl-style/style.json?key=${process.env.NEXT_PUBLIC_MAP_TILE_API_KEY}`;
   // const mapStyleUrl = `https://tiles.openfreemap.org/styles/positron`;
 
@@ -64,7 +65,7 @@ export default function Map({
         onZoom={(event) => setZoomLevel(event.viewState.zoom)}
         onClick={() => onSelect && onSelect("")}
       >
-        {data.map((rc) => (
+        {sortedData.map((rc) => (
           <MapMarker
             key={rc.slug}
             position={rc.coordinate as [number, number]}

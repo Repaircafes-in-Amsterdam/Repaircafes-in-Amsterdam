@@ -45,7 +45,6 @@ export default function MapMarker({
     },
     [setHoveredMarker, slug],
   );
-
   return (
     <>
       <Marker
