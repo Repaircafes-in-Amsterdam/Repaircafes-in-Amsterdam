@@ -2,11 +2,17 @@
 import { useState } from "react";
 import "maplibre-gl/dist/maplibre-gl.css";
 import { Map as MapLibreMap } from "@vis.gl/react-maplibre";
-import { LngLatBounds, setWorkerUrl } from "maplibre-gl";
+import {
+  LngLatBounds,
+  setWorkerUrl,
+  type LineLayerSpecification,
+} from "maplibre-gl";
 import { MapRC } from "../../types";
 import MapMarker from "./MapMarker";
 import MapZoomControl from "./MapZoomControl";
 import classes from "../../utils/classes";
+import versatilesWaterSource from "./versatilesWaterSource";
+import extraCanalLinesLayer from "./extraCanalLinesLayer";
 
 // Next.js bundling breaks maplibre-gl's default worker URL resolution (import.meta.url), so self-host it.
 setWorkerUrl("/maplibre/maplibre-gl-worker.mjs");
@@ -28,7 +34,9 @@ export default function Map({
     new LngLatBounds(),
   );
   const [zoomLevel, setZoomLevel] = useState<number>(0);
+  console.log("zoomLevel: ", zoomLevel);
   const mapStyleUrl = `https://basemaps.cartocdn.com/gl/positron-gl-style/style.json?key=${process.env.NEXT_PUBLIC_MAP_TILE_API_KEY}`;
+  // const mapStyleUrl = `https://tiles.openfreemap.org/styles/positron`;
 
   return (
     <div
@@ -42,6 +50,17 @@ export default function Map({
         initialViewState={{ bounds, fitBoundsOptions: { padding: 40 } }}
         mapStyle={mapStyleUrl}
         attributionControl={{ compact: false }}
+        onLoad={(event) => {
+          const map = event.target;
+
+          if (!map.getSource("versatiles-water")) {
+            map.addSource("versatiles-water", versatilesWaterSource);
+          }
+
+          if (!map.getLayer("extra-canal-lines")) {
+            map.addLayer(extraCanalLinesLayer, "water_shadow");
+          }
+        }}
         onZoom={(event) => setZoomLevel(event.viewState.zoom)}
         onClick={() => onSelect && onSelect("")}
       >
