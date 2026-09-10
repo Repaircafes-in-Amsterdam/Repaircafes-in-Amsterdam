@@ -36,7 +36,6 @@ export default function Map({
         id="map-container"
         initialViewState={{ bounds, fitBoundsOptions: { padding: 20 } }}
         mapStyle={mapStyleUrl}
-        style={{ width: "100%", height: "100%" }}
         onZoom={(event) => setZoomLevel(event.viewState.zoom)}
         onClick={() => onSelect && onSelect("")}
       >
