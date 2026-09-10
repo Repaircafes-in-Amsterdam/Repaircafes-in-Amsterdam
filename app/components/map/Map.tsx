@@ -37,7 +37,6 @@ export default function Map({
     [data],
   );
   const mapStyleUrl = `https://basemaps.cartocdn.com/gl/positron-gl-style/style.json?key=${process.env.NEXT_PUBLIC_MAP_TILE_API_KEY}`;
-  // const mapStyleUrl = `https://tiles.openfreemap.org/styles/positron`;
 
   return (
     <div
@@ -60,6 +59,10 @@ export default function Map({
 
           if (!map.getLayer("extra-canal-lines")) {
             map.addLayer(extraCanalLinesLayer, "water_shadow");
+          }
+          // Show minor road layer earlier
+          if (map.getLayer("road_minor_case")) {
+            map.setLayerZoomRange("road_minor_case", 0, 24);
           }
         }}
         onZoom={(event) => setZoomLevel(event.viewState.zoom)}
