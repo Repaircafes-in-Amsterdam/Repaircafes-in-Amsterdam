@@ -68,10 +68,10 @@ export default function MapMarker({
           longitude={position[1]}
           latitude={position[0]}
           anchor="top"
-          offset={[0, 6] as [number, number]}
+          offset={[0, 0] as [number, number]}
           closeButton={false}
           closeOnClick={false}
-          className="[&_.maplibregl-popup-content]:text-blue [&_.maplibregl-popup-content]:rounded-none [&_.maplibregl-popup-content]:bg-white [&_.maplibregl-popup-content]:px-2 [&_.maplibregl-popup-content]:py-1 [&_.maplibregl-popup-content]:font-sans [&_.maplibregl-popup-content]:font-medium [&_.maplibregl-popup-content]:shadow [&_.maplibregl-popup-tip]:hidden"
+          className="[&_.maplibregl-popup-content]:text-blue [&_.maplibregl-popup-content]:rounded-none! [&_.maplibregl-popup-content]:bg-white [&_.maplibregl-popup-content]:px-2! [&_.maplibregl-popup-content]:py-1! [&_.maplibregl-popup-content]:font-sans [&_.maplibregl-popup-content]:font-medium [&_.maplibregl-popup-content]:shadow"
         >
           {label}
         </Popup>
