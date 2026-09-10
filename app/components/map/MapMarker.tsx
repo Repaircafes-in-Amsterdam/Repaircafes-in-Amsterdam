@@ -54,6 +54,7 @@ export default function MapMarker({
         ref={markerRef}
         longitude={position[1]}
         latitude={position[0]}
+        // Y offset based on svg: -(shadow-center - height/2)
         offset={[0, -14]}
         style={{ zIndex: shouldbeHighlighted ? 10 : 0 }}
         onClick={(event) => {
