@@ -50,8 +50,16 @@ export default function Map({
         initialViewState={{ bounds, fitBoundsOptions: { padding: 40 } }}
         mapStyle={mapStyleUrl}
         attributionControl={{ compact: false }}
+        dragRotate={false}
+        touchPitch={false}
+        pitchWithRotate={false}
+        touchZoomRotate={true}
         onLoad={(event) => {
           const map = event.target;
+
+          // Keep pinch-zoom but disable the two-finger twist gesture that rotates the map.
+          map.touchZoomRotate.disableRotation();
+          map.keyboard.disableRotation();
 
           if (!map.getSource("versatiles-water")) {
             map.addSource("versatiles-water", versatilesWaterSource);
