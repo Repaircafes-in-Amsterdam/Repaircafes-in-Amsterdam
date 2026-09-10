@@ -1,5 +1,6 @@
-import { useCallback, useRef } from "react";
+import { useCallback } from "react";
 import useHoverStore from "@/app/useHoverStore";
+import MarkerIcon from "@/app/icons/Marker.svg?react";
 import { Marker, Popup } from "@vis.gl/react-maplibre";
 import type { MarkerInstance } from "@vis.gl/react-maplibre";
 
@@ -53,7 +54,7 @@ export default function MapMarker({
         ref={markerRef}
         longitude={position[1]}
         latitude={position[0]}
-        color={shouldbeHighlighted ? ORANGE : BLUE}
+        offset={[0, -14]}
         style={{ zIndex: shouldbeHighlighted ? 10 : 0 }}
         onClick={(event) => {
           // Marker DOM elements bubble into the Map container, which would otherwise trigger the click-outside deselect too.
@@ -61,7 +62,13 @@ export default function MapMarker({
           setHoveredMarker("");
           onClick();
         }}
-      />
+      >
+        <MarkerIcon
+          aria-hidden="true"
+          style={{ color: shouldbeHighlighted ? ORANGE : BLUE }}
+          className={shouldbeHighlighted ? "text-orange" : "text-blue"}
+        />
+      </Marker>
       {(showLabel || isHovered) && (
         <Popup
           longitude={position[1]}
