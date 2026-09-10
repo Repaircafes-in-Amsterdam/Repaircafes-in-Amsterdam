@@ -39,7 +39,7 @@ export default function Map({
     >
       <MapLibreMap
         id="map-container"
-        initialViewState={{ bounds, fitBoundsOptions: { padding: 20 } }}
+        initialViewState={{ bounds, fitBoundsOptions: { padding: 40 } }}
         mapStyle={mapStyleUrl}
         attributionControl={{ compact: false }}
         onZoom={(event) => setZoomLevel(event.viewState.zoom)}
