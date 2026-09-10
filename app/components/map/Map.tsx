@@ -1,23 +1,15 @@
 "use client";
 import { useState } from "react";
-import "leaflet/dist/leaflet.css";
-import { MapContainer } from "react-leaflet/MapContainer";
-import { TileLayer } from "react-leaflet/TileLayer";
+import "maplibre-gl/dist/maplibre-gl.css";
+import { Map as MapLibreMap } from "@vis.gl/react-maplibre";
+import { LngLatBounds, setWorkerUrl } from "maplibre-gl";
 import { MapRC } from "../../types";
-import { latLngBounds } from "leaflet";
 import MapMarker from "./MapMarker";
 import MapZoomControl from "./MapZoomControl";
-import MapZoomObserver from "./MapZoomObserver";
 import classes from "../../utils/classes";
-import { useMapEvent } from "react-leaflet/hooks";
 
-function ClickOutside({ onClick }: { onClick: (slug: string) => void }) {
-  useMapEvent("click", (event) => {
-    const target = event.originalEvent.target as HTMLElement;
-    if (target?.id === "map-container") onClick("");
-  });
-  return null;
-}
+// Next.js bundling breaks maplibre-gl's default worker URL resolution (import.meta.url), so self-host it.
+setWorkerUrl("/maplibre/maplibre-gl-worker.mjs");
 
 export default function Map({
   data,
@@ -30,28 +22,24 @@ export default function Map({
   onSelect?: (slug: string) => void;
   className?: string;
 }) {
-  const bounds = latLngBounds(
-    data.map((rc) => rc.coordinate as [number, number]),
+  // MapRC.coordinate is [lat, lng]; MapLibre expects [lng, lat].
+  const bounds = data.reduce(
+    (bounds, rc) => bounds.extend([rc.coordinate[1], rc.coordinate[0]]),
+    new LngLatBounds(),
   );
   const [zoomLevel, setZoomLevel] = useState<number>(0);
-  const tileUrl = `https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png?key=${process.env.NEXT_PUBLIC_MAP_TILE_API_KEY}`;
+  const mapStyleUrl = `https://basemaps.cartocdn.com/gl/positron-gl-style/style.json?key=${process.env.NEXT_PUBLIC_MAP_TILE_API_KEY}`;
 
   return (
     <div className={classes("relative flex h-full w-full flex-col", className)}>
-      <div id="zoom-control-portal" className="relative"></div>
-      <MapContainer
+      <MapLibreMap
         id="map-container"
-        className="relative z-0 h-full w-full"
-        bounds={bounds}
-        scrollWheelZoom={true}
-        zoomControl={false}
-        zoomSnap={0.1}
-        boundsOptions={{ padding: [20, 20] }}
+        initialViewState={{ bounds, fitBoundsOptions: { padding: 20 } }}
+        mapStyle={mapStyleUrl}
+        style={{ width: "100%", height: "100%" }}
+        onZoom={(event) => setZoomLevel(event.viewState.zoom)}
+        onClick={() => onSelect && onSelect("")}
       >
-        <TileLayer
-          url={tileUrl}
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
-        />
         {data.map((rc) => (
           <MapMarker
             key={rc.slug}
@@ -63,10 +51,8 @@ export default function Map({
             showLabel={zoomLevel > 13}
           />
         ))}
-        <ClickOutside onClick={() => onSelect && onSelect("")} />
         <MapZoomControl />
-        <MapZoomObserver onZoom={setZoomLevel} />
-      </MapContainer>
+      </MapLibreMap>
     </div>
   );
 }

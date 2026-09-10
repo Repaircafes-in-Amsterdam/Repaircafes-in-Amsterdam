@@ -1,9 +1,10 @@
+import { useCallback, useRef } from "react";
 import useHoverStore from "@/app/useHoverStore";
-import { Tooltip } from "react-leaflet/Tooltip";
-import MarkerIcon from "@/app/icons/Marker.svg?react";
-import { Marker } from "@adamscybot/react-leaflet-component-marker";
-import Image from "next/image";
-import classes from "@/app/utils/classes";
+import { Marker, Popup } from "@vis.gl/react-maplibre";
+import type { MarkerInstance } from "@vis.gl/react-maplibre";
+
+const BLUE = "#2D2E82";
+const ORANGE = "#ED6A42";
 
 export default function MapMarker({
   position,
@@ -27,56 +28,54 @@ export default function MapMarker({
 
   const shouldbeHighlighted = active || isHovered;
 
+  // Marker color isn't reactive, so hover/highlight listeners are (re)bound on every mount via the ref.
+  const markerRef = useCallback(
+    (marker: MarkerInstance | null) => {
+      const element = marker?.getElement();
+      if (!element) return;
+      const onMouseOver = () => setHoveredMarker(slug);
+      const onMouseOut = () => setHoveredMarker("");
+      element.addEventListener("mouseover", onMouseOver);
+      element.addEventListener("mouseout", onMouseOut);
+      return () => {
+        element.removeEventListener("mouseover", onMouseOver);
+        element.removeEventListener("mouseout", onMouseOut);
+      };
+    },
+    [setHoveredMarker, slug],
+  );
+
   return (
-    <Marker
-      icon={
-        <div>
-          <Image
-            src="/rc-marker-shadow-2x.png"
-            width="45"
-            height="33"
-            alt=""
-            aria-hidden
-            className="pointer-events-none absolute top-px -left-[3px]"
-          />
-          <MarkerIcon
-            className={classes(
-              "pointer-events-none relative",
-              shouldbeHighlighted ? "text-orange" : "text-blue",
-            )}
-            title={label}
-          />
-        </div>
-      }
-      componentIconOpts={{
-        layoutMode: "fit-parent",
-        rootDivOpts: {
-          iconSize: [24, 30],
-          iconAnchor: [12, 30],
-        },
-      }}
-      position={position}
-      eventHandlers={{
-        click: () => {
+    <>
+      <Marker
+        // Remount when highlight state changes: `color` is only applied once, on mount.
+        key={shouldbeHighlighted ? "active" : "inactive"}
+        ref={markerRef}
+        longitude={position[1]}
+        latitude={position[0]}
+        anchor="bottom"
+        color={shouldbeHighlighted ? ORANGE : BLUE}
+        style={{ zIndex: shouldbeHighlighted ? 10 : 0 }}
+        onClick={(event) => {
+          // Marker DOM elements bubble into the Map container, which would otherwise trigger the click-outside deselect too.
+          event.originalEvent.stopPropagation();
           setHoveredMarker("");
           onClick();
-        },
-        mouseover: () => setHoveredMarker(slug),
-        mouseout: () => setHoveredMarker(""),
-      }}
-      // riseOnHover will not bring the marker to the top on hover from upcoming row
-      zIndexOffset={shouldbeHighlighted ? 10 : 0}
-    >
-      <Tooltip
-        key={showLabel ? "permanent" : "hover"}
-        direction="bottom"
-        permanent={showLabel}
-        interactive={showLabel}
-        className="text-blue! rounded-none! px-2! py-1! font-sans! font-medium"
-        // TODO add tab index?
-      >
-        {label}
-      </Tooltip>
-    </Marker>
+        }}
+      />
+      {(showLabel || isHovered) && (
+        <Popup
+          longitude={position[1]}
+          latitude={position[0]}
+          anchor="top"
+          offset={[0, 6] as [number, number]}
+          closeButton={false}
+          closeOnClick={false}
+          className="[&_.maplibregl-popup-content]:text-blue [&_.maplibregl-popup-content]:rounded-none [&_.maplibregl-popup-content]:bg-white [&_.maplibregl-popup-content]:px-2 [&_.maplibregl-popup-content]:py-1 [&_.maplibregl-popup-content]:font-sans [&_.maplibregl-popup-content]:font-medium [&_.maplibregl-popup-content]:shadow [&_.maplibregl-popup-tip]:hidden"
+        >
+          {label}
+        </Popup>
+      )}
+    </>
   );
 }

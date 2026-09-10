@@ -6,3 +6,5 @@ declare module "*.svg?react" {
   ) => ReactElement<any>;
   export default content;
 }
+
+declare module "*.css";
