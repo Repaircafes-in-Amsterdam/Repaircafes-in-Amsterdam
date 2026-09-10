@@ -53,7 +53,6 @@ export default function MapMarker({
         ref={markerRef}
         longitude={position[1]}
         latitude={position[0]}
-        anchor="bottom"
         color={shouldbeHighlighted ? ORANGE : BLUE}
         style={{ zIndex: shouldbeHighlighted ? 10 : 0 }}
         onClick={(event) => {
