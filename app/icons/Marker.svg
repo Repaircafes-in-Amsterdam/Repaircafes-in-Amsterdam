@@ -1,17 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="27" height="41" fill="none">
-  <g fill-rule="evenodd">
-    <g fill="#000" transform="translate(3 29)">
-      <ellipse cx="10.5" cy="5.8" opacity=".04" rx="10.5" ry="5.25" />
-      <ellipse cx="10.5" cy="5.8" opacity=".04" rx="10.5" ry="5.25" />
-      <ellipse cx="10.5" cy="5.8" opacity=".04" rx="9.5" ry="4.77" />
-      <ellipse cx="10.5" cy="5.8" opacity=".04" rx="8.5" ry="4.3" />
-      <ellipse cx="10.5" cy="5.8" opacity=".04" rx="7.5" ry="3.82" />
-      <ellipse cx="10.5" cy="5.8" opacity=".04" rx="6.5" ry="3.34" />
-      <ellipse cx="10.5" cy="5.8" opacity=".04" rx="5.5" ry="2.86" />
-      <ellipse cx="10.5" cy="5.8" opacity=".04" rx="4.5" ry="2.39" />
-    </g>
-    <path fill="currentColor" fill-rule="nonzero" stroke="white" stroke-width="2"
-      d="M27 13.5c0 5.57-6.75 13.5-12.25 21-.73 1-1.77 1-2.5 0C6.75 27 0 19.22 0 13.5a13.5 13.5 0 0 1 27 0" />
-    <circle cx="13.5" cy="13.5" r="5.5" fill="white" />
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="36" fill="none">
+  <g fill="#000" transform="translate(12 31)">
+    <ellipse opacity=".04" rx="10.5" ry="5.25" />
+    <ellipse opacity=".04" rx="10.5" ry="5.25" />
+    <ellipse opacity=".04" rx="9.5" ry="4.77" />
+    <ellipse opacity=".04" rx="8.5" ry="4.3" />
+    <ellipse opacity=".04" rx="7.5" ry="3.82" />
+    <ellipse opacity=".04" rx="6.5" ry="3.34" />
+    <ellipse opacity=".04" rx="5.5" ry="2.86" />
+    <ellipse opacity=".04" rx="4.5" ry="2.39" />
   </g>
+  <path fill="currentColor" stroke="white" stroke-width="2" d="M1 12a11 11 0 0122 0c0 7-8 14-11 17-3-3-11-10-11-17" />
+  <circle cx="12" cy="12" r="4" fill="#fff"></circle>
 </svg>

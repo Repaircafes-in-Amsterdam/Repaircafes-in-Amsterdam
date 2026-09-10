@@ -55,7 +55,7 @@ export default function MapMarker({
         longitude={position[1]}
         latitude={position[0]}
         // Y offset based on svg: -(shadow-center - height/2)
-        offset={[0, -14]}
+        offset={[0, -13]}
         style={{ zIndex: shouldbeHighlighted ? 10 : 0 }}
         onClick={(event) => {
           // Marker DOM elements bubble into the Map container, which would otherwise trigger the click-outside deselect too.
