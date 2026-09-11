@@ -3,6 +3,7 @@ import { useParams } from "next/navigation";
 import { MapRC } from "@/app/types";
 import useDistrict from "@/app/useDistrict";
 import useIntersectionObserver from "@/app/utils/useIntersectionObserver";
+import useIdle from "@/app/utils/useIdle";
 import { useRef } from "react";
 import useMap from "@/app/utils/useMap";
 import useLinkPostfix from "@/app/utils/useLinkPostfix";
@@ -25,11 +26,13 @@ export default function MapClient({ data }: { data: MapRC[] }) {
   const Map = useMap();
   const mapRef = useRef(null);
   const isMapVisible = useIntersectionObserver(mapRef, true);
+  // Deffer mounting the map until browser is idle to reduce Total Blocking Time
+  const isIdle = useIdle();
   const linkPostfix = useLinkPostfix();
 
   return (
     <div className="body:flex hidden h-full w-full" ref={mapRef}>
-      {isMapVisible && (
+      {isMapVisible && isIdle && (
         <Map
           data={filteredData}
           active={slug}
