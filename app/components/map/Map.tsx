@@ -30,7 +30,6 @@ export default function Map({
     new LngLatBounds(),
   );
   const [zoomLevel, setZoomLevel] = useState<number>(0);
-  console.log("zoomLevel: ", zoomLevel);
   // Render north-to-south so southern markers paint on top for the 3D stacking effect.
   const sortedData = useMemo(
     () => data.slice().sort((a, b) => b.coordinate[0] - a.coordinate[0]),
