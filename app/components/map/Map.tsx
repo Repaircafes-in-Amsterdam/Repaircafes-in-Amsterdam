@@ -60,16 +60,35 @@ export default function Map({
           map.touchZoomRotate.disableRotation();
           map.keyboard.disableRotation();
 
+          // There is no data for canals zoom level <12, so pulling in extra one
           if (!map.getSource("versatiles-water")) {
             map.addSource("versatiles-water", versatilesWaterSource);
           }
-
+          // Draw those extra canal lines
           if (!map.getLayer("extra-canal-lines")) {
-            map.addLayer(extraCanalLinesLayer, "water_shadow");
+            // map.addLayer(extraCanalLinesLayer, "water_shadow");
+            map.addLayer(extraCanalLinesLayer, "waterway");
           }
-          // Show minor road layer earlier
-          if (map.getLayer("road_minor_case")) {
-            map.setLayerZoomRange("road_minor_case", 0, 24);
+
+          // Show highway shield on higher zoom level
+          if (map.getLayer("highway-shield-non-us")) {
+            map.setLayerZoomRange("highway-shield-non-us", 13, 24);
+          }
+
+          // Making text labels more blue
+          if (map.getLayer("label_city_capital")) {
+            map.setPaintProperty("label_city_capital", "text-color", "#2D2E82");
+          }
+
+          for (const layerId of ["label_village", "label_other"]) {
+            if (map.getLayer(layerId)) {
+              map.setPaintProperty(layerId, "text-color", "#1F205A");
+            }
+          }
+
+          // Making water more blue
+          if (map.getLayer("water")) {
+            map.setPaintProperty("water", "fill-color", "#bdbfc6");
           }
         }}
         onZoom={(event) => setZoomLevel(event.viewState.zoom)}

@@ -13,7 +13,7 @@ const extraCanalLinesLayer: LineLayerSpecification = {
     "line-join": "round",
   },
   paint: {
-    "line-color": "#d1dbdf",
+    "line-color": "#bdbfc6",
     "line-width": [
       "interpolate",
       ["linear"],
