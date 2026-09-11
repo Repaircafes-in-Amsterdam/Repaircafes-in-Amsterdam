@@ -29,7 +29,7 @@ export default function MapMarker({
 
   const shouldbeHighlighted = active || isHovered;
 
-  // Marker color isn't reactive, so hover/highlight listeners are (re)bound on every mount via the ref.
+  // Marker does not support mouse events directly, so we attach them to the underlying DOM element via the ref.
   const markerRef = useCallback(
     (marker: MarkerInstance | null) => {
       const element = marker?.getElement();
@@ -48,8 +48,6 @@ export default function MapMarker({
   return (
     <>
       <Marker
-        // Remount when highlight state changes: `color` is only applied once, on mount.
-        key={shouldbeHighlighted ? "active" : "inactive"}
         ref={markerRef}
         longitude={position[1]}
         latitude={position[0]}
