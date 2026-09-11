@@ -27,6 +27,13 @@ const scrollbarColorUtilities = plugin(({ addUtilities }) => {
   });
 });
 
+const mapControlVariants = plugin(({ addVariant }) => {
+  addVariant("popup-content", "& .maplibregl-popup-content");
+  addVariant("popup-tip", "& .maplibregl-popup-tip");
+  addVariant("attrib", "& .maplibregl-ctrl-attrib");
+  addVariant("attrib-link", "& .maplibregl-ctrl-attrib a");
+});
+
 const config: Config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -72,6 +79,7 @@ const config: Config = {
     require("@tailwindcss/typography"),
     require("@tailwindcss/aspect-ratio"),
     scrollbarColorUtilities,
+    mapControlVariants,
   ],
 };
 export default config;

@@ -1,9 +1,11 @@
+import { useCallback } from "react";
 import useHoverStore from "@/app/useHoverStore";
-import { Tooltip } from "react-leaflet/Tooltip";
 import MarkerIcon from "@/app/icons/Marker.svg?react";
-import { Marker } from "@adamscybot/react-leaflet-component-marker";
-import Image from "next/image";
-import classes from "@/app/utils/classes";
+import { Marker, Popup } from "@vis.gl/react-maplibre";
+import type { MarkerInstance } from "@vis.gl/react-maplibre";
+
+const BLUE = "#2D2E82";
+const ORANGE = "#ED6A42";
 
 export default function MapMarker({
   position,
@@ -27,56 +29,57 @@ export default function MapMarker({
 
   const shouldbeHighlighted = active || isHovered;
 
+  // Marker does not support mouse events directly, so we attach them to the underlying DOM element via the ref.
+  const markerRef = useCallback(
+    (marker: MarkerInstance | null) => {
+      const element = marker?.getElement();
+      if (!element) return;
+      const onMouseEnter = () => setHoveredMarker(slug);
+      const onMouseLeave = () => setHoveredMarker("");
+      element.addEventListener("mouseenter", onMouseEnter);
+      element.addEventListener("mouseleave", onMouseLeave);
+      return () => {
+        element.removeEventListener("mouseenter", onMouseEnter);
+        element.removeEventListener("mouseleave", onMouseLeave);
+      };
+    },
+    [setHoveredMarker, slug],
+  );
   return (
-    <Marker
-      icon={
-        <div>
-          <Image
-            src="/rc-marker-shadow-2x.png"
-            width="45"
-            height="33"
-            alt=""
-            aria-hidden
-            className="pointer-events-none absolute top-px -left-[3px]"
-          />
-          <MarkerIcon
-            className={classes(
-              "pointer-events-none relative",
-              shouldbeHighlighted ? "text-orange" : "text-blue",
-            )}
-            title={label}
-          />
-        </div>
-      }
-      componentIconOpts={{
-        layoutMode: "fit-parent",
-        rootDivOpts: {
-          iconSize: [24, 30],
-          iconAnchor: [12, 30],
-        },
-      }}
-      position={position}
-      eventHandlers={{
-        click: () => {
+    <>
+      <Marker
+        ref={markerRef}
+        longitude={position[1]}
+        latitude={position[0]}
+        // Y offset based on svg: -(shadow-center - height/2)
+        offset={[0, -13]}
+        style={{ zIndex: shouldbeHighlighted ? 10 : 0 }}
+        onClick={(event) => {
+          // Marker DOM elements bubble into the Map container, which would otherwise trigger the click-outside deselect too.
+          event.originalEvent.stopPropagation();
           setHoveredMarker("");
           onClick();
-        },
-        mouseover: () => setHoveredMarker(slug),
-        mouseout: () => setHoveredMarker(""),
-      }}
-      // riseOnHover will not bring the marker to the top on hover from upcoming row
-      zIndexOffset={shouldbeHighlighted ? 10 : 0}
-    >
-      <Tooltip
-        key={showLabel ? "permanent" : "hover"}
-        direction="bottom"
-        permanent={showLabel}
-        interactive={showLabel}
-        className="text-blue! rounded-none! px-2! py-1! font-sans! font-medium"
-        // TODO add tab index?
+        }}
       >
-        {label}
-      </Tooltip>
-    </Marker>
+        <MarkerIcon
+          aria-hidden="true"
+          style={{ color: shouldbeHighlighted ? ORANGE : BLUE }}
+          className={shouldbeHighlighted ? "text-orange" : "text-blue"}
+        />
+      </Marker>
+      {(showLabel || isHovered) && (
+        <Popup
+          longitude={position[1]}
+          latitude={position[0]}
+          anchor="top"
+          offset={[0, 6] as [number, number]}
+          closeButton={false}
+          closeOnClick={false}
+          className="popup-content:rounded-none! popup-content:px-2! popup-content:py-1! popup-content:font-sans popup-content:font-medium popup-tip:hidden"
+        >
+          {label}
+        </Popup>
+      )}
+    </>
   );
 }
