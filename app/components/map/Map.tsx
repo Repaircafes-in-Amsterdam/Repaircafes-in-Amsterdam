@@ -35,7 +35,7 @@ export default function Map({
     () => data.slice().sort((a, b) => b.coordinate[0] - a.coordinate[0]),
     [data],
   );
-  const mapStyleUrl = `https://basemaps.cartocdn.com/gl/positron-gl-style/style.json?key=${process.env.NEXT_PUBLIC_MAP_TILE_API_KEY}`;
+  const mapStyleUrl = "https://tiles.openfreemap.org/styles/positron";
 
   return (
     <div
