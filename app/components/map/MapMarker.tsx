@@ -34,13 +34,13 @@ export default function MapMarker({
     (marker: MarkerInstance | null) => {
       const element = marker?.getElement();
       if (!element) return;
-      const onMouseOver = () => setHoveredMarker(slug);
-      const onMouseOut = () => setHoveredMarker("");
-      element.addEventListener("mouseover", onMouseOver);
-      element.addEventListener("mouseout", onMouseOut);
+      const onMouseEnter = () => setHoveredMarker(slug);
+      const onMouseLeave = () => setHoveredMarker("");
+      element.addEventListener("mouseenter", onMouseEnter);
+      element.addEventListener("mouseleave", onMouseLeave);
       return () => {
-        element.removeEventListener("mouseover", onMouseOver);
-        element.removeEventListener("mouseout", onMouseOut);
+        element.removeEventListener("mouseenter", onMouseEnter);
+        element.removeEventListener("mouseleave", onMouseLeave);
       };
     },
     [setHoveredMarker, slug],
