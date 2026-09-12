@@ -57,6 +57,8 @@ export default function Map({
         touchPitch={false}
         pitchWithRotate={false}
         touchZoomRotate={true}
+        // Eliminate tile cross-fade rendering loops on initial load.
+        fadeDuration={0}
         onLoad={(event) => {
           const map = event.target;
 
