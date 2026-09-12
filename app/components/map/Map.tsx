@@ -2,11 +2,18 @@
 import { useMemo, useState } from "react";
 import "maplibre-gl/dist/maplibre-gl.css";
 import { Map as MapLibreMap } from "@vis.gl/react-maplibre";
-import { LngLatBounds, setWorkerUrl } from "maplibre-gl";
+import {
+  LngLatBounds,
+  setWorkerUrl,
+  type StyleSpecification,
+} from "maplibre-gl";
 import { MapRC } from "../../types";
 import MapMarker from "./MapMarker";
 import MapZoomControl from "./MapZoomControl";
 import classes from "../../utils/classes";
+import mapStyle from "./mapStyle.generated.json";
+
+const bakedMapStyle = mapStyle as StyleSpecification;
 
 // Next.js bundling breaks maplibre-gl's default worker URL resolution (import.meta.url), so self-host it.
 setWorkerUrl("/maplibre/maplibre-gl-worker.mjs");
@@ -33,7 +40,6 @@ export default function Map({
     () => data.slice().sort((a, b) => b.coordinate[0] - a.coordinate[0]),
     [data],
   );
-  const mapStyleUrl = "/api/map-style.json";
 
   return (
     <div
@@ -45,7 +51,7 @@ export default function Map({
       <MapLibreMap
         id="map-container"
         initialViewState={{ bounds, fitBoundsOptions: { padding: 40 } }}
-        mapStyle={mapStyleUrl}
+        mapStyle={bakedMapStyle}
         attributionControl={{ compact: false }}
         dragRotate={false}
         touchPitch={false}

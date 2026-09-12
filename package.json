@@ -20,8 +20,8 @@
     "update-holidays-data": "node data/update-holidays-data.mjs",
     "update-ramadan-data": "node data/update-ramadan-data.mjs",
     "update-festivals": "node data/update-festivals.mjs",
-    "prebuild": "node ./scripts/copy-maplibre-worker.mjs",
-    "predev": "node ./scripts/copy-maplibre-worker.mjs"
+    "prebuild": "node ./scripts/copy-maplibre-worker.mjs && node ./scripts/generate-map-style.mjs",
+    "predev": "node ./scripts/copy-maplibre-worker.mjs && node ./scripts/generate-map-style.mjs"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.1.0",
