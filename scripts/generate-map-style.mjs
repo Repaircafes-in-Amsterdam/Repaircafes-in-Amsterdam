@@ -103,7 +103,9 @@ async function hasExistingOutput() {
 }
 
 try {
-  const response = await fetch(STYLE_URL);
+  const response = await fetch(STYLE_URL, {
+    signal: AbortSignal.timeout(15000),
+  });
 
   if (!response.ok) {
     throw new Error(`Failed to fetch map style: ${response.status}`);
