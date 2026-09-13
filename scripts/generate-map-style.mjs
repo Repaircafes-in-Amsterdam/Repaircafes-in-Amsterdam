@@ -63,9 +63,18 @@ function bakeMapStyle(style) {
   }
 
   for (const layer of style.layers) {
+    // Show highway shields a bit later on higher zoom level
     if (layer.id === "highway-shield-non-us") {
       layer.minzoom = 13;
       layer.maxzoom = 24;
+    }
+
+    // Make text labels blue
+    if (layer.paint && "text-color" in layer.paint) {
+      layer.paint = {
+        ...layer.paint,
+        "text-color": "#1F205A",
+      };
     }
 
     if (layer.id === "label_city_capital") {
@@ -75,13 +84,7 @@ function bakeMapStyle(style) {
       };
     }
 
-    if (layer.id === "label_village" || layer.id === "label_other") {
-      layer.paint = {
-        ...layer.paint,
-        "text-color": "#1F205A",
-      };
-    }
-
+    // Make water more blue
     if (layer.id === "water") {
       layer.paint = {
         ...layer.paint,
