@@ -9,6 +9,7 @@ import {
 } from "maplibre-gl";
 import { MapRC } from "../../types";
 import MapMarker from "./MapMarker";
+import MapPreview from "./MapPreview";
 import MapZoomControl from "./MapZoomControl";
 import classes from "../../utils/classes";
 import mapStyle from "./mapStyle.generated.json";
@@ -35,6 +36,7 @@ export default function Map({
     new LngLatBounds(),
   );
   const [showMarkerLabels, setShowMarkerLabels] = useState(false);
+  const [tilesLoaded, setTilesLoaded] = useState(false);
   // Render north-to-south so southern markers paint on top for the 3D stacking effect.
   const sortedData = useMemo(
     () => data.slice().sort((a, b) => b.coordinate[0] - a.coordinate[0]),
@@ -65,6 +67,8 @@ export default function Map({
           // Keep pinch-zoom but disable the two-finger twist gesture that rotates the map.
           map.touchZoomRotate.disableRotation();
           map.keyboard.disableRotation();
+
+          setTilesLoaded(true);
         }}
         onZoom={(event) => setShowMarkerLabels(() => event.viewState.zoom > 13)}
         onClick={() => onSelect && onSelect("")}
@@ -82,6 +86,12 @@ export default function Map({
         ))}
         <MapZoomControl />
       </MapLibreMap>
+      <MapPreview
+        className={classes(
+          "pointer-events-none absolute inset-0 transition-opacity duration-300",
+          tilesLoaded ? "opacity-0" : "opacity-100",
+        )}
+      />
     </div>
   );
 }
