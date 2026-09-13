@@ -13,8 +13,9 @@ import {
   YAxis,
 } from "recharts";
 import type { LabeledBucket } from "./types";
+import { colors, chartColors } from "@/colors.mjs";
 
-const BAR_COLOR = "#2D2E82";
+const BAR_COLOR = colors.blue.DEFAULT;
 
 type DistrictTooltipProps = {
   active?: boolean;
@@ -84,13 +85,13 @@ export default function DistrictChart({
             layout="vertical"
             margin={{ top: 8, right: 32, bottom: 8, left: 8 }}
           >
-            <CartesianGrid stroke="#B7B9FF" horizontal={false} />
+            <CartesianGrid stroke={chartColors[4]} horizontal={false} />
             <XAxis
               type="number"
               allowDecimals={false}
               axisLine={false}
               tickLine={false}
-              tick={{ fill: "#2D2E82", fontSize: 12 }}
+              tick={{ fill: colors.blue.DEFAULT, fontSize: 12 }}
             />
             <YAxis
               type="category"
@@ -98,7 +99,7 @@ export default function DistrictChart({
               width={110}
               axisLine={false}
               tickLine={false}
-              tick={{ fill: "#2D2E82", fontSize: 13 }}
+              tick={{ fill: colors.blue.DEFAULT, fontSize: 13 }}
             />
             <Tooltip
               cursor={false}
@@ -113,7 +114,7 @@ export default function DistrictChart({
                 formatter={(value) =>
                   numberFormatter.format(Number(value ?? 0))
                 }
-                fill="#2D2E82"
+                fill={colors.blue.DEFAULT}
                 fontSize={12}
               />
             </Bar>

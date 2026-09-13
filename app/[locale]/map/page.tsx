@@ -33,8 +33,13 @@ export default async function Page(props: {
   setRequestLocale(locale);
   const mapData = getMapData();
   return (
-    <Suspense>
-      <ClientPage data={mapData} />
-    </Suspense>
+    <>
+      {/* Hint the browser to fetch MapLibre's worker modules before the map JS requests them. */}
+      <link rel="modulepreload" href="/maplibre/maplibre-gl-worker.mjs" />
+      <link rel="modulepreload" href="/maplibre/maplibre-gl-shared.mjs" />
+      <Suspense>
+        <ClientPage data={mapData} />
+      </Suspense>
+    </>
   );
 }

@@ -1,23 +1,22 @@
 "use client";
-import { useState } from "react";
-import "leaflet/dist/leaflet.css";
-import { MapContainer } from "react-leaflet/MapContainer";
-import { TileLayer } from "react-leaflet/TileLayer";
+import { useMemo, useState } from "react";
+import "maplibre-gl/dist/maplibre-gl.css";
+import { Map as MapLibreMap } from "@vis.gl/react-maplibre";
+import {
+  LngLatBounds,
+  setWorkerUrl,
+  type StyleSpecification,
+} from "maplibre-gl";
 import { MapRC } from "../../types";
-import { latLngBounds } from "leaflet";
 import MapMarker from "./MapMarker";
 import MapZoomControl from "./MapZoomControl";
-import MapZoomObserver from "./MapZoomObserver";
 import classes from "../../utils/classes";
-import { useMapEvent } from "react-leaflet/hooks";
+import mapStyle from "./mapStyle.generated.json";
 
-function ClickOutside({ onClick }: { onClick: (slug: string) => void }) {
-  useMapEvent("click", (event) => {
-    const target = event.originalEvent.target as HTMLElement;
-    if (target?.id === "map-container") onClick("");
-  });
-  return null;
-}
+const bakedMapStyle = mapStyle as StyleSpecification;
+
+// Next.js bundling breaks maplibre-gl's default worker URL resolution (import.meta.url), so self-host it.
+setWorkerUrl("/maplibre/maplibre-gl-worker.mjs");
 
 export default function Map({
   data,
@@ -30,29 +29,47 @@ export default function Map({
   onSelect?: (slug: string) => void;
   className?: string;
 }) {
-  const bounds = latLngBounds(
-    data.map((rc) => rc.coordinate as [number, number]),
+  // MapRC.coordinate is [lat, lng]; MapLibre expects [lng, lat].
+  const bounds = data.reduce(
+    (bounds, rc) => bounds.extend([rc.coordinate[1], rc.coordinate[0]]),
+    new LngLatBounds(),
   );
-  const [zoomLevel, setZoomLevel] = useState<number>(0);
-  const tileUrl = `https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png?key=${process.env.NEXT_PUBLIC_MAP_TILE_API_KEY}`;
+  const [showMarkerLabels, setShowMarkerLabels] = useState(false);
+  // Render north-to-south so southern markers paint on top for the 3D stacking effect.
+  const sortedData = useMemo(
+    () => data.slice().sort((a, b) => b.coordinate[0] - a.coordinate[0]),
+    [data],
+  );
 
   return (
-    <div className={classes("relative flex h-full w-full flex-col", className)}>
-      <div id="zoom-control-portal" className="relative"></div>
-      <MapContainer
+    <div
+      className={classes(
+        "attrib-link:text-blue! attrib:bg-white! relative flex h-full w-full flex-col",
+        className,
+      )}
+    >
+      <MapLibreMap
         id="map-container"
-        className="relative z-0 h-full w-full"
-        bounds={bounds}
-        scrollWheelZoom={true}
-        zoomControl={false}
-        zoomSnap={0.1}
-        boundsOptions={{ padding: [20, 20] }}
+        initialViewState={{ bounds, fitBoundsOptions: { padding: 40 } }}
+        mapStyle={bakedMapStyle}
+        attributionControl={{ compact: false }}
+        dragRotate={false}
+        touchPitch={false}
+        pitchWithRotate={false}
+        touchZoomRotate={true}
+        // Eliminate tile cross-fade rendering loops on initial load.
+        fadeDuration={0}
+        onLoad={(event) => {
+          const map = event.target;
+
+          // Keep pinch-zoom but disable the two-finger twist gesture that rotates the map.
+          map.touchZoomRotate.disableRotation();
+          map.keyboard.disableRotation();
+        }}
+        onZoom={(event) => setShowMarkerLabels(() => event.viewState.zoom > 13)}
+        onClick={() => onSelect && onSelect("")}
       >
-        <TileLayer
-          url={tileUrl}
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
-        />
-        {data.map((rc) => (
+        {sortedData.map((rc) => (
           <MapMarker
             key={rc.slug}
             position={rc.coordinate as [number, number]}
@@ -60,13 +77,11 @@ export default function Map({
             active={rc.slug === active}
             label={rc.name}
             slug={rc.slug}
-            showLabel={zoomLevel > 13}
+            showLabel={showMarkerLabels}
           />
         ))}
-        <ClickOutside onClick={() => onSelect && onSelect("")} />
         <MapZoomControl />
-        <MapZoomObserver onZoom={setZoomLevel} />
-      </MapContainer>
+      </MapLibreMap>
     </div>
   );
 }

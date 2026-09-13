@@ -29,10 +29,10 @@ export default function UpcomingItem({ event }: { event: Event }) {
       )}
       onFocus={() => setHoveredRow(slug)}
       onBlur={() => setHoveredRow("")}
-      onPointerOver={(event) =>
+      onPointerEnter={(event) =>
         event.pointerType !== "touch" && setHoveredRow(slug)
       }
-      onPointerOut={(event) =>
+      onPointerLeave={(event) =>
         event.pointerType !== "touch" && setHoveredRow("")
       }
     >

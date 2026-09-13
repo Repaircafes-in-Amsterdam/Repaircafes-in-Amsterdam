@@ -1,5 +1,14 @@
-<svg width="24" height="30" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M23 12c0 4.1-2.8 8.4-5.7 11.7a46 46 0 0 1-5.3 5 42.4 42.4 0 0 1-5.3-5C3.7 20.4 1 16.1 1 12a11 11 0 0 1 22 0Z"
-    stroke="white" stroke-width="2" stroke-linecap="round" fill="currentColor" />
-  <circle cx="12" cy="12" r="4" fill="white" />
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="36" fill="none">
+  <g fill="#000" transform="translate(12 31)">
+    <ellipse opacity=".04" rx="10.5" ry="5.25" />
+    <ellipse opacity=".04" rx="10.5" ry="5.25" />
+    <ellipse opacity=".04" rx="9.5" ry="4.77" />
+    <ellipse opacity=".04" rx="8.5" ry="4.3" />
+    <ellipse opacity=".04" rx="7.5" ry="3.82" />
+    <ellipse opacity=".04" rx="6.5" ry="3.34" />
+    <ellipse opacity=".04" rx="5.5" ry="2.86" />
+    <ellipse opacity=".04" rx="4.5" ry="2.39" />
+  </g>
+  <path fill="currentColor" stroke="white" stroke-width="2" d="M1 12a11 11 0 0122 0c0 7-8 14-11 17-3-3-11-10-11-17" />
+  <circle cx="12" cy="12" r="4" fill="#fff"></circle>
 </svg>

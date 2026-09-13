@@ -12,6 +12,7 @@ import CSPostHogProvider from "../CSPostHogProvider";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import SuspendedPostHogTracker from "../components/PostHogTracker";
+import { colors } from "@/colors.mjs";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -32,7 +33,7 @@ export async function generateMetadata(props: {
   };
 }
 
-export const viewport: Viewport = { themeColor: "#2D2E82" };
+export const viewport: Viewport = { themeColor: colors.blue.DEFAULT };
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
