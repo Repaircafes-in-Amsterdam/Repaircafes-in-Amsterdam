@@ -48,8 +48,54 @@ const extraCanalLinesLayer = {
   },
 };
 
+const removedLayerIds = new Set([
+  "highway-shield-us-interstate",
+  "road_shield_us",
+]);
+
+const nullSafeRefLengthShieldLayerIds = new Set(["highway-shield-non-us"]);
+
+// Mirror hyperknot/openfreemap-styles#21 until Positron gets the same null-safe shield filter upstream.
+function addRefLengthTypeGuard(filter) {
+  if (!Array.isArray(filter)) {
+    return filter;
+  }
+
+  if (
+    filter[0] === "<=" &&
+    Array.isArray(filter[1]) &&
+    filter[1][0] === "get" &&
+    filter[1][1] === "ref_length" &&
+    typeof filter[2] === "number"
+  ) {
+    return [
+      "all",
+      ["==", ["typeof", filter[1]], "number"],
+      ["<=", filter[1], filter[2]],
+    ];
+  }
+
+  if (filter[0] === "all") {
+    return [
+      "all",
+      ...filter.slice(1).flatMap((part) => {
+        const guardedPart = addRefLengthTypeGuard(part);
+
+        if (Array.isArray(guardedPart) && guardedPart[0] === "all") {
+          return guardedPart.slice(1);
+        }
+
+        return [guardedPart];
+      }),
+    ];
+  }
+
+  return filter.map((part) => addRefLengthTypeGuard(part));
+}
+
 function bakeMapStyle(style) {
   style.sources["versatiles-water"] = versatilesWaterSource;
+  style.layers = style.layers.filter((layer) => !removedLayerIds.has(layer.id));
 
   if (!style.layers.some((layer) => layer.id === extraCanalLinesLayer.id)) {
     const waterwayIndex = style.layers.findIndex(
@@ -68,6 +114,10 @@ function bakeMapStyle(style) {
     if (layer.id === "highway-shield-non-us") {
       layer.minzoom = 13;
       layer.maxzoom = 24;
+    }
+
+    if (layer.filter && nullSafeRefLengthShieldLayerIds.has(layer.id)) {
+      layer.filter = addRefLengthTypeGuard(layer.filter);
     }
 
     // Make text labels blue

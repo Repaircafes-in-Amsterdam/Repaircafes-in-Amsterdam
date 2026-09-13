@@ -2322,6 +2322,17 @@
       "filter": [
         "all",
         [
+          "==",
+          [
+            "typeof",
+            [
+              "get",
+              "ref_length"
+            ]
+          ],
+          "number"
+        ],
+        [
           "<=",
           [
             "get",
@@ -2391,169 +2402,6 @@
         "text-size": 10
       },
       "maxzoom": 24
-    },
-    {
-      "id": "highway-shield-us-interstate",
-      "type": "symbol",
-      "source": "openmaptiles",
-      "source-layer": "transportation_name",
-      "minzoom": 11,
-      "filter": [
-        "all",
-        [
-          "<=",
-          [
-            "get",
-            "ref_length"
-          ],
-          6
-        ],
-        [
-          "match",
-          [
-            "geometry-type"
-          ],
-          [
-            "LineString",
-            "MultiLineString"
-          ],
-          true,
-          false
-        ],
-        [
-          "match",
-          [
-            "get",
-            "network"
-          ],
-          [
-            "us-interstate"
-          ],
-          true,
-          false
-        ]
-      ],
-      "layout": {
-        "icon-image": [
-          "concat",
-          [
-            "get",
-            "network"
-          ],
-          "_",
-          [
-            "get",
-            "ref_length"
-          ]
-        ],
-        "icon-rotation-alignment": "viewport",
-        "icon-size": 1,
-        "symbol-placement": [
-          "step",
-          [
-            "zoom"
-          ],
-          "point",
-          7,
-          "line",
-          8,
-          "line"
-        ],
-        "symbol-spacing": 200,
-        "text-field": [
-          "to-string",
-          [
-            "get",
-            "ref"
-          ]
-        ],
-        "text-font": [
-          "Noto Sans Regular"
-        ],
-        "text-rotation-alignment": "viewport",
-        "text-size": 10
-      }
-    },
-    {
-      "id": "road_shield_us",
-      "type": "symbol",
-      "source": "openmaptiles",
-      "source-layer": "transportation_name",
-      "minzoom": 12,
-      "filter": [
-        "all",
-        [
-          "<=",
-          [
-            "get",
-            "ref_length"
-          ],
-          6
-        ],
-        [
-          "match",
-          [
-            "geometry-type"
-          ],
-          [
-            "LineString",
-            "MultiLineString"
-          ],
-          true,
-          false
-        ],
-        [
-          "match",
-          [
-            "get",
-            "network"
-          ],
-          [
-            "us-highway",
-            "us-state"
-          ],
-          true,
-          false
-        ]
-      ],
-      "layout": {
-        "icon-image": [
-          "concat",
-          [
-            "get",
-            "network"
-          ],
-          "_",
-          [
-            "get",
-            "ref_length"
-          ]
-        ],
-        "icon-rotation-alignment": "viewport",
-        "icon-size": 1,
-        "symbol-placement": [
-          "step",
-          [
-            "zoom"
-          ],
-          "point",
-          11,
-          "line"
-        ],
-        "symbol-spacing": 200,
-        "text-field": [
-          "to-string",
-          [
-            "get",
-            "ref"
-          ]
-        ],
-        "text-font": [
-          "Noto Sans Regular"
-        ],
-        "text-rotation-alignment": "viewport",
-        "text-size": 10
-      }
     },
     {
       "id": "airport",
