@@ -79,5 +79,13 @@
   },
   "volta": {
     "node": "24.15.0"
-  }
+  },
+  "browserslist": [
+    "chrome >= 119",
+    "edge >= 148",
+    "firefox >= 115",
+    "safari >= 14",
+    "ios_saf >= 16.6",
+    "samsung >= 27"
+  ]
 }
