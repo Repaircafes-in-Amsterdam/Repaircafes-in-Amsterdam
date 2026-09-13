@@ -1,5 +1,6 @@
 import path from "node:path";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { colors, mapWaterColor } from "../colors.mjs";
 
 const STYLE_URL = "https://tiles.openfreemap.org/styles/positron";
 const outputPath = path.join(
@@ -30,7 +31,7 @@ const extraCanalLinesLayer = {
     "line-join": "round",
   },
   paint: {
-    "line-color": "#bdbfc6",
+    "line-color": mapWaterColor,
     "line-width": [
       "interpolate",
       ["linear"],
@@ -73,14 +74,14 @@ function bakeMapStyle(style) {
     if (layer.paint && "text-color" in layer.paint) {
       layer.paint = {
         ...layer.paint,
-        "text-color": "#1F205A",
+        "text-color": colors.blue[600],
       };
     }
 
     if (layer.id === "label_city_capital") {
       layer.paint = {
         ...layer.paint,
-        "text-color": "#2D2E82",
+        "text-color": colors.blue.DEFAULT,
       };
     }
 
@@ -88,7 +89,7 @@ function bakeMapStyle(style) {
     if (layer.id === "water") {
       layer.paint = {
         ...layer.paint,
-        "fill-color": "#bdbfc6",
+        "fill-color": mapWaterColor,
       };
     }
   }

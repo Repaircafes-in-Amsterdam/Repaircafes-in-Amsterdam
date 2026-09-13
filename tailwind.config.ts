@@ -1,18 +1,6 @@
 import type { Config } from "tailwindcss";
 import plugin from "tailwindcss/plugin";
-
-const colors = {
-  blue: {
-    250: "#E8E8FF",
-    DEFAULT: "#2D2E82",
-    600: "#1F205A",
-  },
-  orange: {
-    450: "#EF8565", // AA orange on blue
-    DEFAULT: "#ED6A42",
-  },
-  white: "#ffffff",
-};
+import { colors } from "./colors.mjs";
 
 // based on 65ch, but font loading caused layout shift
 const bodyWidth = "calc(41rem + 0.75rem)";

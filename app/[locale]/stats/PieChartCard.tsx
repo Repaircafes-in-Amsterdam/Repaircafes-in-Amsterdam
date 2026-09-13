@@ -3,17 +3,9 @@
 import { useMemo } from "react";
 import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip } from "recharts";
 import type { LabeledBucket } from "./types";
+import { colors, chartColors } from "@/colors.mjs";
 
-const PIE_COLORS = [
-  "#2D2E82",
-  "#ED6A42",
-  "#5A5DB8",
-  "#EF8565",
-  "#B7B9FF",
-  "#1F205A",
-  "#F4B29D",
-  "#7E82D9",
-];
+const PIE_COLORS = chartColors;
 
 const RADIAN = Math.PI / 180;
 
@@ -59,13 +51,13 @@ function renderPieLabel(locale: string) {
         y={y}
         textAnchor={x > cx ? "start" : "end"}
         dominantBaseline="central"
-        fill="#2D2E82"
+        fill={colors.blue.DEFAULT}
         fontSize={12}
       >
         <tspan x={x} dy="-0.15em">
           {name}
         </tspan>
-        <tspan x={x} dy="1.2em" fill="#ED6A42" fontSize={11}>
+        <tspan x={x} dy="1.2em" fill={colors.orange.DEFAULT} fontSize={11}>
           {formatPercent(percent, locale)}
         </tspan>
       </text>
@@ -108,7 +100,7 @@ export default function PieChartCard({
               startAngle={90}
               endAngle={-270}
               outerRadius="60%"
-              labelLine={{ stroke: "#2D2E82" }}
+              labelLine={{ stroke: colors.blue.DEFAULT }}
               label={renderPieLabel(locale)}
               isAnimationActive={false}
             >
@@ -132,11 +124,11 @@ export default function PieChartCard({
               }}
               contentStyle={{
                 borderRadius: "0",
-                border: "2px solid #2D2E82",
+                border: `2px solid ${colors.blue.DEFAULT}`,
                 boxShadow: "none",
-                color: "#2D2E82",
+                color: colors.blue.DEFAULT,
               }}
-              itemStyle={{ color: "#2D2E82" }}
+              itemStyle={{ color: colors.blue.DEFAULT }}
             />
           </PieChart>
         </ResponsiveContainer>
