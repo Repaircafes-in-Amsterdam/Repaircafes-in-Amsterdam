@@ -34,7 +34,7 @@ export default function Map({
     (bounds, rc) => bounds.extend([rc.coordinate[1], rc.coordinate[0]]),
     new LngLatBounds(),
   );
-  const [zoomLevel, setZoomLevel] = useState<number>(0);
+  const [showMarkerLabels, setShowMarkerLabels] = useState(false);
   // Render north-to-south so southern markers paint on top for the 3D stacking effect.
   const sortedData = useMemo(
     () => data.slice().sort((a, b) => b.coordinate[0] - a.coordinate[0]),
@@ -66,7 +66,7 @@ export default function Map({
           map.touchZoomRotate.disableRotation();
           map.keyboard.disableRotation();
         }}
-        onZoom={(event) => setZoomLevel(event.viewState.zoom)}
+        onZoom={(event) => setShowMarkerLabels(() => event.viewState.zoom > 13)}
         onClick={() => onSelect && onSelect("")}
       >
         {sortedData.map((rc) => (
@@ -77,7 +77,7 @@ export default function Map({
             active={rc.slug === active}
             label={rc.name}
             slug={rc.slug}
-            showLabel={zoomLevel > 13}
+            showLabel={showMarkerLabels}
           />
         ))}
         <MapZoomControl />
