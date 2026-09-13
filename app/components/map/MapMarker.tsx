@@ -4,9 +4,6 @@ import MarkerIcon from "@/app/icons/Marker.svg?react";
 import { Marker, Popup } from "@vis.gl/react-maplibre";
 import type { MarkerInstance } from "@vis.gl/react-maplibre";
 
-const BLUE = "#2D2E82";
-const ORANGE = "#ED6A42";
-
 export default function MapMarker({
   position,
   onClick,
@@ -63,7 +60,6 @@ export default function MapMarker({
       >
         <MarkerIcon
           aria-hidden="true"
-          style={{ color: shouldbeHighlighted ? ORANGE : BLUE }}
           className={shouldbeHighlighted ? "text-orange" : "text-blue"}
         />
       </Marker>
