@@ -6,7 +6,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import TopBar from "../TopBar";
 import classes from "@/app/utils/classes";
-import { BASE_URL } from "@/app/constants";
+import getAlternates from "@/app/utils/getAlternates";
 import HoverResetter from "@/app/components/HoverResetter";
 import CSPostHogProvider from "../CSPostHogProvider";
 import { routing } from "@/i18n/routing";
@@ -29,7 +29,7 @@ export async function generateMetadata(props: {
     title: t("title"),
     description: t("description"),
     keywords: t("keywords"),
-    alternates: { canonical: BASE_URL },
+    alternates: getAlternates(locale),
   };
 }
 

@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import { Metadata } from "next";
-import { BASE_URL } from "@/app/constants";
+import getAlternates from "@/app/utils/getAlternates";
 import getMapData from "@/app/utils/getMapData";
 import ClientPage from "./page.client";
 import { getTranslations, setRequestLocale } from "next-intl/server";
@@ -17,9 +17,7 @@ export async function generateMetadata(props: {
   return {
     title: t("title"),
     description: t("description"),
-    alternates: {
-      canonical: BASE_URL + "map",
-    },
+    alternates: getAlternates(locale, "map"),
   };
 }
 

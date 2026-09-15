@@ -7,7 +7,7 @@ import festivalsData from "@/data/data/festivals.json";
 import { Festival } from "@/app/types";
 import JsonLd from "@/app/components/JsonLd";
 import getFestivalJsonLd from "./getFestivalJsonLd";
-import { BASE_URL } from "@/app/constants";
+import getAlternates from "@/app/utils/getAlternates";
 import { useLocale, useTranslations } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -27,9 +27,7 @@ export async function generateMetadata(props: {
   const name = festival?.name || t("unknown.title");
   return {
     title: t("metadata.title", { name }),
-    alternates: {
-      canonical: BASE_URL + "festival/" + slug,
-    },
+    alternates: getAlternates(locale, `festival/${slug}`),
   };
 }
 

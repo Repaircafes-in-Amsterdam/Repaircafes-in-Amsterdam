@@ -1,4 +1,4 @@
-import { BASE_URL } from "@/app/constants";
+import getAlternates from "@/app/utils/getAlternates";
 import { Metadata } from "next";
 import data from "@/data/data/cafes.json";
 import { RC, Event } from "@/app/types";
@@ -21,9 +21,7 @@ export async function generateMetadata(props: {
   const name = rc?.name || t("unknown.title");
   return {
     title: t("metadata.title", { name }),
-    alternates: {
-      canonical: BASE_URL + "cafe/" + slug + "/events",
-    },
+    alternates: getAlternates(locale, `cafe/${slug}/events`),
   };
 }
 
