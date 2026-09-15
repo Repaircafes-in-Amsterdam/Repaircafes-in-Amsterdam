@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import BasePage from "@/app/components/BasePage";
-import { BASE_URL } from "@/app/constants";
+import getAlternates from "@/app/utils/getAlternates";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 
@@ -19,9 +19,7 @@ export async function generateMetadata(props: {
   return {
     title: t("title"),
     description: t("description"),
-    alternates: {
-      canonical: BASE_URL + "repaircafes",
-    },
+    alternates: getAlternates(locale, "repaircafes"),
   };
 }
 

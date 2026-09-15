@@ -3,7 +3,7 @@ import Mail from "@/app/icons/Mail.svg?react";
 import data from "@/data/data/cafes.json";
 import BasePage from "@/app/components/BasePage";
 import { Metadata } from "next";
-import { BASE_URL } from "@/app/constants";
+import getAlternates from "@/app/utils/getAlternates";
 import DetailsSection from "@/app/components/DetailsSection";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { useTranslations } from "next-intl";
@@ -21,9 +21,7 @@ export async function generateMetadata(props: {
   return {
     title: t("title"),
     description: t("description"),
-    alternates: {
-      canonical: BASE_URL + "about",
-    },
+    alternates: getAlternates(locale, "about"),
   };
 }
 

@@ -1,7 +1,7 @@
 import data from "@/data/data/cafes.json";
 import BasePage from "@/app/components/BasePage";
 import { Metadata } from "next";
-import { BASE_URL } from "@/app/constants";
+import getAlternates from "@/app/utils/getAlternates";
 import { Event, RC } from "@/app/types";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import getEvents from "@/app/actions/getEvents";
@@ -34,9 +34,7 @@ export async function generateMetadata(props: {
 
   return {
     title: t("title"),
-    alternates: {
-      canonical: BASE_URL + "stats",
-    },
+    alternates: getAlternates(locale, "stats"),
   };
 }
 

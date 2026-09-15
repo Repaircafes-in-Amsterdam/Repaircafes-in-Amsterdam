@@ -10,7 +10,7 @@ import { RC, Event } from "@/app/types";
 import JsonLd from "@/app/components/JsonLd";
 import getCafeJsonLd from "./getCafeJsonLd";
 import getEvents from "@/app/actions/getEvents";
-import { BASE_URL } from "@/app/constants";
+import getAlternates from "@/app/utils/getAlternates";
 import Unconfirmed from "@/app/components/Unconfirmed";
 import LinksSection from "@/app/components/LinksSection";
 import { useLocale, useTranslations } from "next-intl";
@@ -31,9 +31,7 @@ export async function generateMetadata(props: {
   const name = rc?.name || t("unknown.title");
   return {
     title: t("metadata.title", { name }),
-    alternates: {
-      canonical: BASE_URL + "cafe/" + slug,
-    },
+    alternates: getAlternates(locale, `cafe/${slug}`),
   };
 }
 
