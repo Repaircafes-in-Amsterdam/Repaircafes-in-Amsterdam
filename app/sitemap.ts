@@ -47,10 +47,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     alternates: {
       languages: {
         ...Object.fromEntries(
-          routing.locales.map((locale) => [
-            locale,
-            `${BASE_URL}${locale === routing.defaultLocale ? "" : `${locale}/`}${entry.url}`,
-          ]),
+          routing.locales.map((locale) => {
+            const segments = [
+              locale === routing.defaultLocale ? null : locale,
+              entry.url,
+            ].filter(Boolean);
+            return [
+              locale,
+              segments.length ? `${BASE_URL}${segments.join("/")}` : BASE_URL,
+            ];
+          }),
         ),
         "x-default": `${BASE_URL}${entry.url}`,
       },
