@@ -37,7 +37,7 @@
     "csv-stringify": "^6.8.3",
     "dayjs": "^1.11.13",
     "lodash": "^4.17.21",
-    "maplibre-gl": "^6.7.0",
+    "maplibre-gl": "^6.9.0",
     "next": "15.2.6",
     "next-intl": "^4.0.2",
     "posthog-js": "^1.234.9",
