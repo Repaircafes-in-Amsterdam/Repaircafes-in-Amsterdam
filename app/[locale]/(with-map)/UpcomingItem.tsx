@@ -38,7 +38,12 @@ export default function UpcomingItem({ event }: { event: Event }) {
     >
       <div className="flex grow flex-col">
         <em className="font-semibold not-italic">{name}</em>
-        {startTime} - {endTime} {t("in")} {district}
+        <span>
+          <time dateTime={startTime}>{startTime}</time>
+          <span aria-hidden="true"> - </span>
+          <span className="sr-only"> {t("to")} </span>
+          <time dateTime={endTime}>{endTime}</time> {t("in")} {district}
+        </span>
       </div>
       {festival && <Calendar1 className="shrink-0" title={t("festival")} />}
       {!verified && (
