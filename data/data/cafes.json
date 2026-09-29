@@ -802,7 +802,8 @@
       "16:30"
     ],
     "closedRanges": [
-      "2026-08"
+      "2026-08",
+      "2026-10-10:2026-10-18"
     ],
     "closed": {
       "nl": "Zomervakantie en kerstvakantie.\nWij volgen de vakantie kalender v/d Meevaart.",
