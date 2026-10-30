@@ -15,10 +15,15 @@ const sheet = doc.sheetsById[SHEET_ID];
 const rows = await sheet.getRows();
 const list = rows
   .map((row) => row.toObject())
-  // Trim all values
+  // Skip rows without a name, like empty rows
+  .filter((row) => row.name?.trim())
+  // Trim all values, empty cells at the end of a row are undefined
   .map((row) =>
     Object.fromEntries(
-      Object.entries(row).map(([column, value]) => [column, value.trim()]),
+      Object.entries(row).map(([column, value]) => [
+        column,
+        value?.trim() ?? "",
+      ]),
     ),
   )
   // Split multi line items into an arrays
