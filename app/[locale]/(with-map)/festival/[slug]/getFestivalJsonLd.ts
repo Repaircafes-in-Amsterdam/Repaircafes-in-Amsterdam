@@ -59,6 +59,6 @@ export default function getFestivalJsonLd(
         addressCountry: "NL",
       },
     },
-    url: festival.link,
+    url: festival.link || undefined,
   };
 }
