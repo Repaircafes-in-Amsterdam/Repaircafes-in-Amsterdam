@@ -1692,6 +1692,17 @@
       "filter": [
         "all",
         [
+          "==",
+          [
+            "typeof",
+            [
+              "get",
+              "admin_level"
+            ]
+          ],
+          "number"
+        ],
+        [
           ">=",
           [
             "get",
