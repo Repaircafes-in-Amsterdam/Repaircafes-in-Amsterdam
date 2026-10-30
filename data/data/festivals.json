@@ -119,5 +119,73 @@
       "nl": "Kom langs voor een avond vol documentaires, reparaties en gesprekken, georganiseerd door Filth, Circular.Amsterdam en de Repair Cafés in Amsterdam.\n\n18:00 - Deuren open\n18:15 - Vertoning van de Repair Café-documentaire van Masato Sezawa (2024)\n19:00 - Reparatienacht: fietsen, textiel & elektronica\n\nKom langs, neem iets mee dat gerepareerd moet worden, leer nieuwe vaardigheden, ontmoet mensen of geniet gewoon van de avond!\nVrijwilligers zijn ook van harte welkom. We hebben al het gereedschap dat je nodig hebt, neem gewoon je nieuwsgierigheid en bereidheid om te helpen mee.\n\nWil je meedoen? Meld je aan via de Meer info link.\n\nFilth | repaircafe.amsterdam | circularamsterdam.nl",
       "en": "Join us for an evening of documentary, repairs, and conversation, brought to you by Filth, Circular.Amsterdam, and Repair Cafés in Amsterdam.\n\n18:00 - Doors open\n18:15 - Screening of Repair Café documentary by Masato Sezawa (2024)\n19:00 - Repair Night: bikes, textiles & electronics\n\nCome along, bring something that needs repairing, learn new skills, meet people, or simply enjoy the evening!\nVolunteers are also very welcome. We have all the tools you need, just bring your curiosity and willingness to help.\n\nWould you like to join us? Sign up at the More info link.\n\nFilth | repaircafe.amsterdam | circularamsterdam.nl"
     }
+  },
+  {
+    "name": "Repair Academie - Hallo Naaimachine!",
+    "slug": "hallo-naaimachine",
+    "location": "Buurthuis Z369",
+    "address": "Zuideinde 369",
+    "district": "Noord",
+    "dates": [
+      "2026-11-10"
+    ],
+    "startTime": "19:00",
+    "endTime": "21:00",
+    "link": "https://www.instagram.com/repair_academie?xtok=dzllMHo0cThsd3Fo",
+    "description": {
+      "nl": "Deze workshop is voor iedereen die graag met de naaimachine wil leren werken. Geen voorkennis nodig. Heb je zelf een naaimachine, maar weet je niet hoe hij werkt, neem hem mee!\n€35\nVragen of aanmelden? Mail naar info@repair-academie.nl \n#reparerenkunjeleren #workshops #amsterdamnoord",
+      "en": "This workshop is for anyone who wants to learn how to use a sewing machine. No prior experience required. If you have your own sewing machine but don’t know how it works, bring it along!\n€35\nQuestions or want to sign up? Email info@repair-academie.nl\n#learntofix #workshops #amsterdamnoord"
+    }
+  },
+  {
+    "name": "Repair Academie - Open Academie",
+    "slug": "open-academie",
+    "location": "Buurthuis Z370",
+    "address": "Zuideinde 369",
+    "district": "Noord",
+    "dates": [
+      "2026-11-17"
+    ],
+    "startTime": "18:30",
+    "endTime": "21:00",
+    "link": "https://www.instagram.com/repair_academie?xtok=dzllMHo0cThsd3Fo",
+    "description": {
+      "nl": "Heb je thuis iets liggen wat kapot is, neem het mee en kom langs. Wij helpen je om het zelf te repareren. Gereedschap & naaimachines zijn aanwezig. Op donatie basis\nVragen of aanmelden? Mail naar info@repair-academie.nl \n#reparerenkunjeleren #workshops #amsterdamnoord",
+      "en": "If you have something at home that's broken, bring it along and stop by. We'll help you fix it yourself. Tools and sewing machines are provided. On a donation basis.\nHave questions or want to sign up? Email info@repair-academie.nl\n#learntofix #workshops #amsterdamnoord"
+    }
+  },
+  {
+    "name": "Repair Academie - Eerste hulp bij apparaten",
+    "slug": "eerste-hulp-bij-apparaten",
+    "location": "Buurthuis Z371",
+    "address": "Zuideinde 369",
+    "district": "Noord",
+    "dates": [
+      "2026-11-26"
+    ],
+    "startTime": "19:00",
+    "endTime": "21:00",
+    "link": "https://www.instagram.com/repair_academie?xtok=dzllMHo0cThsd3Fo",
+    "description": {
+      "nl": "In deze workshop krijg je een introductie van de basisvaardigheden die je nodig hebt om kleine elektrische apparaten te kunnen repareren. Je leert hoe je kapotte apparaten analyseert met de multimeter. Geen ervaring of voorkennis nodig. \n€35\nVragen of aanmelden? Mail naar info@repair-academie.nl \n#reparerenkunjeleren #workshops #amsterdamnoord",
+      "en": "In this workshop, you’ll get an introduction to the basic skills you need to repair small electrical appliances. You’ll learn how to diagnose broken appliances using a multimeter. No experience or prior knowledge required.\n€35\nQuestions or want to sign up? Email info@repair-academie.nl\n#youcanlearntofix #workshops #amsterdamnoord"
+    }
+  },
+  {
+    "name": "Repair Academie - Kids Repair",
+    "slug": "kids-repair",
+    "location": "Buurthuis Z372",
+    "address": "Zuideinde 369",
+    "district": "Noord",
+    "dates": [
+      "2026-11-29"
+    ],
+    "startTime": "14:00",
+    "endTime": "16:00",
+    "link": "https://www.instagram.com/repair_academie?xtok=dzllMHo0cThsd3Fo",
+    "description": {
+      "nl": "Deze zondagmiddag kan je samen met je kinderen naar hartelust oude apparaten uit elkaar halen, schroef voor schroef. Leren knopen aannaaien en sokpoppen maken. Of een gat herstellen in een kapotte broek met een zelfgemaakte patch. \nGratis activiteit met limo\nVragen of aanmelden? Mail naar info@repair-academie.nl \n#reparerenkunjeleren #workshops #amsterdamnoord",
+      "en": "This Sunday afternoon, you and your kids can take apart old appliances to your heart’s content, screw by screw. Learn how to sew on buttons and make sock puppets. Or mend a hole in a pair of torn pants with a homemade patch.\nFree activity with lemonade\nQuestions or want to sign up? Email info@repair-academie.nl\n#learntofix #workshops #amsterdamnoord"
+    }
   }
 ]
