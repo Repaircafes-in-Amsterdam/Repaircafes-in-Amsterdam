@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 import useIntersectionObserver from "@/app/utils/useIntersectionObserver";
 import classes from "@/app/utils/classes";
 
@@ -10,6 +11,7 @@ export default function LoadMoreWhenVisible({
   const loadMoreRef = useRef(null);
   const loadMoreVisible = useIntersectionObserver(loadMoreRef);
   const [loadingMore, setLoadingMore] = useState(false);
+  const t = useTranslations();
 
   async function loadMoreWrapper() {
     setLoadingMore(true);
@@ -23,7 +25,7 @@ export default function LoadMoreWhenVisible({
 
   return (
     <div className="px-3 pb-3">
-      Bezig met laden van meer...
+      {t("loading-more")}
       <div ref={loadMoreRef} className={classes(loadingMore && "hidden")}></div>
     </div>
   );
