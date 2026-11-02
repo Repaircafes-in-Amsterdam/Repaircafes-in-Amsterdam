@@ -229,8 +229,8 @@
     "district": "Zuid",
     "email": "a.j.smit@freeler.nl",
     "doRepair": {
-      "nl": "Elektronica, kleding, fietsen, hout speelgoed.",
-      "en": "Electronics, clothing, bicycles, wooden toys."
+      "nl": "Elektronica, kleding, houten speelgoed.",
+      "en": "Electronics, clothing, wooden toys."
     },
     "dontRepair": {
       "nl": "Inkt-jet printers",
