@@ -913,8 +913,8 @@
     "district": "Centrum",
     "email": "mkwame@dock.nl",
     "doRepair": {
-      "nl": "Electronica, Kleding",
-      "en": "Electronics, Clothing"
+      "nl": "Electronica",
+      "en": "Electronics"
     },
     "dontRepair": {
       "nl": "",
