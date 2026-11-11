@@ -102,6 +102,15 @@
       "description": "Over Repair Cafés in Amsterdam"
     }
   },
+  "join-as-boardmember": {
+    "title": "Help Repair Cafés in Amsterdam verder groeien!",
+    "contact": "Contact",
+    "email": "info@repaircafe.amsterdam",
+    "metadata": {
+      "title": "Word bestuurslid - Repair Cafes in Amsterdam",
+      "description": "We zoeken een voorzitter, penningmeester en secretaris voor een nieuwe overkoepelende stichting voor Repair Cafés in Amsterdam"
+    }
+  },
   "repaircafes": {
     "title": "Over Repair Cafés",
     "metadata": {
