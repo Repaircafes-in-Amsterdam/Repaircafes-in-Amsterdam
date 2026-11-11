@@ -102,6 +102,15 @@
       "description": "About Repair Cafés in Amsterdam"
     }
   },
+  "join-as-boardmember": {
+    "title": "Help Repair Cafés in Amsterdam to grow further!",
+    "contact": "Contact",
+    "email": "info@repaircafe.amsterdam",
+    "metadata": {
+      "title": "Join as board member - Repair Cafes in Amsterdam",
+      "description": "We are looking for a chair, treasurer and secretary for a new umbrella foundation for Repair Cafés in Amsterdam"
+    }
+  },
   "repaircafes": {
     "title": "About Repair Cafés",
     "metadata": {

@@ -33,6 +33,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.7,
       },
       {
+        url: "join-as-boardmember",
+        lastModified: new Date(),
+        changeFrequency: "monthly",
+        priority: 0.3,
+      },
+      {
         url: "map",
         lastModified: new Date(),
         changeFrequency: "monthly",
