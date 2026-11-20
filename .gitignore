@@ -39,3 +39,5 @@ next-env.d.ts
 
 # mailing script
 .mailing-sent.local.log
+.mailing-preview.local.*
+mails
