@@ -102,10 +102,25 @@ console.log(`Subject: ${subject}\n`);
 console.log(`${todo.length} recipients${done.size ? " (already sent are skipped)" : ""}:`);
 for (const { name, address } of todo) console.log(`  ${address.padEnd(45)} ${name}`);
 
+const message = (to) => ({
+  from: process.env.MAIL_FROM,
+  to,
+  replyTo: process.env.REPLY_TO,
+  subject,
+  text,
+  html,
+});
+
 if (!args.send) {
   fs.writeFileSync(".mailing-preview.local.html", html);
   fs.writeFileSync(".mailing-preview.local.txt", text);
-  console.log("\nDry run, nothing sent. Preview: .mailing-preview.local.{html,txt}. Add --send to send.");
+  // The complete message as it would be sent (open it in a mail client).
+  const preview = nodemailer.createTransport({ streamTransport: true, buffer: true });
+  const { message: eml } = await preview.sendMail(message(todo[0]?.address));
+  fs.writeFileSync(".mailing-preview.local.eml", eml);
+  console.log(
+    "\nDry run, nothing sent. Preview: .mailing-preview.local.{html,txt,eml}. Add --send to send.",
+  );
   process.exit(0);
 }
 
@@ -134,14 +149,7 @@ const transport = nodemailer.createTransport({
 
 for (const [i, { address }] of todo.entries()) {
   try {
-    await transport.sendMail({
-      from: MAIL_FROM,
-      to: address,
-      replyTo: REPLY_TO,
-      subject,
-      text,
-      html,
-    });
+    await transport.sendMail(message(address));
   } catch (error) {
     console.error(`FAILED ${address}: ${error.message}`);
     continue;
