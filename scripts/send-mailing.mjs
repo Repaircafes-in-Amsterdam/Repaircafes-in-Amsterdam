@@ -19,6 +19,7 @@
 // SMTP settings come from environment variables or `.env.local`
 // (gitignored), see scripts/send-mailing.env.example.
 import fs from "fs";
+import path from "path";
 import readline from "readline/promises";
 import { parseArgs } from "util";
 import nodemailer from "nodemailer";
@@ -27,7 +28,6 @@ import { convert } from "html-to-text";
 import loadJSON from "../data/loadJSON.mjs";
 
 const ENV_FILE = ".env.local";
-const SENT_LOG = ".mailing-sent.local.log"; // lets an interrupted run resume
 
 const { values: args } = parseArgs({
   options: {
@@ -42,6 +42,13 @@ if (!args.body) {
   console.error("Usage: --body <file> [--subject <text>] [--only <address>] [--send]");
   process.exit(1);
 }
+// Addresses this mailing was sent to, next to the body file
+// (mails/2026-11-20.md -> mails/.2026-11-20.log), so an interrupted run
+// resumes and every mailing has its own log.
+const SENT_LOG = path.join(
+  path.dirname(args.body),
+  `.${path.basename(args.body, path.extname(args.body))}.log`,
+);
 
 if (fs.existsSync(ENV_FILE)) process.loadEnvFile(ENV_FILE);
 

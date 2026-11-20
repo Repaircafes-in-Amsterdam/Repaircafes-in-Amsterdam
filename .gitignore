@@ -38,6 +38,7 @@ next-env.d.ts
 .waylog
 
 # mailing script
-.mailing-sent.local.log
+# sent log per mailing, next to its body file
+.*.log
 .mailing-preview.local.*
 mails
