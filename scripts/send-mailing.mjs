@@ -47,6 +47,9 @@ if (fs.existsSync(ENV_FILE)) process.loadEnvFile(ENV_FILE);
 
 async function getRecipients() {
   const seen = new Map();
+  // Our own copy, sent first, so we can always look up what was sent when.
+  const archive = process.env.MAIL_ARCHIVE;
+  if (archive) seen.set(archive.toLowerCase(), { name: "(archive copy)", address: archive });
   for (const cafe of await loadJSON("cafes.json")) {
     // An email field may hold several addresses.
     for (const address of (cafe.email || "").split(/[,;\s]+/)) {
@@ -124,7 +127,7 @@ if (!args.send) {
   process.exit(0);
 }
 
-const { SMTP_HOST, SMTP_PORT = "587", SMTP_USER, SMTP_PASSWORD, MAIL_FROM, REPLY_TO } = process.env;
+const { SMTP_HOST, SMTP_PORT = "587", SMTP_USER, SMTP_PASSWORD, MAIL_FROM } = process.env;
 for (const [key, value] of Object.entries({ SMTP_HOST, SMTP_USER, SMTP_PASSWORD, MAIL_FROM })) {
   if (!value) {
     console.error(`Missing ${key}, see scripts/send-mailing.env.example`);
