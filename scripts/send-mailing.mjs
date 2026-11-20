@@ -151,15 +151,20 @@ const transport = nodemailer.createTransport({
   auth: { user: SMTP_USER, pass: SMTP_PASSWORD },
 });
 
+let failed = 0;
 for (const [i, { address }] of todo.entries()) {
   const progress = `${i + 1}/${todo.length}`.padEnd(2 * String(todo.length).length + 1);
   try {
     await transport.sendMail(message(address));
+    console.log(`sent   ${progress} ${address}`);
+    if (!args.only) fs.appendFileSync(SENT_LOG, `${address.toLowerCase()}\n`);
   } catch (error) {
+    failed++;
     console.error(`FAILED ${progress} ${address}: ${error.message}`);
-    continue;
   }
-  console.log(`sent   ${progress} ${address}`);
-  if (!args.only) fs.appendFileSync(SENT_LOG, `${address.toLowerCase()}\n`);
   if (i < todo.length - 1) await new Promise((r) => setTimeout(r, Number(args.delay) * 1000));
+}
+if (failed) {
+  console.error(`\n${failed} of ${todo.length} failed. Run again to retry only those.`);
+  process.exitCode = 1;
 }
