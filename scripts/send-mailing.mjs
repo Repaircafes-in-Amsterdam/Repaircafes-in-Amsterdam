@@ -17,7 +17,7 @@
 //   npm run send-mailing -- --body mails/mailing.md --send
 //
 // SMTP settings come from environment variables or `.env.local`
-// (gitignored), see scripts/send-mailing.env.example.
+// (gitignored), see .env.local.example.
 import fs from "fs";
 import path from "path";
 import readline from "readline/promises";
@@ -137,7 +137,7 @@ if (!args.send) {
 const { SMTP_HOST, SMTP_PORT = "587", SMTP_USER, SMTP_PASSWORD, MAIL_FROM } = process.env;
 for (const [key, value] of Object.entries({ SMTP_HOST, SMTP_USER, SMTP_PASSWORD, MAIL_FROM })) {
   if (!value) {
-    console.error(`Missing ${key}, see scripts/send-mailing.env.example`);
+    console.error(`Missing ${key}, see .env.local.example`);
     process.exit(1);
   }
 }
