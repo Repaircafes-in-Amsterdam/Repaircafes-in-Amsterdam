@@ -47,15 +47,23 @@ const config: Config = {
       typography: {
         DEFAULT: {
           css: {
-            color: colors.blue.DEFAULT,
+            // Theme the typography plugin through its color variables,
+            // so all prose elements (bold, headings, links, etc.) use brand colors.
+            "--tw-prose-body": colors.blue.DEFAULT,
+            "--tw-prose-headings": colors.blue.DEFAULT,
+            "--tw-prose-lead": colors.blue.DEFAULT,
+            "--tw-prose-links": colors.blue.DEFAULT,
+            "--tw-prose-bold": colors.blue.DEFAULT,
+            "--tw-prose-counters": colors.blue.DEFAULT,
+            "--tw-prose-quotes": colors.blue.DEFAULT,
+            "--tw-prose-captions": colors.blue.DEFAULT,
+            "--tw-prose-code": colors.blue.DEFAULT,
             a: {
-              color: colors.blue.DEFAULT,
               "&:hover": {
-                color: colors.orange,
+                color: colors.orange[600],
               },
             },
             h3: {
-              color: colors.blue.DEFAULT,
               fontSize: "inherit",
             },
           },

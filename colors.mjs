@@ -9,6 +9,7 @@ export const colors = {
   orange: {
     450: "#EF8565", // AA orange on blue
     DEFAULT: "#ED6A42",
+    600: "#C34B27", // AA orange on white
   },
   white: "#ffffff",
 };
