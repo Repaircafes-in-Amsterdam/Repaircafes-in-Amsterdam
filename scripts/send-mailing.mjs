@@ -151,13 +151,14 @@ const transport = nodemailer.createTransport({
 });
 
 for (const [i, { address }] of todo.entries()) {
+  const progress = `${i + 1}/${todo.length}`.padEnd(2 * String(todo.length).length + 1);
   try {
     await transport.sendMail(message(address));
   } catch (error) {
-    console.error(`FAILED ${address}: ${error.message}`);
+    console.error(`FAILED ${progress} ${address}: ${error.message}`);
     continue;
   }
-  console.log(`sent   ${address}`);
+  console.log(`sent   ${progress} ${address}`);
   if (!args.only) fs.appendFileSync(SENT_LOG, `${address.toLowerCase()}\n`);
   if (i < todo.length - 1) await new Promise((r) => setTimeout(r, Number(args.delay) * 1000));
 }
