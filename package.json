@@ -20,6 +20,7 @@
     "update-holidays-data": "node data/update-holidays-data.mjs",
     "update-ramadan-data": "node data/update-ramadan-data.mjs",
     "update-festivals": "node data/update-festivals.mjs",
+    "send-mailing": "node scripts/send-mailing.mjs",
     "prebuild": "node ./scripts/copy-maplibre-worker.mjs && node ./scripts/generate-map-style.mjs",
     "predev": "node ./scripts/copy-maplibre-worker.mjs && node ./scripts/generate-map-style.mjs"
   },
@@ -64,7 +65,10 @@
     "eslint-plugin-i18next": "^6.1.1",
     "google-auth-library": "^9.15.1",
     "google-spreadsheet": "^4.1.4",
+    "html-to-text": "^10.0.1",
     "jsdom": "^26.0.0",
+    "marked": "^18.2.0",
+    "nodemailer": "^10.3.1",
     "postcss": "^8",
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.11",

@@ -36,3 +36,9 @@ yarn-error.log*
 next-env.d.ts
 
 .waylog
+
+# mailing script
+# sent log per mailing, next to its body file
+.*.log
+.mailing-preview.local.*
+mails
