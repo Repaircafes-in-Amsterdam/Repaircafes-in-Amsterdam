@@ -9,7 +9,7 @@
 // Send for real:
 //   npm run send-mailing -- --subject "Hoi" --body mailing.txt --send
 //
-// SMTP settings come from environment variables or `.env.mailing.local`
+// SMTP settings come from environment variables or `.env.local`
 // (gitignored), see scripts/send-mailing.env.example.
 import fs from "fs";
 import readline from "readline/promises";
@@ -17,7 +17,7 @@ import { parseArgs } from "util";
 import nodemailer from "nodemailer";
 import loadJSON from "../data/loadJSON.mjs";
 
-const ENV_FILE = ".env.mailing.local";
+const ENV_FILE = ".env.local";
 const SENT_LOG = ".mailing-sent.local.log"; // lets an interrupted run resume
 
 const { values: args } = parseArgs({
