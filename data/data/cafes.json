@@ -1874,17 +1874,17 @@
     "name": "Textiel Repair Café",
     "address": "President Allendelaan 733",
     "open": {
-      "nl": "Elke woensdagochtend 10:00 - 12:00",
-      "en": "Every Wednesday morning 10:00 - 12:00"
+      "nl": "Elke woensdagochtend 13:00 - 15:00",
+      "en": "Every Wednesday morning 13:00 - 15:00"
     },
     "rrule": [
       "FREQ=WEEKLY;INTERVAL=1;BYDAY=WE"
     ],
     "startTime": [
-      "10:00"
+      "13:00"
     ],
     "endTime": [
-      "12:00"
+      "15:00"
     ],
     "closedRanges": [],
     "closed": {
