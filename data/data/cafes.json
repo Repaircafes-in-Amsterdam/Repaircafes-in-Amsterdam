@@ -997,7 +997,9 @@
     "endTime": [
       "20:00"
     ],
-    "closedRanges": [],
+    "closedRanges": [
+      "2027:2035"
+    ],
     "closed": {
       "nl": "Koningsdag",
       "en": "Koningsdag"
