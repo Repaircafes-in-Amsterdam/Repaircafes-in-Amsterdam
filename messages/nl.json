@@ -111,6 +111,18 @@
       "description": "We zoeken een voorzitter, penningmeester en secretaris voor een nieuwe overkoepelende stichting voor Repair Cafés in Amsterdam"
     }
   },
+  "cheatsheet": {
+    "title": "Reparatie cheatsheet",
+    "description": "Een handig overzicht voor bij het repareren: hoe je een multimeter gebruikt en de belangrijkste elektrische begrippen. Ontworpen voor een dubbelzijdige A5",
+    "download": "Download cheatsheet (PDF)",
+    "open": "Open de cheatsheet (PDF)",
+    "preview-1": "Voorbeeld pagina 1: Multimeter cheat sheet",
+    "preview-2": "Voorbeeld pagina 2: Elektronica cheat sheet",
+    "metadata": {
+      "title": "Reparatie cheatsheet - Repair Cafes in Amsterdam",
+      "description": "Download de reparatie cheatsheet met uitleg over de multimeter en elektrische basisbegrippen."
+    }
+  },
   "repaircafes": {
     "title": "Over Repair Cafés",
     "metadata": {

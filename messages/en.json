@@ -111,6 +111,18 @@
       "description": "We are looking for a chair, treasurer and secretary for a new umbrella foundation for Repair Cafés in Amsterdam"
     }
   },
+  "cheatsheet": {
+    "title": "Repair cheat sheet",
+    "description": "A handy reference while repairing: how to use a multimeter and the key electrical concepts. Designed for a double sided A5.",
+    "download": "Download cheat sheet (PDF)",
+    "open": "Open the cheat sheet (PDF)",
+    "preview-1": "Preview page 1: Multimeter cheat sheet",
+    "preview-2": "Preview page 2: Electrical cheat sheet",
+    "metadata": {
+      "title": "Repair cheat sheet - Repair Cafes in Amsterdam",
+      "description": "Download the repair cheat sheet explaining the multimeter and basic electrical concepts."
+    }
+  },
   "repaircafes": {
     "title": "About Repair Cafés",
     "metadata": {
