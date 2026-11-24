@@ -94,6 +94,22 @@ npm run update-map-data
 For the Repair Cafés that are not on [repair.org](https://www.repaircafe.org/) or for when we want to override their coordinates we can store the coordinates in `manual-map-data.json`. When the `update-data` is run it first checks `manual-map-data.json`, if none are found it checks the Repair Cafés map data and when it still can't find coordinates it will add an entry to `manual-map-data.json` so it can be filed in.  
 A site like https://www.latlong.net/ can be used to find coordinates.
 
+## Cheatsheet
+
+The `/cheatsheet` page offers a PDF per language (`public/cheatsheet/*.pdf`) with preview images of both pages. When a PDF changes, regenerate its previews (requires `pdftoppm` from poppler-utils):
+
+```bash
+cd public/cheatsheet
+pdftoppm -png -scale-to-x 640 -scale-to-y -1 repair-cheatsheet-en.pdf preview-en
+pdftoppm -png -scale-to-x 640 -scale-to-y -1 reparatie-cheatsheet-nl.pdf preview-nl
+# Shrink to 256-color PNGs (practically lossless for these sheets, ~half the size)
+node -e 'const sharp = require("sharp"), fs = require("fs");
+  for (const f of fs.readdirSync(".").filter((f) => /^preview-.*\.png$/.test(f)))
+    sharp(fs.readFileSync(f)).png({ palette: true, colours: 256, compressionLevel: 9 }).toFile(f);'
+```
+
+The previews are stored as PNG because JPG blurs the text and lines. Next.js serves page 1 as AVIF/WebP; page 2 is served as-is (`unoptimized`) because, being line art, its PNG is smaller than the AVIF/WebP versions.
+
 ## API
 
 The Repair Café data is also available as a read-only API, if you'd like to build something with it yourself:

@@ -10,6 +10,10 @@ const withMDX = createMDX({});
 
 const nextConfig = {
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
+  images: {
+    // AVIF first (smallest), WebP as fallback; browsers without either get the original
+    formats: ["image/avif", "image/webp"],
+  },
   experimental: {
     staleTimes: {
       dynamic: 30, // default from before v15.0.0

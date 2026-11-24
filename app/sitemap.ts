@@ -39,6 +39,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.3,
       },
       {
+        url: "cheatsheet",
+        lastModified: new Date(),
+        changeFrequency: "monthly",
+        priority: 0.5,
+      },
+      {
         url: "map",
         lastModified: new Date(),
         changeFrequency: "monthly",
